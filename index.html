@@ -1061,8 +1061,8 @@ function pageRange(cur,tot){
 }
 function legendCard(id,d,title,sub,hasTr,yr,toggleFn,extraClass=''){
   const transSection=hasTr
-    ?`<div class="tsl">English translation</div><div class="tsb">${esc(d.english_translation)}</div>`
-    :`<div class="tsl">English translation</div><div class="tspend">Translation pending</div>`;
+    ?`<div class="tsl">English translation with AI</div><div class="tsb">${esc(d.english_translation)}</div>`
+    :`<div class="tsl">English translation with AI</div><div class="tspend">Translation pending</div>`;
   return`<div class="lcard${extraClass}" id="${id}">
     <div class="lcard-top" onclick="${toggleFn}('${id}')">
       <span class="mlb" style="background:${mlC(d.ml_code)}30;color:${mlT(d.ml_code)}">${esc(d.ml_code||'')}</span>
@@ -1202,7 +1202,7 @@ function runSearch(){
       <div class="cbody">
         <div class="tsl">Norwegian original</div>
         <div class="tsb">${q?hlFull(d.tekst||'',q):esc(d.tekst||'')}</div>
-        <div class="tsl">English translation</div>
+        <div class="tsl">English translation with AI</div>
         ${hasTr?`<div class="tsb">${q?hlFull(d.english_translation,q):esc(d.english_translation)}</div>`:`<div class="tspend">Translation pending</div>`}
         <div class="cmeta">
           ${d.samler?`<span class="mi"><strong>Collector</strong> ${esc(d.samler)}</span>`:''}
@@ -1406,7 +1406,7 @@ function renderMapSideCard(d,inner,backRef){
     <div style="font-size:12px;color:var(--tm);margin-bottom:10px">${[d.sted,d.fylke].filter(Boolean).map(esc).join(' · ')}</div>
     <div class="tsl">Norwegian original</div>
     <div class="tsb" style="margin-bottom:10px">${esc(d.tekst||'')}</div>
-    ${hasTr?`<div class="tsl">English translation</div><div class="tsb" style="margin-bottom:10px">${esc(d.english_translation)}</div>`:'<div class="tspend" style="margin-bottom:10px">Translation pending</div>'}
+    ${hasTr?`<div class="tsl">English translation with AI</div><div class="tsb" style="margin-bottom:10px">${esc(d.english_translation)}</div>`:'<div class="tspend" style="margin-bottom:10px">Translation pending</div>'}
     <div class="cmeta">
       ${d.samler?`<span class="mi"><strong>Collector</strong> ${esc(d.samler)}</span>`:''}
       ${d.informant?`<span class="mi"><strong>Informant</strong> ${esc(d.informant)}</span>`:''}
