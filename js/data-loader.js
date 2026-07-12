@@ -12,6 +12,7 @@ Papa.parse(SHEET, {
     if (curTab === 'timeline') renderTimeline();
     if (curTab === 'map') renderMapMarkers();
     if (curTab === 'mlindex') initMLIndex();
+    buildJourneyStats();
     setTimeout(() => {
       if (curTab === 'network') renderNetwork();
     }, 300);
