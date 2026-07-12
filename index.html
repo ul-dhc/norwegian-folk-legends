@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norske sagn – Norwegian Folk Legends</title>
+<title>Norske sagn — Norwegian Folk Legends</title>
 <link rel="stylesheet" href="css/styles.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -29,6 +29,7 @@
   <div class="nav-tab active" data-tab="browse" onclick="switchTab('browse')">Browse</div>
   <div class="nav-tab" data-tab="search" onclick="switchTab('search')">Search</div>
   <div class="nav-tab" data-tab="map" onclick="switchTab('map')">Map</div>
+  <div class="nav-tab" data-tab="journey" onclick="switchTab('journey')">Journey</div>
   <div class="nav-tab" data-tab="network" onclick="switchTab('network')">Network</div>
   <div class="nav-tab" data-tab="timeline" onclick="switchTab('timeline')">Timeline</div>
   <div class="nav-tab" data-tab="mlindex" onclick="switchTab('mlindex')">ML Index</div>
@@ -217,6 +218,17 @@
   </div>
 </div>
 
+<div class="panel" id="panel-journey">
+  <div id="journey-map-container"></div>
+  <canvas id="journey-glow-canvas"></canvas>
+  <div class="journey-caption" id="journey-caption"></div>
+  <div class="journey-textpanel" id="journey-textpanel"></div>
+  <div class="journey-controls">
+    <button class="journey-btn" id="jny-play" onclick="journeyPlay()">▶ Play</button>
+    <button class="journey-btn" id="jny-stop" onclick="journeyStop()" disabled>■ Stop</button>
+    <button class="journey-btn" id="jny-jump" onclick="journeyJump()">✦ Jump</button>
+  </div>
+</div>
 
 <div class="panel" id="panel-network">
   <div class="net-sidebar">
@@ -381,8 +393,8 @@
 <div class="panel" id="panel-about">
   <div class="about-content">
     <h2 style="font-size:20px;font-weight:600;color:var(--tp);margin-bottom:16px">About</h2>
-      <p style="color:var(--tm);line-height:1.8">To be updated soon... </p>
-</div>
+    <p style="color:var(--tm);line-height:1.8">This is a digital collection of Norwegian folk legends (<em>sagn</em>) from the University of Oslo's Norwegian Folklore Collection, filtered to 1,477 migratory legends catalogued according to Reidar Th. Christiansen's ML system.</p>
+  </div>
 </div>
 
 <script src="js/state.js"></script>
@@ -390,6 +402,7 @@
 <script src="js/browse.js"></script>
 <script src="js/search.js"></script>
 <script src="js/map.js"></script>
+<script src="js/journey.js"></script>
 <script src="js/network.js"></script>
 <script src="js/timeline.js"></script>
 <script src="js/mlindex-data.js"></script>
