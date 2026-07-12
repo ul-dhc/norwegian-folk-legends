@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norske sagn — Norwegian Folk Legends</title>
+<title>Norske sagn – Norwegian Folk Legends</title>
 <link rel="stylesheet" href="css/styles.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -223,6 +223,10 @@
   <canvas id="journey-glow-canvas"></canvas>
   <div class="journey-caption" id="journey-caption"></div>
   <div class="journey-textpanel" id="journey-textpanel"></div>
+  <audio id="journey-audio" src="audio/background-music.mp3" loop preload="none"></audio>
+  <div class="journey-credit">
+    Music by <a href="https://pixabay.com/users/playstarz_music-52864946/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=435262" target="_blank" rel="noopener">Yauheni Kachan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=435262" target="_blank" rel="noopener">Pixabay</a>
+  </div>
   <div class="journey-controls">
     <button class="journey-btn" id="jny-play" onclick="journeyPlay()">▶ Play</button>
     <button class="journey-btn" id="jny-stop" onclick="journeyStop()" disabled>■ Stop</button>
@@ -283,7 +287,7 @@
     </div>
     <div class="net-sb-section">
       <div class="net-sb-title">Focus county</div>
-      <select class="net-sel" id="net-county-focus" style="width:100%" onchange="NetViz.rebuild()"><option value="">– all —</option></select>
+      <select class="net-sel" id="net-county-focus" style="width:100%" onchange="NetViz.rebuild()"><option value="">– all –</option></select>
     </div>
     <div class="net-sb-section">
       <div class="net-sb-title">Subgenre</div>
@@ -321,10 +325,10 @@
       The remaining <strong id="tl-undated">–</strong> (<strong id="tl-upct">–</strong>) are undated – this timeline reflects a partial picture of the collection.
     </div>
     <div class="tl-stats">
-      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn1">—</div><div class="tl-stat-sub" id="tl-ssub">of 1,477 total</div><div class="tl-stat-l">Dated legends</div></div>
-      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn2">—</div><div class="tl-stat-l">Earliest record</div></div>
-      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn3">—</div><div class="tl-stat-l">Latest record</div></div>
-      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn4">—</div><div class="tl-stat-l">Peak decade</div></div>
+      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn1">–</div><div class="tl-stat-sub" id="tl-ssub">of 1,477 total</div><div class="tl-stat-l">Dated legends</div></div>
+      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn2">–</div><div class="tl-stat-l">Earliest record</div></div>
+      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn3">–</div><div class="tl-stat-l">Latest record</div></div>
+      <div class="tl-stat"><div class="tl-stat-n" id="tl-sn4">–</div><div class="tl-stat-l">Peak decade</div></div>
     </div>
     <div class="tl-ctrls">
       <span class="tl-cl">Group by</span>
@@ -343,7 +347,7 @@
       <div class="tl-lgnd-item"><div class="tl-lgnd-dot" style="background:#D8A8B3"></div>Historiske sagn</div>
     </div>
     <div class="tl-chart-card">
-      <div class="tl-chart-title">Legends collected over time — click a bar to explore</div>
+      <div class="tl-chart-title">Legends collected over time – click a bar to explore</div>
       <div class="tl-bars-wrap"><div class="tl-bars" id="tl-bars"><div class="tl-axis"></div></div></div>
     </div>
     <div class="tl-bottom">
@@ -395,7 +399,7 @@
 <div class="panel" id="panel-about">
   <div class="about-content">
     <h2 style="font-size:20px;font-weight:600;color:var(--tp);margin-bottom:16px">About</h2>
-    <p style="color:var(--tm);line-height:1.8">To be updated soon... </p>
+    <p style="color:var(--tm);line-height:1.8">This is a digital collection of Norwegian folk legends (<em>sagn</em>) from the University of Oslo's Norwegian Folklore Collection, filtered to 1,477 migratory legends catalogued according to Reidar Th. Christiansen's ML system.</p>
   </div>
 </div>
 
