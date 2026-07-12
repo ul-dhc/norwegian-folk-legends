@@ -204,37 +204,49 @@ function buildJourneyStats() {
 }
 
 function buildJourneyStarfield() {
-  if (journeyStarfield.length || !allData.length) return;
-  const colors = [
-    JOURNEY_COLORS.collector,
-    JOURNEY_COLORS.place,
-    JOURNEY_COLORS.category,
-    JOURNEY_COLORS.legend,
-  ];
-  const sample = [...allData].sort(() => Math.random() - 0.5).slice(0, 150);
-  journeyStarfield = sample
-    .map((d) => {
-      const c = journeyCoords(d);
-      if (!c) return null;
-      return { lat: c.lat, lon: c.lon, color: colors[Math.floor(Math.random() * colors.length)] };
-    })
-    .filter(Boolean);
-  journeyStarfieldEdges = [];
-  const seenEdges = new Set();
-  journeyStarfield.forEach((s, i) => {
-    const dists = journeyStarfield
-      .map((o, j) => (j === i ? null : { j, d: Math.hypot(s.lat - o.lat, s.lon - o.lon) }))
-      .filter(Boolean)
-      .sort((a, b) => a.d - b.d)
-      .slice(0, 2);
-    dists.forEach(({ j }) => {
-      const key = i < j ? `${i}-${j}` : `${j}-${i}`;
-      if (!seenEdges.has(key)) {
-        seenEdges.add(key);
-        journeyStarfieldEdges.push({ a: i, b: j });
-      }
-    });
+  if (journeyStarfield.length || !journeyCollectors.length) return;
+  const nodes = [];
+  const nodeIndex = {};
+  const edges = [];
+
+  function addNode(key, type, coords) {
+    if (nodeIndex[key] != null) return nodeIndex[key];
+    const idx = nodes.length;
+    nodes.push({ lat: coords.lat, lon: coords.lon, color: JOURNEY_COLORS[type], hub: type !== 'place' });
+    nodeIndex[key] = idx;
+    return idx;
+  }
+
+  journeyCollectors.slice(0, 26).forEach((c) => {
+    const cIdx = addNode('c:' + c.name, 'collector', c.centroid);
+    [...c.items]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .forEach((item) => {
+        const placeName = journeyPlaceKey(item.d);
+        const p = journeyPlaces[placeName];
+        if (!p) return;
+        const pIdx = addNode('p:' + placeName, 'place', p.centroid);
+        edges.push({ a: cIdx, b: pIdx });
+      });
   });
+
+  journeyCategories.slice(0, 22).forEach((cat) => {
+    const catIdx = addNode('cat:' + cat.code, 'category', cat.centroid);
+    [...cat.items]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .forEach((item) => {
+        const placeName = journeyPlaceKey(item.d);
+        const p = journeyPlaces[placeName];
+        if (!p) return;
+        const pIdx = addNode('p:' + placeName, 'place', p.centroid);
+        edges.push({ a: catIdx, b: pIdx });
+      });
+  });
+
+  journeyStarfield = nodes;
+  journeyStarfieldEdges = edges;
   journeyStarfieldActive = true;
 }
 
@@ -255,7 +267,7 @@ function journeyStarfieldAlpha(now) {
 function journeyDrawStarfield(now) {
   const globalAlpha = journeyStarfieldAlpha(now);
   if (globalAlpha <= 0 || !journeyCtx) return;
-  const breathe = 0.55 + 0.45 * Math.sin(now * 0.00025);
+  const breathe = 0.5 + 0.5 * Math.sin(now * 0.00022);
   journeyStarfieldEdges.forEach((edge) => {
     const a = journeyStarfield[edge.a];
     const b = journeyStarfield[edge.b];
@@ -265,23 +277,25 @@ function journeyDrawStarfield(now) {
     journeyCtx.beginPath();
     journeyCtx.moveTo(pa.x, pa.y);
     journeyCtx.lineTo(pb.x, pb.y);
-    journeyCtx.strokeStyle = `rgba(160,195,255,${(0.16 + breathe * 0.22) * globalAlpha})`;
-    journeyCtx.lineWidth = 1.1;
+    journeyCtx.strokeStyle = `rgba(160,195,255,${(0.05 + breathe * 0.16) * globalAlpha})`;
+    journeyCtx.lineWidth = 1;
     journeyCtx.stroke();
   });
   journeyStarfield.forEach((s) => {
     const p = journeyProject(s.lat, s.lon);
-    const alpha = (0.35 + breathe * 0.4) * globalAlpha;
+    const alpha = (0.12 + breathe * 0.32) * globalAlpha;
     const rgb = journeyHexToRgb(s.color);
-    const grad = journeyCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, 7);
-    grad.addColorStop(0, `rgba(${rgb},${alpha * 0.45})`);
+    const baseR = s.hub ? 2.1 : 1.5;
+    const glowR = s.hub ? 8 : 6;
+    const grad = journeyCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowR);
+    grad.addColorStop(0, `rgba(${rgb},${alpha * 0.4})`);
     grad.addColorStop(1, `rgba(${rgb},0)`);
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, 7, 0, Math.PI * 2);
+    journeyCtx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
     journeyCtx.fillStyle = grad;
     journeyCtx.fill();
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
+    journeyCtx.arc(p.x, p.y, baseR, 0, Math.PI * 2);
     journeyCtx.fillStyle = `rgba(${rgb},${alpha})`;
     journeyCtx.fill();
   });
