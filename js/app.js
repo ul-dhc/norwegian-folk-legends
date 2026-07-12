@@ -26,6 +26,7 @@ function switchTab(tab, skipHash) {
   } else if (prevTab === 'journey') {
     journeyStop();
     stopJourneyRAF();
+    pauseJourneyMusic();
   }
   if (tab === 'network' && allData.length) {
     setTimeout(() => {
