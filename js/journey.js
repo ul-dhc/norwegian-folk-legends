@@ -17,49 +17,77 @@ const JOURNEY_COLORS = {
 };
 
 const JOURNEY_FLIGHT_CAPTIONS = {
-  collector: 'Seeking a collector…',
-  place: 'Traveling to a place…',
-  legend: 'Arriving at a legend…',
-  jump: 'Crossing the void…',
+  collector: [
+    'Following a collector\u2019s trail…',
+    'Looking for the next collector…',
+    'Tracing another collection…',
+  ],
+  place: [
+    'Moving through the remembered landscape…',
+    'Travelling toward the next place…',
+    'Following the story back to its setting…',
+  ],
+  legend: [
+    'Approaching another recorded encounter…',
+    'Entering another telling…',
+    'Bringing the next story into view…',
+  ],
+  jump: [
+    'Crossing to a distant thread…',
+    'Jumping to another part of the map…',
+    'Leaving this trail for a new one…',
+  ],
 };
 
 const JOURNEY_COLLECTOR_PHRASES = [
-  'Now I will take you to {name}, who collected {count} legends across Norway.',
-  '{name} gathered {count} legends from across the land. Follow the thread…',
-  'Let us seek out {name} – {count} legends passed through their hands.',
+  'The trail leads to {name}, who preserved {count} legends gathered across Norway.',
+  'Through {name}, {count} stories entered the written record. Let us follow one of their paths…',
+  'We come to {name}\u2019s collection – {count} accounts carried to nowadays.',
+  'Somewhere along the way, {name} gathered {count} legends – enough to leave a trace across the map.',
+  'Behind {name} are {count} legends, each carrying a place, a voice, and something once believed.',
 ];
 
 const JOURNEY_PLACE_PHRASES = [
-  'We arrive in {place}. {count} legend{s} were recorded in this surroundings. Let\u2019s go to one of them…',
-  'Follow the thread to {place} – home to {count} recorded legend{s}.',
-  'The path leads to {place}, where {count} legend{s} once were told.',
+  'We arrive in {place}, where {count} legend{s} were recorded. One of their voices is waiting…',
+  'The thread settles in {place} – a landscape connected to {count} recorded legend{s}.',
+  'Here is {place}, where {count} legend{s} were told, remembered, and written down.',
+  'We stop in {place}. {count} legend{s} were recorded here.',
+  'Next is {place}, with {count} legend{s} connected to it.',
 ];
 
 const JOURNEY_CATEGORY_CONTEXT_PHRASES = [
-  'Let\u2019s travel to a legend which belongs to the group of \u201c{title}\u201d legends…',
-  'This next one also belongs to \u201c{title}\u201d legends…',
-  'Following the thread of \u201c{title}\u201d to another telling…',
+  'A familiar motif returns: \u201c{title}\u201d. Let us follow it into another story…',
+  'The next legend echoes the same theme – \u201c{title}\u201d…',
+  'One story opens onto another through the thread of \u201c{title}\u201d…',
+  'Another version of \u201c{title}\u201d appears here…',
+  'We stay with \u201c{title}\u201d, but move into a different telling…',
 ];
 
 const JOURNEY_CATEGORY_SPOTLIGHT_PHRASES = [
-  'And now, let\u2019s explore \u201c{title}\u201d legends. {count} are collected across Norway.',
-  'Let\u2019s pause here and explore \u201c{title}\u201d legends – {count} of them, scattered across the land.',
-  'Here is a whole constellation of \u201c{title}\u201d legends – {count} in total.',
+  'Across the map, {count} legends gather around the theme \u201c{title}\u201d.',
+  'Let us pause with \u201c{title}\u201d – {count} related accounts, dispersed across Norway.',
+  'A constellation takes shape: {count} legends connected by \u201c{title}\u201d.',
+  'On the map, \u201c{title}\u201d appears in {count} different legends.',
+  '{count} legends share this topic: \u201c{title}\u201d.',
 ];
 
 const JOURNEY_COLLECTOR_SPOTLIGHT_PHRASES = [
-  'Let\u2019s spotlight {name}, who gathered {count} legends across Norway.',
-  'And now, a closer look at {name} – {count} legends collected, scattered across the land.',
+  'The map widens around {name}, revealing {count} legends gathered across Norway.',
+  'Seen together, {name}\u2019s {count} recorded legends form a path across the landscape.',
+  'These points trace the work of {name}: {count} legends carried into the archive.',
+  'Here is what {name} left behind – {count} legends, recorded in places across the country.',
+  '{name} appears across the map through {count} collected legends.',
 ];
 
 const JOURNEY_INTRO = [
-  'In this journey you will explore Norwegian belief legends as a living sensory landscape, where mountains, waters, farms, roads, and hidden places carry stories of strange encounters, unseen beings, and experiences people once believed were true.',
-  'The landscape here is never just scenery. Hills, waters, farms, churches, stones, and roads become places where people meet the uncanny and try to make sense of what they have sensed.',
-  'This collection gathers 1,477 such legends, recorded across Norway between 1832 and 1954.',
-  'It exists thanks to {collectorCount} folk collectors, who travelled the country and wrote down what people told them – we can thank them for this heritage.',
-  '…and we thank also Professor Kyrre Kverndokk, who digitized and brought this collection online, long time ago.',
-  'This journey is another way to experience them – not read, but travelled.',
-  'And now, follow me… I will take you to the place…',
+  'This journey invites you into Norwegian folk legends as a living landscape. Mountains, waters, farms, roads, churches, and hidden places carry accounts of uncanny encounters and unseen beings.',
+  'Here, the landscape is never only scenery. Each place becomes part of the story – somewhere the strange was sensed, interpreted, remembered, and retold.',
+  'In the past, these accounts were presented as experiences that actually happened…',
+  'The collection contains 1,477 legends recorded across Norway between 1832 and 1954.',
+  'They survive through the work of {collectorCount} folk collectors, who travelled, listened, and wrote down what people told them – we can thank them for this heritage.',
+  '…and we thank also professor Kyrre Kverndokk, who digitized and brought this collection online, some time ago.',
+  'This journey offers another way through the archive – as a landscape to travel and explore through stories. And it is never the same.',
+  'Follow the threads. We begin with a collector…',
 ];
 
 let journeyMap = null;
@@ -68,7 +96,6 @@ let journeyCtx = null;
 let journeyRAFId = null;
 let journeyPlaying = false;
 let journeyIdle = true;
-let journeyFlightTimer = null;
 let journeyDwellTimer = null;
 let journeyStep = 'collector';
 let journeyCurrent = null;
@@ -82,6 +109,9 @@ let journeyCategories = [];
 let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
+let journeyStarfield = [];
+let journeyStarfieldActive = false;
+let journeyStarfieldFadeUntil = null;
 let journeyIntroDone = false;
 let journeyIntroIndex = 0;
 let journeyMusicOn = false;
@@ -158,7 +188,62 @@ function buildJourneyStats() {
     };
   });
   journeyStatsReady = journeyCollectors.length > 0;
+  buildJourneyStarfield();
   updateJourneyButtons();
+}
+
+function buildJourneyStarfield() {
+  if (journeyStarfield.length || !allData.length) return;
+  const colors = [
+    JOURNEY_COLORS.collector,
+    JOURNEY_COLORS.place,
+    JOURNEY_COLORS.category,
+    JOURNEY_COLORS.legend,
+  ];
+  const sample = [...allData].sort(() => Math.random() - 0.5).slice(0, 220);
+  journeyStarfield = sample
+    .map((d) => {
+      const c = journeyCoords(d);
+      if (!c) return null;
+      return {
+        lat: c.lat,
+        lon: c.lon,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.0006 + Math.random() * 0.001,
+      };
+    })
+    .filter(Boolean);
+  journeyStarfieldActive = true;
+}
+
+function deactivateJourneyStarfield() {
+  if (!journeyStarfieldActive) return;
+  journeyStarfieldActive = false;
+  journeyStarfieldFadeUntil = performance.now() + 1500;
+}
+
+function journeyStarfieldAlpha(now) {
+  if (journeyStarfieldActive) return 1;
+  if (journeyStarfieldFadeUntil && now < journeyStarfieldFadeUntil) {
+    return Math.max(0, (journeyStarfieldFadeUntil - now) / 1500);
+  }
+  return 0;
+}
+
+function journeyDrawStarfield(now) {
+  const globalAlpha = journeyStarfieldAlpha(now);
+  if (globalAlpha <= 0 || !journeyCtx) return;
+  journeyStarfield.forEach((s) => {
+    const p = journeyProject(s.lat, s.lon);
+    const pulse = (Math.sin(now * s.speed + s.phase) + 1) / 2;
+    const alpha = (0.06 + pulse * 0.2) * globalAlpha;
+    const rgb = journeyHexToRgb(s.color);
+    journeyCtx.beginPath();
+    journeyCtx.arc(p.x, p.y, 1.4 + pulse * 1.1, 0, Math.PI * 2);
+    journeyCtx.fillStyle = `rgba(${rgb},${alpha})`;
+    journeyCtx.fill();
+  });
 }
 
 function journeyPick(arr) {
@@ -329,6 +414,8 @@ function drawJourneyOverlay() {
 
   const now = performance.now();
 
+  journeyDrawStarfield(now);
+
   journeyEdges.forEach((edge) => {
     const settle = Math.min(1, (now - edge.t) / 500);
     const bez = journeyBezier(edge.from, edge.to);
@@ -365,14 +452,13 @@ function drawJourneyOverlay() {
 
   if (journeyFlight) {
     const t = Math.min(1, (now - journeyFlight.start) / journeyFlight.duration);
-    const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     const bez = journeyBezier(journeyFlight.from, journeyFlight.to);
     const color = JOURNEY_COLORS[journeyFlight.type] || '#c8e1ff';
     const rgb = journeyHexToRgb(color);
 
     journeyCtx.beginPath();
     const steps = 40;
-    const drawSteps = Math.max(1, Math.round(steps * ease));
+    const drawSteps = Math.max(1, Math.round(steps * t));
     for (let i = 0; i <= drawSteps; i++) {
       const pp = bez(i / steps);
       const p = journeyProject(pp.lat, pp.lon);
@@ -383,7 +469,7 @@ function drawJourneyOverlay() {
     journeyCtx.lineWidth = 1.6;
     journeyCtx.stroke();
 
-    const head = bez(Math.min(1, ease));
+    const head = bez(t);
     const hp = journeyProject(head.lat, head.lon);
     const grad = journeyCtx.createRadialGradient(hp.x, hp.y, 0, hp.x, hp.y, 14);
     grad.addColorStop(0, `rgba(${rgb},0.9)`);
@@ -397,7 +483,11 @@ function drawJourneyOverlay() {
     journeyCtx.fillStyle = '#fff';
     journeyCtx.fill();
 
-    if (t >= 1) journeyFlight = null;
+    if (t >= 1) {
+      const arrivedTarget = journeyFlight.target;
+      journeyFlight = null;
+      journeyArrive(arrivedTarget);
+    }
   }
 
   if (journeyCurrent) {
@@ -442,11 +532,24 @@ function handleJourneyClick(e) {
 }
 
 let journeyCaptionFadeTimer = null;
+let journeyTypeInterval = null;
+
+function journeyTypeCaption(el, text) {
+  clearInterval(journeyTypeInterval);
+  el.textContent = '';
+  let i = 0;
+  journeyTypeInterval = setInterval(() => {
+    i++;
+    el.textContent = text.slice(0, i);
+    if (i >= text.length) clearInterval(journeyTypeInterval);
+  }, 26);
+}
 
 function setJourneyCaption(text) {
   const el = document.getElementById('journey-caption');
   if (!el) return;
   clearTimeout(journeyCaptionFadeTimer);
+  clearInterval(journeyTypeInterval);
   if (!text) {
     el.classList.remove('show');
     return;
@@ -454,12 +557,12 @@ function setJourneyCaption(text) {
   if (el.classList.contains('show') && el.textContent) {
     el.classList.remove('show');
     journeyCaptionFadeTimer = setTimeout(() => {
-      el.textContent = text;
       el.classList.add('show');
-    }, 420);
+      journeyTypeCaption(el, text);
+    }, 700);
   } else {
-    el.textContent = text;
     el.classList.add('show');
+    journeyTypeCaption(el, text);
   }
 }
 
@@ -493,7 +596,6 @@ function hideJourneyTextPanel() {
 }
 
 function journeyFlyTo(target, isJump, captionOverride) {
-  clearTimeout(journeyFlightTimer);
   const from = journeyCurrent || target;
   const duration = isJump ? JOURNEY_JUMP_MS : JOURNEY_FLIGHT_MS;
   journeyFlight = {
@@ -502,17 +604,17 @@ function journeyFlyTo(target, isJump, captionOverride) {
     start: performance.now(),
     duration,
     type: target.type,
+    target,
   };
-  setJourneyCaption(
-    captionOverride || JOURNEY_FLIGHT_CAPTIONS[isJump ? 'jump' : target.type] || '',
-  );
+  const captionPool = JOURNEY_FLIGHT_CAPTIONS[isJump ? 'jump' : target.type];
+  setJourneyCaption(captionOverride || (captionPool ? journeyPick(captionPool) : ''));
   hideJourneyTextPanel();
   const zoom = isJump ? JOURNEY_ZOOM.collector - 1.2 : JOURNEY_ZOOM[target.type];
+  journeyVeilPulse(duration);
   journeyMap.flyTo([target.lat, target.lon], zoom, {
     duration: duration / 1000,
     easeLinearity: 0.2,
   });
-  journeyFlightTimer = setTimeout(() => journeyArrive(target), duration);
 }
 
 function journeyArrive(target) {
@@ -545,8 +647,8 @@ function journeyArrive(target) {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
     dwell = Math.max(
-      4200,
-      Math.min(8000, JOURNEY_HUB_PAUSE_BASE_MS + (target.story || '').length * 35),
+      4800,
+      Math.min(9500, 2200 + (target.story || '').length * 38),
     );
   }
   journeyDwellTimer = setTimeout(() => {
@@ -555,7 +657,7 @@ function journeyArrive(target) {
 }
 
 function journeySpotlightCollector(c, onDone) {
-  clearTimeout(journeyFlightTimer);
+  journeyFlight = null;
   clearTimeout(journeyDwellTimer);
   hideJourneyTextPanel();
   const story = journeyNarrate(JOURNEY_COLLECTOR_SPOTLIGHT_PHRASES, {
@@ -583,6 +685,7 @@ function journeySpotlightCollector(c, onDone) {
 
   const sample = journeySamplePoints(c.items, JOURNEY_SPOTLIGHT_SAMPLE, c.centroid);
   const bounds = journeyBoundsFor([c.centroid, ...sample.map((s) => s.coords)]);
+  journeyVeilPulse(JOURNEY_FLIGHT_MS);
   journeyMap.flyToBounds(bounds, {
     padding: [70, 70],
     duration: JOURNEY_FLIGHT_MS / 1000,
@@ -605,11 +708,12 @@ function journeySpotlightCollector(c, onDone) {
 }
 
 function journeySpotlightCategory(cat, centerCoords, onDone) {
-  clearTimeout(journeyFlightTimer);
+  journeyFlight = null;
   clearTimeout(journeyDwellTimer);
   hideJourneyTextPanel();
   const sample = journeySamplePoints(cat.items, JOURNEY_SPOTLIGHT_SAMPLE, centerCoords);
   const bounds = journeyBoundsFor([centerCoords, ...sample.map((s) => s.coords)]);
+  journeyVeilPulse(JOURNEY_FLIGHT_MS);
   journeyMap.flyToBounds(bounds, {
     padding: [70, 70],
     duration: JOURNEY_FLIGHT_MS / 1000,
@@ -637,6 +741,7 @@ function journeySpotlightCategory(cat, centerCoords, onDone) {
 
 function journeyAdvance() {
   journeyIdle = false;
+  deactivateJourneyStarfield();
   if (journeyStep === 'collector') {
     const c = journeyWeightedTopPick(journeyCollectors, 20, journeyRecentCollectors);
     journeyRecentCollectors.push(c.name);
@@ -717,7 +822,7 @@ function journeyIntroText(i) {
 }
 
 function journeyIntroDwell(text) {
-  return Math.max(3600, Math.min(7000, 1800 + text.length * 32));
+  return Math.max(4200, Math.min(9000, 2200 + text.length * 38));
 }
 
 function journeyRunIntro() {
@@ -757,8 +862,9 @@ function journeyJump() {
   if (!journeyStatsReady) buildJourneyStats();
   if (!journeyStatsReady) return;
   journeyIntroDone = true;
+  deactivateJourneyStarfield();
   clearTimeout(journeyDwellTimer);
-  clearTimeout(journeyFlightTimer);
+  journeyFlight = null;
   journeyPlaying = true;
   updateJourneyButtons();
   const exclude = journeyRecentCollectors.slice(-3);
@@ -794,6 +900,18 @@ function onJourneyFullscreenChange() {
     resizeJourneyCanvas();
     if (journeyMap) journeyMap.invalidateSize();
   }, 60);
+}
+
+let journeyVeilTimer = null;
+
+function journeyVeilPulse(duration) {
+  const veil = document.getElementById('journey-veil');
+  if (!veil) return;
+  clearTimeout(journeyVeilTimer);
+  veil.classList.add('show');
+  journeyVeilTimer = setTimeout(() => {
+    veil.classList.remove('show');
+  }, duration * 0.5);
 }
 
 let journeyAudioEl = null;
