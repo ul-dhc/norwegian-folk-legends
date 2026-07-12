@@ -39,6 +39,15 @@ const JOURNEY_CATEGORY_PHRASES = [
   'Many told of \u201c{title}\u201d – {count} legends in all. Here is another…',
 ];
 
+const JOURNEY_INTRO = [
+  'In Norway, ordinary people once told of what they had seen and felt – strange lights in the marsh, a voice calling from the water, a stranger who was not quite human.',
+  'These are belief legends – sagn – stories of real encounters with a world just behind our own, remembered and passed down.',
+  'This collection gathers 1,477 such legends, recorded across Norway between 1832 and 1954.',
+  'We can thank Professor Kyrre Kverdokk for bringing this collection online, so these voices could be heard again.',
+  'This journey is another way to experience them – not read, but travelled.',
+  'And now, follow me… I will take you to the place…',
+];
+
 let journeyMap = null;
 let journeyCanvas = null;
 let journeyCtx = null;
@@ -58,6 +67,8 @@ let journeyCategories = [];
 let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
+let journeyIntroDone = false;
+let journeyIntroIndex = 0;
 let journeyMusicOn = false;
 
 function journeyCoords(d) {
@@ -526,12 +537,35 @@ function updateJourneyButtons() {
   playBtn.disabled = !journeyStatsReady;
 }
 
+function journeyIntroDwell(text) {
+  return Math.max(3600, Math.min(7000, 1800 + text.length * 32));
+}
+
+function journeyRunIntro() {
+  if (journeyIntroIndex >= JOURNEY_INTRO.length) {
+    journeyIntroDone = true;
+    setJourneyCaption('');
+    journeyAdvance();
+    return;
+  }
+  journeyIdle = true;
+  const text = JOURNEY_INTRO[journeyIntroIndex];
+  setJourneyCaption(text);
+  journeyIntroIndex++;
+  journeyDwellTimer = setTimeout(() => {
+    if (journeyPlaying) journeyRunIntro();
+  }, journeyIntroDwell(text));
+}
+
 function journeyPlay() {
   if (!journeyStatsReady) buildJourneyStats();
   if (!journeyStatsReady) return;
   journeyPlaying = true;
   updateJourneyButtons();
-  if (journeyIdle) journeyAdvance();
+  if (journeyIdle) {
+    if (!journeyIntroDone && !journeyCurrent) journeyRunIntro();
+    else journeyAdvance();
+  }
 }
 
 function journeyStop() {
@@ -543,6 +577,7 @@ function journeyStop() {
 function journeyJump() {
   if (!journeyStatsReady) buildJourneyStats();
   if (!journeyStatsReady) return;
+  journeyIntroDone = true;
   clearTimeout(journeyDwellTimer);
   clearTimeout(journeyFlightTimer);
   journeyPlaying = true;
