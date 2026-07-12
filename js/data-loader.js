@@ -10,6 +10,8 @@ Papa.parse(SHEET, {
     applyFilters();
     document.getElementById('stats-b').textContent = allData.length.toLocaleString() + ' legends';
     if (curTab === 'timeline') renderTimeline();
+    if (curTab === 'map') renderMapMarkers();
+    if (curTab === 'mlindex') initMLIndex();
     setTimeout(() => {
       if (curTab === 'network') renderNetwork();
     }, 300);
