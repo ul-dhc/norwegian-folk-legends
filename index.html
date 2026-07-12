@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norske sagn — Norwegian Folk Legends</title>
+<title>Norske sagn – Norwegian Folk Legends</title>
 <link rel="stylesheet" href="css/styles.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -167,26 +167,31 @@
       <button class="map-toggle-btn" id="mbt-county" onclick="setMapMode('county')">County</button>
       <button class="map-toggle-btn" id="mbt-heat" onclick="setMapMode('heat')">Heat</button>
     </div>
-    <div class="map-fp">
-      <span class="map-fl">ML category</span>
-      <div class="cb-dropdown" id="cbd-map-ml"></div>
-      <span class="map-fl">County</span>
-      <div class="cb-dropdown" id="cbd-map-fylke"></div>
-      <span class="map-fl">Collector</span>
-      <div class="cb-dropdown" id="cbd-map-samler"></div>
-      <span class="map-fl">Informant</span>
-      <div class="cb-dropdown" id="cbd-map-informant"></div>
-      <span class="map-fl">Year</span>
-      <div class="yr-row" style="gap:4px">
-        <input type="number" class="yr-in" id="mf-yr-from" placeholder="1840" style="font-size:11px;padding:4px 5px" onchange="renderMapMarkers()"/>
-        <span class="yr-sep">–</span>
-        <input type="number" class="yr-in" id="mf-yr-to" placeholder="1960" style="font-size:11px;padding:4px 5px" onchange="renderMapMarkers()"/>
-      </div>
+    <div class="map-filter-toggle" onclick="toggleMapFilters()">
+      <span>Filters</span><span id="map-filter-arrow">▸</span>
     </div>
-    <div class="map-legend-box">
-      <div class="map-legend-title">Subgenre</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#B9CAE7"></div>Naturmytiske sagn</div>
-      <div class="map-legend-item"><div class="map-legend-dot" style="background:#D8A8B3"></div>Historiske sagn</div>
+    <div class="map-filter-body" id="map-filter-body">
+      <div class="map-fp">
+        <span class="map-fl">ML category</span>
+        <div class="cb-dropdown" id="cbd-map-ml"></div>
+        <span class="map-fl">County</span>
+        <div class="cb-dropdown" id="cbd-map-fylke"></div>
+        <span class="map-fl">Collector</span>
+        <div class="cb-dropdown" id="cbd-map-samler"></div>
+        <span class="map-fl">Informant</span>
+        <div class="cb-dropdown" id="cbd-map-informant"></div>
+        <span class="map-fl">Year</span>
+        <div class="yr-row" style="gap:4px">
+          <input type="number" class="yr-in" id="mf-yr-from" placeholder="1840" style="font-size:11px;padding:4px 5px" onchange="renderMapMarkers()"/>
+          <span class="yr-sep">–</span>
+          <input type="number" class="yr-in" id="mf-yr-to" placeholder="1960" style="font-size:11px;padding:4px 5px" onchange="renderMapMarkers()"/>
+        </div>
+      </div>
+      <div class="map-legend-box">
+        <div class="map-legend-title">Subgenre</div>
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#B9CAE7"></div>Naturmytiske sagn</div>
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#D8A8B3"></div>Historiske sagn</div>
+      </div>
     </div>
   </div>
   <div class="map-side" id="map-side">
