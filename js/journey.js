@@ -55,6 +55,14 @@ const JOURNEY_PLACE_PHRASES = [
   'Next is {place}, with {count} legend{s} connected to it.',
 ];
 
+const JOURNEY_PLACE_SINGULAR_PHRASES = [
+  'We arrive in {place}, where a single legend was recorded. Let us hear it…',
+  'The thread settles in {place} – just one legend was recorded here.',
+  'Here is {place}, home to a single recorded legend.',
+  'We stop in {place}. Only one legend was recorded here.',
+  'Next is {place}, with one legend connected to it.',
+];
+
 const JOURNEY_CATEGORY_CONTEXT_PHRASES = [
   'A familiar motif returns: \u201c{title}\u201d. Let us follow it into another story…',
   'The next legend echoes the same theme – \u201c{title}\u201d…',
@@ -113,6 +121,8 @@ let journeyStarfield = [];
 let journeyStarfieldActive = false;
 let journeyStarfieldFadeUntil = null;
 let journeyIntroDone = false;
+let journeySkipNextFlightCaption = false;
+let journeyPendingAdvanceFn = null;
 let journeyIntroIndex = 0;
 let journeyMusicOn = false;
 
@@ -211,6 +221,8 @@ function buildJourneyStarfield() {
         color: colors[Math.floor(Math.random() * colors.length)],
         phase: Math.random() * Math.PI * 2,
         speed: 0.0006 + Math.random() * 0.001,
+        flashAt: performance.now() + 1500 + Math.random() * 9000,
+        flashDur: 350 + Math.random() * 250,
       };
     })
     .filter(Boolean);
@@ -237,10 +249,24 @@ function journeyDrawStarfield(now) {
   journeyStarfield.forEach((s) => {
     const p = journeyProject(s.lat, s.lon);
     const pulse = (Math.sin(now * s.speed + s.phase) + 1) / 2;
-    const alpha = (0.06 + pulse * 0.2) * globalAlpha;
+    let alpha = 0.06 + pulse * 0.2;
+    let radius = 1.4 + pulse * 1.1;
+    if (now >= s.flashAt) {
+      const flashElapsed = now - s.flashAt;
+      if (flashElapsed < s.flashDur) {
+        const ft = flashElapsed / s.flashDur;
+        const curve = ft < 0.3 ? ft / 0.3 : 1 - (ft - 0.3) / 0.7;
+        alpha = Math.max(alpha, curve * 0.85);
+        radius = Math.max(radius, 1.4 + curve * 2.4);
+      } else {
+        s.flashAt = now + 3500 + Math.random() * 7000;
+        s.flashDur = 350 + Math.random() * 250;
+      }
+    }
+    alpha *= globalAlpha;
     const rgb = journeyHexToRgb(s.color);
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, 1.4 + pulse * 1.1, 0, Math.PI * 2);
+    journeyCtx.arc(p.x, p.y, radius, 0, Math.PI * 2);
     journeyCtx.fillStyle = `rgba(${rgb},${alpha})`;
     journeyCtx.fill();
   });
@@ -607,7 +633,12 @@ function journeyFlyTo(target, isJump, captionOverride) {
     target,
   };
   const captionPool = JOURNEY_FLIGHT_CAPTIONS[isJump ? 'jump' : target.type];
-  setJourneyCaption(captionOverride || (captionPool ? journeyPick(captionPool) : ''));
+  if (journeySkipNextFlightCaption) {
+    setJourneyCaption('');
+    journeySkipNextFlightCaption = false;
+  } else {
+    setJourneyCaption(captionOverride || (captionPool ? journeyPick(captionPool) : ''));
+  }
   hideJourneyTextPanel();
   const zoom = isJump ? JOURNEY_ZOOM.collector - 1.2 : JOURNEY_ZOOM[target.type];
   journeyVeilPulse(duration);
@@ -651,6 +682,7 @@ function journeyArrive(target) {
       Math.min(9500, 2200 + (target.story || '').length * 38),
     );
   }
+  journeyPendingAdvanceFn = journeyAdvance;
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyAdvance();
   }, dwell);
@@ -701,6 +733,10 @@ function journeySpotlightCollector(c, onDone) {
     holdMs: JOURNEY_SPOTLIGHT_HOLD_MS,
     fadeMs: JOURNEY_SPOTLIGHT_FADE_MS,
   };
+  journeyPendingAdvanceFn = () => {
+    setJourneyCaption('');
+    onDone();
+  };
   journeyDwellTimer = setTimeout(() => {
     setJourneyCaption('');
     if (journeyPlaying) onDone();
@@ -732,6 +768,10 @@ function journeySpotlightCategory(cat, centerCoords, onDone) {
     start: performance.now(),
     holdMs: JOURNEY_SPOTLIGHT_HOLD_MS,
     fadeMs: JOURNEY_SPOTLIGHT_FADE_MS,
+  };
+  journeyPendingAdvanceFn = () => {
+    setJourneyCaption('');
+    onDone();
   };
   journeyDwellTimer = setTimeout(() => {
     setJourneyCaption('');
@@ -767,7 +807,10 @@ function journeyAdvance() {
       centroid: itemPick.coords,
     };
     journeyMemory.place = p;
-    const story = journeyNarrate(JOURNEY_PLACE_PHRASES, { place: placeName, count: p.count });
+    const story = journeyNarrate(
+      p.count === 1 ? JOURNEY_PLACE_SINGULAR_PHRASES : JOURNEY_PLACE_PHRASES,
+      { place: placeName, count: p.count },
+    );
     journeyFlyTo(journeyMkNode('place', p.centroid, story), false);
     journeyStep = 'legendA';
     return;
@@ -809,12 +852,14 @@ function updateJourneyButtons() {
   const playBtn = document.getElementById('jny-play');
   const stopBtn = document.getElementById('jny-stop');
   const jumpBtn = document.getElementById('jny-jump');
+  const nextBtn = document.getElementById('jny-next');
   if (!playBtn) return;
   playBtn.classList.toggle('on', journeyPlaying);
   playBtn.textContent = journeyPlaying ? '⏸ Pause' : '▶ Play';
   stopBtn.disabled = !journeyPlaying;
   jumpBtn.disabled = !journeyStatsReady;
   playBtn.disabled = !journeyStatsReady;
+  if (nextBtn) nextBtn.disabled = !journeyStatsReady;
 }
 
 function journeyIntroText(i) {
@@ -829,6 +874,7 @@ function journeyRunIntro() {
   if (journeyIntroIndex >= JOURNEY_INTRO.length) {
     journeyIntroDone = true;
     setJourneyCaption('');
+    journeySkipNextFlightCaption = true;
     journeyAdvance();
     return;
   }
@@ -836,12 +882,17 @@ function journeyRunIntro() {
   const text = journeyIntroText(journeyIntroIndex);
   setJourneyCaption(text);
   journeyIntroIndex++;
+  journeyPendingAdvanceFn = journeyRunIntro;
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyRunIntro();
   }, journeyIntroDwell(text));
 }
 
 function journeyPlay() {
+  if (journeyPlaying) {
+    journeyStop();
+    return;
+  }
   if (!journeyStatsReady) buildJourneyStats();
   if (!journeyStatsReady) return;
   journeyPlaying = true;
@@ -856,6 +907,14 @@ function journeyStop() {
   journeyPlaying = false;
   clearTimeout(journeyDwellTimer);
   updateJourneyButtons();
+}
+
+function journeyNext() {
+  if (!journeyPendingAdvanceFn || journeyFlight) return;
+  clearTimeout(journeyDwellTimer);
+  const fn = journeyPendingAdvanceFn;
+  journeyPendingAdvanceFn = null;
+  fn();
 }
 
 function journeyJump() {
