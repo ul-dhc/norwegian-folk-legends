@@ -24,19 +24,19 @@ const JOURNEY_FLIGHT_CAPTIONS = {
 const JOURNEY_COLLECTOR_PHRASES = [
   'Now I will take you to {name}, who collected {count} legends across Norway.',
   '{name} gathered {count} legends from across the land. Follow the thread…',
-  'Let us seek out {name} — {count} legends passed through their hands.',
+  'Let us seek out {name} – {count} legends passed through their hands.',
 ];
 
 const JOURNEY_PLACE_PHRASES = [
   'We arrive in {place}. {count} legend{s} were recorded in this surroundings. Let\u2019s go to one of them…',
-  'Follow the thread to {place} — home to {count} recorded legend{s}.',
+  'Follow the thread to {place} – home to {count} recorded legend{s}.',
   'The path leads to {place}, where {count} legend{s} once were told.',
 ];
 
 const JOURNEY_CATEGORY_PHRASES = [
   '{count} legends about \u201c{title}\u201d have been collected. Let\u2019s hear another…',
-  'This story belongs to a wider circle — \u201c{title}\u201d, {count} legends strong. Follow the thread to one more…',
-  'Many told of \u201c{title}\u201d — {count} legends in all. Here is another…',
+  'This story belongs to a wider circle – \u201c{title}\u201d, {count} legends strong. Follow the thread to one more…',
+  'Many told of \u201c{title}\u201d – {count} legends in all. Here is another…',
 ];
 
 let journeyMap = null;
@@ -58,8 +58,6 @@ let journeyCategories = [];
 let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
-let journeyAudioCtx = null;
-let journeyMusicNodes = null;
 let journeyMusicOn = false;
 
 function journeyCoords(d) {
@@ -194,6 +192,7 @@ function initJourney() {
   L.tileLayer(MAP_LAYERS.dark, {
     attribution: '© OpenStreetMap © CARTO',
     maxZoom: 14,
+    keepBuffer: 6,
   }).addTo(journeyMap);
   initJourneyCanvas();
   window.addEventListener('resize', resizeJourneyCanvas);
@@ -583,71 +582,37 @@ function onJourneyFullscreenChange() {
   }, 60);
 }
 
-function initJourneyAudio() {
-  if (journeyAudioCtx) return;
-  const Ctx = window.AudioContext || window.webkitAudioContext;
-  journeyAudioCtx = new Ctx();
-  const master = journeyAudioCtx.createGain();
-  master.gain.value = 0;
-  master.connect(journeyAudioCtx.destination);
+let journeyAudioEl = null;
+let journeyFadeRAF = null;
 
-  const delay = journeyAudioCtx.createDelay(2);
-  delay.delayTime.value = 0.6;
-  const feedback = journeyAudioCtx.createGain();
-  feedback.gain.value = 0.35;
-  const delayFilter = journeyAudioCtx.createBiquadFilter();
-  delayFilter.type = 'lowpass';
-  delayFilter.frequency.value = 1500;
-  delay.connect(feedback);
-  feedback.connect(delayFilter);
-  delayFilter.connect(delay);
-  delay.connect(master);
-
-  const freqs = [55, 82.41, 110, 164.81];
-  const voices = [];
-  freqs.forEach((f, i) => {
-    const osc = journeyAudioCtx.createOscillator();
-    osc.type = i % 2 === 0 ? 'sine' : 'triangle';
-    osc.frequency.value = f;
-    const g = journeyAudioCtx.createGain();
-    g.gain.value = 0.22 / freqs.length;
-    const filter = journeyAudioCtx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = 900;
-    osc.connect(filter);
-    filter.connect(g);
-    g.connect(master);
-    g.connect(delay);
-    const lfo = journeyAudioCtx.createOscillator();
-    lfo.frequency.value = 0.05 + i * 0.02;
-    const lfoGain = journeyAudioCtx.createGain();
-    lfoGain.gain.value = 3;
-    lfo.connect(lfoGain);
-    lfoGain.connect(osc.detune);
-    osc.start();
-    lfo.start();
-    voices.push({ osc, lfo, g });
-  });
-
-  journeyMusicNodes = { master, voices };
+function journeyFadeAudio(target, duration) {
+  if (!journeyAudioEl) return;
+  cancelAnimationFrame(journeyFadeRAF);
+  const start = journeyAudioEl.volume;
+  const t0 = performance.now();
+  const step = (now) => {
+    const t = Math.min(1, (now - t0) / duration);
+    journeyAudioEl.volume = start + (target - start) * t;
+    if (t < 1) {
+      journeyFadeRAF = requestAnimationFrame(step);
+    } else if (target === 0) {
+      journeyAudioEl.pause();
+    }
+  };
+  journeyFadeRAF = requestAnimationFrame(step);
 }
 
 function toggleJourneyMusic() {
+  if (!journeyAudioEl) journeyAudioEl = document.getElementById('journey-audio');
   journeyMusicOn = !journeyMusicOn;
   const btn = document.getElementById('jny-music');
   if (btn) btn.classList.toggle('on', journeyMusicOn);
   if (journeyMusicOn) {
-    initJourneyAudio();
-    if (journeyAudioCtx.state === 'suspended') journeyAudioCtx.resume();
-    const now = journeyAudioCtx.currentTime;
-    journeyMusicNodes.master.gain.cancelScheduledValues(now);
-    journeyMusicNodes.master.gain.setValueAtTime(journeyMusicNodes.master.gain.value, now);
-    journeyMusicNodes.master.gain.linearRampToValueAtTime(0.14, now + 2.5);
-  } else if (journeyMusicNodes) {
-    const now = journeyAudioCtx.currentTime;
-    journeyMusicNodes.master.gain.cancelScheduledValues(now);
-    journeyMusicNodes.master.gain.setValueAtTime(journeyMusicNodes.master.gain.value, now);
-    journeyMusicNodes.master.gain.linearRampToValueAtTime(0, now + 1.5);
+    journeyAudioEl.volume = 0;
+    journeyAudioEl.play().catch(() => {});
+    journeyFadeAudio(0.35, 2000);
+  } else {
+    journeyFadeAudio(0, 1200);
   }
 }
 
