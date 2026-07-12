@@ -1,14 +1,23 @@
 const JOURNEY_FLIGHT_MS = 3200;
 const JOURNEY_JUMP_MS = 4600;
-const JOURNEY_HUB_PAUSE_MS = 1700;
-const JOURNEY_TRAIL_MAX = 24;
+const JOURNEY_HUB_PAUSE_MS = 2200;
+const JOURNEY_TRAIL_MAX = 300;
+const JOURNEY_CLICK_RADIUS = 16;
 
-const JOURNEY_ZOOM = { legend: 9.2, collector: 6.4, category: 6.4, jump: 5.2 };
+const JOURNEY_ZOOM = { collector: 6.4, place: 8.2, category: 6.4, legend: 10 };
+
+const JOURNEY_COLORS = {
+  collector: '#FFC857',
+  place: '#5EA8FF',
+  category: '#5EEAD4',
+  legend: '#FF7AC6',
+};
 
 const JOURNEY_CAPTIONS = {
   collector: 'Seeking a collector…',
-  legend: 'Arriving at a place…',
+  place: 'Traveling to a place…',
   category: 'Following the thread…',
+  legend: 'Arriving at a legend…',
   jump: 'Crossing the void…',
 };
 
@@ -24,9 +33,11 @@ let journeyStep = 'collector';
 let journeyCurrent = null;
 let journeyFlight = null;
 let journeyTrail = [];
+let journeyEdges = [];
 let journeyRecentCollectors = [];
 let journeyCollectors = [];
 let journeyCategories = [];
+let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
 
@@ -40,6 +51,10 @@ function journeyCoords(d) {
   return null;
 }
 
+function journeyPlaceKey(d) {
+  return (d.sted || d.fylke || '').trim();
+}
+
 function journeyCentroid(items) {
   const lat = items.reduce((s, i) => s + i.coords.lat, 0) / items.length;
   const lon = items.reduce((s, i) => s + i.coords.lon, 0) / items.length;
@@ -50,6 +65,7 @@ function buildJourneyStats() {
   if (journeyStatsReady || !allData.length) return;
   const collMap = {};
   const catMap = {};
+  const placeMap = {};
   allData.forEach((d) => {
     const coords = journeyCoords(d);
     if (!coords) return;
@@ -63,14 +79,39 @@ function buildJourneyStats() {
       if (!catMap[m]) catMap[m] = { code: m, title: d.ml_title || m, items: [] };
       catMap[m].items.push({ d, coords });
     }
+    const p = journeyPlaceKey(d);
+    if (p && p !== 'nan') {
+      if (!placeMap[p]) placeMap[p] = { name: p, items: [] };
+      placeMap[p].items.push({ d, coords });
+    }
   });
   journeyCollectors = Object.values(collMap)
     .filter((c) => c.items.length >= 2)
-    .map((c) => ({ name: c.name, items: c.items, count: c.items.length, centroid: journeyCentroid(c.items) }))
+    .map((c) => ({
+      name: c.name,
+      items: c.items,
+      count: c.items.length,
+      centroid: journeyCentroid(c.items),
+    }))
     .sort((a, b) => b.count - a.count);
   journeyCategories = Object.values(catMap)
     .filter((c) => c.items.length >= 2)
-    .map((c) => ({ code: c.code, title: c.title, items: c.items, count: c.items.length, centroid: journeyCentroid(c.items) }));
+    .map((c) => ({
+      code: c.code,
+      title: c.title,
+      items: c.items,
+      count: c.items.length,
+      centroid: journeyCentroid(c.items),
+    }));
+  journeyPlaces = {};
+  Object.values(placeMap).forEach((p) => {
+    journeyPlaces[p.name] = {
+      name: p.name,
+      items: p.items,
+      count: p.items.length,
+      centroid: journeyCentroid(p.items),
+    };
+  });
   journeyStatsReady = journeyCollectors.length > 0;
   updateJourneyButtons();
 }
@@ -82,6 +123,14 @@ function journeyPick(arr) {
 function journeyWeightedTopPick(sortedArr, topN, excludeNames) {
   const pool = sortedArr.filter((c) => !excludeNames.includes(c.name)).slice(0, topN);
   return journeyPick(pool.length ? pool : sortedArr);
+}
+
+function journeyMkNode(type, coords, label, sub) {
+  return { type, lat: coords.lat, lon: coords.lon, label, sub };
+}
+
+function journeyMkLegendNode(pick) {
+  return { type: 'legend', lat: pick.coords.lat, lon: pick.coords.lon, item: pick.d };
 }
 
 function initJourneyCanvas() {
@@ -123,6 +172,7 @@ function initJourney() {
   window.addEventListener('resize', resizeJourneyCanvas);
   journeyMap.on('move', drawJourneyOverlay);
   journeyMap.on('zoom', drawJourneyOverlay);
+  journeyMap.on('click', handleJourneyClick);
   startJourneyRAF();
   buildJourneyStats();
   updateJourneyButtons();
@@ -147,6 +197,27 @@ function journeyProject(lat, lon) {
   return { x: p.x, y: p.y };
 }
 
+function journeyBezier(from, to) {
+  const midLat = (from.lat + to.lat) / 2;
+  const midLon = (from.lon + to.lon) / 2;
+  const dx = to.lon - from.lon;
+  const dy = to.lat - from.lat;
+  const bulge = Math.min(6, Math.hypot(dx, dy) * 0.18);
+  const nx = -dy;
+  const ny = dx;
+  const norm = Math.hypot(nx, ny) || 1;
+  const ctrlLat = midLat + (ny / norm) * bulge;
+  const ctrlLon = midLon + (nx / norm) * bulge;
+  return (tt) => ({
+    lat: (1 - tt) * (1 - tt) * from.lat + 2 * (1 - tt) * tt * ctrlLat + tt * tt * to.lat,
+    lon: (1 - tt) * (1 - tt) * from.lon + 2 * (1 - tt) * tt * ctrlLon + tt * tt * to.lon,
+  });
+}
+
+function journeyHexToRgb(hex) {
+  return `${parseInt(hex.slice(1, 3), 16)},${parseInt(hex.slice(3, 5), 16)},${parseInt(hex.slice(5, 7), 16)}`;
+}
+
 function drawJourneyOverlay() {
   if (!journeyCtx || !journeyMap) return;
   const wrap = document.getElementById('journey-map-container');
@@ -155,37 +226,44 @@ function drawJourneyOverlay() {
 
   const now = performance.now();
 
-  journeyTrail.forEach((pt) => {
-    const age = (now - pt.t) / 1000;
-    const alpha = Math.max(0, 0.55 - age * 0.03);
-    if (alpha <= 0) return;
-    const p = journeyProject(pt.lat, pt.lon);
+  journeyEdges.forEach((edge) => {
+    const settle = Math.min(1, (now - edge.t) / 500);
+    const bez = journeyBezier(edge.from, edge.to);
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, pt.type === 'legend' ? 4 : 3, 0, Math.PI * 2);
-    journeyCtx.fillStyle = `rgba(122,178,255,${alpha})`;
+    const steps = 40;
+    for (let i = 0; i <= steps; i++) {
+      const pp = bez(i / steps);
+      const p = journeyProject(pp.lat, pp.lon);
+      if (i === 0) journeyCtx.moveTo(p.x, p.y);
+      else journeyCtx.lineTo(p.x, p.y);
+    }
+    journeyCtx.strokeStyle = `rgba(${journeyHexToRgb(edge.color)},${0.32 * settle})`;
+    journeyCtx.lineWidth = 1.1;
+    journeyCtx.stroke();
+  });
+
+  journeyTrail.forEach((pt) => {
+    const settle = Math.min(1, (now - pt.t) / 500);
+    const p = journeyProject(pt.lat, pt.lon);
+    const color = JOURNEY_COLORS[pt.type];
+    const r = pt.type === 'legend' ? 4.5 : 3.5;
+    journeyCtx.beginPath();
+    journeyCtx.arc(p.x, p.y, r, 0, Math.PI * 2);
+    journeyCtx.fillStyle = `rgba(${journeyHexToRgb(color)},${0.85 * settle})`;
     journeyCtx.fill();
+    journeyCtx.beginPath();
+    journeyCtx.arc(p.x, p.y, r + 3, 0, Math.PI * 2);
+    journeyCtx.strokeStyle = `rgba(${journeyHexToRgb(color)},${0.35 * settle})`;
+    journeyCtx.lineWidth = 1;
+    journeyCtx.stroke();
   });
 
   if (journeyFlight) {
     const t = Math.min(1, (now - journeyFlight.start) / journeyFlight.duration);
     const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    const from = journeyFlight.from;
-    const to = journeyFlight.to;
-    const midLat = (from.lat + to.lat) / 2;
-    const midLon = (from.lon + to.lon) / 2;
-    const dx = to.lon - from.lon;
-    const dy = to.lat - from.lat;
-    const bulge = Math.min(6, Math.hypot(dx, dy) * 0.18);
-    const nx = -dy;
-    const ny = dx;
-    const norm = Math.hypot(nx, ny) || 1;
-    const ctrlLat = midLat + (ny / norm) * bulge;
-    const ctrlLon = midLon + (nx / norm) * bulge;
-
-    const bez = (tt) => ({
-      lat: (1 - tt) * (1 - tt) * from.lat + 2 * (1 - tt) * tt * ctrlLat + tt * tt * to.lat,
-      lon: (1 - tt) * (1 - tt) * from.lon + 2 * (1 - tt) * tt * ctrlLon + tt * tt * to.lon,
-    });
+    const bez = journeyBezier(journeyFlight.from, journeyFlight.to);
+    const color = JOURNEY_COLORS[journeyFlight.type] || '#c8e1ff';
+    const rgb = journeyHexToRgb(color);
 
     journeyCtx.beginPath();
     const steps = 40;
@@ -196,15 +274,15 @@ function drawJourneyOverlay() {
       if (i === 0) journeyCtx.moveTo(p.x, p.y);
       else journeyCtx.lineTo(p.x, p.y);
     }
-    journeyCtx.strokeStyle = 'rgba(150,200,255,0.55)';
-    journeyCtx.lineWidth = 1.4;
+    journeyCtx.strokeStyle = `rgba(${rgb},0.7)`;
+    journeyCtx.lineWidth = 1.6;
     journeyCtx.stroke();
 
     const head = bez(Math.min(1, ease));
     const hp = journeyProject(head.lat, head.lon);
     const grad = journeyCtx.createRadialGradient(hp.x, hp.y, 0, hp.x, hp.y, 14);
-    grad.addColorStop(0, 'rgba(200,225,255,0.9)');
-    grad.addColorStop(1, 'rgba(200,225,255,0)');
+    grad.addColorStop(0, `rgba(${rgb},0.9)`);
+    grad.addColorStop(1, `rgba(${rgb},0)`);
     journeyCtx.beginPath();
     journeyCtx.arc(hp.x, hp.y, 14, 0, Math.PI * 2);
     journeyCtx.fillStyle = grad;
@@ -219,10 +297,12 @@ function drawJourneyOverlay() {
 
   if (journeyCurrent) {
     const p = journeyProject(journeyCurrent.lat, journeyCurrent.lon);
+    const color = JOURNEY_COLORS[journeyCurrent.type];
+    const rgb = journeyHexToRgb(color);
     const pulse = 6 + Math.sin(now / 260) * 2.5;
     const grad = journeyCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, pulse * 3);
-    grad.addColorStop(0, 'rgba(220,235,255,0.55)');
-    grad.addColorStop(1, 'rgba(220,235,255,0)');
+    grad.addColorStop(0, `rgba(${rgb},0.55)`);
+    grad.addColorStop(1, `rgba(${rgb},0)`);
     journeyCtx.beginPath();
     journeyCtx.arc(p.x, p.y, pulse * 3, 0, Math.PI * 2);
     journeyCtx.fillStyle = grad;
@@ -231,6 +311,28 @@ function drawJourneyOverlay() {
     journeyCtx.arc(p.x, p.y, 4, 0, Math.PI * 2);
     journeyCtx.fillStyle = '#fff';
     journeyCtx.fill();
+  }
+}
+
+function handleJourneyClick(e) {
+  const clickPt = e.containerPoint;
+  let closest = null;
+  let closestDist = JOURNEY_CLICK_RADIUS;
+  journeyTrail.forEach((pt) => {
+    const p = journeyProject(pt.lat, pt.lon);
+    const d = Math.hypot(p.x - clickPt.x, p.y - clickPt.y);
+    if (d < closestDist) {
+      closestDist = d;
+      closest = pt;
+    }
+  });
+  if (!closest) return;
+  if (closest.type === 'legend') {
+    setJourneyCaption('');
+    showJourneyTextPanel(closest.item);
+  } else {
+    hideJourneyTextPanel();
+    setJourneyCaption(closest.label, closest.sub);
   }
 }
 
@@ -257,7 +359,9 @@ function showJourneyTextPanel(d) {
   const meta = [
     d.samler ? `Collected by ${esc(d.samler)}` : '',
     d.informant ? `told by ${esc(d.informant)}` : '',
-  ].filter(Boolean).join(' · ');
+  ]
+    .filter(Boolean)
+    .join(' · ');
   panel.innerHTML = `
     <span class="mlb" style="background:${mlC(d.ml_code)}30;color:${mlT(d.ml_code)}">${esc(d.ml_code || '')}</span>
     <div class="journey-tp-title">${esc(title)}</div>
@@ -283,17 +387,37 @@ function journeyFlyTo(target, isJump) {
     to: { lat: target.lat, lon: target.lon },
     start: performance.now(),
     duration,
+    type: target.type,
   };
   setJourneyCaption(JOURNEY_CAPTIONS[isJump ? 'jump' : target.type] || '');
   hideJourneyTextPanel();
-  const zoom = isJump ? JOURNEY_ZOOM.jump : JOURNEY_ZOOM[target.type];
-  journeyMap.flyTo([target.lat, target.lon], zoom, { duration: duration / 1000, easeLinearity: 0.3 });
+  const zoom = isJump ? JOURNEY_ZOOM.collector - 1.2 : JOURNEY_ZOOM[target.type];
+  journeyMap.flyTo([target.lat, target.lon], zoom, {
+    duration: duration / 1000,
+    easeLinearity: 0.3,
+  });
   journeyFlightTimer = setTimeout(() => journeyArrive(target), duration);
 }
 
 function journeyArrive(target) {
+  if (journeyCurrent) {
+    journeyEdges.push({
+      from: { lat: journeyCurrent.lat, lon: journeyCurrent.lon },
+      to: { lat: target.lat, lon: target.lon },
+      color: JOURNEY_COLORS[target.type],
+      t: performance.now(),
+    });
+  }
   journeyCurrent = target;
-  journeyTrail.push({ lat: target.lat, lon: target.lon, type: target.type, t: performance.now() });
+  journeyTrail.push({
+    lat: target.lat,
+    lon: target.lon,
+    type: target.type,
+    label: target.label,
+    sub: target.sub,
+    item: target.item,
+    t: performance.now(),
+  });
   if (journeyTrail.length > JOURNEY_TRAIL_MAX) journeyTrail.shift();
   journeyIdle = true;
   let dwell = JOURNEY_HUB_PAUSE_MS;
@@ -319,25 +443,55 @@ function journeyAdvance() {
     journeyRecentCollectors.push(c.name);
     if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
     journeyMemory.collector = c;
-    target = { type: 'collector', lat: c.centroid.lat, lon: c.centroid.lon, label: c.name, sub: c.count + ' legends collected' };
+    target = journeyMkNode(
+      'collector',
+      c.centroid,
+      c.name,
+      `${c.count} legends collected across Norway`,
+    );
+    journeyStep = 'place';
+  } else if (journeyStep === 'place') {
+    const c = journeyMemory.collector;
+    const itemPick = journeyPick(c.items);
+    const placeName = journeyPlaceKey(itemPick.d);
+    const p = journeyPlaces[placeName] || {
+      name: placeName,
+      items: [itemPick],
+      count: 1,
+      centroid: itemPick.coords,
+    };
+    journeyMemory.place = p;
+    target = journeyMkNode(
+      'place',
+      p.centroid,
+      `In ${placeName}`,
+      `${p.count} legend${p.count !== 1 ? 's' : ''} recorded`,
+    );
     journeyStep = 'legendA';
   } else if (journeyStep === 'legendA') {
-    const pick = journeyPick(journeyMemory.collector.items);
+    const p = journeyMemory.place;
+    const byCollector = p.items.filter((i) => i.d.samler === journeyMemory.collector.name);
+    const pick = journeyPick(byCollector.length ? byCollector : p.items);
     journeyMemory.legendA = pick;
-    target = { type: 'legend', lat: pick.coords.lat, lon: pick.coords.lon, item: pick.d };
+    target = journeyMkLegendNode(pick);
     journeyStep = 'category';
   } else if (journeyStep === 'category') {
     const ml = (journeyMemory.legendA.d.ml_code || '').trim();
     const cat = journeyCategories.find((x) => x.code === ml) || journeyPick(journeyCategories);
     journeyMemory.category = cat;
-    target = { type: 'category', lat: cat.centroid.lat, lon: cat.centroid.lon, label: cat.code, sub: cat.title || '' };
+    target = journeyMkNode(
+      'category',
+      cat.centroid,
+      cat.code,
+      `${cat.title || ''} · ${cat.count} legends`,
+    );
     journeyStep = 'legendB';
   } else {
     const cat = journeyMemory.category;
     const excludeId = journeyMemory.legendA.d.id;
     const pool = cat.items.filter((x) => x.d.id !== excludeId);
     const pick = journeyPick(pool.length ? pool : cat.items);
-    target = { type: 'legend', lat: pick.coords.lat, lon: pick.coords.lon, item: pick.d };
+    target = journeyMkLegendNode(pick);
     journeyStep = 'collector';
   }
   journeyFlyTo(target, false);
@@ -383,6 +537,9 @@ function journeyJump() {
   journeyRecentCollectors.push(c.name);
   if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
   journeyMemory.collector = c;
-  journeyStep = 'legendA';
-  journeyFlyTo({ type: 'collector', lat: c.centroid.lat, lon: c.centroid.lon, label: c.name, sub: c.count + ' legends collected' }, true);
+  journeyStep = 'place';
+  journeyFlyTo(
+    journeyMkNode('collector', c.centroid, c.name, `${c.count} legends collected across Norway`),
+    true,
+  );
 }
