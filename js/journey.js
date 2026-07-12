@@ -220,9 +220,9 @@ function buildJourneyStarfield() {
         lon: c.lon,
         color: colors[Math.floor(Math.random() * colors.length)],
         phase: Math.random() * Math.PI * 2,
-        speed: 0.0006 + Math.random() * 0.001,
-        flashAt: performance.now() + 1500 + Math.random() * 9000,
-        flashDur: 350 + Math.random() * 250,
+        speed: 0.00018 + Math.random() * 0.00035,
+        flashAt: performance.now() + 4000 + Math.random() * 14000,
+        flashDur: 500 + Math.random() * 300,
       };
     })
     .filter(Boolean);
@@ -249,18 +249,18 @@ function journeyDrawStarfield(now) {
   journeyStarfield.forEach((s) => {
     const p = journeyProject(s.lat, s.lon);
     const pulse = (Math.sin(now * s.speed + s.phase) + 1) / 2;
-    let alpha = 0.06 + pulse * 0.2;
-    let radius = 1.4 + pulse * 1.1;
+    let alpha = 0.04 + pulse * 0.1;
+    let radius = 1.2 + pulse * 0.6;
     if (now >= s.flashAt) {
       const flashElapsed = now - s.flashAt;
       if (flashElapsed < s.flashDur) {
         const ft = flashElapsed / s.flashDur;
         const curve = ft < 0.3 ? ft / 0.3 : 1 - (ft - 0.3) / 0.7;
-        alpha = Math.max(alpha, curve * 0.85);
-        radius = Math.max(radius, 1.4 + curve * 2.4);
+        alpha = Math.max(alpha, curve * 0.5);
+        radius = Math.max(radius, 1.2 + curve * 1.4);
       } else {
-        s.flashAt = now + 3500 + Math.random() * 7000;
-        s.flashDur = 350 + Math.random() * 250;
+        s.flashAt = now + 8000 + Math.random() * 12000;
+        s.flashDur = 500 + Math.random() * 300;
       }
     }
     alpha *= globalAlpha;
