@@ -927,6 +927,9 @@ body {
   gap: 6px;
   width: 190px;
 }
+.map-filter-toggle {
+  display: none;
+}
 .map-toggle {
   display: flex;
   background: var(--sf);
@@ -2029,12 +2032,35 @@ body {
   #panel-map {
     flex-direction: column;
   }
+  .map-side {
+    height: 0;
+  }
   .map-side.open {
     width: 100%;
     height: 50%;
   }
   .map-left {
-    width: 160px;
+    width: 170px;
+  }
+  .map-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--sf);
+    border: 1px solid var(--bd);
+    border-radius: var(--r);
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--lu);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .map-filter-body {
+    display: none;
+  }
+  .map-filter-body.open {
+    display: block;
   }
   #panel-network,
   #panel-timeline {
@@ -2066,6 +2092,9 @@ body {
     display: none;
   }
   .mob-filter-body {
+    display: block !important;
+  }
+  .map-filter-body {
     display: block !important;
   }
 }
