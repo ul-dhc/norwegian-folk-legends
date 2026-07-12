@@ -55,10 +55,9 @@ const JOURNEY_COLLECTOR_SPOTLIGHT_PHRASES = [
 const JOURNEY_INTRO = [
   'In this journey you will explore Norwegian belief legends as a living sensory landscape, where mountains, waters, farms, roads, and hidden places carry stories of strange encounters, unseen beings, and experiences people once believed were true.',
   'The landscape here is never just scenery. Hills, waters, farms, churches, stones, and roads become places where people meet the uncanny and try to make sense of what they have sensed.',
-  'These are belief legends – sagn – stories of real encounters with a world just behind our own, remembered and passed down.',
   'This collection gathers 1,477 such legends, recorded across Norway between 1832 and 1954.',
   'It exists thanks to {collectorCount} folk collectors, who travelled the country and wrote down what people told them – we can thank them for this heritage.',
-  'We can thank Professor Kyrre Kverdokk for digitizing and bringing this collection online, long time ago.',
+  '…and we thank also Professor Kyrre Kverndokk, who digitized and brought this collection online, long time ago.',
   'This journey is another way to experience them – not read, but travelled.',
   'And now, follow me… I will take you to the place…',
 ];
@@ -240,8 +239,6 @@ function initJourney() {
   }).addTo(journeyMap);
   initJourneyCanvas();
   window.addEventListener('resize', resizeJourneyCanvas);
-  journeyMap.on('move', drawJourneyOverlay);
-  journeyMap.on('zoom', drawJourneyOverlay);
   journeyMap.on('click', handleJourneyClick);
   document.addEventListener('fullscreenchange', onJourneyFullscreenChange);
   document.addEventListener('webkitfullscreenchange', onJourneyFullscreenChange);
@@ -444,15 +441,26 @@ function handleJourneyClick(e) {
   }
 }
 
+let journeyCaptionFadeTimer = null;
+
 function setJourneyCaption(text) {
   const el = document.getElementById('journey-caption');
   if (!el) return;
+  clearTimeout(journeyCaptionFadeTimer);
   if (!text) {
     el.classList.remove('show');
     return;
   }
-  el.textContent = text;
-  el.classList.add('show');
+  if (el.classList.contains('show') && el.textContent) {
+    el.classList.remove('show');
+    journeyCaptionFadeTimer = setTimeout(() => {
+      el.textContent = text;
+      el.classList.add('show');
+    }, 420);
+  } else {
+    el.textContent = text;
+    el.classList.add('show');
+  }
 }
 
 function showJourneyTextPanel(d) {
