@@ -1,6 +1,6 @@
 const JOURNEY_FLIGHT_MS = 3200;
 const JOURNEY_JUMP_MS = 4600;
-const JOURNEY_HUB_PAUSE_MS = 2200;
+const JOURNEY_HUB_PAUSE_BASE_MS = 1800;
 const JOURNEY_TRAIL_MAX = 300;
 const JOURNEY_CLICK_RADIUS = 16;
 
@@ -13,13 +13,31 @@ const JOURNEY_COLORS = {
   legend: '#FF7AC6',
 };
 
-const JOURNEY_CAPTIONS = {
+const JOURNEY_FLIGHT_CAPTIONS = {
   collector: 'Seeking a collector…',
   place: 'Traveling to a place…',
   category: 'Following the thread…',
   legend: 'Arriving at a legend…',
   jump: 'Crossing the void…',
 };
+
+const JOURNEY_COLLECTOR_PHRASES = [
+  'Now I will take you to {name}, who collected {count} legends across Norway.',
+  '{name} gathered {count} legends from across the land. Follow the thread…',
+  'Let us seek out {name} — {count} legends passed through their hands.',
+];
+
+const JOURNEY_PLACE_PHRASES = [
+  'We arrive in {place}. {count} legend{s} were recorded in this surroundings. Let\u2019s go to one of them…',
+  'Follow the thread to {place} — home to {count} recorded legend{s}.',
+  'The path leads to {place}, where {count} legend{s} once were told.',
+];
+
+const JOURNEY_CATEGORY_PHRASES = [
+  '{count} legends about \u201c{title}\u201d have been collected. Let\u2019s hear another…',
+  'This story belongs to a wider circle — \u201c{title}\u201d, {count} legends strong. Follow the thread to one more…',
+  'Many told of \u201c{title}\u201d — {count} legends in all. Here is another…',
+];
 
 let journeyMap = null;
 let journeyCanvas = null;
@@ -40,6 +58,9 @@ let journeyCategories = [];
 let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
+let journeyAudioCtx = null;
+let journeyMusicNodes = null;
+let journeyMusicOn = false;
 
 function journeyCoords(d) {
   const sla = parseFloat(d.sted_lat);
@@ -125,8 +146,14 @@ function journeyWeightedTopPick(sortedArr, topN, excludeNames) {
   return journeyPick(pool.length ? pool : sortedArr);
 }
 
-function journeyMkNode(type, coords, label, sub) {
-  return { type, lat: coords.lat, lon: coords.lon, label, sub };
+function journeyNarrate(templates, ctx) {
+  const withPlural = { ...ctx, s: ctx.count === 1 ? '' : 's' };
+  const tpl = journeyPick(templates);
+  return tpl.replace(/\{(\w+)\}/g, (_, k) => (withPlural[k] != null ? withPlural[k] : ''));
+}
+
+function journeyMkNode(type, coords, story) {
+  return { type, lat: coords.lat, lon: coords.lon, story };
 }
 
 function journeyMkLegendNode(pick) {
@@ -173,6 +200,8 @@ function initJourney() {
   journeyMap.on('move', drawJourneyOverlay);
   journeyMap.on('zoom', drawJourneyOverlay);
   journeyMap.on('click', handleJourneyClick);
+  document.addEventListener('fullscreenchange', onJourneyFullscreenChange);
+  document.addEventListener('webkitfullscreenchange', onJourneyFullscreenChange);
   startJourneyRAF();
   buildJourneyStats();
   updateJourneyButtons();
@@ -332,20 +361,18 @@ function handleJourneyClick(e) {
     showJourneyTextPanel(closest.item);
   } else {
     hideJourneyTextPanel();
-    setJourneyCaption(closest.label, closest.sub);
+    setJourneyCaption(closest.story);
   }
 }
 
-function setJourneyCaption(main, sub) {
+function setJourneyCaption(text) {
   const el = document.getElementById('journey-caption');
   if (!el) return;
-  if (!main) {
+  if (!text) {
     el.classList.remove('show');
     return;
   }
-  el.innerHTML = sub
-    ? `<strong>${esc(main)}</strong><span>${esc(sub)}</span>`
-    : `<strong>${esc(main)}</strong>`;
+  el.textContent = text;
   el.classList.add('show');
 }
 
@@ -363,7 +390,7 @@ function showJourneyTextPanel(d) {
     .filter(Boolean)
     .join(' · ');
   panel.innerHTML = `
-    <span class="mlb" style="background:${mlC(d.ml_code)}30;color:${mlT(d.ml_code)}">${esc(d.ml_code || '')}</span>
+    ${d.ml_code ? `<span class="journey-mlb">${esc(d.ml_code)}</span>` : ''}
     <div class="journey-tp-title">${esc(title)}</div>
     <div class="journey-tp-sub">${esc(sub)}</div>
     <div class="journey-tp-text">${esc(d.tekst || '')}</div>
@@ -389,7 +416,7 @@ function journeyFlyTo(target, isJump) {
     duration,
     type: target.type,
   };
-  setJourneyCaption(JOURNEY_CAPTIONS[isJump ? 'jump' : target.type] || '');
+  setJourneyCaption(JOURNEY_FLIGHT_CAPTIONS[isJump ? 'jump' : target.type] || '');
   hideJourneyTextPanel();
   const zoom = isJump ? JOURNEY_ZOOM.collector - 1.2 : JOURNEY_ZOOM[target.type];
   journeyMap.flyTo([target.lat, target.lon], zoom, {
@@ -413,14 +440,13 @@ function journeyArrive(target) {
     lat: target.lat,
     lon: target.lon,
     type: target.type,
-    label: target.label,
-    sub: target.sub,
+    story: target.story,
     item: target.item,
     t: performance.now(),
   });
   if (journeyTrail.length > JOURNEY_TRAIL_MAX) journeyTrail.shift();
   journeyIdle = true;
-  let dwell = JOURNEY_HUB_PAUSE_MS;
+  let dwell = JOURNEY_HUB_PAUSE_BASE_MS;
   if (target.type === 'legend') {
     setJourneyCaption('');
     showJourneyTextPanel(target.item);
@@ -428,7 +454,11 @@ function journeyArrive(target) {
     dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
   } else {
     hideJourneyTextPanel();
-    setJourneyCaption(target.label, target.sub);
+    setJourneyCaption(target.story);
+    dwell = Math.max(
+      4200,
+      Math.min(8000, JOURNEY_HUB_PAUSE_BASE_MS + (target.story || '').length * 35),
+    );
   }
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyAdvance();
@@ -443,12 +473,8 @@ function journeyAdvance() {
     journeyRecentCollectors.push(c.name);
     if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
     journeyMemory.collector = c;
-    target = journeyMkNode(
-      'collector',
-      c.centroid,
-      c.name,
-      `${c.count} legends collected across Norway`,
-    );
+    const story = journeyNarrate(JOURNEY_COLLECTOR_PHRASES, { name: c.name, count: c.count });
+    target = journeyMkNode('collector', c.centroid, story);
     journeyStep = 'place';
   } else if (journeyStep === 'place') {
     const c = journeyMemory.collector;
@@ -461,12 +487,8 @@ function journeyAdvance() {
       centroid: itemPick.coords,
     };
     journeyMemory.place = p;
-    target = journeyMkNode(
-      'place',
-      p.centroid,
-      `In ${placeName}`,
-      `${p.count} legend${p.count !== 1 ? 's' : ''} recorded`,
-    );
+    const story = journeyNarrate(JOURNEY_PLACE_PHRASES, { place: placeName, count: p.count });
+    target = journeyMkNode('place', p.centroid, story);
     journeyStep = 'legendA';
   } else if (journeyStep === 'legendA') {
     const p = journeyMemory.place;
@@ -479,12 +501,8 @@ function journeyAdvance() {
     const ml = (journeyMemory.legendA.d.ml_code || '').trim();
     const cat = journeyCategories.find((x) => x.code === ml) || journeyPick(journeyCategories);
     journeyMemory.category = cat;
-    target = journeyMkNode(
-      'category',
-      cat.centroid,
-      cat.code,
-      `${cat.title || ''} · ${cat.count} legends`,
-    );
+    const story = journeyNarrate(JOURNEY_CATEGORY_PHRASES, { title: cat.title, count: cat.count });
+    target = journeyMkNode('category', cat.centroid, story);
     journeyStep = 'legendB';
   } else {
     const cat = journeyMemory.category;
@@ -538,8 +556,101 @@ function journeyJump() {
   if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
   journeyMemory.collector = c;
   journeyStep = 'place';
-  journeyFlyTo(
-    journeyMkNode('collector', c.centroid, c.name, `${c.count} legends collected across Norway`),
-    true,
-  );
+  const story = journeyNarrate(JOURNEY_COLLECTOR_PHRASES, { name: c.name, count: c.count });
+  journeyFlyTo(journeyMkNode('collector', c.centroid, story), true);
+}
+
+function toggleJourneyFullscreen() {
+  const el = document.getElementById('panel-journey');
+  const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+  if (!isFs) {
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+}
+
+function onJourneyFullscreenChange() {
+  const btn = document.getElementById('jny-fullscreen');
+  const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+  if (btn) btn.textContent = isFs ? '⤡ Exit' : '⛶ Fullscreen';
+  setTimeout(() => {
+    resizeJourneyCanvas();
+    if (journeyMap) journeyMap.invalidateSize();
+  }, 60);
+}
+
+function initJourneyAudio() {
+  if (journeyAudioCtx) return;
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  journeyAudioCtx = new Ctx();
+  const master = journeyAudioCtx.createGain();
+  master.gain.value = 0;
+  master.connect(journeyAudioCtx.destination);
+
+  const delay = journeyAudioCtx.createDelay(2);
+  delay.delayTime.value = 0.6;
+  const feedback = journeyAudioCtx.createGain();
+  feedback.gain.value = 0.35;
+  const delayFilter = journeyAudioCtx.createBiquadFilter();
+  delayFilter.type = 'lowpass';
+  delayFilter.frequency.value = 1500;
+  delay.connect(feedback);
+  feedback.connect(delayFilter);
+  delayFilter.connect(delay);
+  delay.connect(master);
+
+  const freqs = [55, 82.41, 110, 164.81];
+  const voices = [];
+  freqs.forEach((f, i) => {
+    const osc = journeyAudioCtx.createOscillator();
+    osc.type = i % 2 === 0 ? 'sine' : 'triangle';
+    osc.frequency.value = f;
+    const g = journeyAudioCtx.createGain();
+    g.gain.value = 0.22 / freqs.length;
+    const filter = journeyAudioCtx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 900;
+    osc.connect(filter);
+    filter.connect(g);
+    g.connect(master);
+    g.connect(delay);
+    const lfo = journeyAudioCtx.createOscillator();
+    lfo.frequency.value = 0.05 + i * 0.02;
+    const lfoGain = journeyAudioCtx.createGain();
+    lfoGain.gain.value = 3;
+    lfo.connect(lfoGain);
+    lfoGain.connect(osc.detune);
+    osc.start();
+    lfo.start();
+    voices.push({ osc, lfo, g });
+  });
+
+  journeyMusicNodes = { master, voices };
+}
+
+function toggleJourneyMusic() {
+  journeyMusicOn = !journeyMusicOn;
+  const btn = document.getElementById('jny-music');
+  if (btn) btn.classList.toggle('on', journeyMusicOn);
+  if (journeyMusicOn) {
+    initJourneyAudio();
+    if (journeyAudioCtx.state === 'suspended') journeyAudioCtx.resume();
+    const now = journeyAudioCtx.currentTime;
+    journeyMusicNodes.master.gain.cancelScheduledValues(now);
+    journeyMusicNodes.master.gain.setValueAtTime(journeyMusicNodes.master.gain.value, now);
+    journeyMusicNodes.master.gain.linearRampToValueAtTime(0.14, now + 2.5);
+  } else if (journeyMusicNodes) {
+    const now = journeyAudioCtx.currentTime;
+    journeyMusicNodes.master.gain.cancelScheduledValues(now);
+    journeyMusicNodes.master.gain.setValueAtTime(journeyMusicNodes.master.gain.value, now);
+    journeyMusicNodes.master.gain.linearRampToValueAtTime(0, now + 1.5);
+  }
+}
+
+function pauseJourneyMusic() {
+  if (journeyMusicOn) toggleJourneyMusic();
 }
