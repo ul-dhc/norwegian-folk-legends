@@ -57,6 +57,7 @@ const JOURNEY_INTRO = [
   'The landscape here is never just scenery. Hills, waters, farms, churches, stones, and roads become places where people meet the uncanny and try to make sense of what they have sensed.',
   'These are belief legends – sagn – stories of real encounters with a world just behind our own, remembered and passed down.',
   'This collection gathers 1,477 such legends, recorded across Norway between 1832 and 1954.',
+  'It exists thanks to {collectorCount} folk collectors, who travelled the country and wrote down what people told them – we can thank them for this heritage.',
   'We can thank Professor Kyrre Kverdokk for digitizing and bringing this collection online, long time ago.',
   'This journey is another way to experience them – not read, but travelled.',
   'And now, follow me… I will take you to the place…',
@@ -703,6 +704,10 @@ function updateJourneyButtons() {
   playBtn.disabled = !journeyStatsReady;
 }
 
+function journeyIntroText(i) {
+  return JOURNEY_INTRO[i].replace('{collectorCount}', samlers.length);
+}
+
 function journeyIntroDwell(text) {
   return Math.max(3600, Math.min(7000, 1800 + text.length * 32));
 }
@@ -715,7 +720,7 @@ function journeyRunIntro() {
     return;
   }
   journeyIdle = true;
-  const text = JOURNEY_INTRO[journeyIntroIndex];
+  const text = journeyIntroText(journeyIntroIndex);
   setJourneyCaption(text);
   journeyIntroIndex++;
   journeyDwellTimer = setTimeout(() => {
