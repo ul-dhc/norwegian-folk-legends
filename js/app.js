@@ -1,4 +1,4 @@
-const VALID_TABS = ['browse', 'search', 'map', 'network', 'timeline', 'mlindex', 'about'];
+const VALID_TABS = ['browse', 'search', 'map', 'journey', 'network', 'timeline', 'mlindex', 'about'];
 
 function tabFromHash() {
   const tab = location.hash.slice(1);
@@ -6,6 +6,7 @@ function tabFromHash() {
 }
 
 function switchTab(tab, skipHash) {
+  const prevTab = curTab;
   curTab = tab;
   document.querySelectorAll('.panel').forEach((p) => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach((t) => t.classList.remove('active'));
@@ -19,6 +20,12 @@ function switchTab(tab, skipHash) {
       initMap();
       mapInst && mapInst.invalidateSize();
     }, 50);
+  }
+  if (tab === 'journey') {
+    setTimeout(initJourney, 50);
+  } else if (prevTab === 'journey') {
+    journeyStop();
+    stopJourneyRAF();
   }
   if (tab === 'network' && allData.length) {
     setTimeout(() => {
