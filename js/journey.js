@@ -220,6 +220,7 @@ function buildJourneyStarfield() {
     })
     .filter(Boolean);
   journeyStarfieldEdges = [];
+  const seenEdges = new Set();
   journeyStarfield.forEach((s, i) => {
     const dists = journeyStarfield
       .map((o, j) => (j === i ? null : { j, d: Math.hypot(s.lat - o.lat, s.lon - o.lon) }))
@@ -227,7 +228,11 @@ function buildJourneyStarfield() {
       .sort((a, b) => a.d - b.d)
       .slice(0, 2);
     dists.forEach(({ j }) => {
-      if (j > i) journeyStarfieldEdges.push({ a: i, b: j });
+      const key = i < j ? `${i}-${j}` : `${j}-${i}`;
+      if (!seenEdges.has(key)) {
+        seenEdges.add(key);
+        journeyStarfieldEdges.push({ a: i, b: j });
+      }
     });
   });
   journeyStarfieldActive = true;
@@ -260,16 +265,23 @@ function journeyDrawStarfield(now) {
     journeyCtx.beginPath();
     journeyCtx.moveTo(pa.x, pa.y);
     journeyCtx.lineTo(pb.x, pb.y);
-    journeyCtx.strokeStyle = `rgba(150,180,220,${0.05 * breathe * globalAlpha})`;
-    journeyCtx.lineWidth = 1;
+    journeyCtx.strokeStyle = `rgba(160,195,255,${(0.16 + breathe * 0.22) * globalAlpha})`;
+    journeyCtx.lineWidth = 1.1;
     journeyCtx.stroke();
   });
   journeyStarfield.forEach((s) => {
     const p = journeyProject(s.lat, s.lon);
-    const alpha = (0.08 + breathe * 0.1) * globalAlpha;
+    const alpha = (0.35 + breathe * 0.4) * globalAlpha;
     const rgb = journeyHexToRgb(s.color);
+    const grad = journeyCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, 7);
+    grad.addColorStop(0, `rgba(${rgb},${alpha * 0.45})`);
+    grad.addColorStop(1, `rgba(${rgb},0)`);
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
+    journeyCtx.arc(p.x, p.y, 7, 0, Math.PI * 2);
+    journeyCtx.fillStyle = grad;
+    journeyCtx.fill();
+    journeyCtx.beginPath();
+    journeyCtx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
     journeyCtx.fillStyle = `rgba(${rgb},${alpha})`;
     journeyCtx.fill();
   });
