@@ -1,3 +1,10 @@
+function toggleMapFilters() {
+  const b = document.getElementById('map-filter-body');
+  const a = document.getElementById('map-filter-arrow');
+  const open = b.classList.toggle('open');
+  a.textContent = open ? '▾' : '▸';
+}
+
 function initMap() {
   if (mapInst) return;
   mapInst = L.map('map-container', {
