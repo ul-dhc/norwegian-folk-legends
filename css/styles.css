@@ -1065,7 +1065,7 @@ body {
 
 .map-bottom-right {
   position: absolute;
-  bottom: 20px;
+  bottom: 76px;
   right: 10px;
   z-index: 1000;
   display: flex;
