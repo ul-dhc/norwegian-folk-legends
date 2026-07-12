@@ -1177,7 +1177,10 @@ body {
   transform: translateX(-50%);
   z-index: 1000;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
+  max-width: calc(100% - 24px);
   background: rgba(14, 17, 23, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 30px;
@@ -1213,30 +1216,23 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  background: rgba(14, 17, 23, 0.78);
+  background: rgba(14, 17, 23, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  padding: 7px 16px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
+  padding: 14px 22px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
   pointer-events: none;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: min(560px, calc(100% - 32px));
 }
 .journey-caption.show {
   opacity: 1;
-}
-.journey-caption strong {
-  font-weight: 600;
-  color: #fff;
-}
-.journey-caption span {
-  display: block;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 2px;
 }
 .journey-textpanel {
   position: absolute;
@@ -1261,6 +1257,16 @@ body {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+.journey-mlb {
+  display: inline-block;
+  font-size: 10px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
 }
 .journey-tp-title {
   font-size: 15px;
@@ -2224,6 +2230,11 @@ body {
   .journey-btn {
     padding: 7px 12px;
     font-size: 12px;
+  }
+  .journey-caption {
+    font-size: 14px;
+    padding: 10px 16px;
+    top: 10px;
   }
   #panel-network,
   #panel-timeline {
