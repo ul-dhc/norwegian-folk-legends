@@ -118,6 +118,7 @@ let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
 let journeyStarfield = [];
+let journeyStarfieldEdges = [];
 let journeyStarfieldActive = false;
 let journeyStarfieldFadeUntil = null;
 let journeyIntroDone = false;
@@ -210,22 +211,25 @@ function buildJourneyStarfield() {
     JOURNEY_COLORS.category,
     JOURNEY_COLORS.legend,
   ];
-  const sample = [...allData].sort(() => Math.random() - 0.5).slice(0, 220);
+  const sample = [...allData].sort(() => Math.random() - 0.5).slice(0, 150);
   journeyStarfield = sample
     .map((d) => {
       const c = journeyCoords(d);
       if (!c) return null;
-      return {
-        lat: c.lat,
-        lon: c.lon,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.00018 + Math.random() * 0.00035,
-        flashAt: performance.now() + 4000 + Math.random() * 14000,
-        flashDur: 500 + Math.random() * 300,
-      };
+      return { lat: c.lat, lon: c.lon, color: colors[Math.floor(Math.random() * colors.length)] };
     })
     .filter(Boolean);
+  journeyStarfieldEdges = [];
+  journeyStarfield.forEach((s, i) => {
+    const dists = journeyStarfield
+      .map((o, j) => (j === i ? null : { j, d: Math.hypot(s.lat - o.lat, s.lon - o.lon) }))
+      .filter(Boolean)
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 2);
+    dists.forEach(({ j }) => {
+      if (j > i) journeyStarfieldEdges.push({ a: i, b: j });
+    });
+  });
   journeyStarfieldActive = true;
 }
 
@@ -246,27 +250,26 @@ function journeyStarfieldAlpha(now) {
 function journeyDrawStarfield(now) {
   const globalAlpha = journeyStarfieldAlpha(now);
   if (globalAlpha <= 0 || !journeyCtx) return;
+  const breathe = 0.55 + 0.45 * Math.sin(now * 0.00025);
+  journeyStarfieldEdges.forEach((edge) => {
+    const a = journeyStarfield[edge.a];
+    const b = journeyStarfield[edge.b];
+    if (!a || !b) return;
+    const pa = journeyProject(a.lat, a.lon);
+    const pb = journeyProject(b.lat, b.lon);
+    journeyCtx.beginPath();
+    journeyCtx.moveTo(pa.x, pa.y);
+    journeyCtx.lineTo(pb.x, pb.y);
+    journeyCtx.strokeStyle = `rgba(150,180,220,${0.05 * breathe * globalAlpha})`;
+    journeyCtx.lineWidth = 1;
+    journeyCtx.stroke();
+  });
   journeyStarfield.forEach((s) => {
     const p = journeyProject(s.lat, s.lon);
-    const pulse = (Math.sin(now * s.speed + s.phase) + 1) / 2;
-    let alpha = 0.04 + pulse * 0.1;
-    let radius = 1.2 + pulse * 0.6;
-    if (now >= s.flashAt) {
-      const flashElapsed = now - s.flashAt;
-      if (flashElapsed < s.flashDur) {
-        const ft = flashElapsed / s.flashDur;
-        const curve = ft < 0.3 ? ft / 0.3 : 1 - (ft - 0.3) / 0.7;
-        alpha = Math.max(alpha, curve * 0.5);
-        radius = Math.max(radius, 1.2 + curve * 1.4);
-      } else {
-        s.flashAt = now + 8000 + Math.random() * 12000;
-        s.flashDur = 500 + Math.random() * 300;
-      }
-    }
-    alpha *= globalAlpha;
+    const alpha = (0.08 + breathe * 0.1) * globalAlpha;
     const rgb = journeyHexToRgb(s.color);
     journeyCtx.beginPath();
-    journeyCtx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+    journeyCtx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
     journeyCtx.fillStyle = `rgba(${rgb},${alpha})`;
     journeyCtx.fill();
   });
