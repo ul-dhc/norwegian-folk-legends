@@ -21,21 +21,61 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Following a collector\u2019s trail…',
     'Looking for the next collector…',
     'Tracing another collection…',
+    'Moving toward another collector\u2019s work…',
+    'Following the path of a recorded tradition…',
+    'Seeking the next name in the collection…',
+    'Crossing from one collector\u2019s work to another…',
+    'Finding another route through the collected material…',
+    'Turning toward another body of collected legends…',
+    'Following the people behind the written records…',
+    'Moving through the path of the collection…',
+    'Seeking another collector and the stories they preserved…',
+    'Tracing where the next set of legends entered the collection…',
   ],
   place: [
-    'Moving through the remembered landscape…',
+    'Moving through the narrated landscape…',
     'Travelling toward the next place…',
     'Following the story back to its setting…',
+    'Approaching the place where this account was recorded…',
+    'Moving from the map into a local setting…',
+    'Following the record to another part of the landscape…',
+    'Drawing closer to the place named in the collection…',
+    'Travelling toward another site of storytelling…',
+    'Following the place-name into another account…',
+    'Moving toward the landscape connected to this telling…',
+    'Approaching another location in the collection…',
+    'Following the route from story to place…',
+    'Travelling toward the place where this legend was heard…',
   ],
   legend: [
     'Approaching another recorded encounter…',
     'Entering another telling…',
     'Bringing the next story into view…',
+    'Turning to another account from the collection…',
+    'Following the thread into a new legend…',
+    'Moving closer to another recorded experience…',
+    'Opening the way to the next telling…',
+    'Approaching a different version of the narrated experience…',
+    'Turning toward another legend in the collection…',
+    'Following the topic into a new account…',
+    'Moving from context into the story itself…',
+    'Approaching another account of the unusual…',
+    'Preparing to read the next recorded legend…',
   ],
   jump: [
     'Crossing to a distant thread…',
     'Jumping to another part of the map…',
     'Leaving this trail for a new one…',
+    'Crossing the collection in a single movement…',
+    'Breaking from the current route…',
+    'Moving quickly to another cluster of stories…',
+    'Leaving one part of the landscape for another…',
+    'Taking a longer step across the map…',
+    'Crossing from one region of the collection to another…',
+    'Leaving the current sequence behind…',
+    'Moving beyond the nearby connections…',
+    'Taking a different route through the collection…',
+    'Rejoining the journey at a distant point…',
   ],
 };
 
@@ -164,6 +204,14 @@ const JOURNEY_INTRO = [
   'Follow the threads. We begin with a collector…',
 ];
 
+const JOURNEY_CYCLE_LIMIT = 8;
+
+const JOURNEY_OUTRO = [
+  'The Norwegian folk legend journey is over for now.',
+  'Thank you for coming along.',
+  'Would you like to experience it again, or share it with someone else?',
+];
+
 let journeyMap = null;
 let journeyCanvas = null;
 let journeyCtx = null;
@@ -188,6 +236,9 @@ let journeyStarfieldEdges = [];
 let journeyStarfieldActive = false;
 let journeyStarfieldFadeUntil = null;
 let journeyIntroDone = false;
+let journeyCycleCount = 0;
+let journeyOutroIndex = 0;
+let journeyEnded = false;
 let journeySkipNextFlightCaption = false;
 let journeyPendingAdvanceFn = null;
 let journeyIntroIndex = 0;
@@ -784,7 +835,7 @@ function journeyArrive(target) {
     setJourneyCaption('');
     showJourneyTextPanel(target.item);
     const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
-    const dwell = Math.max(11000, Math.min(20000, 9500 + len * 14));
+    const dwell = Math.max(9000, Math.min(24000, 7000 + len * 17));
     journeyPendingAdvanceFn = journeyAdvance;
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyAdvance();
@@ -792,7 +843,7 @@ function journeyArrive(target) {
   } else if (target.item) {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
-    const dwell = Math.max(3200, Math.min(6000, 2000 + (target.story || '').length * 24));
+    const dwell = Math.max(4800, Math.min(9500, 3200 + (target.story || '').length * 36));
     journeyPendingAdvanceFn = () => journeyShowStopLegend(target);
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyShowStopLegend(target);
@@ -800,7 +851,7 @@ function journeyArrive(target) {
   } else {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
-    const dwell = Math.max(6000, Math.min(12000, 3000 + (target.story || '').length * 44));
+    const dwell = Math.max(8500, Math.min(16000, 4200 + (target.story || '').length * 55));
     journeyPendingAdvanceFn = journeyAdvance;
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyAdvance();
@@ -812,7 +863,7 @@ function journeyShowStopLegend(target) {
   setJourneyCaption('');
   showJourneyTextPanel(target.item);
   const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
-  const dwell = Math.max(11000, Math.min(20000, 9500 + len * 14));
+  const dwell = Math.max(9000, Math.min(24000, 7000 + len * 17));
   journeyPendingAdvanceFn = journeyAdvance;
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyAdvance();
@@ -914,6 +965,11 @@ function journeyAdvance() {
   journeyIdle = false;
   deactivateJourneyStarfield();
   if (journeyStep === 'collector') {
+    journeyCycleCount++;
+    if (journeyCycleCount > JOURNEY_CYCLE_LIMIT) {
+      journeyRunOutro();
+      return;
+    }
     const c = journeyWeightedTopPick(journeyCollectors, 20, journeyRecentCollectors);
     journeyRecentCollectors.push(c.name);
     if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
@@ -997,7 +1053,7 @@ function journeyIntroText(i) {
 }
 
 function journeyIntroDwell(text) {
-  return Math.max(5200, Math.min(11000, 2800 + text.length * 42));
+  return Math.max(6500, Math.min(13500, 3500 + text.length * 50));
 }
 
 function journeyRunIntro() {
@@ -1021,7 +1077,65 @@ function journeyRunIntro() {
   }, journeyIntroDwell(text));
 }
 
+function journeyRunOutro() {
+  hideJourneyTextPanel();
+  if (journeyOutroIndex >= JOURNEY_OUTRO.length) {
+    journeyShowEndPanel();
+    return;
+  }
+  journeyIdle = true;
+  const text = JOURNEY_OUTRO[journeyOutroIndex];
+  setJourneyCaption(text);
+  journeyOutroIndex++;
+  journeyPendingAdvanceFn = journeyRunOutro;
+  journeyDwellTimer = setTimeout(() => {
+    if (journeyPlaying) journeyRunOutro();
+  }, journeyIntroDwell(text));
+}
+
+function journeyShowEndPanel() {
+  journeyEnded = true;
+  journeyPlaying = false;
+  setJourneyCaption('');
+  const panel = document.getElementById('journey-end-panel');
+  if (panel) panel.classList.add('show');
+  updateJourneyButtons();
+}
+
+function journeyPlayAgain() {
+  const panel = document.getElementById('journey-end-panel');
+  if (panel) panel.classList.remove('show');
+  journeyEnded = false;
+  journeyCycleCount = 0;
+  journeyOutroIndex = 0;
+  journeyTrail = [];
+  journeyEdges = [];
+  journeyCurrent = null;
+  journeyStep = 'collector';
+  journeyIdle = true;
+  journeyPlay();
+}
+
+function journeyShareResult() {
+  const shareData = {
+    title: 'Norwegian Folk Legends – A Journey',
+    text: 'I just travelled through Norwegian folk legends as a living landscape. Take the journey yourself:',
+    url: location.href,
+  };
+  if (navigator.share) {
+    navigator.share(shareData).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(location.href).then(() => {
+      setJourneyCaption('Link copied to your clipboard.');
+    });
+  }
+}
+
 function journeyPlay() {
+  if (journeyEnded) {
+    journeyPlayAgain();
+    return;
+  }
   if (journeyPlaying) {
     journeyStop();
     return;
@@ -1053,6 +1167,13 @@ function journeyNext() {
 function journeyJump() {
   if (!journeyStatsReady) buildJourneyStats();
   if (!journeyStatsReady) return;
+  if (journeyEnded) {
+    const panel = document.getElementById('journey-end-panel');
+    if (panel) panel.classList.remove('show');
+    journeyEnded = false;
+    journeyCycleCount = 0;
+    journeyOutroIndex = 0;
+  }
   journeyIntroDone = true;
   deactivateJourneyStarfield();
   clearTimeout(journeyDwellTimer);
