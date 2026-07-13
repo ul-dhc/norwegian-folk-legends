@@ -1289,7 +1289,7 @@ body {
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
-  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 1s, transform 1s;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 .journey-textpanel.show {
@@ -2258,10 +2258,10 @@ body {
     left: 12px;
     right: 12px;
     top: auto;
-    bottom: 70px;
+    bottom: 78px;
     width: auto;
     max-width: none;
-    max-height: 46%;
+    max-height: 44%;
   }
   .journey-controls {
     bottom: 12px;
@@ -2312,6 +2312,26 @@ body {
   }
   .tl-stats {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .jny-label {
+    display: none;
+  }
+  .journey-btn {
+    padding: 8px 11px;
+  }
+  .journey-textpanel {
+    bottom: 92px;
+    max-height: 44%;
+  }
+  .journey-credit {
+    bottom: 58px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: calc(100% - 24px);
   }
 }
 @media (min-width: 769px) {
