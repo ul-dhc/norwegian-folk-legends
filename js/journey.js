@@ -631,8 +631,8 @@ function showJourneyTextPanel(d) {
   const title = d.tittel || d.ml_title || d.id;
   const sub = [d.sted, d.fylke, yr].filter(Boolean).join(' · ');
   const meta = [
-    d.samler ? `Collected by ${esc(d.samler)}` : '',
-    d.informant ? `told by ${esc(d.informant)}` : '',
+    !isUkjent(d.samler) ? `Collected by ${esc(d.samler)}` : '',
+    !isUkjent(d.informant) ? `told by ${esc(d.informant)}` : '',
   ]
     .filter(Boolean)
     .join(' · ');
@@ -644,6 +644,7 @@ function showJourneyTextPanel(d) {
     ${hasTr ? `<div class="journey-tp-text journey-tp-en">${esc(d.english_translation)}</div>` : ''}
     ${meta ? `<div class="journey-tp-meta">${meta}</div>` : ''}
   `;
+  panel.scrollTop = 0;
   panel.classList.add('show');
 }
 
@@ -995,21 +996,43 @@ function journeyJump() {
 
 function toggleJourneyFullscreen() {
   const el = document.getElementById('panel-journey');
-  const isFs = document.fullscreenElement || document.webkitFullscreenElement;
-  if (!isFs) {
-    if (el.requestFullscreen) el.requestFullscreen();
-    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
+  const nativeSupported = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+  if (nativeSupported) {
+    const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+    if (!isFs) {
+      const req = el.requestFullscreen || el.webkitRequestFullscreen;
+      if (req) {
+        const result = req.call(el);
+        if (result && result.catch) result.catch(() => journeyToggleFakeFullscreen());
+        return;
+      }
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+      return;
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+      return;
+    }
   }
+  journeyToggleFakeFullscreen();
+}
+
+function journeyToggleFakeFullscreen() {
+  const el = document.getElementById('panel-journey');
+  const isFake = el.classList.toggle('fake-fullscreen');
+  document.body.classList.toggle('journey-fake-fullscreen-active', isFake);
+  onJourneyFullscreenChange();
 }
 
 function onJourneyFullscreenChange() {
   const icon = document.getElementById('jny-fullscreen-icon');
   const label = document.getElementById('jny-fullscreen-label');
-  const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+  const el = document.getElementById('panel-journey');
+  const isFs = !!(
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    (el && el.classList.contains('fake-fullscreen'))
+  );
   if (icon) icon.textContent = isFs ? '⤡' : '⛶';
   if (label) label.textContent = isFs ? ' Exit' : ' Fullscreen';
   setTimeout(() => {
