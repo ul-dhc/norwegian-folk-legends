@@ -21,61 +21,21 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Following a collector\u2019s trail…',
     'Looking for the next collector…',
     'Tracing another collection…',
-    'Moving toward another collector\u2019s work…',
-    'Following the path of a recorded tradition…',
-    'Seeking the next name in the collection…',
-    'Crossing from one collector\u2019s work to another…',
-    'Finding another route through the collected material…',
-    'Turning toward another body of collected legends…',
-    'Following the people behind the written records…',
-    'Moving through the path of the collection…',
-    'Seeking another collector and the stories they preserved…',
-    'Tracing where the next set of legends entered the collection…',
   ],
   place: [
-    'Moving through the narrated landscape…',
+    'Moving through the remembered landscape…',
     'Travelling toward the next place…',
     'Following the story back to its setting…',
-    'Approaching the place where this account was recorded…',
-    'Moving from the map into a local setting…',
-    'Following the record to another part of the landscape…',
-    'Drawing closer to the place named in the collection…',
-    'Travelling toward another site of storytelling…',
-    'Following the place-name into another account…',
-    'Moving toward the landscape connected to this telling…',
-    'Approaching another location in the collection…',
-    'Following the route from story to place…',
-    'Travelling toward the place where this legend was heard…',
   ],
   legend: [
     'Approaching another recorded encounter…',
     'Entering another telling…',
     'Bringing the next story into view…',
-    'Turning to another account from the collection…',
-    'Following the thread into a new legend…',
-    'Moving closer to another recorded experience…',
-    'Opening the way to the next telling…',
-    'Approaching a different version of the narrated experience…',
-    'Turning toward another legend in the collection…',
-    'Following the topic into a new account…',
-    'Moving from context into the story itself…',
-    'Approaching another account of the unusual…',
-    'Preparing to read the next recorded legend…',
   ],
   jump: [
     'Crossing to a distant thread…',
     'Jumping to another part of the map…',
     'Leaving this trail for a new one…',
-    'Crossing the collection in a single movement…',
-    'Breaking from the current route…',
-    'Moving quickly to another cluster of stories…',
-    'Leaving one part of the landscape for another…',
-    'Taking a longer step across the map…',
-    'Crossing from one region of the collection to another…',
-    'Leaving the current sequence behind…',
-    'Moving beyond the nearby connections…',
-    'Taking a different route through the collection…',
-    'Rejoining the journey at a distant point…',
   ],
 };
 
@@ -206,6 +166,11 @@ const JOURNEY_INTRO = [
 
 const JOURNEY_CYCLE_LIMIT = 8;
 
+const JOURNEY_NORWAY_BOUNDS = [
+  [57.8, 4.0],
+  [71.3, 31.5],
+];
+
 const JOURNEY_OUTRO = [
   'The Norwegian folk legend journey is over for now.',
   'Thank you for coming along.',
@@ -231,6 +196,7 @@ let journeyCategories = [];
 let journeyPlaces = {};
 let journeyMemory = {};
 let journeyStatsReady = false;
+let journeyDataBounds = null;
 let journeyStarfield = [];
 let journeyStarfieldEdges = [];
 let journeyStarfieldActive = false;
@@ -269,9 +235,17 @@ function buildJourneyStats() {
   const collMap = {};
   const catMap = {};
   const placeMap = {};
+  let minLat = null;
+  let maxLat = null;
+  let minLon = null;
+  let maxLon = null;
   allData.forEach((d) => {
     const coords = journeyCoords(d);
     if (!coords) return;
+    if (minLat === null || coords.lat < minLat) minLat = coords.lat;
+    if (maxLat === null || coords.lat > maxLat) maxLat = coords.lat;
+    if (minLon === null || coords.lon < minLon) minLon = coords.lon;
+    if (maxLon === null || coords.lon > maxLon) maxLon = coords.lon;
     const s = (d.samler || '').trim();
     if (s && s !== 'nan') {
       if (!collMap[s]) collMap[s] = { name: s, items: [] };
@@ -288,6 +262,12 @@ function buildJourneyStats() {
       placeMap[p].items.push({ d, coords });
     }
   });
+  if (minLat !== null) {
+    journeyDataBounds = [
+      [minLat, minLon],
+      [maxLat, maxLon],
+    ];
+  }
   journeyCollectors = Object.values(collMap)
     .filter((c) => c.items.length >= 2)
     .map((c) => ({
@@ -317,6 +297,9 @@ function buildJourneyStats() {
   });
   journeyStatsReady = journeyCollectors.length > 0;
   buildJourneyStarfield();
+  if (journeyMap && journeyDataBounds && !journeyCurrent) {
+    journeyMap.fitBounds(journeyDataBounds, { padding: [24, 24] });
+  }
   updateJourneyButtons();
 }
 
@@ -493,7 +476,8 @@ function initJourney() {
     zoomControl: false,
     attributionControl: true,
     worldCopyJump: true,
-  }).setView([65, 15], 5);
+  });
+  journeyMap.fitBounds(journeyDataBounds || JOURNEY_NORWAY_BOUNDS, { padding: [24, 24] });
   L.tileLayer(MAP_LAYERS.dark, {
     attribution: '© OpenStreetMap © CARTO',
     maxZoom: 14,
