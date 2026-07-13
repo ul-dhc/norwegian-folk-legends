@@ -2293,6 +2293,9 @@ body.journey-fake-fullscreen-active {
   .jny-label {
     display: none;
   }
+  #jny-fullscreen {
+    display: none;
+  }
   .journey-caption {
     font-size: 14px;
     padding: 0 10px;
