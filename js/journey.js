@@ -45,7 +45,7 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Moving toward the landscape connected to this telling…',
     'Approaching another location in the collection…',
     'Following the route from story to place…',
-    'Travelling toward the place where this legend was remembered…',
+    'Travelling toward the place where this legend was heard…',
   ],
   legend: [
     'Approaching another recorded encounter…',
@@ -55,7 +55,7 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Following the thread into a new legend…',
     'Moving closer to another recorded experience…',
     'Opening the way to the next telling…',
-    'Approaching a different version of the remembered world…',
+    'Approaching a different version of the narrated world…',
     'Turning toward another legend in the collection…',
     'Following the motif into a new account…',
     'Moving from context into the story itself…',
