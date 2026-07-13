@@ -267,7 +267,7 @@ function journeyStarfieldAlpha(now) {
 function journeyDrawStarfield(now) {
   const globalAlpha = journeyStarfieldAlpha(now);
   if (globalAlpha <= 0 || !journeyCtx) return;
-  const breathe = 0.5 + 0.5 * Math.sin(now * 0.00022);
+  const breathe = 0.5 + 0.5 * Math.sin(now * 0.00045);
   journeyStarfieldEdges.forEach((edge) => {
     const a = journeyStarfield[edge.a];
     const b = journeyStarfield[edge.b];
@@ -513,19 +513,21 @@ function drawJourneyOverlay() {
 
     journeyCtx.beginPath();
     const steps = 40;
-    const drawSteps = Math.max(1, Math.round(steps * t));
-    for (let i = 0; i <= drawSteps; i++) {
+    const wholeSteps = Math.max(0, Math.floor(steps * t));
+    for (let i = 0; i <= wholeSteps; i++) {
       const pp = bez(i / steps);
       const p = journeyProject(pp.lat, pp.lon);
       if (i === 0) journeyCtx.moveTo(p.x, p.y);
       else journeyCtx.lineTo(p.x, p.y);
     }
+    const head = bez(t);
+    const hp = journeyProject(head.lat, head.lon);
+    if (wholeSteps === 0) journeyCtx.moveTo(hp.x, hp.y);
+    journeyCtx.lineTo(hp.x, hp.y);
     journeyCtx.strokeStyle = `rgba(${rgb},0.7)`;
     journeyCtx.lineWidth = 1.6;
     journeyCtx.stroke();
 
-    const head = bez(t);
-    const hp = journeyProject(head.lat, head.lon);
     const grad = journeyCtx.createRadialGradient(hp.x, hp.y, 0, hp.x, hp.y, 14);
     grad.addColorStop(0, `rgba(${rgb},0.9)`);
     grad.addColorStop(1, `rgba(${rgb},0)`);
@@ -697,20 +699,42 @@ function journeyArrive(target) {
   });
   if (journeyTrail.length > JOURNEY_TRAIL_MAX) journeyTrail.shift();
   journeyIdle = true;
-  let dwell = JOURNEY_HUB_PAUSE_BASE_MS;
   if (target.type === 'legend') {
     setJourneyCaption('');
     showJourneyTextPanel(target.item);
     const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
-    dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
+    const dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
+    journeyPendingAdvanceFn = journeyAdvance;
+    journeyDwellTimer = setTimeout(() => {
+      if (journeyPlaying) journeyAdvance();
+    }, dwell);
+  } else if (target.item) {
+    hideJourneyTextPanel();
+    setJourneyCaption(target.story);
+    const dwell = Math.max(2200, Math.min(4200, 1200 + (target.story || '').length * 20));
+    journeyPendingAdvanceFn = () => journeyShowStopLegend(target);
+    journeyDwellTimer = setTimeout(() => {
+      if (journeyPlaying) journeyShowStopLegend(target);
+    }, dwell);
   } else {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
-    dwell = Math.max(
+    const dwell = Math.max(
       4800,
       Math.min(9500, 2200 + (target.story || '').length * 38),
     );
+    journeyPendingAdvanceFn = journeyAdvance;
+    journeyDwellTimer = setTimeout(() => {
+      if (journeyPlaying) journeyAdvance();
+    }, dwell);
   }
+}
+
+function journeyShowStopLegend(target) {
+  setJourneyCaption('');
+  showJourneyTextPanel(target.item);
+  const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
+  const dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
   journeyPendingAdvanceFn = journeyAdvance;
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyAdvance();
@@ -820,50 +844,46 @@ function journeyAdvance() {
     if (Math.random() < 0.3) {
       journeySpotlightCollector(c, () => journeyAdvance());
     } else {
+      const collectorItem = journeyPick(c.items);
       const story = journeyNarrate(JOURNEY_COLLECTOR_PHRASES, { name: c.name, count: c.count });
-      journeyFlyTo(journeyMkNode('collector', c.centroid, story), false);
+      const node = journeyMkNode('collector', c.centroid, story);
+      node.item = collectorItem.d;
+      journeyFlyTo(node, false);
     }
     return;
   }
   if (journeyStep === 'place') {
     const c = journeyMemory.collector;
-    const itemPick = journeyPick(c.items);
-    const placeName = journeyPlaceKey(itemPick.d);
+    const placeItem = journeyPick(c.items);
+    const placeName = journeyPlaceKey(placeItem.d);
     const p = journeyPlaces[placeName] || {
       name: placeName,
-      items: [itemPick],
+      items: [placeItem],
       count: 1,
-      centroid: itemPick.coords,
+      centroid: placeItem.coords,
     };
     journeyMemory.place = p;
+    journeyMemory.placeItem = placeItem;
     const story = journeyNarrate(
       p.count === 1 ? JOURNEY_PLACE_SINGULAR_PHRASES : JOURNEY_PLACE_PHRASES,
       { place: placeName, count: p.count },
     );
-    journeyFlyTo(journeyMkNode('place', p.centroid, story), false);
-    journeyStep = 'legendA';
-    return;
-  }
-  if (journeyStep === 'legendA') {
-    const p = journeyMemory.place;
-    const byCollector = p.items.filter((i) => i.d.samler === journeyMemory.collector.name);
-    const pick = journeyPick(byCollector.length ? byCollector : p.items);
-    journeyMemory.legendA = pick;
-    const ml = (pick.d.ml_code || '').trim();
-    journeyMemory.category =
-      journeyCategories.find((x) => x.code === ml) || journeyPick(journeyCategories);
-    journeyFlyTo(journeyMkLegendNode(pick), false);
+    const node = journeyMkNode('place', p.centroid, story);
+    node.item = placeItem.d;
+    journeyFlyTo(node, false);
     journeyStep = 'legendB';
     return;
   }
-  const cat = journeyMemory.category;
-  const excludeId = journeyMemory.legendA.d.id;
+  const ml = (journeyMemory.placeItem.d.ml_code || '').trim();
+  const cat = journeyCategories.find((x) => x.code === ml) || journeyPick(journeyCategories);
+  journeyMemory.category = cat;
+  const excludeId = journeyMemory.placeItem.d.id;
   const pool = cat.items.filter((x) => x.d.id !== excludeId);
   const pick = journeyPick(pool.length ? pool : cat.items);
   journeyStep = 'collector';
   const r = Math.random();
   if (r < 0.25) {
-    journeySpotlightCategory(cat, journeyMemory.legendA.coords, () => {
+    journeySpotlightCategory(cat, journeyMemory.placeItem.coords, () => {
       journeyFlyTo(journeyMkLegendNode(pick), false);
     });
   } else if (r < 0.6) {
@@ -900,13 +920,16 @@ function journeyIntroDwell(text) {
 }
 
 function journeyRunIntro() {
+  const captionEl = document.getElementById('journey-caption');
   if (journeyIntroIndex >= JOURNEY_INTRO.length) {
     journeyIntroDone = true;
+    if (captionEl) captionEl.classList.remove('intro');
     setJourneyCaption('');
     journeySkipNextFlightCaption = true;
     journeyAdvance();
     return;
   }
+  if (captionEl) captionEl.classList.add('intro');
   journeyIdle = true;
   const text = journeyIntroText(journeyIntroIndex);
   setJourneyCaption(text);
