@@ -2313,7 +2313,7 @@ body.journey-fake-fullscreen-active {
     max-width: calc(100% - 16px);
   }
   .journey-credit {
-    bottom: 56px;
+    bottom: 2px;
     left: 50%;
     right: auto;
     transform: translateX(-50%);
