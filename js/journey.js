@@ -899,12 +899,15 @@ function journeyAdvance() {
 
 function updateJourneyButtons() {
   const playBtn = document.getElementById('jny-play');
+  const playIcon = document.getElementById('jny-play-icon');
+  const playLabel = document.getElementById('jny-play-label');
   const stopBtn = document.getElementById('jny-stop');
   const jumpBtn = document.getElementById('jny-jump');
   const nextBtn = document.getElementById('jny-next');
   if (!playBtn) return;
   playBtn.classList.toggle('on', journeyPlaying);
-  playBtn.textContent = journeyPlaying ? '⏸ Pause' : '▶ Play';
+  if (playIcon) playIcon.textContent = journeyPlaying ? '⏸' : '▶';
+  if (playLabel) playLabel.textContent = journeyPlaying ? ' Pause' : ' Play';
   stopBtn.disabled = !journeyPlaying;
   jumpBtn.disabled = !journeyStatsReady;
   playBtn.disabled = !journeyStatsReady;
@@ -1004,9 +1007,11 @@ function toggleJourneyFullscreen() {
 }
 
 function onJourneyFullscreenChange() {
-  const btn = document.getElementById('jny-fullscreen');
+  const icon = document.getElementById('jny-fullscreen-icon');
+  const label = document.getElementById('jny-fullscreen-label');
   const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
-  if (btn) btn.textContent = isFs ? '⤡ Exit' : '⛶ Fullscreen';
+  if (icon) icon.textContent = isFs ? '⤡' : '⛶';
+  if (label) label.textContent = isFs ? ' Exit' : ' Fullscreen';
   setTimeout(() => {
     resizeJourneyCanvas();
     if (journeyMap) journeyMap.invalidateSize();
