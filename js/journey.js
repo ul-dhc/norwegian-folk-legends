@@ -40,27 +40,60 @@ const JOURNEY_FLIGHT_CAPTIONS = {
 };
 
 const JOURNEY_COLLECTOR_PHRASES = [
-  'The trail leads to {name}, who preserved {count} legends gathered across Norway.',
+  'The trail leads to {name}, who preserved {count} legends gathered across Norway. Read this one…',
   'Through {name}, {count} stories entered the written record. Let us follow one of their paths…',
-  'We come to {name}\u2019s collection – {count} accounts carried to nowadays.',
-  'Somewhere along the way, {name} gathered {count} legends – enough to leave a trace across the map.',
-  'Behind {name} are {count} legends, each carrying a place, a voice, and something once believed.',
+  'We come to {name}\u2019s collection – {count} accounts carried into the present. Explore one of them…',
+  'Somewhere along the way, {name} gathered {count} legends – enough to leave a trace across the map. Let\u2019s find one of them…',
+  'Behind {name} are {count} legends, each carrying a place, a voice, and something once believed. One of them reads as follows…',
+  '{name} recorded {count} legends from the stories people told. Let us turn to one of them…',
+  'The journey now brings us to {name}, whose work includes {count} recorded legends. Here is one…',
+  'Among the collectors in this collection is {name}, connected to {count} legends. Let us read one of them…',
+  '{count} legends in the collection were recorded by {name}. We will begin with this one…',
+  'We meet {name} through {count} legends preserved in the collection. One of those accounts follows…',
+  'The path crosses the work of {name}, who wrote down {count} legends. Let us stop at one of them…',
+  'This part of the collection belongs to {name}: {count} legends gathered from oral tradition. Here is one…',
+  '{name} listened to stories, noted where they were told, and preserved {count} legends. Let us open one…',
+  'The record now points to {name}, responsible for {count} legends in the collection. One of them begins here…',
+  'Through the collecting work of {name}, {count} legends remain available to us. Let us examine one…',
+  'Our next collector is {name}. Their {count} recorded legends connect people, places, and remembered events. Here is one…',
 ];
 
 const JOURNEY_PLACE_PHRASES = [
-  'We arrive in {place}, where {count} legend{s} were recorded. One of their voices is waiting…',
-  'The thread settles in {place} – a landscape connected to {count} recorded legend{s}.',
-  'Here is {place}, where {count} legend{s} were told, remembered, and written down.',
-  'We stop in {place}. {count} legend{s} were recorded here.',
-  'Next is {place}, with {count} legend{s} connected to it.',
+  'We arrive in {place}, where {count} legend{s} were recorded. One of their voices is telling…',
+  'The thread settles in {place} – a landscape connected to {count} recorded legend{s}. One of them tells…',
+  'Here is {place}, where {count} legend{s} were told, remembered, and written down. Each is distinct, including this one…',
+  'We stop in {place}. {count} legend{s} were recorded here. Follow me in reading one of them…',
+  'Next is {place}, with {count} legend{s} connected to it. Hear this one…',
+  'The record takes us to {place}, a place associated with {count} legend{s}. Let us read one of them…',
+  'In {place}, collectors recorded {count} legend{s}. This is one of those accounts…',
+  '{place} appears in the collection through {count} legend{s}. We will turn to one of them now…',
+  'Our next stop is {place}, where {count} legend{s} entered the collection. Here is one…',
+  'The map brings us to {place}. From the {count} legend{s} connected to this place, we choose one…',
+  '{count} legend{s} in the collection are linked to {place}. One of them follows…',
+  'We have reached {place}, a setting remembered in {count} recorded legend{s}. Let us consider one…',
+  'At {place}, {count} legend{s} were preserved in writing. This account is among them…',
+  'The journey pauses at {place}, represented here by {count} legend{s}. Let us open one of the records…',
+  'From the wider landscape, we move into {place}, where {count} legend{s} were documented. Here is one…',
+  'This point on the map is {place}. It is connected to {count} recorded legend{s}, including the one before us…',
 ];
 
 const JOURNEY_PLACE_SINGULAR_PHRASES = [
   'We arrive in {place}, where a single legend was recorded. Let us hear it…',
-  'The thread settles in {place} – just one legend was recorded here.',
-  'Here is {place}, home to a single recorded legend.',
-  'We stop in {place}. Only one legend was recorded here.',
-  'Next is {place}, with one legend connected to it.',
+  'The thread settles in {place} – just one legend was recorded here. Let\u2019s explore it…',
+  'Here is {place}, home to a single recorded legend. It reads like this…',
+  'We stop in {place}. Only one legend was recorded here. Let us explore it…',
+  'Next is {place}, with one legend connected to it. Hear it out…',
+  'The record takes us to {place}, represented in the collection by one legend. Here it is…',
+  'Only one legend in the collection is linked to {place}. Let us read it…',
+  '{place} appears once in this collection, through the legend that follows…',
+  'Our next stop is {place}, where a single account was written down. Let us turn to it…',
+  'The map brings us to {place}. One recorded legend connects the collection to this place…',
+  'A single legend carries us to {place}. This is the account…',
+  'We have reached {place}, preserved here through one recorded legend. Let us examine it…',
+  'At {place}, one legend entered the written record. It begins as follows…',
+  'The journey pauses at {place}. Only one legend from this place is included in the collection…',
+  'From the wider map, we move into {place}, known here through a single recorded legend…',
+  'This point marks {place}. One legend is associated with it, and we will read it now…',
 ];
 
 const JOURNEY_CATEGORY_CONTEXT_PHRASES = [
@@ -69,6 +102,17 @@ const JOURNEY_CATEGORY_CONTEXT_PHRASES = [
   'One story opens onto another through the thread of \u201c{title}\u201d…',
   'Another version of \u201c{title}\u201d appears here…',
   'We stay with \u201c{title}\u201d, but move into a different telling…',
+  'The same category, \u201c{title}\u201d, leads us to another recorded account…',
+  'Here is another legend classified under \u201c{title}\u201d…',
+  'The subject remains \u201c{title}\u201d, though the place and telling have changed…',
+  'We move from one example of \u201c{title}\u201d to another…',
+  'Another account takes up the topic of \u201c{title}\u201d…',
+  'This next legend belongs to the same group: \u201c{title}\u201d…',
+  'The collection connects these two stories through \u201c{title}\u201d…',
+  'We follow the classification \u201c{title}\u201d into a different part of the collection…',
+  'The motif \u201c{title}\u201d appears again, this time in another place…',
+  'A second telling offers a different example of \u201c{title}\u201d…',
+  'The journey continues within \u201c{title}\u201d, moving to another recorded legend…',
 ];
 
 const JOURNEY_CATEGORY_SPOTLIGHT_PHRASES = [
@@ -77,14 +121,36 @@ const JOURNEY_CATEGORY_SPOTLIGHT_PHRASES = [
   'A constellation takes shape: {count} legends connected by \u201c{title}\u201d.',
   'On the map, \u201c{title}\u201d appears in {count} different legends.',
   '{count} legends share this topic: \u201c{title}\u201d.',
+  'The category \u201c{title}\u201d includes {count} legends in the collection.',
+  'Here we see the geographical spread of \u201c{title}\u201d across {count} recorded legends.',
+  '{count} accounts have been grouped under \u201c{title}\u201d. Their locations are now visible together.',
+  'The map brings together {count} legends classified as \u201c{title}\u201d.',
+  'These {count} points show where legends concerning \u201c{title}\u201d were recorded.',
+  'Within the collection, \u201c{title}\u201d connects {count} legends from different places.',
+  'Let us look at \u201c{title}\u201d as a group: {count} recorded examples across the collection.',
+  'The theme \u201c{title}\u201d appears repeatedly, linking {count} separate accounts.',
+  'Here are the {count} legends associated with \u201c{title}\u201d, viewed across the map.',
+  'Taken together, these {count} legends show how widely \u201c{title}\u201d appears in the material.',
+  '\u201c{title}\u201d is represented by {count} legends, recorded in several parts of the country.',
 ];
 
 const JOURNEY_COLLECTOR_SPOTLIGHT_PHRASES = [
   'The map widens around {name}, revealing {count} legends gathered across Norway.',
   'Seen together, {name}\u2019s {count} recorded legends form a path across the landscape.',
-  'These points trace the work of {name}: {count} legends carried into the archive.',
+  'These points trace the work of {name}: {count} legends carried into the collection.',
   'Here is what {name} left behind – {count} legends, recorded in places across the country.',
   '{name} appears across the map through {count} collected legends.',
+  'These locations show where the {count} legends recorded by {name} are connected to the landscape.',
+  'The work of {name} is visible here through {count} legends and the places associated with them.',
+  'Across these points, we can follow {name}\u2019s contribution of {count} legends to the collection.',
+  'The map now shows the geographical range of the {count} legends linked to {name}.',
+  '{count} records connect {name} to places across the map.',
+  'Here, {name}\u2019s {count} legends reveal the range of places reached through the collection.',
+  'These points bring together the places represented in {name}\u2019s collection of {count} legends.',
+  'The collection attributes {count} legends to {name}. Their distribution becomes visible here.',
+  'We pause to see {name}\u2019s work as a whole: {count} legends connected to their recorded locations.',
+  'This view gathers the {count} legends associated with {name} and places them back on the map.',
+  'Through {count} recorded legends, the collecting work of {name} reaches across several local traditions.',
 ];
 
 const JOURNEY_INTRO = [
@@ -212,7 +278,12 @@ function buildJourneyStarfield() {
   function addNode(key, type, coords) {
     if (nodeIndex[key] != null) return nodeIndex[key];
     const idx = nodes.length;
-    nodes.push({ lat: coords.lat, lon: coords.lon, color: JOURNEY_COLORS[type], hub: type !== 'place' });
+    nodes.push({
+      lat: coords.lat,
+      lon: coords.lon,
+      color: JOURNEY_COLORS[type],
+      hub: type !== 'place',
+    });
     nodeIndex[key] = idx;
     return idx;
   }
@@ -729,10 +800,7 @@ function journeyArrive(target) {
   } else {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
-    const dwell = Math.max(
-      6000,
-      Math.min(12000, 3000 + (target.story || '').length * 44),
-    );
+    const dwell = Math.max(6000, Math.min(12000, 3000 + (target.story || '').length * 44));
     journeyPendingAdvanceFn = journeyAdvance;
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyAdvance();
