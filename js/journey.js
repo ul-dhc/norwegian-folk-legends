@@ -21,14 +21,6 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Following a collector\u2019s trail…',
     'Looking for the next collector…',
     'Tracing another collection…',
-  ],
-  place: [
-    'Moving through the narrated landscape…',
-    'Travelling toward the next place…',const JOURNEY_FLIGHT_CAPTIONS = {
-  collector: [
-    'Following a collector\u2019s trail…',
-    'Looking for the next collector…',
-    'Tracing another collection…',
     'Moving toward another collector\u2019s work…',
     'Following the path of a recorded tradition…',
     'Seeking the next name in the collection…',
