@@ -45,7 +45,7 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Moving toward the landscape connected to this telling…',
     'Approaching another location in the collection…',
     'Following the route from story to place…',
-    'Travelling toward the place where this legend was heard…',
+    'Travelling toward the place where this legend was remembered…',
   ],
   legend: [
     'Approaching another recorded encounter…',
@@ -138,7 +138,8 @@ const JOURNEY_INTRO = [
   'Follow the threads. We begin with a collector…',
 ];
 
-const JOURNEY_CYCLE_LIMIT = 8;
+const JOURNEY_COLLECTOR_POOL_SIZE = 20;
+const JOURNEY_CYCLE_SAFETY_MARGIN = 15;
 
 const JOURNEY_NORWAY_BOUNDS = [
   [57.8, 4.0],
@@ -165,6 +166,7 @@ let journeyBurst = null;
 let journeyTrail = [];
 let journeyEdges = [];
 let journeyRecentCollectors = [];
+let journeyVisitedCollectors = new Set();
 let journeyCollectors = [];
 let journeyCategories = [];
 let journeyPlaces = {};
@@ -384,9 +386,13 @@ function journeyPick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function journeyWeightedTopPick(sortedArr, topN, excludeNames) {
-  const pool = sortedArr.filter((c) => !excludeNames.includes(c.name)).slice(0, topN);
-  return journeyPick(pool.length ? pool : sortedArr);
+function journeyPickNextCollector() {
+  const unvisited = journeyCollectors.filter((c) => !journeyVisitedCollectors.has(c.name));
+  if (unvisited.length) {
+    const pool = unvisited.slice(0, Math.min(JOURNEY_COLLECTOR_POOL_SIZE, unvisited.length));
+    return journeyPick(pool);
+  }
+  return journeyPick(journeyCollectors);
 }
 
 function journeyNarrate(templates, ctx) {
@@ -924,11 +930,14 @@ function journeyAdvance() {
   deactivateJourneyStarfield();
   if (journeyStep === 'collector') {
     journeyCycleCount++;
-    if (journeyCycleCount > JOURNEY_CYCLE_LIMIT) {
+    const coveredAllCollectors = journeyVisitedCollectors.size >= journeyCollectors.length;
+    const safetyLimit = journeyCollectors.length + JOURNEY_CYCLE_SAFETY_MARGIN;
+    if (coveredAllCollectors || journeyCycleCount > safetyLimit) {
       journeyRunOutro();
       return;
     }
-    const c = journeyWeightedTopPick(journeyCollectors, 20, journeyRecentCollectors);
+    const c = journeyPickNextCollector();
+    journeyVisitedCollectors.add(c.name);
     journeyRecentCollectors.push(c.name);
     if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
     journeyMemory.collector = c;
@@ -1066,6 +1075,8 @@ function journeyPlayAgain() {
   journeyEnded = false;
   journeyCycleCount = 0;
   journeyOutroIndex = 0;
+  journeyVisitedCollectors = new Set();
+  journeyRecentCollectors = [];
   journeyTrail = [];
   journeyEdges = [];
   journeyCurrent = null;
@@ -1131,6 +1142,7 @@ function journeyJump() {
     journeyEnded = false;
     journeyCycleCount = 0;
     journeyOutroIndex = 0;
+    journeyVisitedCollectors = new Set();
   }
   journeyIntroDone = true;
   deactivateJourneyStarfield();
@@ -1142,6 +1154,7 @@ function journeyJump() {
   let pool = journeyCollectors.filter((c) => !exclude.includes(c.name));
   if (!pool.length) pool = journeyCollectors;
   const c = journeyPick(pool);
+  journeyVisitedCollectors.add(c.name);
   journeyRecentCollectors.push(c.name);
   if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
   journeyMemory.collector = c;
