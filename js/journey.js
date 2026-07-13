@@ -406,6 +406,15 @@ function journeyProject(lat, lon) {
   return { x: p.x, y: p.y };
 }
 
+function journeyFlyToTarget(lat, lon, zoom) {
+  if (!journeyMap || window.innerWidth > 768) return [lat, lon];
+  const size = journeyMap.getSize();
+  const targetPx = journeyMap.project([lat, lon], zoom);
+  const shiftedPx = targetPx.add([0, size.y * 0.2]);
+  const shifted = journeyMap.unproject(shiftedPx, zoom);
+  return [shifted.lat, shifted.lng];
+}
+
 function journeyBezier(from, to) {
   const midLat = (from.lat + to.lat) / 2;
   const midLon = (from.lon + to.lon) / 2;
@@ -674,7 +683,7 @@ function journeyFlyTo(target, isJump, captionOverride) {
   hideJourneyTextPanel();
   const zoom = isJump ? JOURNEY_ZOOM.collector - 1.2 : JOURNEY_ZOOM[target.type];
   journeyVeilPulse(duration);
-  journeyMap.flyTo([target.lat, target.lon], zoom, {
+  journeyMap.flyTo(journeyFlyToTarget(target.lat, target.lon, zoom), zoom, {
     duration: duration / 1000,
     easeLinearity: 0.2,
   });
@@ -995,6 +1004,7 @@ function journeyJump() {
 }
 
 function toggleJourneyFullscreen() {
+  if (window.innerWidth <= 768) return;
   const el = document.getElementById('panel-journey');
   const nativeSupported = document.fullscreenEnabled || document.webkitFullscreenEnabled;
   if (nativeSupported) {
