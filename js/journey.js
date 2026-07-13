@@ -55,7 +55,7 @@ const JOURNEY_FLIGHT_CAPTIONS = {
     'Following the thread into a new legend…',
     'Moving closer to another recorded experience…',
     'Opening the way to the next telling…',
-    'Approaching a different version of the narrated world…',
+    'Approaching a different version of the remembered world…',
     'Turning toward another legend in the collection…',
     'Following the motif into a new account…',
     'Moving from context into the story itself…',
@@ -393,6 +393,11 @@ function journeyPickNextCollector() {
     return journeyPick(pool);
   }
   return journeyPick(journeyCollectors);
+}
+
+function journeyPickRichestCollector() {
+  const topFew = journeyCollectors.slice(0, Math.min(3, journeyCollectors.length));
+  return journeyPick(topFew);
 }
 
 function journeyNarrate(templates, ctx) {
@@ -938,13 +943,14 @@ function journeyAdvance() {
       journeyRunOutro();
       return;
     }
-    const c = journeyPickNextCollector();
+    const isFirstCollector = journeyVisitedCollectors.size === 0;
+    const c = isFirstCollector ? journeyPickRichestCollector() : journeyPickNextCollector();
     journeyVisitedCollectors.add(c.name);
     journeyRecentCollectors.push(c.name);
     if (journeyRecentCollectors.length > 6) journeyRecentCollectors.shift();
     journeyMemory.collector = c;
     journeyStep = 'place';
-    if (Math.random() < 0.3) {
+    if (isFirstCollector || Math.random() < 0.3) {
       journeySpotlightCollector(c, () => journeyAdvance());
     } else {
       const collectorItem = journeyPick(c.items);
