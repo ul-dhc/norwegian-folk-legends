@@ -118,5 +118,9 @@ function esc(s) {
     .replace(/"/g, '&quot;');
 }
 
+function isUkjent(v) {
+  return !v || v.trim().toLowerCase() === 'ukjent';
+}
+
 let samlers = [],
   informants = [];
