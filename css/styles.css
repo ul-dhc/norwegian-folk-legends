@@ -2312,22 +2312,14 @@ body.journey-fake-fullscreen-active {
     -webkit-overflow-scrolling: touch;
     max-width: calc(100% - 16px);
   }
-  #panel-journey {
-    overflow: visible;
-  }
   .journey-credit {
-    position: absolute;
-    top: 100%;
-    bottom: auto;
+    bottom: 56px;
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    margin-top: 10px;
     text-align: center;
     max-width: calc(100% - 24px);
-    background: rgba(14, 17, 23, 0.85);
-    padding: 5px 12px;
-    border-radius: 10px;
+    font-size: 8px;
   }
   .journey-btn {
     padding: 8px 9px;
@@ -2345,10 +2337,10 @@ body.journey-fake-fullscreen-active {
     top: 10px;
   }
   .journey-caption.intro {
-    top: 34%;
+    top: 18px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 19px;
+    transform: translateX(-50%);
+    font-size: 18px;
     text-align: center;
     max-width: calc(100% - 32px);
   }
