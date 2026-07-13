@@ -1,7 +1,7 @@
 const JOURNEY_FLIGHT_MS = 4400;
 const JOURNEY_JUMP_MS = 6200;
 const JOURNEY_HUB_PAUSE_BASE_MS = 1800;
-const JOURNEY_TRAIL_MAX = 300;
+const JOURNEY_TRAIL_MAX = 140;
 const JOURNEY_CLICK_RADIUS = 16;
 const JOURNEY_SPOTLIGHT_HOLD_MS = 5200;
 const JOURNEY_SPOTLIGHT_FADE_MS = 900;
@@ -783,6 +783,7 @@ function journeyArrive(target) {
       color: JOURNEY_COLORS[target.type],
       t: performance.now(),
     });
+    if (journeyEdges.length > JOURNEY_TRAIL_MAX) journeyEdges.shift();
   }
   journeyCurrent = target;
   journeyTrail.push({
@@ -849,6 +850,7 @@ function journeySpotlightCollector(c, onDone) {
       color: JOURNEY_COLORS.collector,
       t: performance.now(),
     });
+    if (journeyEdges.length > JOURNEY_TRAIL_MAX) journeyEdges.shift();
   }
   journeyCurrent = { type: 'collector', lat: c.centroid.lat, lon: c.centroid.lon, story };
   journeyTrail.push({
