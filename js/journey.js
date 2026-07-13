@@ -703,7 +703,7 @@ function journeyArrive(target) {
     setJourneyCaption('');
     showJourneyTextPanel(target.item);
     const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
-    const dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
+    const dwell = Math.max(11000, Math.min(20000, 9500 + len * 14));
     journeyPendingAdvanceFn = journeyAdvance;
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyAdvance();
@@ -711,7 +711,7 @@ function journeyArrive(target) {
   } else if (target.item) {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
-    const dwell = Math.max(2200, Math.min(4200, 1200 + (target.story || '').length * 20));
+    const dwell = Math.max(3200, Math.min(6000, 2000 + (target.story || '').length * 24));
     journeyPendingAdvanceFn = () => journeyShowStopLegend(target);
     journeyDwellTimer = setTimeout(() => {
       if (journeyPlaying) journeyShowStopLegend(target);
@@ -720,8 +720,8 @@ function journeyArrive(target) {
     hideJourneyTextPanel();
     setJourneyCaption(target.story);
     const dwell = Math.max(
-      4800,
-      Math.min(9500, 2200 + (target.story || '').length * 38),
+      6000,
+      Math.min(12000, 3000 + (target.story || '').length * 44),
     );
     journeyPendingAdvanceFn = journeyAdvance;
     journeyDwellTimer = setTimeout(() => {
@@ -734,7 +734,7 @@ function journeyShowStopLegend(target) {
   setJourneyCaption('');
   showJourneyTextPanel(target.item);
   const len = ((target.item.tekst || '') + (target.item.english_translation || '')).length;
-  const dwell = Math.max(7000, Math.min(15000, 6500 + len * 12));
+  const dwell = Math.max(11000, Math.min(20000, 9500 + len * 14));
   journeyPendingAdvanceFn = journeyAdvance;
   journeyDwellTimer = setTimeout(() => {
     if (journeyPlaying) journeyAdvance();
@@ -916,7 +916,7 @@ function journeyIntroText(i) {
 }
 
 function journeyIntroDwell(text) {
-  return Math.max(4200, Math.min(9000, 2200 + text.length * 38));
+  return Math.max(5200, Math.min(11000, 2800 + text.length * 42));
 }
 
 function journeyRunIntro() {
