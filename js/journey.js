@@ -1255,13 +1255,18 @@ function toggleJourneyMusic() {
   if (!journeyAudioEl) journeyAudioEl = document.getElementById('journey-audio');
   journeyMusicOn = !journeyMusicOn;
   const btn = document.getElementById('jny-music');
-  if (btn) btn.classList.toggle('on', journeyMusicOn);
+  if (btn) {
+    btn.classList.toggle('on', journeyMusicOn);
+    btn.setAttribute('aria-pressed', String(journeyMusicOn));
+  }
   if (journeyMusicOn) {
     journeyAudioEl.volume = 0;
     journeyAudioEl.play().catch(() => {});
     journeyFadeAudio(0.35, 2000);
   } else {
-    journeyFadeAudio(0, 1200);
+    cancelAnimationFrame(journeyFadeRAF);
+    journeyAudioEl.pause();
+    journeyAudioEl.volume = 0;
   }
 }
 

@@ -31,7 +31,7 @@ const base=import.meta.env.BASE_URL;
         <button class="journey-btn" id="jny-next" type="button" onclick="journeyNext()"><span class="jny-icon">⏭</span><span class="jny-label" id="jny-next-label"> Neste</span></button>
         <button class="journey-btn" id="jny-stop" type="button" onclick="journeyStop()" disabled><span class="jny-icon">■</span><span class="jny-label" id="jny-stop-label"> Stopp</span></button>
         <button class="journey-btn" id="jny-jump" type="button" onclick="journeyJump()"><span class="jny-icon">✦</span><span class="jny-label" id="jny-jump-label"> Hopp</span></button>
-        <button class="journey-btn" id="jny-music" type="button" onclick="toggleJourneyMusic()"><span class="jny-icon">♪</span><span class="jny-label" id="jny-music-label"> Musikk</span></button>
+        <button class="journey-btn" id="jny-music" type="button" onclick="toggleJourneyMusic()" aria-pressed="false"><span class="jny-icon">♪</span><span class="jny-label" id="jny-music-label"> Musikk</span></button>
         <button class="journey-btn" id="jny-fullscreen" type="button" onclick="toggleJourneyFullscreen()"><span class="jny-icon" id="jny-fullscreen-icon">⛶</span><span class="jny-label" id="jny-fullscreen-label"> Fullskjerm</span></button>
       </div>
     </div>
