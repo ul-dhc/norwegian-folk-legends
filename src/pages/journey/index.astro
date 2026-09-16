@@ -36,7 +36,7 @@ const base=import.meta.env.BASE_URL;
       </div>
     </div>
   </section>
-  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'};window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
+  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://tile.openstreetmap.org/{z}/{x}/{y}.png'};window.JOURNEY_MAP_ATTRIBUTION='© OpenStreetMap contributors';window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
   <script is:inline src={journeyScriptUrl}></script>
   <script is:inline>
     const journeyFallback={no:{play:'Start',pause:'Pause',next:'Neste',stop:'Stopp',jump:'Hopp',music:'Musikk',fullscreen:'Fullskjerm',exit:'Avslutt fullskjerm',collected:'Samlet av',told:'fortalt av',read:'Les hele sagnet'},en:{play:'Play',pause:'Pause',next:'Next',stop:'Stop',jump:'Jump',music:'Music',fullscreen:'Fullscreen',exit:'Exit fullscreen',collected:'Collected by',told:'told by',read:'Read full legend'}};

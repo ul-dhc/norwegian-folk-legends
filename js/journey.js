@@ -464,7 +464,7 @@ function initJourney() {
   });
   journeyMap.fitBounds(journeyDataBounds || JOURNEY_NORWAY_BOUNDS, { padding: [24, 24] });
   L.tileLayer(MAP_LAYERS.dark, {
-    attribution: '© OpenStreetMap © CARTO',
+    attribution: window.JOURNEY_MAP_ATTRIBUTION || '© OpenStreetMap © CARTO',
     maxZoom: 14,
     keepBuffer: 6,
   }).addTo(journeyMap);
