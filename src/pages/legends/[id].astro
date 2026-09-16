@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { legends, resolveLegend, sourceLabel, legendYear, displayPersonName, type Legend } from '../../lib/data';
+import { legends, resolveLegend, legendYear, displayPersonName, type Legend } from '../../lib/data';
 const base = import.meta.env.BASE_URL;
 export function getStaticPaths() { return legends.map((legend, index) => ({ params: { id: legend.id }, props: { legend, index } })); }
 const { legend, index } = Astro.props as { legend: Legend; index: number };
@@ -8,30 +8,42 @@ const data = resolveLegend(legend), previous = legends[index - 1], next = legend
 const hasTranslation = Boolean(legend.text.en?.trim());
 const missingValue = '—';
 const basicRows = [['', 'ID', legend.id], ['meta.place', 'Sted', data.place?.name || missingValue], ['meta.county', 'Fylke', data.county?.name || missingValue], ['meta.informant', 'Informant', displayPersonName(data.narrator) || missingValue], ['meta.collector', 'Samler', displayPersonName(data.collector) || missingValue], ['meta.year', 'År', year || missingValue]];
-const allSources = [...data.primarySources, ...data.secondarySources];
-const hasSources = allSources.length > 0 || Boolean(legend.primarySourceRaw || legend.secondarySourceRaw);
 const publicUrl = new URL(`${base}legends/${legend.id}/`, Astro.site ?? Astro.url.origin).href;
 const narratorName = displayPersonName(data.narrator), collectorName = displayPersonName(data.collector);
 const trimPeriod = (value: string) => value.replace(/[.\s]+$/,'');
-const shortCitation = `Norske sagn, ID ${legend.id}. Available at: ${publicUrl}`;
+const sourceReference = legend.sourceUrl || publicUrl;
+const shortCitation = `${legend.title.no ? `${trimPeriod(legend.title.no)}. ` : ''}Norske sagn, ID ${legend.id}. ${sourceReference}`;
 const extendedCitation = [
-  'Norske sagn.',
-  `ID ${legend.id}.`,
   legend.title.no ? `${trimPeriod(legend.title.no)}.` : '',
+  `Norske sagn, ID ${legend.id}.`,
+  legend.mlCategoryId && data.category ? `ML category: ${data.category.code}${data.category.title ? ` (${trimPeriod(data.category.title)})` : ''}.` : '',
   narratorName ? `Informant: ${trimPeriod(narratorName)}.` : '',
   collectorName ? `Collector: ${trimPeriod(collectorName)}.` : '',
   data.place?.name ? `Place: ${data.place.name}.` : '',
   data.county?.name ? `County: ${data.county.name}.` : '',
   year ? `Year: ${year}.` : '',
-  `Available at: ${publicUrl}`,
+  legend.archiveSignature ? `Archive signature: ${trimPeriod(legend.archiveSignature)}.` : '',
+  legend.textSignature && legend.textSignature !== legend.archiveSignature ? `Text signature: ${trimPeriod(legend.textSignature)}.` : '',
+  `Digital source: ${sourceReference}`,
+  `Explorer record: ${publicUrl}`,
 ].filter(Boolean).join(' ');
 const shareMetadata = [
   `ID: ${legend.id}.`,
   data.place?.name ? `Place: ${data.place.name}.` : '',
+  data.county?.name ? `County: ${data.county.name}.` : '',
   year ? `Year: ${year}.` : '',
   narratorName ? `Informant: ${narratorName.replace(/[.\s]+$/,'')}.` : '',
   collectorName ? `Collector: ${collectorName.replace(/[.\s]+$/,'')}.` : '',
+  data.category ? `ML category: ${[data.category.code,data.category.title].filter(Boolean).join(' · ')}.` : '',
+  legend.sourceUrl ? `Digital source: ${legend.sourceUrl}` : '',
 ].filter(Boolean).join(' ');
+const additionalRows=[
+  {key:'meta.theme',label:'ML-kategori',value:legend.chapter.no||missingValue},
+  {key:'meta.genre',label:'Sjanger',value:legend.genre||missingValue},
+  {key:'meta.subgenre',label:'Undersjanger',value:legend.subgenre||missingValue},
+  {key:'meta.archive',label:'Arkivsignatur',value:legend.archiveSignature||missingValue},
+  {key:'meta.textSignature',label:'Tekstsignatur',value:legend.textSignature||missingValue},
+];
 const lvShareText = [legend.title.no || 'Uten tittel', legend.text.no || 'Tekst mangler.', shareMetadata, publicUrl].join('\n\n');
 const deShareText = [legend.title.en || 'Untitled', legend.text.en || 'Translation unavailable.', shareMetadata, publicUrl].join('\n\n');
 const parallelShareText = [legend.title.no || 'Uten tittel', 'Norwegian', legend.text.no || 'Tekst mangler.', legend.title.en || 'Untitled', 'English', legend.text.en || 'Translation unavailable.', shareMetadata, publicUrl].join('\n\n');
@@ -44,7 +56,7 @@ const parallelShareText = [legend.title.no || 'Uten tittel', 'Norwegian', legend
     <div class="detail-grid">
       <div class="reading-column">
         <div class="texts" data-texts><section class="text-panel" data-lang="no" aria-labelledby="no-heading"><h2 id="no-heading" data-i18n="text.original">NORSK ORIGINAL</h2><div class="legend-text">{legend.text.no || 'Tekst mangler.'}</div></section>{hasTranslation && <section class="text-panel" data-lang="en" lang="en" aria-labelledby="en-heading"><h2 id="en-heading" data-i18n="text.translation">ENGELSK OVERSETTELSE</h2><div class="legend-text">{legend.text.en}</div></section>}</div>
-        <details class="information" data-information open><summary><span><span data-i18n="detail.information">Informasjon</span><small data-i18n="detail.infoHelp">om sagnet og kilden</small></span><i data-lucide="chevron-down"></i></summary><div class="information-body"><dl>{basicRows.map(([key,label,value]) => <div class="metadata-row"><dt data-i18n={key || undefined}>{label}</dt><dd>{value}</dd></div>)}</dl><details class="more-metadata"><summary><span data-i18n="detail.moreMetadata">Flere metadata</span><i data-lucide="chevron-down"></i></summary><dl><div class="metadata-row"><dt data-i18n="meta.volume">Undersjanger</dt><dd>{legend.volume}</dd></div><div class="metadata-row"><dt data-i18n="meta.theme">ML-kategori</dt><dd>{legend.chapter.no || 'Ikke oppgitt'}{legend.chapter.en && <small lang="en"><br />{legend.chapter.en}</small>}</dd></div>{legend.originalMetadata && <div class="metadata-row"><dt data-i18n="meta.original">Originale metadata</dt><dd>{legend.originalMetadata}</dd></div>}{hasSources && <div class="metadata-row"><dt data-i18n="meta.sources">Kilder</dt><dd>{allSources.length ? <ul class="source-list">{allSources.map(({source,relation}) => <li>{source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer">{sourceLabel(source)}</a> : sourceLabel(source)}{relation.rawCitation && <small><br />{relation.rawCitation}</small>}</li>)}</ul> : (legend.primarySourceRaw || legend.secondarySourceRaw)}</dd></div>}</dl></details></div></details>
+        <details class="information" data-information open><summary><span><span data-i18n="detail.information">Informasjon</span><small data-i18n="detail.infoHelp">om sagnet og kilden</small></span><i data-lucide="chevron-down"></i></summary><div class="information-body"><dl>{basicRows.map(([key,label,value]) => <div class="metadata-row"><dt data-i18n={key || undefined}>{label}</dt><dd>{value}</dd></div>)}</dl><details class="more-metadata"><summary><span data-i18n="detail.moreMetadata">Flere metadata</span><i data-lucide="chevron-down"></i></summary><dl>{additionalRows.map(row=><div class="metadata-row"><dt data-i18n={row.key}>{row.label}</dt><dd>{row.value}</dd></div>)}<div class="metadata-row"><dt data-i18n="meta.source">Digital kilde</dt><dd><a href={legend.sourceUrl || publicUrl} target="_blank" rel="noopener noreferrer">{legend.sourceUrl ? 'University of Oslo' : 'Norske sagn'}</a></dd></div></dl></details></div></details>
         {(legend.comments || legend.notes) && <aside class="editorial" aria-label="Redaksjonell informasjon">{legend.comments && <details><summary>Redaktørkommentar</summary><p>{legend.comments}</p></details>}{legend.notes && <details><summary>Redaksjonelle merknader</summary><p>{legend.notes}</p></details>}</aside>}
         <nav class="prev-next" aria-label="Nabosagn" data-prev-next data-current-id={legend.id}><a href={previous ? `${base}legends/${previous.id}/` : '#'} data-previous hidden={!previous}><span class="nav-direction"><i data-lucide="arrow-left"></i> Forrige sagn</span><span class="legend-nav-title">{previous ? (previous.title.no || previous.title.en || previous.id) : ''}</span></a><a href={next ? `${base}legends/${next.id}/` : '#'} data-next hidden={!next}><span class="nav-direction">Neste sagn <i data-lucide="arrow-right"></i></span><span class="legend-nav-title">{next ? (next.title.no || next.title.en || next.id) : ''}</span></a></nav>
       </div>
@@ -52,7 +64,7 @@ const parallelShareText = [legend.title.no || 'Uten tittel', 'Norwegian', legend
   </article>
   <script>
     const tabs=[...document.querySelectorAll<HTMLButtonElement>('[data-mode]')],panels=[...document.querySelectorAll<HTMLElement>('[data-lang]')],titles=[...document.querySelectorAll<HTMLElement>('[data-title-lang]')],texts=document.querySelector<HTMLElement>('[data-texts]')!;
-    const chapterMeta=document.querySelector<HTMLElement>('.metadata-row dt[data-i18n="meta.theme"]+dd'),chapterNoNode=chapterMeta?.firstChild,chapterNoText=chapterNoNode?.textContent||'',chapterEnMeta=chapterMeta?.querySelector<HTMLElement>('small[lang="en"]'),chapterBreak=chapterEnMeta?.querySelector<HTMLElement>('br');const syncChapterMeta=(mode:string)=>{if(chapterNoNode)chapterNoNode.textContent=mode==='en'?'':chapterNoText;if(chapterEnMeta)chapterEnMeta.hidden=mode==='no';if(chapterBreak)chapterBreak.hidden=mode==='en'};
+    const syncChapterMeta=(_mode:string)=>{};
     const hasTranslation=document.querySelector<HTMLElement>('.detail')?.dataset.hasTranslation==='true';let currentMode=hasTranslation?(document.documentElement.dataset.contentMode||'parallel'):'no';
     const hashForMode=(mode:string)=>mode==='parallel'?'no-en':mode;
     const modeFromHash=()=>location.hash==='#no'?'no':location.hash==='#en'?'en':location.hash==='#no-en'?'parallel':null;
