@@ -1240,7 +1240,7 @@ function journeyFadeAudio(target, duration) {
   const start = journeyAudioEl.volume;
   const t0 = performance.now();
   const step = (now) => {
-    const t = Math.min(1, (now - t0) / duration);
+    const t = Math.max(0, Math.min(1, (now - t0) / duration));
     journeyAudioEl.volume = start + (target - start) * t;
     if (t < 1) {
       journeyFadeRAF = requestAnimationFrame(step);
