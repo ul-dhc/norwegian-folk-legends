@@ -81,6 +81,8 @@
   "meta.archive": { "no": "Arkivsignatur", "en": "Archive signature" },
   "meta.textSignature": { "no": "Tekstsignatur", "en": "Text signature" },
   "meta.source": { "no": "Digital kilde", "en": "Digital source" },
+  "meta.uioId": { "no": "UiO-ID", "en": "UiO ID" },
+  "meta.sourceTextId": { "no": "Samlingens tekst-ID", "en": "Collection text ID" },
   "detail.previous": { "no": "← Forrige sagn", "en": "← Previous legend" },
   "detail.next": { "no": "Neste sagn →", "en": "Next legend →" },
   "common.copied": { "no": "Kopiert", "en": "Copied" },
