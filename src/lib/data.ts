@@ -13,15 +13,14 @@ type Category={id:string;code:string;title:string|null;legendCount:number};
 type RawLegend={id:string;title:Localized;text:Localized;mlCategoryId:string|null;genre:string|null;subgenre:string|null;collectorId:string|null;informantId:string|null;placeId:string|null;countyId:string|null;year:number|null;yearRaw:string|null;archiveSignature:string|null;textSignature:string|null;sourceUrl:string|null};
 type Source={id:string;title:string|null;originalLabel:string|null;code:string|null};
 
-const fixtureIds=new Set(['SIN0','SIN1','SIN10','SIN115','SIN1255','SIN100','SIN108','SIN118','SIN1000','SIN1001']);
 const indexById=<T extends{id:string}>(items:T[])=>new Map(items.map(item=>[item.id,item]));
 export const collectors:Person[]=(collectorsRaw as Array<{id:string;name:string;legendCount:number}>).map(item=>({id:item.id,fullName:item.name,legendCount:item.legendCount}));
 export const narrators:Person[]=(informantsRaw as Array<{id:string;name:string;legendCount:number}>).map(item=>({id:item.id,fullName:item.name,legendCount:item.legendCount}));
 export const places=placesRaw as Place[],counties=countiesRaw as Place[],mlCategories=categoriesRaw as Category[],sources:Source[]=[],legendSources:never[]=[];
 export const collectorsById=indexById(collectors),narratorsById=indexById(narrators),placesById=indexById(places),countiesById=indexById(counties),categoriesById=indexById(mlCategories),sourcesById=indexById(sources);
-export const manifest={mode:'template-fixture',legendCount:10};
+export const manifest={mode:'full-dataset',legendCount:(legendsRaw as RawLegend[]).length};
 
-export const legends:Legend[]=(legendsRaw as RawLegend[]).filter(raw=>fixtureIds.has(raw.id)).map(raw=>{const category=raw.mlCategoryId?categoriesById.get(raw.mlCategoryId):null,place=raw.placeId?placesById.get(raw.placeId):null,label=[category?.code,category?.title].filter(Boolean).join(' · ')||null;return{id:raw.id,volume:raw.subgenre||'',chapter:{no:label,en:label},title:raw.title,text:raw.text,collectorId:raw.collectorId,narratorId:raw.informantId,placeId:raw.placeId,countyId:raw.countyId,mlCategoryId:raw.mlCategoryId,genre:raw.genre,subgenre:raw.subgenre,year:String(raw.year||''),originalMetadata:null,comments:null,notes:null,originalCoordinates:place?.coordinates||null,primarySourceRaw:raw.archiveSignature,secondarySourceRaw:raw.textSignature,archiveSignature:raw.archiveSignature,textSignature:raw.textSignature,sourceUrl:raw.sourceUrl}});
+export const legends:Legend[]=(legendsRaw as RawLegend[]).map(raw=>{const category=raw.mlCategoryId?categoriesById.get(raw.mlCategoryId):null,place=raw.placeId?placesById.get(raw.placeId):null,label=[category?.code,category?.title].filter(Boolean).join(' · ')||null;return{id:raw.id,volume:raw.subgenre||'',chapter:{no:label,en:label},title:raw.title,text:raw.text,collectorId:raw.collectorId,narratorId:raw.informantId,placeId:raw.placeId,countyId:raw.countyId,mlCategoryId:raw.mlCategoryId,genre:raw.genre,subgenre:raw.subgenre,year:String(raw.year||''),originalMetadata:null,comments:null,notes:null,originalCoordinates:place?.coordinates||null,primarySourceRaw:raw.archiveSignature,secondarySourceRaw:raw.textSignature,archiveSignature:raw.archiveSignature,textSignature:raw.textSignature,sourceUrl:raw.sourceUrl}});
 export const legendsById=indexById(legends);
 export const displayPersonName=(person:Person|null|undefined)=>/^(ukjent|unknown)$/iu.test(person?.fullName?.trim()||'')?'':person?.fullName?.trim()||'';
 export const legendYear=(legend:Legend)=>legend.year;
