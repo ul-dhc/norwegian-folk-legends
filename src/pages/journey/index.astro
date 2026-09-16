@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/journey.css';
 import 'leaflet/dist/leaflet.css';
-import 'maplibre-gl/dist/maplibre-gl.css';
 import journeyScriptUrl from '../../../js/journey.js?url';
 import journeyAudio from '../../../audio/background-music.mp3?url';
 
@@ -34,13 +33,11 @@ const base=import.meta.env.BASE_URL;
       </div>
     </div>
   </section>
-  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://tile.openstreetmap.org/{z}/{x}/{y}.png'};window.JOURNEY_MAP_ATTRIBUTION='© OpenStreetMap contributors';window.JOURNEY_VECTOR_READY=new Promise(resolve=>{window.resolveJourneyVector=resolve});window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
+  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',labels:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}'};window.JOURNEY_MAP_ATTRIBUTION='Tiles © Esri — Esri, HERE, Garmin, FAO, NOAA, USGS, © OpenStreetMap contributors, and the GIS user community';window.JOURNEY_MAP_READY=new Promise(resolve=>{window.resolveJourneyMap=resolve});window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
   <script>
     import * as Leaflet from 'leaflet';
-    import {maplibreGL} from '@maplibre/maplibre-gl-leaflet';
     (window as any).L=Leaflet;
-    (window as any).JOURNEY_VECTOR_LAYER=()=>maplibreGL({style:'https://tiles.openfreemap.org/styles/dark'});
-    (window as any).resolveJourneyVector();
+    (window as any).resolveJourneyMap();
   </script>
   <script is:inline src={journeyScriptUrl}></script>
   <script is:inline>
@@ -53,6 +50,6 @@ const base=import.meta.env.BASE_URL;
     const originalFullscreenChange=onJourneyFullscreenChange;
     onJourneyFullscreenChange=function(){originalFullscreenChange();const panel=document.getElementById('panel-journey'),isFs=!!(document.fullscreenElement||document.webkitFullscreenElement||panel?.classList.contains('fake-fullscreen'));document.getElementById('jny-fullscreen-label').textContent=` ${journeyLabel(isFs?'exit':'fullscreen')}`};
     window.addEventListener('ui-language-change',()=>{updateJourneyButtons();onJourneyFullscreenChange();if(journeyCurrent?.item&&document.getElementById('journey-textpanel').classList.contains('show'))showJourneyTextPanel(journeyCurrent.item)});
-    Promise.all([fetch(`${document.baseURI.replace(/journey\/$/,'')}journey-data.json`).then(response=>{if(!response.ok)throw new Error('Journey data could not be loaded');return response.json()}),window.JOURNEY_VECTOR_READY]).then(([records])=>{window.allData=records;window.samlers=[...new Set(records.map(d=>d.samler).filter(Boolean))];initJourney()}).catch(()=>{const caption=document.getElementById('journey-caption');caption.textContent='Journey data could not be loaded.';caption.classList.add('show')});
+    Promise.all([fetch(`${document.baseURI.replace(/journey\/$/,'')}journey-data.json`).then(response=>{if(!response.ok)throw new Error('Journey data could not be loaded');return response.json()}),window.JOURNEY_MAP_READY]).then(([records])=>{window.allData=records;window.samlers=[...new Set(records.map(d=>d.samler).filter(Boolean))];initJourney()}).catch(()=>{const caption=document.getElementById('journey-caption');caption.textContent='Journey data could not be loaded.';caption.classList.add('show')});
   </script>
 </BaseLayout>

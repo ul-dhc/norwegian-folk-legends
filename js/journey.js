@@ -463,13 +463,16 @@ function initJourney() {
     worldCopyJump: true,
   });
   journeyMap.fitBounds(journeyDataBounds || JOURNEY_NORWAY_BOUNDS, { padding: [24, 24] });
-  if (window.JOURNEY_VECTOR_LAYER) {
-    window.JOURNEY_VECTOR_LAYER().addTo(journeyMap);
-  } else {
-    L.tileLayer(MAP_LAYERS.dark, {
-      attribution: window.JOURNEY_MAP_ATTRIBUTION || '© OpenStreetMap © CARTO',
-      maxZoom: 14,
+  L.tileLayer(MAP_LAYERS.dark, {
+    attribution: window.JOURNEY_MAP_ATTRIBUTION || 'Tiles © Esri',
+    maxZoom: 16,
+    keepBuffer: 6,
+  }).addTo(journeyMap);
+  if (MAP_LAYERS.labels) {
+    L.tileLayer(MAP_LAYERS.labels, {
+      maxZoom: 16,
       keepBuffer: 6,
+      pane: 'overlayPane',
     }).addTo(journeyMap);
   }
   initJourneyCanvas();
