@@ -10,7 +10,10 @@
     "data:generate": "python3 scripts/csv_to_json.py"
   },
   "dependencies": {
+    "@maplibre/maplibre-gl-leaflet": "^0.1.4",
     "astro": "^7.2.1",
-    "lucide": "^1.31.0"
+    "leaflet": "^1.9.4",
+    "lucide": "^1.31.0",
+    "maplibre-gl": "^6.10.0"
   }
 }

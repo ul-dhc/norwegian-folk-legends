@@ -463,11 +463,15 @@ function initJourney() {
     worldCopyJump: true,
   });
   journeyMap.fitBounds(journeyDataBounds || JOURNEY_NORWAY_BOUNDS, { padding: [24, 24] });
-  L.tileLayer(MAP_LAYERS.dark, {
-    attribution: window.JOURNEY_MAP_ATTRIBUTION || '© OpenStreetMap © CARTO',
-    maxZoom: 14,
-    keepBuffer: 6,
-  }).addTo(journeyMap);
+  if (window.JOURNEY_VECTOR_LAYER) {
+    window.JOURNEY_VECTOR_LAYER().addTo(journeyMap);
+  } else {
+    L.tileLayer(MAP_LAYERS.dark, {
+      attribution: window.JOURNEY_MAP_ATTRIBUTION || '© OpenStreetMap © CARTO',
+      maxZoom: 14,
+      keepBuffer: 6,
+    }).addTo(journeyMap);
+  }
   initJourneyCanvas();
   window.addEventListener('resize', resizeJourneyCanvas);
   journeyMap.on('click', handleJourneyClick);

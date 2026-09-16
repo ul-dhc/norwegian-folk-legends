@@ -1,16 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/journey.css';
+import 'leaflet/dist/leaflet.css';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import journeyScriptUrl from '../../../js/journey.js?url';
 import journeyAudio from '../../../audio/background-music.mp3?url';
 
 const base=import.meta.env.BASE_URL;
 ---
 <BaseLayout active="journey" title="Reise" description="Reis gjennom norske sagn, steder, samlere og vandresagntyper.">
-  <Fragment slot="head">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous"/>
-    <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
-  </Fragment>
   <section class="journey-page" aria-label="Journey">
     <div id="panel-journey">
       <div id="journey-map-container"></div>
@@ -36,7 +34,14 @@ const base=import.meta.env.BASE_URL;
       </div>
     </div>
   </section>
-  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://tile.openstreetmap.org/{z}/{x}/{y}.png'};window.JOURNEY_MAP_ATTRIBUTION='© OpenStreetMap contributors';window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
+  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://tile.openstreetmap.org/{z}/{x}/{y}.png'};window.JOURNEY_MAP_ATTRIBUTION='© OpenStreetMap contributors';window.JOURNEY_VECTOR_READY=new Promise(resolve=>{window.resolveJourneyVector=resolve});window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
+  <script>
+    import * as Leaflet from 'leaflet';
+    import {maplibreGL} from '@maplibre/maplibre-gl-leaflet';
+    (window as any).L=Leaflet;
+    (window as any).JOURNEY_VECTOR_LAYER=()=>maplibreGL({style:'https://tiles.openfreemap.org/styles/dark'});
+    (window as any).resolveJourneyVector();
+  </script>
   <script is:inline src={journeyScriptUrl}></script>
   <script is:inline>
     const journeyFallback={no:{play:'Start',pause:'Pause',next:'Neste',stop:'Stopp',jump:'Hopp',music:'Musikk',fullscreen:'Fullskjerm',exit:'Avslutt fullskjerm',collected:'Samlet av',told:'fortalt av',read:'Les hele sagnet'},en:{play:'Play',pause:'Pause',next:'Next',stop:'Stop',jump:'Jump',music:'Music',fullscreen:'Fullscreen',exit:'Exit fullscreen',collected:'Collected by',told:'told by',read:'Read full legend'}};
@@ -48,6 +53,6 @@ const base=import.meta.env.BASE_URL;
     const originalFullscreenChange=onJourneyFullscreenChange;
     onJourneyFullscreenChange=function(){originalFullscreenChange();const panel=document.getElementById('panel-journey'),isFs=!!(document.fullscreenElement||document.webkitFullscreenElement||panel?.classList.contains('fake-fullscreen'));document.getElementById('jny-fullscreen-label').textContent=` ${journeyLabel(isFs?'exit':'fullscreen')}`};
     window.addEventListener('ui-language-change',()=>{updateJourneyButtons();onJourneyFullscreenChange();if(journeyCurrent?.item&&document.getElementById('journey-textpanel').classList.contains('show'))showJourneyTextPanel(journeyCurrent.item)});
-    fetch(`${document.baseURI.replace(/journey\/$/,'')}journey-data.json`).then(response=>{if(!response.ok)throw new Error('Journey data could not be loaded');return response.json()}).then(records=>{window.allData=records;window.samlers=[...new Set(records.map(d=>d.samler).filter(Boolean))];initJourney()}).catch(()=>{const caption=document.getElementById('journey-caption');caption.textContent='Journey data could not be loaded.';caption.classList.add('show')});
+    Promise.all([fetch(`${document.baseURI.replace(/journey\/$/,'')}journey-data.json`).then(response=>{if(!response.ok)throw new Error('Journey data could not be loaded');return response.json()}),window.JOURNEY_VECTOR_READY]).then(([records])=>{window.allData=records;window.samlers=[...new Set(records.map(d=>d.samler).filter(Boolean))];initJourney()}).catch(()=>{const caption=document.getElementById('journey-caption');caption.textContent='Journey data could not be loaded.';caption.classList.add('show')});
   </script>
 </BaseLayout>
