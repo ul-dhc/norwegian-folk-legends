@@ -1,0 +1,16 @@
+{
+  "name": "norwegian-folk-legends",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "data:generate": "python3 scripts/csv_to_json.py"
+  },
+  "dependencies": {
+    "astro": "^7.2.1",
+    "lucide": "^1.31.0"
+  }
+}

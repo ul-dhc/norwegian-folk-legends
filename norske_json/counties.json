@@ -1,0 +1,173 @@
+[
+  {
+    "id": "county-akershus",
+    "name": "Akershus",
+    "legendCount": 19,
+    "coordinates": {
+      "latitude": 59.9,
+      "longitude": 11.0
+    }
+  },
+  {
+    "id": "county-aust-agder",
+    "name": "Aust-Agder",
+    "legendCount": 42,
+    "coordinates": {
+      "latitude": 58.6,
+      "longitude": 8.0
+    }
+  },
+  {
+    "id": "county-buskerud",
+    "name": "Buskerud",
+    "legendCount": 72,
+    "coordinates": {
+      "latitude": 60.3,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "county-finnmark",
+    "name": "Finnmark",
+    "legendCount": 16,
+    "coordinates": {
+      "latitude": 70.0,
+      "longitude": 25.0
+    }
+  },
+  {
+    "id": "county-hedmark",
+    "name": "Hedmark",
+    "legendCount": 130,
+    "coordinates": {
+      "latitude": 61.0,
+      "longitude": 11.5
+    }
+  },
+  {
+    "id": "county-hordaland",
+    "name": "Hordaland",
+    "legendCount": 96,
+    "coordinates": {
+      "latitude": 60.4,
+      "longitude": 6.3
+    }
+  },
+  {
+    "id": "county-m-re-og-romsdal",
+    "name": "Møre og Romsdal",
+    "legendCount": 102,
+    "coordinates": {
+      "latitude": 62.7,
+      "longitude": 7.5
+    }
+  },
+  {
+    "id": "county-nord-tr-ndelag",
+    "name": "Nord-Trøndelag",
+    "legendCount": 34,
+    "coordinates": {
+      "latitude": 64.5,
+      "longitude": 11.5
+    }
+  },
+  {
+    "id": "county-nordland",
+    "name": "Nordland",
+    "legendCount": 175,
+    "coordinates": {
+      "latitude": 67.5,
+      "longitude": 15.0
+    }
+  },
+  {
+    "id": "county-oppland",
+    "name": "Oppland",
+    "legendCount": 191,
+    "coordinates": {
+      "latitude": 61.5,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "county-oslo",
+    "name": "Oslo",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.91,
+      "longitude": 10.75
+    }
+  },
+  {
+    "id": "county-rogaland",
+    "name": "Rogaland",
+    "legendCount": 75,
+    "coordinates": {
+      "latitude": 59.1,
+      "longitude": 6.3
+    }
+  },
+  {
+    "id": "county-sogn-og-fjordane",
+    "name": "Sogn og Fjordane",
+    "legendCount": 121,
+    "coordinates": {
+      "latitude": 61.5,
+      "longitude": 6.5
+    }
+  },
+  {
+    "id": "county-s-r-tr-ndelag",
+    "name": "Sør-Trøndelag",
+    "legendCount": 34,
+    "coordinates": {
+      "latitude": 63.0,
+      "longitude": 10.5
+    }
+  },
+  {
+    "id": "county-telemark",
+    "name": "Telemark",
+    "legendCount": 200,
+    "coordinates": {
+      "latitude": 59.5,
+      "longitude": 8.5
+    }
+  },
+  {
+    "id": "county-troms",
+    "name": "Troms",
+    "legendCount": 12,
+    "coordinates": {
+      "latitude": 69.5,
+      "longitude": 19.5
+    }
+  },
+  {
+    "id": "county-vest-agder",
+    "name": "Vest-Agder",
+    "legendCount": 107,
+    "coordinates": {
+      "latitude": 58.2,
+      "longitude": 7.0
+    }
+  },
+  {
+    "id": "county-vestfold",
+    "name": "Vestfold",
+    "legendCount": 18,
+    "coordinates": {
+      "latitude": 59.3,
+      "longitude": 10.3
+    }
+  },
+  {
+    "id": "county-stfold",
+    "name": "Østfold",
+    "legendCount": 32,
+    "coordinates": {
+      "latitude": 59.35,
+      "longitude": 11.2
+    }
+  }
+]

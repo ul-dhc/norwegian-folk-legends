@@ -1,0 +1,1762 @@
+[
+  {
+    "id": "informant-a-nordal",
+    "name": "A. Nordal",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-aasmund-aaknes",
+    "name": "Aasmund Aaknes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-aasmund-nordgarden",
+    "name": "Aasmund Nordgarden",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-abigel-nilsdotter-stokkeland",
+    "name": "Abigel Nilsdotter Stokkeland",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-abigel-stokkeland-f-1844",
+    "name": "Abigel Stokkeland, f. 1844",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-abraham-ivarson-ub-stad",
+    "name": "Abraham Ivarson Ubåstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-adrianna-korgen",
+    "name": "Adrianna Korgen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-agnes-dyste",
+    "name": "Agnes Dyste",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-agnet-stomlein",
+    "name": "Agnet Stomlein",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-albert-nilskog",
+    "name": "Albert Nilskog",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-alette-jakobsen",
+    "name": "Alette Jakobsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-alette-jakobsen-eiken",
+    "name": "Alette Jakobsen Eiken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-amalie-tobiassen",
+    "name": "Amalie Tobiassen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anders-olsen-grefsrud",
+    "name": "Anders Olsen Grefsrud",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anders-rognkleiva",
+    "name": "Anders Rognkleiva",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-andrea-o-sandnes",
+    "name": "Andrea O. Sandnes",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-andreas-r-ste",
+    "name": "Andreas Røste",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-andres-olson-grefsrud-f-1864",
+    "name": "Andres Olson Grefsrud, f. 1864",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-andres-yo",
+    "name": "Andres Øyo",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-andria-m-solbrekken-f-1852-d-1945",
+    "name": "Andria M. Solbrekken, f. 1852, d. 1945",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-andrine-kl-gstad",
+    "name": "Andrine Klægstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anfin-berge",
+    "name": "Anfin Berge",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anna-arnsen",
+    "name": "Anna Arnsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anna-bakken",
+    "name": "Anna Bakken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anna-olsdotter-mikkelsen",
+    "name": "Anna Olsdotter Mikkelsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anna-olsen-v-g",
+    "name": "Anna Olsen Våg",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-andersdotter-folkestad",
+    "name": "Anne Andersdotter Folkestad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-askeland",
+    "name": "Anne Askeland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-bratterud",
+    "name": "Anne Bratterud",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-i-espelibr-ta-f-1845-d-1939",
+    "name": "Anne i Espelibrøta f. 1845, d. 1939",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-anne-i-espelibr-ta-f-1845",
+    "name": "Anne i Espelibrøta, f. 1845",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-k-eikre-1830-1906",
+    "name": "Anne K. Eikre, 1830-1906",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-mule",
+    "name": "Anne Mule",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anne-torsteinsdotter-hermundstad",
+    "name": "Anne Torsteinsdotter Hermundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anton-d-rrvikja",
+    "name": "Anton Dørrvikja",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anton-sivertsa",
+    "name": "Anton Sivertsa",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-anton-toft",
+    "name": "Anton Toft",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-arne-haugen-d-e",
+    "name": "Arne Haugen d. e.",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-arne-haugen-d-e-2",
+    "name": "Arne Haugen d.e.",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-arne-revling",
+    "name": "Arne Revling",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-aslaug-askedalen",
+    "name": "Aslaug Askedalen",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-assar-raaksvaag",
+    "name": "Assar Raaksvaag",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-august-holm",
+    "name": "August Holm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-b-rusdal",
+    "name": "B. Rusdal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-barbro-h-skjefte-f-1858-d-1941",
+    "name": "Barbro H. Skjefte, f. 1858, d. 1941",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-bendik-sveigdalen",
+    "name": "Bendik Sveigdalen",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-bendik-sveigedalen",
+    "name": "Bendik Sveigedalen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-berit-andersdotter-ur-n",
+    "name": "Berit Andersdotter Ur'n",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-berit-andersdotter-ur-n-2",
+    "name": "Berit Andersdotter Urn",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-berit-jakopsdotter-ydgarden-f-1856-d-1946",
+    "name": "Berit Jakopsdotter Øydgarden, f. 1856, d. 1946",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-bernt-gitlestad",
+    "name": "Bernt Gitlestad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-bernt-livgard",
+    "name": "Bernt Livgard",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-bina-fl-nes",
+    "name": "Bina Flønes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-birger-thoresen",
+    "name": "Birger Thoresen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-bottolv-larss-n-hemre",
+    "name": "Bottolv Larssøn Hemre",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-brita-ekse",
+    "name": "Brita Ekse",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-brita-odland",
+    "name": "Brita Odland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-constanse-hansen",
+    "name": "Constanse Hansen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-constanse-hansen-69-r",
+    "name": "Constanse Hansen, 69 år",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-david-davidsen",
+    "name": "David Davidsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-didrik-a-ferkingstad",
+    "name": "Didrik A. Ferkingstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-dina-h-gbostad",
+    "name": "Dina Hægbostad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-dortea-ravatn",
+    "name": "Dortea Ravatn",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-edvard-kummernes",
+    "name": "Edvard Kummernes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-edvin-figenschau",
+    "name": "Edvin Figenschau",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-eilert-olsen",
+    "name": "Eilert Olsen",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-eivind-aamland",
+    "name": "Eivind Aamland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-elen-jonsen",
+    "name": "Elen Jonsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-elen-strompdal",
+    "name": "Elen Strompdal",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-elias-dyrland",
+    "name": "Elias Dyrland",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-eljas-hand",
+    "name": "Eljas Handå",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-elling-furuhaaugo",
+    "name": "Elling Furuhaaugo",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-elling-urkegjorde",
+    "name": "Elling Urkegjorde",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-emil-fredheim",
+    "name": "Emil Fredheim",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-emil-johanson-djupedal",
+    "name": "Emil Johanson Djupedal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-emil-saura",
+    "name": "Emil Saura",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-endre-jonass-n-vindheim",
+    "name": "Endre Jonassøn Vindheim",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-engebret-hegge",
+    "name": "Engebret Hegge",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-engebret-hilmisplasse",
+    "name": "Engebret Hilmisplasse",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-engebret-hilmisplasse-ca-70-r",
+    "name": "Engebret Hilmisplasse, ca 70 år",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-erik-dokka",
+    "name": "Erik Dokka",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-erik-homo",
+    "name": "Erik Homo",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-fredrik-a-fosse",
+    "name": "Fredrik A. Fosse",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-fridtjof-vreb",
+    "name": "Fridtjof Øvrebø",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gabriel-oftebro",
+    "name": "Gabriel Oftebro",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gjartrud-eltun-f-1870-d-1933",
+    "name": "Gjartrud Eltun, f. 1870, d. 1933",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gjartrud-olsdotter-eltun",
+    "name": "Gjartrud Olsdotter Eltun",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-gjartrud-olsdotter-eltun-f-1870",
+    "name": "Gjartrud Olsdotter Eltun, f. 1870",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-grunde-knutsson-austegarden",
+    "name": "Grunde Knutsson Austegarden",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gudmund-aukland",
+    "name": "Gudmund Aukland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gullik-fagerholt",
+    "name": "Gullik Fagerholt",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gullik-sandvik",
+    "name": "Gullik Sandvik",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-gunhild-kyrkjebakken",
+    "name": "Gunhild Kyrkjebakken",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-gunhild-kyrkjebakken-f-1863-d-1947",
+    "name": "Gunhild Kyrkjebakken, f. 1863, d. 1947",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunhild-vaardal",
+    "name": "Gunhild Vaardal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunleik-firingen",
+    "name": "Gunleik Firingen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunnaar-vestrus",
+    "name": "Gunnaar Vestrus",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunnar-godlid",
+    "name": "Gunnar Godlid",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunnar-o-r-ysland",
+    "name": "Gunnar O. Røysland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunne-fjetland",
+    "name": "Gunne Fjetland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunni-torhus",
+    "name": "Gunni Torhus",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-gunnild-r-bakk",
+    "name": "Gunnild Røbakk",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-gunvor-suigard",
+    "name": "Gunvor Suigard",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-guri-finnset",
+    "name": "Guri Finnset",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-guri-finnset-83-r",
+    "name": "Guri Finnset, 83 år",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-guri-gr-v",
+    "name": "Guri Grøv",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-guri-n-snortheim",
+    "name": "Guri N. Snortheim",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-guri-rob-le",
+    "name": "Guri Robøle",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-guri-snortheimsbakko",
+    "name": "Guri Snortheimsbakko",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-guttorm-br-kke",
+    "name": "Guttorm Brække",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-h-sund",
+    "name": "H. Sund",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halfrid-husje",
+    "name": "Halfrid Husje",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-hallvard-pederson-almskaar",
+    "name": "Hallvard Pederson Almskaar",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halvor-dalen",
+    "name": "Halvor Dalen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halvor-gugarden",
+    "name": "Halvor Gugarden",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halvor-lie",
+    "name": "Halvor Lie",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halvor-skogen",
+    "name": "Halvor Skogen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-halvor-sveen",
+    "name": "Halvor Sveen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-hans-eidnes",
+    "name": "Hans Eidnes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-hans-f-farstad",
+    "name": "Hans F. Farstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-hans-hagen",
+    "name": "Hans Hagen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-hans-myrer",
+    "name": "Hans Myrer",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-hartvik-laukholm",
+    "name": "Hartvik Laukholm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-henrik-f-r",
+    "name": "Henrik Før",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-henrik-f-r-d-1935",
+    "name": "Henrik Før, d. 1935",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-h-vard-knutson-hermundstad-f-1858-d-1942",
+    "name": "Håvard Knutson Hermundstad, f. 1858, d. 1942",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-h-ge-kastedalen",
+    "name": "Hæge Kastedalen",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ingebj-rg-a-hermundstad",
+    "name": "Ingebjørg A. Hermundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingebj-rg-a-kasa",
+    "name": "Ingebjørg A. Kasa",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingebj-rg-a-kasa-f-1877",
+    "name": "Ingebjørg A. Kasa, f, 1877",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingebj-rg-larsdotter-ydgarden-f-1847-d-1936",
+    "name": "Ingebjørg Larsdotter Øydgarden, f. 1847, d. 1936",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingebj-rg-torgersdotter-bakke-f-1859-d-1944",
+    "name": "Ingebjørg Torgersdotter Bakke, f. 1859, d. 1944",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingeborg-selland-ekkjevik",
+    "name": "Ingeborg Selland Ekkjevik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingjeber-lona",
+    "name": "Ingjeber Lona",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ingjiber-n-set",
+    "name": "Ingjiber Næset",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ingvald-og-berta-gullbr",
+    "name": "Ingvald og Berta Gullbrå",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-isak-utro",
+    "name": "Isak Utro",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ivar-nilson",
+    "name": "Ivar Nilson",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ivar-olson-ram",
+    "name": "Ivar Olson Åram",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ivar-v-slejorde",
+    "name": "Ivar Væslejorde",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-iver-b-lyngstad",
+    "name": "Iver B. Lyngstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-iver-e-lyngstad",
+    "name": "Iver E. Lyngstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-iver-offernes",
+    "name": "Iver Offernes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-iver-p-bollid",
+    "name": "Iver P. Bollid",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-jac-myklebust",
+    "name": "Jac. Myklebust",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jakob-austb",
+    "name": "Jakob Austbø",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jens-bekk",
+    "name": "Jens Bekk",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jensine-ferset",
+    "name": "Jensine Ferset",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jo-persa-t-rrem",
+    "name": "Jo Persa Tørrem",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johan-beck",
+    "name": "Johan Beck",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johan-jonson-h-llen-f-1842",
+    "name": "Johan Jonson Høllen, f. 1842",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johan-o-bruvold",
+    "name": "Johan O. Bruvold",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johanna-b-rrfjord",
+    "name": "Johanna Bårrfjord",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johanna-y-s",
+    "name": "Johanna Øyås",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johannes-bjordal",
+    "name": "Johannes Bjordal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johannes-lavoll",
+    "name": "Johannes Lavoll",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-johannes-myrmo",
+    "name": "Johannes Myrmo",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jon-myre",
+    "name": "Jon Myre",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-jon-o-h-jj-m",
+    "name": "Jon O. Hæjjæm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jon-p-romundstad",
+    "name": "Jon P. Romundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jon-st-le",
+    "name": "Jon Støle",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-jon-utbr-t-en",
+    "name": "Jon Utbråtåen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-joronn-bj-nnemyr",
+    "name": "Joronn Bjønnemyr",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-josefine-person",
+    "name": "Josefine Person",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-josefine-stormli",
+    "name": "Josefine Stormli",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-jul-knutsrud",
+    "name": "Jul. Knutsrud",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-julius-nygard",
+    "name": "Julius Nygard",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-j-rgen-l-horvei",
+    "name": "Jørgen L. Horvei",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-j-rgen-moe",
+    "name": "Jørgen Moe",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-karen-dimna",
+    "name": "Karen Dimna",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-karen-rognrygmo",
+    "name": "Karen Rognrygmo",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kari-kvaale",
+    "name": "Kari Kvaale",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kari-olsdotter-grihamar-f-1874-d-1934",
+    "name": "Kari Olsdotter Grihamar, f. 1874, d. 1934",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kari-svelle-12-r",
+    "name": "Kari Svelle 12 år",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-karina-fe-y",
+    "name": "Karina Feøy",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-karl-enoksen",
+    "name": "Karl Enoksen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-karl-ver-s",
+    "name": "Karl Øverås",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kasper-syre",
+    "name": "Kasper Syre",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-knud-svedal",
+    "name": "Knud Svedal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-knut-knutsen-brenna",
+    "name": "Knut Knutsen Brenna",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-knut-p-aakre",
+    "name": "Knut P. Aakre",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristi-hammersland",
+    "name": "Kristi Hammersland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristi-nordigard",
+    "name": "Kristi Nordigard",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristian-engen",
+    "name": "Kristian Engen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristian-sigbj-rnsen-barstad",
+    "name": "Kristian Sigbjørnsen Barstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristine-ryebakken",
+    "name": "Kristine Ryebakken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-kristine-skog",
+    "name": "Kristine Skog",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-l-eskeland",
+    "name": "L. Eskeland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-hjelle",
+    "name": "Lars Hjelle",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-ingebrigtsaa-torvik",
+    "name": "Lars Ingebrigtsaa Torvik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-j-nesheim",
+    "name": "Lars J. Nesheim",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-johan-liknes",
+    "name": "Lars Johan Liknes",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-krogh",
+    "name": "Lars Krogh",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-kvarekvaal",
+    "name": "Lars Kvarekvaal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-ulvik",
+    "name": "Lars Ulvik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-uppstad",
+    "name": "Lars Uppstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lars-utg-rd",
+    "name": "Lars Utgård",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-laurants-tveitsund",
+    "name": "Laurants Tveitsund",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-lisabet-e-kamsvaag",
+    "name": "Lisabet E. Kamsvaag",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-liv-bratterud",
+    "name": "Liv Bratterud",
+    "legendCount": 4
+  },
+  {
+    "id": "informant-lorense-buran-70-r",
+    "name": "Lorense Buran, 70 år",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-lyth-hole",
+    "name": "Lyth Hole",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-m-salomonsen",
+    "name": "M. Salomonsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-m-skogekker",
+    "name": "M. Skogekker",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-mads-hukkelbeg",
+    "name": "Mads Hukkelbeg",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-magnus-tvedten",
+    "name": "Magnus Tvedten",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-margarete-ellingb",
+    "name": "Margarete Ellingbø",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-maria-ougland",
+    "name": "Maria Ougland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-marit-e-hermundstad",
+    "name": "Marit E. Hermundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-marit-hulluvolla",
+    "name": "Marit Hulluvolla",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-marit-ljosland",
+    "name": "Marit Ljosland",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-marit-p-skaret",
+    "name": "Marit P. Skaret",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-marit-pedersdotter-skaret",
+    "name": "Marit Pedersdotter Skaret",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-marit-p-lelien-f-1871",
+    "name": "Marit Pålelien, f. 1871",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-markus-m-hustad",
+    "name": "Markus M. Hustad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-martin-blybakken",
+    "name": "Martin Blybakken",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-martin-lundstein",
+    "name": "Martin Lundstein",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-mathea-einbu",
+    "name": "Mathea Einbu",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-matias-jarstad",
+    "name": "Matias Jarstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-mattias-h-gjermundstad",
+    "name": "Mattias H. Gjermundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-melchior-yttri",
+    "name": "Melchior Yttri",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-mikkel-eilivsen",
+    "name": "Mikkel Eilivsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-mikkjel-i-brattebr-ta",
+    "name": "Mikkjel i Brattebrøta",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-milla-iversdatter-holstad",
+    "name": "Milla Iversdatter Holstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-mons-hanssen-rong",
+    "name": "Mons Hanssen Rong",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-n-k-storaker",
+    "name": "N. K. Storaker",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-n-o-fanebust",
+    "name": "N. O. Fanebust",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-n-rosseland",
+    "name": "N. Rosseland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-gr-nvik",
+    "name": "Nils Grønvik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-mager-y",
+    "name": "Nils Magerøy",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-o-vindingstad",
+    "name": "Nils O. Vindingstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-olson-vindingstad-f-1863-d-1941",
+    "name": "Nils Olson Vindingstad, f. 1863, d. 1941",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-tveiten",
+    "name": "Nils Tveiten",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-ursin",
+    "name": "Nils Ursin",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nils-vindingstad-f-1863",
+    "name": "Nils Vindingstad, f. 1863",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-o-bj-rnstad",
+    "name": "O. Bjørnstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-o-g-haugene",
+    "name": "O. G. Haugene",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-o-hagevold",
+    "name": "O. Hagevold",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-o-l-ken",
+    "name": "O. Løken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-a-sausjord",
+    "name": "Ola A. Sausjord",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-b-settem",
+    "name": "Ola B. Settem",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-b-sett-m",
+    "name": "Ola B. Settæm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-berntsen-kil",
+    "name": "Ola Berntsen Kil",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-bersvensaa-sett-m",
+    "name": "Ola Bersvensaa Settæm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-dalshagen",
+    "name": "Ola Dalshagen",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-ola-enberget",
+    "name": "Ola Enberget",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-k-lykken",
+    "name": "Ola K. Lykken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-k-rudi",
+    "name": "Ola K. Rudi",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-karlsrud",
+    "name": "Ola Karlsrud",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-mikjelson-tomtene",
+    "name": "Ola Mikjelson Tomtene",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-n-gausaaker",
+    "name": "Ola N. Gausaaker",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-nygaard",
+    "name": "Ola Nygaard",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-o-hola",
+    "name": "Ola O. Hola",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-olsen-skogen",
+    "name": "Ola Olsen Skogen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-olsen-skogen-f-1847",
+    "name": "Ola Olsen Skogen, f. 1847",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-olsson-sveji",
+    "name": "Ola Olsson Sveji",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-olsson-sveji-f-1847-d-1937",
+    "name": "Ola Olsson Sveji f. 1847, d. 1937",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ola-olsson-sveji-f-1847",
+    "name": "Ola Olsson Sveji, f. 1847",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-olsson-sveji-f-1847-d-1937-2",
+    "name": "Ola Olsson Sveji, f. 1847, d. 1937",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-rob-le",
+    "name": "Ola Robøle",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-rommundstad",
+    "name": "Ola Rommundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-romundstad",
+    "name": "Ola Romundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ola-s-rensen-l-set",
+    "name": "Ola Sørensen Løset",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olaus-islandsmoen-f-1873",
+    "name": "Olaus Islandsmoen, f. 1873",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olaus-islandsmoen-f-1873-d-1959",
+    "name": "Olaus Islandsmoen, f. 1873, d. 1959",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-olav-bj-nnflatinn",
+    "name": "Olav Bjønnflatinn",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olav-eivindsson-austad",
+    "name": "Olav Eivindsson Austad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olav-grasberg",
+    "name": "Olav Grasberg",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olav-hauge-m-land",
+    "name": "Olav Hauge-Mæland",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-olav-s-haugen",
+    "name": "Olav S. Haugen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olav-vinje",
+    "name": "Olav Vinje",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-andersen-storvik",
+    "name": "Ole Andersen Storvik",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ole-anfinsen-aarebergsbotnen",
+    "name": "Ole Anfinsen Aarebergsbotnen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-arnfinns-n-refsdal",
+    "name": "Ole Arnfinnsøn Refsdal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-flaaten",
+    "name": "Ole Flaaten",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ole-islandsmoen-f-1855",
+    "name": "Ole Islandsmoen f. 1855",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-k-hjelvik",
+    "name": "Ole K. Hjelvik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-olsen-vangestad",
+    "name": "Ole Olsen Vangestad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-solstein",
+    "name": "Ole Solstein",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-standal",
+    "name": "Ole Standal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-t-tlandsmoen",
+    "name": "Ole Tøtlandsmoen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ole-veset",
+    "name": "Ole Veset",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-olea-nesteby",
+    "name": "Olea Nesteby",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-p-sundvor",
+    "name": "P. Sundvor",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-p-th-aasmundstad",
+    "name": "P. Th. Aasmundstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-paal-lio",
+    "name": "Paal Lio",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-paul-voxeng",
+    "name": "Paul Voxeng",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-pauline-fsteng",
+    "name": "Pauline Øfsteng",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-paulus-andresen-inntian",
+    "name": "Paulus Andresen Inntian",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-peder-pedersen",
+    "name": "Peder Pedersen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-per-olsson-yr-ker-f-1858-d-1945",
+    "name": "Per Olsson Øyråker, f. 1858, d. 1945",
+    "legendCount": 4
+  },
+  {
+    "id": "informant-per-olsson-yr-ker-f-1858-d-1945-2",
+    "name": "Per Olsson Øyråker, f.1858, d.1945",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-per-skaar",
+    "name": "Per Skaar",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-per-yraaker",
+    "name": "Per Øyraaker",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-per-yraaker-73-r",
+    "name": "Per Øyraaker, 73 år",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-petra-gjers-yen",
+    "name": "Petra Gjersøyen",
+    "legendCount": 4
+  },
+  {
+    "id": "informant-petter-amundsen-lilleb",
+    "name": "Petter Amundsen Lillebø",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-petter-h-llsta",
+    "name": "Petter Hællsta",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-petter-olsen",
+    "name": "Petter Olsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-petter-rand",
+    "name": "Petter Rand",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragna-i-haugen-f-1840-d-1937",
+    "name": "Ragna I. Haugen, f. 1840, d, 1937",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragna-i-haugen-f-1840-d-1937-2",
+    "name": "Ragna I. Haugen, f. 1840, d. 1937",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragndi-bj-rnsdotter-r-llong-f-1863",
+    "name": "Ragndi Bjørnsdotter Røllong f. 1863",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragndi-bj-rnsdotter-r-llong-f-1863-d-1935",
+    "name": "Ragndi Bjørnsdotter Røllong f. 1863, d. 1935",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragndi-knutsdotter-kyrkjevoll-f-1862",
+    "name": "Ragndi Knutsdotter Kyrkjevoll, f. 1862",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragndi-moen",
+    "name": "Ragndi Moen",
+    "legendCount": 6
+  },
+  {
+    "id": "informant-ragndi-rudlang",
+    "name": "Ragndi Rudlang",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ragnhild-bergo",
+    "name": "Ragnhild Bergo",
+    "legendCount": 3
+  },
+  {
+    "id": "informant-reinert-guren",
+    "name": "Reinert Guren",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-s-l-oftedahl",
+    "name": "S. L. Oftedahl",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-salve-aarli",
+    "name": "Salve Aarli",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-salve-l-land",
+    "name": "Salve Løland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-sara-amundsen-h-yland-f-1841",
+    "name": "Sara Amundsen Høyland, f. 1841",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-sigrid-endresdotter-syltevik-f-1852-d-1951",
+    "name": "Sigrid Endresdotter Syltevik, f. 1852, d. 1951",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-sigurd-heia",
+    "name": "Sigurd Heia",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-sivert-o-torvik",
+    "name": "Sivert O. Torvik",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-stina-dal-y",
+    "name": "Stina Daløy",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-stine-johannesdotter-leivdal",
+    "name": "Stine Johannesdotter Leivdal",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-svein-i-ur-n",
+    "name": "Svein i Ur'n",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-svein-i-ur-n-2",
+    "name": "Svein i Urn",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-svein-skjeld-s",
+    "name": "Svein Skjeldås",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-sven-dale",
+    "name": "Sven Dale",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-synneva-gjerde",
+    "name": "Synneva Gjerde",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-syver-andreassen",
+    "name": "Syver Andreassen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-syver-opheimsbakken",
+    "name": "Syver Opheimsbakken",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-s-vi-vr-li",
+    "name": "Såvi Vråli",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-s-vi-vr-lid",
+    "name": "Såvi Vrålid",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-s-ren-eikeskogen",
+    "name": "Søren Eikeskogen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-s-ren-hellum",
+    "name": "Søren Hellum",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-telleiv-rolvsson-harstveit",
+    "name": "Telleiv Rolvsson Harstveit",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-th-bratteteig",
+    "name": "Th. Bratteteig",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-theodor-linner",
+    "name": "Theodor Linner",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-tomas-b-en-f-1883",
+    "name": "Tomas Bøen, f. 1883",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-tom-s-aarmoti",
+    "name": "Tomås Aarmoti",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-tor-havsk-llt",
+    "name": "Tor Havskøllt",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torger-larsson-kollstad",
+    "name": "Torger Larsson Kollstad",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torger-larsson-kollstad-f-1863",
+    "name": "Torger Larsson Kollstad, f. 1863",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torger-larsson-kolstad-f-1863",
+    "name": "Torger Larsson Kolstad, f. 1863",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torjus-r-yneland",
+    "name": "Torjus Røyneland",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torjus-sivertsen",
+    "name": "Torjus Sivertsen",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torleiv-kampen-f-1857",
+    "name": "Torleiv Kampen, f. 1857",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-torleiv-rye-f-1866",
+    "name": "Torleiv Rye, f. 1866",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-t-m-s-rmoti",
+    "name": "Tåmås Årmoti",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-t-ll-v-krossvegjen",
+    "name": "Tølløv Krossvegjen",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-ukjent",
+    "name": "Ukjent",
+    "legendCount": 1020
+  },
+  {
+    "id": "informant-ulrik-ulrikson",
+    "name": "Ulrik Ulrikson",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-valborg-anna-bl-feta",
+    "name": "Valborg-Anna Bløfeta",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-vilhelm-berge",
+    "name": "Vilhelm Berge",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-ynb-r-kristensdotter-sett-m",
+    "name": "Ynbær Kristensdotter Settæm",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-nen-valand",
+    "name": "Ånen Valand",
+    "legendCount": 1
+  },
+  {
+    "id": "informant-li-harstveit",
+    "name": "Øli Harstveit",
+    "legendCount": 2
+  },
+  {
+    "id": "informant-sten-s-reb",
+    "name": "Østen Sørebø",
+    "legendCount": 1
+  }
+]

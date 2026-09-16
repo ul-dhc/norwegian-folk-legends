@@ -1,0 +1,3443 @@
+[
+  {
+    "id": "place-akershus",
+    "name": "Akershus",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.91203,
+      "longitude": 10.75579
+    }
+  },
+  {
+    "id": "place-alstahaug",
+    "name": "Alstahaug",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 65.8929,
+      "longitude": 12.39775
+    }
+  },
+  {
+    "id": "place-alta",
+    "name": "Alta",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 70.02283,
+      "longitude": 22.02969
+    }
+  },
+  {
+    "id": "place-alvdal",
+    "name": "Alvdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.116,
+      "longitude": 10.628
+    }
+  },
+  {
+    "id": "place-alversund",
+    "name": "Alversund",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.578,
+      "longitude": 5.138
+    }
+  },
+  {
+    "id": "place-and-ya",
+    "name": "Andøya",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 69.12,
+      "longitude": 15.9
+    }
+  },
+  {
+    "id": "place-arendalskanten",
+    "name": "Arendalskanten",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.46,
+      "longitude": 8.77
+    }
+  },
+  {
+    "id": "place-aukra",
+    "name": "Aukra",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.82,
+      "longitude": 6.9
+    }
+  },
+  {
+    "id": "place-aure",
+    "name": "Aure",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.2679,
+      "longitude": 8.52913
+    }
+  },
+  {
+    "id": "place-aurland",
+    "name": "Aurland",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 60.9,
+      "longitude": 7.18
+    }
+  },
+  {
+    "id": "place-aust-agder",
+    "name": "Aust-Agder",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 58.46444,
+      "longitude": 8.76701
+    }
+  },
+  {
+    "id": "place-balestrand",
+    "name": "Balestrand",
+    "legendCount": 23,
+    "coordinates": {
+      "latitude": 61.2,
+      "longitude": 6.52
+    }
+  },
+  {
+    "id": "place-beiarn",
+    "name": "Beiarn",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 67.06,
+      "longitude": 14.85
+    }
+  },
+  {
+    "id": "place-bindal",
+    "name": "Bindal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 65.12,
+      "longitude": 13.07
+    }
+  },
+  {
+    "id": "place-bjelland",
+    "name": "Bjelland",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 58.38407,
+      "longitude": 7.52767
+    }
+  },
+  {
+    "id": "place-bodin",
+    "name": "Bodin",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 67.28,
+      "longitude": 14.38
+    }
+  },
+  {
+    "id": "place-botne",
+    "name": "Botne",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.43,
+      "longitude": 10.22
+    }
+  },
+  {
+    "id": "place-brandbu",
+    "name": "Brandbu",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.43,
+      "longitude": 10.5
+    }
+  },
+  {
+    "id": "place-breim",
+    "name": "Breim",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.73,
+      "longitude": 6.42
+    }
+  },
+  {
+    "id": "place-brunlanes",
+    "name": "Brunlanes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.05,
+      "longitude": 10.0
+    }
+  },
+  {
+    "id": "place-bruvik",
+    "name": "Bruvik",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 60.47856,
+      "longitude": 5.68619
+    }
+  },
+  {
+    "id": "place-bruvik-ev-hosanger",
+    "name": "Bruvik (ev. Hosanger)",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.47856,
+      "longitude": 5.68619
+    }
+  },
+  {
+    "id": "place-bruvik-eller-hosanger",
+    "name": "Bruvik eller Hosanger",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.47856,
+      "longitude": 5.68619
+    }
+  },
+  {
+    "id": "place-bruvik-eller-hosanger-2",
+    "name": "Bruvik(eller Hosanger)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.47856,
+      "longitude": 5.68619
+    }
+  },
+  {
+    "id": "place-bruvik-hosanger",
+    "name": "Bruvik-Hosanger",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.53,
+      "longitude": 5.65
+    }
+  },
+  {
+    "id": "place-br-nn-y",
+    "name": "Brønnøy",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 65.47,
+      "longitude": 12.21
+    }
+  },
+  {
+    "id": "place-buksnes",
+    "name": "Buksnes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.90525,
+      "longitude": 15.61566
+    }
+  },
+  {
+    "id": "place-buskerud",
+    "name": "Buskerud",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.89568,
+      "longitude": 9.90758
+    }
+  },
+  {
+    "id": "place-bygland",
+    "name": "Bygland",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.8285,
+      "longitude": 7.79616
+    }
+  },
+  {
+    "id": "place-byneset",
+    "name": "Byneset",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.35,
+      "longitude": 10.22
+    }
+  },
+  {
+    "id": "place-b-rum",
+    "name": "Bærum",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.9,
+      "longitude": 10.52
+    }
+  },
+  {
+    "id": "place-b",
+    "name": "Bø",
+    "legendCount": 32,
+    "coordinates": {
+      "latitude": 59.42,
+      "longitude": 9.07
+    }
+  },
+  {
+    "id": "place-b-herad",
+    "name": "Bøherad",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 59.38,
+      "longitude": 9.1
+    }
+  },
+  {
+    "id": "place-dalane",
+    "name": "Dalane",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.5,
+      "longitude": 6.1
+    }
+  },
+  {
+    "id": "place-dalen",
+    "name": "Dalen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.45,
+      "longitude": 8.0
+    }
+  },
+  {
+    "id": "place-dovre",
+    "name": "Dovre",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 62.0,
+      "longitude": 9.22
+    }
+  },
+  {
+    "id": "place-drangedal",
+    "name": "Drangedal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.08,
+      "longitude": 9.05
+    }
+  },
+  {
+    "id": "place-drevja",
+    "name": "Drevja",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 65.73,
+      "longitude": 13.45
+    }
+  },
+  {
+    "id": "place-ed-y",
+    "name": "Edøy",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.07,
+      "longitude": 7.82
+    }
+  },
+  {
+    "id": "place-egersund",
+    "name": "Egersund",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.45,
+      "longitude": 6.0
+    }
+  },
+  {
+    "id": "place-egersundkanten",
+    "name": "Egersundkanten",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.45,
+      "longitude": 6.0
+    }
+  },
+  {
+    "id": "place-egge",
+    "name": "Egge",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.03,
+      "longitude": 11.47
+    }
+  },
+  {
+    "id": "place-eid",
+    "name": "Eid",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.88,
+      "longitude": 5.93
+    }
+  },
+  {
+    "id": "place-eide",
+    "name": "Eide",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.92,
+      "longitude": 7.48
+    }
+  },
+  {
+    "id": "place-eidfjord",
+    "name": "Eidfjord",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 60.47,
+      "longitude": 7.07
+    }
+  },
+  {
+    "id": "place-eidsberg",
+    "name": "Eidsberg",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 59.53,
+      "longitude": 11.37
+    }
+  },
+  {
+    "id": "place-eidskog",
+    "name": "Eidskog",
+    "legendCount": 28,
+    "coordinates": {
+      "latitude": 60.02813,
+      "longitude": 12.06528
+    }
+  },
+  {
+    "id": "place-eiken",
+    "name": "Eiken",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 58.47714,
+      "longitude": 7.21387
+    }
+  },
+  {
+    "id": "place-eikesdalen",
+    "name": "Eikesdalen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.47,
+      "longitude": 8.17
+    }
+  },
+  {
+    "id": "place-eksingedalen",
+    "name": "Eksingedalen",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 60.83,
+      "longitude": 5.97
+    }
+  },
+  {
+    "id": "place-elverum",
+    "name": "Elverum",
+    "legendCount": 23,
+    "coordinates": {
+      "latitude": 60.88,
+      "longitude": 11.57
+    }
+  },
+  {
+    "id": "place-eresfjord",
+    "name": "Eresfjord",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.66102,
+      "longitude": 8.11089
+    }
+  },
+  {
+    "id": "place-etne",
+    "name": "Etne",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 59.67,
+      "longitude": 5.93
+    }
+  },
+  {
+    "id": "place-etnedal",
+    "name": "Etnedal",
+    "legendCount": 12,
+    "coordinates": {
+      "latitude": 61.0,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "place-etnedalen",
+    "name": "Etnedalen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.0,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "place-evanger",
+    "name": "Evanger",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.72,
+      "longitude": 6.07
+    }
+  },
+  {
+    "id": "place-evje",
+    "name": "Evje",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.6,
+      "longitude": 7.8
+    }
+  },
+  {
+    "id": "place-fauske",
+    "name": "Fauske",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 67.26,
+      "longitude": 15.4
+    }
+  },
+  {
+    "id": "place-finnmark",
+    "name": "Finnmark",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 70.2,
+      "longitude": 25.5
+    }
+  },
+  {
+    "id": "place-finnskogen",
+    "name": "Finnskogen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.60349,
+      "longitude": 12.37164
+    }
+  },
+  {
+    "id": "place-finsland",
+    "name": "Finsland",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.22,
+      "longitude": 7.55
+    }
+  },
+  {
+    "id": "place-fjaler",
+    "name": "Fjaler",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 61.36383,
+      "longitude": 5.39812
+    }
+  },
+  {
+    "id": "place-fjotland",
+    "name": "Fjotland",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 58.52643,
+      "longitude": 6.99208
+    }
+  },
+  {
+    "id": "place-flakstad",
+    "name": "Flakstad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.1,
+      "longitude": 13.42
+    }
+  },
+  {
+    "id": "place-flatdal",
+    "name": "Flatdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.87701,
+      "longitude": 8.7182
+    }
+  },
+  {
+    "id": "place-fl-bygd",
+    "name": "Flåbygd",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.18,
+      "longitude": 9.25
+    }
+  },
+  {
+    "id": "place-foldereid",
+    "name": "Foldereid",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.96277,
+      "longitude": 12.17774
+    }
+  },
+  {
+    "id": "place-folldal",
+    "name": "Folldal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.13,
+      "longitude": 9.98
+    }
+  },
+  {
+    "id": "place-forsand",
+    "name": "Forsand (?)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.9033,
+      "longitude": 6.10478
+    }
+  },
+  {
+    "id": "place-forsand-2",
+    "name": "Forsand(?)",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.9033,
+      "longitude": 6.10478
+    }
+  },
+  {
+    "id": "place-fosen",
+    "name": "Fosen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 63.875,
+      "longitude": 10.33333
+    }
+  },
+  {
+    "id": "place-frei",
+    "name": "Frei",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 62.98,
+      "longitude": 7.72
+    }
+  },
+  {
+    "id": "place-fron",
+    "name": "Fron",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.55,
+      "longitude": 9.75
+    }
+  },
+  {
+    "id": "place-fr-na",
+    "name": "Fræna",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.85427,
+      "longitude": 7.17395
+    }
+  },
+  {
+    "id": "place-fr-ya-froan",
+    "name": "Frøya (Froan)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.72,
+      "longitude": 8.68
+    }
+  },
+  {
+    "id": "place-fusa",
+    "name": "Fusa",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.15,
+      "longitude": 5.73
+    }
+  },
+  {
+    "id": "place-fyresdal",
+    "name": "Fyresdal",
+    "legendCount": 10,
+    "coordinates": {
+      "latitude": 59.18,
+      "longitude": 8.08
+    }
+  },
+  {
+    "id": "place-f-berg",
+    "name": "Fåberg",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 61.16836,
+      "longitude": 10.40479
+    }
+  },
+  {
+    "id": "place-gaular",
+    "name": "Gaular",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.37,
+      "longitude": 5.92
+    }
+  },
+  {
+    "id": "place-gauldalen",
+    "name": "Gauldalen",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 62.96809,
+      "longitude": 10.96748
+    }
+  },
+  {
+    "id": "place-gausdal",
+    "name": "Gausdal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.22,
+      "longitude": 10.17
+    }
+  },
+  {
+    "id": "place-gildesk-l",
+    "name": "Gildeskål",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 67.02,
+      "longitude": 14.02
+    }
+  },
+  {
+    "id": "place-gjemnes",
+    "name": "Gjemnes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.89379,
+      "longitude": 7.67714
+    }
+  },
+  {
+    "id": "place-gjerstad",
+    "name": "Gjerstad",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.88,
+      "longitude": 9.02
+    }
+  },
+  {
+    "id": "place-gj-vdal",
+    "name": "Gjøvdal",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 58.87448,
+      "longitude": 8.27741
+    }
+  },
+  {
+    "id": "place-glemmen",
+    "name": "Glemmen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.22,
+      "longitude": 10.92
+    }
+  },
+  {
+    "id": "place-gloppen",
+    "name": "Gloppen",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 61.75,
+      "longitude": 6.15
+    }
+  },
+  {
+    "id": "place-gol",
+    "name": "Gol",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.7,
+      "longitude": 8.95
+    }
+  },
+  {
+    "id": "place-gran",
+    "name": "Gran",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.38,
+      "longitude": 10.57
+    }
+  },
+  {
+    "id": "place-granvin",
+    "name": "Granvin",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 60.55,
+      "longitude": 6.72
+    }
+  },
+  {
+    "id": "place-greipstad",
+    "name": "Greipstad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.17,
+      "longitude": 7.82
+    }
+  },
+  {
+    "id": "place-grindheim",
+    "name": "Grindheim",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.4394,
+      "longitude": 7.41685
+    }
+  },
+  {
+    "id": "place-grong",
+    "name": "Grong",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.47,
+      "longitude": 13.7
+    }
+  },
+  {
+    "id": "place-gudbrandsdalen",
+    "name": "Gudbrandsdalen",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 61.5,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "place-gulen",
+    "name": "Gulen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.97,
+      "longitude": 5.57
+    }
+  },
+  {
+    "id": "place-hadeland",
+    "name": "Hadeland",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 60.38,
+      "longitude": 10.5
+    }
+  },
+  {
+    "id": "place-hadsel",
+    "name": "Hadsel",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.54094,
+      "longitude": 14.99631
+    }
+  },
+  {
+    "id": "place-hallingdal",
+    "name": "Hallingdal",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 60.7,
+      "longitude": 9.0
+    }
+  },
+  {
+    "id": "place-halsa",
+    "name": "Halsa",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 63.08,
+      "longitude": 8.28
+    }
+  },
+  {
+    "id": "place-haltfjilldal",
+    "name": "Haltfjilldal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 65.6,
+      "longitude": 14.0
+    }
+  },
+  {
+    "id": "place-hardanger",
+    "name": "Hardanger",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.20379,
+      "longitude": 6.41067
+    }
+  },
+  {
+    "id": "place-harkmark",
+    "name": "Harkmark",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.08,
+      "longitude": 7.63
+    }
+  },
+  {
+    "id": "place-hattfjelldal",
+    "name": "Hattfjelldal",
+    "legendCount": 10,
+    "coordinates": {
+      "latitude": 65.6,
+      "longitude": 14.0
+    }
+  },
+  {
+    "id": "place-heddal",
+    "name": "Heddal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.58081,
+      "longitude": 9.10888
+    }
+  },
+  {
+    "id": "place-hedmark",
+    "name": "Hedmark",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.0,
+      "longitude": 11.5
+    }
+  },
+  {
+    "id": "place-helgeland",
+    "name": "Helgeland",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 65.92584,
+      "longitude": 13.40033
+    }
+  },
+  {
+    "id": "place-hemne",
+    "name": "Hemne",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 63.28219,
+      "longitude": 9.08512
+    }
+  },
+  {
+    "id": "place-hemsedal",
+    "name": "Hemsedal",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 60.7936,
+      "longitude": 8.69202
+    }
+  },
+  {
+    "id": "place-herdla",
+    "name": "Herdla",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.57,
+      "longitude": 4.97
+    }
+  },
+  {
+    "id": "place-hermansverk",
+    "name": "Hermansverk",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.18,
+      "longitude": 6.85
+    }
+  },
+  {
+    "id": "place-hitra",
+    "name": "Hitra",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.60156,
+      "longitude": 8.97416
+    }
+  },
+  {
+    "id": "place-hjartdal",
+    "name": "Hjartdal",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 59.6,
+      "longitude": 8.65
+    }
+  },
+  {
+    "id": "place-hjartdal-sauland",
+    "name": "Hjartdal (Sauland)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.6,
+      "longitude": 8.65
+    }
+  },
+  {
+    "id": "place-hjelmeland",
+    "name": "Hjelmeland",
+    "legendCount": 11,
+    "coordinates": {
+      "latitude": 59.23,
+      "longitude": 6.17
+    }
+  },
+  {
+    "id": "place-hj-rundfjord",
+    "name": "Hjørundfjord",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.17,
+      "longitude": 6.48
+    }
+  },
+  {
+    "id": "place-hof",
+    "name": "Hof",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 59.52,
+      "longitude": 10.17
+    }
+  },
+  {
+    "id": "place-hol",
+    "name": "Hol",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 60.6,
+      "longitude": 8.35
+    }
+  },
+  {
+    "id": "place-holt",
+    "name": "Holt",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.82,
+      "longitude": 8.95
+    }
+  },
+  {
+    "id": "place-holum",
+    "name": "Holum",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.12,
+      "longitude": 7.62
+    }
+  },
+  {
+    "id": "place-hordaland",
+    "name": "Hordaland",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.4,
+      "longitude": 6.3
+    }
+  },
+  {
+    "id": "place-hosanger",
+    "name": "Hosanger",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.57516,
+      "longitude": 5.47764
+    }
+  },
+  {
+    "id": "place-hustad",
+    "name": "Hustad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.92,
+      "longitude": 7.17
+    }
+  },
+  {
+    "id": "place-hvaler",
+    "name": "Hvaler",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 59.07,
+      "longitude": 10.98
+    }
+  },
+  {
+    "id": "place-hyen",
+    "name": "Hyen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.73568,
+      "longitude": 5.9148
+    }
+  },
+  {
+    "id": "place-h",
+    "name": "Hå",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.57,
+      "longitude": 5.65
+    }
+  },
+  {
+    "id": "place-h-landsdal",
+    "name": "Hålandsdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.12,
+      "longitude": 5.88
+    }
+  },
+  {
+    "id": "place-h-geland",
+    "name": "Hægeland",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.35,
+      "longitude": 7.72
+    }
+  },
+  {
+    "id": "place-h-gsfjord",
+    "name": "Høgsfjord",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.99384,
+      "longitude": 5.81625
+    }
+  },
+  {
+    "id": "place-h-land",
+    "name": "Høland",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.75,
+      "longitude": 11.62
+    }
+  },
+  {
+    "id": "place-idd",
+    "name": "Idd",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.13,
+      "longitude": 11.52
+    }
+  },
+  {
+    "id": "place-ingen-n-rmere-stedsangivelse",
+    "name": "ingen nærmere stedsangivelse",
+    "legendCount": 3,
+    "coordinates": null
+  },
+  {
+    "id": "place-innherad",
+    "name": "Innherad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.93255,
+      "longitude": 11.85584
+    }
+  },
+  {
+    "id": "place-innvik",
+    "name": "Innvik",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.85226,
+      "longitude": 6.61508
+    }
+  },
+  {
+    "id": "place-jostedal",
+    "name": "Jostedal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 61.68,
+      "longitude": 7.28
+    }
+  },
+  {
+    "id": "place-jostedalen",
+    "name": "Jostedalen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.68,
+      "longitude": 7.28
+    }
+  },
+  {
+    "id": "place-j-ren",
+    "name": "Jæren",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.75,
+      "longitude": 5.65
+    }
+  },
+  {
+    "id": "place-j-lster",
+    "name": "Jølster",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.52415,
+      "longitude": 6.28852
+    }
+  },
+  {
+    "id": "place-kabelv-g",
+    "name": "Kabelvåg",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.22,
+      "longitude": 14.48
+    }
+  },
+  {
+    "id": "place-karls-y",
+    "name": "Karlsøy",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 70.07,
+      "longitude": 20.27
+    }
+  },
+  {
+    "id": "place-karm-y",
+    "name": "Karmøy",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 59.28,
+      "longitude": 5.28
+    }
+  },
+  {
+    "id": "place-kinsarvik",
+    "name": "Kinsarvik",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 60.38,
+      "longitude": 6.72
+    }
+  },
+  {
+    "id": "place-kolbu",
+    "name": "Kolbu",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.55,
+      "longitude": 10.73
+    }
+  },
+  {
+    "id": "place-konsmo",
+    "name": "Konsmo",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.33,
+      "longitude": 7.4
+    }
+  },
+  {
+    "id": "place-korgen",
+    "name": "Korgen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 66.07,
+      "longitude": 13.83
+    }
+  },
+  {
+    "id": "place-krager-sk-t-y",
+    "name": "Kragerø (Skåtøy)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.87,
+      "longitude": 9.42
+    }
+  },
+  {
+    "id": "place-kr-dsherad",
+    "name": "Krødsherad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.18,
+      "longitude": 9.72
+    }
+  },
+  {
+    "id": "place-kvam",
+    "name": "Kvam",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.38,
+      "longitude": 6.63
+    }
+  },
+  {
+    "id": "place-kvikne",
+    "name": "Kvikne",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.58231,
+      "longitude": 10.28713
+    }
+  },
+  {
+    "id": "place-kvinesdal",
+    "name": "Kvinesdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.3,
+      "longitude": 6.95
+    }
+  },
+  {
+    "id": "place-kviteseid",
+    "name": "Kviteseid",
+    "legendCount": 15,
+    "coordinates": {
+      "latitude": 59.4,
+      "longitude": 8.48
+    }
+  },
+  {
+    "id": "place-kv-nangen",
+    "name": "Kvænangen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 69.74616,
+      "longitude": 22.0883
+    }
+  },
+  {
+    "id": "place-land",
+    "name": "Land",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.75889,
+      "longitude": 10.26667
+    }
+  },
+  {
+    "id": "place-land-torpa",
+    "name": "Land (Torpa)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.75889,
+      "longitude": 10.26667
+    }
+  },
+  {
+    "id": "place-lardal",
+    "name": "Lardal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.25,
+      "longitude": 10.05
+    }
+  },
+  {
+    "id": "place-leiranger",
+    "name": "Leiranger",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 67.97,
+      "longitude": 15.38
+    }
+  },
+  {
+    "id": "place-leirfjord",
+    "name": "Leirfjord",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 66.07,
+      "longitude": 12.97
+    }
+  },
+  {
+    "id": "place-leksvik",
+    "name": "Leksvik",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 63.67,
+      "longitude": 10.62
+    }
+  },
+  {
+    "id": "place-lesja",
+    "name": "Lesja",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 62.12,
+      "longitude": 8.87
+    }
+  },
+  {
+    "id": "place-lindesneskanten",
+    "name": "Lindesneskanten",
+    "legendCount": 14,
+    "coordinates": {
+      "latitude": 57.98,
+      "longitude": 7.05
+    }
+  },
+  {
+    "id": "place-lindesneskanten-s-r-audnedal",
+    "name": "Lindesneskanten (Sør-Audnedal)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 57.98,
+      "longitude": 7.05
+    }
+  },
+  {
+    "id": "place-lind-s",
+    "name": "Lindås",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.63,
+      "longitude": 5.18
+    }
+  },
+  {
+    "id": "place-lista",
+    "name": "Lista",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.1,
+      "longitude": 6.55
+    }
+  },
+  {
+    "id": "place-lofoten",
+    "name": "Lofoten",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 68.04534,
+      "longitude": 13.38235
+    }
+  },
+  {
+    "id": "place-lofoten-2",
+    "name": "Lofoten (?)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.04534,
+      "longitude": 13.38235
+    }
+  },
+  {
+    "id": "place-lom",
+    "name": "Lom",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.83,
+      "longitude": 8.57
+    }
+  },
+  {
+    "id": "place-luster",
+    "name": "Luster",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.40312,
+      "longitude": 7.29793
+    }
+  },
+  {
+    "id": "place-luster-urnes",
+    "name": "Luster (Urnes)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.40312,
+      "longitude": 7.29793
+    }
+  },
+  {
+    "id": "place-lyngdal",
+    "name": "Lyngdal",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 58.13,
+      "longitude": 7.07
+    }
+  },
+  {
+    "id": "place-lyngen",
+    "name": "Lyngen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 69.77968,
+      "longitude": 20.38268
+    }
+  },
+  {
+    "id": "place-l-rdal",
+    "name": "Lårdal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.42412,
+      "longitude": 8.18619
+    }
+  },
+  {
+    "id": "place-l-rdal-h-ydalsmo",
+    "name": "Lårdal (Høydalsmo)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.42412,
+      "longitude": 8.18619
+    }
+  },
+  {
+    "id": "place-l-rdal-2",
+    "name": "Lærdal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.1,
+      "longitude": 7.48
+    }
+  },
+  {
+    "id": "place-mandal",
+    "name": "Mandal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.03,
+      "longitude": 7.45
+    }
+  },
+  {
+    "id": "place-mandalskanten",
+    "name": "Mandalskanten",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.03,
+      "longitude": 7.45
+    }
+  },
+  {
+    "id": "place-meldal",
+    "name": "Meldal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.98,
+      "longitude": 9.77
+    }
+  },
+  {
+    "id": "place-mo",
+    "name": "Mo",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.53,
+      "longitude": 8.72
+    }
+  },
+  {
+    "id": "place-mo-skafs",
+    "name": "Mo (Skafså)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.53,
+      "longitude": 8.72
+    }
+  },
+  {
+    "id": "place-modum",
+    "name": "Modum",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 59.95,
+      "longitude": 9.9
+    }
+  },
+  {
+    "id": "place-molde",
+    "name": "Molde",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.73,
+      "longitude": 7.18
+    }
+  },
+  {
+    "id": "place-mykland",
+    "name": "Mykland",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.63195,
+      "longitude": 8.28795
+    }
+  },
+  {
+    "id": "place-m-lselv",
+    "name": "Målselv",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 69.19268,
+      "longitude": 18.43179
+    }
+  },
+  {
+    "id": "place-namdalen",
+    "name": "Namdalen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.47,
+      "longitude": 12.5
+    }
+  },
+  {
+    "id": "place-nannestad",
+    "name": "Nannestad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.23,
+      "longitude": 11.0
+    }
+  },
+  {
+    "id": "place-nedstrand",
+    "name": "Nedstrand",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.3,
+      "longitude": 5.87
+    }
+  },
+  {
+    "id": "place-nes",
+    "name": "Nes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.56348,
+      "longitude": 9.98776
+    }
+  },
+  {
+    "id": "place-nesna",
+    "name": "Nesna",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 66.2,
+      "longitude": 13.02
+    }
+  },
+  {
+    "id": "place-nesset",
+    "name": "Nesset",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.62,
+      "longitude": 8.18
+    }
+  },
+  {
+    "id": "place-nesset-eidsv-g",
+    "name": "Nesset (Eidsvåg)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.62,
+      "longitude": 8.18
+    }
+  },
+  {
+    "id": "place-nesset-eikesdalen",
+    "name": "Nesset (Eikesdalen)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.47,
+      "longitude": 8.17
+    }
+  },
+  {
+    "id": "place-nesset-eikesdalen-2",
+    "name": "Nesset(Eikesdalen)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.47,
+      "longitude": 8.17
+    }
+  },
+  {
+    "id": "place-nesset-eikesdalen-3",
+    "name": "Nesset, Eikesdalen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.47,
+      "longitude": 8.17
+    }
+  },
+  {
+    "id": "place-nissedal",
+    "name": "Nissedal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.08,
+      "longitude": 8.5
+    }
+  },
+  {
+    "id": "place-nord-aukra-ya-gossa",
+    "name": "Nord-Aukra (øya Gossa)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.87,
+      "longitude": 6.88
+    }
+  },
+  {
+    "id": "place-nord-aukra-gossa",
+    "name": "Nord-Aukra, Gossa",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.87,
+      "longitude": 6.88
+    }
+  },
+  {
+    "id": "place-nord-aurdal",
+    "name": "Nord-Aurdal",
+    "legendCount": 28,
+    "coordinates": {
+      "latitude": 60.93,
+      "longitude": 9.35
+    }
+  },
+  {
+    "id": "place-nord-etnedal",
+    "name": "Nord-Etnedal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.1,
+      "longitude": 9.65
+    }
+  },
+  {
+    "id": "place-nord-fron",
+    "name": "Nord-Fron",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.55,
+      "longitude": 9.75
+    }
+  },
+  {
+    "id": "place-nord-fr-ya",
+    "name": "Nord-Frøya",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 63.77,
+      "longitude": 8.6
+    }
+  },
+  {
+    "id": "place-nord-norge",
+    "name": "Nord-Norge",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.48493,
+      "longitude": 16.22979
+    }
+  },
+  {
+    "id": "place-nord-odal",
+    "name": "Nord-Odal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.37,
+      "longitude": 11.67
+    }
+  },
+  {
+    "id": "place-nord-rana",
+    "name": "Nord-Rana (?)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 66.3,
+      "longitude": 14.15
+    }
+  },
+  {
+    "id": "place-nord-tr-ndelag",
+    "name": "Nord-Trøndelag",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.5,
+      "longitude": 11.5
+    }
+  },
+  {
+    "id": "place-nordfjord",
+    "name": "Nordfjord",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.9,
+      "longitude": 6.1
+    }
+  },
+  {
+    "id": "place-nordfold",
+    "name": "Nordfold",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 67.76228,
+      "longitude": 15.23021
+    }
+  },
+  {
+    "id": "place-nordhordland",
+    "name": "Nordhordland",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.77222,
+      "longitude": 5.66631
+    }
+  },
+  {
+    "id": "place-nordland",
+    "name": "Nordland",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 67.69334,
+      "longitude": 12.70323
+    }
+  },
+  {
+    "id": "place-nordm-re",
+    "name": "Nordmøre",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.91875,
+      "longitude": 7.9259
+    }
+  },
+  {
+    "id": "place-nords-mna",
+    "name": "Nordsømna",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 65.3,
+      "longitude": 12.78
+    }
+  },
+  {
+    "id": "place-numedal",
+    "name": "Numedal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 60.11116,
+      "longitude": 9.0635
+    }
+  },
+  {
+    "id": "place-odda",
+    "name": "Odda",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 60.07,
+      "longitude": 6.55
+    }
+  },
+  {
+    "id": "place-oddernes",
+    "name": "Oddernes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.15,
+      "longitude": 7.97
+    }
+  },
+  {
+    "id": "place-ofoten",
+    "name": "Ofoten",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 68.33799,
+      "longitude": 15.9548
+    }
+  },
+  {
+    "id": "place-ogndal",
+    "name": "Ogndal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.02005,
+      "longitude": 11.63129
+    }
+  },
+  {
+    "id": "place-oppdal",
+    "name": "Oppdal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 62.59,
+      "longitude": 9.68
+    }
+  },
+  {
+    "id": "place-oppland",
+    "name": "Oppland",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.5,
+      "longitude": 9.5
+    }
+  },
+  {
+    "id": "place-randesund",
+    "name": "Randesund",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.13,
+      "longitude": 8.05
+    }
+  },
+  {
+    "id": "place-rauland",
+    "name": "Rauland",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.71616,
+      "longitude": 7.99996
+    }
+  },
+  {
+    "id": "place-rendal",
+    "name": "Rendal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.87,
+      "longitude": 11.47
+    }
+  },
+  {
+    "id": "place-rendalen",
+    "name": "Rendalen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.87,
+      "longitude": 11.47
+    }
+  },
+  {
+    "id": "place-rennes-y",
+    "name": "Rennesøy",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.12,
+      "longitude": 5.73
+    }
+  },
+  {
+    "id": "place-rindal",
+    "name": "Rindal",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 63.05554,
+      "longitude": 9.21156
+    }
+  },
+  {
+    "id": "place-rindal-2",
+    "name": "Rindal?",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.05554,
+      "longitude": 9.21156
+    }
+  },
+  {
+    "id": "place-ringebu",
+    "name": "Ringebu",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 61.52,
+      "longitude": 10.07
+    }
+  },
+  {
+    "id": "place-ringerike",
+    "name": "Ringerike",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 60.29168,
+      "longitude": 10.04879
+    }
+  },
+  {
+    "id": "place-ringsaker",
+    "name": "Ringsaker",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.9,
+      "longitude": 10.75
+    }
+  },
+  {
+    "id": "place-rissa",
+    "name": "Rissa",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.6,
+      "longitude": 9.97
+    }
+  },
+  {
+    "id": "place-rogaland",
+    "name": "Rogaland",
+    "legendCount": 16,
+    "coordinates": {
+      "latitude": 58.96473,
+      "longitude": 5.73119
+    }
+  },
+  {
+    "id": "place-rollag",
+    "name": "Rollag",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.97,
+      "longitude": 9.38
+    }
+  },
+  {
+    "id": "place-romsdal",
+    "name": "Romsdal",
+    "legendCount": 17,
+    "coordinates": {
+      "latitude": 62.5,
+      "longitude": 7.8
+    }
+  },
+  {
+    "id": "place-romsdal-gjelsten",
+    "name": "Romsdal (Gjelsten)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.5,
+      "longitude": 7.8
+    }
+  },
+  {
+    "id": "place-romsdal-mi-y",
+    "name": "Romsdal (Miøy)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.5,
+      "longitude": 7.8
+    }
+  },
+  {
+    "id": "place-romsdal-otr-y",
+    "name": "Romsdal (Otrøy)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.87,
+      "longitude": 6.97
+    }
+  },
+  {
+    "id": "place-romsdal-vistdal",
+    "name": "Romsdal, Vistdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.52,
+      "longitude": 8.02
+    }
+  },
+  {
+    "id": "place-rovde",
+    "name": "Rovde",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.17856,
+      "longitude": 5.7508
+    }
+  },
+  {
+    "id": "place-r-de",
+    "name": "Råde",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.35,
+      "longitude": 10.85
+    }
+  },
+  {
+    "id": "place-r-lingen",
+    "name": "Rælingen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.83,
+      "longitude": 11.1
+    }
+  },
+  {
+    "id": "place-r-denes",
+    "name": "Rødenes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.6,
+      "longitude": 11.68
+    }
+  },
+  {
+    "id": "place-r-ldal",
+    "name": "Røldal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 59.82,
+      "longitude": 6.83
+    }
+  },
+  {
+    "id": "place-r-mskog",
+    "name": "Rømskog",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 59.72,
+      "longitude": 11.83
+    }
+  },
+  {
+    "id": "place-r-yken",
+    "name": "Røyken",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.73,
+      "longitude": 10.4
+    }
+  },
+  {
+    "id": "place-salangen",
+    "name": "Salangen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 68.89703,
+      "longitude": 17.5766
+    }
+  },
+  {
+    "id": "place-saltdal",
+    "name": "Saltdal",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 67.08,
+      "longitude": 15.4
+    }
+  },
+  {
+    "id": "place-salten",
+    "name": "Salten",
+    "legendCount": 26,
+    "coordinates": {
+      "latitude": 67.39748,
+      "longitude": 15.09699
+    }
+  },
+  {
+    "id": "place-samnanger",
+    "name": "Samnanger",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.37745,
+      "longitude": 5.7622
+    }
+  },
+  {
+    "id": "place-sand",
+    "name": "Sand",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.48,
+      "longitude": 6.27
+    }
+  },
+  {
+    "id": "place-sandar",
+    "name": "Sandar",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.27,
+      "longitude": 10.28
+    }
+  },
+  {
+    "id": "place-sande",
+    "name": "Sande",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.6,
+      "longitude": 10.22
+    }
+  },
+  {
+    "id": "place-sandsv-r",
+    "name": "Sandsvær",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.67,
+      "longitude": 9.78
+    }
+  },
+  {
+    "id": "place-sauda",
+    "name": "Sauda",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.65,
+      "longitude": 6.35
+    }
+  },
+  {
+    "id": "place-sauherad",
+    "name": "Sauherad",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.42,
+      "longitude": 9.17
+    }
+  },
+  {
+    "id": "place-sel",
+    "name": "Sel",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.84113,
+      "longitude": 9.40888
+    }
+  },
+  {
+    "id": "place-selje",
+    "name": "Selje",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.05,
+      "longitude": 5.35
+    }
+  },
+  {
+    "id": "place-seljord",
+    "name": "Seljord",
+    "legendCount": 24,
+    "coordinates": {
+      "latitude": 59.48,
+      "longitude": 8.65
+    }
+  },
+  {
+    "id": "place-sem-slagen",
+    "name": "Sem (Slagen)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.3,
+      "longitude": 10.4
+    }
+  },
+  {
+    "id": "place-setesdal",
+    "name": "Setesdal",
+    "legendCount": 7,
+    "coordinates": {
+      "latitude": 58.41858,
+      "longitude": 7.35507
+    }
+  },
+  {
+    "id": "place-sigdal",
+    "name": "Sigdal",
+    "legendCount": 16,
+    "coordinates": {
+      "latitude": 60.05,
+      "longitude": 9.6
+    }
+  },
+  {
+    "id": "place-sirdal",
+    "name": "Sirdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.48978,
+      "longitude": 6.56706
+    }
+  },
+  {
+    "id": "place-skiptvet",
+    "name": "Skiptvet",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.47,
+      "longitude": 11.18
+    }
+  },
+  {
+    "id": "place-skjerstad",
+    "name": "Skjerstad",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 67.22,
+      "longitude": 15.02
+    }
+  },
+  {
+    "id": "place-skudenes",
+    "name": "Skudenes",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 59.15,
+      "longitude": 5.25
+    }
+  },
+  {
+    "id": "place-sk-nevik",
+    "name": "Skånevik",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.73,
+      "longitude": 6.0
+    }
+  },
+  {
+    "id": "place-sk-re",
+    "name": "Skåre",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.4,
+      "longitude": 5.28
+    }
+  },
+  {
+    "id": "place-snertingdal",
+    "name": "Snertingdal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.88016,
+      "longitude": 10.39563
+    }
+  },
+  {
+    "id": "place-sogn-og-fjordane",
+    "name": "Sogn og Fjordane",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.18263,
+      "longitude": 6.85258
+    }
+  },
+  {
+    "id": "place-sogndal",
+    "name": "Sogndal",
+    "legendCount": 14,
+    "coordinates": {
+      "latitude": 61.23,
+      "longitude": 7.1
+    }
+  },
+  {
+    "id": "place-sokndal",
+    "name": "Sokndal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 58.34256,
+      "longitude": 6.29427
+    }
+  },
+  {
+    "id": "place-soknedal",
+    "name": "Soknedal",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 62.93,
+      "longitude": 10.22
+    }
+  },
+  {
+    "id": "place-sol-r",
+    "name": "Solør",
+    "legendCount": 21,
+    "coordinates": {
+      "latitude": 60.39213,
+      "longitude": 11.90052
+    }
+  },
+  {
+    "id": "place-spangereid",
+    "name": "Spangereid",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.04543,
+      "longitude": 7.14407
+    }
+  },
+  {
+    "id": "place-stadsbygd",
+    "name": "Stadsbygd",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.51045,
+      "longitude": 10.01687
+    }
+  },
+  {
+    "id": "place-steigen",
+    "name": "Steigen",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 67.93613,
+      "longitude": 14.97949
+    }
+  },
+  {
+    "id": "place-stj-rdal",
+    "name": "Stjørdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.47,
+      "longitude": 10.93
+    }
+  },
+  {
+    "id": "place-stoksund",
+    "name": "Stoksund",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.03861,
+      "longitude": 10.0617
+    }
+  },
+  {
+    "id": "place-stor-elvdal",
+    "name": "Stor-Elvdal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.53,
+      "longitude": 11.07
+    }
+  },
+  {
+    "id": "place-stord",
+    "name": "Stord",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.78,
+      "longitude": 5.5
+    }
+  },
+  {
+    "id": "place-strand",
+    "name": "Strand",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.07,
+      "longitude": 6.03
+    }
+  },
+  {
+    "id": "place-stranda",
+    "name": "Stranda",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.32,
+      "longitude": 6.97
+    }
+  },
+  {
+    "id": "place-strandvik",
+    "name": "Strandvik",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.12,
+      "longitude": 5.62
+    }
+  },
+  {
+    "id": "place-straumsnes",
+    "name": "Straumsnes",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 62.77,
+      "longitude": 7.65
+    }
+  },
+  {
+    "id": "place-stryn",
+    "name": "Stryn",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.9,
+      "longitude": 6.72
+    }
+  },
+  {
+    "id": "place-suldal",
+    "name": "Suldal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.48573,
+      "longitude": 6.25224
+    }
+  },
+  {
+    "id": "place-sunnfjord",
+    "name": "Sunnfjord",
+    "legendCount": 14,
+    "coordinates": {
+      "latitude": 61.49302,
+      "longitude": 5.54041
+    }
+  },
+  {
+    "id": "place-sunnhordland",
+    "name": "Sunnhordland",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.6305,
+      "longitude": 5.95809
+    }
+  },
+  {
+    "id": "place-sunnm-re",
+    "name": "Sunnmøre",
+    "legendCount": 11,
+    "coordinates": {
+      "latitude": 62.3,
+      "longitude": 6.5
+    }
+  },
+  {
+    "id": "place-sunnylven",
+    "name": "Sunnylven",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.08544,
+      "longitude": 6.86602
+    }
+  },
+  {
+    "id": "place-surnadal",
+    "name": "Surnadal",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 62.97,
+      "longitude": 8.73
+    }
+  },
+  {
+    "id": "place-s-gne",
+    "name": "Søgne",
+    "legendCount": 10,
+    "coordinates": {
+      "latitude": 58.1,
+      "longitude": 7.8
+    }
+  },
+  {
+    "id": "place-s-mna",
+    "name": "Sømna",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 65.40499,
+      "longitude": 12.28783
+    }
+  },
+  {
+    "id": "place-s-ndeled",
+    "name": "Søndeled",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.76088,
+      "longitude": 9.07494
+    }
+  },
+  {
+    "id": "place-s-ndre-h-land",
+    "name": "Søndre Høland",
+    "legendCount": 11,
+    "coordinates": {
+      "latitude": 59.71741,
+      "longitude": 11.44874
+    }
+  },
+  {
+    "id": "place-s-ndre-land",
+    "name": "Søndre Land",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.6976,
+      "longitude": 10.35096
+    }
+  },
+  {
+    "id": "place-s-r-audnedal",
+    "name": "Sør-Audnedal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.1,
+      "longitude": 7.42
+    }
+  },
+  {
+    "id": "place-s-r-aurdal",
+    "name": "Sør-Aurdal",
+    "legendCount": 12,
+    "coordinates": {
+      "latitude": 60.78,
+      "longitude": 9.37
+    }
+  },
+  {
+    "id": "place-s-r-fron",
+    "name": "Sør-Fron",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.55,
+      "longitude": 9.87
+    }
+  },
+  {
+    "id": "place-s-r-fr-ya",
+    "name": "Sør-Frøya",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 63.68,
+      "longitude": 8.7
+    }
+  },
+  {
+    "id": "place-s-r-odal",
+    "name": "Sør-Odal",
+    "legendCount": 12,
+    "coordinates": {
+      "latitude": 60.27,
+      "longitude": 11.62
+    }
+  },
+  {
+    "id": "place-s-r-rana",
+    "name": "Sør-Rana",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 66.18,
+      "longitude": 14.23
+    }
+  },
+  {
+    "id": "place-s-r-tr-ndelag",
+    "name": "Sør-Trøndelag",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 63.0,
+      "longitude": 10.5
+    }
+  },
+  {
+    "id": "place-s-r-varanger",
+    "name": "Sør-Varanger",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 69.55799,
+      "longitude": 29.57023
+    }
+  },
+  {
+    "id": "place-s-rfjorden",
+    "name": "Sørfjorden",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.33,
+      "longitude": 6.75
+    }
+  },
+  {
+    "id": "place-s-rfold",
+    "name": "Sørfold",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 67.45743,
+      "longitude": 15.80111
+    }
+  },
+  {
+    "id": "place-telemark",
+    "name": "Telemark",
+    "legendCount": 75,
+    "coordinates": {
+      "latitude": 59.21609,
+      "longitude": 9.61115
+    }
+  },
+  {
+    "id": "place-time",
+    "name": "Time",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.73,
+      "longitude": 5.72
+    }
+  },
+  {
+    "id": "place-tj-lling",
+    "name": "Tjølling",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 59.05,
+      "longitude": 10.12
+    }
+  },
+  {
+    "id": "place-tj-me",
+    "name": "Tjøme",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.13,
+      "longitude": 10.42
+    }
+  },
+  {
+    "id": "place-tj-tta",
+    "name": "Tjøtta",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 65.83,
+      "longitude": 12.42
+    }
+  },
+  {
+    "id": "place-tolga",
+    "name": "Tolga",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.40899,
+      "longitude": 10.99877
+    }
+  },
+  {
+    "id": "place-torpa",
+    "name": "Torpa",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.99853,
+      "longitude": 10.02409
+    }
+  },
+  {
+    "id": "place-torvastad",
+    "name": "Torvastad",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 59.33,
+      "longitude": 5.28
+    }
+  },
+  {
+    "id": "place-toten",
+    "name": "Toten",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.65,
+      "longitude": 10.78
+    }
+  },
+  {
+    "id": "place-tovdal",
+    "name": "Tovdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.79658,
+      "longitude": 8.16733
+    }
+  },
+  {
+    "id": "place-tresfjord",
+    "name": "Tresfjord",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 62.52492,
+      "longitude": 7.12579
+    }
+  },
+  {
+    "id": "place-treungen",
+    "name": "Treungen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.02,
+      "longitude": 8.57
+    }
+  },
+  {
+    "id": "place-troms",
+    "name": "Troms",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 69.5,
+      "longitude": 19.5
+    }
+  },
+  {
+    "id": "place-troms-2",
+    "name": "Troms?",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 69.5,
+      "longitude": 19.5
+    }
+  },
+  {
+    "id": "place-trom-y",
+    "name": "Tromøy",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.45,
+      "longitude": 8.82
+    }
+  },
+  {
+    "id": "place-trysil",
+    "name": "Trysil",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 61.32,
+      "longitude": 12.28
+    }
+  },
+  {
+    "id": "place-tynset",
+    "name": "Tynset",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 62.28,
+      "longitude": 10.78
+    }
+  },
+  {
+    "id": "place-tysfjord",
+    "name": "Tysfjord",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 68.07,
+      "longitude": 16.45
+    }
+  },
+  {
+    "id": "place-ukjent",
+    "name": "Ukjent",
+    "legendCount": 8,
+    "coordinates": null
+  },
+  {
+    "id": "place-ullensvang",
+    "name": "Ullensvang",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 60.32,
+      "longitude": 6.65
+    }
+  },
+  {
+    "id": "place-ulstein",
+    "name": "Ulstein",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.35,
+      "longitude": 5.85
+    }
+  },
+  {
+    "id": "place-ulvik",
+    "name": "Ulvik",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.57,
+      "longitude": 6.9
+    }
+  },
+  {
+    "id": "place-urnes",
+    "name": "Urnes",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 61.43,
+      "longitude": 7.47
+    }
+  },
+  {
+    "id": "place-valdres",
+    "name": "Valdres",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 60.91504,
+      "longitude": 9.21809
+    }
+  },
+  {
+    "id": "place-valestrand",
+    "name": "Valestrand",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.67358,
+      "longitude": 5.46685
+    }
+  },
+  {
+    "id": "place-valle",
+    "name": "Valle",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 59.2,
+      "longitude": 7.52
+    }
+  },
+  {
+    "id": "place-vang",
+    "name": "Vang",
+    "legendCount": 29,
+    "coordinates": {
+      "latitude": 61.13,
+      "longitude": 8.55
+    }
+  },
+  {
+    "id": "place-vangsnes",
+    "name": "Vangsnes",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.17,
+      "longitude": 6.65
+    }
+  },
+  {
+    "id": "place-vardal",
+    "name": "Vardal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.8,
+      "longitude": 10.72
+    }
+  },
+  {
+    "id": "place-vats",
+    "name": "Vats",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.49148,
+      "longitude": 5.72868
+    }
+  },
+  {
+    "id": "place-vefsn",
+    "name": "Vefsn",
+    "legendCount": 14,
+    "coordinates": {
+      "latitude": 65.85,
+      "longitude": 13.18
+    }
+  },
+  {
+    "id": "place-vefsn-s-mna",
+    "name": "Vefsn, Sømna",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 65.6,
+      "longitude": 13.0
+    }
+  },
+  {
+    "id": "place-vega",
+    "name": "Vega",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 65.65,
+      "longitude": 11.92
+    }
+  },
+  {
+    "id": "place-veg-rshei",
+    "name": "Vegårshei",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 58.77,
+      "longitude": 8.82
+    }
+  },
+  {
+    "id": "place-veitastrond",
+    "name": "Veitastrond",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.50458,
+      "longitude": 6.98577
+    }
+  },
+  {
+    "id": "place-veitestrand",
+    "name": "Veitestrand",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.48,
+      "longitude": 7.13
+    }
+  },
+  {
+    "id": "place-velfjord",
+    "name": "Velfjord",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 65.38,
+      "longitude": 13.07
+    }
+  },
+  {
+    "id": "place-vennesla",
+    "name": "Vennesla",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.27,
+      "longitude": 7.98
+    }
+  },
+  {
+    "id": "place-verdal",
+    "name": "Verdal",
+    "legendCount": 16,
+    "coordinates": {
+      "latitude": 63.79,
+      "longitude": 11.48
+    }
+  },
+  {
+    "id": "place-vesna",
+    "name": "Vesna",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.72,
+      "longitude": 9.28
+    }
+  },
+  {
+    "id": "place-vest-agder",
+    "name": "Vest-Agder",
+    "legendCount": 19,
+    "coordinates": {
+      "latitude": 58.15124,
+      "longitude": 7.99467
+    }
+  },
+  {
+    "id": "place-vestby",
+    "name": "Vestby",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.62,
+      "longitude": 10.75
+    }
+  },
+  {
+    "id": "place-vestfold",
+    "name": "Vestfold",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 59.3,
+      "longitude": 10.3
+    }
+  },
+  {
+    "id": "place-vestnes",
+    "name": "Vestnes",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.63,
+      "longitude": 7.08
+    }
+  },
+  {
+    "id": "place-vestre-gausdal",
+    "name": "Vestre Gausdal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.18,
+      "longitude": 10.07
+    }
+  },
+  {
+    "id": "place-vestre-slidre",
+    "name": "Vestre Slidre",
+    "legendCount": 26,
+    "coordinates": {
+      "latitude": 61.03,
+      "longitude": 8.87
+    }
+  },
+  {
+    "id": "place-vevelstad",
+    "name": "Vevelstad",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 65.7,
+      "longitude": 12.42
+    }
+  },
+  {
+    "id": "place-vigmostad",
+    "name": "Vigmostad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.1992,
+      "longitude": 7.33628
+    }
+  },
+  {
+    "id": "place-vik",
+    "name": "Vik",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.07,
+      "longitude": 6.57
+    }
+  },
+  {
+    "id": "place-vikna",
+    "name": "Vikna",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 64.88,
+      "longitude": 11.05
+    }
+  },
+  {
+    "id": "place-vinje",
+    "name": "Vinje",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 59.62038,
+      "longitude": 7.83292
+    }
+  },
+  {
+    "id": "place-volda",
+    "name": "Volda",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.15,
+      "longitude": 6.07
+    }
+  },
+  {
+    "id": "place-voss",
+    "name": "Voss",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 60.63,
+      "longitude": 6.42
+    }
+  },
+  {
+    "id": "place-v-gan",
+    "name": "Vågan",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 68.22,
+      "longitude": 14.48
+    }
+  },
+  {
+    "id": "place-v-g",
+    "name": "Vågå",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 61.87,
+      "longitude": 9.12
+    }
+  },
+  {
+    "id": "place-v-le",
+    "name": "Våle",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.37,
+      "longitude": 10.22
+    }
+  },
+  {
+    "id": "place-v-ler",
+    "name": "Våler",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 59.48,
+      "longitude": 10.93
+    }
+  },
+  {
+    "id": "place-v-r-y",
+    "name": "Værøy",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 67.67,
+      "longitude": 12.67
+    }
+  },
+  {
+    "id": "place-ytre-rendal",
+    "name": "Ytre Rendal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.73,
+      "longitude": 11.65
+    }
+  },
+  {
+    "id": "place-ytter-y",
+    "name": "Ytterøy",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 63.81548,
+      "longitude": 11.22088
+    }
+  },
+  {
+    "id": "place-kra",
+    "name": "Åkra",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.28,
+      "longitude": 5.25
+    }
+  },
+  {
+    "id": "place-l",
+    "name": "Ål",
+    "legendCount": 8,
+    "coordinates": {
+      "latitude": 60.63,
+      "longitude": 8.57
+    }
+  },
+  {
+    "id": "place-lvundeid",
+    "name": "Ålvundeid",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 62.65,
+      "longitude": 8.32
+    }
+  },
+  {
+    "id": "place-mli",
+    "name": "Åmli",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.8,
+      "longitude": 8.45
+    }
+  },
+  {
+    "id": "place-mot",
+    "name": "Åmot",
+    "legendCount": 5,
+    "coordinates": {
+      "latitude": 60.58,
+      "longitude": 11.63
+    }
+  },
+  {
+    "id": "place-mot-osen",
+    "name": "Åmot (Osen)",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 60.58,
+      "longitude": 11.63
+    }
+  },
+  {
+    "id": "place-rdal",
+    "name": "Årdal",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 61.23,
+      "longitude": 7.72
+    }
+  },
+  {
+    "id": "place-seral",
+    "name": "Åseral",
+    "legendCount": 9,
+    "coordinates": {
+      "latitude": 58.5,
+      "longitude": 7.33
+    }
+  },
+  {
+    "id": "place-sskard",
+    "name": "Åsskard",
+    "legendCount": 4,
+    "coordinates": {
+      "latitude": 63.01793,
+      "longitude": 8.49649
+    }
+  },
+  {
+    "id": "place-ksendal",
+    "name": "Øksendal",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 62.73,
+      "longitude": 8.42
+    }
+  },
+  {
+    "id": "place-re",
+    "name": "Øre",
+    "legendCount": 3,
+    "coordinates": {
+      "latitude": 62.95,
+      "longitude": 7.12
+    }
+  },
+  {
+    "id": "place-rsta",
+    "name": "Ørsta",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 62.2,
+      "longitude": 6.13
+    }
+  },
+  {
+    "id": "place-sterdalen",
+    "name": "Østerdalen",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.5,
+      "longitude": 11.0
+    }
+  },
+  {
+    "id": "place-stfold",
+    "name": "Østfold",
+    "legendCount": 6,
+    "coordinates": {
+      "latitude": 59.27523,
+      "longitude": 11.10578
+    }
+  },
+  {
+    "id": "place-stmarka",
+    "name": "Østmarka",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.87,
+      "longitude": 10.97
+    }
+  },
+  {
+    "id": "place-stre-slidre",
+    "name": "Østre Slidre",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.07,
+      "longitude": 9.12
+    }
+  },
+  {
+    "id": "place-vre-eiker",
+    "name": "Øvre Eiker",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 59.77,
+      "longitude": 9.88
+    }
+  },
+  {
+    "id": "place-vreb",
+    "name": "Øvrebø",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.29147,
+      "longitude": 7.77846
+    }
+  },
+  {
+    "id": "place-yer",
+    "name": "Øyer",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 61.27,
+      "longitude": 10.42
+    }
+  },
+  {
+    "id": "place-yestad",
+    "name": "Øyestad",
+    "legendCount": 1,
+    "coordinates": {
+      "latitude": 58.42,
+      "longitude": 8.72
+    }
+  },
+  {
+    "id": "place-ysleb",
+    "name": "Øyslebø",
+    "legendCount": 2,
+    "coordinates": {
+      "latitude": 58.18,
+      "longitude": 7.62
+    }
+  },
+  {
+    "id": "place-ystre-slidre",
+    "name": "Øystre Slidre",
+    "legendCount": 13,
+    "coordinates": {
+      "latitude": 61.07,
+      "longitude": 9.12
+    }
+  }
+]

@@ -1,0 +1,777 @@
+[
+  {
+    "id": "collector-aagot-holst",
+    "name": "Aagot Holst",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-amund-b-larsen-jr",
+    "name": "Amund B. Larsen jr.",
+    "legendCount": 16
+  },
+  {
+    "id": "collector-andreas-faye",
+    "name": "Andreas Faye",
+    "legendCount": 44
+  },
+  {
+    "id": "collector-andreas-leiro",
+    "name": "Andreas Leiro",
+    "legendCount": 16
+  },
+  {
+    "id": "collector-andreas-m-rch",
+    "name": "Andreas Mørch",
+    "legendCount": 14
+  },
+  {
+    "id": "collector-anton-r-stad",
+    "name": "Anton Røstad",
+    "legendCount": 19
+  },
+  {
+    "id": "collector-august-krogh",
+    "name": "August Krogh",
+    "legendCount": 13
+  },
+  {
+    "id": "collector-august-schneider",
+    "name": "August Schneider",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-brynjulf-alver",
+    "name": "Brynjulf Alver",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-dagmar-blix",
+    "name": "Dagmar Blix",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-dina-thorsen",
+    "name": "Dina Thorsen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-e-b-kkestad",
+    "name": "E. Bækkestad",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-edvard-grimstad",
+    "name": "Edvard Grimstad",
+    "legendCount": 26
+  },
+  {
+    "id": "collector-edvard-kruken",
+    "name": "Edvard Kruken",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-edvard-langset",
+    "name": "Edvard Langset",
+    "legendCount": 32
+  },
+  {
+    "id": "collector-eivind-kv-len",
+    "name": "Eivind Kvålen",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-elin-d-holter-fr-yset-og-helge-fr-yset",
+    "name": "Elin D. Holter Frøyset og Helge Frøyset",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-elin-fr-yset-og-helge-fr-yset",
+    "name": "Elin Frøyset og Helge Frøyset",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-elin-holter-fr-yset-og-helge-fr-yset",
+    "name": "Elin Holter Frøyset og Helge Frøyset",
+    "legendCount": 7
+  },
+  {
+    "id": "collector-enok-wangberg",
+    "name": "Enok Wangberg",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-erik-humlegaard",
+    "name": "Erik Humlegaard",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-erling-vegusdal-eriksen",
+    "name": "Erling Vegusdal Eriksen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-finn-myrvang",
+    "name": "Finn Myrvang",
+    "legendCount": 4
+  },
+  {
+    "id": "collector-fr-lowzow",
+    "name": "Fr. Lowzow",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-guri-lomundal",
+    "name": "Guri Lomundal",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-h-delgobe",
+    "name": "H. Delgobe",
+    "legendCount": 16
+  },
+  {
+    "id": "collector-h-edvardsen",
+    "name": "H. Edvardsen",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-h-j-aall",
+    "name": "H. J. Aall",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-halldor-o-opedal",
+    "name": "Halldor O. Opedal",
+    "legendCount": 31
+  },
+  {
+    "id": "collector-halldor-opedal",
+    "name": "Halldor Opedal",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-hallvard-lid",
+    "name": "Hallvard Lid",
+    "legendCount": 4
+  },
+  {
+    "id": "collector-hans-flaten",
+    "name": "Hans Flaten",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-hans-reusch",
+    "name": "Hans Reusch",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-hans-ross",
+    "name": "Hans Ross",
+    "legendCount": 12
+  },
+  {
+    "id": "collector-harald-bahr",
+    "name": "Harald Bahr",
+    "legendCount": 9
+  },
+  {
+    "id": "collector-harald-tveit",
+    "name": "Harald Tveit",
+    "legendCount": 7
+  },
+  {
+    "id": "collector-hermann-aune",
+    "name": "Hermann Aune",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-h-vard-skirbekk",
+    "name": "Håvard Skirbekk",
+    "legendCount": 6
+  },
+  {
+    "id": "collector-ingrid-nauthella",
+    "name": "Ingrid Nauthella",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ivar-aasen",
+    "name": "Ivar Aasen",
+    "legendCount": 23
+  },
+  {
+    "id": "collector-j-a-samuelsen",
+    "name": "J. A. Samuelsen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-j-l-vland",
+    "name": "J. Løvland",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-j-m-ingebrigtsen",
+    "name": "J. M. Ingebrigtsen",
+    "legendCount": 11
+  },
+  {
+    "id": "collector-j-skogvold",
+    "name": "J. Skogvold",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-jakob-a-samuelsen",
+    "name": "Jakob A. Samuelsen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-jakob-andr-samuelsen",
+    "name": "Jakob Andr. Samuelsen",
+    "legendCount": 6
+  },
+  {
+    "id": "collector-jakob-bugge",
+    "name": "Jakob Bugge",
+    "legendCount": 6
+  },
+  {
+    "id": "collector-jens-haukdal",
+    "name": "Jens Haukdal",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-joh-th-storaker",
+    "name": "Joh. Th. Storaker",
+    "legendCount": 23
+  },
+  {
+    "id": "collector-johan-agerholt",
+    "name": "Johan Agerholt",
+    "legendCount": 9
+  },
+  {
+    "id": "collector-johan-fritzner",
+    "name": "Johan Fritzner",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-johan-hveding",
+    "name": "Johan Hveding",
+    "legendCount": 24
+  },
+  {
+    "id": "collector-johan-skrindsrud",
+    "name": "Johan Skrindsrud",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-johan-th-storaker",
+    "name": "Johan Th. Storaker",
+    "legendCount": 4
+  },
+  {
+    "id": "collector-johannes-skar",
+    "name": "Johannes Skar",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-johannes-th-storaker",
+    "name": "Johannes Th. Storaker",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-johs-buset",
+    "name": "Johs. Buset",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-jon-flatab",
+    "name": "Jon Flatabø",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-jon-l-yland",
+    "name": "Jon Løyland",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-just-qvigstad",
+    "name": "Just Qvigstad",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-j-rgen-moe",
+    "name": "Jørgen Moe",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-k-weel-engebretsen-og-eivind-johansen",
+    "name": "K. Weel Engebretsen og Eivind Johansen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-k-weel-engebretsen-og-erling-johansen",
+    "name": "K. Weel Engebretsen og Erling Johansen",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-kaare-svalastoga",
+    "name": "Kaare Svalastoga",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-kjell-bondevik",
+    "name": "Kjell Bondevik",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-kjellaug-b",
+    "name": "Kjellaug Bø",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-kjetil-a-flatin",
+    "name": "Kjetil A. Flatin",
+    "legendCount": 13
+  },
+  {
+    "id": "collector-knut-bj-rgaas",
+    "name": "Knut Bjørgaas",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-knut-hermundstad",
+    "name": "Knut Hermundstad",
+    "legendCount": 112
+  },
+  {
+    "id": "collector-knut-liest-l",
+    "name": "Knut Liestøl",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-knut-loupedalen",
+    "name": "Knut Loupedalen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-knut-nauthella",
+    "name": "Knut Nauthella",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-knut-srompdal",
+    "name": "Knut Srompdal",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-knut-strompdal",
+    "name": "Knut Strompdal",
+    "legendCount": 72
+  },
+  {
+    "id": "collector-kristen-weierholt",
+    "name": "Kristen Weierholt",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-kristian-bugge",
+    "name": "Kristian Bugge",
+    "legendCount": 16
+  },
+  {
+    "id": "collector-kristian-stberg",
+    "name": "Kristian Østberg",
+    "legendCount": 9
+  },
+  {
+    "id": "collector-lars-b-sehl",
+    "name": "Lars B. Sehl",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-lars-lid",
+    "name": "Lars Lid",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-lars-m-fjellstad",
+    "name": "Lars M. Fjellstad",
+    "legendCount": 36
+  },
+  {
+    "id": "collector-lars-os",
+    "name": "Lars Os",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-lars-s-reide",
+    "name": "Lars Søreide",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-louise-storm-borchgrevink",
+    "name": "Louise Storm Borchgrevink",
+    "legendCount": 7
+  },
+  {
+    "id": "collector-louise-storm-borchrevink",
+    "name": "Louise Storm Borchrevink",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ludvig-johnsen",
+    "name": "Ludvig Johnsen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-lyder-kvantoland",
+    "name": "Lyder Kvantoland",
+    "legendCount": 9
+  },
+  {
+    "id": "collector-m-b-landstad",
+    "name": "M. B. Landstad",
+    "legendCount": 16
+  },
+  {
+    "id": "collector-m-hjertaas",
+    "name": "M. Hjertaas",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-m-b-landstad-2",
+    "name": "M.B. Landstad",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-magne-aurom",
+    "name": "Magne Aurom",
+    "legendCount": 12
+  },
+  {
+    "id": "collector-martin-bj-rndal",
+    "name": "Martin Bjørndal",
+    "legendCount": 12
+  },
+  {
+    "id": "collector-mathias-hjertaas",
+    "name": "Mathias Hjertaas",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-mathias-ryssdal",
+    "name": "Mathias Ryssdal",
+    "legendCount": 4
+  },
+  {
+    "id": "collector-matias-ryssdal",
+    "name": "Matias Ryssdal",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-maurits-fugels-y",
+    "name": "Maurits Fugelsøy",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-moltke-moe",
+    "name": "Moltke Moe",
+    "legendCount": 88
+  },
+  {
+    "id": "collector-nfs-moltke-moe",
+    "name": "NFS Moltke Moe",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-nikka-vonen",
+    "name": "Nikka Vonen",
+    "legendCount": 8
+  },
+  {
+    "id": "collector-nikolai-r-stgaard",
+    "name": "Nikolai R. Østgaard",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-nils-h-og-arne-h-mager-y",
+    "name": "Nils H. og Arne H. Magerøy",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-nils-mager-y",
+    "name": "Nils Magerøy",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-nils-o-ravnaa",
+    "name": "Nils O. Ravnaa",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-nils-p-vigeland",
+    "name": "Nils P. Vigeland",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-o-svare",
+    "name": "O. Svare",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ola-holen",
+    "name": "Ola Holen",
+    "legendCount": 6
+  },
+  {
+    "id": "collector-ola-ryssdal",
+    "name": "Ola Ryssdal",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-ola-sandnes",
+    "name": "Ola Sandnes",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-ola-taller-shaugen",
+    "name": "Ola Talleråshaugen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-olav-hanssen",
+    "name": "Olav Hanssen",
+    "legendCount": 4
+  },
+  {
+    "id": "collector-olav-jarl-gahre",
+    "name": "Olav Jarl Gahre",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-olav-nilsen",
+    "name": "Olav Nilsen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-olav-nordb",
+    "name": "Olav Nordbø",
+    "legendCount": 19
+  },
+  {
+    "id": "collector-olav-rekdal",
+    "name": "Olav Rekdal",
+    "legendCount": 33
+  },
+  {
+    "id": "collector-olav-sande",
+    "name": "Olav Sande",
+    "legendCount": 7
+  },
+  {
+    "id": "collector-olav-skjerpe",
+    "name": "Olav Skjerpe",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-olav-t-vinje",
+    "name": "Olav T. Vinje",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ole-hansen",
+    "name": "Ole Hansen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ole-j-rong-d-y",
+    "name": "Ole J. Rong d. y.",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ole-j-rong-jr",
+    "name": "Ole J. Rong jr.",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ole-matson",
+    "name": "Ole Matson",
+    "legendCount": 3
+  },
+  {
+    "id": "collector-ole-smed",
+    "name": "Ole Smed",
+    "legendCount": 6
+  },
+  {
+    "id": "collector-olga-knutsen",
+    "name": "Olga Knutsen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-p-chr-asbj-rnsen",
+    "name": "P. Chr. Asbjørnsen",
+    "legendCount": 19
+  },
+  {
+    "id": "collector-p-eiesland",
+    "name": "P. Eiesland",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-p-fladlien",
+    "name": "P. Fladlien",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-peder-fylling",
+    "name": "Peder Fylling",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-peter-lunde",
+    "name": "Peter Lunde",
+    "legendCount": 29
+  },
+  {
+    "id": "collector-r-th-christiansen",
+    "name": "R. Th. Christiansen",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ragnvald-mo",
+    "name": "Ragnvald Mo",
+    "legendCount": 33
+  },
+  {
+    "id": "collector-ragnvald-moe",
+    "name": "Ragnvald Moe",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-rasmus-flo",
+    "name": "Rasmus Flo",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-rasmus-l-land",
+    "name": "Rasmus Løland",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-reidar-djupedal",
+    "name": "Reidar Djupedal",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-reidar-th-christiansen",
+    "name": "Reidar Th. Christiansen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-rigmor-frimannslund",
+    "name": "Rigmor Frimannslund",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-rikard-berge",
+    "name": "Rikard Berge",
+    "legendCount": 61
+  },
+  {
+    "id": "collector-ruth-hult",
+    "name": "Ruth Hult",
+    "legendCount": 10
+  },
+  {
+    "id": "collector-s-s-rensen",
+    "name": "S. Sørensen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-sigurd-h-unneberg",
+    "name": "Sigurd H. Unneberg",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-sigurd-neergaard",
+    "name": "Sigurd Neergaard",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-sigurd-nergaard",
+    "name": "Sigurd Nergaard",
+    "legendCount": 37
+  },
+  {
+    "id": "collector-sjur-b-yum",
+    "name": "Sjur Bøyum",
+    "legendCount": 31
+  },
+  {
+    "id": "collector-sophus-bugge",
+    "name": "Sophus Bugge",
+    "legendCount": 21
+  },
+  {
+    "id": "collector-svale-solheim",
+    "name": "Svale Solheim",
+    "legendCount": 7
+  },
+  {
+    "id": "collector-sven-b-pedersen",
+    "name": "Sven B. Pedersen",
+    "legendCount": 2
+  },
+  {
+    "id": "collector-theodor-morch",
+    "name": "Theodor Morch",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-thomas-barth",
+    "name": "Thomas Barth",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-tor-skiftun",
+    "name": "Tor Skiftun",
+    "legendCount": 13
+  },
+  {
+    "id": "collector-tore-bergst-l",
+    "name": "Tore Bergstøl",
+    "legendCount": 25
+  },
+  {
+    "id": "collector-torkell-mauland",
+    "name": "Torkell Mauland",
+    "legendCount": 35
+  },
+  {
+    "id": "collector-torleiv-aakre",
+    "name": "Torleiv Aakre",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-torvald-v-eskvam",
+    "name": "Torvald V. Eskvam",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-tov-flatin",
+    "name": "Tov Flatin",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-ukjent",
+    "name": "Ukjent",
+    "legendCount": 1
+  },
+  {
+    "id": "collector-v-riksheim",
+    "name": "V. Riksheim",
+    "legendCount": 2
+  }
+]
