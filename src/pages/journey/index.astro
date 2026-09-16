@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/journey.css';
+import journeyScriptUrl from '../../../js/journey.js?url';
+import journeyAudio from '../../../audio/background-music.mp3?url';
+
+const base=import.meta.env.BASE_URL;
+---
+<BaseLayout active="journey" title="Reise" description="Reis gjennom norske sagn, steder, samlere og vandresagntyper.">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous"/>
+    <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+  </Fragment>
+  <section class="journey-page" aria-label="Journey">
+    <div id="panel-journey">
+      <div id="journey-map-container"></div>
+      <canvas id="journey-glow-canvas"></canvas>
+      <div id="journey-veil"></div>
+      <div class="journey-caption" id="journey-caption" aria-live="polite"></div>
+      <div class="journey-textpanel" id="journey-textpanel"></div>
+      <div class="journey-end-panel" id="journey-end-panel">
+        <button class="journey-end-btn" type="button" onclick="journeyPlayAgain()" data-i18n="journey.playAgain">↻ Start på nytt</button>
+        <button class="journey-end-btn" type="button" onclick="journeyShareResult()" data-i18n="journey.share">⤴ Del</button>
+      </div>
+      <audio id="journey-audio" src={journeyAudio} loop preload="none"></audio>
+      <div class="journey-credit">
+        <span data-i18n="journey.musicBy">Musikk av</span> <a href="https://pixabay.com/users/playstarz_music-52864946/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=435262" target="_blank" rel="noopener">Yauheni Kachan</a> <span data-i18n="journey.musicFrom">fra</span> <a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a>
+      </div>
+      <div class="journey-controls" aria-label="Journey controls">
+        <button class="journey-btn" id="jny-play" type="button" onclick="journeyPlay()"><span class="jny-icon" id="jny-play-icon">▶</span><span class="jny-label" id="jny-play-label"> Start</span></button>
+        <button class="journey-btn" id="jny-next" type="button" onclick="journeyNext()"><span class="jny-icon">⏭</span><span class="jny-label" id="jny-next-label"> Neste</span></button>
+        <button class="journey-btn" id="jny-stop" type="button" onclick="journeyStop()" disabled><span class="jny-icon">■</span><span class="jny-label" id="jny-stop-label"> Stopp</span></button>
+        <button class="journey-btn" id="jny-jump" type="button" onclick="journeyJump()"><span class="jny-icon">✦</span><span class="jny-label" id="jny-jump-label"> Hopp</span></button>
+        <button class="journey-btn" id="jny-music" type="button" onclick="toggleJourneyMusic()"><span class="jny-icon">♪</span><span class="jny-label" id="jny-music-label"> Musikk</span></button>
+        <button class="journey-btn" id="jny-fullscreen" type="button" onclick="toggleJourneyFullscreen()"><span class="jny-icon" id="jny-fullscreen-icon">⛶</span><span class="jny-label" id="jny-fullscreen-label"> Fullskjerm</span></button>
+      </div>
+    </div>
+  </section>
+  <script is:inline>window.allData=[];window.samlers=[];window.MAP_LAYERS={dark:'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'};window.cleanY=v=>{const n=parseInt(parseFloat(String(v)));return n>=1800&&n<=2010?n:null};window.esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');window.isUkjent=v=>!v||/^(ukjent|unknown|nan)$/iu.test(String(v).trim());</script>
+  <script is:inline src={journeyScriptUrl}></script>
+  <script is:inline>
+    const journeyFallback={no:{play:'Start',pause:'Pause',next:'Neste',stop:'Stopp',jump:'Hopp',music:'Musikk',fullscreen:'Fullskjerm',exit:'Avslutt fullskjerm',collected:'Samlet av',told:'fortalt av',read:'Les hele sagnet'},en:{play:'Play',pause:'Pause',next:'Next',stop:'Stop',jump:'Jump',music:'Music',fullscreen:'Fullscreen',exit:'Exit fullscreen',collected:'Collected by',told:'told by',read:'Read full legend'}};
+    const journeyLanguage=()=>document.documentElement.dataset.uiLang==='en'?'en':'no';
+    const journeyLabel=(key)=>journeyFallback[journeyLanguage()][key];
+    const originalUpdateJourneyButtons=updateJourneyButtons;
+    updateJourneyButtons=function(){originalUpdateJourneyButtons();document.getElementById('jny-play-label').textContent=` ${journeyLabel(journeyPlaying?'pause':'play')}`;document.getElementById('jny-next-label').textContent=` ${journeyLabel('next')}`;document.getElementById('jny-stop-label').textContent=` ${journeyLabel('stop')}`;document.getElementById('jny-jump-label').textContent=` ${journeyLabel('jump')}`;document.getElementById('jny-music-label').textContent=` ${journeyLabel('music')}`;};
+    showJourneyTextPanel=function(d){const panel=document.getElementById('journey-textpanel');if(!panel)return;const hasTr=d.english_translation&&d.english_translation.trim(),yr=cleanY(d.år_clean),title=d.tittel||d.ml_title||d.id,sub=[d.sted,d.fylke,yr].filter(Boolean).join(' · '),meta=[!isUkjent(d.samler)?`${journeyLabel('collected')} ${esc(d.samler)}`:'',!isUkjent(d.informant)?`${journeyLabel('told')} ${esc(d.informant)}`:''].filter(Boolean).join(' · ');panel.innerHTML=`${d.ml_code?`<span class="journey-mlb">${esc(d.ml_code)}</span>`:''}<div class="journey-tp-title">${esc(title)}</div><div class="journey-tp-sub">${esc(sub)}</div><div class="journey-tp-text">${esc(d.tekst||'')}</div>${hasTr?`<div class="journey-tp-text journey-tp-en">${esc(d.english_translation)}</div>`:''}${meta?`<div class="journey-tp-meta">${meta}</div>`:''}<a class="journey-legend-link" href="${esc(d.url)}">${journeyLabel('read')} →</a>`;panel.scrollTop=0;panel.classList.add('show')};
+    const originalFullscreenChange=onJourneyFullscreenChange;
+    onJourneyFullscreenChange=function(){originalFullscreenChange();const panel=document.getElementById('panel-journey'),isFs=!!(document.fullscreenElement||document.webkitFullscreenElement||panel?.classList.contains('fake-fullscreen'));document.getElementById('jny-fullscreen-label').textContent=` ${journeyLabel(isFs?'exit':'fullscreen')}`};
+    window.addEventListener('ui-language-change',()=>{updateJourneyButtons();onJourneyFullscreenChange();if(journeyCurrent?.item&&document.getElementById('journey-textpanel').classList.contains('show'))showJourneyTextPanel(journeyCurrent.item)});
+    fetch(`${document.baseURI.replace(/journey\/$/,'')}journey-data.json`).then(response=>{if(!response.ok)throw new Error('Journey data could not be loaded');return response.json()}).then(records=>{window.allData=records;window.samlers=[...new Set(records.map(d=>d.samler).filter(Boolean))];initJourney()}).catch(()=>{const caption=document.getElementById('journey-caption');caption.textContent='Journey data could not be loaded.';caption.classList.add('show')});
+  </script>
+</BaseLayout>
