@@ -1,0 +1,488 @@
+[
+  {
+    "id": "ml-ml3000",
+    "legendCount": 29,
+    "code": "ml3000",
+    "title": "Wittenbergskolen"
+  },
+  {
+    "id": "ml-ml3005",
+    "legendCount": 13,
+    "code": "ml3005",
+    "title": "Prest maner \"spøkelse\" i jord"
+  },
+  {
+    "id": "ml-ml3010",
+    "legendCount": 19,
+    "code": "ml3010",
+    "title": "Fanden som karjolhjul"
+  },
+  {
+    "id": "ml-ml3015",
+    "legendCount": 43,
+    "code": "ml3015",
+    "title": "Fanden i kortlaget"
+  },
+  {
+    "id": "ml-ml3020",
+    "legendCount": 64,
+    "code": "ml3020",
+    "title": "Ukyndig løser Fanden"
+  },
+  {
+    "id": "ml-ml3025",
+    "legendCount": 26,
+    "code": "ml3025",
+    "title": "Skyss med Fanden"
+  },
+  {
+    "id": "ml-ml3030",
+    "legendCount": 18,
+    "code": "ml3030",
+    "title": "Kvitormen (Visormen)"
+  },
+  {
+    "id": "ml-ml3035",
+    "legendCount": 18,
+    "code": "ml3035",
+    "title": "Trollkjerringdattera"
+  },
+  {
+    "id": "ml-ml3040",
+    "legendCount": 17,
+    "code": "ml3040",
+    "title": "Trollkjerring kinner smør"
+  },
+  {
+    "id": "ml-ml3045",
+    "legendCount": 14,
+    "code": "ml3045",
+    "title": "Trollkjerringa og tjenestegutten (\"Her opp og her ned til Jønsås\")"
+  },
+  {
+    "id": "ml-ml3050",
+    "legendCount": 5,
+    "code": "ml3050",
+    "title": "Trollkjerringstevne (Heksesabbat)"
+  },
+  {
+    "id": "ml-ml3055",
+    "legendCount": 5,
+    "code": "ml3055",
+    "title": "Trollkjerring blir skadet"
+  },
+  {
+    "id": "ml-ml3060",
+    "legendCount": 22,
+    "code": "ml3060",
+    "title": "Ormemaneren"
+  },
+  {
+    "id": "ml-ml3065",
+    "legendCount": 2,
+    "code": "ml3065",
+    "title": "Padda og ormen"
+  },
+  {
+    "id": "ml-ml3070",
+    "legendCount": 11,
+    "code": "ml3070",
+    "title": "Fanden i danselaget"
+  },
+  {
+    "id": "ml-ml3075",
+    "legendCount": 2,
+    "code": "ml3075",
+    "title": "Fanden tar utro brud"
+  },
+  {
+    "id": "ml-ml3080",
+    "legendCount": 9,
+    "code": "ml3080",
+    "title": "Finneferd"
+  },
+  {
+    "id": "ml-ml4000",
+    "legendCount": 6,
+    "code": "ml4000",
+    "title": "Sjelen på vandring (Guntramsagnet)"
+  },
+  {
+    "id": "ml-ml4005",
+    "legendCount": 20,
+    "code": "ml4005",
+    "title": "Hamløper (mannbjørn, varulv)"
+  },
+  {
+    "id": "ml-ml4010",
+    "legendCount": 3,
+    "code": "ml4010",
+    "title": "Gift med Mara"
+  },
+  {
+    "id": "ml-ml4015",
+    "legendCount": 12,
+    "code": "ml4015",
+    "title": "De dødes messe"
+  },
+  {
+    "id": "ml-ml4020",
+    "legendCount": 6,
+    "code": "ml4020",
+    "title": "Død uten tilgivelse"
+  },
+  {
+    "id": "ml-ml4025",
+    "legendCount": 23,
+    "code": "ml4025",
+    "title": "Utburden får navn"
+  },
+  {
+    "id": "ml-ml4030",
+    "legendCount": 2,
+    "code": "ml4030",
+    "title": "Død mor går igjen"
+  },
+  {
+    "id": "ml-ml4035",
+    "legendCount": 24,
+    "code": "ml4035",
+    "title": "Deildegasten"
+  },
+  {
+    "id": "ml-ml4050",
+    "legendCount": 25,
+    "code": "ml4050",
+    "title": "Rop fra vannet (\"Timen er kommet\")"
+  },
+  {
+    "id": "ml-ml4055",
+    "legendCount": 17,
+    "code": "ml4055",
+    "title": "Sjøvetter varsler storm"
+  },
+  {
+    "id": "ml-ml4060",
+    "legendCount": 21,
+    "code": "ml4060",
+    "title": "Sjøvetter gir råd"
+  },
+  {
+    "id": "ml-ml4065",
+    "legendCount": 7,
+    "code": "ml4065",
+    "title": "Sjødraugene og landdraugene"
+  },
+  {
+    "id": "ml-ml4070",
+    "legendCount": 16,
+    "code": "ml4070",
+    "title": "Draugen prøver rom"
+  },
+  {
+    "id": "ml-ml4075",
+    "legendCount": 11,
+    "code": "ml4075",
+    "title": "Utrøst"
+  },
+  {
+    "id": "ml-ml4085",
+    "legendCount": 15,
+    "code": "ml4085",
+    "title": "Havhest og sjøorm i kamp"
+  },
+  {
+    "id": "ml-ml4090",
+    "legendCount": 17,
+    "code": "ml4090",
+    "title": "Fossegrimen læremester i felespill"
+  },
+  {
+    "id": "ml-ml4095",
+    "legendCount": 7,
+    "code": "ml4095",
+    "title": "Nøkken som hest"
+  },
+  {
+    "id": "ml-ml5000",
+    "legendCount": 14,
+    "code": "ml5000",
+    "title": "Troll liker ikke uro (\"Lån meg storkjelen\")"
+  },
+  {
+    "id": "ml-ml5005",
+    "legendCount": 4,
+    "code": "ml5005",
+    "title": "Skyss med troll (Blessomsagnet)"
+  },
+  {
+    "id": "ml-ml5010",
+    "legendCount": 9,
+    "code": "ml5010",
+    "title": "Håndhilse på troll"
+  },
+  {
+    "id": "ml-ml5015",
+    "legendCount": 2,
+    "code": "ml5015",
+    "title": "Troll finner \"leketøy\""
+  },
+  {
+    "id": "ml-ml5020",
+    "legendCount": 5,
+    "code": "ml5020",
+    "title": "Ferge troll (Dyre Vå)"
+  },
+  {
+    "id": "ml-ml5050",
+    "legendCount": 15,
+    "code": "ml5050",
+    "title": "Håp om salighet"
+  },
+  {
+    "id": "ml-ml5055",
+    "legendCount": 4,
+    "code": "ml5055",
+    "title": "Huldreprest"
+  },
+  {
+    "id": "ml-ml5060",
+    "legendCount": 4,
+    "code": "ml5060",
+    "title": "Jaget hulder (Den ville jakt)"
+  },
+  {
+    "id": "ml-ml5070",
+    "legendCount": 29,
+    "code": "ml5070",
+    "title": "Jordmor hos de underjordiske"
+  },
+  {
+    "id": "ml-ml5075",
+    "legendCount": 42,
+    "code": "ml5075",
+    "title": "Flytte fjøset"
+  },
+  {
+    "id": "ml-ml5080",
+    "legendCount": 13,
+    "code": "ml5080",
+    "title": "Be huldrefolk om mat"
+  },
+  {
+    "id": "ml-ml5085",
+    "legendCount": 32,
+    "code": "ml5085",
+    "title": "Byttingen"
+  },
+  {
+    "id": "ml-ml5090",
+    "legendCount": 36,
+    "code": "ml5090",
+    "title": "Kone av huldreætt"
+  },
+  {
+    "id": "ml-ml5095",
+    "legendCount": 42,
+    "code": "ml5095",
+    "title": "Nærsøken hulder"
+  },
+  {
+    "id": "ml-ml6000",
+    "legendCount": 24,
+    "code": "ml6000",
+    "title": "Nærsøken huldrekar (tussefrier)"
+  },
+  {
+    "id": "ml-ml6005",
+    "legendCount": 52,
+    "code": "ml6005",
+    "title": "Huldrebryllup på setra (Klevarsagnet)"
+  },
+  {
+    "id": "ml-ml6010",
+    "legendCount": 10,
+    "code": "ml6010",
+    "title": "Fanget huldreunge"
+  },
+  {
+    "id": "ml-ml6015",
+    "legendCount": 44,
+    "code": "ml6015",
+    "title": "Huldrefolk på julegjesting"
+  },
+  {
+    "id": "ml-ml6015a",
+    "legendCount": 6,
+    "code": "ml6015A",
+    "title": "Jul i Halten"
+  },
+  {
+    "id": "ml-ml6020",
+    "legendCount": 26,
+    "code": "ml6020",
+    "title": "Takknemlig huldrekone (Barnelinden)"
+  },
+  {
+    "id": "ml-ml6025",
+    "legendCount": 18,
+    "code": "ml6025",
+    "title": "Vekker folk"
+  },
+  {
+    "id": "ml-ml6030",
+    "legendCount": 16,
+    "code": "ml6030",
+    "title": "Varsler om tiden (\"Deka, deka Tore\")"
+  },
+  {
+    "id": "ml-ml6035",
+    "legendCount": 19,
+    "code": "ml6035",
+    "title": "Skjære åkeren"
+  },
+  {
+    "id": "ml-ml6040",
+    "legendCount": 14,
+    "code": "ml6040",
+    "title": "Huldresoldater (Dystetromma)"
+  },
+  {
+    "id": "ml-ml6045",
+    "legendCount": 37,
+    "code": "ml6045",
+    "title": "Huldrehornet (Draugen i Vallarhaugen)"
+  },
+  {
+    "id": "ml-ml6050",
+    "legendCount": 8,
+    "code": "ml6050",
+    "title": "Usynlighetshatten"
+  },
+  {
+    "id": "ml-ml6055",
+    "legendCount": 20,
+    "code": "ml6055",
+    "title": "Huldreku"
+  },
+  {
+    "id": "ml-ml6060",
+    "legendCount": 12,
+    "code": "ml6060",
+    "title": "Huldrestuten"
+  },
+  {
+    "id": "ml-ml6065",
+    "legendCount": 16,
+    "code": "ml6065",
+    "title": "Huldretjern"
+  },
+  {
+    "id": "ml-ml6070",
+    "legendCount": 21,
+    "code": "ml6070",
+    "title": "Budbringer for de underjordiske (\"Dild er død\")"
+  },
+  {
+    "id": "ml-ml7000",
+    "legendCount": 18,
+    "code": "ml7000",
+    "title": "Nisseslagsmål"
+  },
+  {
+    "id": "ml-ml7005",
+    "legendCount": 15,
+    "code": "ml7005",
+    "title": "Den vesle børa"
+  },
+  {
+    "id": "ml-ml7010",
+    "legendCount": 17,
+    "code": "ml7010",
+    "title": "Hevner seg"
+  },
+  {
+    "id": "ml-ml7015",
+    "legendCount": 8,
+    "code": "ml7015",
+    "title": "Nye klær"
+  },
+  {
+    "id": "ml-ml7020",
+    "legendCount": 6,
+    "code": "ml7020",
+    "title": "Nissen på flyttelasset"
+  },
+  {
+    "id": "ml-ml7050",
+    "legendCount": 22,
+    "code": "ml7050",
+    "title": "Ringen i fisken (Polykratessagnet)"
+  },
+  {
+    "id": "ml-ml7060",
+    "legendCount": 34,
+    "code": "ml7060",
+    "title": "Strid om kirketomt, byggematerialer flyttet"
+  },
+  {
+    "id": "ml-ml7065",
+    "legendCount": 28,
+    "code": "ml7065",
+    "title": "Kirkebyggeren (Finnsagnet)"
+  },
+  {
+    "id": "ml-ml7070",
+    "legendCount": 20,
+    "code": "ml7070",
+    "title": "Kirkeklokker"
+  },
+  {
+    "id": "ml-ml7080",
+    "legendCount": 15,
+    "code": "ml7080",
+    "title": "Pesta med lime og rive"
+  },
+  {
+    "id": "ml-ml7085",
+    "legendCount": 15,
+    "code": "ml7085",
+    "title": "Pesta og fergemannen"
+  },
+  {
+    "id": "ml-ml7090",
+    "legendCount": 48,
+    "code": "ml7090",
+    "title": "Gjenlevende finner hverandre"
+  },
+  {
+    "id": "ml-ml7095",
+    "legendCount": 6,
+    "code": "ml7095",
+    "title": "Øde hus og kirker etter pesten"
+  },
+  {
+    "id": "ml-ml8000",
+    "legendCount": 16,
+    "code": "ml8000",
+    "title": "Utfor stupet"
+  },
+  {
+    "id": "ml-ml8005",
+    "legendCount": 10,
+    "code": "ml8005",
+    "title": "Hjem til konas bryllup"
+  },
+  {
+    "id": "ml-ml8010",
+    "legendCount": 36,
+    "code": "ml8010",
+    "title": "Skattegraving"
+  },
+  {
+    "id": "ml-ml8025",
+    "legendCount": 20,
+    "code": "ml8025",
+    "title": "Røvere på setra (\"Till, till Tove\")"
+  }
+]
