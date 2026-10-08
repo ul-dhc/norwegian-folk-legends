@@ -220,3 +220,7 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 @media(max-height:650px){.journey-moe-card{bottom:105px;max-height:calc(100% - 210px)}.journey-moe-card.has-image{display:grid;grid-template-columns:32% 1fr;gap:14px}.journey-moe-card img{height:auto;max-height:170px}.journey-moe-card p{font-size:14px}.journey-moe-card figure{margin:0}}
 
 .moe-manuscript{display:block;color:var(--gold)!important;text-decoration:underline!important;font-size:13px;margin:14px 0}
+
+.journey-playback-settings{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.journey-settings-credit{font-size:10px;line-height:1.5;margin:8px 0 20px;color:var(--muted)}
+#legend-journey .journey-playback-settings button[aria-pressed=true]{background:#d2b95718;border-color:var(--gold)}

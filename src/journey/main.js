@@ -70,12 +70,13 @@ function revealControls(){root.classList.remove('controls-resting');clearTimeout
 function controls(){
  mapSettings();
  const active=started&&scene()?.kind!=='end';
+ root.querySelector('.journey-controls').hidden=!active;
  el('journey-close').hidden=!started;el('journey-close').setAttribute('aria-label',language()==='en'?'Leave the journey':'Forlat reisen');
  el('journey-pause').hidden=!active;el('journey-next').hidden=!active;el('journey-back').hidden=!active;
  el('journey-back').disabled=sceneIndex<=0;
  el('journey-pause').textContent=paused?'▶ '+t().resume:'Ⅱ '+t().pause;
  el('journey-next').textContent=t().next+' ›';el('journey-back').textContent='‹ '+t().back;
- el('journey-sound').textContent='♪ '+t().sound;el('journey-sound').setAttribute('aria-pressed',String(!audio.paused));
+ el('journey-sound').textContent=language()==='en'?'Music':'Musikk';el('journey-sound').setAttribute('aria-pressed',String(!audio.paused));
  el('journey-motion').textContent=t().still;el('journey-motion').setAttribute('aria-pressed',String(still));
  el('journey-motion').disabled=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const isFullscreen=Boolean(document.fullscreenElement||root.classList.contains('is-fullscreen'));

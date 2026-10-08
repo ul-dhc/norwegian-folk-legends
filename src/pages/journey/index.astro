@@ -16,6 +16,11 @@ const base=import.meta.env.BASE_URL;
     </div>
     <section id="journey-settings" class="journey-settings" aria-labelledby="journey-settings-title" hidden>
       <h2 id="journey-settings-title">Journey settings</h2>
+      <div class="journey-playback-settings">
+        <button id="journey-sound" type="button" aria-pressed="false"></button>
+        <button id="journey-motion" type="button" aria-pressed="false"></button>
+      </div>
+      <p class="journey-settings-credit"><a href="https://pixabay.com/users/playstarz_music-52864946/" target="_blank" rel="noopener" id="journey-credit"></a></p>
       <h3 id="journey-map-settings-title">Map atmosphere</h3>
       <div role="group" aria-labelledby="journey-map-settings-title">
         <button type="button" data-map-type="coastlines" aria-pressed="true"><span></span><small></small></button>
@@ -46,10 +51,8 @@ const base=import.meta.env.BASE_URL;
         <button id="journey-back" type="button" hidden></button>
         <button id="journey-pause" type="button" hidden></button>
         <button id="journey-next" type="button" hidden></button>
-        <button id="journey-sound" type="button" aria-pressed="false"></button>
-        <button id="journey-motion" type="button" aria-pressed="false"></button>
       </nav>
-      <p class="journey-footnote"><span id="journey-progress"></span><span id="journey-route-note"></span><a id="journey-source" hidden target="_blank" rel="noopener"></a><a href="https://pixabay.com/users/playstarz_music-52864946/" target="_blank" rel="noopener" id="journey-credit"></a></p>
+      <p class="journey-footnote"><span id="journey-progress"></span><span id="journey-route-note"></span><a id="journey-source" hidden target="_blank" rel="noopener"></a></p>
     </div>
     <audio id="journey-audio" src={journeyAudio} loop preload="none"></audio>
   </section>
