@@ -82,8 +82,9 @@ function controls(){
  root.querySelector('nav').setAttribute('aria-label',language()==='en'?'Journey controls':'Reisekontroller');
 }
 function welcome(){
+ const theme=currentTheme();
  el('journey-location-kind').textContent='NORSKE SAGN';el('map-heading').textContent='Norge';
- el('journey-welcome').innerHTML=`<h1>${t().title}</h1><p>${t().intro}</p><div class="journey-modes" role="group" aria-label="${t().modeLabel}"><button data-mode="weave" aria-pressed="${mode==='weave'}">${t().weave}</button><button data-mode="thread" aria-pressed="${mode==='thread'}">${t().thread}</button></div><p class="journey-mode-note">${mode==='weave'?t().weaveNote:t().threadNote}</p>${mode==='thread'?`<div class="journey-themes" role="group" aria-label="${language()==='en'?'Choose a theme':'Velg et tema'}">${Object.entries(THEMES).map(([key,theme])=>`<button type="button" data-theme-thread="${key}" aria-pressed="${themeKey===key}" style="--theme-colour:${theme.colour}"><span>${esc(theme[language()])}</span><small>${esc(theme.description[language()])}</small></button>`).join('')}</div>`:''}${ready?`<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-begin="fullscreen">${t().fullscreenBegin}</button><button type="button" data-begin="inline">${t().begin}</button></div>`:`<p role="status">${failed?t().failed:t().loading}</p>`}`;
+ el('journey-welcome').innerHTML=`<h1>${esc(theme?t().thread:t().title)}</h1><p>${esc(theme?theme.intro[language()]:t().intro)}</p><div class="journey-modes" role="group" aria-label="${t().modeLabel}"><button data-mode="weave" aria-pressed="${mode==='weave'}">${t().weave}</button><button data-mode="thread" aria-pressed="${mode==='thread'}">${t().thread}</button></div><p class="journey-mode-note">${mode==='weave'?t().weaveNote:t().threadNote}</p>${mode==='thread'?`<div class="journey-themes" role="group" aria-label="${language()==='en'?'Choose a theme':'Velg et tema'}">${Object.entries(THEMES).map(([key,theme])=>`<button type="button" data-theme-thread="${key}" aria-pressed="${themeKey===key}" style="--theme-colour:${theme.colour}"><span>${esc(theme[language()])}</span><small>${esc(theme.description[language()])}</small></button>`).join('')}</div>`:''}${ready?`<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-begin="fullscreen">${t().fullscreenBegin}</button><button type="button" data-begin="inline">${t().begin}</button></div>`:`<p role="status">${failed?t().failed:t().loading}</p>`}`;
  if(versionChanged)status(t().old);controls();
 }
 function capacity(text,title){
@@ -114,7 +115,7 @@ function buildScenes(){
  scenes=[];
  const theme=currentTheme();
  const networks=new Map((theme?[]:networkScenes(route,links,shownNetworks)).map(s=>[s.i,s]));
- if(completed===0)t().introduction.forEach((text,j)=>scenes.push({kind:'introduction',i:0,j,text:format(text,collectionFacts)}));
+ if(!theme&&completed===0)t().introduction.forEach((text,j)=>scenes.push({kind:'introduction',i:0,j,text:format(text,collectionFacts)}));
  if(theme)scenes.push({kind:'theme-opening',i:0});
  route.forEach((r,i)=>{
   if(!theme&&!bridgeChoices.has(completed+i)){

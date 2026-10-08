@@ -4,7 +4,7 @@ const stop=(id,en,no)=>({id,en,no});
 export const THEMES={
  water:{code:'ml4050',colour:'#58C4B0',en:'A voice calls from the water',no:'Rop fra vannet',
  description:{en:'Fifteen places. A recurring call, heard beside water and ice.',no:'Femten steder. Et tilbakevendende rop ved vann og is.'},
- intro:{en:'Across these records, a voice is heard from the water. We follow fifteen legends, staying with the same theme as places and voices change.',no:'I disse opptegnelsene høres en stemme fra vannet. Vi følger femten fortellinger om samme tema, mens steder og stemmer skifter.'},
+ intro:{en:'A voice calls from a river, a lake or the ice. Someone hears it; someone tries to keep another person from answering. Across fifteen places, we follow this recurring danger and the different ways each legend tells of the call.',no:'En stemme roper fra en elv, et vann eller isen. Noen hører den; noen prøver å hindre et annet menneske i å svare. Gjennom femten steder følger vi denne tilbakevendende faren og de ulike måtene sagnet om ropet blir fortalt på.'},
  ending:{en:'The call has followed us from place to place. The legends share a phrase, but each gives it a different setting and voice.',no:'Ropet har fulgt oss fra sted til sted. Fortellingene deler et uttrykk, men hver gir det sine omgivelser og sin stemme.'},
  stops:[
  stop("SIN262","We begin in Søgne. Johan Jonson Høllen’s legend brings a rider and a priest to a river that calls.","Vi begynner i Søgne. I Johan Jonson Høllens fortelling møter vi en rytter og en prest ved en elv som roper."),
@@ -25,7 +25,7 @@ export const THEMES={
  ]},
  hulder:{code:'ml6020',colour:'#DF907B',en:'The grateful hulder woman',no:'Takknemlig huldrekone',
  description:{en:'Twelve encounters. Small acts of care, and what is left in return.',no:'Tolv møter. Små handlinger av omsorg, og det som blir lagt igjen.'},
- intro:{en:'A child’s wrapping, a hearth, a stranger in the cowshed. These records gather encounters in which an ordinary gesture reaches an unseen neighbour.',no:'En barnelind, et ildsted, en fremmed i fjøset. Disse opptegnelsene samler møter der en hverdagslig handling når en usynlig nabo.'},
+ intro:{en:'A mother and child appear by the hearth or among the cattle. A forgotten wrapping is returned, a small kindness offered, a gift left in thanks. Through twelve encounters with the hulder woman, we follow the exchanges between a household and its hidden neighbours.',no:'En mor og et barn viser seg ved ildstedet eller blant kyrne. En glemt barnelind blir levert tilbake, en liten tjeneste gjort, en gave lagt igjen som takk. Gjennom tolv møter med huldrekona følger vi utvekslingene mellom en husstand og dens skjulte naboer.'},
  ending:{en:'A wrapping returned, a gift left behind. Across these places, the stories give different forms to care and gratitude.',no:'En barnelind kommer tilbake, en gave blir igjen. På disse stedene gir fortellingene omsorg og takknemlighet ulike former.'},
  stops:[
  stop('SIN1357','Our first stop is Mykland. Torjus Sivertsen’s legend begins with a woman wrapping her child on a farm.','Første stopp er Mykland. Torjus Sivertsens fortelling begynner med en kvinne som reiver barnet sitt på en gård.'),
@@ -43,7 +43,7 @@ export const THEMES={
  ]},
  boundary:{code:'ml4035',colour:'#A18BD0',en:'The boundary ghost',no:'Deildegasten',
  description:{en:'Nine places, from the south to Balestrand. Land, disputed boundaries and restless dead.',no:'Ni steder, fra sør til Balestrand. Jord, omstridte grenser og hvileløse døde.'},
- intro:{en:'A boundary stone marks more than land. These legends connect a disputed landscape with wrongdoing that does not rest after death.',no:'En bytestein markerer mer enn jord. Disse fortellingene knytter et omstridt landskap til urett som ikke får hvile etter døden.'},
+ intro:{en:'A stone is moved, an oath sworn, a piece of land wrongfully claimed. In these legends, a boundary dispute can outlast a human life. From the south to Balestrand, nine places tell of the restless dead and the struggle to put an old wrong right.',no:'En grensestein blir flyttet, en ed sverget, et jordstykke urettmessig tatt. I disse sagnene kan en grensetvist vare lenger enn et menneskeliv. Fra sør til Balestrand forteller ni steder om hvileløse døde og strevet med å rette opp gammel urett.'},
  ending:{en:'Stones, oaths and judgements have marked this thread. The landscape holds the consequences of how people treated one another.',no:'Steiner, eder og dommer har preget denne tråden. Landskapet bærer følgene av hvordan mennesker behandlet hverandre.'},
  stops:[
  stop('SIN1186','We begin in Egersund. In rain and mist, someone is heard carrying boundary stones uphill.','Vi begynner i Egersund. I regn og skodde høres noen som bærer merkesteiner oppover bakken.'),
