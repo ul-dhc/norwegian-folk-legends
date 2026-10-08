@@ -1,3 +1,4 @@
+import {createElement,Maximize,Minimize} from 'lucide';
 import {compose,routeFromIds,describeRoute,known,ReadingClock,continueRoute,normalText,networkEdges} from './engine.js';
 import {format} from './language.js';
 import {passages,passageDuration,networkScenes,samePlaceBridge,translatedSceneIndex} from './cinema.js';
@@ -72,7 +73,9 @@ function controls(){
  el('journey-sound').textContent='♪ '+t().sound;el('journey-sound').setAttribute('aria-pressed',String(!audio.paused));
  el('journey-motion').textContent=t().still;el('journey-motion').setAttribute('aria-pressed',String(still));
  el('journey-motion').disabled=matchMedia('(prefers-reduced-motion: reduce)').matches;
- el('journey-fullscreen').textContent=(document.fullscreenElement||root.classList.contains('is-fullscreen'))?'⛶ '+t().exit:'⛶ '+t().fullscreen;
+ const isFullscreen=Boolean(document.fullscreenElement||root.classList.contains('is-fullscreen'));
+ el('journey-fullscreen').replaceChildren(createElement(isFullscreen?Minimize:Maximize,{width:18,height:18,'stroke-width':1.8,'aria-hidden':'true'}));
+ el('journey-fullscreen').setAttribute('aria-label',isFullscreen?t().exit:t().fullscreen);
  el('journey-credit').textContent=t().credit;
  el('journey-progress').textContent=active?(mode==='weave'?`${completed+(scene()?.i??0)+1} · ∞`:format(t().progress,{n:(scene()?.i??0)+1,total:route.length})):'';
  el('journey-source').hidden=!active;el('journey-source').textContent=t().source;if(active)el('journey-source').href=record().url;
