@@ -76,7 +76,6 @@ function controls(){
  el('journey-credit').textContent=t().credit;
  el('journey-progress').textContent=active?(mode==='weave'?`${completed+(scene()?.i??0)+1} · ∞`:format(t().progress,{n:(scene()?.i??0)+1,total:route.length})):'';
  el('journey-source').hidden=!active;el('journey-source').textContent=t().source;if(active)el('journey-source').href=record().url;
- root.querySelectorAll('[data-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.language===language())));
  root.classList.toggle('paused',paused);
  root.setAttribute('aria-label',language()==='en'?'Legend journey':'Sagnreise');
  el('journey-reading').setAttribute('aria-label',language()==='en'?'Legend':'Sagn');
@@ -285,7 +284,6 @@ root.addEventListener('click',async event=>{
  else if(button.hasAttribute('data-again'))start(true);
  else if(button.hasAttribute('data-choose-theme'))el('journey-close').click();
  else if(button.hasAttribute('data-share')){syncUrl();try{await navigator.clipboard.writeText(location.href);status(t().copied);}catch{status(t().copyFailed);}}
- else if(button.dataset.language&&button.dataset.language!==language()){window.applyTeikasUiLanguage?.(button.dataset.language);}
 });
 el('journey-settings-toggle').addEventListener('click',()=>{const open=el('journey-settings').hidden;el('journey-settings').hidden=!open;el('journey-settings-toggle').setAttribute('aria-expanded',String(open));root.classList.toggle('settings-open',open);revealControls();});
 document.addEventListener('pointerdown',event=>{if(!event.target.closest('#journey-settings,#journey-settings-toggle'))closeSettings();});
