@@ -121,8 +121,8 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 .journey-themes span{display:block;font:18px/1.25 Georgia,serif}
 .journey-themes small{display:block;font:12px/1.45 system-ui,sans-serif;color:#bac6c9;margin-top:8px}
 #legend-journey[data-scene=theme-opening] .journey-shade{opacity:.45}
-@media(max-width:700px){.journey-themes{grid-template-columns:1fr;gap:5px;margin:10px auto}#legend-journey .journey-themes button{min-height:0;padding:9px 12px}.journey-themes span{font-size:16px}.journey-themes small{font-size:11px;margin-top:3px}.journey-welcome:has(.journey-themes){top:105px;bottom:105px;transform:translateX(-50%);overflow-y:auto}.journey-welcome:has(.journey-themes) h1{font-size:28px}.journey-welcome:has(.journey-themes)>p:first-of-type{display:none}}
-@media(max-height:650px) and (min-width:701px){.journey-welcome:has(.journey-themes){top:100px;bottom:100px;transform:translateX(-50%);overflow-y:auto}.journey-welcome:has(.journey-themes)>p:first-of-type{display:none}}
+@media(max-width:700px){.journey-themes{grid-template-columns:1fr;gap:5px;margin:10px auto}#legend-journey .journey-themes button{min-height:0;padding:9px 12px}.journey-themes span{font-size:16px}.journey-themes small{font-size:11px;margin-top:3px}.journey-welcome:has(.journey-themes){top:105px;bottom:105px;transform:translateX(-50%);overflow-y:auto}.journey-welcome:has(.journey-themes) h1{font-size:28px}}
+@media(max-height:650px) and (min-width:701px){.journey-welcome:has(.journey-themes){top:100px;bottom:100px;transform:translateX(-50%);overflow-y:auto}}
 
 /* Shared night palette: a filled moving light, hollow memories of places. */
 .journey-orb-core{position:relative;display:block;width:10px;height:10px;margin:11px;border-radius:50%;background:#FFF7E6;box-shadow:0 0 7px 2px color-mix(in srgb,var(--orb-colour) 55%,transparent),0 0 18px 5px color-mix(in srgb,var(--orb-colour) 20%,transparent);animation:journey-light-breathe 5s ease-in-out infinite}
@@ -172,3 +172,37 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 #legend-journey:is([data-scene=collector],[data-scene=narrator],[data-scene=theme-opening]) .journey-network-breathing{animation-name:network-focus-breathe}
 @keyframes network-focus-breathe{0%,100%{opacity:.88}50%{opacity:1}}
 @media(prefers-reduced-motion:reduce){#journey-map .leaflet-journeyTraces-pane,#journey-map .journey-orb{transition:none}}
+
+/* Reserve separate space for welcome content and the persistent controls. */
+.journey-welcome{
+ top:110px;bottom:115px;transform:translateX(-50%);
+ display:flex;flex-direction:column;align-items:center;justify-content:safe center;
+ overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;padding:8px 12px;
+ width:min(780px,calc(100% - 48px));
+}
+.journey-welcome>*{flex-shrink:0}
+.journey-welcome .journey-themes{width:100%}
+@media(min-width:701px) and (max-height:850px){
+ #legend-journey .journey-welcome h1{font-size:40px;margin-bottom:12px}
+ .journey-welcome>p{font-size:15px;line-height:1.55;max-width:65ch;margin:8px auto 14px}
+ #legend-journey .journey-welcome .journey-mode-note{margin:10px auto;max-width:none}
+ .journey-welcome .journey-themes{margin:10px auto 14px}
+ #legend-journey .journey-themes button{padding:12px;min-height:100px}
+ .journey-welcome .journey-themes span{font-size:17px}
+}
+@media(max-width:700px){
+ .journey-welcome{top:105px;bottom:115px;width:calc(100% - 32px);padding-inline:8px}
+ .journey-welcome>p{font-size:14px;line-height:1.5;margin:10px auto 14px}
+}
+.journey-welcome::before{
+ inset:0;border-radius:0;box-shadow:none;filter:none;
+ background:radial-gradient(ellipse at center,#080f1de6 25%,#080f1da6 60%,transparent 75%);
+}
+@media(min-width:701px) and (max-height:650px){
+ #legend-journey .journey-welcome h1{font-size:32px;margin-bottom:8px}
+ .journey-welcome>p{font-size:14px;line-height:1.45;margin:6px auto 10px}
+ #legend-journey .journey-welcome .journey-mode-note{margin:8px auto}
+ #legend-journey .journey-themes button{min-height:84px;padding:10px}
+ .journey-welcome .journey-themes{margin:8px auto 10px}
+ .journey-welcome .journey-themes span{font-size:16px}
+}
