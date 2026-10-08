@@ -163,9 +163,9 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 #legend-journey .journey-welcome button[aria-pressed=true]{background:#1b2937;border-color:var(--gold);color:var(--gold)}
 #legend-journey .journey-welcome .journey-themes button[aria-pressed=true]{border-color:var(--theme-colour);color:var(--theme-colour)}
 #legend-journey .journey-welcome button:hover{background:#263749}
-#legend-journey .journey-welcome .journey-primary{background:var(--gold);border-color:var(--gold);color:#101923;transition:background-color .25s ease,border-color .25s ease,box-shadow .25s ease}
-#legend-journey .journey-welcome .journey-primary:is(:hover,:focus-visible){background:#e4cc76;border-color:#e4cc76;color:#101923;box-shadow:0 0 20px #d2b95726}
-#legend-journey .journey-welcome .journey-primary:active{background:#c4aa48;border-color:#c4aa48;color:#101923;box-shadow:none}
+#legend-journey .journey-welcome .journey-primary{background:var(--gold);border-color:var(--gold);color:#101923;transition:background-color .4s ease,border-color .4s ease,box-shadow .4s ease,transform .4s ease}
+#legend-journey .journey-welcome .journey-primary:is(:hover,:focus-visible){background:#ead687;border-color:#f1dfa0;color:#101923;transform:translateY(-3px);box-shadow:0 0 0 5px #d2b95715,0 10px 32px #d2b95730}
+#legend-journey .journey-welcome .journey-primary:active{background:#c4aa48;border-color:#c4aa48;color:#101923;transform:translateY(0);box-shadow:none}
 #legend-journey .journey-welcome p,#legend-journey .journey-welcome small{color:#e2e7e8}
 @media(max-width:700px){.journey-welcome::before{inset:-18px -12px;border-radius:24px;box-shadow:0 0 24px 12px #080f1d88}}
 
@@ -428,3 +428,7 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 #legend-journey .journey-map-heading p{font-size:clamp(22px,2.5vw,34px);margin:0 0 6px}
 #legend-journey .journey-map-heading>span{font-size:11px;letter-spacing:.025em}
 @media(max-width:700px){#legend-journey .journey-map-heading{left:18px;max-width:calc(100% - 180px)}#legend-journey .journey-map-heading>span{font-size:9px}}
+
+/* Give the start action its own breathing room below the journey choices. */
+#legend-journey .journey-welcome .journey-welcome-actions{margin-top:clamp(28px,4vh,42px)}
+@media(prefers-reduced-motion:reduce){#legend-journey .journey-welcome .journey-primary{transition:none;transform:none}}
