@@ -1,3 +1,8 @@
+import liv from '../assets/moe/liv-bratterud.jpg?url';
+import childhood from '../assets/moe/childhood.jpg?url';
+import portrait from '../assets/moe/portrait.png?url';
+import informants from '../assets/moe/informants.jpg?url';
+import {moeRoute,moeScenes,moeIntro,moeSources} from './moe.js';
 import {createElement,Maximize,Minimize} from 'lucide';
 import {compose,routeFromIds,describeRoute,known,ReadingClock,continueRoute,normalText,networkEdges} from './engine.js';
 import {format} from './language.js';
@@ -13,7 +18,7 @@ const root=document.querySelector('#legend-journey'),el=id=>document.getElementB
 const language=()=>document.documentElement.dataset.uiLang==='en'?'en':'no',t=()=>cinema[language()];
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const audio=el('journey-audio');
-let collectionFacts={};
+let collectionFacts={},allRecords=[];
 let records=[],route=[],links=[],scenes=[],version='',sceneIndex=-1,ready=false,failed=false,started=false,paused=false;
 let readingTime=100;
 try{const saved=Number(localStorage.getItem('journey-reading-time'));if(Number.isFinite(saved)&&saved>=70&&saved<=200)readingTime=Math.round(saved/10)*10;}catch{}
@@ -77,8 +82,8 @@ function controls(){
  el('journey-fullscreen').replaceChildren(createElement(isFullscreen?Minimize:Maximize,{width:18,height:18,'stroke-width':1.8,'aria-hidden':'true'}));
  el('journey-fullscreen').setAttribute('aria-label',isFullscreen?t().exit:t().fullscreen);
  el('journey-credit').textContent=t().credit;
- el('journey-progress').textContent=active?(mode==='weave'?`${completed+(scene()?.i??0)+1} · ∞`:format(t().progress,{n:(scene()?.i??0)+1,total:route.length})):'';
- el('journey-source').hidden=!active;el('journey-source').textContent=t().source;if(active)el('journey-source').href=record().url;
+ el('journey-progress').textContent=active?(mode==='moe'?`${sceneIndex+1} / ${scenes.length-1}`:mode==='weave'?`${completed+(scene()?.i??0)+1} · ∞`:format(t().progress,{n:(scene()?.i??0)+1,total:route.length})):'';
+ el('journey-source').hidden=!active||scene()?.kind==='moe';el('journey-source').textContent=t().source;if(active)el('journey-source').href=record().url;
  root.classList.toggle('paused',paused);
  root.setAttribute('aria-label',language()==='en'?'Legend journey':'Sagnreise');
  el('journey-reading').setAttribute('aria-label',language()==='en'?'Legend':'Sagn');
@@ -87,7 +92,7 @@ function controls(){
 function welcome(){
  const theme=currentTheme();
  el('journey-location-kind').textContent='NORSKE SAGN';el('map-heading').textContent='Norge';
- el('journey-welcome').innerHTML=`<h1>${esc(theme?t().thread:t().title)}</h1><p>${esc(theme?theme.intro[language()]:t().intro)}</p><div class="journey-modes" role="group" aria-label="${t().modeLabel}"><button data-mode="weave" aria-pressed="${mode==='weave'}">${t().weave}</button><button data-mode="thread" aria-pressed="${mode==='thread'}">${t().thread}</button></div><p class="journey-mode-note">${mode==='weave'?t().weaveNote:t().threadNote}</p>${mode==='thread'?`<div class="journey-themes" role="group" aria-label="${language()==='en'?'Choose a theme':'Velg et tema'}">${Object.entries(THEMES).map(([key,theme])=>`<button type="button" data-theme-thread="${key}" aria-pressed="${themeKey===key}" style="--theme-colour:${theme.colour}"><span>${esc(theme[language()])}</span><small>${esc(theme.description[language()])}</small></button>`).join('')}</div>`:''}${ready?`<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-begin="inline">${t().begin}</button></div>`:`<p role="status">${failed?t().failed:t().loading}</p>`}`;
+ el('journey-welcome').innerHTML=`<h1>${esc(mode==='moe'?'Moltke Moe':theme?t().thread:t().title)}</h1><p>${esc(mode==='moe'?moeIntro[language()]:theme?theme.intro[language()]:t().intro)}</p><div class="journey-modes" role="group" aria-label="${t().modeLabel}"><button data-mode="weave" aria-pressed="${mode==='weave'}">${t().weave}</button><button data-mode="thread" aria-pressed="${mode==='thread'}">${t().thread}</button><button data-mode="moe" aria-pressed="${mode==='moe'}">Moltke Moe</button></div><p class="journey-mode-note">${mode==='moe'?(language()==='en'?'A collector’s world · Five legends · Archival photographs':'En samlers verden · Fem sagn · Arkivfotografier'):mode==='weave'?t().weaveNote:t().threadNote}</p>${mode==='thread'?`<div class="journey-themes" role="group" aria-label="${language()==='en'?'Choose a theme':'Velg et tema'}">${Object.entries(THEMES).map(([key,theme])=>`<button type="button" data-theme-thread="${key}" aria-pressed="${themeKey===key}" style="--theme-colour:${theme.colour}"><span>${esc(theme[language()])}</span><small>${esc(theme.description[language()])}</small></button>`).join('')}</div>`:''}${ready?`<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-begin="inline">${t().begin}</button></div>`:`<p role="status">${failed?t().failed:t().loading}</p>`}`;
  if(versionChanged)status(t().old);controls();
 }
 function capacity(text,title){
@@ -116,6 +121,7 @@ function capacity(text,title){
 }
 function buildScenes(){
  scenes=[];
+ if(mode==='moe'){scenes=moeScenes(route,allRecords,r=>passages(textFor(r),capacity(textFor(r),heading(r))),{portrait,informants,childhood,liv});return;}
  const theme=currentTheme();
  const networks=new Map((theme?[]:networkScenes(route,links,shownNetworks)).map(s=>[s.i,s]));
  if(!theme&&completed===0)t().introduction.forEach((text,j)=>scenes.push({kind:'introduction',i:0,j,text:format(text,collectionFacts)}));
@@ -158,18 +164,33 @@ function bridge(i){
  return theme?creditedBridge(theme.stops[i][language()],route[i],language(),i):continuousBridge(route[i-1]||previousRecord,route[i],links[i],language(),bridgeChoices.get(completed+i)||0);
 }
 function summaryMarkup(){
+ if(mode==='moe')return `<div class="journey-summary"><p>${language()==='en'?'Five legends · Four narrator names · Moltke Moe':'Fem sagn · Fire fortellernavn · Moltke Moe'}</p><p>${language()==='en'?'Legend catalogue places: Heddal and Bø.':'Sagnets katalogsteder: Heddal og Bø.'}</p></div>`;
  const summary=journeySummary(route,language());
  return `<div class="journey-summary"><p class="journey-summary-counts">${esc(summary.counts)}</p>${['places','collectors','narrators'].map(key=>`<p>${esc(summary[key])}</p>`).join('')}</div>`;
 }
 function showScene(preserveMap=false){
- clock.stop();typingClock.stop();typingDuration=0;if(!preserveMap){map?.cancel();map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
+ clock.stop();typingClock.stop();typingDuration=0;if(!preserveMap){map?.cancel();if(!(mode==='moe'&&scene()?.j==='network'))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
  const token=++sceneToken,s=scene();if(!s)return;
  const r=route[s.i];root.dataset.scene=s.kind;el('journey-route-note').textContent='';root.style.setProperty('--collector-colour',collectorColour(r));
- for(const id of ['journey-welcome','journey-reading','journey-caption','journey-ending'])el(id).hidden=true;
+ for(const id of ['journey-welcome','journey-reading','journey-caption','journey-ending','journey-moe-card'])el(id).hidden=true;
  el('journey-location-kind').textContent=t().place;el('map-heading').textContent=r.sted;
  el('journey-location-detail').textContent=r.precision==='region'?t().region:(r.fylke&&r.fylke!==r.sted?r.fylke:'');
  status('');controls();
- if(s.kind==='theme-opening'){
+ if(s.kind==='moe'){
+  const en=language()==='en',card=el('journey-moe-card');
+  el('journey-location-kind').textContent=en?'A collector’s world':'En samlers verden';el('map-heading').textContent=s.title;
+  el('journey-location-detail').textContent=s.target?(en?'Approximate place · narrative stop':'Omtrentlig sted · fortellerstopp'):(en?'Archival connections, not an itinerary':'Arkivforbindelser, ikke en reiserute');
+  el('journey-source').hidden=true;
+  if(!preserveMap){
+   if(s.j==='all')map?.intro(allRecords,true);
+   else if(s.j==='network')map?.isolateCollector(allRecords,'collector-moltke-moe');
+   else if(s.j==='return')map?.connections(allRecords.filter(r=>r.collectorId==='collector-moltke-moe'),'collector','#D2B957');
+   else if(s.target)map?.focus(s.target);
+  }
+  card.classList.toggle('has-image',Boolean(s.image));
+  card.innerHTML=`${s.image?`<figure><img src="${esc(s.image)}" alt="${esc(s.credit)}"/><figcaption>${esc(s.credit)}</figcaption></figure>`:''}<div><p>${esc(s.text[language()])}</p>${s.manuscript?`<a class="moe-manuscript" href="${esc(s.manuscript)}" target="_blank" rel="noopener">${en?'Open manuscript in Samla':'Åpne manuskriptet i Samla'}</a>`:''}<small>${en?'Explore the sources in Info.':'Utforsk kildene i Info.'}</small></div>`;card.hidden=false;
+  schedule(Math.max(16000,passageDuration(s.text[language()])*readingTime/100));
+ }else if(s.kind==='theme-opening'){
   const theme=currentTheme();
   el('journey-location-kind').textContent=language()==='en'?'One theme, many places':'Ett tema, mange steder';el('map-heading').textContent=theme[language()];el('journey-location-detail').textContent=t().networkNote;el('journey-source').hidden=true;el('journey-progress').textContent='';
   if(!preserveMap)map?.connections(records.filter(r=>r.ml_code===theme.code),'theme',theme.colour);
@@ -233,8 +254,8 @@ function showScene(preserveMap=false){
  }else{
   el('journey-location-kind').textContent='NORSKE SAGN';el('map-heading').textContent='Norge';el('journey-location-detail').textContent='';
   el('journey-ending').hidden=false;
-  el('journey-ending').innerHTML=`<h2>${currentTheme()?esc(currentTheme()[language()]):t().end}</h2><p>${currentTheme()?esc(currentTheme().ending[language()]):t().endText}</p>${summaryMarkup()}<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-again>${currentTheme()?(language()==='en'?'Replay this theme':'Spill temaet på nytt'):t().again}</button>${currentTheme()?`<button type="button" data-choose-theme>${language()==='en'?'Choose another theme':'Velg et annet tema'}</button>`:''}<button type="button" data-share>${t().share}</button></div><p class="journey-ending-note">${t().method}</p>`;
-  if(!preserveMap)map?.overview(route,true);root.classList.remove('controls-resting');
+  el('journey-ending').innerHTML=`<h2>${mode==='moe'?(language()==='en'?'The voices remain':'Stemmene blir igjen'):currentTheme()?esc(currentTheme()[language()]):t().end}</h2><p>${mode==='moe'?(language()==='en'?'Five legends, several voices, one collector. Return to the map, or follow the manuscript links in Info.':'Fem sagn, flere stemmer, én samler. Gå tilbake til kartet, eller følg manuskriptlenkene i Info.'):currentTheme()?esc(currentTheme().ending[language()]):t().endText}</p>${summaryMarkup()}<div class="journey-welcome-actions"><button type="button" class="journey-primary" data-again>${mode==='moe'?(language()==='en'?'Replay this journey':'Spill reisen på nytt'):currentTheme()?(language()==='en'?'Replay this theme':'Spill temaet på nytt'):t().again}</button>${currentTheme()||mode==='moe'?`<button type="button" data-choose-theme>${language()==='en'?'Choose another journey':'Velg en annen reise'}</button>`:''}<button type="button" data-share>${t().share}</button></div><p class="journey-ending-note">${mode==='moe'?(language()==='en'?'A pilot connecting the legend dataset, Samla and museum collections.':'En pilot som knytter sammen sagndatasettet, Samla og museumssamlinger.'):t().method}</p>`;
+  if(!preserveMap){if(mode==='moe')map?.intro(allRecords,true);else map?.overview(route,true);}root.classList.remove('controls-resting');
  }
  revealControls();
 }
@@ -255,11 +276,12 @@ function togglePause(){paused?resume():pause();}
 function syncUrl(){const url=new URL(location.href);url.hash=new URLSearchParams({v:version,mode,...(currentTheme()?{theme:themeKey}:{}),route:route.map(r=>r.source_text_id).join(',')}).toString();window.history.replaceState(null,'',url);}
 function start(random=true){
  if(!ready)return;
- if(currentTheme())route=themeRoute(records,themeKey);
+ if(mode==='moe')route=moeRoute(records);
+ else if(currentTheme())route=themeRoute(records,themeKey);
  else if(random||!restored||!route.length)route=compose(records.filter(shortEnough),Math.random,restored&&route.length?[...openingHistory,route[0]]:openingHistory);
- if(!currentTheme()&&route.length){openingHistory=[...openingHistory,{placeId:route[0].placeId,lat:route[0].lat,lon:route[0].lon}].slice(-6);try{localStorage.setItem('journey-recent-openings',JSON.stringify(openingHistory));}catch{}}
+ if(mode!=='moe'&&!currentTheme()&&route.length){openingHistory=[...openingHistory,{placeId:route[0].placeId,lat:route[0].lat,lon:route[0].lon}].slice(-6);try{localStorage.setItem('journey-recent-openings',JSON.stringify(openingHistory));}catch{}}
  restored=false;
- if(!currentTheme())route=colourThreads(route);links=describeRoute(route);if(!route.length)return;previousRecord=null;completed=0;shownNetworks.clear();visited=new Set(route.map(r=>normalText(r.tekst)));recentPlaces=route.slice(-6);
+ if(mode!=='moe'&&!currentTheme())route=colourThreads(route);links=describeRoute(route);if(!route.length)return;previousRecord=null;completed=0;shownNetworks.clear();visited=new Set(route.map(r=>normalText(r.tekst)));recentPlaces=route.slice(-6);
  usedInsights.clear();insightPlan.clear();lastInsightKind=null;bridgeChoices.clear();bridgeCounts.clear();started=true;document.body.classList.add('journey-active');paused=false;sceneIndex=0;buildScenes();syncUrl();map?.reset();map?.setStill(still);
  root.scrollIntoView({behavior:'instant',block:'start'});root.focus({preventScroll:true});showScene();
 }
@@ -278,8 +300,10 @@ function resize(){
  // Reflow complete passages with adequate fresh reading time. Keep the same
  // word position rather than jumping to the next legend after a resize.
  if(active==='read'){showScene();map?.focus(record());if(paused)map?.pause();}
+ else if(active==='moe')showScene();
 }
 root.addEventListener('click',async event=>{
+ if(event.target.closest('a'))pause();
  const button=event.target.closest('button');if(!button)return;
  if(button.dataset.mapType){selectedMap=button.dataset.mapType;map?.setMapType(selectedMap);try{localStorage.setItem('journey-map-type-v3',selectedMap);}catch{}mapSettings();}
  else if(button.dataset.themeThread){themeKey=button.dataset.themeThread;route=[];restored=false;welcome();}
@@ -289,6 +313,13 @@ root.addEventListener('click',async event=>{
  else if(button.hasAttribute('data-choose-theme'))el('journey-close').click();
  else if(button.hasAttribute('data-share')){syncUrl();try{await navigator.clipboard.writeText(location.href);status(t().copied);}catch{status(t().copyFailed);}}
 });
+el('journey-info-toggle').addEventListener('click',()=>{
+ pause();const en=language()==='en';
+ el('journey-info-title').textContent=en?'Sources & photographs':'Kilder og fotografier';
+ el('journey-info-content').innerHTML=`<p>${en?'This pilot follows relationships in the dataset, not a reconstructed itinerary. Biographical map points are approximate town or district locations. Source texts are preserved; where no English translation is available, the Norwegian text is shown.':'Piloten følger forbindelser i datasettet, ikke en rekonstruert reiserute. Biografiske kartpunkter er omtrentlige by- eller områdesteder. Kildetekstene er bevart; der engelsk oversettelse mangler, vises norsk tekst.'}</p><h3>Moltke Moe</h3><ul>${moeSources.map(([name,url])=>`<li><a href="${esc(url)}" target="_blank" rel="noopener">${esc(name)}</a></li>`).join('')}</ul><h3>${en?'Featured legends':'Utvalgte sagn'}</h3><ul>${moeRoute(allRecords).map(r=>`<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.source_text_id)} · ${esc(r.informant)} · ${esc(r.archiveSignature)}</a>${r.sourceUrl?` · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${en?'Original catalogue':'Originalkatalog'}</a>`:''}</li>`).join('')}</ul>`;
+ el('journey-info').showModal();
+});
+el('journey-info-close').addEventListener('click',()=>el('journey-info').close());
 el('journey-settings-toggle').addEventListener('click',()=>{const open=el('journey-settings').hidden;el('journey-settings').hidden=!open;el('journey-settings-toggle').setAttribute('aria-expanded',String(open));root.classList.toggle('settings-open',open);revealControls();});
 document.addEventListener('pointerdown',event=>{if(!event.target.closest('#journey-settings,#journey-settings-toggle'))closeSettings();});
 root.addEventListener('keydown',event=>{if(event.key==='Escape'&&!el('journey-settings').hidden){event.stopImmediatePropagation();closeSettings();el('journey-settings-toggle').focus();}});
@@ -296,7 +327,7 @@ el('journey-pause').addEventListener('click',togglePause);
 el('journey-next').addEventListener('click',()=>{advance();});
 el('journey-back').addEventListener('click',()=>{if(sceneIndex>0){sceneIndex--;showScene();}});
 el('journey-fullscreen').addEventListener('click',fullscreen);
-el('journey-close').addEventListener('click',async()=>{clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records);root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
+el('journey-close').addEventListener('click',async()=>{clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records);root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
 el('journey-reading-time').addEventListener('input',event=>{
  const previous=readingTime;
  readingTime=Number(event.target.value);
@@ -342,10 +373,10 @@ welcome();
 try{
  try{map=createJourneyMap(el('journey-map'),()=>status(t().tiles));}catch(error){console.warn('Map unavailable',error);}
  const response=await fetch(root.dataset.endpoint);if(!response.ok)throw new Error('Data unavailable');
- const data=await response.json();
+ const data=await response.json();allRecords=data.records;
  const years=data.records.map(r=>String(r.år_clean||'')).filter(y=>/^\d{4}$/.test(y)).map(Number);
  collectionFacts={recordCount:data.records.length,collectorCount:new Set(data.records.filter(r=>known(r.samler)).map(r=>r.collectorId||r.samler)).size,firstYear:Math.min(...years),lastYear:Math.max(...years)};
  records=data.records.filter(journeyEligible);version=data.version;if(!records?.length)throw new Error('Empty collection');ready=true;
- const saved=new URLSearchParams(location.hash.slice(1));mode=saved.get('mode')==='thread'?'thread':'weave';if(mode==='thread'&&THEMES[saved.get('theme')]){themeKey=saved.get('theme');route=themeRoute(records,themeKey);restored=Boolean(route.length);versionChanged=saved.get('v')!==version;}else if(mode!=='thread'&&saved.has('route')){const ids=saved.get('route').split(',');const restoredRoute=routeFromIds(records,ids);if(restoredRoute.length===ids.length){route=restoredRoute;restored=true;versionChanged=saved.get('v')!==version;}}
+ const saved=new URLSearchParams(location.hash.slice(1));mode=['thread','moe'].includes(saved.get('mode'))?saved.get('mode'):'weave';if(mode==='thread'&&THEMES[saved.get('theme')]){themeKey=saved.get('theme');route=themeRoute(records,themeKey);restored=Boolean(route.length);versionChanged=saved.get('v')!==version;}else if(mode==='weave'&&saved.has('route')){const ids=saved.get('route').split(',');const restoredRoute=routeFromIds(records,ids);if(restoredRoute.length===ids.length){route=restoredRoute;restored=true;versionChanged=saved.get('v')!==version;}}
  map?.setStill(still);map?.intro(records);root.dataset.scene='intro';welcome();
 }catch(error){console.error('Journey initialization failed',error);failed=true;welcome();}

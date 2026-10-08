@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {compose,routeFromIds,describeRoute,DEMO,normalText,ReadingClock,readingTime,avoidRecentPlaces,links,mapped} from '../src/journey/engine.js';
-const {records}=JSON.parse(readFileSync(new URL('../build/journey-data.json',import.meta.url)));
+const {records}=JSON.parse(readFileSync(process.env.JOURNEY_DATA || new URL('../build/journey-data.json',import.meta.url)));
 const pilot=JSON.parse(readFileSync(new URL('../src/journey/places.json',import.meta.url)));
 test('demo provides varied, evidenced connections and restores identically',()=>{
  const route=routeFromIds(records,DEMO);assert.equal(route.length,5);

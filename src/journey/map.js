@@ -118,14 +118,24 @@ export function createJourneyMap(container,onError){
  }
  const observer=new ResizeObserver(()=>{map.invalidateSize({pan:false});frameClosing();});observer.observe(container);
  return {
-  intro(records){
-   constellation.clearLayers();
+  intro(records,all=false){
+   this.reset();
    const groups=new Map();
    for(const r of records){if(!r.collectorId||!known(r.samler))continue;if(!groups.has(r.collectorId))groups.set(r.collectorId,[]);groups.get(r.collectorId).push(r);}
-   [...groups.values()].sort((a,b)=>b.length-a.length).slice(0,18).forEach(items=>connections(items,'collector',constellation));
+   [...groups.values()].sort((a,b)=>b.length-a.length).slice(0,all?Infinity:18).forEach(items=>{const group=L.layerGroup().addTo(constellation);group.collectorId=items[0].collectorId;connections(items,'collector',group);});
    const voices=new Map();for(const r of records){if(!r.narratorId||!known(r.informant))continue;if(!voices.has(r.narratorId))voices.set(r.narratorId,[]);voices.get(r.narratorId).push(r);}
-   [...voices.values()].sort((a,b)=>b.length-a.length).slice(0,12).forEach(items=>connections(items,'narrator',constellation));
+   [...voices.values()].sort((a,b)=>b.length-a.length).slice(0,all?Infinity:12).forEach(items=>connections(items,'narrator',constellation));
    framing(records.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)).map(point),6,false,false);breathe(true);
+  },
+  isolateCollector(records,id){
+   // Rebuild a full overview so replay/back always yields the same transition.
+   if(!constellation.getLayers().some(group=>group.collectorId===id))this.intro(records,true);
+   constellation.eachLayer(group=>{
+    const keep=group.collectorId===id;
+    const fade=layer=>{const element=layer.getElement?.();if(element){element.style.transition=still?'none':'opacity 2s';element.style.opacity=keep?'1':'0';}};
+    if(group.eachLayer)group.eachLayer(fade);else fade(group);
+   });
+   breathe(false);
   },
   setStill(value){still=value;if(value){breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
   reset(){closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},

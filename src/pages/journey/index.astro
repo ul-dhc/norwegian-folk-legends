@@ -12,7 +12,7 @@ const base=import.meta.env.BASE_URL;
     <header class="journey-map-heading"><span id="journey-location-kind"></span><p id="map-heading">Norge</p><span id="journey-location-detail"></span></header>
     <div class="journey-top-tools journey-chrome">
       <button id="journey-settings-toggle" type="button" aria-label="Map settings" aria-expanded="false" aria-controls="journey-settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="#122129"/><circle cx="15" cy="17" r="3" fill="#122129"/></svg></button>
-      <button id="journey-fullscreen" type="button"></button><button id="journey-close" type="button" hidden>×</button>
+      <button id="journey-info-toggle" type="button">Info</button><button id="journey-fullscreen" type="button"></button><button id="journey-close" type="button" hidden>×</button>
     </div>
     <section id="journey-settings" class="journey-settings" aria-labelledby="journey-settings-title" hidden>
       <h2 id="journey-settings-title">Journey settings</h2>
@@ -37,6 +37,8 @@ const base=import.meta.env.BASE_URL;
       <div id="journey-byline" class="journey-byline"></div>
       <div class="journey-time-track" aria-hidden="true"><div id="journey-time-fill"></div></div>
     </section>
+    <article id="journey-moe-card" class="journey-moe-card" hidden aria-live="polite"></article>
+    <dialog id="journey-info" class="journey-info"><button id="journey-info-close" type="button" aria-label="Close / Lukk">Close / Lukk</button><h2 id="journey-info-title"></h2><div id="journey-info-content"></div></dialog>
     <div id="journey-ending" class="journey-ending" hidden></div>
     <div class="journey-bottom journey-chrome">
       <div id="journey-status" role="status" aria-live="polite"></div>

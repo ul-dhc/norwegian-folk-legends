@@ -47,7 +47,7 @@
 
 body.journey-active{overflow:hidden}body.journey-active .site-header,body.journey-active .site-footer{display:none}
 
-@media(max-width:700px){.journey-map-heading{max-width:calc(100% - 190px)}#legend-journey #journey-fullscreen{font-size:0;min-width:34px}#legend-journey #journey-fullscreen::before{content:'⛶';font-size:16px}}
+@media(max-width:700px){.journey-map-heading{max-width:calc(100% - 190px)}#legend-journey #journey-fullscreen{font-size:0;min-width:34px}#legend-journey #journey-fullscreen::before{content:none}}
 
 /* Opacity breathes independently of Leaflet's geographic transforms. */
 .journey-network-breathing{animation:network-breathe 14s ease-in-out infinite}
@@ -206,3 +206,17 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
  .journey-welcome .journey-themes{margin:8px auto 10px}
  .journey-welcome .journey-themes span{font-size:16px}
 }
+
+/* Collector story: retain an open map alongside compact archival material. */
+.journey-moe-card{position:absolute;z-index:480;right:4%;bottom:125px;width:min(480px,43%);max-height:calc(100% - 270px);overflow:auto;padding:22px;background:#0c1825ed;border:1px solid #b3c1b92b;border-radius:16px;box-shadow:0 12px 45px #0005}
+.journey-moe-card p{font-size:clamp(15px,1.4vw,19px);line-height:1.65;margin:0 0 10px;color:var(--ink)}
+.journey-moe-card small,.journey-moe-card figcaption{font-size:10px;line-height:1.5;color:var(--muted)}
+.journey-moe-card figure{margin:0 0 16px;text-align:center}
+.journey-moe-card img{display:block;margin:auto;max-width:100%;width:auto;height:min(27vh,250px);object-fit:contain;border-radius:3px}
+.journey-moe-card figcaption{margin-top:8px}
+.journey-info{max-width:720px;width:calc(100% - 36px);max-height:80dvh;overflow:auto;border:1px solid #758791;border-radius:16px;padding:28px;background:#101d2b;color:#f3efe6;font-size:14px;line-height:1.65}
+.journey-info::backdrop{background:#020810bd}.journey-info h2{font-family:Georgia,serif;font-weight:400}.journey-info li{margin:12px 0}.journey-info a{text-decoration:underline!important}#journey-info-close{float:right}
+@media(max-width:700px){.journey-moe-card{left:18px;right:18px;width:auto;bottom:125px;max-height:calc(100% - 265px);padding:16px}.journey-moe-card.has-image{display:grid;grid-template-columns:30% 1fr;gap:14px}.journey-moe-card img{width:100%;height:auto;max-height:180px}.journey-moe-card p{font-size:14px;line-height:1.55}.journey-moe-card figure{margin:0}.journey-moe-card figcaption{font-size:8px}.journey-modes{flex-wrap:wrap}}
+@media(max-height:650px){.journey-moe-card{bottom:105px;max-height:calc(100% - 210px)}.journey-moe-card.has-image{display:grid;grid-template-columns:32% 1fr;gap:14px}.journey-moe-card img{height:auto;max-height:170px}.journey-moe-card p{font-size:14px}.journey-moe-card figure{margin:0}}
+
+.moe-manuscript{display:block;color:var(--gold)!important;text-decoration:underline!important;font-size:13px;margin:14px 0}
