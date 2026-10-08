@@ -1,0 +1,183 @@
+import * as L from 'leaflet';
+import {journeyRenderer} from './renderer.js';
+import {maplibreGL} from '@maplibre/maplibre-gl-leaflet';
+import {setWorkerUrl} from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import {terrainStyle,styleForMapType,applyMapType,MAP_TYPES} from './terrain-style.js';
+setWorkerUrl(workerUrl);
+import {roadPath,pathSampler} from './roads.js';
+import {collectorColour} from './appearance.js';
+import {networkEdges,known} from './engine.js';
+const point=r=>[r.lat,r.lon];
+export function createJourneyMap(container,onError){
+ const map=L.map(container,{zoomControl:false,scrollWheelZoom:false,dragging:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false,minZoom:3,maxZoom:10,zoomAnimation:true,fadeAnimation:false}).setView([63,12],5);
+ let destroyed=false,terrainMap=null,terrainReady=false,mapType='coastlines';
+ try{const saved=localStorage.getItem('journey-map-type-v3');if(MAP_TYPES.includes(saved))mapType=saved;}catch{}
+ // Keep geographic threads in Leaflet; render elevation and roads natively below them.
+ terrainStyle().then(style=>{
+  if(destroyed)return;
+  // Hide unused relief before MapLibre starts fetching/decoding elevation tiles.
+  // Bound off-screen tile retention as the journey crosses many zoom levels.
+  const landscape=maplibreGL({style:styleForMapType(style,mapType),maxTileCacheSize:64,padding:.15,updateInterval:16,interactive:false}).addTo(map);
+  terrainMap=landscape.getMaplibreMap();terrainMap.on('error',onError);
+  terrainMap.on('load',()=>{terrainReady=true;applyMapType(terrainMap,mapType);});
+ }).catch(onError);
+ const traces=L.layerGroup().addTo(map),constellation=L.layerGroup().addTo(map),effects=L.layerGroup().addTo(map);
+ let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null;
+ const remembered=new Map(),seenEdges=new Set(),travelledEdges=new Map(),visitedDots=new Map();
+ const networkPane=map.createPane('journeyNetwork');networkPane.style.zIndex=410;networkPane.style.pointerEvents='none';
+ const networkRenderer=journeyRenderer(L,'journeyNetwork');
+ // Only the temporary networks breathe; travelled threads keep a steady presence.
+ const tracePane=map.createPane('journeyTraces');tracePane.style.zIndex=411;tracePane.style.pointerEvents='none';
+ const renderer=journeyRenderer(L,'journeyTraces');
+ function remember(coords){remembered.set(coords.join(','),coords);}
+ function markVisited(coords,color){
+  const key=coords.join(',');
+  // Shared locations use one dot, anchored exactly to the thread endpoint.
+  if(visitedDots.has(key))return;
+  const dot=L.circleMarker(coords,{renderer,className:'journey-visited-dot',radius:3.2,color,weight:1.1,opacity:.85,fill:false,interactive:false}).addTo(traces);
+  visitedDots.set(key,dot);
+ }
+ function lineBetween(a,b,color,group=traces){
+  const key=[a.join(','),b.join(',')].sort().join('|')+color;
+  if(group===traces&&seenEdges.has(key))return;
+  if(group===traces)seenEdges.add(key);
+  const line=L.polyline([a,b],{renderer:networkRenderer,className:'journey-thread',color,weight:1,opacity:.4,interactive:false}).addTo(group);
+  line.getElement().style.color=color;
+  return line;
+ }
+ function connections(items,kind,group=constellation,reveal=false,colour=null){
+  const {nodes,edges}=networkEdges(items),color=colour||collectorColour(items[0]);
+  const hub=nodes.length?[nodes.reduce((sum,r)=>sum+r.lat,0)/nodes.length,nodes.reduce((sum,r)=>sum+r.lon,0)/nodes.length]:null;
+  const revealLine=(line,i)=>{if(!reveal||still)return;const element=line?.getElement();if(!element)return;element.setAttribute('pathLength','1');element.classList.add('journey-spoke-reveal');element.style.animationDelay=(1600+Math.min(i*65,1200))+'ms';};
+  if(kind==='collector'&&hub){nodes.forEach((r,i)=>revealLine(lineBetween(hub,point(r),color,group),i));}
+  else edges.forEach(([a,b],i)=>revealLine(lineBetween(point(a),point(b),color,group),i));
+  nodes.forEach((r,i)=>{const coords=point(r);if(group===traces)remember(coords);const dot=L.circleMarker(coords,{renderer:networkRenderer,className:'journey-neon-point',radius:2.8,color,weight:1,opacity:.8,fill:false,interactive:false}).addTo(group);if(reveal&&!still){const element=dot.getElement();element.classList.add('journey-endpoint-reveal');element.style.animationDelay=(2800+Math.min(i*65,1200))+'ms';}});
+  if(nodes.length===1){L.circleMarker(point(nodes[0]),{renderer:networkRenderer,radius:17,color,weight:1,fill:false,interactive:false}).addTo(group);}
+  if(kind==='collector'&&hub){L.marker(hub,{icon:L.divIcon({className:'journey-collector-hub'+(reveal&&!still?' journey-hub-reveal':''),html:`<span style="--hub-colour:${color}"></span>`,iconSize:[64,64],iconAnchor:[32,32]}),interactive:false,keyboard:false}).addTo(group);}
+  return nodes;
+ }
+ function breathe(value){networkPane.classList.toggle('journey-network-breathing',value&&!still);}
+
+ const icon=(story,color)=>L.divIcon({className:'journey-orb'+(story?' story':''),html:`<span class="journey-orb-core" style="--orb-colour:${color}"></span>`,iconSize:[32,32],iconAnchor:[16,16]});
+ function setHead(coords,story=false,color='#58C4B0'){if(!head)head=L.marker(coords,{icon:icon(story,color),interactive:false,keyboard:false}).addTo(traces);else{head.setIcon(icon(story,color));head.setLatLng(coords);}current=coords;remember(coords);}
+ function framing(coords,zoom,reading=false,animate=true,duration=1.8){
+  if(!coords.length)return;
+  const height=map.getSize().y;
+  const wide=map.getSize().x>=900;
+  const paddingTopLeft=[35,Math.min(115,height*.2)],paddingBottomRight=[reading&&wide?Math.min(610,map.getSize().x*.49):35,Math.min(height*(reading&&!wide?.57:.23),height-180)];
+  const options={maxZoom:zoom,paddingTopLeft,paddingBottomRight,animate:animate&&!still,duration};
+  map.stop();if(options.animate)map.flyToBounds(L.latLngBounds(coords),options);else map.fitBounds(L.latLngBounds(coords),options);
+ }
+ function clearDestination(){if(destinationLabel){map.removeLayer(destinationLabel);destinationLabel=null;}}
+ function showDestination(target){
+  const name=target.name||target.sted;if(!name)return;
+  const coords=point(target),key=coords.join(',')+name;
+  if(destinationLabel?.destinationKey===key)return;
+  clearDestination();
+  const text=document.createElement('span');text.textContent=name;
+  destinationLabel=L.tooltip({permanent:true,direction:'right',offset:[14,0],className:'journey-destination-label',opacity:1,interactive:false}).setLatLng(coords).setContent(text).addTo(map);
+  destinationLabel.destinationKey=key;
+ }
+ function stopFrame(){if(raf!==null)cancelAnimationFrame(raf);raf=null;}
+ function cancel(){
+  stopFrame();effects.clearLayers();
+  // Interrupted/restarted flights must not leave a truncated cached edge.
+  if(movement?.line)traces.removeLayer(movement.line);
+  movement=null;map.stop();
+ }
+ function finishTravel(reframe=true){
+  const m=movement;if(!m)return;
+  stopFrame();movement=null;map.stop();effects.clearLayers();
+  m.line?.setLatLngs(m.path);
+  if(m.line){const previous=travelledEdges.get(m.edgeKey);if(previous)traces.removeLayer(previous);travelledEdges.set(m.edgeKey,m.line);}
+  setHead(m.to,m.story,m.color);remember(m.to);showDestination(m.target);
+  if(!m.story)markVisited(m.to,m.color);
+  if(reframe)framing([m.from,m.to],m.zoom,false,false);
+ }
+ function drawMotion(now){
+  const m=movement;if(!m)return;
+  m.elapsed+=Math.max(0,now-m.last);m.last=now;
+  const progress=Math.max(0,Math.min(1,(m.elapsed-m.camera)/m.duration));
+  const eased=progress*progress*(3-2*progress),pos=m.curve(eased);
+  if(progress>=.7)showDestination(m.target);
+  if(!still){head.setLatLng(pos);const sample=m.path.slice(0,Math.floor(eased*(m.path.length-1))+1);sample.push(pos);m.line?.setLatLngs(eased>0?sample:[]);}
+  if(progress>=1&&m.elapsed>=Math.max(m.camera+m.duration,m.minDuration)){
+   finishTravel(false);m.done();
+  }else raf=requestAnimationFrame(drawMotion);
+ }
+ function resume(){
+  const m=movement;if(!m||raf!==null)return;m.last=performance.now();
+  if(m.elapsed<m.camera)framing([m.from,m.to],m.zoom,false,true,(m.camera-m.elapsed)/1000);
+  raf=requestAnimationFrame(drawMotion);
+ }
+ function frameClosing(){
+  if(!closingCoords?.length)return;
+  map.fitBounds(L.latLngBounds(closingCoords),{maxZoom:7,paddingTopLeft:[24,105],paddingBottomRight:[24,container.clientWidth>=900?100:30],animate:false});
+ }
+ const observer=new ResizeObserver(()=>{map.invalidateSize({pan:false});frameClosing();});observer.observe(container);
+ return {
+  intro(records){
+   constellation.clearLayers();
+   const groups=new Map();
+   for(const r of records){if(!r.collectorId||!known(r.samler))continue;if(!groups.has(r.collectorId))groups.set(r.collectorId,[]);groups.get(r.collectorId).push(r);}
+   [...groups.values()].sort((a,b)=>b.length-a.length).slice(0,18).forEach(items=>connections(items,'collector',constellation));
+   const voices=new Map();for(const r of records){if(!r.narratorId||!known(r.informant))continue;if(!voices.has(r.narratorId))voices.set(r.narratorId,[]);voices.get(r.narratorId).push(r);}
+   [...voices.values()].sort((a,b)=>b.length-a.length).slice(0,12).forEach(items=>connections(items,'narrator',constellation));
+   framing(records.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)).map(point),6,false,false);breathe(true);
+  },
+  setStill(value){still=value;if(value){breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
+  reset(){closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
+  travel(target,{story=false,allowRoad=false,kind='place',colour=null,minDuration=0,onRoute=()=>{},done=()=>{}}={}){
+   closingCoords=null;cancel();clearDestination();breathe(false);
+   const to=point(target),from=current||to,color=colour||collectorColour(target);
+   const distance=L.latLng(from).distanceTo(to),same=distance<1000;
+   const mid=[(from[0]+to[0])/2,(from[1]+to[1])/2];
+   const curve=t=>{const bend=Math.min(1.4,Math.abs(to[0]-from[0])*.1);return [(1-t)**2*from[0]+2*(1-t)*t*mid[0]+t*t*to[0],(1-t)**2*from[1]+2*(1-t)*t*(mid[1]+bend)+t*t*to[1]];};
+   const path=Array.from({length:41},(_,i)=>curve(i/40));
+   const edgeKey=[from.join(','),to.join(',')].sort().join('|')+color;
+   const line=distance>.5?L.polyline([],{renderer,className:'journey-thread',noClip:true,smoothFactor:0,color,weight:1.4,opacity:.58,interactive:false}).addTo(traces):null;
+   if(line)line.getElement().style.color=color;
+   setHead(from,story,color);
+   const camera=still?0:2000,duration=Math.max(still?1200:same?1600:6400,minDuration-camera);
+   movement={routeKind:'arc',target,from,to,path,line,edgeKey,curve,color,story,camera,duration,minDuration,elapsed:0,last:performance.now(),zoom:target.precision==='region'?6:8,done};
+   const active=movement;
+   active.onRoute=onRoute;
+   if(allowRoad&&!still&&!story&&target.precision!=='region'){
+    active.routeKind='pending';
+    roadPath(from,to,distance).then(road=>{
+    if(movement!==active)return;
+    active.routeKind='arc';
+    if(road&&active.elapsed<active.camera){
+     active.curve=pathSampler(road);active.path=Array.from({length:1201},(_,i)=>active.curve(i/1200));
+     // Reach the next place briskly; let any unfinished paratext settle at arrival.
+     active.duration=4500;active.routeKind='road';
+    }
+    active.onRoute(active.routeKind);
+   });
+   }else onRoute('arc');
+   if(still){showDestination(target);setHead(to,story,color);line?.setLatLngs(path);framing([from,to],7,false,false);}
+   else framing([from,to],movement.zoom,false,true,camera/1000);
+   raf=requestAnimationFrame(drawMotion);
+  },
+  focus(target){closingCoords=null;breathe(false);if(!target)return;showDestination(target);setHead(point(target),Boolean(target.key),collectorColour(target));if(!target.key)markVisited(point(target),collectorColour(target));framing([point(target)],target.precision==='region'?7:9,true);},
+  connections(items,kind,colour){clearDestination();constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);framing(nodes.map(point),7);breathe(true);},
+  clearConstellation(){constellation.clearLayers();},
+  overview(route,closing=false){clearDestination();const coords=[...remembered.values(),...route.map(point)];closingCoords=closing?coords:null;if(closing){map.invalidateSize({pan:false});frameClosing();}else framing(coords,7,false);breathe(true);},
+  pause(){if(movement&&raf!==null){movement.elapsed+=performance.now()-movement.last;stopFrame();}map.stop();},
+  resume,
+  setMapType(type){if(!MAP_TYPES.includes(type))return;mapType=type;if(terrainReady)applyMapType(terrainMap,type);},
+  refreshTravel(readingTime,done,onRoute){
+   if(!movement)return null;
+   movement.minDuration=movement.elapsed+readingTime;
+   movement.done=done;
+   if(onRoute)movement.onRoute=onRoute;
+   return movement.routeKind;
+  },
+  finishTravel,
+  cancel,
+  resize(){map.invalidateSize({pan:false});},
+  destroy(){destroyed=true;cancel();observer.disconnect();map.remove();}
+ };
+}

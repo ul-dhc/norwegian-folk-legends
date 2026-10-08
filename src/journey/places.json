@@ -1,0 +1,14 @@
+{
+  "SIN373": [
+    {
+      "key": "finnskogen",
+      "name": "Finnskogen",
+      "lat": 60.60349,
+      "lon": 12.37164,
+      "precision": "region",
+      "role": "family",
+      "quote": "Mannen min, han Karl, var fødd innpå Finnskoge inne ved svenskegrensa.",
+      "coordinateSource": "norske_json/places.json#place-finnskogen"
+    }
+  ]
+}

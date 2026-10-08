@@ -1,0 +1,18 @@
+---
+import 'maplibre-gl/dist/maplibre-gl.css';
+import 'leaflet/dist/leaflet.css';
+import '../../terrain-comparison/style.css';
+const base=import.meta.env.BASE_URL;
+---
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Landscape study · Legend journey</title></head>
+<body><main id="terrain-study" data-endpoint={`${base}journey-data.json`}>
+<header><div><span class="eyebrow">LEGEND JOURNEY / LANDSCAPE STUDY</span><h1>Let the landscape breathe.</h1><p>Same place, same scale. A separate terrain experiment.</p></div><a href={`${base}journey/`}>Return to the journey ↗</a></header>
+<nav aria-label="Comparison settings">
+<label>Place <select id="place"><option value="SIN1">Verdal</option><option value="SIN115">Nord-Aurdal</option><option value="SIN204">Bjelland</option></select></label>
+<label>Scale <select id="scale"><option value="6">Region</option><option value="8" selected>Landscape</option><option value="10">Local roads</option></select></label>
+<button id="view" aria-pressed="false">Expand new map</button><button id="reading" aria-pressed="false">Preview a legend</button>
+<label>Relief <input id="relief" type="range" min="0" max="1" step=".05" value=".65"/></label>
+</nav>
+<section class="maps"><article id="old-panel"><div id="old-map" class="map"></div><div class="map-label"><b>Current raster treatment</b><span>Inverted tiles + blended hillshade</span></div></article><article id="new-panel"><div id="new-map" class="map"></div><div class="map-label"><b>Native dark terrain</b><span>Elevation shading + vector roads · no place labels</span></div><div id="story" hidden><span class="eyebrow">READING PREVIEW</span><h2 id="story-title"></h2><p id="story-text"></p><small>Opening excerpt · Norwegian original</small></div></article></section>
+<footer><p id="status" role="status">Loading terrain and map data…</p><p>OpenFreeMap / OpenStreetMap roads · Mapterhorn elevation. No map-wide tint or CSS filter on the new map. Public data services; availability is not guaranteed.</p></footer>
+</main><script>import '../../terrain-comparison/main.js';</script></body></html>

@@ -128,14 +128,9 @@ const JOURNEY_COLLECTOR_SPOTLIGHT_PHRASES = [
 ];
 
 const JOURNEY_INTRO = [
-  'This journey invites you into Norwegian folk legends as a living landscape. Mountains, waters, farms, roads, churches, and hidden places carry accounts of uncanny encounters and unseen beings.',
-  'Here, the landscape is never only scenery. Each place becomes part of the story – somewhere the strange was sensed, interpreted, remembered, and retold.',
-  'In the past, these accounts were presented as experiences that actually happened…',
-  'The collection contains 1,477 legends recorded across Norway between 1832 and 1954.',
-  'They survive through the work of {collectorCount} folk collectors, who travelled, listened, and wrote down what people told them – we can thank them for this heritage.',
-  '…and we thank also professor Kyrre Kverndokk, who digitized and brought this collection online, some time ago.',
-  'This journey offers another way through the archive – as a landscape to travel and explore through stories. And it is never the same.',
-  'Follow the threads. We begin with a collector…',
+  'Across Norway, places hold stories of uncanny encounters and unseen beings.',
+  'Passed from voice to voice, these legends survive through the work of narrators and collectors.',
+  'Follow a point of light through the archive. Each telling leaves a thread in the landscape.',
 ];
 
 const JOURNEY_COLLECTOR_POOL_SIZE = 20;
