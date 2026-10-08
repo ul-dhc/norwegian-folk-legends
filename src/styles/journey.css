@@ -127,7 +127,7 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 /* Shared night palette: a filled moving light, hollow memories of places. */
 .journey-orb-core{position:relative;display:block;width:10px;height:10px;margin:11px;border-radius:50%;background:#FFF7E6;box-shadow:0 0 7px 2px color-mix(in srgb,var(--orb-colour) 55%,transparent),0 0 18px 5px color-mix(in srgb,var(--orb-colour) 20%,transparent);animation:journey-light-breathe 5s ease-in-out infinite}
 @keyframes journey-light-breathe{50%{box-shadow:0 0 9px 2px color-mix(in srgb,var(--orb-colour) 45%,transparent),0 0 22px 6px color-mix(in srgb,var(--orb-colour) 15%,transparent)}}
-.journey-collector-hub span{display:block;box-sizing:border-box;width:16px;height:16px;margin:24px;border-radius:50%;border:1.5px solid var(--hub-colour);background:transparent;box-shadow:0 0 0 7px color-mix(in srgb,var(--hub-colour) 7%,transparent)}
+.journey-collector-hub span{display:block;box-sizing:border-box;width:4px;height:4px;margin:30px;border-radius:50%;border:0;background:var(--hub-colour);box-shadow:none}
 .journey-visited-dot{fill:none}
 
 /* A closing reflection on the actual records visited, with their people named. */
@@ -138,30 +138,36 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 .journey-summary p{max-width:none;font:13px/1.6 system-ui,sans-serif;margin:9px 0;color:var(--muted)}
 .journey-summary .journey-summary-counts{text-align:center;color:var(--gold);margin-bottom:14px}
 
-/* At the close, the completed route and its account each have their own space. */
-#legend-journey[data-scene=end] #journey-map{width:48%}
-#legend-journey[data-scene=end] .journey-shade{display:none}
-#legend-journey[data-scene=end] .journey-ending{left:51%;right:24px;top:100px;bottom:100px;width:auto;max-height:none;transform:none;text-align:left;padding:10px 12px}
-#legend-journey[data-scene=end] .journey-ending h2{font-size:clamp(26px,2.6vw,40px)}
+/* The closing words remain within the same open landscape. */
+#legend-journey[data-scene=end] #journey-map{width:100%;height:100%}
+#legend-journey[data-scene=end] .journey-shade{display:block;background:linear-gradient(90deg,transparent 22%,#080f1d55 52%,#080f1de0 100%)}
+#legend-journey[data-scene=end] .journey-ending{left:auto;right:6%;top:50%;bottom:auto;width:40%;max-height:calc(100% - 180px);transform:translateY(-45%);text-align:left;padding:12px 0;background:none}
+#legend-journey[data-scene=end] .journey-ending h2{font-size:clamp(30px,3.5vw,48px);font-weight:400}
+#legend-journey[data-scene=end] .journey-ending>p:not(.journey-ending-note){font-family:Georgia,serif;font-size:clamp(17px,1.5vw,22px);line-height:1.65}
 #legend-journey[data-scene=end] .journey-ending p{margin-left:0;margin-right:0}
+#legend-journey[data-scene=end] .journey-summary{margin:22px 0;padding-left:16px;border-left:1px solid #d2b95755}
 #legend-journey[data-scene=end] .journey-summary-counts{text-align:left}
-#legend-journey[data-scene=end] .journey-welcome-actions{justify-content:flex-start}
+#legend-journey[data-scene=end] .journey-welcome-actions{justify-content:flex-start;flex-wrap:wrap;gap:8px}
+#legend-journey[data-scene=end] .journey-primary{background:#d2b95714;border-color:#d2b95777;color:var(--gold);font-weight:400}
 @media(max-width:800px){
- #legend-journey[data-scene=end] #journey-map{width:100%;height:40%}
- #legend-journey[data-scene=end] .journey-ending{left:12px;right:12px;top:41%;bottom:92px;padding:10px 12px}
- #legend-journey[data-scene=end] .journey-ending h2{font-size:26px}
+ #legend-journey[data-scene=end] .journey-shade{background:linear-gradient(transparent 15%,#080f1d55 35%,#080f1de8 65%)}
+ #legend-journey[data-scene=end] .journey-ending{left:24px;right:24px;top:42%;bottom:42px;width:auto;max-height:none;transform:none;padding:10px 0}
+ #legend-journey[data-scene=end] .journey-ending h2{font-size:28px}
+ #legend-journey[data-scene=end] .journey-ending>p:not(.journey-ending-note){font-size:17px}
 }
 
 /* Keep the breathing network from competing with the welcome copy. */
 .journey-welcome{isolation:isolate}
-.journey-welcome::before{content:'';position:absolute;inset:-36px -48px;z-index:-1;pointer-events:none;background:#080f1db8;border-radius:48px;box-shadow:0 0 42px 28px #080f1db8;filter:blur(12px)}
+.journey-welcome::before{content:'';position:absolute;inset:-36px -48px;z-index:-1;pointer-events:none;background:#080f1d88;border-radius:48px;box-shadow:0 0 42px 28px #080f1d88;filter:blur(12px)}
 #legend-journey .journey-welcome button{background:#101c2a;border-color:#7d8c9a;color:var(--ink)}
 #legend-journey .journey-welcome button[aria-pressed=true]{background:#1b2937;border-color:var(--gold);color:var(--gold)}
 #legend-journey .journey-welcome .journey-themes button[aria-pressed=true]{border-color:var(--theme-colour);color:var(--theme-colour)}
 #legend-journey .journey-welcome button:hover{background:#263749}
-#legend-journey .journey-welcome .journey-primary{background:var(--gold);border-color:var(--gold);color:#101923}
+#legend-journey .journey-welcome .journey-primary{background:var(--gold);border-color:var(--gold);color:#101923;transition:background-color .25s ease,border-color .25s ease,box-shadow .25s ease}
+#legend-journey .journey-welcome .journey-primary:is(:hover,:focus-visible){background:#e4cc76;border-color:#e4cc76;color:#101923;box-shadow:0 0 20px #d2b95726}
+#legend-journey .journey-welcome .journey-primary:active{background:#c4aa48;border-color:#c4aa48;color:#101923;box-shadow:none}
 #legend-journey .journey-welcome p,#legend-journey .journey-welcome small{color:#e2e7e8}
-@media(max-width:700px){.journey-welcome::before{inset:-18px -12px;border-radius:24px;box-shadow:0 0 24px 12px #080f1db8}}
+@media(max-width:700px){.journey-welcome::before{inset:-18px -12px;border-radius:24px;box-shadow:0 0 24px 12px #080f1d88}}
 
 /* Give the featured network the foreground; keep travelled threads as context. */
 #journey-map .leaflet-journeyTraces-pane,#journey-map .journey-orb{transition:opacity 1s ease,filter 1s ease}
@@ -207,20 +213,218 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
  .journey-welcome .journey-themes span{font-size:16px}
 }
 
-/* Collector story: retain an open map alongside compact archival material. */
-.journey-moe-card{position:absolute;z-index:480;right:4%;bottom:125px;width:min(480px,43%);max-height:calc(100% - 270px);overflow:auto;padding:22px;background:#0c1825ed;border:1px solid #b3c1b92b;border-radius:16px;box-shadow:0 12px 45px #0005}
-.journey-moe-card p{font-size:clamp(15px,1.4vw,19px);line-height:1.65;margin:0 0 10px;color:var(--ink)}
-.journey-moe-card small,.journey-moe-card figcaption{font-size:10px;line-height:1.5;color:var(--muted)}
-.journey-moe-card figure{margin:0 0 16px;text-align:center}
-.journey-moe-card img{display:block;margin:auto;max-width:100%;width:auto;height:min(27vh,250px);object-fit:contain;border-radius:3px}
-.journey-moe-card figcaption{margin-top:8px}
+/* Archival material inhabits the landscape; text remains a quiet reading layer. */
+.journey-moe-art{position:absolute;inset:12% 48% 15% 3%;z-index:425;pointer-events:none}
+.journey-moe-art img{position:absolute;left:50%;translate:-50% 0;width:auto;max-width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.journey-moe-art.photograph{mask-image:radial-gradient(ellipse at center,#000 36%,transparent 73%)}
+.journey-moe-art.photograph img{opacity:.8}
+.journey-moe-art.encounter{inset:0 46% 13% 1%;mask-image:linear-gradient(transparent,#000 13%,#000 91%,transparent)}
+.encounter .moe-original{mask-image:radial-gradient(ellipse,#000 38%,transparent 75%);animation:moe-photo-dissolve 28s ease-in-out both}
+.encounter .moe-figures{mask-image:url(../assets/moe/liv-original-mask.svg);mask-size:100% 100%;mask-repeat:no-repeat;opacity:1}
+.journey-moe-art.manuscript{inset:10% 48% 13% 4%}
+.manuscript img{mask-image:none}
+.manuscript .moe-original{transform-origin:center center;animation:moe-paper-landscape 32s ease-in-out both}
+.journey-moe-art.archive{inset:15% 53% 17% 7%;transform:rotate(-4deg)}
+.journey-moe-art.archive img{opacity:.8}
+.journey-moe-card{position:absolute;z-index:480;right:6%;top:50%;transform:translateY(-42%);width:min(460px,39%);max-height:calc(100% - 230px);overflow:auto;padding:22px 0;background:linear-gradient(90deg,transparent,#09142188 15%,#09142188 85%,transparent);text-shadow:0 2px 16px #020710}
+.journey-moe-card p{font-weight:400;font-size:clamp(17px,1.6vw,23px);line-height:1.65;margin:18px 0;color:var(--ink);font-family:Georgia,serif}
+.moe-chapter{font-size:10px;letter-spacing:.2em;color:var(--gold)}
+.moe-credit{display:block;font-size:10px;line-height:1.6;color:var(--muted);margin-top:18px;max-width:38em}
+.moe-count{font-family:Georgia,serif;font-size:clamp(64px,9vw,120px);font-weight:400;line-height:1.1;display:block;margin-top:18px;color:var(--gold)}
+.moe-count small{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:.04em;color:var(--muted)}
+#legend-journey .moe-inspect{font-size:12px;padding:7px 12px;background:#101d2b66}
+.moe-inspected{display:block;width:auto;max-width:100%;max-height:65vh;margin:auto}
+@keyframes moe-photo-dissolve{0%,15%{opacity:1}90%,100%{opacity:0}}
+#legend-journey.paused .journey-moe-art img{animation-play-state:paused}
+#legend-journey.still-art .journey-moe-art img{animation:none}
+#legend-journey.still-art .moe-figures{display:none}
 .journey-info{max-width:720px;width:calc(100% - 36px);max-height:80dvh;overflow:auto;border:1px solid #758791;border-radius:16px;padding:28px;background:#101d2b;color:#f3efe6;font-size:14px;line-height:1.65}
 .journey-info::backdrop{background:#020810bd}.journey-info h2{font-family:Georgia,serif;font-weight:400}.journey-info li{margin:12px 0}.journey-info a{text-decoration:underline!important}#journey-info-close{float:right}
-@media(max-width:700px){.journey-moe-card{left:18px;right:18px;width:auto;bottom:125px;max-height:calc(100% - 265px);padding:16px}.journey-moe-card.has-image{display:grid;grid-template-columns:30% 1fr;gap:14px}.journey-moe-card img{width:100%;height:auto;max-height:180px}.journey-moe-card p{font-size:14px;line-height:1.55}.journey-moe-card figure{margin:0}.journey-moe-card figcaption{font-size:8px}.journey-modes{flex-wrap:wrap}}
-@media(max-height:650px){.journey-moe-card{bottom:105px;max-height:calc(100% - 210px)}.journey-moe-card.has-image{display:grid;grid-template-columns:32% 1fr;gap:14px}.journey-moe-card img{height:auto;max-height:170px}.journey-moe-card p{font-size:14px}.journey-moe-card figure{margin:0}}
+@media(max-width:700px){
+ .journey-moe-art,.journey-moe-art.encounter,.journey-moe-art.manuscript,.journey-moe-art.archive{inset:10% 12% 42%;transform:none}
+ .journey-moe-card{top:auto;transform:none;left:24px;right:24px;bottom:110px;width:auto;max-height:37%;padding:10px 0;background:linear-gradient(transparent,#091421cc 15%)}
+ .journey-moe-card p{font-size:16px;line-height:1.5;margin:10px 0}.moe-credit{font-size:9px;margin-top:8px}.moe-chapter{font-size:8px}.moe-count{font-size:56px;float:left;margin:8px 18px 8px 0}.moe-count small{max-width:100px;font-size:10px}.journey-modes{flex-wrap:wrap}
+}
+@media(min-width:701px) and (max-height:650px){.journey-moe-card{max-height:calc(100% - 170px);right:5%;width:43%}.journey-moe-card p{font-size:17px;line-height:1.5}.moe-credit{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){.journey-moe-art .moe-figures{display:none}}
 
 .moe-manuscript{display:block;color:var(--gold)!important;text-decoration:underline!important;font-size:13px;margin:14px 0}
 
 .journey-playback-settings{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .journey-settings-credit{font-size:10px;line-height:1.5;margin:8px 0 20px;color:var(--muted)}
 #legend-journey .journey-playback-settings button[aria-pressed=true]{background:#d2b95718;border-color:var(--gold)}
+
+@keyframes moe-paper-landscape{0%,20%{opacity:1;transform:scale(1)}60%{opacity:.65;transform:scale(1.25,1.06)}95%,100%{opacity:0;transform:scale(1.6,1.12)}}
+
+/* The figures use the original pixels, registered over the fading background. */
+.encounter.settled .moe-original{animation:none;opacity:0}
+.liv-voice span{animation:liv-words 9s ease-out both;animation-delay:var(--voice-delay);position:relative}
+@keyframes liv-words{from{opacity:.18}to{opacity:1}}
+.liv-voice.voice-readable span{animation:none}
+#legend-journey.paused .liv-voice span{animation-play-state:paused}
+#legend-journey.still-art .liv-voice span{animation:none}
+#journey-reading-original{margin-top:12px}
+#legend-journey.liv-reading .journey-reading{max-height:calc(100% - 245px)}
+@media(max-width:899px){
+ #legend-journey.liv-reading .journey-moe-art.encounter{inset:4% 20% 53%}
+ #legend-journey.liv-reading .journey-reading{max-height:calc(58% - 110px);bottom:110px}
+ #legend-journey.liv-reading .journey-reading .journey-passage{font-size:18px;line-height:1.6}
+ #legend-journey.liv-reading #journey-title{font-size:18px}
+}
+
+#legend-journey.still-art .encounter .moe-original{opacity:1}
+@media(prefers-reduced-motion:reduce){.encounter .moe-original{opacity:1}}
+
+/* A photograph is evidence of the encounter: retain its whole composition. */
+.journey-moe-art.liv-photo,.journey-moe-art.whole-photo{inset:17% 49% 15% 5%;mask-image:none}
+.journey-moe-art.liv-photo img,.journey-moe-art.whole-photo img{opacity:.78;animation:none;filter:none}
+.moe-archive-choices{display:flex;flex-direction:column;gap:12px;margin:16px 0}
+#legend-journey .moe-archive-choices a{color:var(--gold);text-decoration:underline;text-underline-offset:4px;font-size:13px}
+.moe-road-unfold{stroke-dasharray:1;stroke-dashoffset:1;animation:moe-road-unfold var(--road-duration) cubic-bezier(.4,0,.2,1) var(--road-delay) both}
+@keyframes moe-road-unfold{to{stroke-dashoffset:0}}
+#legend-journey.paused .moe-road-unfold{animation-play-state:paused}
+.journey-effects-still .moe-road-unfold{animation:none;stroke-dashoffset:0}
+@media(prefers-reduced-motion:reduce){.moe-road-unfold{stroke-dashoffset:0}}
+@media(max-width:899px){
+ .journey-moe-art.liv-photo,.journey-moe-art.whole-photo,#legend-journey.liv-reading .journey-moe-art.liv-photo{inset:14% 18% 53%}
+}
+
+/* Reserve the heading and controls; archival images retain their full edges. */
+@media(min-width:900px){
+ .journey-moe-art.liv-photo,.journey-moe-art.whole-photo{top:21%}
+ .journey-moe-art.manuscript,.journey-moe-art.archive{top:23%}
+}
+@media(max-width:899px){
+ .journey-moe-art.liv-photo,.journey-moe-art.whole-photo,#legend-journey.liv-reading .journey-moe-art.liv-photo,.journey-moe-art.manuscript,.journey-moe-art.archive{inset:20% 20% 57%;transform:none}
+ .journey-moe-card{max-height:45%}
+}
+
+/* Let one thought settle before the next appears; keep the landscape continuous. */
+#legend-journey.moe-ambient .journey-reading,
+#legend-journey.moe-ambient .journey-caption{animation:none}
+#legend-journey.scene-changing .journey-moe-card,
+#legend-journey.scene-changing .journey-reading,
+#legend-journey.scene-changing .journey-ending{pointer-events:none}
+
+/* Lines emerge in reading order and remain still and fully readable. */
+.legend-revealing #journey-text-window{overflow:visible;mask-image:none}
+.legend-revealing .reading-word{display:inline-block;white-space:pre;animation:none}
+
+/* At the archive threshold the landscape recedes into a quiet reading table. */
+#legend-journey #journey-map{transition:opacity 2.8s ease}
+#legend-journey.archive-open #journey-map{opacity:.12}
+
+.journey-archive{position:absolute;z-index:480;inset:0;overflow:auto;padding:32px 4% 100px;background:radial-gradient(ellipse at 50% 48%,#24313bbb,transparent 66%),linear-gradient(#080f1ddd,#080f1d88 55%,#080f1ddd);scrollbar-width:thin;scrollbar-color:#d2b95755 transparent}
+.archive-intro{padding-right:210px}
+.archive-eyebrow{font-size:10px;letter-spacing:.2em;color:var(--gold)}
+.archive-intro h2{font:400 clamp(25px,3vw,42px)/1.2 Georgia,serif;margin:12px 0}
+.archive-intro p{font-size:14px;line-height:1.65;max-width:85ch;color:#bfcacb;margin:0}
+.archive-provenance{display:flex;list-style:none;padding:0;margin:22px 0 18px;gap:24px;max-width:960px}
+.archive-provenance li{flex:1;border-top:1px solid #d2b95744;padding-top:8px;color:#e4ddd0;font-size:12px;position:relative}
+.archive-provenance li:before{content:'';position:absolute;top:-3px;left:0;width:5px;height:5px;background:var(--gold);border-radius:50%}
+.archive-provenance small{display:block;font-size:8px;letter-spacing:.14em;color:#a7b4b7;margin-bottom:4px}
+.archive-folio{display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,2vw,30px);padding:14px 6px 12px;isolation:isolate}
+#legend-journey .archive-leaf{flex:1;min-width:0;max-width:320px;background:none;border:0;border-radius:0;padding:0;color:#bcc6c8;text-align:left;transition:color 1s}
+.archive-sheet{display:block;position:relative;height:clamp(180px,35vh,390px);transition:transform 1.8s cubic-bezier(.22,.61,.36,1);transform:translateY(0);filter:drop-shadow(0 10px 18px #0005)}
+.archive-sheet img{width:100%;height:100%;object-fit:contain;display:block}
+.archive-leaf[aria-pressed=true] .archive-sheet{transform:translateY(-8px)}
+.archive-page-marker{position:absolute;left:-5px;top:var(--page-position);width:16px;height:1px;background:var(--gold);opacity:0;transition:opacity 1.5s}
+.archive-leaf[aria-pressed=true] .archive-page-marker{opacity:1}
+.archive-leaf-label{display:block;border-bottom:1px solid #b6cbd325;padding:10px 0 9px;font-family:Georgia,serif;font-size:clamp(12px,1.1vw,16px);line-height:1.35;min-height:55px;transition:border-color 1.2s}
+.archive-leaf-label small{display:block;font:8px/1.7 system-ui,sans-serif;letter-spacing:.13em;color:#9cacb0}
+#legend-journey .archive-leaf[aria-pressed=true]{color:#e8cb72}
+.archive-leaf[aria-pressed=true] .archive-leaf-label{border-color:#d2b957}
+#legend-journey .archive-leaf:focus-visible{outline:1px solid var(--gold);outline-offset:5px}
+.archive-context{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;margin:9px auto 0;max-width:1060px;min-height:112px}
+.archive-context small{color:var(--gold);font-size:8px;letter-spacing:.13em}
+.archive-context h3{font:400 23px/1.25 Georgia,serif;margin:5px 0 7px}
+.archive-context p{font-size:13px;line-height:1.65;color:#c6cecf;margin:0;max-width:84ch}
+.archive-context-actions{display:flex;flex-direction:column;align-items:flex-start;gap:13px;white-space:nowrap}
+.archive-context-actions a,.archive-further a{color:var(--gold)!important;font-size:12px;text-decoration:underline!important;text-underline-offset:4px}
+.archive-further{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #b6cbd31a;padding-top:14px;margin-top:18px;gap:18px;font-size:10px;color:#9aaab0}
+.archive-further nav{display:flex;gap:24px}
+@media(min-width:900px) and (max-height:740px){
+ .journey-archive{padding-top:23px}.archive-intro h2{font-size:28px;margin:8px 0}.archive-intro p{font-size:12px}.archive-provenance{margin:14px 0 6px}.archive-sheet{height:27vh;min-height:140px}.archive-folio{padding-top:10px;padding-bottom:4px}.archive-leaf-label{min-height:43px;padding-top:6px;font-size:12px}.archive-context{min-height:94px;margin-top:4px}.archive-context h3{font-size:20px}.archive-context p{font-size:12px}.archive-further{margin-top:10px;padding-top:10px}
+}
+@media(max-width:899px){
+ .journey-archive{padding:80px 22px 112px}.archive-intro{padding-right:0}.archive-intro h2{font-size:30px}.archive-intro p{font-size:13px}.archive-provenance{gap:12px;display:grid;grid-template-columns:1fr 1fr;margin:18px 0}.archive-provenance li{font-size:11px}.archive-folio{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#d2b95755 transparent;padding:12px 6px}.archive-sheet{height:240px}#legend-journey .archive-leaf{flex:0 0 160px;scroll-snap-align:start}.archive-leaf-label{font-size:13px;min-height:55px}.archive-context{grid-template-columns:1fr;gap:14px;margin-top:14px}.archive-context h3{font-size:24px}.archive-context-actions{flex-direction:row;align-items:center;gap:20px}.archive-further{flex-direction:column;align-items:flex-start;margin-top:22px}.archive-further nav{flex-wrap:wrap;gap:16px}.archive-open .journey-bottom{background:#080f1def;border-radius:25px;padding:6px}.archive-open .journey-top-tools{background:#080f1de8;border-radius:30px}
+}
+#legend-journey.still-art .archive-sheet,#legend-journey.still-art #journey-map{transition:none}
+
+.archive-sheet{--sheet-height:clamp(180px,35vh,390px);height:var(--sheet-height);width:calc(var(--sheet-height)*.707);max-width:100%;margin-inline:auto}
+@media(min-width:900px) and (max-height:740px){.archive-sheet{--sheet-height:max(140px,27vh)}}
+@media(max-width:899px){.archive-sheet{--sheet-height:240px}}
+
+/* One quiet landscape remains in place as the archive narrows to Moe. */
+.journey-network-overview .leaflet-journeyNetwork-pane{filter:saturate(.55);animation:none}
+.journey-network-quiet{opacity:.28}
+
+/* Archival photographs overlap gently without altering their faces or composition. */
+.journey-moe-art.life-photos figure{position:absolute;inset:0;margin:0;opacity:0}
+.journey-moe-art.life-photos img{height:calc(100% - 38px);opacity:.78}
+.life-photos figcaption{position:absolute;bottom:0;width:100%;text-align:center;color:var(--ink);font:12px/1.5 system-ui,sans-serif;letter-spacing:.04em}
+.journey-moe-art.life-photos-still{display:flex;gap:12px}
+.journey-moe-art.life-photos-still figure{position:relative;flex:1;opacity:1}
+.life-photos-still figcaption{font-size:10px}
+@media(max-width:899px){.life-photos figcaption{font-size:10px}.journey-moe-art.life-photos-still{left:6%;right:6%}.life-photos-still figcaption{font-size:8px}}
+
+/* Registered copies of the original keep both people continuous as their surroundings recede. */
+.journey-moe-art.liv-photo .liv-figures{opacity:0;mask-image:url(../assets/moe/liv-original-mask.svg);mask-size:100% 100%;mask-repeat:no-repeat}
+.journey-moe-art.liv-photo img{transform-origin:50% 72%}
+#legend-journey.still-art .liv-figures{display:none}
+@media(prefers-reduced-motion:reduce){.journey-moe-art.liv-photo .liv-figures{display:none}}
+
+/* A translucent paper wash quiets unrelated writing above the legend's dividing rule. */
+.manuscript-focus-page{position:relative;height:100%;aspect-ratio:1592/2378;max-width:100%;margin:auto;overflow:hidden;transform-origin:center;animation:moe-paper-landscape 32s ease-in-out both}
+.journey-moe-art.manuscript .manuscript-focus-page img{left:50%;width:100%;height:100%;object-fit:fill;animation:none;transform:none}
+.manuscript-upper-wash{position:absolute;inset:0 0 33.5%;backdrop-filter:blur(4px) saturate(.65);background:linear-gradient(125deg,#d3bc9433,#efe0bb55 45%,#cdb78e33);mask-image:linear-gradient(#000 0%,#000 90%,transparent 100%);animation:manuscript-wash-in 8s ease-in-out both}
+@keyframes manuscript-wash-in{0%,12%{opacity:0}100%{opacity:1}}
+#legend-journey.paused .manuscript-focus-page,#legend-journey.paused .manuscript-upper-wash{animation-play-state:paused}
+#legend-journey.still-art .manuscript-focus-page,#legend-journey.still-art .manuscript-upper-wash{animation:none}
+@media(prefers-reduced-motion:reduce){.manuscript-focus-page,.manuscript-upper-wash{animation:none}}
+
+/* The collection becomes a slow field of readable titles beside an invitation to SAMLA. */
+.journey-archive:has(.archive-legacy){padding:100px 4% 110px;background:linear-gradient(90deg,#080f1d77,#080f1ddd 66%)}
+.archive-legacy{display:grid;grid-template-columns:1.05fr 1fr;gap:6%;min-height:100%;align-items:center}
+.legacy-landscape{position:relative;min-height:440px;height:62vh;isolation:isolate}
+.legacy-manuscripts{position:absolute;inset:3% 1% 10%;z-index:-1;pointer-events:none;opacity:.26}
+.legacy-manuscripts img{position:absolute;height:85%;width:42%;object-fit:contain;left:calc(var(--sheet-index)*13%);top:calc(var(--sheet-index)*2%);transform-origin:center;animation:legacy-paper 36s ease-in-out both;animation-delay:calc(var(--sheet-index)*2s)}
+@keyframes legacy-paper{from{transform:scaleX(1);opacity:.5}to{transform:scaleX(1.18);opacity:.2}}
+.legacy-titles-window{position:absolute;inset:0 0 70px;overflow:hidden;mask-image:linear-gradient(transparent,#000 12%,#000 83%,transparent);outline-offset:4px}
+.legacy-titles{display:grid;grid-template-columns:1fr 1fr;gap:23px 24px;list-style:none;margin:0;padding:45px 8px 60px;animation:legacy-titles-rise 200s linear forwards}
+@keyframes legacy-titles-rise{from{transform:translateY(0)}to{transform:translateY(calc(-100% + 280px))}}
+.legacy-titles li{min-width:0}.legacy-titles a{display:block;color:#ece5d6!important;text-decoration:none;text-shadow:0 2px 9px #080f1d}
+.legacy-titles span{font:400 clamp(16px,1.5vw,23px)/1.35 Georgia,serif}.legacy-titles small{display:block;font:9px/1.5 system-ui,sans-serif;color:#b7c1bf;margin-top:6px}
+.legacy-titles a:hover span{color:var(--gold)}
+.legacy-catalogue-note{position:absolute;bottom:20px;left:0;right:0;display:flex;gap:14px;align-items:center;justify-content:space-between;font-size:11px;color:#c2cbc8}
+#legend-journey .legacy-catalogue-note button{font-size:11px;white-space:nowrap;padding:8px 12px}
+.legacy-page-credit{position:absolute;bottom:-16px;font-size:9px;color:#8fa19f}
+.legacy-invitation h2{font:400 clamp(30px,3.5vw,52px)/1.1 Georgia,serif;margin:16px 0 22px}
+.legacy-invitation p{font:400 clamp(16px,1.3vw,19px)/1.65 Georgia,serif;color:#e3e4dc;margin:0 0 18px;max-width:48ch}
+.legacy-invitation .legacy-digital{font:14px/1.65 system-ui,sans-serif;color:#b7c5c5}
+.legacy-links{display:flex;align-items:center;gap:22px;margin:24px 0 16px;flex-wrap:wrap}
+.legacy-links a{color:var(--gold);font-size:13px;text-underline-offset:4px}
+.legacy-links .legacy-samla{background:var(--gold);color:#101923!important;border-radius:28px;padding:13px 23px;text-decoration:none;font-weight:600}.legacy-links .legacy-samla:hover{background:#e4cc76}
+.legacy-invite-note{font-size:11px;line-height:1.6;color:#a7b9b7;display:block}
+#legend-journey.paused .legacy-titles,#legend-journey.paused .legacy-manuscripts img,.legacy-titles-window:hover .legacy-titles,.legacy-titles-window:focus-within .legacy-titles{animation-play-state:paused}
+.archive-read-titles .legacy-titles-window{overflow:auto;mask-image:none;scrollbar-width:thin}
+.archive-read-titles .legacy-titles{animation:none;padding-top:8px}
+#legend-journey.still-art .legacy-titles,#legend-journey.still-art .legacy-manuscripts img{animation:none}
+#legend-journey.still-art .legacy-titles-window{overflow:auto;mask-image:none}
+@media(prefers-reduced-motion:reduce){.legacy-titles,.legacy-manuscripts img{animation:none}.legacy-titles-window{overflow:auto;mask-image:none}}
+@media(max-width:899px){.journey-archive:has(.archive-legacy){padding:90px 22px 115px}.archive-legacy{display:flex;flex-direction:column;gap:35px}.legacy-landscape{width:100%;height:360px;min-height:360px}.legacy-invitation h2{font-size:32px}.legacy-invitation p{font-size:17px}.legacy-invitation .legacy-digital{font-size:14px}.legacy-catalogue-note{font-size:10px}.legacy-titles span{font-size:17px}}
+@media(min-width:900px) and (max-height:750px){.journey-archive:has(.archive-legacy){padding-top:85px}.legacy-landscape{min-height:360px;height:60vh}.legacy-invitation h2{font-size:34px;margin:10px 0 16px}.legacy-invitation p{font-size:15px;margin-bottom:12px}.legacy-invitation .legacy-digital{font-size:12px}.legacy-links{margin:18px 0 12px}}
+
+#legend-journey[data-scene=end] .journey-ending.ending-actions-only{left:50%;right:auto;top:50%;bottom:auto;transform:translate(-50%,-50%);width:calc(100% - 48px);max-width:680px;max-height:none;padding:0;background:none;text-align:center}
+.ending-actions-only .journey-welcome-actions{justify-content:center;flex-wrap:wrap;margin:0}
+
+/* Frame only Moe's face and shoulders from the unchanged family photograph. */
+.journey-moe-art.life-photos .life-boy-detail{position:absolute;left:50%;top:15%;transform:translateX(-50%);width:50%;height:65%;opacity:.78;overflow:hidden;mask-image:linear-gradient(to bottom,#000 82%,transparent)}
+
+#legend-journey[data-scene=end] .ending-actions-only .journey-welcome-actions{justify-content:center}
+#legend-journey[data-scene=end]:has(.ending-actions-only) .journey-shade{background:radial-gradient(ellipse at center,transparent 35%,#080f1d66 100%)}
+
+#legend-journey .journey-map-heading{max-width:calc(100% - 190px)}
+#legend-journey .journey-map-heading p{font-size:clamp(22px,2.5vw,34px);margin:0 0 6px}
+#legend-journey .journey-map-heading>span{font-size:11px;letter-spacing:.025em}
+@media(max-width:700px){#legend-journey .journey-map-heading{left:18px;max-width:calc(100% - 180px)}#legend-journey .journey-map-heading>span{font-size:9px}}
