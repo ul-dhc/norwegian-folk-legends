@@ -79,14 +79,14 @@ export function createJourneyMap(container,onError){
   destinationLabel=L.tooltip({permanent:true,direction:'right',offset:[14,0],className:'journey-destination-label',opacity:1,interactive:false}).setLatLng(coords).setContent(text).addTo(map);
   destinationLabel.destinationKey=key;
  }
- function startIntroZoom(amount=1.12,duration=24000){
+ function startIntroZoom(amount=1.12,duration=24000,origin=[.45,.5]){
   const landscape=map.getPane('mapPane');
   const from=parseFloat(getComputedStyle(landscape).scale)||1;
   introZoom?.cancel();introZoom=null;zoomActive=false;
   if(still||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   // Scale the landscape and its threads together, avoiding repeated tile re-projection.
   zoomActive=true;
-  landscape.style.transformOrigin=`${container.clientWidth*.45}px ${container.clientHeight*.5}px`;
+  landscape.style.transformOrigin=`${container.clientWidth*origin[0]}px ${container.clientHeight*origin[1]}px`;
   introZoom=landscape.animate([{scale:String(from)},{scale:String(from*amount)}],{
    duration,easing:'cubic-bezier(.25,.1,.25,1)',fill:'forwards'
   });
@@ -230,7 +230,7 @@ export function createJourneyMap(container,onError){
    });
    for(const position of coords.values())L.circleMarker(position,{renderer:networkRenderer,radius:2,color:'#D2B957',weight:0,fill:true,fillOpacity:.85,interactive:false}).addTo(constellation);
    framing([...coords.values()],6,true,!paused,3.2);
-   startIntroZoom(1.07,20000);
+   startIntroZoom(1.8,20000,container.clientWidth>=900?[.3,.65]:[.5,.35]);
   },
   focus(target){closingCoords=null;breathe(false);if(!target)return;showDestination(target);setHead(point(target),Boolean(target.key),collectorColour(target));if(!target.key)markVisited(point(target),collectorColour(target));framing([point(target)],target.precision==='region'?7:9,true);},
   connections(items,kind,colour){clearDestination();constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);framing(nodes.map(point),7);breathe(true);},

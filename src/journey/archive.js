@@ -22,17 +22,14 @@ export function archiveMarkup(lang,sources,records=[]){
   <div class="legacy-titles-window" tabindex="0" aria-label="${en?'Legends collected by Moltke Moe':'Sagn samlet av Moltke Moe'}">
    <ol class="legacy-titles">${legends.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener"><span>${escape(r.tittel||r.ml_title||r.source_text_id)}</span><small>${escape(r.sted)} · ${escape(r.source_text_id)}</small></a></li>`).join('')}</ol>
   </div>
-  <div class="legacy-catalogue-note"><span>${legends.length} ${en?'records in this dataset · a small part of his work':'opptegnelser i datasettet · en liten del av arbeidet hans'}</span><button type="button" data-archive-titles aria-pressed="false">${en?'Read all titles':'Les alle titlene'}</button></div>
+  <div class="legacy-catalogue-note"><button type="button" data-archive-titles aria-pressed="false">${en?'Read all titles':'Les alle titlene'}</button></div>
   <p class="legacy-page-credit">${en?'Manuscript pages':'Manuskriptsider'}: NFS Moltke Moe 7 · SAMLA</p>
  </div>
  <section class="legacy-invitation">
-  <span class="archive-eyebrow">${en?'VOICES · HANDWRITING · DIGITAL ARCHIVE':'STEMMER · HÅNDSKRIFT · DIGITALT ARKIV'}</span>
-  <h2>${en?'A lifetime of listening':'Et liv med lytting'}</h2>
+  <h2>${en?'A life time of folklore collecting and listening':'Et liv med folkeminnesamling og lytting'}</h2>
   <p>${en?'People told their stories. Moe listened and wrote them down. A voice became handwriting; a local memory became something that could outlive its teller.':'Mennesker fortalte. Moe lyttet og skrev ned. En stemme ble til håndskrift; et lokalt minne ble til noe som kunne leve videre etter fortelleren.'}</p>
   <p>${en?'These 88 records are only a small part of the work preserved in the Norwegian Folklore Archives in Oslo. Today the Norwegian digital folklore archive SAMLA opens these collections to new readers.':'Disse 88 opptegnelsene er bare en liten del av arbeidet som er bevart i Norsk Folkeminnesamling i Oslo. I dag åpner det norske digitale folkeminnearkivet SAMLA samlingene for nye lesere.'}</p>
-  <p class="legacy-digital">${en?'Digitized pages let us see the handwriting. Catalogue information lets us find people and places. Transcriptions turn handwriting into computer-readable text, making parts of the collection searchable word by word.':'Digitaliserte sider lar oss se håndskriften. Katalogopplysninger lar oss finne mennesker og steder. Transkripsjoner gjør håndskrift til maskinlesbar tekst, slik at deler av samlingen kan søkes i ord for ord.'}</p>
-  <div class="legacy-links"><a class="legacy-samla" href="https://samla.no/viewer/" target="_blank" rel="noopener">${en?'Explore SAMLA':'Utforsk SAMLA'}</a><a href="${archiveUrl(4)}" target="_blank" rel="noopener">${en?'Open Moe’s notebook':'Åpne Moes notatbok'}</a></div>
-  <small class="legacy-invite-note">${en?'Search a name. Find a place. Follow a voice beyond this map.':'Søk etter et navn. Finn et sted. Følg en stemme videre fra kartet.'}</small>
+  <div class="legacy-links"><a href="${import.meta.env.BASE_URL}browse/?collector=collector-moltke-moe" target="_blank" rel="noopener">${en?"Read all of Moe’s legends in this database":"Les alle Moes sagn i denne databasen"}</a><a class="legacy-samla" href="https://samla.no/viewer/" target="_blank" rel="noopener">${en?'Explore SAMLA':'Utforsk SAMLA'}</a><a href="${archiveUrl(4)}" target="_blank" rel="noopener">${en?'Open Moe’s notebook':'Åpne Moes notatbok'}</a></div>
  </section></div>`;
 }
 export async function selectArchivePage(container,index,lang){
