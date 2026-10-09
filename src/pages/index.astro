@@ -70,6 +70,11 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     .daily-section .daily-icon .calendar-mark{grid-column:1;grid-row:1;width:24px;height:24px;padding:0;background:transparent;border-radius:0;color:var(--blue)}
     .daily-section .daily-icon .calendar-label{grid-column:2;grid-row:1;align-self:center;color:var(--blue)}
     .daily-section .daily-icon time{grid-column:1/-1;grid-row:2;margin:0;font:400 .8rem/1.5 var(--sans);color:var(--muted);letter-spacing:.02em}
+    :global(:root[data-theme=dark]) .daily-heading .eyebrow,
+    :global(:root[data-theme=dark]) .home-journeys .eyebrow,
+    :global(:root[data-theme=dark]) .daily-section .daily-icon .calendar-mark,
+    :global(:root[data-theme=dark]) .daily-section .daily-icon .calendar-label,
+    :global(:root[data-theme=dark]) .daily-section .daily-icon time{color:var(--butter)}
     .home-journeys{padding-top:3rem;padding-bottom:5rem;border-top:1px solid var(--line)}
     .home-journeys h2{font:400 clamp(2rem,3.5vw,2.7rem)/1.2 var(--serif);letter-spacing:-.025em}
     .journey-spotlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:2.5rem}
