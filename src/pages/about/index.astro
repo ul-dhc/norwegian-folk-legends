@@ -3,8 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ui from '../../i18n/ui.json';
 const sections = [
   { title: 'about.sourceTitle', paragraphs: ['about.source'], link: 'about.sourceLink', href: 'https://www2.hf.uio.no/eventyr_og_sagn/' },
-  { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' },
-  { title: 'about.developerTitle', paragraphs: ['about.developer'], link: 'about.developerLink', href: 'https://dhc.lu.lv/' }
+  { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' }
 ];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
@@ -21,6 +20,10 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
         {section.paragraphs.map(key => <p data-i18n={key}>{copy(key)}</p>)}
         <a class="icon-link about-link" href={section.href} target="_blank" rel="noopener noreferrer"><span data-i18n={section.link}>{copy(section.link)}</span><i data-lucide="external-link"></i></a>
       </section>)}
+      <section aria-labelledby="about-developer">
+        <h2 id="about-developer" data-i18n="about.developerTitle">{copy('about.developerTitle')}</h2>
+        <p><span data-i18n="about.developerBefore">{copy('about.developerBefore')}</span>{' '}<a href="https://dhc.lu.lv/" target="_blank" rel="noopener noreferrer" data-i18n="about.developerLink">{copy('about.developerLink')}</a>.</p>
+      </section>
       <section aria-labelledby="about-contact">
         <h2 id="about-contact" data-i18n="about.contactTitle">{copy('about.contactTitle')}</h2>
         <ul class="about-contacts">

@@ -206,8 +206,8 @@
   "about.samla": {"no": "SAMLA er det norske digitale arkivet for tradisjons- og kulturhistoriske arkiver. SAMLA inneholder et bredt spekter av kulturelle uttrykk og praksiser fra majoritetsbefolkningen, minoritetsbefolkninger og urfolkskulturer i Norge. Samlet gir samlingene et bredt bilde av utviklingen av hverdagsliv, verdensbilder og verdier.", "en": "SAMLA is the Norwegian digital archive for the tradition and cultural history archives. SAMLA contains a wide variety of cultural expressions and practices from the majority population, minority populations, and indigenous cultures in Norway. Together, the collections provide a broad picture of the development of everyday life, worldviews and values."},
   "about.samlaLink": {"no": "Utforsk SAMLA", "en": "Explore SAMLA"},
   "about.developerTitle": {"no": "Utvikling av plattformen", "en": "Platform development"},
-  "about.developer": {"no": "Plattformen er utviklet av Digital Humanities Center ved Universitetet i Latvia.", "en": "The platform is developed by the University of Latvia Digital Humanities Center."},
-  "about.developerLink": {"no": "University of Latvia Digital Humanities Center", "en": "University of Latvia Digital Humanities Center"},
+  "about.developerBefore": {"no": "Plattformen er utviklet av", "en": "The platform is developed by the"},
+  "about.developerLink": {"no": "Digital Humanities Center ved Universitetet i Latvia", "en": "University of Latvia Digital Humanities Center"},
   "about.samlaUse": {"no": "Plattformen bruker også digitalisert arkivmateriale fra SAMLA, med lenker til kildene i arkivet.", "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."},
   "about.development": {"no": "Denne plattformen er under utvikling.", "en": "This platform is under development."},
   "about.contactTitle": {"no": "Kontakt", "en": "Contact"}
