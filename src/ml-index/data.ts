@@ -12,6 +12,6 @@ export const topics = [
 ];
 export const types = mlCategories.map(category=>{
  const number=Number(category.code.match(/\d+/)?.[0]);
- const records=browseRecords.filter(r=>r.mlCategoryId===category.id).map(r=>({id:r.id,sourceTextId:r.sourceTextId,county:r.county,collector:r.collector,narrator:r.narrator,year:r.year,archiveSignature:legendsById.get(r.id)?.archiveSignature||'',sourceUrl:legendsById.get(r.id)?.sourceUrl||''}));
+ const records=browseRecords.filter(r=>r.mlCategoryId===category.id).map(r=>({id:r.id,sourceTextId:r.sourceTextId,county:r.county,collector:r.collector,narrator:r.narrator,year:r.year,place:r.place,titleNo:r.titleNo,titleEn:r.titleEn,excerptNo:r.excerptNo,excerptEn:r.excerptEn,translated:r.translationId==='translated',archiveSignature:legendsById.get(r.id)?.archiveSignature||'',sourceUrl:legendsById.get(r.id)?.sourceUrl||''}));
  return {id:category.id,code:category.code.toUpperCase().replace('ML','ML '),no:category.title||category.code,en:(labels as Record<string,string>)[category.code.toLowerCase()]||'',topic:topics.find(t=>number>=t.min&&number<=t.max)?.id||'local',records};
 }).sort((a,b)=>a.code.localeCompare(b.code,'en',{numeric:true}));

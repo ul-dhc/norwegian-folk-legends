@@ -2,6 +2,7 @@
   "nav.home": { "no": "Hjem", "en": "Home" },
   "nav.browse": { "no": "Utforsk", "en": "Browse" },
   "nav.map": { "no": "Kart", "en": "Map" },
+  "nav.data": { "no": "Data", "en": "Data" },
   "nav.ml": { "no": "ML-indeks", "en": "ML Index" },
   "nav.about": { "no": "Om prosjektet", "en": "About" },
   "status.development": { "no": "Under utvikling", "en": "In development" },
