@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ui from '../../i18n/ui.json';
 const sections = [
   { title: 'about.sourceTitle', paragraphs: ['about.source'], link: 'about.sourceLink', href: 'https://www2.hf.uio.no/eventyr_og_sagn/' },
-  { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' }
+  { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla', 'about.samlaFuture'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' }
 ];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---

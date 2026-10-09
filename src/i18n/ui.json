@@ -210,5 +210,6 @@
   "about.developerLink": {"no": "Digital Humanities Center ved Universitetet i Latvia", "en": "University of Latvia Digital Humanities Center"},
   "about.samlaUse": {"no": "Plattformen bruker også digitalisert arkivmateriale fra SAMLA, med lenker til kildene i arkivet.", "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."},
   "about.development": {"no": "Denne plattformen er under utvikling.", "en": "This platform is under development."},
-  "about.contactTitle": {"no": "Kontakt", "en": "Contact"}
+  "about.contactTitle": {"no": "Kontakt", "en": "Contact"},
+  "about.samlaFuture": {"no": "I fremtiden kan arkivmateriale fra SAMLA bidra til å utvide og berike plattformens sagnsamling.", "en": "In the future, archival materials from SAMLA could expand and enrich the platform’s collection of legends."}
 }
