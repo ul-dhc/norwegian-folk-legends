@@ -144,3 +144,29 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
  .ml-data-page :is(button,select,input,a,.ml-dash-card,.ml-facet-track>span,.ml-histogram-track>span,.ml-facet-row b,.ml-histogram button b){transition:none}
  .ml-data-page .ml-research-actions button:hover:not(:disabled){transform:none}
 }
+
+/* Data panels rise gently into a warm outline. */
+.ml-data-page{--data-panel-line:#d6b34c}
+:root[data-theme=dark] .ml-data-page{--data-panel-line:var(--butter)}
+.ml-data-page :is(.ml-kpi,.ml-dash-card){
+ transition:transform .6s cubic-bezier(.22,.65,.3,1),border-color .4s ease,box-shadow .6s ease;
+}
+.ml-data-page .ml-dash-card:focus-within{
+ border-color:var(--data-panel-line);
+ box-shadow:0 0 0 1px var(--data-panel-line),0 8px 24px var(--data-hover-glow);
+}
+@media(hover:hover) and (pointer:fine){
+ .ml-data-page :is(.ml-kpi,.ml-dash-card):hover{
+  border-color:var(--data-panel-line);
+  box-shadow:0 0 0 1px var(--data-panel-line),0 10px 28px var(--data-hover-glow);
+  transform:translateY(-2px);
+ }
+ .ml-data-page .ml-dash-card:hover:has(button:hover:not(:disabled)){
+  border-color:var(--data-panel-line);
+  box-shadow:0 0 0 1px var(--data-panel-line),0 10px 28px var(--data-hover-glow);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .ml-data-page :is(.ml-kpi,.ml-dash-card){transition:none}
+ .ml-data-page :is(.ml-kpi,.ml-dash-card):hover{transform:none}
+}
