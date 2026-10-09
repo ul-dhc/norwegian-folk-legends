@@ -22,7 +22,6 @@ export function archiveMarkup(lang,sources,records=[]){
   <div class="legacy-titles-window" tabindex="0" aria-label="${en?'Legends collected by Moltke Moe':'Sagn samlet av Moltke Moe'}">
    <ol class="legacy-titles">${legends.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener"><span>${escape(r.tittel||r.ml_title||r.source_text_id)}</span><small>${escape(r.sted)} · ${escape(r.source_text_id)}</small></a></li>`).join('')}</ol>
   </div>
-  <div class="legacy-catalogue-note"><button type="button" data-archive-titles aria-pressed="false">${en?'Read all titles':'Les alle titlene'}</button></div>
   <p class="legacy-page-credit">${en?'Manuscript pages':'Manuskriptsider'}: NFS Moltke Moe 7 · SAMLA</p>
  </div>
  <section class="legacy-invitation">

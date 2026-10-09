@@ -36,7 +36,7 @@ let mode='weave',visited=new Set(),completed=0,previousRecord=null,recentPlaces=
 let restored=false,versionChanged=false,original=false;
 let openingHistory=[];
 try{const saved=JSON.parse(localStorage.getItem('journey-recent-openings')||'[]');if(Array.isArray(saved))openingHistory=saved.filter(r=>Number.isFinite(r?.lat)&&Number.isFinite(r?.lon)).slice(-6);}catch{}
-let typingChars=[],typingIndex=0,typingDuration=0,typingNode=null,narrationDone=null;
+let typingChars=[],typingIndex=0,typingDuration=0,typingNode=null,narrationDone=null,narrationCue=null;
 const typingClock=new ReadingClock(typeNext);
 // Keep the familiar reading-time range, but give typing a clearly perceptible range.
 const typingScale=value=>value<=100?.5+(value-70)/60:1+(value-100)*.015;
@@ -44,10 +44,11 @@ function characterDelay(char){return /[.!?…]/u.test(char)?380:/[,;:]/u.test(ch
 function typeNext(){
  const node=typingNode;if(!node)return;
  node.textContent=typingChars.slice(0,++typingIndex).join('');
+ if(narrationCue&&typingIndex>=narrationCue.at){const cue=narrationCue;narrationCue=null;cue.run();}
  if(typingIndex<typingChars.length){typingClock.reset(characterDelay(typingChars[typingIndex-1])*typingScale(readingTime));if(!paused&&!document.hidden)typingClock.resume();}
  else {node.classList.add('finished');narrationDone?.();}
 }
-const clock=new ReadingClock(()=>advance());
+const clock=new ReadingClock(()=>advanceAfterReveal());
 const scene=()=>scenes[sceneIndex];
 const record=()=>route[scene()?.i??0];
 const textFor=r=>language()==='en'&&!original&&r.english_translation?.trim()?r.english_translation:r.tekst;
@@ -152,13 +153,13 @@ function buildScenes(){
  });
  scenes.push({kind:mode==='weave'?'weave':'end',i:route.length-1});
 }
-const readingDuration=s=>mode==='moe'?Math.max(12000,s.text.trim().split(/\s+/u).length/145*60000+3500):passageDuration(s.text);
+const readingDuration=s=>mode==='moe'?(s.effect==='encounter'?Math.max(10000,s.text.trim().split(/\s+/u).length/210*60000+2000):Math.max(12000,s.text.trim().split(/\s+/u).length/145*60000+3500)):passageDuration(s.text);
 function schedule(ms,showProgress=false){
  ms=Math.max(ms,typingDuration?typingDuration+4500:0);clock.reset(ms);
  if(showProgress&&!matchMedia('(prefers-reduced-motion: reduce)').matches){progressAnimation=el('journey-time-fill').animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:ms,fill:'forwards'});if(paused)progressAnimation.pause();}
  if(!paused&&!document.hidden)clock.resume();
 }
-function narrate(node,text){
+function narrate(node,text,onComplete=null){
  const animate=!matchMedia('(prefers-reduced-motion: reduce)').matches;
  typingChars=Array.from(text);typingIndex=0;
  const hold=2400*readingTime/100;
@@ -166,7 +167,7 @@ function narrate(node,text){
  node.innerHTML=`<span class="journey-sr-only">${esc(text)}</span><span class="journey-type-layout" aria-hidden="true"><span class="journey-type-space">${esc(text)}</span><span class="journey-typed${animate?'':' finished'}">${animate?'':esc(text)}</span></span>`;
  typingNode=node.querySelector('.journey-typed');
  // Advance from actual typing completion, including pauses and background tabs.
- narrationDone=()=>{clock.reset(2400*readingTime/100);if(!paused&&!document.hidden)clock.resume();};
+ narrationDone=()=>{onComplete?.();clock.reset((onComplete?3400:2400)*readingTime/100);if(!paused&&!document.hidden)clock.resume();};
  if(animate){typingClock.reset(250);if(!paused&&!document.hidden)typingClock.resume();}
  else {clock.reset(text.trim().split(/\s+/u).length/180*60000*readingTime/100+hold);if(!paused&&!document.hidden)clock.resume();}
  return typingDuration+hold;
@@ -206,10 +207,10 @@ function showLifePhotos(art,duration){
  animations.push(art.lastElementChild.querySelector('img,svg').animate([{filter:'blur(0px)',transform:'scale(1)',offset:0},{filter:'blur(0px)',transform:'scale(1)',offset:.85},{filter:'blur(8px)',transform:'scale(1.045)',offset:1}],{duration,fill:'both'}));
  return {pause(){animations.forEach(a=>a.pause());},play(){animations.forEach(a=>a.play());},cancel(){animations.forEach(a=>a.cancel());}};
 }
-function dispersePhoto(photo,duration,from=.78,to=0){
+function dispersePhoto(photo,duration,from=.78,to=0,hold=.42){
  const state=opacity=>({opacity,filter:`blur(${(1-opacity/.78)*9}px)`,transform:`scale(${1+(1-opacity/.78)*.045})`});
  return photo.animate([
-  {...state(from),offset:0},{...state(from),offset:.42},
+  {...state(from),offset:0},{...state(from),offset:hold},
   {...state(to),offset:1}
  ],{duration,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'});
 }
@@ -253,7 +254,7 @@ async function showScene(preserveMap=false){
 function renderScene(preserveMap=false){
  const continuingIntroduction=scene()?.kind==='introduction'&&root.dataset.scene==='introduction';
  legendReveal?.cancel();legendReveal=null;el('journey-text-window').style.height='';root.classList.remove('legend-revealing');
- clock.stop();typingClock.stop();typingDuration=0;typingNode=null;narrationDone=null;if(!preserveMap&&!continuingIntroduction){map?.cancel();if(!(mode==='moe'&&['all','network','collector'].includes(scene()?.j)))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
+ clock.stop();typingClock.stop();typingDuration=0;typingNode=null;narrationDone=null;narrationCue=null;if(!preserveMap&&!continuingIntroduction){map?.cancel();if(!(mode==='moe'&&['all','network','collector'].includes(scene()?.j)))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
  const token=++sceneToken,s=scene();if(!s)return;
  const r=route[s.i];const livReading=s.kind==='read'&&s.effect==='encounter',keepPhoto=livReading||s.j==='liv',photoRetained=keepPhoto&&el('journey-moe-art').dataset.encounter==='liv';root.classList.toggle('liv-reading',livReading);root.classList.toggle('archive-open',s.j==='archive');root.dataset.scene=s.kind;el('journey-route-note').textContent='';root.style.setProperty('--collector-colour',collectorColour(r));
  for(const id of ['journey-welcome','journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive']){if(id==='journey-moe-art'&&photoRetained)continue;el(id).hidden=true;}
@@ -288,16 +289,24 @@ function renderScene(preserveMap=false){
   card.innerHTML=`<span class="moe-chapter">${esc(s.chapter?(typeof s.chapter==='string'?s.chapter:s.chapter[language()]):(en?'FROM A VOICE TO AN ARCHIVE':'FRA EN STEMME TIL ET ARKIV'))}</span>${s.j==='network'?`<strong class="moe-count">${count}<small>${en?'records shown here · part of a much larger collection':'opptegnelser vist her · del av en langt større samling'}</small></strong>`:''}<p>${esc(s.text[language()])}</p>${s.image?`<button class="moe-inspect" data-inspect-original>${s.effect==='manuscript'||s.effect==='archive'?(en?'View manuscript':'Se manuskriptet'):(en?'View photograph':'Se fotografiet')}</button>`:''}${s.manuscript?`<a class="moe-manuscript" href="${esc(s.manuscript)}" target="_blank" rel="noopener">${en?'Open the notebook in SAMLA':'Åpne notatboken i SAMLA'}</a>`:''}${s.explore?`<div class="moe-archive-choices"><a href="${esc(moeSources.find(([name])=>name.startsWith('Liv Bratterud ·'))[1])}" target="_blank" rel="noopener">${en?'Find Liv in SAMLA':'Finn Liv i SAMLA'}</a><a href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Discover Moltke’s working life':'Oppdag Moltkes arbeidsliv'}</a></div>`:''}${s.j==='return'?`<a class="moe-manuscript" href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Read more on SAMLA':'Les mer på SAMLA'}</a>`:''}${s.credit?`<small class="moe-credit">${esc(s.credit)}</small>`:''}`;card.hidden=false;
   if(s.j==='archive'){
    art.hidden=true;card.hidden=true;
-   const archive=el('journey-archive');archive.classList.remove('archive-read-titles');archive.innerHTML=archiveMarkup(language(),moeSources,allRecords);archive.hidden=false;
+   const archive=el('journey-archive');archive.innerHTML=archiveMarkup(language(),moeSources,allRecords);archive.hidden=false;
   }
   if(!s.explore){
-   const duration=narrate(card.querySelector('p'),s.text[language()]);
+   const childhoodFade=s.j==='childhood'&&!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches?()=>{
+    photoDissolve=dispersePhoto(art.querySelector('.moe-original'),3200*readingTime/100,.78,0,0);
+   }:null;
+   const duration=narrate(card.querySelector('p'),s.text[language()],childhoodFade);
+   if(s.j==='roads'){
+    const at=s.text[language()].indexOf(en?'Our first stop':'Første stopp');
+    const run=()=>map?.highlightPlace(route[0]);
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)run();else narrationCue={at:Math.max(1,at),run};
+   }
    art.style.setProperty('--narration-duration',duration+'ms');
    if(s.j==='collector'){
     photoDissolve=showLifePhotos(art,duration-1500);
     el('journey-moe-card').querySelector('[data-inspect-original]').textContent=en?'View photographs':'Se fotografiene';
     if(paused||document.hidden)photoDissolve?.pause();
-   }else if(s.effect==='whole-photo'&&!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+   }else if(s.j!=='childhood'&&s.effect==='whole-photo'&&!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
     photoDissolve=dispersePhoto(art.querySelector('.moe-original'),duration-1500);
     if(paused||document.hidden)photoDissolve.pause();
    }
@@ -377,15 +386,20 @@ function renderScene(preserveMap=false){
    const continuing=photoDissolve&&s.p>=lastPhotoPassage;
    const backgroundFrom=continuing?Number(getComputedStyle(photo).opacity):(s.p?0:.78);
    const figuresFrom=continuing?Number(getComputedStyle(figures).opacity):(s.p?.78:0);
-   const transformFrom=continuing?getComputedStyle(figures).transform:(s.p?'scale(1.08)':'scale(1)');
+   const closeTransform=innerWidth>=900?'translate(12%, -6%) scale(1.3)':'translate(0, -3%) scale(1.16)';
+   const transformFrom=continuing?getComputedStyle(figures).transform:(s.p?closeTransform:'scale(1)');
    photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=s.p;
    if(!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-    const revealDuration=duration-1500,settle=Math.min(.75,10000/revealDuration);
+    const revealDuration=duration-1000,settle=backgroundFrom>.05?Math.min(.45,8000/revealDuration):0;
+    const farewell=s.p===s.total-1,fadeStart=Math.max(settle+.15,1-6000/revealDuration);
+    const glow='drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744) blur(0px)';
+    const landscapeZoom=map?.encounterZoom(r,revealDuration,settle);
     const animations=[
-     figures.animate([{filter:'drop-shadow(0 0 0 transparent)',offset:0},{filter:'drop-shadow(0 0 0 transparent)',offset:settle},{filter:'drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744)',offset:Math.min(.95,settle+.3)},{filter:'drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744)',offset:1}],{duration:revealDuration,fill:'both'}),
+     figures.animate([{filter:'blur(0px)',offset:0},{filter:'blur(0px)',offset:settle},{filter:glow,offset:Math.min(fadeStart,settle+.15)},{filter:glow,offset:fadeStart},{filter:farewell?'drop-shadow(0 0 2px transparent) drop-shadow(0 0 6px transparent) blur(9px)':glow,offset:1}],{duration:revealDuration,fill:'both'}),
      photo.animate([{opacity:backgroundFrom},{opacity:0,offset:settle},{opacity:0}],{duration:revealDuration,fill:'both'}),
-     figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78}],{duration:revealDuration,fill:'both'}),
-     ...[photo,figures].map(image=>image.animate([{transform:transformFrom},{transform:'scale(1.08)'}],{duration:revealDuration,easing:'ease-in-out',fill:'both'}))
+     figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78,offset:fadeStart},{opacity:farewell?0:.78,offset:1}],{duration:revealDuration,fill:'both'}),
+     ...[photo,figures].map(image=>image.animate([{transform:transformFrom,offset:0},{transform:transformFrom,offset:settle},{transform:closeTransform,offset:1}],{duration:revealDuration,easing:'ease-in-out',fill:'both'})),
+     ...(landscapeZoom?[landscapeZoom]:[])
     ];
     photoDissolve={
      pause(){animations.forEach(a=>a.pause());},play(){animations.forEach(a=>a.play());},cancel(){animations.forEach(a=>a.cancel());},
@@ -424,6 +438,20 @@ function renderScene(preserveMap=false){
   if(!preserveMap){if(mode==='moe')map?.closingNetwork(allRecords);else map?.overview(route,true);}root.classList.remove('controls-resting');
  }
  revealControls();
+}
+async function advanceAfterReveal(){
+ const pending=mode==='moe'&&scene()?.j==='return'?map?.networkRevealAnimations():[];
+ if(pending?.length){
+  const token=sceneToken;
+  // Fast narration must not cut off distant endpoints. CSS animation completion
+  // also respects pauses, reduced motion and switching to a still map.
+  await Promise.all(pending.map(animation=>animation.finished.catch(()=>{})));
+  if(token!==sceneToken||!started)return;
+  clock.reset(1000);
+  if(!paused&&!document.hidden)clock.resume();
+  return;
+ }
+ advance();
 }
 function advance(){
  // Next completes the geographic segment before the next scene cancels animation.
@@ -476,11 +504,6 @@ root.addEventListener('click',async event=>{
  else if(button.dataset.mode){mode=button.dataset.mode;route=[];restored=false;welcome();}
  else if(button.hasAttribute('data-archive-page')){
   const archive=el('journey-archive');selectArchivePage(archive,Number(button.dataset.archivePage),language());
- }
- else if(button.hasAttribute('data-archive-titles')){
-  const reading=el('journey-archive').classList.toggle('archive-read-titles');
-  button.setAttribute('aria-pressed',String(reading));
-  button.textContent=language()==='en'?(reading?'Return to flowing titles':'Read all titles'):(reading?'Tilbake til titlene i bevegelse':'Les alle titlene');
  }
  else if(button.hasAttribute('data-archive-enlarge')){
   pause();const page=archivePages[Number(el('journey-archive').dataset.selectedPage)];
