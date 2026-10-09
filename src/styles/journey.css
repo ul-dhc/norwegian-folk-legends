@@ -454,8 +454,8 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 .manuscript-focus-page{animation-duration:var(--narration-duration,32s)}
 
 /* A single north-to-south arrival, with no pulse or change in palette. */
-.journey-arriving-thread{stroke-dasharray:1;animation:journey-thread-arrives 4.5s cubic-bezier(.4,0,.2,1) var(--arrival-delay,0ms) both}
-.journey-arriving-point{animation:journey-point-arrives 3s ease-in-out var(--arrival-delay,0ms) both}
+.journey-arriving-thread{stroke-dasharray:1;animation:journey-thread-arrives calc(4.5s * var(--arrival-tempo,1)) cubic-bezier(.4,0,.2,1) calc(var(--arrival-delay,0ms) * var(--arrival-tempo,1)) both}
+.journey-arriving-point{animation:journey-point-arrives calc(3s * var(--arrival-tempo,1)) ease-in-out calc(var(--arrival-delay,0ms) * var(--arrival-tempo,1)) both}
 @keyframes journey-thread-arrives{from{stroke-dashoffset:1;opacity:0}to{stroke-dashoffset:0;opacity:.28}}
 @keyframes journey-point-arrives{from{opacity:0}to{opacity:.28}}
 #legend-journey.paused .journey-arriving-thread,#legend-journey.paused .journey-arriving-point{animation-play-state:paused}
@@ -463,3 +463,5 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 @media(prefers-reduced-motion:reduce){.journey-arriving-thread,.journey-arriving-point{animation:none!important}}
 
 #journey-moe-card p{white-space:pre-line}
+
+.journey-network-overview .journey-thread{filter:none}

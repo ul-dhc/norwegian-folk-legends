@@ -151,6 +151,7 @@ export function createJourneyMap(container,onError){
     breathe(false);startIntroZoom();return;
    }
    this.reset();fullOverview=all;
+   networkPane.style.setProperty('--arrival-tempo','1');
    const groups=new Map();
    for(const r of records){if(!r.collectorId||!known(r.samler))continue;if(!groups.has(r.collectorId))groups.set(r.collectorId,[]);groups.get(r.collectorId).push(r);}
    [...groups.values()].sort((a,b)=>b.length-a.length).slice(0,all?Infinity:18).forEach(items=>{const group=L.layerGroup().addTo(constellation);group.collectorId=items[0].collectorId;connections(items,'collector',group);});
@@ -178,6 +179,10 @@ export function createJourneyMap(container,onError){
    });
    if(opening)startIntroZoom();
   },
+  timeOpeningReveal(duration){
+   // One inherited timing value avoids inspecting/restarting hundreds of SVG animations.
+   networkPane.style.setProperty('--arrival-tempo',String(duration/8500));
+  },
   closingNetwork(records){
    this.intro(records,true,false,false,false);
    closingCoords=records.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)).map(point);
@@ -187,16 +192,23 @@ export function createJourneyMap(container,onError){
    // Rebuild a full overview so replay/back always yields the same transition.
    if(!constellation.getLayers().some(group=>group.collectorId===id))this.intro(records,true);
    fullOverview=false;
+   const fading=[];
+   // Read every current opacity before changing styles. Alternating reads and
+   // writes here forced a full SVG layout for each of hundreds of elements.
    constellation.eachLayer(group=>{
     const keep=group.collectorId===id;
-    const fade=layer=>{const element=layer.getElement?.();if(element){
-     const opacity=getComputedStyle(element).opacity;
-     element.classList.remove('journey-arriving-thread','journey-arriving-point');
-     element.style.opacity=opacity;
-     element.getBoundingClientRect();
-     element.style.transition=still?'none':'opacity 6s ease';element.style.opacity=keep?'1':'0';if(keep)element.classList.add('moe-featured-star');
-    }};
-    if(group.eachLayer)group.eachLayer(fade);else fade(group);
+    const collect=layer=>{const element=layer.getElement?.();if(element)fading.push({element,keep,opacity:getComputedStyle(element).opacity});};
+    if(group.eachLayer)group.eachLayer(collect);else collect(group);
+   });
+   fading.forEach(({element,opacity})=>{
+    element.classList.remove('journey-arriving-thread','journey-arriving-point');
+    element.style.transition='none';element.style.opacity=opacity;
+   });
+   networkPane.getBoundingClientRect();
+   fading.forEach(({element,keep})=>{
+    element.style.transition=still?'none':'opacity 6s ease';
+    element.style.opacity=keep?'1':'0';
+    if(keep)element.classList.add('moe-featured-star');
    });
    startIntroZoom(1.1,20000);breathe(false);
   },

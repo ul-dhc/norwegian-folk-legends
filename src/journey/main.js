@@ -167,7 +167,7 @@ function narrate(node,text,onComplete=null){
  node.innerHTML=`<span class="journey-sr-only">${esc(text)}</span><span class="journey-type-layout" aria-hidden="true"><span class="journey-type-space">${esc(text)}</span><span class="journey-typed${animate?'':' finished'}">${animate?'':esc(text)}</span></span>`;
  typingNode=node.querySelector('.journey-typed');
  // Advance from actual typing completion, including pauses and background tabs.
- narrationDone=()=>{onComplete?.();clock.reset((onComplete?3400:2400)*readingTime/100);if(!paused&&!document.hidden)clock.resume();};
+ narrationDone=()=>{onComplete?.();clock.reset((onComplete?3400:scene()?.j==='all'?700:2400)*readingTime/100);if(!paused&&!document.hidden)clock.resume();};
  if(animate){typingClock.reset(250);if(!paused&&!document.hidden)typingClock.resume();}
  else {clock.reset(text.trim().split(/\s+/u).length/180*60000*readingTime/100+hold);if(!paused&&!document.hidden)clock.resume();}
  return typingDuration+hold;
@@ -296,6 +296,7 @@ function renderScene(preserveMap=false){
     photoDissolve=dispersePhoto(art.querySelector('.moe-original'),3200*readingTime/100,.78,0,0);
    }:null;
    const duration=narrate(card.querySelector('p'),s.text[language()],childhoodFade);
+   if(s.j==='all')map?.timeOpeningReveal(typingDuration*.95);
    if(s.j==='roads'){
     const at=s.text[language()].indexOf(en?'Our first stop':'Første stopp');
     const run=()=>map?.highlightPlace(route[0]);
@@ -440,7 +441,7 @@ function renderScene(preserveMap=false){
  revealControls();
 }
 async function advanceAfterReveal(){
- const pending=mode==='moe'&&['all','return'].includes(scene()?.j)?map?.networkRevealAnimations():[];
+ const pending=mode==='moe'&&scene()?.j==='return'?map?.networkRevealAnimations():[];
  if(pending?.length){
   const token=sceneToken;
   // Fast narration must not cut off distant endpoints. CSS animation completion
@@ -548,6 +549,7 @@ el('journey-reading-time').addEventListener('input',event=>{
  if(typingNode&&typingIndex<typingChars.length){
   typingClock.pause();typingClock.reset(typingClock.remaining*typingRatio);
   typingDuration*=typingRatio;
+  if(scene()?.j==='all')map?.timeOpeningReveal(typingDuration*.95,true);
   if(!paused&&!document.hidden)typingClock.resume();
  }
  if(scene()?.kind!=='read'){
