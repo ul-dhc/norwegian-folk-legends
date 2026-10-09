@@ -94,7 +94,7 @@
   "detail.previous": { "no": "← Forrige sagn", "en": "← Previous legend" },
   "detail.next": { "no": "Neste sagn →", "en": "Next legend →" },
   "common.copied": { "no": "Kopiert", "en": "Copied" },
-  "nav.journey": { "no": "Reise", "en": "Journey" },
+  "nav.journey": { "no": "Reiser", "en": "Journeys" },
   "journey.playAgain": { "no": "↻ Start på nytt", "en": "↻ Play again" },
   "journey.share": { "no": "⤴ Del", "en": "⤴ Share" },
   "journey.musicBy": { "no": "Musikk av", "en": "Music by" },
