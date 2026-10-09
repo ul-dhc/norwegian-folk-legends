@@ -199,15 +199,16 @@
   "home.threadDescription": {"no": "Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.", "en": "A call from the water, an encounter with the hulder, a restless spirit. Follow a theme from place to place."},
   "home.moeDescription": {"no": "Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.", "en": "Meet the voices of Bø through legends, photographs and handwritten pages from the archive."},
   "about.intro": {"no": "Norske sagn er en digital plattform for å utforske norske sagn gjennom fortellinger, steder, mennesker og vandresagntyper.", "en": "Norske sagn is a digital platform for exploring Norwegian folk legends through stories, places, people and migratory legend types."},
-  "about.sourceTitle": {"no": "Kilden og initiativet", "en": "Source and initiative"},
-  "about.source": {"no": "Plattformen bygger på den eldre digitale samlingen Eventyr og sagn ved Norsk Folkeminnesamling, Universitetet i Oslo (UiO).", "en": "The platform builds on the earlier Eventyr og sagn digital collection at the Norwegian Folklore Archives, University of Oslo (UiO)."},
-  "about.credit": {"no": "Professor Kyrre Kverndokk står bak initiativet til denne plattformen.", "en": "Professor Kyrre Kverndokk is behind the initiative for this platform."},
+  "about.sourceTitle": {"no": "Den opprinnelige samlingen", "en": "The original collection"},
+  "about.source": {"no": "Plattformen bygger på den digitale samlingen «Eventyr og sagn», opprettet av Kyrre Kverndokk og tilgjengeliggjort av Norsk Folkeminnesamling ved Universitetet i Oslo (UiO).", "en": "The platform builds on the “Eventyr og sagn” digital collection, created by Kyrre Kverndokk and made available by the Norwegian Folklore Archives at the University of Oslo (UiO)."},
   "about.sourceLink": {"no": "Besøk Eventyr og sagn ved UiO", "en": "Visit Eventyr og sagn at UiO"},
-  "about.samlaTitle": {"no": "Samarbeid med SAMLA", "en": "Collaboration with SAMLA"},
-  "about.samlaCollaboration": {"no": "Plattformen utvikles i samarbeid med SAMLA.", "en": "The platform is developed in collaboration with SAMLA."},
+  "about.samlaTitle": {"no": "Arkivmateriale fra SAMLA", "en": "Archival materials from SAMLA"},
   "about.samla": {"no": "SAMLA er det norske digitale arkivet for tradisjons- og kulturhistoriske arkiver. SAMLA inneholder et bredt spekter av kulturelle uttrykk og praksiser fra majoritetsbefolkningen, minoritetsbefolkninger og urfolkskulturer i Norge. Samlet gir samlingene et bredt bilde av utviklingen av hverdagsliv, verdensbilder og verdier.", "en": "SAMLA is the Norwegian digital archive for the tradition and cultural history archives. SAMLA contains a wide variety of cultural expressions and practices from the majority population, minority populations, and indigenous cultures in Norway. Together, the collections provide a broad picture of the development of everyday life, worldviews and values."},
   "about.samlaLink": {"no": "Utforsk SAMLA", "en": "Explore SAMLA"},
   "about.developerTitle": {"no": "Utvikling av plattformen", "en": "Platform development"},
   "about.developer": {"no": "Plattformen er utviklet av Digital Humanities Center ved Universitetet i Latvia.", "en": "The platform is developed by the University of Latvia Digital Humanities Center."},
-  "about.developerLink": {"no": "University of Latvia Digital Humanities Center", "en": "University of Latvia Digital Humanities Center"}
+  "about.developerLink": {"no": "University of Latvia Digital Humanities Center", "en": "University of Latvia Digital Humanities Center"},
+  "about.samlaUse": {"no": "Plattformen bruker også digitalisert arkivmateriale fra SAMLA, med lenker til kildene i arkivet.", "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."},
+  "about.development": {"no": "Denne plattformen er under utvikling.", "en": "This platform is under development."},
+  "about.contactTitle": {"no": "Kontakt", "en": "Contact"}
 }
