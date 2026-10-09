@@ -299,7 +299,10 @@ export function createJourneyMap(container,onError){
    framing([point(target)],target.precision==='region'?7:9,true,true,2.8,photo);
   },
   networkRevealAnimations(){return [...networkPane.querySelectorAll('.journey-spoke-reveal,.journey-endpoint-reveal,.journey-arriving-thread,.journey-arriving-point')].flatMap(node=>node.getAnimations()).filter(animation=>animation.playState!=='finished'&&animation.playState!=='idle');},
-  connections(items,kind,colour,quiet=false){clearDestination();traces.clearLayers();head=null;constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);if(quiet){constellation.eachLayer(layer=>{if(layer instanceof L.Marker)constellation.removeLayer(layer);});}networkPane.classList.toggle('moe-slow-network',quiet);framing(nodes.map(point),7,quiet);breathe(!quiet);},
+  connections(items,kind,colour,quiet=false){clearDestination();
+   // Weave connections overlay the accumulated route; only the standalone Moe network replaces it.
+   if(quiet){traces.clearLayers();head=null;}
+   constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);if(quiet){constellation.eachLayer(layer=>{if(layer instanceof L.Marker)constellation.removeLayer(layer);});}networkPane.classList.toggle('moe-slow-network',quiet);framing(nodes.map(point),7,quiet);breathe(!quiet);},
   clearConstellation(){constellation.clearLayers();container.classList.remove('journey-network-overview');fullOverview=false;},
   overview(route,closing=false){clearDestination();const coords=[...remembered.values(),...route.map(point)];closingCoords=closing?coords:null;if(closing){map.invalidateSize({pan:false});frameClosing();}else framing(coords,7,false);breathe(true);},
   pause(){introZoom?.pause();if(movement&&raf!==null){movement.elapsed+=performance.now()-movement.last;stopFrame();}map.stop();},
