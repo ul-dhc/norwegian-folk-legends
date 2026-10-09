@@ -140,7 +140,8 @@ function buildScenes(){
    bridgeChoices.set(completed+i,count);bridgeCounts.set(kind,count+1);
   }
   if(networks.has(i))scenes.push(networks.get(i));
-  scenes.push({kind:'travel',i},{kind:'context',i});
+  scenes.push({kind:'travel',i});
+  if(mode!=='weave')scenes.push({kind:'context',i});
   const pages=shortEnough(r)?passages(textFor(r),capacity(textFor(r),heading(r))):[];
   if(!shortEnough(r))scenes.push({kind:'long',i});
   pages.forEach((page,p)=>scenes.push({kind:'read',i,p,total:pages.length,...page}));
@@ -153,7 +154,7 @@ function buildScenes(){
  });
  scenes.push({kind:mode==='weave'?'weave':'end',i:route.length-1});
 }
-const readingDuration=s=>mode==='moe'?(s.effect==='encounter'?Math.max(10000,s.text.trim().split(/\s+/u).length/210*60000+2000):Math.max(12000,s.text.trim().split(/\s+/u).length/145*60000+3500)):passageDuration(s.text);
+const readingDuration=s=>mode==='moe'?(s.effect==='encounter'?Math.max(10000,s.text.trim().split(/\s+/u).length/240*60000+1000):Math.max(12000,s.text.trim().split(/\s+/u).length/145*60000+3500)):passageDuration(s.text);
 function schedule(ms,showProgress=false){
  ms=Math.max(ms,typingDuration?typingDuration+4500:0);clock.reset(ms);
  if(showProgress&&!matchMedia('(prefers-reduced-motion: reduce)').matches){progressAnimation=el('journey-time-fill').animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:ms,fill:'forwards'});if(paused)progressAnimation.pause();}
@@ -214,7 +215,7 @@ function dispersePhoto(photo,duration,from=.78,to=0,hold=.42){
   {...state(to),offset:1}
  ],{duration,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'});
 }
-let legendReveal=null,photoDissolve=null,lastPhotoPassage=-1;
+let legendReveal=null,photoDissolve=null,encounterDrift=null,lastPhotoPassage=-1;
 let sceneFadeSerial=0,sceneFades=[],lastPaintedScene='';
 const sceneSurfaces=()=>['journey-welcome','journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive'].map(el).filter(node=>!node.hidden);
 function cancelSceneFades(){
@@ -230,7 +231,7 @@ async function showScene(preserveMap=false){
  if(!animate){renderScene(preserveMap);lastPaintedScene=key;return;}
  clock.stop();typingClock.stop();progressAnimation?.cancel();sceneToken++;
  root.classList.add('scene-changing');
- const keepPhoto=((s.j==='liv'||s.effect==='encounter')&&el('journey-moe-art').dataset.encounter==='liv')||(s.j==='manuscript'&&el('journey-moe-art').classList.contains('manuscript-preview'));
+ const keepPhoto=((s.j==='liv'||s.j==='landscape'||s.effect==='encounter')&&el('journey-moe-art').dataset.encounter==='liv')||(s.j==='manuscript'&&el('journey-moe-art').classList.contains('manuscript-preview'));
  const network=root.querySelector('.leaflet-journeyNetwork-pane');
  const keepNetwork=keepPhoto||['all','network','collector'].includes(s.j);
  const surfaces=()=>[...sceneSurfaces().filter(node=>!(keepPhoto&&node.id==='journey-moe-art')),...(!keepNetwork&&network?[network]:[])];
@@ -256,12 +257,12 @@ function renderScene(preserveMap=false){
  legendReveal?.cancel();legendReveal=null;el('journey-text-window').style.height='';root.classList.remove('legend-revealing');
  clock.stop();typingClock.stop();typingDuration=0;typingNode=null;narrationDone=null;narrationCue=null;if(!preserveMap&&!continuingIntroduction){map?.cancel();if(!(mode==='moe'&&['all','network','collector'].includes(scene()?.j)))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
  const token=++sceneToken,s=scene();if(!s)return;
- const r=route[s.i];const livReading=s.kind==='read'&&s.effect==='encounter',keepPhoto=livReading||s.j==='liv',photoRetained=keepPhoto&&el('journey-moe-art').dataset.encounter==='liv';root.classList.toggle('liv-reading',livReading);root.classList.toggle('archive-open',s.j==='archive');root.dataset.scene=s.kind;el('journey-route-note').textContent='';root.style.setProperty('--collector-colour',collectorColour(r));
+ const r=route[s.i];const livReading=s.kind==='read'&&s.effect==='encounter',keepPhoto=livReading||s.j==='liv'||s.j==='landscape',photoRetained=keepPhoto&&el('journey-moe-art').dataset.encounter==='liv';root.classList.toggle('liv-reading',livReading||s.j==='landscape');root.classList.toggle('archive-open',s.j==='archive');root.dataset.scene=s.kind;el('journey-route-note').textContent='';root.style.setProperty('--collector-colour',collectorColour(r));
  for(const id of ['journey-welcome','journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive']){if(id==='journey-moe-art'&&photoRetained)continue;el(id).hidden=true;}
 
 
- if(!livReading){photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;}
- if(!keepPhoto)delete el('journey-moe-art').dataset.encounter;
+ if(!livReading&&s.j!=='landscape'){photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;}
+ if(!keepPhoto){encounterDrift?.cancel();encounterDrift=null;delete el('journey-moe-art').dataset.encounter;}
  el('journey-photo-place').hidden=true;
  el('journey-photo-place').textContent=s.image?(s.target?.sted||r?.sted||''):'';
  status('');controls();
@@ -273,18 +274,28 @@ function renderScene(preserveMap=false){
   if(!preserveMap){
    if(s.j==='all'){map?.intro(allRecords,true,false,true);if(paused)map?.pause();}
    else if(s.j==='roads'){map?.roadNetwork(moeRoads,paused);if(paused)map?.pause();}
-   else if(s.j==='landscape')map?.storyLandscape(route[0],s.target);
+   else if(s.j==='landscape')map?.storyLandscape(route[0],s.target,photoRetained);
    else if(s.j==='network'){map?.isolateCollector(allRecords,'collector-moltke-moe');if(paused)map?.pause();}
    else if(s.j==='return'||s.j==='archive')map?.connections(allRecords.filter(r=>r.collectorId==='collector-moltke-moe'),'collector','#D2B957',true);
    else if(s.target&&!photoRetained)map?.focus(s.target,Boolean(s.image));
   }
   const art=el('journey-moe-art');
+  if(s.j==='landscape'){
+   if(!photoRetained){
+    const image=scenes.find(stage=>stage.j==='liv')?.image;
+    art.className='journey-moe-art liv-photo';
+    art.innerHTML=`<img class="moe-original" src="${esc(image)}" alt="" style="opacity:0"/><div class="liv-figures"><img class="liv-mask" src="${esc(image)}" alt=""/></div>`;
+    art.dataset.encounter='liv';
+   }
+   art.hidden=false;card.classList.add('has-image');
+  }else{
   if(s.j==='liv')art.dataset.encounter='liv';else delete art.dataset.encounter;
   art.className='journey-moe-art '+(s.effect||'photograph');
   art.innerHTML=s.image?`<img class="moe-original" src="${esc(s.image)}" alt=""/>${s.figures?`<img class="moe-figures" src="${esc(s.figures)}" alt=""/>`:''}`:'';
   if(s.effect==='manuscript')art.innerHTML=`<div class="manuscript-focus-page"><img class="moe-original" src="${esc(s.image)}" alt=""/><div class="manuscript-upper-wash" aria-hidden="true"></div></div>`;
   art.hidden=!s.image;
   card.classList.toggle('has-image',Boolean(s.image));
+  }
   const count=allRecords.filter(r=>r.collectorId==='collector-moltke-moe').length;
   card.innerHTML=`<span class="moe-chapter">${esc(s.chapter?(typeof s.chapter==='string'?s.chapter:s.chapter[language()]):(en?'FROM A VOICE TO AN ARCHIVE':'FRA EN STEMME TIL ET ARKIV'))}</span>${s.j==='network'?`<strong class="moe-count">${count}<small>${en?'records shown here · part of a much larger collection':'opptegnelser vist her · del av en langt større samling'}</small></strong>`:''}<p>${esc(s.text[language()])}</p>${s.image?`<button class="moe-inspect" data-inspect-original>${s.effect==='manuscript'||s.effect==='archive'?(en?'View manuscript':'Se manuskriptet'):(en?'View photograph':'Se fotografiet')}</button>`:''}${s.manuscript?`<a class="moe-manuscript" href="${esc(s.manuscript)}" target="_blank" rel="noopener">${en?'Open the notebook in SAMLA':'Åpne notatboken i SAMLA'}</a>`:''}${s.explore?`<div class="moe-archive-choices"><a href="${esc(moeSources.find(([name])=>name.startsWith('Liv Bratterud ·'))[1])}" target="_blank" rel="noopener">${en?'Find Liv in SAMLA':'Finn Liv i SAMLA'}</a><a href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Discover Moltke’s working life':'Oppdag Moltkes arbeidsliv'}</a></div>`:''}${s.j==='return'?`<a class="moe-manuscript" href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Read more on SAMLA':'Les mer på SAMLA'}</a>`:''}${s.credit?`<small class="moe-credit">${esc(s.credit)}</small>`:''}`;card.hidden=false;
   if(s.j==='archive'){
@@ -296,13 +307,43 @@ function renderScene(preserveMap=false){
     photoDissolve=dispersePhoto(art.querySelector('.moe-original'),3200*readingTime/100,.78,0,0);
    }:null;
    const duration=narrate(card.querySelector('p'),s.text[language()],childhoodFade);
-   if(s.j==='all')map?.timeOpeningReveal(typingDuration*.95);
+   if(s.j==='all'){
+    map?.timeOpeningReveal(typingDuration*.95);
+    narrationCue={at:Math.floor(typingChars.length*.8),run:()=>map?.openingPullback()};
+   }
+   if(s.j==='collector')narrationCue={at:Math.floor(typingChars.length*.15),run:()=>map?.prepareRoads(moeRoads)};
+   if(s.j==='landscape'){
+    const figures=art.querySelector('.liv-figures');
+    const from={opacity:getComputedStyle(figures).opacity,filter:getComputedStyle(figures).filter};
+    photoDissolve?.cancel();photoDissolve=null;
+    art.querySelector('.moe-original').style.opacity='0';
+    if(!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+     photoDissolve=figures.animate([
+      {...from,offset:0},
+      {opacity:0,filter:'drop-shadow(0 0 2px transparent) drop-shadow(0 0 6px transparent) blur(5px)',offset:1}
+     ],{duration:Math.max(12000,duration),easing:'ease-in-out',fill:'both'});
+     if(paused||document.hidden)photoDissolve.pause();
+    }else figures.style.opacity='.78';
+   }
    if(s.j==='roads'){
     const at=s.text[language()].indexOf(en?'Our first stop':'Første stopp');
     const run=()=>map?.highlightPlace(route[0]);
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)run();else narrationCue={at:Math.max(1,at),run};
    }
    art.style.setProperty('--narration-duration',duration+'ms');
+   if(s.j==='manuscript'&&!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const page=art.querySelector('.manuscript-focus-page');
+    page.style.animation='none';
+    // Let the lower fragment be read before the page opens into the landscape.
+    photoDissolve=page.animate([
+     {opacity:1,transform:'scale(1)',offset:0},
+     {opacity:1,transform:'scale(1)',offset:.45},
+     {opacity:.85,transform:'scale(1.08,1.025)',offset:.72},
+     {opacity:0,transform:'scale(1.3,1.08)',offset:1}
+    ],{duration:Math.max(18000,duration*1.15),easing:'ease-in-out',fill:'both'});
+    if(paused||document.hidden)photoDissolve.pause();
+   }
+
    if(s.j==='collector'){
     photoDissolve=showLifePhotos(art,duration-1500);
     el('journey-moe-card').querySelector('[data-inspect-original]').textContent=en?'View photographs':'Se fotografiene';
@@ -318,9 +359,10 @@ function renderScene(preserveMap=false){
   if(!preserveMap)map?.connections(records.filter(r=>r.ml_code===theme.code),'theme',theme.colour);
   caption(theme.intro[language()]);schedule(14000);
  }else if(s.kind==='introduction'){
-  if(!preserveMap&&!continuingIntroduction)map?.intro(records);
+  if(!preserveMap&&!continuingIntroduction)map?.intro(allRecords,true,false,true);
   el('journey-source').hidden=true;el('journey-progress').textContent='';
-  caption(s.text);schedule(10000);
+  const node=el('journey-caption');node.hidden=false;narrate(node,s.text);
+  if(!continuingIntroduction)map?.timeOpeningReveal(typingDuration*.95);
  }else if(s.kind==='travel'||s.kind==='story-travel'){
   const isStory=s.kind==='story-travel',target=isStory?s.place:r;
   if(isStory){}
@@ -345,6 +387,7 @@ function renderScene(preserveMap=false){
   // A brief, wordless arrival gives the landscape room before the legend.
   schedule(2200);
  }else if(s.kind==='read'){
+  if(mode==='weave'&&s.p===0&&!preserveMap)map?.focus(r);
   el('journey-reading').hidden=false;
   if(mode!=='moe'&&!livReading&&!matchMedia('(prefers-reduced-motion: reduce)').matches)el('journey-passage').animate([{opacity:0},{opacity:1}],{duration:1400});
   const teller=r.source_text_id==='SIN263'?'Liv':'Tølløv';
@@ -375,7 +418,7 @@ function renderScene(preserveMap=false){
   const duration=readingDuration(s)*readingTime/100;let enteredAt=0;
   if(mode==='moe'&&!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
    root.classList.add('legend-revealing');
-   legendReveal=revealReadingLines(el('journey-passage'),duration-5000);
+   legendReveal=revealReadingLines(el('journey-passage'),duration-(livReading?1800:5000));
    // Manual navigation while paused gives the reader the complete passage.
    if(paused)legendReveal.currentTime=legendReveal.revealEnd;
    if(paused||document.hidden)legendReveal.pause();
@@ -387,20 +430,24 @@ function renderScene(preserveMap=false){
    const continuing=photoDissolve&&s.p>=lastPhotoPassage;
    const backgroundFrom=continuing?Number(getComputedStyle(photo).opacity):(s.p?0:.78);
    const figuresFrom=continuing?Number(getComputedStyle(figures).opacity):(s.p?.78:0);
-   const closeTransform=innerWidth>=900?'translate(12%, -6%) scale(1.3)':'translate(0, -3%) scale(1.16)';
-   const transformFrom=continuing?getComputedStyle(figures).transform:(s.p?closeTransform:'scale(1)');
+
    photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=s.p;
    if(!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    if(!encounterDrift||!continuing){
+     encounterDrift?.cancel();
+     const destination=innerWidth>=900?'translate(53.33%, -32%) scale(2.2)':'translate(0, -21.33%) scale(1.64)';
+     const drift=[art.animate([{transform:'scale(1)'},{transform:destination}],{duration:120000,easing:'linear',fill:'both'})];
+     encounterDrift={pause(){drift.forEach(a=>a.pause());},play(){drift.forEach(a=>a.play());},cancel(){drift.forEach(a=>a.cancel());}};
+     if(paused||document.hidden)encounterDrift.pause();
+    }
     const revealDuration=duration-1000,settle=backgroundFrom>.05?Math.min(.45,8000/revealDuration):0;
-    const farewell=s.p===s.total-1,fadeStart=Math.max(settle+.15,1-6000/revealDuration);
+    const fadeStart=Math.max(settle+.15,1-6000/revealDuration);
     const glow='drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744) blur(0px)';
-    const landscapeZoom=map?.encounterZoom(r,revealDuration,0);
+    const clearGlow='drop-shadow(0 0 2px transparent) drop-shadow(0 0 6px transparent) blur(0px)';
     const animations=[
-     figures.animate([{filter:'blur(0px)',offset:0},{filter:'blur(0px)',offset:settle},{filter:glow,offset:Math.min(fadeStart,settle+.15)},{filter:glow,offset:fadeStart},{filter:farewell?'drop-shadow(0 0 2px transparent) drop-shadow(0 0 6px transparent) blur(9px)':glow,offset:1}],{duration:revealDuration,fill:'both'}),
+     figures.animate([{filter:clearGlow,offset:0},{filter:clearGlow,offset:settle},{filter:glow,offset:Math.min(fadeStart,settle+.15)},{filter:glow,offset:fadeStart},{filter:glow,offset:1}],{duration:revealDuration,fill:'both'}),
      photo.animate([{opacity:backgroundFrom},{opacity:0,offset:settle},{opacity:0}],{duration:revealDuration,fill:'both'}),
-     figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78,offset:fadeStart},{opacity:farewell?0:.78,offset:1}],{duration:revealDuration,fill:'both'}),
-     ...[photo,figures].map(image=>image.animate([{transform:transformFrom,offset:0},{transform:closeTransform,offset:1}],{duration:revealDuration,easing:'cubic-bezier(.25,.35,.55,1)',fill:'both'})),
-     ...(landscapeZoom?[landscapeZoom]:[])
+     figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78,offset:fadeStart},{opacity:.78,offset:1}],{duration:revealDuration,fill:'both'}),
     ];
     photoDissolve={
      pause(){animations.forEach(a=>a.pause());},play(){animations.forEach(a=>a.play());},cancel(){animations.forEach(a=>a.cancel());},
@@ -410,7 +457,8 @@ function renderScene(preserveMap=false){
     if(paused||document.hidden)photoDissolve.pause();
    }
   }
-  schedule(duration-enteredAt,true);
+  const playbackDuration=s.effect==='manuscript-preview'&&legendReveal?legendReveal.revealEnd+1800:duration;
+  schedule(playbackDuration-enteredAt,true);
  }else if(s.kind==='insight'){
   caption(s.insight[language()]);schedule(14000);
  }else if(s.kind==='long'){
@@ -425,7 +473,11 @@ function renderScene(preserveMap=false){
   caption(format(narrator?t().narratorNetwork:t().collector,{name:narrator?r.informant:r.samler,count:members.length})+(networkEdges(members).nodes.length===1?' '+t().onePlace:''));schedule(14000);
  }else if(s.kind==='weave'){
 
-  if(!preserveMap)map?.overview(route);caption('');schedule(7000);
+  // A quiet overview is meaningful occasionally, rather than at every batch boundary.
+  if((completed+route.length)%10!==0){advance();return;}
+  if(!preserveMap)map?.overview(route);
+  const node=el('journey-caption');node.hidden=false;
+  narrate(node,language()==='en'?'Step back for a moment. These are the places and connections we have followed so far. The next story will add another thread.':'La oss se tilbake et øyeblikk. Dette er stedene og forbindelsene vi har fulgt så langt. Den neste fortellingen vil legge til en ny tråd.');
  }else if(s.kind==='story-hold'){
 
   caption('“'+s.place.quote+'”',format(t().storyHold,{from:r.sted,place:s.place.name}));
@@ -441,7 +493,7 @@ function renderScene(preserveMap=false){
  revealControls();
 }
 async function advanceAfterReveal(){
- const pending=mode==='moe'&&scene()?.j==='return'?map?.networkRevealAnimations():[];
+ const pending=mode==='moe'&&scene()?.j==='return'?map?.networkRevealAnimations():['landscape','manuscript'].includes(scene()?.j)&&photoDissolve?.playState!=='finished'&&photoDissolve?.finished?[photoDissolve]:[];
  if(pending?.length){
   const token=sceneToken;
   // Fast narration must not cut off distant endpoints. CSS animation completion
@@ -465,8 +517,8 @@ function advance(){
  }
  if(sceneIndex<scenes.length-1){sceneIndex++;showScene();}
 }
-function pause(){if(!started||scene()?.kind==='end')return;paused=true;el('journey-passage').classList.add('voice-readable');clock.pause();typingClock.pause();map?.pause();progressAnimation?.pause();legendReveal?.pause();photoDissolve?.pause();controls();revealControls();}
-function resume(){paused=false;clock.resume();typingClock.resume();map?.resume();progressAnimation?.play();legendReveal?.play();photoDissolve?.play();controls();revealControls();}
+function pause(){if(!started||scene()?.kind==='end')return;paused=true;el('journey-passage').classList.add('voice-readable');clock.pause();typingClock.pause();map?.pause();progressAnimation?.pause();legendReveal?.pause();photoDissolve?.pause();encounterDrift?.pause();controls();revealControls();}
+function resume(){paused=false;clock.resume();typingClock.resume();map?.resume();progressAnimation?.play();legendReveal?.play();photoDissolve?.play();encounterDrift?.play();controls();revealControls();}
 function togglePause(){paused?resume():pause();}
 function syncUrl(){const url=new URL(location.href);url.hash=new URLSearchParams({v:version,mode,...(currentTheme()?{theme:themeKey}:{}),route:route.map(r=>r.source_text_id).join(',')}).toString();window.history.replaceState(null,'',url);}
 function start(random=true){
@@ -540,7 +592,7 @@ el('journey-pause').addEventListener('click',togglePause);
 el('journey-next').addEventListener('click',()=>{advance();});
 el('journey-back').addEventListener('click',()=>{if(sceneIndex>0){sceneIndex--;showScene();}});
 el('journey-fullscreen').addEventListener('click',fullscreen);
-el('journey-close').addEventListener('click',async()=>{cancelSceneFades();legendReveal?.cancel();legendReveal=null;photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;lastPaintedScene='';clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen','liv-reading','archive-open');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive','journey-photo-place'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records,mode==='moe');root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
+el('journey-close').addEventListener('click',async()=>{cancelSceneFades();legendReveal?.cancel();legendReveal=null;photoDissolve?.cancel();photoDissolve=null;encounterDrift?.cancel();encounterDrift=null;lastPhotoPassage=-1;lastPaintedScene='';clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen','liv-reading','archive-open');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive','journey-photo-place'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records,mode==='moe'||mode==='weave');root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
 el('journey-reading-time').addEventListener('input',event=>{
  const previous=readingTime;
  readingTime=270-Number(event.target.value);
@@ -551,6 +603,11 @@ el('journey-reading-time').addEventListener('input',event=>{
   typingDuration*=typingRatio;
   if(scene()?.j==='all')map?.timeOpeningReveal(typingDuration*.95,true);
   if(!paused&&!document.hidden)typingClock.resume();
+ }
+ if(scene()?.j==='manuscript'&&photoDissolve){
+  const timing=photoDissolve.effect.getTiming(),fraction=Number(photoDissolve.currentTime||0)/timing.duration;
+  const duration=Math.max(18000,(typingDuration+2400*readingTime/100)*1.15);
+  photoDissolve.effect.updateTiming({duration});photoDissolve.currentTime=fraction*duration;
  }
  if(scene()?.kind!=='read'){
   clock.pause();clock.reset(clock.remaining*ratio);
@@ -565,7 +622,7 @@ el('journey-reading-time').addEventListener('input',event=>{
   clock.pause();
   const remaining=clock.remaining*readingTime/previous;
   const duration=readingDuration(scene())*readingTime/100;
-  if(legendReveal){const timing=legendReveal.effect.getTiming(),fraction=Number(legendReveal.currentTime||0)/timing.duration;legendReveal.effect.updateTiming({duration:duration-5000});legendReveal.currentTime=fraction*(duration-5000);}
+  if(legendReveal){const timing=legendReveal.effect.getTiming(),fraction=Number(legendReveal.currentTime||0)/timing.duration;legendReveal.effect.updateTiming({duration:duration-(scene()?.effect==='encounter'?1800:5000)});legendReveal.currentTime=fraction*(duration-(scene()?.effect==='encounter'?1800:5000));}
   if(photoDissolve){const timing=photoDissolve.effect.getTiming(),fraction=Number(photoDissolve.currentTime||0)/timing.duration;photoDissolve.effect.updateTiming({duration:timing.duration*readingTime/previous});photoDissolve.currentTime=fraction*timing.duration*readingTime/previous;}
   clock.reset(remaining);
   if(progressAnimation){progressAnimation.effect.updateTiming({duration});progressAnimation.currentTime=Math.max(0,duration-remaining);}
@@ -573,7 +630,7 @@ el('journey-reading-time').addEventListener('input',event=>{
  }
  mapSettings();revealControls();
 });
-el('journey-motion').addEventListener('click',()=>{still=!still;map?.setStill(still);if(scene()?.kind==='read'||scene()?.kind==='moe')showScene(true);controls();revealControls();});
+el('journey-motion').addEventListener('click',()=>{still=!still;if(still){encounterDrift?.cancel();encounterDrift=null;}map?.setStill(still);if(scene()?.kind==='read'||scene()?.kind==='moe')showScene(true);controls();revealControls();});
 el('journey-sound').addEventListener('click',async()=>{if(!audio.paused)audio.pause();else{try{audio.volume=.16;await audio.play();}catch{status(t().audioFailed);}}controls();revealControls();});
 el('journey-source').addEventListener('click',pause);
 root.addEventListener('pointermove',revealControls);root.addEventListener('focusin',revealControls);root.addEventListener('touchstart',revealControls,{passive:true});
@@ -608,5 +665,5 @@ try{
  collectionFacts={recordCount:data.records.length,collectorCount:new Set(data.records.filter(r=>known(r.samler)).map(r=>r.collectorId||r.samler)).size,firstYear:Math.min(...years),lastYear:Math.max(...years)};
  records=data.records.filter(journeyEligible);version=data.version;if(!records?.length)throw new Error('Empty collection');ready=true;
  const saved=new URLSearchParams(location.hash.slice(1));mode=['thread','moe'].includes(saved.get('mode'))?saved.get('mode'):'weave';if(mode==='thread'&&THEMES[saved.get('theme')]){themeKey=saved.get('theme');route=themeRoute(records,themeKey);restored=Boolean(route.length);versionChanged=saved.get('v')!==version;}else if(mode==='weave'&&saved.has('route')){const ids=saved.get('route').split(',');const restoredRoute=routeFromIds(records,ids);if(restoredRoute.length===ids.length){route=restoredRoute;restored=true;versionChanged=saved.get('v')!==version;}}
- map?.setStill(still);map?.intro(records,mode==='moe');root.dataset.scene='intro';welcome();
+ map?.setStill(still);map?.intro(records,mode==='moe'||mode==='weave');root.dataset.scene='intro';welcome();
 }catch(error){console.error('Journey initialization failed',error);failed=true;welcome();}

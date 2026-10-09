@@ -10,6 +10,8 @@ import {roadPath,pathSampler} from './roads.js';
 import {collectorColour} from './appearance.js';
 import {networkEdges,known} from './engine.js';
 const point=r=>[r.lat,r.lon];
+// A regional view of the road threads around Telemark and the approach to Bø.
+const roadSceneBounds=[[59.05,7.5],[59.95,9.95]];
 export function createJourneyMap(container,onError){
  const map=L.map(container,{zoomControl:false,scrollWheelZoom:false,dragging:false,doubleClickZoom:false,touchZoom:false,boxZoom:false,keyboard:false,minZoom:3,maxZoom:10,zoomAnimation:true,fadeAnimation:false}).setView([63,12],5);
  let destroyed=false,terrainMap=null,terrainReady=false,mapType='coastlines';
@@ -24,7 +26,7 @@ export function createJourneyMap(container,onError){
   terrainMap.on('load',()=>{terrainReady=true;applyMapType(terrainMap,mapType);});
  }).catch(onError);
  const traces=L.layerGroup().addTo(map),constellation=L.layerGroup().addTo(map),effects=L.layerGroup().addTo(map);
- let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false,activeFrame=null;
+ let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false,activeFrame=null,roadsPrepared=false;
  const remembered=new Map(),seenEdges=new Set(),travelledEdges=new Map(),visitedDots=new Map();
  const networkPane=map.createPane('journeyNetwork');networkPane.style.zIndex=410;networkPane.style.pointerEvents='none';
  const networkRenderer=journeyRenderer(L,'journeyNetwork');
@@ -210,10 +212,10 @@ export function createJourneyMap(container,onError){
     element.style.opacity=keep?'1':'0';
     if(keep)element.classList.add('moe-featured-star');
    });
-   startIntroZoom(1.1,20000);breathe(false);
+   startIntroZoom(.97,20000);breathe(false);
   },
   setStill(value){still=value;if(value){introZoom?.cancel();introZoom=null;breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
-  reset(){activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
+  reset(){roadsPrepared=false;activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
   travel(target,{story=false,allowRoad=false,kind='place',colour=null,minDuration=0,onRoute=()=>{},done=()=>{}}={}){
    closingCoords=null;cancel();clearDestination();breathe(false);
    const to=point(target),from=current||to,color=colour||collectorColour(target);
@@ -246,7 +248,7 @@ export function createJourneyMap(container,onError){
    else framing([from,to],movement.zoom,false,true,camera/1000);
    raf=requestAnimationFrame(drawMotion);
   },
-  storyLandscape(from,target){
+  storyLandscape(from,target,keepCamera=false){
    clearDestination();constellation.clearLayers();breathe(false);
    const coords=[point(from),point(target)],colour='#D2B957';
    L.polyline(coords,{renderer:networkRenderer,color:colour,weight:1.2,opacity:.65,dashArray:'3 7',interactive:false}).addTo(constellation);
@@ -255,7 +257,13 @@ export function createJourneyMap(container,onError){
     const label=document.createElement('span');label.textContent=place.sted;
     L.tooltip({permanent:true,direction:'right',offset:[12,0],className:'journey-destination-label',opacity:1,interactive:false}).setLatLng(coords[index]).setContent(label).addTo(constellation);
    }
-   map.invalidateSize({pan:false});framing(coords,9,true);
+   if(!keepCamera){map.invalidateSize({pan:false});framing(coords,9,true);}
+  },
+  openingPullback(){startIntroZoom(.96,10000);},
+  prepareRoads(network){
+   const coords=network.edges.flatMap(edge=>[edge.from,edge.to]);
+   // Use the same road bounds as the next scene, before its threads unfold.
+   if(coords.length){framing(roadSceneBounds,8.5,false,true,6,false,true);roadsPrepared=true;}
   },
   roadNetwork(network,paused=false){
    clearDestination();constellation.clearLayers();traces.clearLayers();head=null;breathe(false);
@@ -269,8 +277,9 @@ export function createJourneyMap(container,onError){
     if(!still){element.setAttribute('pathLength','1');element.style.setProperty('--road-duration',(11000+i%5*800)+'ms');element.style.setProperty('--road-delay',(i%4*300)+'ms');element.classList.add('moe-road-unfold');}
    });
    for(const position of coords.values())L.circleMarker(position,{renderer:networkRenderer,radius:2,color:'#D2B957',weight:0,fill:true,fillOpacity:.85,interactive:false}).addTo(constellation);
-   // One direct pullback reveals the roads; no second zoom reverses it.
-   framing([...coords.values()],6,true,!paused,5,false,true);
+   if(!roadsPrepared)framing(roadSceneBounds,8.5,false,false);
+   roadsPrepared=false;startIntroZoom(1.22,22000,[.3,.5]);
+   if(paused)introZoom?.pause();
   },
   encounterZoom(target,duration,settle){
    if(still||matchMedia('(prefers-reduced-motion: reduce)').matches)return null;
