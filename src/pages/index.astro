@@ -56,6 +56,13 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     .collection-summary .stat::before,.collection-summary .stat::after,.collection-summary .stat>:global(svg){display:none!important}
     .collection-summary .stat strong{display:block;margin:0;color:var(--ink)!important;font:400 clamp(2.4rem,4vw,3.4rem)/1.1 var(--serif);letter-spacing:-.04em;text-shadow:none!important}
     .collection-summary .stat span{display:block;margin:.45rem 0 0;color:var(--muted);font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+    .collection-summary .stat strong{transition:color .55s ease,transform .55s ease}
+    .collection-summary .stat span{transition:color .55s ease}
+    @media(hover:hover) and (pointer:fine){
+      .collection-summary .stat:hover strong{color:color-mix(in srgb,var(--ink),var(--blue) 32%)!important;transform:translateY(-2px)}
+      .collection-summary .stat:hover span{color:var(--blue)}
+      :global(:root[data-theme=dark]) .collection-summary .stat:hover strong{color:color-mix(in srgb,var(--ink),var(--butter) 28%)!important}
+    }
     .daily-section{padding-top:3rem;padding-bottom:3rem;border-top:1px solid var(--line);grid-template-columns:125px minmax(0,850px);gap:2.5rem}
     .daily-section .daily-icon{width:auto;min-height:0;align-self:start;border:0!important;background:transparent!important;box-shadow:none!important;transform:none!important;padding:.5rem 0}
     .daily-icon::before,.daily-icon::after{display:none!important}
@@ -78,7 +85,7 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     .journey-spotlight:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
     @media(max-width:850px){.home-introduction{gap:1rem;grid-template-columns:1.2fr 1fr}.home-copy .display{font-size:3.7rem}.norway-map svg{max-height:440px}.collection-summary{gap:1rem}.journey-spotlights{gap:1rem}.journey-story{padding:1.5rem 1.2rem}.journey-spotlight{min-height:460px}}
     @media(max-width:600px){.hero.norske-home-hero{padding-top:2rem}.home-introduction{grid-template-columns:1fr;gap:0}.home-copy{padding:0}.home-copy .display{font-size:3.9rem}.home-copy .lede{font-size:1rem}.norway-map{width:min(100%,340px);margin:1.5rem auto 0}.norway-map svg{max-height:350px}.collection-summary{grid-template-columns:repeat(2,1fr);gap:1.8rem 2rem;padding:1.5rem 0 2rem}.collection-summary .stat strong{font-size:2.5rem}.daily-section{grid-template-columns:1fr;gap:1rem;padding:2rem 0}.daily-section .daily-icon{display:grid;grid-template-columns:24px auto 1fr;grid-template-rows:auto;gap:.6rem;margin:0}.daily-section .daily-icon time{grid-column:3;grid-row:1;padding-left:.3rem}.daily-icon .calendar-mark{margin:0}.daily-icon .calendar-label{font-size:.7rem}.journey-spotlights{grid-template-columns:1fr;gap:1.25rem}.journey-spotlight{min-height:460px}.journey-story{padding:1.8rem}.journey-story p{min-height:0}.home-journeys{padding:2rem 0 3rem}}
-    @media(prefers-reduced-motion:reduce){.norway-land-wash,.norway-light-wash,.journey-scenery img,.journey-open,.journey-spotlight{transition:none}.journey-spotlight:hover img{transform:none}}
+    @media(prefers-reduced-motion:reduce){.norway-land-wash,.norway-light-wash,.journey-scenery img,.journey-open,.journey-spotlight,.collection-summary .stat strong,.collection-summary .stat span{transition:none} .collection-summary .stat:hover strong{transform:none}.journey-spotlight:hover img{transform:none}}
   </style>
   <script>
     const map=document.querySelector<HTMLElement>('.norway-map');
