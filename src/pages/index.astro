@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {legends,collectors,narrators,places,resolveLegend,displayPersonName} from '../lib/data';
 import norway from '../data/norway-outline.json';
+import {topics,types} from '../ml-index/data';
 import livPhotograph from '../assets/moe/liv-bratterud.jpg?url';
 import threadsMeetPreview from '../assets/journey-previews/threads-meet.png?url';
 import oneThreadPreview from '../assets/journey-previews/one-thread.png?url';
@@ -16,6 +17,10 @@ const mapPoints=mappedLegends.map(legend=>{
   const angle=index*2.39996323,radius=index?Math.sqrt(index)*1.6:0;
   return {id:legend.id,x:24+(longitude-4)*22+Math.cos(angle)*radius,y:24+(72-latitude)*43+Math.sin(angle)*radius};
 });
+const homeTopics=topics.map(topic=>{
+  const topicTypes=types.filter(type=>type.topic===topic.id&&type.records.length);
+  return {...topic,count:topicTypes.reduce((total,type)=>total+type.records.length,0),ids:topicTypes.map(type=>type.id),examples:[...topicTypes].sort((a,b)=>b.records.length-a.records.length).slice(0,2)};
+}).filter(topic=>topic.count);
 const journeys=[
   {mode:'weave',title:'Der trådene møtes',key:'weave',description:'En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.'},
   {mode:'thread',title:'Én tråd',key:'thread',description:'Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.'},
@@ -30,6 +35,15 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
   <section class="hero norske-home-hero"><div class="shell home-introduction"><div class="home-copy"><p class="home-development"><span class="development-badge" data-i18n="status.development">Under utvikling</span></p><h1 class="display">Norske sagn</h1><p class="lede" data-i18n="home.intro">Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.</p><form class="hero-search" action={`${base}browse/`} method="get"><label class="sr-only" for="home-search" data-i18n="common.search">Søk</label><input id="home-search" name="q" type="search" placeholder="Søk i sagn, steder eller personer…"/><button class="button primary" type="submit" data-i18n="common.search">Søk</button></form><div class="hero-actions"><a class="button icon-link" href={`${base}browse/`}><span data-i18n="home.openBrowser">Åpne sagnutforskeren</span><i data-lucide="arrow-right"></i></a></div></div><figure class="norway-map"><svg viewBox="20 40 620 610" role="img" aria-labelledby="norway-map-title norway-map-description"><title id="norway-map-title" data-i18n="home.mapTitle">Sagn i landskapet</title><desc id="norway-map-description" data-i18n="home.mapAlt">Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.</desc><defs><radialGradient id="norway-ambient-light" gradientUnits="userSpaceOnUse" cx="310" cy="345" r="220"><stop offset="0" stop-color="#ead9b3" stop-opacity=".95"/><stop offset=".35" stop-color="#ddcfae" stop-opacity=".65"/><stop offset=".7" stop-color="#c8dace" stop-opacity=".2"/><stop offset="1" stop-color="#c8dace" stop-opacity="0"/></radialGradient></defs><path class="norway-outline" d={norway.path}/><path class="norway-land-wash" d={norway.path} fill="url(#norway-ambient-light)"/><g class="norway-lights">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.65" data-legend-id={point.id}/>)}</g><g class="norway-light-wash" fill="url(#norway-ambient-light)" aria-hidden="true">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.8"/>)}</g></svg></figure></div></section>
   <section class="shell stats collection-summary" aria-label="Samlingsstatistikk"><div class="stat"><i data-lucide="file-stack"></i><strong data-count-up={legends.length}>{legends.length.toLocaleString('no-NO')}</strong><span data-i18n="common.legends">sagn</span></div><div class="stat"><i data-lucide="notebook-pen"></i><strong data-count-up={knownCollectors}>{knownCollectors.toLocaleString('no-NO')}</strong><span data-i18n="common.collectors">samlere</span></div><div class="stat"><i data-lucide="users-round"></i><strong data-count-up={knownNarrators}>{knownNarrators.toLocaleString('no-NO')}</strong><span data-i18n="common.informants">informanter</span></div><div class="stat"><i data-lucide="map-pin"></i><strong data-count-up={places.length}>{places.length.toLocaleString('no-NO')}</strong><span data-i18n="common.places">steder</span></div></section>
   <section class="section shell daily-section"><div class="daily-icon"><span class="calendar-mark"><i data-lucide="calendar-days"></i></span><span class="calendar-label" data-i18n="home.today">I dag</span><time data-daily-date datetime={currentDateISO}>{currentDate}</time></div><article class="daily-legend"><div class="daily-heading"><div class="eyebrow" data-i18n="home.daily">Dagens sagn</div></div><h2><a href={`${base}legends/${daily.id}/`}>{daily.title.no||daily.id}</a></h2><p class="daily-excerpt">{dailyExcerpt}</p>{attribution.length>0&&<p class="daily-attribution">{attribution.join(' · ')}</p>}<a class="button icon-link" href={`${base}legends/${daily.id}/`}><span data-i18n="home.readDaily">Les sagnet</span><i data-lucide="arrow-right"></i></a></article></section>
+  <section class="section shell home-topics" aria-labelledby="topics-title">
+    <div class="section-head"><div><p class="eyebrow" data-i18n="home.topicsEyebrow">Temaer i samlingen</p><h2 id="topics-title" data-i18n="home.topicsTitle">Finn en inngang til sagnene</h2></div></div>
+    <div class="topic-blocks">{homeTopics.map(topic=><a class="topic-block" href={`${base}browse/?theme=${encodeURIComponent(topic.ids.join(','))}`} data-topic-id={topic.id}>
+      <span class="topic-count"><span>{topic.count.toLocaleString('no-NO')}</span> <span data-i18n="common.legends">sagn</span></span>
+      <h3 data-topic-copy data-i18n-skip data-no={topic.no} data-en={topic.en}>{topic.no}</h3>
+      <p class="topic-examples" data-topic-copy data-i18n-skip data-no={topic.examples.map(type=>type.no).join(' · ')} data-en={topic.examples.map(type=>type.en||type.no).join(' · ')}>{topic.examples.map(type=>type.no).join(' · ')}</p>
+      <span class="topic-open" data-i18n="home.exploreTopic">Utforsk temaet</span>
+    </a>)}</div>
+  </section>
   <section class="section shell home-journeys" aria-labelledby="journeys-title"><div class="section-head"><div><p class="eyebrow" data-i18n="home.journeysEyebrow">Gjennom landskapet</p><h2 id="journeys-title" data-i18n="home.journeysTitle">Tre reiser inn i sagnene</h2></div></div><div class="journey-spotlights">{journeys.map(journey=><a class:list={['journey-spotlight',`journey-${journey.mode}`]} href={`${base}journey/#mode=${journey.mode}`}><div class="journey-scenery" aria-hidden="true">{journey.mode==='weave'&&<img src={threadsMeetPreview} alt="" loading="lazy" width="1470" height="711"/>}{journey.mode==='thread'&&<img src={oneThreadPreview} alt="" loading="lazy" width="1000" height="1000"/>}{journey.mode==='moe'&&<img src={livPhotograph} alt="" loading="lazy" width="1346" height="2048"/>}</div><div class="journey-story"><h3 data-i18n={`home.${journey.key}Title`}>{journey.title}</h3><p data-i18n={`home.${journey.key}Description`}>{journey.description}</p><span class="journey-open" data-i18n="home.beginJourney">Utforsk reisen</span></div></a>)}</div></section>
   <style>
     :global(body:has(.norske-home-hero)){background:var(--paper)!important}
@@ -72,9 +86,26 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     .daily-section .daily-icon time{grid-column:1/-1;grid-row:2;margin:0;font:400 .8rem/1.5 var(--sans);color:var(--muted);letter-spacing:.02em}
     :global(:root[data-theme=dark]) .daily-heading .eyebrow,
     :global(:root[data-theme=dark]) .home-journeys .eyebrow,
+    :global(:root[data-theme=dark]) .home-topics .eyebrow,
     :global(:root[data-theme=dark]) .daily-section .daily-icon .calendar-mark,
     :global(:root[data-theme=dark]) .daily-section .daily-icon .calendar-label,
     :global(:root[data-theme=dark]) .daily-section .daily-icon time{color:var(--butter)}
+    .home-topics{padding-top:3rem;padding-bottom:3.5rem;border-top:1px solid var(--line)}
+    .home-topics h2{font:400 clamp(2rem,3.5vw,2.7rem)/1.2 var(--serif);letter-spacing:-.025em}
+    .topic-blocks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem 1.5rem;margin-top:2.2rem}
+    .topic-block{display:flex;flex-direction:column;position:relative;min-width:0;padding:1.4rem 1.1rem 1.3rem;border-top:1px solid color-mix(in srgb,var(--blue),transparent 65%);text-decoration:none;color:var(--ink);background:linear-gradient(155deg,color-mix(in srgb,var(--mist),transparent 85%),transparent 75%);transition:background .7s ease,border-color .7s ease}
+    .topic-count{font-size:.68rem;letter-spacing:.04em;color:var(--muted)}
+    .topic-block h3{font:400 1.4rem/1.25 var(--serif);letter-spacing:-.02em;margin:.75rem 0 .8rem;color:var(--ink)}
+    .topic-examples{font-size:.77rem;line-height:1.7;color:var(--muted);margin:0 0 1.4rem}
+    .topic-open{align-self:flex-start;margin-top:auto;font-size:.72rem;color:var(--blue);border-bottom:1px solid color-mix(in srgb,var(--blue),transparent 70%);padding-bottom:.2rem;transition:border-color .7s ease}
+    :global(:root[data-theme=dark]) .topic-block{border-top-color:color-mix(in srgb,var(--butter),transparent 45%);background:linear-gradient(155deg,color-mix(in srgb,var(--mist),transparent 95%),transparent 75%)}
+    :global(:root[data-theme=dark]) .topic-open{color:var(--butter);border-bottom-color:color-mix(in srgb,var(--butter),transparent 70%)}
+    .topic-block:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+    @media(hover:hover) and (pointer:fine){.topic-block:hover{border-top-color:var(--blue);background:linear-gradient(155deg,color-mix(in srgb,var(--mist),transparent 73%),transparent 90%)}.topic-block:hover .topic-open{border-bottom-color:currentColor}:global(:root[data-theme=dark]) .topic-block:hover{border-top-color:var(--butter);background:linear-gradient(155deg,color-mix(in srgb,var(--butter),transparent 93%),transparent 90%)}}
+    @media(max-width:900px){.topic-blocks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.home-topics{padding:2rem 0}.topic-blocks{gap:1rem;margin-top:1.5rem}.topic-block{padding:1.1rem .65rem}.topic-block h3{font-size:1.2rem}.topic-examples{font-size:.72rem}}
+    @media(max-width:360px){.topic-blocks{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){.topic-block,.topic-open{transition:none}}
     .home-journeys{padding-top:3rem;padding-bottom:5rem;border-top:1px solid var(--line)}
     .home-journeys h2{font:400 clamp(2rem,3.5vw,2.7rem)/1.2 var(--serif);letter-spacing:-.025em}
     .journey-spotlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:2.5rem}
@@ -93,6 +124,8 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     @media(prefers-reduced-motion:reduce){.norway-land-wash,.norway-light-wash,.journey-scenery img,.journey-open,.journey-spotlight,.collection-summary .stat strong,.collection-summary .stat span{transition:none} .collection-summary .stat:hover strong{transform:none}.journey-spotlight:hover img{transform:none}}
   </style>
   <script>
+    const refreshTopicCopy=()=>{const lang=document.documentElement.dataset.uiLang==='en'?'en':'no';document.querySelectorAll<HTMLElement>('[data-topic-copy]').forEach(element=>{element.textContent=element.dataset[lang]||element.dataset.no||''})};
+    refreshTopicCopy();window.addEventListener('ui-language-change',refreshTopicCopy);
     const map=document.querySelector<HTMLElement>('.norway-map');
     const ambientMotion=matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
     if(map){
