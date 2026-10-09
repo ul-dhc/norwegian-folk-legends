@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ui from '../../i18n/ui.json';
+const sections = [
+  { title: 'about.sourceTitle', paragraphs: ['about.source', 'about.credit'], link: 'about.sourceLink', href: 'https://www2.hf.uio.no/eventyr_og_sagn/' },
+  { title: 'about.samlaTitle', paragraphs: ['about.samlaCollaboration', 'about.samla'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' },
+  { title: 'about.developerTitle', paragraphs: ['about.developer'], link: 'about.developerLink', href: 'https://dhc.lu.lv/' }
+];
+const copy = (key: string) => ui[key as keyof typeof ui].no;
+---
+<BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original UiO collection, Professor Kyrre Kverndokk, collaboration with SAMLA, and development by the University of Latvia Digital Humanities Center.">
+  <div class="shell about-shell about-page">
+    <header class="about-heading">
+      <h1 data-i18n="nav.about">Om prosjektet</h1>
+      <p class="lede" data-i18n="about.intro">{copy('about.intro')}</p>
+    </header>
+    <div class="about-main">
+      {sections.map(section => <section aria-labelledby={section.title}>
+        <h2 id={section.title} data-i18n={section.title}>{copy(section.title)}</h2>
+        {section.paragraphs.map(key => <p data-i18n={key}>{copy(key)}</p>)}
+        <a class="icon-link about-link" href={section.href} target="_blank" rel="noopener noreferrer"><span data-i18n={section.link}>{copy(section.link)}</span><i data-lucide="external-link"></i></a>
+      </section>)}
+    </div>
+  </div>
+  <style>
+    .about-page{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,6rem)}
+    .about-heading{max-width:820px;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+    h1{margin:0 0 1.25rem;font:400 clamp(2.8rem,6vw,4.5rem)/1.1 var(--serif);letter-spacing:-.035em}
+    .about-heading .lede{margin:0;max-width:44rem}
+    .about-main section{padding-bottom:2rem;border-bottom:1px solid var(--line)}
+    .about-main section:last-child{padding-bottom:0;border-bottom:0}
+    .about-main h2{margin-top:2rem}
+    .about-link{font-size:.9rem;color:var(--blue);text-underline-offset:.25em;overflow-wrap:anywhere}
+    .about-link:hover{color:var(--ink)}
+    .about-link :global(svg){flex-shrink:0}
+    @media(max-width:600px){.about-main{font-size:1rem}.about-link{align-items:baseline}.about-link :global(svg){align-self:center}}
+  </style>
+</BaseLayout>
