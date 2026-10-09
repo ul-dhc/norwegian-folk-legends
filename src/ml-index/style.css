@@ -78,3 +78,69 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 @media(max-width:600px){.ml-text-panel{height:calc(100dvh - 1rem);max-height:calc(100dvh - 1rem)}}
 
 .ml-facet-sort{position:relative;flex-shrink:0;max-width:60%}.ml-facet-sort>button{display:flex;align-items:center;gap:.55rem;width:100%;font-size:.65rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:5px;background:var(--raised);color:var(--ink);text-align:left}.ml-facet-sort>button svg{width:.85rem;height:.85rem}.ml-facet-sort>button:hover,.ml-facet-sort>button[aria-expanded=true]{border-color:var(--blue)}.ml-facet-sort button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.ml-sort-menu{position:absolute;right:0;top:calc(100% + .4rem);z-index:10;min-width:190px;padding:.35rem;border:1px solid var(--line);border-radius:7px;background:var(--chart-card);box-shadow:0 8px 24px color-mix(in srgb,var(--ink),transparent 85%)}.ml-sort-menu button{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;border:0;border-radius:4px;background:transparent;color:var(--ink);text-align:left;font-size:.75rem;padding:.65rem .6rem}.ml-sort-menu button svg{visibility:hidden;width:.9rem;height:.9rem;color:var(--blue)}.ml-sort-menu button[aria-checked=true]{background:var(--surface);color:var(--blue)}.ml-sort-menu button[aria-checked=true] svg{visibility:visible}.ml-sort-menu button:hover,.ml-sort-menu button:focus-visible{background:var(--surface)}
+
+/* Data controls share one blue/yellow interaction palette in both themes. */
+.ml-data-page{
+ --data-hover-bg:#f6edcf;--data-hover-line:#c6a548;--data-hover-ink:#765a0c;
+ --data-hover-glow:#c6a54822;--data-chart-light:#e4ce8433;
+}
+:root[data-theme=dark] .ml-data-page{
+ --data-hover-bg:#34475f;--data-hover-line:#eed792;--data-hover-ink:#f3e1a0;
+ --data-hover-glow:#f3e1a026;--data-chart-light:#b4d0ed12;
+}
+.ml-data-page :is(.ml-facet-row,.ml-histogram button,.ml-undated-choice,.ml-donut-legend button,
+ .ml-research-actions button,.ml-period-control select,.ml-dashboard-filters button,.ml-facet-sort>button,
+ .ml-sort-menu button,.ml-preview-mode button,.ml-text-panel-heading button,.ml-more-texts){
+ cursor:pointer;transition:background .3s ease,border-color .3s ease,color .3s ease,box-shadow .3s ease,transform .3s ease;
+}
+.ml-data-page :is(.ml-facet-row,.ml-histogram button,.ml-research-actions button):disabled{cursor:default}
+.ml-data-page .ml-facet-track>span,.ml-data-page .ml-histogram-track>span{transition:background .35s ease,filter .35s ease}
+.ml-data-page .ml-facet-row b,.ml-data-page .ml-histogram button b{transition:color .3s ease}
+.ml-data-page .ml-dash-card{transition:border-color .4s ease,box-shadow .4s ease}
+.ml-data-page :is(button,select,input,a):focus-visible{outline:2px solid var(--data-hover-line);outline-offset:3px}
+.ml-data-page :is(.ml-facet-row,.ml-histogram button,.ml-undated-choice,.ml-donut-legend button):focus-visible{
+ background:var(--data-hover-bg);border-color:var(--data-hover-line);box-shadow:inset 3px 0 var(--data-hover-line);
+}
+@media(hover:hover) and (pointer:fine){
+ .ml-data-page .ml-facet-row:hover:not(:disabled){
+  background:var(--data-hover-bg);border-color:var(--data-hover-line);
+  box-shadow:inset 3px 0 var(--data-hover-line),0 3px 12px var(--data-hover-glow);
+ }
+ .ml-data-page .ml-facet-row:hover:not(:disabled) b{color:var(--data-hover-ink)}
+ .ml-data-page .ml-facet-row:hover:not(:disabled):not(.is-selected) .ml-facet-track>span{
+  background:var(--data-hover-line);filter:drop-shadow(0 0 5px var(--data-hover-glow));
+ }
+ .ml-data-page .ml-facet-row.is-selected:hover{
+  background:color-mix(in srgb,var(--chart-blue),var(--data-hover-bg) 80%);
+  border-color:var(--chart-blue);box-shadow:inset 3px 0 var(--chart-blue),0 3px 12px var(--data-hover-glow);
+ }
+ .ml-data-page .ml-histogram button:hover:not(:disabled){
+  background:var(--data-hover-bg);border-color:var(--data-hover-line);box-shadow:0 3px 12px var(--data-hover-glow);
+ }
+ .ml-data-page .ml-histogram button:hover:not(:disabled) b{color:var(--data-hover-ink)}
+ .ml-data-page .ml-histogram button:hover:not(:disabled):not(.is-selected) .ml-histogram-track>span{
+  background:var(--data-hover-line);filter:drop-shadow(0 0 5px var(--data-hover-glow));
+ }
+ .ml-data-page .ml-histogram button.is-selected:hover{border-color:var(--chart-blue)}
+ .ml-data-page :is(.ml-undated-choice,.ml-donut-legend button):hover:not(:disabled){
+  background:var(--data-hover-bg);border-color:var(--data-hover-line);color:var(--data-hover-ink);
+  box-shadow:inset 3px 0 var(--data-hover-line);
+ }
+ .ml-data-page :is(.ml-undated-choice,.ml-donut-legend button).is-selected:hover{border-color:var(--chart-blue);box-shadow:inset 3px 0 var(--chart-blue)}
+ .ml-data-page :is(.ml-research-actions button,.ml-period-control select,.ml-dashboard-filters button,
+ .ml-facet-sort>button,.ml-sort-menu button,.ml-preview-mode button,.ml-text-panel-heading button,.ml-more-texts):hover:not(:disabled){
+  background:var(--data-hover-bg);border-color:var(--data-hover-line);color:var(--data-hover-ink);box-shadow:0 3px 12px var(--data-hover-glow);
+ }
+ .ml-data-page .ml-research-actions button:hover:not(:disabled){transform:translateY(-2px)}
+ .ml-data-page .ml-research-actions button.ml-show-texts:hover:not(:disabled){background:#f6dfa0;color:var(--action-ink);box-shadow:0 4px 16px #e9c76335}
+ .ml-data-page .ml-dash-card:has(button:hover:not(:disabled)){
+  border-color:color-mix(in srgb,var(--data-hover-line),var(--line) 50%);box-shadow:0 0 22px var(--data-chart-light);
+ }
+ .ml-data-page :is(.ml-read-full:hover,.ml-preview-scroll h4 a:hover){color:var(--data-hover-ink)}
+ .ml-data-page .ml-read-full:hover{text-decoration:underline;text-underline-offset:4px}
+}
+.ml-data-page .ml-dash-card:has(button:focus-visible){border-color:var(--data-hover-line)}
+@media(prefers-reduced-motion:reduce){
+ .ml-data-page :is(button,select,input,a,.ml-dash-card,.ml-facet-track>span,.ml-histogram-track>span,.ml-facet-row b,.ml-histogram button b){transition:none}
+ .ml-data-page .ml-research-actions button:hover:not(:disabled){transform:none}
+}
