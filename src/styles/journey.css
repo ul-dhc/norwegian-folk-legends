@@ -453,3 +453,6 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 .site-header .brand-block:has(.journey-site-subtitle){display:flex;flex-direction:column;align-items:flex-start;gap:0}
 .site-header .brand-block:has(.journey-site-subtitle) .wordmark{white-space:nowrap}
 @media(min-width:900px){.journey-moe-art.manuscript-preview{top:23%}}
+
+/* Place labels remain attached to their map coordinates at every viewport size. */
+#journey-map .journey-destination-label{font-size:clamp(16px,1.35vw,21px);font-weight:550;padding:7px 12px;background:#101c28ed;border-color:#d8c99866;color:#fff5d8;box-shadow:0 2px 18px #080f1d66}

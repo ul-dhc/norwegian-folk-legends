@@ -24,7 +24,7 @@ export function createJourneyMap(container,onError){
   terrainMap.on('load',()=>{terrainReady=true;applyMapType(terrainMap,mapType);});
  }).catch(onError);
  const traces=L.layerGroup().addTo(map),constellation=L.layerGroup().addTo(map),effects=L.layerGroup().addTo(map);
- let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false;
+ let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false,activeFrame=null;
  const remembered=new Map(),seenEdges=new Set(),travelledEdges=new Map(),visitedDots=new Map();
  const networkPane=map.createPane('journeyNetwork');networkPane.style.zIndex=410;networkPane.style.pointerEvents='none';
  const networkRenderer=journeyRenderer(L,'journeyNetwork');
@@ -61,11 +61,17 @@ export function createJourneyMap(container,onError){
 
  const icon=(story,color)=>L.divIcon({className:'journey-orb'+(story?' story':''),html:`<span class="journey-orb-core" style="--orb-colour:${color}"></span>`,iconSize:[32,32],iconAnchor:[16,16]});
  function setHead(coords,story=false,color='#58C4B0'){if(!head)head=L.marker(coords,{icon:icon(story,color),interactive:false,keyboard:false}).addTo(traces);else{head.setIcon(icon(story,color));head.setLatLng(coords);}current=coords;remember(coords);}
- function framing(coords,zoom,reading=false,animate=true,duration=2.8){
+ function framing(coords,zoom,reading=false,animate=true,duration=2.8,photo=false){
   if(!coords.length)return;
+  introZoom?.cancel();introZoom=null;zoomActive=false;
+  activeFrame={coords,zoom,reading,photo};
+  map.invalidateSize({pan:false});
+  map.options.zoomSnap=.25;
   const height=map.getSize().y;
   const wide=map.getSize().x>=900;
   const paddingTopLeft=[35,Math.min(115,height*.2)],paddingBottomRight=[reading&&wide?Math.min(610,map.getSize().x*.49):35,Math.min(height*(reading&&!wide?.57:.23),height-180)];
+  // Move the camera, never the geographic marker, to keep portraits clear.
+  if(photo){paddingTopLeft[0]=35;paddingBottomRight[0]=35;paddingTopLeft[1]=height*.10;paddingBottomRight[1]=height*(wide?.56:.74);}
   const options={maxZoom:zoom,paddingTopLeft,paddingBottomRight,animate:animate&&!still,duration};
   map.stop();if(options.animate)map.flyToBounds(L.latLngBounds(coords),options);else map.fitBounds(L.latLngBounds(coords),options);
  }
@@ -173,7 +179,7 @@ export function createJourneyMap(container,onError){
    startIntroZoom(1.1,20000);breathe(false);
   },
   setStill(value){still=value;if(value){introZoom?.cancel();introZoom=null;breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
-  reset(){networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
+  reset(){activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
   travel(target,{story=false,allowRoad=false,kind='place',colour=null,minDuration=0,onRoute=()=>{},done=()=>{}}={}){
    closingCoords=null;cancel();clearDestination();breathe(false);
    const to=point(target),from=current||to,color=colour||collectorColour(target);
@@ -232,8 +238,14 @@ export function createJourneyMap(container,onError){
    framing([...coords.values()],6,true,!paused,3.2);
    startIntroZoom(1.8,20000,container.clientWidth>=900?[.3,.65]:[.5,.35]);
   },
-  focus(target,photo=false){closingCoords=null;breathe(false);if(!target)return;if(photo){clearDestination();traces.clearLayers();head=null;}else{showDestination(target);setHead(point(target),Boolean(target.key),collectorColour(target));if(!target.key)markVisited(point(target),collectorColour(target));}framing([point(target)],target.precision==='region'?7:9,true);},
-  connections(items,kind,colour,quiet=false){clearDestination();traces.clearLayers();head=null;constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);if(quiet){constellation.eachLayer(layer=>{if(layer instanceof L.Marker)constellation.removeLayer(layer);});}networkPane.classList.toggle('moe-slow-network',quiet);framing(nodes.map(point),7);breathe(!quiet);},
+  focus(target,photo=false){
+   closingCoords=null;breathe(false);if(!target)return;
+   if(photo){traces.clearLayers();head=null;}
+   showDestination(target);setHead(point(target),Boolean(target.key),photo?'#F3DEA0':collectorColour(target));
+   if(!photo&&!target.key)markVisited(point(target),collectorColour(target));
+   framing([point(target)],target.precision==='region'?7:9,true,true,2.8,photo);
+  },
+  connections(items,kind,colour,quiet=false){clearDestination();traces.clearLayers();head=null;constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);if(quiet){constellation.eachLayer(layer=>{if(layer instanceof L.Marker)constellation.removeLayer(layer);});}networkPane.classList.toggle('moe-slow-network',quiet);framing(nodes.map(point),7,quiet);breathe(!quiet);},
   clearConstellation(){constellation.clearLayers();container.classList.remove('journey-network-overview');fullOverview=false;},
   overview(route,closing=false){clearDestination();const coords=[...remembered.values(),...route.map(point)];closingCoords=closing?coords:null;if(closing){map.invalidateSize({pan:false});frameClosing();}else framing(coords,7,false);breathe(true);},
   pause(){introZoom?.pause();if(movement&&raf!==null){movement.elapsed+=performance.now()-movement.last;stopFrame();}map.stop();},
@@ -248,7 +260,7 @@ export function createJourneyMap(container,onError){
   },
   finishTravel,
   cancel,
-  resize(){map.invalidateSize({pan:false});},
+  resize(){map.invalidateSize({pan:false});if(activeFrame){const {coords,zoom,reading,photo}=activeFrame;framing(coords,zoom,reading,false,2.8,photo);}},
   destroy(){destroyed=true;introZoom?.cancel();introZoom=null;cancel();observer.disconnect();map.remove();}
  };
 }

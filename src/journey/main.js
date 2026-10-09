@@ -245,7 +245,7 @@ function renderScene(preserveMap=false){
 
  if(!livReading){photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;}
  if(!keepPhoto)delete el('journey-moe-art').dataset.encounter;
- el('journey-photo-place').hidden=!s.image||!s.target&&s.kind!=='read';
+ el('journey-photo-place').hidden=true;
  el('journey-photo-place').textContent=s.image?(s.target?.sted||r?.sted||''):'';
  status('');controls();
  if(s.kind==='moe'){
