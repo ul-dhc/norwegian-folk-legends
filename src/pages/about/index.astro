@@ -42,7 +42,12 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
     .about-contacts li{display:grid;gap:.65rem}
     h1{margin:0 0 1.25rem;font:400 clamp(2.8rem,6vw,4.5rem)/1.1 var(--serif);letter-spacing:-.035em}
     .about-heading .lede{margin:0;max-width:44rem}
-    .about-main section{padding-bottom:2rem;border-bottom:1px solid var(--line)}
+    .about-main section{position:relative;isolation:isolate;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+    .about-main section::before{content:'';position:absolute;inset:1rem -.9rem .8rem;z-index:-1;pointer-events:none;border-radius:14px;background:linear-gradient(120deg,color-mix(in srgb,var(--butter),transparent 83%),color-mix(in srgb,var(--parch),transparent 94%));opacity:0;transition:opacity .35s ease}
+    :global(:root[data-theme=dark]) .about-main section::before{background:linear-gradient(120deg,color-mix(in srgb,var(--mist),transparent 92%),color-mix(in srgb,var(--butter),transparent 96%))}
+    .about-main section:focus-within::before{opacity:1}
+    @media(hover:hover) and (pointer:fine){.about-main section:hover::before{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.about-main section::before{transition:none}}
     .about-main section:last-child{padding-bottom:0;border-bottom:0}
     .about-main h2{margin-top:2rem}
     .about-link{font-size:.9rem;color:var(--blue);text-underline-offset:.25em;overflow-wrap:anywhere}
