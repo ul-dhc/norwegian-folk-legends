@@ -212,5 +212,5 @@
   "about.development": {"no": "Utviklingen startet i 2026, og plattformen er fortsatt under utvikling.", "en": "Development began in 2026, and the platform is still under development."},
   "about.contactTitle": {"no": "Kontakt", "en": "Contact"},
   "about.samlaFuture": {"no": "I fremtiden kan arkivmateriale fra SAMLA bidra til å utvide og berike plattformens sagnsamling.", "en": "In the future, archival materials from SAMLA could expand and enrich the platform’s collection of legends."},
-  "about.openSource": {"no": "Plattformens kildekode er tilgjengelig på", "en": "The platform’s source code is available on"}
+  "about.openSource": {"no": "Plattformen har åpen kildekode og er tilgjengelig på", "en": "The platform is open source and available on"}
 }
