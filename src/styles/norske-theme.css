@@ -36,3 +36,10 @@
 :root #legend-journey{--gold:var(--action-fill)}
 :root #legend-journey .journey-primary{background:var(--action-fill);border-color:var(--action-fill);color:var(--action-ink)}
 :root #legend-journey .journey-primary:hover{background:var(--action-hover);border-color:var(--action-hover)}
+
+/* A fine yellow frame distinguishes pinned records in either explorer view. */
+:root .browser[data-view] .result-card.is-pinned,
+:root .browser[data-view] .result-card.is-pinned:hover,
+:root .browser[data-view] .result-card.is-pinned:focus-visible{
+  border:1px solid var(--action-fill);box-shadow:none
+}
