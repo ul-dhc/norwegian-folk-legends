@@ -6,7 +6,7 @@
   "nav.about": { "no": "Om prosjektet", "en": "About" },
   "status.development": { "no": "Under utvikling", "en": "In development" },
   "home.eyebrow": { "no": "Norsk folketradisjon", "en": "Norwegian folk tradition" },
-  "home.intro": { "no": "Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.", "en": "Explore 1,477 Norwegian folk legends through their stories, places, collectors and Migratory Legend types." },
+  "home.intro": { "no": "Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.", "en": "Discover 1,477 Norwegian folk legends. Explore places, people and legend types, or follow a journey through the landscape." },
   "home.searchPlaceholder": { "no": "Søk i sagn, steder eller personer…", "en": "Search legends, places or people…" },
   "common.search": { "no": "Søk", "en": "Search" },
   "common.legends": { "no": "sagn", "en": "legends" },
@@ -176,5 +176,17 @@
   "detail.moreMetadata": { "no": "Flere metadata", "en": "Additional metadata" },
   "detail.copy": { "no": "Kopier sagn", "en": "Copy legend" },
   "detail.copyLink": { "no": "Kopier lenke", "en": "Copy link" },
-  "detail.copied": { "no": "Kopiert", "en": "Copied" }
+  "detail.copied": { "no": "Kopiert", "en": "Copied" },
+  "home.mapTitle": {"no": "Sagn i landskapet", "en": "Legends in the landscape"},
+  "home.mapAlt": {"no": "Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.", "en": "A map of Norway with one point of light for each geolocated legend."},
+  "home.mapCaption": {"no": "Ett lyspunkt, ett stedfestet sagn.", "en": "One light, one geolocated legend."},
+  "home.journeysEyebrow": {"no": "Gjennom landskapet", "en": "Through the landscape"},
+  "home.journeysTitle": {"no": "Tre reiser inn i sagnene", "en": "Three journeys into the legends"},
+  "home.beginJourney": {"no": "Utforsk reisen", "en": "Explore the journey"},
+  "home.weaveTitle": {"no": "Der trådene møtes", "en": "Where threads meet"},
+  "home.threadTitle": {"no": "Én tråd", "en": "One thread"},
+  "home.moeTitle": {"no": "Moltke Moe", "en": "Moltke Moe"},
+  "home.weaveDescription": {"no": "En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.", "en": "An open-ended journey through places, voices and legends. Follow the connections as they gather in the landscape."},
+  "home.threadDescription": {"no": "Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.", "en": "A call from the water, an encounter with the hulder, a restless spirit. Follow a theme from place to place."},
+  "home.moeDescription": {"no": "Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.", "en": "Meet the voices of Bø through legends, photographs and handwritten pages from the archive."}
 }

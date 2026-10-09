@@ -419,7 +419,7 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 .ending-actions-only .journey-welcome-actions{justify-content:center;flex-wrap:wrap;margin:0}
 
 /* Frame only Moe's face and shoulders from the unchanged family photograph. */
-.journey-moe-art.life-photos .life-boy-detail{position:absolute;left:50%;top:15%;transform:translateX(-50%);width:50%;height:65%;opacity:.78;overflow:hidden;mask-image:linear-gradient(to bottom,#000 82%,transparent)}
+.journey-moe-art.life-photos .life-boy-detail{position:absolute;left:50%;top:15%;translate:-50% 0;width:50%;height:65%;opacity:.78;overflow:hidden;mask-image:linear-gradient(to bottom,#000 82%,transparent)}
 
 #legend-journey[data-scene=end] .ending-actions-only .journey-welcome-actions{justify-content:center}
 #legend-journey[data-scene=end]:has(.ending-actions-only) .journey-shade{background:radial-gradient(ellipse at center,transparent 35%,#080f1d66 100%)}
@@ -432,3 +432,24 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 /* Give the start action its own breathing room below the journey choices. */
 #legend-journey .journey-welcome .journey-welcome-actions{margin-top:clamp(28px,4vh,42px)}
 @media(prefers-reduced-motion:reduce){#legend-journey .journey-welcome .journey-primary{transition:none;transform:none}}
+
+/* A constant title belongs to the immersive view; the site header identifies the embedded view. */
+#legend-journey:not(:fullscreen):not(.is-fullscreen) .journey-map-heading{display:none}
+.journey-site-subtitle{display:block;font:11px/1.5 system-ui,sans-serif;letter-spacing:.025em;margin-top:6px;color:var(--muted)}
+#journey-photo-place{position:absolute;z-index:460;left:6%;bottom:8%;font:12px/1.5 system-ui,sans-serif;color:#eee8d6;letter-spacing:.04em;pointer-events:none}
+#journey-photo-place::before{content:'';display:inline-block;width:5px;height:5px;margin-right:10px;border-radius:50%;background:#f9edbe;box-shadow:0 0 8px #f0d98c}
+@media(max-width:899px){#journey-photo-place{left:24px;top:15%;bottom:auto;font-size:10px}}
+.journey-neon-point.moe-featured-star{fill:#f5e3a4;fill-opacity:1;filter:drop-shadow(0 0 3px #ffe2a6) drop-shadow(0 0 7px #dfbb6d88)}
+.journey-thread.moe-featured-star{stroke:#e8d596;stroke-opacity:.78}
+.moe-slow-network .journey-spoke-reveal{animation-duration:16s!important}
+.moe-slow-network .journey-endpoint-reveal{animation-duration:8s!important}
+.journey-moe-art.manuscript-preview{inset:10% 48% 13% 4%;mask-image:none}
+.journey-moe-art.manuscript-preview img{opacity:1;animation:manuscript-arrive 9s ease-out both}
+@keyframes manuscript-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:899px){.journey-moe-art.manuscript-preview{inset:20% 20% 57%}}
+@media(prefers-reduced-motion:reduce){.journey-moe-art.manuscript-preview img{animation:none}}
+.journey-moe-art.liv-photo .liv-figures{position:absolute;inset:0;mask-image:none;transform-origin:50% 72%}
+.journey-moe-art.liv-photo .liv-mask{mask-image:url(../assets/moe/liv-original-mask.svg);mask-size:100% 100%;mask-repeat:no-repeat;opacity:1}
+.site-header .brand-block:has(.journey-site-subtitle){display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.site-header .brand-block:has(.journey-site-subtitle) .wordmark{white-space:nowrap}
+@media(min-width:900px){.journey-moe-art.manuscript-preview{top:23%}}

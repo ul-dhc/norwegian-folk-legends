@@ -1,32 +1,105 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import {legends,collectors,narrators,places,mlCategories,resolveLegend,displayPersonName} from '../lib/data';
+import {legends,collectors,narrators,places,resolveLegend,displayPersonName} from '../lib/data';
+import norway from '../data/norway-outline.json';
+import livPhotograph from '../assets/moe/liv-bratterud.jpg?url';
 const base=import.meta.env.BASE_URL;
+const mappedLegends=legends.filter(legend=>legend.originalCoordinates);
+const locationTotals=new Map<string,number>();
+const mapPoints=mappedLegends.map(legend=>{
+  const {latitude,longitude}=legend.originalCoordinates!;
+  const key=`${latitude},${longitude}`,index=locationTotals.get(key)||0;
+  locationTotals.set(key,index+1);
+  // A small deterministic spread keeps every record visible at shared locations.
+  const angle=index*2.39996323,radius=index?Math.sqrt(index)*1.6:0;
+  return {id:legend.id,x:24+(longitude-4)*22+Math.cos(angle)*radius,y:24+(72-latitude)*43+Math.sin(angle)*radius};
+});
+const journeys=[
+  {mode:'weave',title:'Der trådene møtes',key:'weave',description:'En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.'},
+  {mode:'thread',title:'Én tråd',key:'thread',description:'Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.'},
+  {mode:'moe',title:'Moltke Moe',key:'moe',description:'Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.'}
+];
+const threadGroups=new Map<string,typeof mappedLegends>();
+for(const legend of mappedLegends){if(!legend.collectorId||legend.originalCoordinates!.latitude>63)continue;const group=threadGroups.get(legend.collectorId)||[];group.push(legend);threadGroups.set(legend.collectorId,group)}
+const previewThreads=[...threadGroups.values()].sort((a,b)=>b.length-a.length).slice(0,5).map(group=>group.filter((legend,index)=>group.findIndex(other=>other.placeId===legend.placeId)===index).slice(0,9).map(legend=>{const {latitude,longitude}=legend.originalCoordinates!;return `${24+(longitude-4)*22},${24+(72-latitude)*43}`}));
 const today=new Date(),dayNumber=Math.floor(Date.UTC(today.getUTCFullYear(),today.getUTCMonth(),today.getUTCDate())/86400000),daily=legends[dayNumber%legends.length],dailyData=resolveLegend(daily);
 const excerpt=(daily.text.no||'').replace(/\s+/g,' ').trim(),dailyExcerpt=excerpt.length>520?`${excerpt.slice(0,520).trimEnd()}…`:excerpt;
 const attribution=[[dailyData.place?.name,dailyData.county?.name,daily.year].filter(Boolean).join(' · '),displayPersonName(dailyData.narrator),displayPersonName(dailyData.collector)].filter(Boolean);
 const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,knownNarrators=narrators.filter(item=>displayPersonName(item)).length;
 ---
 <BaseLayout active="home" title="Norske sagn">
-  <section class="hero norske-home-hero"><div class="shell"><p class="home-development"><span class="development-badge" data-i18n="status.development">Under utvikling</span></p><h1 class="display">Norske sagn</h1><p class="lede" data-i18n="home.intro">Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.</p><form class="hero-search" action={`${base}browse/`} method="get"><label class="sr-only" for="home-search" data-i18n="common.search">Søk</label><input id="home-search" name="q" type="search" placeholder="Søk i sagn, steder eller personer…"/><button class="button primary" type="submit" data-i18n="common.search">Søk</button></form><div class="hero-actions"><a class="button icon-link" href={`${base}browse/`}><span data-i18n="home.openBrowser">Åpne sagnutforskeren</span><i data-lucide="arrow-right"></i></a></div></div></section>
+  <section class="hero norske-home-hero"><div class="shell home-introduction"><div class="home-copy"><p class="home-development"><span class="development-badge" data-i18n="status.development">Under utvikling</span></p><h1 class="display">Norske sagn</h1><p class="lede" data-i18n="home.intro">Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.</p><form class="hero-search" action={`${base}browse/`} method="get"><label class="sr-only" for="home-search" data-i18n="common.search">Søk</label><input id="home-search" name="q" type="search" placeholder="Søk i sagn, steder eller personer…"/><button class="button primary" type="submit" data-i18n="common.search">Søk</button></form><div class="hero-actions"><a class="button icon-link" href={`${base}browse/`}><span data-i18n="home.openBrowser">Åpne sagnutforskeren</span><i data-lucide="arrow-right"></i></a></div></div><figure class="norway-map"><svg viewBox="20 40 620 610" role="img" aria-labelledby="norway-map-title norway-map-description"><title id="norway-map-title" data-i18n="home.mapTitle">Sagn i landskapet</title><desc id="norway-map-description" data-i18n="home.mapAlt">Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.</desc><defs><radialGradient id="norway-ambient-light" gradientUnits="userSpaceOnUse" cx="310" cy="345" r="220"><stop offset="0" stop-color="#ead9b3" stop-opacity=".95"/><stop offset=".35" stop-color="#ddcfae" stop-opacity=".65"/><stop offset=".7" stop-color="#c8dace" stop-opacity=".2"/><stop offset="1" stop-color="#c8dace" stop-opacity="0"/></radialGradient></defs><path class="norway-outline" d={norway.path}/><path class="norway-land-wash" d={norway.path} fill="url(#norway-ambient-light)"/><g class="norway-lights">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.65" data-legend-id={point.id}/>)}</g><g class="norway-light-wash" fill="url(#norway-ambient-light)" aria-hidden="true">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.8"/>)}</g></svg></figure></div></section>
   <section class="shell stats collection-summary" aria-label="Samlingsstatistikk"><div class="stat"><i data-lucide="file-stack"></i><strong data-count-up={legends.length}>{legends.length.toLocaleString('no-NO')}</strong><span data-i18n="common.legends">sagn</span></div><div class="stat"><i data-lucide="notebook-pen"></i><strong data-count-up={knownCollectors}>{knownCollectors.toLocaleString('no-NO')}</strong><span data-i18n="common.collectors">samlere</span></div><div class="stat"><i data-lucide="users-round"></i><strong data-count-up={knownNarrators}>{knownNarrators.toLocaleString('no-NO')}</strong><span data-i18n="common.informants">informanter</span></div><div class="stat"><i data-lucide="map-pin"></i><strong data-count-up={places.length}>{places.length.toLocaleString('no-NO')}</strong><span data-i18n="common.places">steder</span></div></section>
   <section class="section shell daily-section"><div class="daily-icon" aria-hidden="true"><span class="calendar-mark"><i data-lucide="calendar-days"></i></span><span class="calendar-label" data-i18n="home.today">I dag</span></div><article class="daily-legend"><div class="daily-heading"><div class="eyebrow" data-i18n="home.daily">Dagens sagn</div></div><h2><a href={`${base}legends/${daily.id}/`}>{daily.title.no||daily.id}</a></h2><p class="daily-excerpt">{dailyExcerpt}</p>{attribution.length>0&&<p class="daily-attribution">{attribution.join(' · ')}</p>}<a class="button icon-link" href={`${base}legends/${daily.id}/`}><span data-i18n="home.readDaily">Les sagnet</span><i data-lucide="arrow-right"></i></a></article></section>
-  <section class="section home-modules"><div class="shell"><div class="section-head"><div><p class="eyebrow" data-i18n="home.nextModules">Neste moduler</p><h2 data-i18n="home.exploreMore">Flere måter å utforske samlingen på</h2></div></div><div class="featured"><article class="feature is-inactive"><i data-lucide="map-pin"></i><h3 data-i18n="nav.map">Kart</h3><p data-i18n="home.mapDescription">Utforsk sagn etter sted og fylke.</p></article><article class="feature is-inactive"><i data-lucide="layers"></i><h3 data-i18n="nav.ml">ML-indeks</h3><p data-i18n="home.mlDescription">Bla gjennom Migratory Legend-kategoriene.</p></article><a class="feature feature-link" href={`${base}journey/`}><i data-lucide="network"></i><h3 data-i18n="nav.journey">Reise</h3><p data-i18n="home.journeyDescription">Følg forbindelser mellom fortellinger, steder og mennesker.</p></a></div><p class="home-data-note"><strong>{mlCategories.length}</strong> <span data-i18n="common.mlTypes">ML-typer</span></p></div></section>
+  <section class="section shell home-journeys" aria-labelledby="journeys-title"><div class="section-head"><div><p class="eyebrow" data-i18n="home.journeysEyebrow">Gjennom landskapet</p><h2 id="journeys-title" data-i18n="home.journeysTitle">Tre reiser inn i sagnene</h2></div></div><div class="journey-spotlights">{journeys.map(journey=><a class:list={['journey-spotlight',`journey-${journey.mode}`]} href={`${base}journey/#mode=${journey.mode}`}><div class="journey-scenery" aria-hidden="true">{journey.mode==='weave'&&<svg class="journey-landscape" viewBox="10 335 350 315" preserveAspectRatio="xMidYMid slice"><path class="preview-land" d={norway.path}/>{previewThreads.map((points,index)=><polyline points={points.join(' ')} class={`preview-thread thread-${index}`}/>)}{mapPoints.filter(point=>point.y>335).map(point=><circle cx={point.x} cy={point.y} r="1.1"/>)}</svg>}{journey.mode==='thread'&&<><div class="water-light"/><div class="water-ripples"/><blockquote class="water-voice" data-i18n-skip>“Tia e kommen,<br/>men ikkje mannen!”</blockquote></>}{journey.mode==='moe'&&<img src={livPhotograph} alt="" loading="lazy" width="1346" height="2048"/>}</div><div class="journey-story"><h3 data-i18n={`home.${journey.key}Title`}>{journey.title}</h3><p data-i18n={`home.${journey.key}Description`}>{journey.description}</p><span class="journey-open" data-i18n="home.beginJourney">Utforsk reisen</span></div></a>)}</div><p class="journey-photo-credit">Liv Bratterud og Moltke Moe, 1878 · <a href="https://commons.wikimedia.org/wiki/File:Liv_Brattefud_af_B%C3%B8_herad_fort%C3%A6ller_%C3%A6ventyr_for_Moltke_Moe,_sommeren_1878.jpg" target="_blank" rel="noopener noreferrer">Nasjonalbiblioteket · CC BY 2.0</a></p></section>
   <style>
-    .home-development{margin:.8rem 0 .9rem}.home-development .development-badge{font-size:.7rem;padding:.28rem .65rem}
-    .collection-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:-46px;padding:1.15rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--paper),transparent 4%)}
-    .collection-summary .stat,.collection-summary .stat:nth-child(4),:global(:root[data-theme=dark]) .collection-summary .stat{--stat-color:var(--blue);min-height:84px;padding:.65rem clamp(1rem,2.5vw,2rem);display:grid;grid-template-columns:30px 1fr;grid-template-rows:auto auto;column-gap:.85rem;align-content:center;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
-    .collection-summary .stat:nth-child(2){--stat-color:var(--stat-green)}.collection-summary .stat:nth-child(3){--stat-color:var(--pin)}.collection-summary .stat:nth-child(4){--stat-color:var(--place-blue)}
-    .collection-summary .stat+.stat{border-left:1px solid var(--line)}
-    .collection-summary .stat>.lucide{grid-column:1;grid-row:1/3;width:21px;height:21px;align-self:center;color:var(--stat-color);filter:none}
-    .collection-summary .stat strong,.collection-summary .stat span{grid-column:2;margin:0}.collection-summary .stat strong{grid-row:1;color:var(--ink);font:500 clamp(2rem,3vw,2.65rem)/1 var(--serif);letter-spacing:-.035em}.collection-summary .stat span{grid-row:2;margin-top:.18rem;color:var(--muted);font-size:.68rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase}
-    .collection-summary .stat:hover,.collection-summary .stat:nth-child(2):hover,.collection-summary .stat:nth-child(3):hover,.collection-summary .stat:nth-child(4):hover,:global(:root[data-theme=dark]) .collection-summary .stat:hover{transform:none;border-color:var(--line);background:transparent;box-shadow:none}.collection-summary .stat:hover strong{color:var(--ink);text-shadow:none}.collection-summary .stat:hover>.lucide{color:var(--stat-color);filter:none;transform:none}
-    :global(:root[data-theme=dark]) .collection-summary{border-color:var(--line);background:color-mix(in srgb,var(--paper),var(--raised) 22%)}:global(:root[data-theme=dark]) .collection-summary .stat{border-color:var(--line);background:transparent}
-    .feature-link{display:block;color:inherit;text-decoration:none}.feature-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px #0001}.feature-link>svg{color:var(--accent)}
-    @media(max-width:850px){.collection-summary{grid-template-columns:repeat(2,1fr)}.collection-summary .stat:nth-child(3){border-left:0}.collection-summary .stat:nth-child(3),.collection-summary .stat:nth-child(4){border-top:1px solid var(--line)}}
-    @media(max-width:600px){.collection-summary{grid-template-columns:1fr;margin-top:1rem;padding:.35rem 0}.collection-summary .stat,.collection-summary .stat:nth-child(4),:global(:root[data-theme=dark]) .collection-summary .stat{min-height:76px;padding:.75rem 1rem}.collection-summary .stat+.stat{border-left:0;border-top:1px solid var(--line)}.collection-summary .stat strong{font-size:2rem}}
+    :global(body:has(.norske-home-hero)){background:var(--paper)!important}
+    :global(body:has(.norske-home-hero)::before),:global(body:has(.norske-home-hero)::after){display:none!important}
+    .hero.norske-home-hero{min-height:0;padding:3rem 0 2rem;background:var(--paper)!important;overflow:visible}
+    .norske-home-hero::before,.norske-home-hero::after{display:none!important}
+    .home-introduction{display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center}
+    .home-copy{padding-bottom:1.5rem}.home-development{margin:0 0 1.3rem}.home-development .development-badge{font-size:.65rem;padding:.25rem .55rem}
+    .home-copy .display{font-size:clamp(3.4rem,6.6vw,6rem);line-height:1.06;letter-spacing:-.045em;font-weight:400;margin-bottom:1.4rem}
+    .home-copy .lede{max-width:35rem;font-size:1.12rem;line-height:1.8}.home-copy .hero-search{margin-top:1.8rem}.hero-actions{margin-top:1rem}
+    .home-copy .hero-search input{background:var(--raised);color:var(--ink)}
+    .home-copy .hero-search input::placeholder{color:var(--muted)}
+    .norway-map{margin:0;min-width:0;justify-self:center;width:min(100%,550px)}
+    .norway-map svg{display:block;width:100%;height:auto;max-height:550px;overflow:visible}
+    .norway-outline{fill:color-mix(in srgb,var(--mist),transparent 87%);stroke:color-mix(in srgb,var(--blue),transparent 76%);stroke-width:.65;stroke-linejoin:round}
+    .norway-lights circle{fill:color-mix(in srgb,var(--mist),var(--blue) 35%);opacity:.55}
+    :global(:root[data-theme=dark]) .norway-lights circle{fill:var(--mist);opacity:.65}
+    .norway-land-wash,.norway-light-wash{opacity:0;pointer-events:none;transition:opacity 1.4s ease}
+    .norway-map.is-lit .norway-land-wash{opacity:.16}
+    .norway-map.is-lit .norway-light-wash{opacity:.9}
+    :global(:root[data-theme=dark]) .norway-map.is-lit .norway-land-wash{opacity:.09}
+    .collection-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:0;padding:1.8rem 0 2.4rem;border:0;background:transparent!important;box-shadow:none}
+    .collection-summary .stat{display:block!important;min-height:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;transform:none!important;text-align:left}
+    .collection-summary .stat::before,.collection-summary .stat::after,.collection-summary .stat>:global(svg){display:none!important}
+    .collection-summary .stat strong{display:block;margin:0;color:var(--ink)!important;font:400 clamp(2.4rem,4vw,3.4rem)/1.1 var(--serif);letter-spacing:-.04em;text-shadow:none!important}
+    .collection-summary .stat span{display:block;margin:.45rem 0 0;color:var(--muted);font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+    .daily-section{padding-top:3rem;padding-bottom:3rem;border-top:1px solid var(--line);grid-template-columns:100px minmax(0,850px);gap:2.5rem}
+    .daily-section .daily-icon{width:auto;min-height:0;align-self:start;border:0!important;background:transparent!important;box-shadow:none!important;transform:none!important;padding:.5rem 0}
+    .daily-icon::before,.daily-icon::after{display:none!important}
+    .home-journeys{padding-top:3rem;padding-bottom:5rem;border-top:1px solid var(--line)}
+    .home-journeys h2{font:400 clamp(2rem,3.5vw,2.7rem)/1.2 var(--serif);letter-spacing:-.025em}
+    .journey-spotlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:2.5rem}
+    .journey-spotlight{position:relative;isolation:isolate;display:flex;min-height:490px;align-items:end;overflow:hidden;border-radius:3px;text-decoration:none;color:#fcfaf6;background:#1c2836;transition:box-shadow .7s ease}
+    .journey-scenery{position:absolute;inset:0;z-index:-2;overflow:hidden}.journey-scenery::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 10%,#14202d15 30%,#131e2ec9 61%,#121c2bf5 100%);z-index:2}
+    .journey-landscape,.journey-scenery img{display:block;width:100%;height:100%;transition:transform 2s cubic-bezier(.2,.6,.3,1)}
+    .journey-landscape{opacity:.9}.preview-land{fill:#36485b;stroke:#68808b;stroke-width:.45}.journey-landscape circle{fill:#c8d8df;opacity:.6}.preview-thread{fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;opacity:.7}.thread-0{stroke:#d2b957}.thread-1{stroke:#58c4b0}.thread-2{stroke:#cc76a5}.thread-3{stroke:#a18bd0}.thread-4{stroke:#56b4de}
+    .journey-thread{background:linear-gradient(160deg,#344e56,#253f49 45%,#152e3c)}
+    .water-light{position:absolute;inset:-15%;background:radial-gradient(ellipse at 55% 24%,#c5d6be3b,transparent 44%),radial-gradient(ellipse at 23% 49%,#91c7c322,transparent 60%);filter:blur(8px);transition:transform 2s ease}
+    .water-ripples{position:absolute;width:135%;height:82%;left:-18%;top:8%;border-radius:50%;background:repeating-radial-gradient(ellipse at 54% 44%,transparent 0 20px,#bcd2c91c 21px 22px,transparent 23px 37px);transform:perspective(450px) rotateX(57deg) rotateZ(-15deg);mask-image:radial-gradient(ellipse,#000 12%,transparent 67%);opacity:.75;transition:opacity 1.5s ease}
+    .water-voice{position:absolute;top:15%;left:9%;right:9%;margin:0;text-align:center;font:italic 1.55rem/1.7 var(--serif);color:#e2e7dbb3;letter-spacing:.015em;text-shadow:0 2px 20px #152e3c66}
+    .journey-scenery img{object-fit:cover;object-position:50% 70%}.journey-moe .journey-scenery::after{background:linear-gradient(180deg,#352b1e08 25%,#29251e55 47%,#201e1cd9 70%,#1e1c1bf5 100%)}
+    .journey-story{padding:2rem 1.8rem;width:100%}.journey-story h3{font:400 clamp(1.6rem,2.4vw,2.1rem)/1.15 var(--serif);margin:0 0 .9rem;letter-spacing:-.025em;color:#fcfaf6}.journey-story p{font-size:.86rem;line-height:1.75;color:#edece3d4;margin:0 0 1.4rem;min-height:4.6em}
+    .journey-open{display:inline-block;font-size:.75rem;color:#f0dfb9;border-bottom:1px solid #f0dfb94d;padding-bottom:.3rem;transition:border-color .7s,color .7s}
+    .journey-photo-credit{margin:.85rem 0 0;text-align:right;font-size:.58rem;line-height:1.6;color:var(--muted)}.journey-photo-credit a{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+    @media(hover:hover) and (pointer:fine){.journey-spotlight:hover .journey-landscape,.journey-spotlight:hover img{transform:scale(1.035)}.journey-spotlight:hover .water-light{transform:translate(3%,2%)}.journey-spotlight:hover .water-ripples{opacity:1}.journey-spotlight:hover .journey-open{border-color:#f0dfb9;color:#fff4d9}.journey-spotlight:hover{box-shadow:0 12px 30px #17182718}}
+    .journey-spotlight:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+    @media(max-width:850px){.home-introduction{gap:1rem;grid-template-columns:1.2fr 1fr}.home-copy .display{font-size:3.7rem}.norway-map svg{max-height:440px}.collection-summary{gap:1rem}.journey-spotlights{gap:1rem}.journey-story{padding:1.5rem 1.2rem}.journey-spotlight{min-height:460px}}
+    @media(max-width:600px){.hero.norske-home-hero{padding-top:2rem}.home-introduction{grid-template-columns:1fr;gap:0}.home-copy{padding:0}.home-copy .display{font-size:3.9rem}.home-copy .lede{font-size:1rem}.norway-map{width:min(100%,340px);margin:1.5rem auto 0}.norway-map svg{max-height:350px}.collection-summary{grid-template-columns:repeat(2,1fr);gap:1.8rem 2rem;padding:1.5rem 0 2rem}.collection-summary .stat strong{font-size:2.5rem}.daily-section{grid-template-columns:1fr;gap:1rem;padding:2rem 0}.daily-section .daily-icon{display:flex;align-items:center;justify-content:start;gap:.6rem;margin:0}.daily-icon .calendar-mark{margin:0}.daily-icon .calendar-label{font-size:.7rem}.journey-spotlights{grid-template-columns:1fr;gap:1.25rem}.journey-spotlight{min-height:460px}.journey-story{padding:1.8rem}.journey-story p{min-height:0}.journey-photo-credit{text-align:left}.home-journeys{padding:2rem 0 3rem}}
+    @media(prefers-reduced-motion:reduce){.norway-land-wash,.norway-light-wash,.journey-landscape,.journey-scenery img,.water-light,.water-ripples,.journey-open,.journey-spotlight{transition:none}.journey-spotlight:hover .journey-landscape,.journey-spotlight:hover img,.journey-spotlight:hover .water-light{transform:none}}
   </style>
   <script>
+    const map=document.querySelector<HTMLElement>('.norway-map');
+    const ambientMotion=matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
+    if(map){
+      const svg=map.querySelector('svg')!,light=map.querySelector('radialGradient')!;
+      let frame=0,previousTime=0,currentX=310,currentY=345,targetX=310,targetY=345;
+      const drift=(now:number)=>{
+        const elapsed=previousTime?Math.min(64,now-previousTime):16;previousTime=now;
+        const ease=1-Math.exp(-elapsed/240);
+        currentX+=(targetX-currentX)*ease;currentY+=(targetY-currentY)*ease;
+        light.setAttribute('cx',String(currentX));light.setAttribute('cy',String(currentY));
+        if(Math.hypot(targetX-currentX,targetY-currentY)>.15)frame=requestAnimationFrame(drift);else{frame=0;previousTime=0}
+      };
+      const locate=(event:PointerEvent)=>{const matrix=svg.getScreenCTM();if(!matrix)return;const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());targetX=point.x;targetY=point.y};
+      map.addEventListener('pointerenter',event=>{if(!ambientMotion.matches)return;locate(event);currentX=targetX;currentY=targetY;light.setAttribute('cx',String(currentX));light.setAttribute('cy',String(currentY));map.classList.add('is-lit')});
+      map.addEventListener('pointermove',event=>{if(!ambientMotion.matches)return;locate(event);if(!frame)frame=requestAnimationFrame(drift)},{passive:true});
+      const settle=()=>{map.classList.remove('is-lit');cancelAnimationFrame(frame);frame=0;previousTime=0};
+      map.addEventListener('pointerleave',settle);ambientMotion.addEventListener('change',settle);
+    }
     const counters=[...document.querySelectorAll<HTMLElement>('[data-count-up]')];
     const numberFormat=()=>new Intl.NumberFormat(document.documentElement.dataset.uiLang==='en'?'en-US':'nb-NO');
     const showFinal=()=>counters.forEach(counter=>counter.textContent=numberFormat().format(Number(counter.dataset.countUp||0)));

@@ -28,11 +28,12 @@ test('archival encounter and notebook preserve original access and correct attri
  assert.ok(new Set(scenes.filter(s=>s.kind==='moe').map(s=>s.j)).size===scenes.filter(s=>s.kind==='moe').length);
 });
 
-test('cached roads retain their catalogue endpoints and disclose unrouted connections',()=>{
+test('cached roads connect every catalogue endpoint and identify ferry routes',()=>{
  const network=JSON.parse(readFileSync(new URL('../src/journey/moe-roads.json',import.meta.url)));
  assert.match(network.description,/not historical travel/);
  assert.ok(network.edges.some(e=>e.kind==='road'));
- assert.ok(network.edges.some(e=>e.kind==='connection'));
+ assert.ok(network.edges.every(e=>e.kind==='road'));
+ assert.ok(network.edges.some(e=>e.includesFerry));
  for(const edge of network.edges){
   assert.deepEqual(edge.path[0],edge.from);assert.deepEqual(edge.path.at(-1),edge.to);
   assert.ok(edge.path.every(p=>p.length===2&&p.every(Number.isFinite)));

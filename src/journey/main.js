@@ -176,8 +176,8 @@ function summaryMarkup(){
 }
 const lifePhotos=()=>[
  {image:childhood,crop:{viewBox:"465 550 265 255",width:1280,height:2167},label:language()==='en'?'Moltke as a boy · detail of the family portrait':'Moltke som gutt · utsnitt av familiebildet',credit:'C. T. Thorkildsen / Nasjonalbiblioteket · blds_06261'},
- {image:samlaPortrait,crop:{viewBox:"74 88 245 236",width:384,height:589},label:language()==='en'?'Moltke Moe · portrait preserved in SAMLA':'Moltke Moe · portrett bevart i SAMLA',credit:'Norsk Folkeminnesamling · NFS Foto 50 / SAMLA'},
- {image:portrait,label:language()==='en'?'1911 · in his working room':'1911 · i arbeidsrommet',credit:'Maal og Minne / Wikimedia Commons'}
+ {image:samlaPortrait,crop:{viewBox:"74 88 245 236",width:384,height:589},label:language()==='en'?'Moltke Moe · archival portrait':'Moltke Moe · arkivportrett',credit:'Norsk Folkeminnesamling · NFS Foto 50 / SAMLA'},
+ {image:portrait,crop:{viewBox:"380 365 440 425",width:1200,height:1194},label:language()==='en'?'1911 · in his working room':'1911 · i arbeidsrommet',credit:'Maal og Minne / Wikimedia Commons'}
 ];
 function showLifePhotos(art,duration){
  const stationary=still||matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -187,7 +187,7 @@ function showLifePhotos(art,duration){
  const curves=[[[0,1],[.19,1],[.34,0],[1,0]],[[0,0],[.19,0],[.34,1],[.55,1],[.70,0],[1,0]],[[0,0],[.55,0],[.70,1],[.85,1],[1,0]]];
  const animations=[...art.children].map((figure,i)=>figure.animate(curves[i].map(([offset,opacity])=>({offset,opacity})),{duration,easing:'linear',fill:'both'}));
  // Only after the last portrait has settled does it disperse into the landscape.
- animations.push(art.lastElementChild.querySelector('img').animate([{filter:'blur(0px)',transform:'scale(1)',offset:0},{filter:'blur(0px)',transform:'scale(1)',offset:.85},{filter:'blur(8px)',transform:'scale(1.045)',offset:1}],{duration,fill:'both'}));
+ animations.push(art.lastElementChild.querySelector('img,svg').animate([{filter:'blur(0px)',transform:'scale(1)',offset:0},{filter:'blur(0px)',transform:'scale(1)',offset:.85},{filter:'blur(8px)',transform:'scale(1.045)',offset:1}],{duration,fill:'both'}));
  return {pause(){animations.forEach(a=>a.pause());},play(){animations.forEach(a=>a.play());},cancel(){animations.forEach(a=>a.cancel());}};
 }
 function dispersePhoto(photo,duration,from=.78,to=0){
@@ -213,7 +213,7 @@ async function showScene(preserveMap=false){
  if(!animate){renderScene(preserveMap);lastPaintedScene=key;return;}
  clock.stop();typingClock.stop();progressAnimation?.cancel();sceneToken++;
  root.classList.add('scene-changing');
- const keepPhoto=(s.j==='liv'||s.effect==='encounter')&&el('journey-moe-art').dataset.encounter==='liv';
+ const keepPhoto=((s.j==='liv'||s.effect==='encounter')&&el('journey-moe-art').dataset.encounter==='liv')||(s.j==='manuscript'&&el('journey-moe-art').classList.contains('manuscript-preview'));
  const network=root.querySelector('.leaflet-journeyNetwork-pane');
  const keepNetwork=keepPhoto||['all','network','collector'].includes(s.j);
  const surfaces=()=>[...sceneSurfaces().filter(node=>!(keepPhoto&&node.id==='journey-moe-art')),...(!keepNetwork&&network?[network]:[])];
@@ -235,8 +235,9 @@ async function showScene(preserveMap=false){
  if(!paused&&!document.hidden){clock.resume();progressAnimation?.play();legendReveal?.play();photoDissolve?.play();}
 }
 function renderScene(preserveMap=false){
+ const continuingIntroduction=scene()?.kind==='introduction'&&root.dataset.scene==='introduction';
  legendReveal?.cancel();legendReveal=null;el('journey-text-window').style.height='';root.classList.remove('legend-revealing');
- clock.stop();typingClock.stop();typingDuration=0;if(!preserveMap){map?.cancel();if(!(mode==='moe'&&['all','network','collector'].includes(scene()?.j)))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
+ clock.stop();typingClock.stop();typingDuration=0;if(!preserveMap&&!continuingIntroduction){map?.cancel();if(!(mode==='moe'&&['all','network','collector'].includes(scene()?.j)))map?.clearConstellation();}progressAnimation?.cancel();progressAnimation=null;
  const token=++sceneToken,s=scene();if(!s)return;
  const r=route[s.i];const livReading=s.kind==='read'&&s.effect==='encounter',keepPhoto=livReading||s.j==='liv',photoRetained=keepPhoto&&el('journey-moe-art').dataset.encounter==='liv';root.classList.toggle('liv-reading',livReading);root.classList.toggle('archive-open',s.j==='archive');root.dataset.scene=s.kind;el('journey-route-note').textContent='';root.style.setProperty('--collector-colour',collectorColour(r));
  for(const id of ['journey-welcome','journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive']){if(id==='journey-moe-art'&&photoRetained)continue;el(id).hidden=true;}
@@ -244,6 +245,8 @@ function renderScene(preserveMap=false){
 
  if(!livReading){photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;}
  if(!keepPhoto)delete el('journey-moe-art').dataset.encounter;
+ el('journey-photo-place').hidden=!s.image||!s.target&&s.kind!=='read';
+ el('journey-photo-place').textContent=s.image?(s.target?.sted||r?.sted||''):'';
  status('');controls();
  if(s.kind==='moe'){
   const en=language()==='en',card=el('journey-moe-card');
@@ -254,9 +257,9 @@ function renderScene(preserveMap=false){
    if(s.j==='all'){map?.intro(allRecords,true,false,true);if(paused)map?.pause();}
    else if(s.j==='roads'){map?.roadNetwork(moeRoads,paused);if(paused)map?.pause();}
    else if(s.j==='landscape')map?.storyLandscape(route[0],s.target);
-   else if(s.j==='network')map?.isolateCollector(allRecords,'collector-moltke-moe');
-   else if(s.j==='return'||s.j==='archive')map?.connections(allRecords.filter(r=>r.collectorId==='collector-moltke-moe'),'collector','#D2B957');
-   else if(s.target&&!photoRetained)map?.focus(s.target);
+   else if(s.j==='network'){map?.isolateCollector(allRecords,'collector-moltke-moe');if(paused)map?.pause();}
+   else if(s.j==='return'||s.j==='archive')map?.connections(allRecords.filter(r=>r.collectorId==='collector-moltke-moe'),'collector','#D2B957',true);
+   else if(s.target&&!photoRetained)map?.focus(s.target,Boolean(s.image));
   }
   const art=el('journey-moe-art');
   if(s.j==='liv')art.dataset.encounter='liv';else delete art.dataset.encounter;
@@ -266,13 +269,13 @@ function renderScene(preserveMap=false){
   art.hidden=!s.image;
   card.classList.toggle('has-image',Boolean(s.image));
   const count=allRecords.filter(r=>r.collectorId==='collector-moltke-moe').length;
-  card.innerHTML=`<span class="moe-chapter">${esc(s.chapter?(typeof s.chapter==='string'?s.chapter:s.chapter[language()]):(en?'FROM A VOICE TO AN ARCHIVE':'FRA EN STEMME TIL ET ARKIV'))}</span>${s.j==='network'?`<strong class="moe-count">${count}<small>${en?'records shown here · part of a much larger collection':'opptegnelser vist her · del av en langt større samling'}</small></strong>`:''}<p>${esc(s.text[language()])}</p>${s.image?`<button class="moe-inspect" data-inspect-original>${s.effect==='manuscript'||s.effect==='archive'?(en?'View manuscript':'Se manuskriptet'):(en?'View photograph':'Se fotografiet')}</button>`:''}${s.manuscript?`<a class="moe-manuscript" href="${esc(s.manuscript)}" target="_blank" rel="noopener">${en?'Open the notebook in SAMLA':'Åpne notatboken i SAMLA'}</a>`:''}${s.explore?`<div class="moe-archive-choices"><a href="${esc(moeSources.find(([name])=>name.startsWith('Liv Bratterud ·'))[1])}" target="_blank" rel="noopener">${en?'Find Liv in SAMLA':'Finn Liv i SAMLA'}</a><a href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Discover Moe’s working life':'Oppdag Moes arbeidsliv'}</a></div>`:''}${s.credit?`<small class="moe-credit">${esc(s.credit)}</small>`:''}`;card.hidden=false;
+  card.innerHTML=`<span class="moe-chapter">${esc(s.chapter?(typeof s.chapter==='string'?s.chapter:s.chapter[language()]):(en?'FROM A VOICE TO AN ARCHIVE':'FRA EN STEMME TIL ET ARKIV'))}</span>${s.j==='network'?`<strong class="moe-count">${count}<small>${en?'records shown here · part of a much larger collection':'opptegnelser vist her · del av en langt større samling'}</small></strong>`:''}<p>${esc(s.text[language()])}</p>${s.image?`<button class="moe-inspect" data-inspect-original>${s.effect==='manuscript'||s.effect==='archive'?(en?'View manuscript':'Se manuskriptet'):(en?'View photograph':'Se fotografiet')}</button>`:''}${s.manuscript?`<a class="moe-manuscript" href="${esc(s.manuscript)}" target="_blank" rel="noopener">${en?'Open the notebook in SAMLA':'Åpne notatboken i SAMLA'}</a>`:''}${s.explore?`<div class="moe-archive-choices"><a href="${esc(moeSources.find(([name])=>name.startsWith('Liv Bratterud ·'))[1])}" target="_blank" rel="noopener">${en?'Find Liv in SAMLA':'Finn Liv i SAMLA'}</a><a href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Discover Moe’s working life':'Oppdag Moes arbeidsliv'}</a></div>`:''}${s.j==='return'?`<a class="moe-manuscript" href="${esc(moeSources.find(([name])=>name.startsWith('Therese Foldvik'))[1])}" target="_blank" rel="noopener">${en?'Read more on SAMLA':'Les mer på SAMLA'}</a>`:''}${s.credit?`<small class="moe-credit">${esc(s.credit)}</small>`:''}`;card.hidden=false;
   if(s.j==='archive'){
    art.hidden=true;card.hidden=true;
    const archive=el('journey-archive');archive.classList.remove('archive-read-titles');archive.innerHTML=archiveMarkup(language(),moeSources,allRecords);archive.hidden=false;
   }
   if(!s.explore){
-   const duration=Math.max(s.duration||18000,passageDuration(s.text[language()])*readingTime/100);
+   const duration=s.brief?Math.max(6500,s.text[language()].trim().split(/\s+/u).length/165*60000*readingTime/100):Math.max(s.duration||18000,passageDuration(s.text[language()])*readingTime/100);
    if(s.j==='collector'){
     photoDissolve=showLifePhotos(art,duration-1500);
     el('journey-moe-card').querySelector('[data-inspect-original]').textContent=en?'View photographs':'Se fotografiene';
@@ -289,7 +292,7 @@ function renderScene(preserveMap=false){
   if(!preserveMap)map?.connections(records.filter(r=>r.ml_code===theme.code),'theme',theme.colour);
   caption(theme.intro[language()]);schedule(14000);
  }else if(s.kind==='introduction'){
-
+  if(!preserveMap&&!continuingIntroduction)map?.intro(records);
   el('journey-source').hidden=true;el('journey-progress').textContent='';
   caption(s.text);schedule(10000);
  }else if(s.kind==='travel'||s.kind==='story-travel'){
@@ -312,7 +315,7 @@ function renderScene(preserveMap=false){
   else if(map){map.travel(target,{story:isStory,allowRoad:!isStory&&(Boolean(currentTheme())||sameCollectorThread(route[s.i-1]||previousRecord,r)),kind:isStory?'story':links[s.i]?.kind,colour:collectorColour(r),minDuration:typingDuration+2500,onRoute,done});if(paused)map.pause();}
   else schedule(7000);
  }else if(s.kind==='context'){
-  if(!preserveMap)map?.focus(r);
+  if(!preserveMap)map?.focus(r,Boolean(s.image));
   // A brief, wordless arrival gives the landscape room before the legend.
   schedule(2200);
  }else if(s.kind==='read'){
@@ -332,8 +335,12 @@ function renderScene(preserveMap=false){
     art.innerHTML=`<img class="moe-original" src="${esc(s.image)}" alt=""/>`;
     art.dataset.encounter='liv';
    }
-   art.hidden=false;if(!preserveMap&&!photoRetained)map?.focus(r);
+   art.hidden=false;if(!preserveMap&&!photoRetained)map?.focus(r,true);
    el('journey-reading-original').textContent=language()==='en'?'View photograph · 1878':'Se fotografiet · 1878';
+  }
+  if(s.effect==='manuscript-preview'){
+   if(!preserveMap)map?.focus(r,true);
+   const art=el('journey-moe-art');art.className='journey-moe-art manuscript-preview';art.innerHTML=`<img src="${esc(s.image)}" alt=""/>`;art.hidden=false;
   }
   el('journey-passage').textContent=s.text;
   const english=language()==='en'&&!original&&Boolean(r.english_translation?.trim());
@@ -350,7 +357,7 @@ function renderScene(preserveMap=false){
   if(livReading){
    const art=el('journey-moe-art'),photo=art.querySelector('.moe-original');
    let figures=art.querySelector('.liv-figures');
-   if(!figures){figures=document.createElement('img');figures.src=s.image;figures.alt='';figures.className='liv-figures';art.append(figures);}
+   if(!figures){figures=document.createElement('div');figures.className='liv-figures';const silhouette=document.createElement('img');silhouette.src=s.image;silhouette.alt='';silhouette.className='liv-mask';figures.append(silhouette);art.append(figures);}
    const continuing=photoDissolve&&s.p>=lastPhotoPassage;
    const backgroundFrom=continuing?Number(getComputedStyle(photo).opacity):(s.p?0:.78);
    const figuresFrom=continuing?Number(getComputedStyle(figures).opacity):(s.p?.78:0);
@@ -359,6 +366,7 @@ function renderScene(preserveMap=false){
    if(!still&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
     const revealDuration=duration-1500,settle=Math.min(.75,10000/revealDuration);
     const animations=[
+     figures.animate([{filter:'drop-shadow(0 0 0 transparent)',offset:0},{filter:'drop-shadow(0 0 0 transparent)',offset:settle},{filter:'drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744)',offset:Math.min(.95,settle+.3)},{filter:'drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744)',offset:1}],{duration:revealDuration,fill:'both'}),
      photo.animate([{opacity:backgroundFrom},{opacity:0,offset:settle},{opacity:0}],{duration:revealDuration,fill:'both'}),
      figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78}],{duration:revealDuration,fill:'both'}),
      ...[photo,figures].map(image=>image.animate([{transform:transformFrom},{transform:'scale(1.08)'}],{duration:revealDuration,easing:'ease-in-out',fill:'both'}))
@@ -441,7 +449,7 @@ function resize(){
  sceneIndex=replacement<0?Math.min(sceneIndex,scenes.length-1):replacement;
  // Reflow complete passages with adequate fresh reading time. Keep the same
  // word position rather than jumping to the next legend after a resize.
- if(active==='read'){showScene(true);map?.focus(record());if(paused)map?.pause();}
+ if(active==='read'){showScene(true);map?.focus(record(),Boolean(scene()?.image));if(paused)map?.pause();}
  else if(active==='moe'||active==='end')showScene(true);
 }
 root.addEventListener('click',async event=>{
@@ -492,7 +500,7 @@ el('journey-pause').addEventListener('click',togglePause);
 el('journey-next').addEventListener('click',()=>{advance();});
 el('journey-back').addEventListener('click',()=>{if(sceneIndex>0){sceneIndex--;showScene();}});
 el('journey-fullscreen').addEventListener('click',fullscreen);
-el('journey-close').addEventListener('click',async()=>{cancelSceneFades();legendReveal?.cancel();legendReveal=null;photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;lastPaintedScene='';clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen','liv-reading','archive-open');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records,mode==='moe');root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
+el('journey-close').addEventListener('click',async()=>{cancelSceneFades();legendReveal?.cancel();legendReveal=null;photoDissolve?.cancel();photoDissolve=null;lastPhotoPassage=-1;lastPaintedScene='';clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen','liv-reading','archive-open');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive','journey-photo-place'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records,mode==='moe');root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
 el('journey-reading-time').addEventListener('input',event=>{
  const previous=readingTime;
  readingTime=Number(event.target.value);
