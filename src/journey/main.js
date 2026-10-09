@@ -393,12 +393,12 @@ function renderScene(preserveMap=false){
     const revealDuration=duration-1000,settle=backgroundFrom>.05?Math.min(.45,8000/revealDuration):0;
     const farewell=s.p===s.total-1,fadeStart=Math.max(settle+.15,1-6000/revealDuration);
     const glow='drop-shadow(0 0 2px #f2d99b99) drop-shadow(0 0 6px #d2b95744) blur(0px)';
-    const landscapeZoom=map?.encounterZoom(r,revealDuration,settle);
+    const landscapeZoom=map?.encounterZoom(r,revealDuration,0);
     const animations=[
      figures.animate([{filter:'blur(0px)',offset:0},{filter:'blur(0px)',offset:settle},{filter:glow,offset:Math.min(fadeStart,settle+.15)},{filter:glow,offset:fadeStart},{filter:farewell?'drop-shadow(0 0 2px transparent) drop-shadow(0 0 6px transparent) blur(9px)':glow,offset:1}],{duration:revealDuration,fill:'both'}),
      photo.animate([{opacity:backgroundFrom},{opacity:0,offset:settle},{opacity:0}],{duration:revealDuration,fill:'both'}),
      figures.animate([{opacity:figuresFrom},{opacity:.78,offset:settle},{opacity:.78,offset:fadeStart},{opacity:farewell?0:.78,offset:1}],{duration:revealDuration,fill:'both'}),
-     ...[photo,figures].map(image=>image.animate([{transform:transformFrom,offset:0},{transform:transformFrom,offset:settle},{transform:closeTransform,offset:1}],{duration:revealDuration,easing:'ease-in-out',fill:'both'})),
+     ...[photo,figures].map(image=>image.animate([{transform:transformFrom,offset:0},{transform:closeTransform,offset:1}],{duration:revealDuration,easing:'cubic-bezier(.25,.35,.55,1)',fill:'both'})),
      ...(landscapeZoom?[landscapeZoom]:[])
     ];
     photoDissolve={
@@ -440,7 +440,7 @@ function renderScene(preserveMap=false){
  revealControls();
 }
 async function advanceAfterReveal(){
- const pending=mode==='moe'&&scene()?.j==='return'?map?.networkRevealAnimations():[];
+ const pending=mode==='moe'&&['all','return'].includes(scene()?.j)?map?.networkRevealAnimations():[];
  if(pending?.length){
   const token=sceneToken;
   // Fast narration must not cut off distant endpoints. CSS animation completion

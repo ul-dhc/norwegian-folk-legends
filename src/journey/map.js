@@ -140,9 +140,16 @@ export function createJourneyMap(container,onError){
  }
  const observer=new ResizeObserver(()=>{map.invalidateSize({pan:false});frameClosing();});observer.observe(container);
  return {
-  intro(records,all=false,reading=false,opening=false){
+  intro(records,all=false,reading=false,opening=false,reveal=true){
    // Welcome and opening share the same geography and paths. Begin changes only the text.
-   if(opening&&fullOverview&&constellation.getLayers().length){breathe(false);startIntroZoom();return;}
+   if(opening&&fullOverview&&constellation.getLayers().length){
+    const arrivals=[...networkPane.querySelectorAll('.journey-arriving-thread,.journey-arriving-point')];
+    const classes=arrivals.map(element=>element.classList.contains('journey-arriving-thread')?'journey-arriving-thread':'journey-arriving-point');
+    arrivals.forEach((element,i)=>element.classList.remove(classes[i]));
+    networkPane.getBoundingClientRect();
+    arrivals.forEach((element,i)=>element.classList.add(classes[i]));
+    breathe(false);startIntroZoom();return;
+   }
    this.reset();fullOverview=all;
    const groups=new Map();
    for(const r of records){if(!r.collectorId||!known(r.samler))continue;if(!groups.has(r.collectorId))groups.set(r.collectorId,[]);groups.get(r.collectorId).push(r);}
@@ -152,13 +159,27 @@ export function createJourneyMap(container,onError){
    framing(records.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)).map(point),6,reading,false);breathe(false);
    container.classList.add('journey-network-overview');
    constellation.eachLayer(group=>{
-    const quiet=layer=>{const element=layer.getElement?.();if(element)element.classList.add('journey-network-quiet');};
+    const quiet=layer=>{
+     const element=layer.getElement?.();if(!element)return;
+     element.classList.add('journey-network-quiet');
+     if(!reveal||still||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+     const positions=layer.getLatLngs?.();
+     const latitude=positions?Math.max(...positions.map(p=>p.lat)):layer.getLatLng?.().lat;
+     if(!Number.isFinite(latitude))return;
+     // Start each connection at its northern end and let the reveal drift south.
+     if(positions){
+      if(positions[0].lat<positions.at(-1).lat)layer.setLatLngs([...positions].reverse());
+      element.setAttribute('pathLength','1');
+     }
+     element.style.setProperty('--arrival-delay',`${Math.max(0,Math.min(1,(71-latitude)/13))*4000}ms`);
+     element.classList.add(positions?'journey-arriving-thread':'journey-arriving-point');
+    };
     if(group.eachLayer)group.eachLayer(quiet);else quiet(group);
    });
    if(opening)startIntroZoom();
   },
   closingNetwork(records){
-   this.intro(records,true,false);
+   this.intro(records,true,false,false,false);
    closingCoords=records.filter(r=>Number.isFinite(r.lat)&&Number.isFinite(r.lon)).map(point);
    frameClosing();requestAnimationFrame(frameClosing);
   },
@@ -170,6 +191,7 @@ export function createJourneyMap(container,onError){
     const keep=group.collectorId===id;
     const fade=layer=>{const element=layer.getElement?.();if(element){
      const opacity=getComputedStyle(element).opacity;
+     element.classList.remove('journey-arriving-thread','journey-arriving-point');
      element.style.opacity=opacity;
      element.getBoundingClientRect();
      element.style.transition=still?'none':'opacity 6s ease';element.style.opacity=keep?'1':'0';if(keep)element.classList.add('moe-featured-star');
@@ -244,7 +266,7 @@ export function createJourneyMap(container,onError){
    const from=parseFloat(getComputedStyle(landscape).scale)||1;
    introZoom?.cancel();zoomActive=true;
    landscape.style.transformOrigin=`${anchor.x}px ${anchor.y}px`;
-   introZoom=landscape.animate([{scale:String(from),offset:0},{scale:String(from),offset:settle},{scale:'1.28',offset:1}],{duration,easing:'ease-in-out',fill:'both'});
+   introZoom=landscape.animate([{scale:String(from),offset:0},{scale:String(from),offset:settle},{scale:'1.28',offset:1}],{duration,easing:'cubic-bezier(.25,.35,.55,1)',fill:'both'});
    return introZoom;
   },
   highlightPlace(target){if(!target)return;showDestination(target);setHead(point(target),false,'#F3DEA0');},
@@ -255,7 +277,7 @@ export function createJourneyMap(container,onError){
    if(!photo&&!target.key)markVisited(point(target),collectorColour(target));
    framing([point(target)],target.precision==='region'?7:9,true,true,2.8,photo);
   },
-  networkRevealAnimations(){return [...networkPane.querySelectorAll('.journey-spoke-reveal,.journey-endpoint-reveal')].flatMap(node=>node.getAnimations()).filter(animation=>animation.playState!=='finished'&&animation.playState!=='idle');},
+  networkRevealAnimations(){return [...networkPane.querySelectorAll('.journey-spoke-reveal,.journey-endpoint-reveal,.journey-arriving-thread,.journey-arriving-point')].flatMap(node=>node.getAnimations()).filter(animation=>animation.playState!=='finished'&&animation.playState!=='idle');},
   connections(items,kind,colour,quiet=false){clearDestination();traces.clearLayers();head=null;constellation.clearLayers();const nodes=connections(items,kind,constellation,true,colour);if(quiet){constellation.eachLayer(layer=>{if(layer instanceof L.Marker)constellation.removeLayer(layer);});}networkPane.classList.toggle('moe-slow-network',quiet);framing(nodes.map(point),7,quiet);breathe(!quiet);},
   clearConstellation(){constellation.clearLayers();container.classList.remove('journey-network-overview');fullOverview=false;},
   overview(route,closing=false){clearDestination();const coords=[...remembered.values(),...route.map(point)];closingCoords=closing?coords:null;if(closing){map.invalidateSize({pan:false});frameClosing();}else framing(coords,7,false);breathe(true);},
