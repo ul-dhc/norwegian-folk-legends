@@ -6,7 +6,8 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 const html = read('build/map/index.html');
 const dataset = JSON.parse(html.match(/<script[^>]*id="corpus-map-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
 const source = JSON.parse(read('norske_json/legends.json'));
-const places = new Map(JSON.parse(read('norske_json/places.json')).map(place => [place.id, place]));
+const originalPlaces = JSON.parse(read('norske_json/places.json'));
+const places = new Map(JSON.parse(read('norske_json/places-geography.json')).map(place => [place.id, place]));
 const records = [...dataset.legends.features.map(feature => feature.properties), ...dataset.unmappedLegends];
 
 test('the map accounts for every source record once and keeps the detail-page IDs', () => {
@@ -16,7 +17,7 @@ test('the map accounts for every source record once and keeps the detail-page ID
   assert.equal(dataset.unmappedLegendCount, dataset.unmappedLegends.length);
 });
 
-test('map points preserve the recorded place coordinates and missing coordinates stay separate', () => {
+test('map points use the geographic dataset and missing coordinates stay separate', () => {
   for (const feature of dataset.legends.features) {
     const coordinates = places.get(feature.properties.placeId).coordinates;
     assert.deepEqual(feature.geometry.coordinates, [coordinates.longitude, coordinates.latitude]);
@@ -176,4 +177,26 @@ test('node connection counts use unique neighbouring places in the full filtered
     const single = buildMetadataNetwork(type, [dataset.legends.features.find(f => f.properties.collectorId && f.properties.themeNo)]);
     assert.equal(single.nodes[0].connectionCount, 0);
   }
+});
+
+
+test('geographic decisions preserve originals and relocate only supported authority matches', () => {
+  assert.equal(places.size, originalPlaces.length);
+  for (const original of originalPlaces) {
+    const place = places.get(original.id), geo = place.geography;
+    assert.equal(place.name, original.name);
+    assert.equal(place.legendCount, original.legendCount);
+    assert.deepEqual(geo.originalCoordinates, original.coordinates);
+    if (geo.verification === 'authority_matched') {
+      const authority = geo.authority;
+      assert.ok(authority.id);
+      assert.ok(authority.sourceUrl.startsWith('https://ws.geonorge.no/'));
+      assert.ok(authority.names.some(n => n.name.toLocaleLowerCase() === place.name.toLocaleLowerCase() && ['vedtatt','godkjent','godkjent og prioritert'].includes(n.status)));
+      assert.equal(geo.reason, 'unique_exact_name_and_all_recorded_counties');
+      assert.ok(Object.keys(geo.countyContext).length);
+      for (const county of Object.keys(geo.countyContext)) assert.ok(authority.counties.some(c => c.fylkesnavn.toLocaleLowerCase() === county.toLocaleLowerCase()));
+    } else assert.deepEqual(place.coordinates, original.coordinates);
+    if (!original.coordinates) assert.equal(geo.displayStatus, 'unlocated');
+  }
+  for (const point of dataset.places.features) assert.deepEqual(point.properties.geography, places.get(point.id).geography);
 });

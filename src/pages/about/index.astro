@@ -19,6 +19,20 @@ const methods = [
  {id:'browse-selection',title:'about.browseSelectionTitle',paragraphs:['about.browseSelectionText','about.browseActionsText']},
  {id:'exports',title:'about.exportsTitle',paragraphs:['about.exportsText']},
 ];
+const geography = [
+ {id:'coordinate-sources',title:'about.coordinateAuditTitle',paragraphs:['about.coordinateAuditText','about.coordinateHistoryText']},
+ {id:'coordinate-uncertainty',title:'about.coordinateUncertaintyTitle',paragraphs:['about.coordinateUncertaintyText','about.coordinateUncertaintyLimits']},
+];
+const chapters = [
+ {id:'guide-map',title:'about.guideMap',intro:'about.mapGuideIntro',sections:[methods[0],...geography,{id:'map-controls',title:'about.mapControlsTitle',paragraphs:['about.mapControlsText']},...methods.slice(1,9)]},
+ {id:'guide-browser',title:'about.guideBrowser',intro:'about.browserGuideIntro',sections:methods.slice(9)},
+ {id:'guide-data',title:'about.guideData',intro:'about.dataGuideIntro',sections:[
+  {id:'data-controls',title:'about.dataControlsTitle',paragraphs:['about.dataControlsText']},
+  {id:'data-sharing',title:'about.dataSharingTitle',paragraphs:['about.dataSharingText']}]},
+ {id:'guide-journeys',title:'about.guideJourneys',intro:'about.journeysGuideIntro',sections:[
+  {id:'journey-controls',title:'about.journeysControlsTitle',paragraphs:['about.journeysControlsText']},
+  {id:'journey-geography',title:'about.journeysGeographyTitle',paragraphs:['about.journeysGeographyText']}]},
+];
 const coverage = [{key:'about.totalRecords',count:mapData.legends.features.length+mapData.unmappedLegends.length},{key:'about.mappedRecords',count:mapData.legends.features.length},{key:'about.unmappedRecords',count:mapData.unmappedLegends.length}];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
@@ -46,22 +60,36 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
           <li><span>Kyrre Kverndokk</span><a class="about-link" href="mailto:kyrre.kverndokk@uib.no">kyrre.kverndokk@uib.no</a></li>
         </ul>
       </section>
-    <nav class="about-contents" aria-label={copy('about.contents')}><strong data-i18n="about.methodsTitle">{copy('about.methodsTitle')}</strong><ul>{methods.map(section=><li><a href={`#${section.id}`} data-i18n={section.title}>{copy(section.title)}</a></li>)}</ul></nav>
-      {methods.map(section=><section id={section.id} aria-labelledby={`${section.id}-title`}>
-        <h2 id={`${section.id}-title`} data-i18n={section.title}>{copy(section.title)}</h2>
-        {section.id==='map-data'&&<dl class="about-coverage">{coverage.map(item=><div><dt data-i18n={item.key}>{copy(item.key)}</dt><dd>{item.count.toLocaleString('no-NO')}</dd></div>)}</dl>}
-        {section.paragraphs.map(key=><p data-i18n={key}>{copy(key)}</p>)}
-      </section>)}
+      <section id="platform-guide" class="platform-guide" aria-labelledby="platform-guide-title">
+        <header class="guide-heading"><h2 id="platform-guide-title" data-i18n="about.methodsTitle">{copy('about.methodsTitle')}</h2><p data-i18n="about.guideIntro">{copy('about.guideIntro')}</p></header>
+        <nav class="about-contents" aria-label={copy('about.contents')}><ul>{chapters.map(chapter=><li><a href={`#${chapter.id}`} data-i18n={chapter.title}>{copy(chapter.title)}</a></li>)}</ul></nav>
+        {chapters.map(chapter=><section id={chapter.id} class="guide-chapter" aria-labelledby={`${chapter.id}-title`}>
+          <h3 id={`${chapter.id}-title`} data-i18n={chapter.title}>{copy(chapter.title)}</h3>
+          <p data-i18n={chapter.intro}>{copy(chapter.intro)}</p>
+          <nav class="guide-topics" aria-label={copy(chapter.title)}><ul>{chapter.sections.map(topic=><li><a href={`#${topic.id}`} data-i18n={topic.title}>{copy(topic.title)}</a></li>)}</ul></nav>
+          {chapter.sections.map(topic=><section id={topic.id} class="guide-topic" aria-labelledby={`${topic.id}-title`}>
+            <h4 id={`${topic.id}-title`} data-i18n={topic.title}>{copy(topic.title)}</h4>
+            {topic.id==='map-data'&&<dl class="about-coverage">{coverage.map(item=><div><dt data-i18n={item.key}>{copy(item.key)}</dt><dd>{item.count.toLocaleString('no-NO')}</dd></div>)}</dl>}
+            {topic.paragraphs.map(key=><p data-i18n={key}>{copy(key)}</p>)}
+            {topic.id==='coordinate-sources'&&<ul class="guide-sources">
+              <li><a href="https://github.com/ul-dhc/norwegian-folk-legends/blob/main/data/place-decisions/README.md" target="_blank" rel="noopener" data-i18n="about.coordinateResultsLink">{copy('about.coordinateResultsLink')}</a></li>
+              <li><a href="https://kartverket.no/en/api-and-data/stedsnavndata/brukarrettleiing-stadnamn-api" target="_blank" rel="noopener">Kartverket – Sentralt stedsnavnregister (SSR)</a></li>
+              <li><a href="https://www.ssb.no/klass/klassifikasjoner/131" target="_blank" rel="noopener">SSB – Kommuneinndeling</a> / <a href="https://www.ssb.no/klass/klassifikasjoner/104" target="_blank" rel="noopener">Fylkesinndeling</a></li>
+              <li><a href="https://www.kartverket.no/om-kartverket/historie/historiske-kart" target="_blank" rel="noopener">Kartverket – Historiske kart</a></li>
+            </ul>}
+          </section>)}
+        </section>)}
+      </section>
     </div>
   </div>
   <style>
     .about-page{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,6rem)}
     .about-contents{max-width:820px;padding:1.5rem 0;border-bottom:1px solid var(--line);color:var(--muted)}
-    .about-contents strong{font-weight:500;color:var(--ink)}
+
     .about-contents ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1.5rem;list-style:none;padding:0;margin:1rem 0 0}
     .about-contents a{color:var(--blue);text-underline-offset:.2em;font-size:.9rem}
     .about-main section[id]{scroll-margin-top:1.5rem}
-    .about-main section:target h2{color:var(--pin)}
+    .about-main section:target> :is(h2,h3,h4){color:var(--pin)}
     .about-coverage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
     .about-coverage dt{font-size:.8rem;color:var(--muted);line-height:1.5}
     .about-coverage dd{margin:.4rem 0 0;font-size:1.8rem;color:var(--blue);font-variant-numeric:tabular-nums}
@@ -73,15 +101,29 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
     .about-heading .lede{margin:0;max-width:44rem}
     .about-main section{padding-bottom:2rem;border-bottom:1px solid var(--line)}
     .about-main section h2{transition:color .3s ease}
-    .about-main section:focus-within h2{color:#94721d}
-    :global(:root[data-theme=dark]) .about-main section:focus-within h2{color:var(--butter)}
+    .about-main>section:focus-within>h2{color:#94721d}
+    :global(:root[data-theme=dark]) .about-main>section:focus-within>h2{color:var(--butter)}
     @media(hover:hover) and (pointer:fine){
-      .about-main section:hover h2{color:#94721d}
-      :global(:root[data-theme=dark]) .about-main section:hover h2{color:var(--butter)}
+      .about-main>section:hover>h2{color:#94721d}
+      :global(:root[data-theme=dark]) .about-main>section:hover>h2{color:var(--butter)}
     }
     @media(prefers-reduced-motion:reduce){.about-main section h2{transition:none}}
     .about-main section:last-child{padding-bottom:0;border-bottom:0}
     .about-main h2{margin-top:2rem}
+    .about-main .platform-guide{padding-bottom:0;border:0}
+    .guide-heading h2{margin-top:2.5rem}
+    .about-main .guide-chapter{padding:2.5rem 0 1rem;border-bottom:1px solid var(--line)}
+    .guide-chapter>h3{font:500 clamp(1.45rem,2.4vw,1.75rem)/1.2 var(--serif);margin:0 0 .9rem}
+    .guide-topics ul{display:flex;flex-wrap:wrap;gap:.45rem 1.3rem;list-style:none;padding:0;margin:1.25rem 0 2rem}
+    .guide-topics a{font-size:.85rem;color:var(--blue);text-underline-offset:.2em}
+    .about-main .guide-topic{padding:1.3rem 0;border:0}
+    .guide-topic h4{font:600 1.08rem/1.4 var(--sans);margin:0 0 .7rem;color:var(--ink)}
+    .guide-topic p{margin:.7rem 0}
+    .guide-sources{padding-left:1.2rem;font-size:.9rem;overflow-wrap:anywhere}
+    .about-contents{border-block:1px solid var(--line);margin-top:1.5rem}
+    .about-contents ul{margin:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+    .about-contents a{font-weight:600;font-size:1rem}
+    @media(max-width:600px){.about-contents ul{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-topics ul{display:grid;gap:.5rem}}
     .about-link{font-size:.9rem;color:var(--blue);text-underline-offset:.25em;overflow-wrap:anywhere}
     .about-link:hover{color:var(--ink)}
     .about-link :global(svg){flex-shrink:0}

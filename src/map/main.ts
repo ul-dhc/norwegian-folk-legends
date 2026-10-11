@@ -1,5 +1,5 @@
 import * as maplibregl from "maplibre-gl";
-import { createElement, Maximize, Minimize } from "lucide";
+import { createElement, Maximize, Minimize, CircleHelp } from "lucide";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 maplibregl.setWorkerUrl(workerUrl);
 import { buildMetadataNetwork, strongestConnectionIds } from "./networks.js";
@@ -71,6 +71,8 @@ const dataset = JSON.parse(
       : key,
   formatter = () => new Intl.NumberFormat(document.documentElement.lang),
   params = new URLSearchParams(location.search);
+const uncertaintyToggle = page.querySelector<HTMLInputElement>('[data-show-uncertainty]')!;
+uncertaintyToggle.checked = params.get('uncertainty') === '1';
 const requestedLayers = new Set(
     (params.get("layers") || "geography,labels").split(","),
   ),
@@ -374,6 +376,7 @@ const updateUrl = (push = false) => {
   url.searchParams.set("placesSize", placesSize.value);
   url.searchParams.set("placesSizeBy", placesSizeBy);
   url.searchParams.set("pointIntensity", pointIntensity.value);
+  if (uncertaintyToggle.checked) url.searchParams.set("uncertainty", "1"); else url.searchParams.delete("uncertainty");
   basemapExplicit
     ? url.searchParams.set("basemap", basemapStyle.value)
     : url.searchParams.delete("basemap");
@@ -584,7 +587,7 @@ const updatePointSources = () => {
   const zoom = map.getZoom(), displayStyle = effectivePointStyle(), overviewSpacing = Math.max(0, Math.min(1.6, (zoom - 6) * 0.35)), detailSpacing = Math.max(0, zoom - 9) * 0.85,
     spacing = 1.1 + overviewSpacing + detailSpacing, rayLength = displayStyle === "rays" ? 1.05 + Number(pointIntensity.value) / 360 : 1, groups = new Map<string, any[]>();
   filteredFeatures.forEach((feature) => {
-    const [longitude, latitude] = pointGroupCoordinates(feature), key = mapMode === "places" ? `coordinates|${longitude}|${latitude}` : `${feature.properties.placeId}|${longitude.toFixed(6)}|${latitude.toFixed(6)}`;
+    const [longitude, latitude] = pointGroupCoordinates(feature), key = `${feature.properties.placeId}|${longitude.toFixed(6)}|${latitude.toFixed(6)}`;
     const group = groups.get(key) || [];
     group.push(feature);
     groups.set(key, group);
@@ -627,8 +630,7 @@ const updatePointSources = () => {
     }
     const dominant = [...categoryCounts].sort((a,b) => b[1].count-a[1].count || a[0].localeCompare(b[0], "no"))[0]?.[1].record;
     const placeColor = pointColorBy === "single" ? colors.green : dominant ? categoryColor(dominant) : colors.categoryNeutral;
-    const primaryPlace = mapMode === "places" ? [...placesAtCoordinates(group[0].properties.placeId)].sort((a, b) => b.properties.count - a.properties.count || a.properties.name.localeCompare(b.properties.name, "no"))[0] : undefined;
-    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: primaryPlace?.properties.id || group[0].properties.placeId, centerKey: key, placeName: primaryPlace?.properties.name || group[0].properties.placeName, placeColor, count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
+    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: group[0].properties.placeId, centerKey: key, placeName: group[0].properties.placeName, placeColor, count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
   });
   legendSource.setData({ type: "FeatureCollection", features } as any);
   placeSource.setData({ type: "FeatureCollection", features: centers } as any);
@@ -771,12 +773,12 @@ const applyFilters = (save = true) => {
   if (save) updateUrl();
 };
 const sharedPlaceProfile = (placeId: string, name: string, options: {tone?: string; connections?: number; networkRecords?: number; extra?: string} = {}) => {
-  const locationPlaces = placesAtCoordinates(placeId), grouped = mapMode === "places" && locationPlaces.length > 1;
+  const locationPlaces = placesAtCoordinates(placeId), grouped = false;
   const placeIds = new Set(grouped ? locationPlaces.map(place => place.properties.id) : [placeId]);
   const records = filteredFeatures.filter(feature => placeIds.has(feature.properties.placeId)).map(feature => feature.properties as LegendProperties);
-  const recordedPlaces = locationPlaces.length > 1 ? locationPlaces.map(place => ({name: place.properties.name,
+  const recordedPlaces = locationPlaces.length > 1 ? locationPlaces.map(place => ({id: place.properties.id, name: place.properties.name,
     count: filteredFeatures.filter(feature => feature.properties.placeId === place.properties.id).length})) : undefined;
-  return placeProfileMarkup({name, records, recordedPlaces, grouped, href: `${recordHref(records.map(record => record.id))}${grouped ? "" : `&place=${encodeURIComponent(placeId)}`}`, tone: options.tone || colors.green,
+  return placeProfileMarkup({name, records, recordedPlaces, geography: dataset.places.features.find(place => place.properties.id === placeId)?.properties.geography, grouped, href: `${recordHref(records.map(record => record.id))}${grouped ? "" : `&place=${encodeURIComponent(placeId)}`}`, tone: options.tone || colors.green,
     tr, format: count => formatter().format(count), english: document.documentElement.dataset.uiLang === "en",
     categoryColor: record => {
       if (!record.themeNo) return colors.categoryNeutral;
@@ -829,9 +831,9 @@ const renderPointPlace = (placeId: string, centerKey: string | null = null) => {
   if (selectedPointLegend) map.setFeatureState({ source: "legends", id: selectedPointLegend }, { selected: false });
   selectedPointLegend = null;
   const records = filteredFeatures.filter((feature) => feature.properties.placeId === placeId), placeName = dataset.places.features.find(feature => feature.properties.id === placeId)?.properties.name;
-  if (!placeName || (!records.length && !(mapMode === "places" && placesAtCoordinates(placeId).some(place => filteredFeatures.some(feature => feature.properties.placeId === place.properties.id))))) return;
+  if (!placeName || !records.length) return;
   selectedId = placeId;
-  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => (feature.properties.placeId === placeId || mapMode === "places" && placesAtCoordinates(placeId).some(place => place.properties.id === feature.properties.placeId)))?.properties.centerKey || null;
+  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => feature.properties.placeId === placeId)?.properties.centerKey || null;
   updatePointCenterSelection();
   showPointLinks(selectedPointCenter, true);
   panel.hidden = false;
@@ -2439,3 +2441,30 @@ heatOutput.value = `${heatInput.value}%`;
 radiusOutput.value = heatRadius.value;
 
 requestAnimationFrame(translate);
+
+const uncertaintyMarkers = new Map<string, maplibregl.Marker>();
+const renderUncertainty = () => {
+ const ids = new Set(filteredFeatures.map(feature => feature.properties.placeId));
+ if (mapMode === 'network') { ids.clear(); for (const node of networkNodes) ids.add(node.id.replace(/^place:/, "")); }
+ const key = page.querySelector<HTMLElement>('[data-uncertainty-key]')!;
+ key.hidden = !uncertaintyToggle.checked;
+ for (const [id, marker] of uncertaintyMarkers) if (!uncertaintyToggle.checked || !ids.has(id)) {marker.remove();uncertaintyMarkers.delete(id);}
+ if (!uncertaintyToggle.checked) return;
+ for (const place of dataset.places.features) {
+  if (!ids.has(place.properties.id) || uncertaintyMarkers.has(place.properties.id)) continue;
+  const element = document.createElement('span');
+  element.className = `location-uncertainty-marker location-${place.properties.geography?.displayStatus || 'unresolved'}`;
+  element.setAttribute('aria-hidden','true');
+  element.dataset.placeId = place.properties.id;
+  if (place.properties.geography?.displayStatus === 'unresolved') element.append(createElement(CircleHelp, {width:11,height:11,'stroke-width':1.8}));
+  uncertaintyMarkers.set(place.properties.id, new maplibregl.Marker({element}).setLngLat(place.geometry.coordinates).addTo(map));
+ }
+};
+uncertaintyToggle.addEventListener('change', () => {renderUncertainty();updateUrl();});
+map.on('idle', renderUncertainty);
+panel.addEventListener('click', event => {
+ const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-profile-place]');
+ if (!button) return;
+ if (mapMode === 'network') renderNetworkNodePanel(`place:${button.dataset.profilePlace!}`);
+ else renderPointPlace(button.dataset.profilePlace!);
+});

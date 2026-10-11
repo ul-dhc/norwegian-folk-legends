@@ -2,3 +2,8 @@ node_modules/
 build/
 .astro/
 .DS_Store
+
+# Local geographic working evidence; publish only the decision table and map data.
+reports/place-coordinate-audit/
+scripts/audit_place_coordinates.py
+scripts/build_place_geography.py

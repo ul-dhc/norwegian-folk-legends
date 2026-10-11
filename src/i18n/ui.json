@@ -812,8 +812,8 @@
     "en": "Meet the voices of Bø through legends, photographs and handwritten pages from the archive."
   },
   "about.methodsTitle": {
-    "no": "Slik leser du kartet og utforskeren",
-    "en": "Understanding the map and browser"
+    "no": "Slik bruker du plattformen",
+    "en": "Using the platform"
   },
   "about.contents": {
     "no": "På denne siden",
@@ -2056,12 +2056,12 @@
     "en": "Places"
   },
   "about.placesMapTitle": {
-    "no": "Steder: én sirkel per registrert sted",
-    "en": "Places: one circle per recorded place"
+    "no": "Steder: sirkler ved registrerte koordinater",
+    "en": "Places: circles at recorded coordinates"
   },
   "about.placesMapText": {
-    "no": "Stedsvisningen viser én hul sirkel ved hvert registrerte steds koordinater. Boblestørrelse etter kan bruke antall tilknyttede sagn i det aktive utvalget (standard), eller gi alle steder like store sirkler. Klikk på en sirkel for å vise stedets individuelle sagn som bobler og åpne stedsprofilen. Du kan velge et sagn, lese teksten eller åpne stedets sagn i utforskeren, som i sagnkartet. Velg et annet sted for å flytte utvidelsen, eller lukk profilen eller klikk på et tomt område for å folde den sammen. Filtrene endrer antall sagn ved hvert sted. Sirkler er stedsreferanser fra datasettet, som også kan være brede regioner eller usikre stedsnavn; de angir ikke en presis hendelsesposisjon. Boblestørrelse skalerer stedssirklene. Fargelegging etter samler, ML-kategori eller informant bruker den vanligste kjente verdien i stedets filtrerte sagn; ved likt antall brukes alfabetisk rekkefølge. Steder uten en kjent verdi får en nøytral farge. Én farge bruker den valgte prosjektfargen. De utvidede sagnboblene beholder fargene fra sine egne opplysninger.",
-    "en": "Places shows one hollow circle at each recorded place’s coordinates. Size bubbles by can use the number of attached legends in the active selection (the default), or give every place a uniform circle. Click a circle to expand that place’s individual legends as bubbles and open its place profile. You can select a legend, read its text or open the place’s legends in Browse, just as in the legend map. Selecting another place moves the expansion; closing the profile or clicking an empty area collapses it. Filters update the legend count at each place. Circles represent the dataset’s place references, which may include broad regions or uncertain names; they do not indicate precise event locations. Bubble size scales the place circles. Colouring by collector, ML category or informant uses the most frequent known value in that place’s filtered legends; ties use alphabetical order. Places without a known value use a neutral colour. Single colour uses the selected project colour. Expanded legend bubbles retain their own metadata colours."
+    "no": "Stedsvisningen viser en hul sirkel ved hver registrerte plassering; navn med identiske koordinater beholder sine egne profiler og antall, med valg mellom navnene i profilen. Boblestørrelse etter kan bruke antall tilknyttede sagn i det aktive utvalget (standard), eller gi alle steder like store sirkler. Klikk på en sirkel for å vise stedets individuelle sagn som bobler og åpne stedsprofilen. Du kan velge et sagn, lese teksten eller åpne stedets sagn i utforskeren, som i sagnkartet. Velg et annet sted for å flytte utvidelsen, eller lukk profilen eller klikk på et tomt område for å folde den sammen. Filtrene endrer antall sagn ved hvert sted. Sirkler er stedsreferanser fra datasettet, som også kan være brede regioner eller usikre stedsnavn; de angir ikke en presis hendelsesposisjon. Boblestørrelse skalerer stedssirklene. Fargelegging etter samler, ML-kategori eller informant bruker den vanligste kjente verdien i stedets filtrerte sagn; ved likt antall brukes alfabetisk rekkefølge. Steder uten en kjent verdi får en nøytral farge. Én farge bruker den valgte prosjektfargen. De utvidede sagnboblene beholder fargene fra sine egne opplysninger.",
+    "en": "Places shows a hollow circle at each recorded location; recorded names sharing coordinates keep their own profiles and counts, with a choice of names in the profile. Size bubbles by can use the number of attached legends in the active selection (the default), or give every place a uniform circle. Click a circle to expand that place’s individual legends as bubbles and open its place profile. You can select a legend, read its text or open the place’s legends in Browse, just as in the legend map. Selecting another place moves the expansion; closing the profile or clicking an empty area collapses it. Filters update the legend count at each place. Circles represent the dataset’s place references, which may include broad regions or uncertain names; they do not indicate precise event locations. Bubble size scales the place circles. Colouring by collector, ML category or informant uses the most frequent known value in that place’s filtered legends; ties use alphabetical order. Places without a known value use a neutral colour. Single colour uses the selected project colour. Expanded legend bubbles retain their own metadata colours."
   },
   "map.connectedPlaces": {
     "no": "Tilknyttede steder",
@@ -2094,5 +2094,161 @@
   "map.sharedCoordinatesSummary": {
     "no": "Én boble for {count} registrerte stedsnavn med identiske koordinater.",
     "en": "One bubble groups {count} recorded place names with identical coordinates."
+  },
+  "about.guideIntro": {
+    "no": "Her finner du veiledning til kartet, sagnutforskeren, dataoversikten og reisene, med forklaringer av kildegrunnlag og visningsvalg.",
+    "en": "This guide explains the Map, Browser, Data and Journeys, including the sources behind them and how to read each view."
+  },
+  "about.guideMap": {
+    "no": "Kart",
+    "en": "Map"
+  },
+  "about.guideBrowser": {
+    "no": "Sagnutforsker",
+    "en": "Browser"
+  },
+  "about.guideData": {
+    "no": "Data",
+    "en": "Data"
+  },
+  "about.guideJourneys": {
+    "no": "Reiser",
+    "en": "Journeys"
+  },
+  "about.mapGuideIntro": {
+    "no": "Utforsk hvor sagnene er knyttet til steder, eller sammenlign forbindelser mellom steder. Visningene bruker det samme filtrerte utvalget.",
+    "en": "Explore the places associated with legends or compare connections between places. The views use the same filtered selection."
+  },
+  "about.browserGuideIntro": {
+    "no": "Les, søk og sammenlign sagn i liste eller rutenett. Velg tekstspråk, åpne hele teksten og bruk metadatafiltrene for å avgrense utvalget.",
+    "en": "Read, search and compare legends in a list or grid. Choose a text language, open the full text and use metadata filters to narrow the selection."
+  },
+  "about.coordinateAuditTitle": {
+    "no": "Kilder og kontroll av stedsnavn",
+    "en": "Sources and place-name verification"
+  },
+  "about.coordinateAuditText": {
+    "en": "The geographic dataset preserves all 383 recorded place names and checks them against Kartverket’s Central Place Name Register (SSR) and historical municipality and county classifications from Statistics Norway (SSB). A register coordinate is used only when the full recorded name matches an approved name for an active geographic feature, every recorded county agrees, and there is no competing candidate in that context. The source identifier and evidence are retained for each match. Original names and coordinates are preserved, and places are not merged simply because their coordinates coincide.",
+    "no": "Det geografiske datasettet bevarer alle 383 registrerte stedsnavn og kontrollerer dem mot Kartverkets Sentralt stedsnavnregister (SSR) og historiske kommune- og fylkesinndelinger fra Statistisk sentralbyrå (SSB). En koordinat fra registeret brukes bare når hele det registrerte navnet samsvarer med et godkjent navn for et aktivt geografisk objekt, alle registrerte fylker stemmer, og det ikke finnes konkurrerende kandidater i denne konteksten. Kildeidentifikatoren og grunnlaget for hvert treff bevares. Opprinnelige navn og koordinater er bevart, og steder slås ikke sammen bare fordi koordinatene sammenfaller."
+  },
+  "about.coordinateHistoryText": {
+    "en": "Historical administrative names, qualified or uncertain names, and names with several possible matches retain their existing coordinates and are labelled unresolved. The historical classifications help identify former municipalities and counties; historical boundary geometries have not been applied to the map. Proximity to an existing point is not used to establish a match. A register point represents a locality or area and does not establish the exact place where a legend was collected or an event occurred.",
+    "no": "Historiske administrative navn, navn med forbehold eller usikkerhet og navn med flere mulige treff beholder sine eksisterende koordinater og merkes som uavklarte. De historiske inndelingene bidrar til å identifisere tidligere kommuner og fylker; historiske grensegeometrier er ikke lagt inn i kartet. Nærhet til et eksisterende punkt brukes ikke til å fastslå et treff. Et registerpunkt representerer et sted eller område og bekrefter ikke det nøyaktige stedet der et sagn ble samlet inn eller en hendelse fant sted."
+  },
+  "about.coordinateUncertaintyTitle": {
+    "no": "Slik vises geografisk usikkerhet",
+    "en": "How geographic uncertainty is shown"
+  },
+  "about.coordinateUncertaintyText": {
+    "no": "«Vis geografisk usikkerhet» i Innstillinger er slått av som standard. Når valget er på, viser heltrukne konturer steder med samsvar i autoritativ kilde, stiplede konturer omtrentlige områder og prikkede konturer uavklarte plasseringer. Stedsprofilen viser status og kilde uansett dette valget. Navn med samme koordinater har separate profiler; du kan velge mellom navnene i profilen.",
+    "en": "Show location uncertainty in Settings is off by default. When enabled, solid outlines indicate authority-matched localities, dashed outlines indicate approximate areas, and dotted outlines indicate unresolved locations. Place profiles always show the status and source. Names sharing coordinates retain separate profiles; select a recorded name in the profile to switch between them."
+  },
+  "about.coordinateUncertaintyLimits": {
+    "no": "Samsvar med et geografisk objekt bekrefter ikke det nøyaktige innsamlingsstedet. Kartet viser ikke historiske områdegrenser eller individuelle nøyaktighetsgrader. Farge, lysstyrke og størrelse uttrykker ikke sikkerheten i plasseringen. Områdepunkter er representasjonspunkter. Sagn uten koordinater oppgis separat i Innstillinger.",
+    "en": "Matching a geographic feature does not establish an exact collection site. The map does not display historical area boundaries or individual accuracy ratings. Colour, brightness and size do not express location confidence. Area markers are representative points. Legends without coordinates are identified separately in Settings."
+  },
+  "about.dataGuideIntro": {
+    "no": "Undersøk samlingen gjennom temaer, ML-typer, fylker, samlere, innsamlingsår og oversettelser. Tallene beskriver opptegnelsene i samlingen og sier ikke hvor utbredte sagnene var i befolkningen.",
+    "en": "Explore the collection by topic, ML type, county, collector, collection year and translation availability. Counts describe the records in this collection and do not measure how widespread legends were in the population."
+  },
+  "about.dataControlsTitle": {
+    "no": "Velge og sammenligne i diagrammene",
+    "en": "Selecting and comparing in charts"
+  },
+  "about.dataControlsText": {
+    "no": "Klikk på en rad eller stolpe for å avgrense utvalget. Valg på tvers av diagrammer kombineres, og tallene oppdateres for det gjeldende utvalget. Aktive valg vises over diagrammene og kan fjernes igjen. Bruk sorteringsmenyen i et diagram for å endre rekkefølgen. «Vis tekster» åpner sagnene som ligger bak tallene; de kan også åpnes i sagnutforskeren.",
+    "en": "Click a chart row or bar to narrow the selection. Choices across charts combine, and counts update for the current selection. Active choices appear above the charts and can be removed. Use a chart’s sorting menu to change its order. Show texts opens the legends behind the counts; they can also be opened in the Browser."
+  },
+  "about.dataSharingTitle": {
+    "no": "Dele, laste ned og lese manglende data",
+    "en": "Sharing, downloading and reading missing data"
+  },
+  "about.dataSharingText": {
+    "no": "Kopier lenken for å dele gjeldende utvalg, eller last ned diagramtallene som CSV. Udaterte sagn og ukjente metadata beholdes som egne alternativer der de finnes. En manglende opplysning betyr at den ikke er registrert i datasettet, ikke at en samler, informant eller dato ikke fantes.",
+    "en": "Copy the link to share the current selection, or download chart counts as CSV. Undated legends and unknown metadata remain separate options where available. A missing value means it is not recorded in the dataset, rather than evidence that no collector, informant or date existed."
+  },
+  "about.journeysGuideIntro": {
+    "no": "Reisene gir en fortellende inngang til samlingen. Velg en reise på startsiden for Reiser og følg tekstene, stedene og forbindelsene.",
+    "en": "Journeys offer a narrative way into the collection. Choose a journey on the Journeys opening screen and follow its texts, places and connections."
+  },
+  "about.journeysControlsTitle": {
+    "no": "Lesing og avspilling",
+    "en": "Reading and playback"
+  },
+  "about.journeysControlsText": {
+    "no": "Bruk Forrige, Pause/Fortsett og Videre for å styre lesningen. Innstillinger lar deg velge musikk, et stillestående kart, kartets uttrykk og lesehastighet. Fullskjerm gir mer plass til kart og tekst. Arkivlenker og tilgjengelige manuskriptsider lar deg undersøke kildene videre.",
+    "en": "Use Previous, Pause/Resume and Continue to control the reading. Settings let you choose music, a still map, map appearance and reading pace. Full screen gives the map and text more room. Archival links and available manuscript pages let you inspect the sources further."
+  },
+  "about.journeysGeographyTitle": {
+    "no": "Hva viser reisens kart og linjer?",
+    "en": "What do the journey map and lines show?"
+  },
+  "about.journeysGeographyText": {
+    "no": "Reisenes linjer følger lesningen og forbindelser i opptegnelsene. De dokumenterer ikke samlernes reiser eller bosteder. Steder i tekstene og biografiske steder kan være omtrentlige og må leses sammen med forklaringene og kildeutdragene. Moltke Moe-reisens veisekvens bruker dagens OpenStreetMap-geometri via OSRM; den er et visuelt hjelpemiddel, ikke en rekonstruert historisk reiserute.",
+    "en": "Journey lines follow the reading and relationships in the records. They do not document collectors’ travel or residences. Places mentioned in texts and biographical locations can be approximate and should be read alongside the explanations and supporting passages. The Moltke Moe journey’s road sequence uses present-day OpenStreetMap geometry through OSRM; it is a visual aid, rather than a reconstructed historical itinerary."
+  },
+  "about.dataGuideLink": {
+    "no": "Veiledning til dataoversikten",
+    "en": "Guide to Data"
+  },
+  "about.journeysGuideLink": {
+    "no": "Veiledning til reisene",
+    "en": "Guide to Journeys"
+  },
+  "about.mapControlsTitle": {
+    "no": "Innstillinger og navigasjon",
+    "en": "Settings and navigation"
+  },
+  "about.mapControlsText": {
+    "no": "Bytt visning med fanene øverst på kartet. Innstillinger viser valgene som gjelder den aktive visningen, som kartbakgrunn, datafarge, boblestørrelse og linjeintensitet. Zoom inn eller ut, tilbakestill kartutsnittet eller bruk fullskjerm. Lenken for det synlige kartområdet åpner sagnene innenfor utsnittet og de aktive filtrene i sagnutforskeren.",
+    "en": "Switch views using the tabs above the map. Settings shows controls for the active view, such as basemap, data colour, bubble size and thread intensity. Zoom in or out, reset the map extent or use full screen. The visible map area link opens legends within the current extent and active filters in the Browser."
+  },
+  "map.showUncertainty": {
+    "no": "Vis geografisk usikkerhet",
+    "en": "Show location uncertainty"
+  },
+  "map.uncertaintyKey": {
+    "no": "Heltrukken: samsvar med autoritativ kilde. Stiplet: omtrentlig område. Prikket: uavklart plassering.",
+    "en": "Solid: authority-matched locality. Dashed: approximate area. Dotted: unresolved location."
+  },
+  "map.locationStatus": {
+    "no": "Geografisk plassering",
+    "en": "Geographic location"
+  },
+  "map.location.matched": {
+    "no": "Sted med samsvar i autoritativ kilde",
+    "en": "Authority-matched locality"
+  },
+  "map.location.approximate": {
+    "no": "Omtrentlig representasjon av et område",
+    "en": "Approximate area location"
+  },
+  "map.location.unresolved": {
+    "no": "Plasseringen er ikke verifisert",
+    "en": "Location not verified"
+  },
+  "map.location.unlocated": {
+    "no": "Ingen registrerte koordinater",
+    "en": "No recorded coordinates"
+  },
+  "map.authorityMatchedNote": {
+    "no": "Navnet og registrert fylke gir ett samsvar i Kartverkets stedsnavnregister. Punktet representerer dette geografiske objektet, ikke et dokumentert innsamlingssted eller en hendelse.",
+    "en": "The name and recorded county give one match in Kartverket’s place-name register. The point represents that geographic feature, rather than a documented collection site or event."
+  },
+  "map.unresolvedLocationNote": {
+    "en": "The existing coordinate is retained. Historical boundaries, ambiguous names or missing context prevent a supported automatic correction.",
+    "no": "Den eksisterende koordinaten beholdes. Historiske grenser, tvetydige navn eller manglende kontekst hindrer en underbygd automatisk rettelse."
+  },
+  "map.editorialCoordinateSource": {
+    "en": "Existing dataset coordinate; not independently verified.",
+    "no": "Eksisterende koordinat i datasettet; ikke uavhengig bekreftet."
+  },
+  "map.locationMethod": {
+    "no": "Om geografisk usikkerhet",
+    "en": "About geographic uncertainty"
+  },
+  "about.coordinateResultsLink": {
+    "no": "Se tabellen over stedsplasseringer og kildegrunnlag",
+    "en": "View place decisions and source references"
   }
 }

@@ -93,6 +93,8 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
         </div>
       </details>
               <section class="layer-group">
+                <label class="unknown-toggle"><input type="checkbox" data-show-uncertainty /><span data-i18n="map.showUncertainty">Vis geografisk usikkerhet</span></label>
+                <div class="uncertainty-key" data-uncertainty-key hidden><p data-i18n="map.uncertaintyKey">Heltrukken: samsvar med autoritativ kilde. Stiplet: omtrentlig område. Prikket: uavklart plassering.</p><a class="context-help" href={`${base}about/#coordinate-uncertainty`} data-i18n="map.locationMethod">Om geografisk usikkerhet</a></div>
                 <h2 data-i18n="map.basemap">Bakgrunnskart</h2>
                 <div class="layer-select">
                   <span data-i18n="map.basemapStyle">Kartstil</span>

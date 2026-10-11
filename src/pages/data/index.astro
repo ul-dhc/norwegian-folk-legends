@@ -1,4 +1,5 @@
 ---
+import ui from '../../i18n/ui.json';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {types,topics} from '../../ml-index/data';
 import '../../ml-index/style.css';
@@ -6,10 +7,10 @@ const base=import.meta.env.BASE_URL;
 ---
 <BaseLayout title="Data" active="data" description="Explore the Norwegian folk legend collection through interactive statistics and selected texts.">
  <div class="ml-page ml-data-page shell" data-i18n-skip>
-  <header class="ml-hero"><h1>Data</h1></header>
+  <header class="ml-hero"><h1>Data</h1><a class="context-help" href={`${base}about/#guide-data`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-data-guide-link>{ui['about.dataGuideLink'].no}</span></a></header>
   <section id="ml-dashboard" aria-labelledby="ml-dashboard-title"><div id="ml-dashboard-content"></div></section>
   <noscript><p>Statistikken krever JavaScript. / The dashboard requires JavaScript.</p></noscript>
  </div>
  <script type="application/json" id="ml-data" is:inline set:html={JSON.stringify({types,topics,base}).replace(/</g,'\\u003c')}/>
- <script>import '../../ml-index/data-main';</script>
+ <script>import '../../ml-index/data-main'; import ui from '../../i18n/ui.json'; const updateGuideLabel=()=>{const label=document.querySelector('[data-data-guide-link]');if(label)label.textContent=ui['about.dataGuideLink'][document.documentElement.dataset.uiLang==='en'?'en':'no'];};updateGuideLabel();window.addEventListener('ui-language-change',updateGuideLabel);</script>
 </BaseLayout>
