@@ -73,6 +73,7 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
             {topic.paragraphs.map(key=><p data-i18n={key}>{copy(key)}</p>)}
             {topic.id==='coordinate-sources'&&<ul class="guide-sources">
               <li><a href="https://github.com/ul-dhc/norwegian-folk-legends/blob/main/norske_json/places-geography.json" target="_blank" rel="noopener" data-i18n="about.coordinateResultsLink">{copy('about.coordinateResultsLink')}</a></li>
+              <li><a href="https://github.com/ul-dhc/norwegian-folk-legends/blob/main/data/place-decisions/places.csv" target="_blank" rel="noopener" data-i18n="about.coordinateDecisionTableLink">{copy('about.coordinateDecisionTableLink')}</a></li>
               <li><a href="https://kartverket.no/en/api-and-data/stedsnavndata/brukarrettleiing-stadnamn-api" target="_blank" rel="noopener">Kartverket – Sentralt stedsnavnregister (SSR)</a></li>
               <li><a href="https://www.ssb.no/klass/klassifikasjoner/131" target="_blank" rel="noopener">SSB – Kommuneinndeling</a> / <a href="https://www.ssb.no/klass/klassifikasjoner/104" target="_blank" rel="noopener">Fylkesinndeling</a></li>
               <li><a href="https://www.kartverket.no/om-kartverket/historie/historiske-kart" target="_blank" rel="noopener">Kartverket – Historiske kart</a></li>

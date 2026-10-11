@@ -465,3 +465,9 @@ body.journey-active{overflow:hidden}body.journey-active .site-header,body.journe
 #journey-moe-card p{white-space:pre-line}
 
 .journey-network-overview .journey-thread{filter:none}
+
+.journey-uncertainty-marker{border:1.5px dotted #dbe0d9;border-radius:50%;pointer-events:none!important;background:transparent;opacity:.8}
+.journey-uncertainty-marker.location-matched{border-style:solid}
+.journey-uncertainty-marker.location-approximate{border-style:dashed}
+#journey-uncertainty[aria-pressed=true]{color:#f3e1a0;border-color:#f3e1a0;background:transparent}
+#journey-uncertainty-help{display:block;margin:.6rem 0 1rem;font-size:11px;color:#acb8bf;text-underline-offset:3px}

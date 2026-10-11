@@ -290,6 +290,23 @@ const resetExtent = () => {
 };
 centerMapButton.addEventListener("click", resetExtent);
 navigationGroup?.append(centerMapButton);
+const uncertaintyButton = document.createElement("button");
+uncertaintyButton.type = "button";
+uncertaintyButton.className = "map-uncertainty-control";
+uncertaintyButton.replaceChildren(createElement(CircleHelp, {width:18,height:18,"stroke-width":1.8,"aria-hidden":"true"}));
+navigationGroup?.append(uncertaintyButton);
+const syncUncertaintyButton = () => {
+ const label = tr("map.showUncertainty");
+ uncertaintyButton.title = label;
+ uncertaintyButton.setAttribute("aria-label", label);
+ uncertaintyButton.setAttribute("aria-pressed", String(uncertaintyToggle.checked));
+};
+uncertaintyButton.addEventListener("click", () => {
+ uncertaintyToggle.checked = !uncertaintyToggle.checked;
+ uncertaintyToggle.dispatchEvent(new Event("change"));
+});
+syncUncertaintyButton();
+window.addEventListener("ui-language-change", syncUncertaintyButton);
 const fullscreenButton = document.createElement("button");
 fullscreenButton.type = "button";
 fullscreenButton.className = "map-fullscreen-control";
@@ -2460,7 +2477,7 @@ const renderUncertainty = () => {
   uncertaintyMarkers.set(place.properties.id, new maplibregl.Marker({element}).setLngLat(place.geometry.coordinates).addTo(map));
  }
 };
-uncertaintyToggle.addEventListener('change', () => {renderUncertainty();updateUrl();});
+uncertaintyToggle.addEventListener('change', () => {renderUncertainty();syncUncertaintyButton();updateUrl();});
 map.on('idle', renderUncertainty);
 panel.addEventListener('click', event => {
  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-profile-place]');

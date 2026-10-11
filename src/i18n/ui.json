@@ -2140,8 +2140,8 @@
     "en": "How geographic uncertainty is shown"
   },
   "about.coordinateUncertaintyText": {
-    "no": "«Vis geografisk usikkerhet» i Innstillinger er slått av som standard. Når valget er på, viser heltrukne konturer steder med samsvar i autoritativ kilde, stiplede konturer omtrentlige områder og prikkede konturer uavklarte plasseringer. Stedsprofilen viser status og kilde uansett dette valget. Navn med samme koordinater har separate profiler; du kan velge mellom navnene i profilen.",
-    "en": "Show location uncertainty in Settings is off by default. When enabled, solid outlines indicate authority-matched localities, dashed outlines indicate approximate areas, and dotted outlines indicate unresolved locations. Place profiles always show the status and source. Names sharing coordinates retain separate profiles; select a recorded name in the profile to switch between them."
+    "no": "«Vis geografisk usikkerhet» i Innstillinger er slått av som standard. Når valget er på, viser heltrukne konturer steder med samsvar i autoritativ kilde, stiplede konturer omtrentlige områder og prikkede konturer uavklarte plasseringer. Stedsprofilen viser status og kilde uansett dette valget. Navn med samme koordinater har separate profiler; du kan velge mellom navnene i profilen. Valget finnes i alle kartvisninger, både i Innstillinger og som en knapp ved zoomkontrollene. Reisene har samme valg i sine innstillinger for de registrerte stedsplasseringene som vises i scenen.",
+    "en": "Show location uncertainty in Settings is off by default. When enabled, solid outlines indicate authority-matched localities, dashed outlines indicate approximate areas, and dotted outlines indicate unresolved locations. Place profiles always show the status and source. Names sharing coordinates retain separate profiles; select a recorded name in the profile to switch between them. The toggle is available in every map view, both in Settings and as a button beside the zoom controls. Journeys provides the same option in its settings for the recorded place locations shown in the scene."
   },
   "about.coordinateUncertaintyLimits": {
     "no": "Samsvar med et geografisk objekt bekrefter ikke det nøyaktige innsamlingsstedet. Kartet viser ikke historiske områdegrenser eller individuelle nøyaktighetsgrader. Farge, lysstyrke og størrelse uttrykker ikke sikkerheten i plasseringen. Områdepunkter er representasjonspunkter. Sagn uten koordinater oppgis separat i Innstillinger.",
@@ -2184,8 +2184,8 @@
     "en": "What do the journey map and lines show?"
   },
   "about.journeysGeographyText": {
-    "no": "Reisenes linjer følger lesningen og forbindelser i opptegnelsene. De dokumenterer ikke samlernes reiser eller bosteder. Steder i tekstene og biografiske steder kan være omtrentlige og må leses sammen med forklaringene og kildeutdragene. Moltke Moe-reisens veisekvens bruker dagens OpenStreetMap-geometri via OSRM; den er et visuelt hjelpemiddel, ikke en rekonstruert historisk reiserute.",
-    "en": "Journey lines follow the reading and relationships in the records. They do not document collectors’ travel or residences. Places mentioned in texts and biographical locations can be approximate and should be read alongside the explanations and supporting passages. The Moltke Moe journey’s road sequence uses present-day OpenStreetMap geometry through OSRM; it is a visual aid, rather than a reconstructed historical itinerary."
+    "no": "Reisenes linjer følger lesningen og forbindelser i opptegnelsene. De dokumenterer ikke samlernes reiser eller bosteder. Steder i tekstene og biografiske steder kan være omtrentlige og må leses sammen med forklaringene og kildeutdragene. Moltke Moe-reisens veisekvens bruker dagens OpenStreetMap-geometri via OSRM; den er et visuelt hjelpemiddel, ikke en rekonstruert historisk reiserute. Registrerte stedsplasseringer bruker samme geografiske datasett som kartet. Når et sted mangler koordinater, kan et eksisterende fylkespunkt gi regional kontekst og forblir ubekreftet. Usikkerhetskonturene gjelder disse plasseringene i datasettet; steder i fortellingen og biografiske steder beholder sine egne kildeforklaringer.",
+    "en": "Journey lines follow the reading and relationships in the records. They do not document collectors’ travel or residences. Places mentioned in texts and biographical locations can be approximate and should be read alongside the explanations and supporting passages. The Moltke Moe journey’s road sequence uses present-day OpenStreetMap geometry through OSRM; it is a visual aid, rather than a reconstructed historical itinerary. Recorded place locations use the same geographic dataset as the map. Where a place has no coordinates, an existing county point may provide regional context and remains unverified. Uncertainty outlines apply to these dataset locations; narrative and biographical locations retain their separate source explanations."
   },
   "about.dataGuideLink": {
     "no": "Veiledning til dataoversikten",
@@ -2250,5 +2250,9 @@
   "about.coordinateResultsLink": {
     "no": "Se stedsdataene (JSON)",
     "en": "View place data (JSON)"
+  },
+  "about.coordinateDecisionTableLink": {
+    "no": "Se tabellen over stedsplasseringer og kildegrunnlag",
+    "en": "View place decisions and source references"
   }
 }

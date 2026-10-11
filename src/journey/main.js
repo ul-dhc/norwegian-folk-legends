@@ -53,6 +53,7 @@ const scene=()=>scenes[sceneIndex];
 const record=()=>route[scene()?.i??0];
 const textFor=r=>language()==='en'&&!original&&r.english_translation?.trim()?r.english_translation:r.tekst;
 const heading=r=>r.tittel||r.ml_title||r.id;
+let showUncertainty=false;
 let selectedMap='coastlines';
 try{const saved=localStorage.getItem('journey-map-type-v3');if(['quiet','terrain','coastlines'].includes(saved))selectedMap=saved;}catch{}
 function mapSettings(){
@@ -60,6 +61,10 @@ function mapSettings(){
  el('journey-settings-toggle').setAttribute('aria-label',en?'Journey settings':'Reiseinnstillinger');
  el('journey-settings-title').textContent=en?'Journey settings':'Reiseinnstillinger';
  el('journey-map-settings-title').textContent=en?'Map atmosphere':'Kartets uttrykk';
+ el('journey-uncertainty').querySelector('span').textContent=en?'Show location uncertainty':'Vis geografisk usikkerhet';
+ el('journey-uncertainty').querySelector('small').textContent=en?'Solid: matched locality. Dashed: approximate area. Dotted: unresolved location.':'Heltrukken: samsvar i stedsregister. Stiplet: omtrentlig område. Prikket: uavklart plassering.';
+ el('journey-uncertainty').setAttribute('aria-pressed',String(showUncertainty));
+ el('journey-uncertainty-help').textContent=en?'About location uncertainty':'Om geografisk usikkerhet';
  el('journey-reading-time-label').textContent=en?'Reading and typing pace':'Lese- og skrivehastighet';
  el('journey-reading-less').textContent=en?'Slower':'Langsommere';
  el('journey-reading-more').textContent=en?'Faster':'Raskere';
@@ -71,6 +76,7 @@ function mapSettings(){
  const names=en?{terrain:['Terrain','Mountains and roads'],quiet:['Quiet landscape','Water and roads, without relief'],coastlines:['Coastlines','Land, fjords and lakes · no roads']}:{terrain:['Terreng','Fjell og veier'],quiet:['Rolig landskap','Vann og veier, uten relieff'],coastlines:['Kystlinjer','Land, fjorder og innsjøer · uten veier']};
  root.querySelectorAll('[data-map-type]').forEach(button=>{const text=names[button.dataset.mapType];button.querySelector('span').textContent=text[0];button.querySelector('small').textContent=text[1];button.setAttribute('aria-pressed',String(button.dataset.mapType===selectedMap));});
 }
+function fitSettings(){const panel=el('journey-settings');if(!panel.hidden)panel.style.maxHeight=Math.max(160,innerHeight-panel.getBoundingClientRect().top-12)+'px';}
 function closeSettings(){el('journey-settings').hidden=true;el('journey-settings-toggle').setAttribute('aria-expanded','false');root.classList.remove('settings-open');}
 const status=message=>{el('journey-status').textContent=message;};
 function revealControls(){root.classList.remove('controls-resting');clearTimeout(restTimer);if(started&&!paused&&scene()?.kind!=='end')restTimer=setTimeout(()=>root.classList.add('controls-resting'),4500);}
@@ -539,7 +545,7 @@ async function fullscreen(){
  catch{root.classList.add('is-fullscreen');document.body.classList.add('journey-fullscreen');resize();controls();}
 }
 function resize(){
- map?.resize();if(!started)return;
+ fitSettings();map?.resize();if(!started)return;
  const previous=scene();if(!previous)return;
  const active=previous.kind;buildScenes();
  let replacement=scenes.findIndex(s=>s.i===previous.i&&s.kind===active&&(active==='read'?s.offset<=previous.offset&&s.end>previous.offset:s.j===previous.j));
@@ -552,7 +558,8 @@ function resize(){
 root.addEventListener('click',async event=>{
  if(event.target.closest('a'))pause();
  const button=event.target.closest('button');if(!button)return;
- if(button.dataset.mapType){selectedMap=button.dataset.mapType;map?.setMapType(selectedMap);try{localStorage.setItem('journey-map-type-v3',selectedMap);}catch{}mapSettings();}
+ if(button.id==='journey-uncertainty'){showUncertainty=!showUncertainty;map?.setUncertainty(showUncertainty);mapSettings();}
+ else if(button.dataset.mapType){selectedMap=button.dataset.mapType;map?.setMapType(selectedMap);try{localStorage.setItem('journey-map-type-v3',selectedMap);}catch{}mapSettings();}
  else if(button.dataset.themeThread){themeKey=button.dataset.themeThread;route=[];restored=false;welcome();}
  else if(button.dataset.mode){mode=button.dataset.mode;route=[];restored=false;welcome();}
  else if(button.hasAttribute('data-archive-page')){
@@ -586,7 +593,7 @@ el('journey-info-toggle').addEventListener('click',()=>{
  el('journey-info').showModal();
 });
 el('journey-info-close').addEventListener('click',()=>el('journey-info').close());
-el('journey-settings-toggle').addEventListener('click',()=>{const open=el('journey-settings').hidden;el('journey-settings').hidden=!open;el('journey-settings-toggle').setAttribute('aria-expanded',String(open));root.classList.toggle('settings-open',open);revealControls();});
+el('journey-settings-toggle').addEventListener('click',()=>{const open=el('journey-settings').hidden;el('journey-settings').hidden=!open;el('journey-settings-toggle').setAttribute('aria-expanded',String(open));root.classList.toggle('settings-open',open);fitSettings();revealControls();});
 document.addEventListener('pointerdown',event=>{if(!event.target.closest('#journey-settings,#journey-settings-toggle'))closeSettings();});
 root.addEventListener('keydown',event=>{if(event.key==='Escape'&&!el('journey-settings').hidden){event.stopImmediatePropagation();closeSettings();el('journey-settings-toggle').focus();}});
 el('journey-pause').addEventListener('click',togglePause);

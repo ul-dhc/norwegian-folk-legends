@@ -200,3 +200,20 @@ test('geographic decisions preserve originals and relocate only supported author
   }
   for (const point of dataset.places.features) assert.deepEqual(point.properties.geography, places.get(point.id).geography);
 });
+
+
+test('Journeys and the map use the same updated place coordinates and location status', () => {
+  const journey = JSON.parse(read('build/journey-data.json')).records;
+  for (const record of journey) {
+    const place = places.get(record.placeId);
+    if (place?.coordinates) {
+      assert.equal(record.lat, place.coordinates.latitude, record.id);
+      assert.equal(record.lon, place.coordinates.longitude, record.id);
+      assert.equal(record.geographicStatus, place.geography.displayStatus);
+      assert.equal(record.coordinateSource, place.geography.coordinateSource);
+    } else {
+      assert.equal(record.geographicStatus, 'unresolved');
+      assert.ok(['none', 'existing county coordinate'].includes(record.coordinateSource));
+    }
+  }
+});

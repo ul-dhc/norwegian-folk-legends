@@ -25,6 +25,20 @@ export function createJourneyMap(container,onError){
   terrainMap=landscape.getMaplibreMap();terrainMap.on('error',onError);
   terrainMap.on('load',()=>{terrainReady=true;applyMapType(terrainMap,mapType);});
  }).catch(onError);
+ const uncertaintyPane=map.createPane('journeyUncertainty');uncertaintyPane.style.zIndex=450;uncertaintyPane.style.pointerEvents='none';
+ const uncertaintyLayer=L.layerGroup().addTo(map),uncertaintyRecords=new Map();
+ let showUncertainty=false;
+ function rememberUncertainty(record){
+  if(!record.placeId||!record.geographicStatus||!Number.isFinite(record.lat)||!Number.isFinite(record.lon))return;
+  const key=record.placeId+':'+record.lat+':'+record.lon;
+  if(uncertaintyRecords.has(key))return;
+  uncertaintyRecords.set(key,record);
+  if(showUncertainty)drawUncertainty(record);
+ }
+ function drawUncertainty(record){
+  const status=['matched','approximate'].includes(record.geographicStatus)?record.geographicStatus:'unresolved';
+  L.marker(point(record),{pane:'journeyUncertainty',interactive:false,keyboard:false,icon:L.divIcon({className:'journey-uncertainty-marker location-'+status,html:'',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(uncertaintyLayer);
+ }
  const traces=L.layerGroup().addTo(map),constellation=L.layerGroup().addTo(map),effects=L.layerGroup().addTo(map);
  let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false,activeFrame=null,roadsPrepared=false;
  const remembered=new Map(),seenEdges=new Set(),travelledEdges=new Map(),visitedDots=new Map();
@@ -50,6 +64,7 @@ export function createJourneyMap(container,onError){
   return line;
  }
  function connections(items,kind,group=constellation,reveal=false,colour=null){
+  items.forEach(rememberUncertainty);
   const {nodes,edges}=networkEdges(items),color=colour||collectorColour(items[0]);
   const hub=nodes.length?[nodes.reduce((sum,r)=>sum+r.lat,0)/nodes.length,nodes.reduce((sum,r)=>sum+r.lon,0)/nodes.length]:null;
   const revealLine=(line,i)=>{if(!reveal||still)return;const element=line?.getElement();if(!element)return;element.setAttribute('pathLength','1');element.classList.add('journey-spoke-reveal');element.style.animationDelay=(1600+Math.min(i*65,1200))+'ms';};
@@ -142,6 +157,7 @@ export function createJourneyMap(container,onError){
  }
  const observer=new ResizeObserver(()=>{map.invalidateSize({pan:false});frameClosing();});observer.observe(container);
  return {
+  setUncertainty(value){showUncertainty=value;uncertaintyLayer.clearLayers();if(value)uncertaintyRecords.forEach(drawUncertainty);},
   intro(records,all=false,reading=false,opening=false,reveal=true){
    // Welcome and opening share the same geography and paths. Begin changes only the text.
    if(opening&&fullOverview&&constellation.getLayers().length){
@@ -215,8 +231,9 @@ export function createJourneyMap(container,onError){
    startIntroZoom(.97,20000);breathe(false);
   },
   setStill(value){still=value;if(value){introZoom?.cancel();introZoom=null;breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
-  reset(){roadsPrepared=false;activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
+  reset(){uncertaintyLayer.clearLayers();uncertaintyRecords.clear();roadsPrepared=false;activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
   travel(target,{story=false,allowRoad=false,kind='place',colour=null,minDuration=0,onRoute=()=>{},done=()=>{}}={}){
+   if(!story)rememberUncertainty(target);
    closingCoords=null;cancel();clearDestination();breathe(false);
    const to=point(target),from=current||to,color=colour||collectorColour(target);
    const distance=L.latLng(from).distanceTo(to),same=distance<1000;
@@ -290,9 +307,10 @@ export function createJourneyMap(container,onError){
    introZoom=landscape.animate([{scale:String(from),offset:0},{scale:String(from),offset:settle},{scale:'1.28',offset:1}],{duration,easing:'cubic-bezier(.25,.35,.55,1)',fill:'both'});
    return introZoom;
   },
-  highlightPlace(target){if(!target)return;showDestination(target);setHead(point(target),false,'#F3DEA0');},
+  highlightPlace(target){if(!target)return;rememberUncertainty(target);showDestination(target);setHead(point(target),false,'#F3DEA0');},
   focus(target,photo=false){
    closingCoords=null;breathe(false);if(!target)return;
+   rememberUncertainty(target);
    if(photo){traces.clearLayers();head=null;}
    showDestination(target);setHead(point(target),Boolean(target.key),photo?'#F3DEA0':collectorColour(target));
    if(!photo&&!target.key)markVisited(point(target),collectorColour(target));

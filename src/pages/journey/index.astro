@@ -28,6 +28,8 @@ const base=import.meta.env.BASE_URL;
         <button type="button" data-map-type="quiet" aria-pressed="false"><span></span><small></small></button>
         <button type="button" data-map-type="terrain" aria-pressed="false"><span></span><small></small></button>
       </div>
+      <button id="journey-uncertainty" type="button" aria-pressed="false"><span></span><small></small></button>
+      <a id="journey-uncertainty-help" href={`${base}about/#coordinate-uncertainty`}></a>
       <div class="journey-reading-settings">
         <label id="journey-reading-time-label" for="journey-reading-time">Reading time</label>
         <input id="journey-reading-time" type="range" min="70" max="200" step="10" value="170" aria-describedby="journey-reading-time-note" />

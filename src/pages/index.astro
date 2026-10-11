@@ -9,10 +9,10 @@ import livPhotograph from '../assets/moe/liv-bratterud.jpg?url';
 import threadsMeetPreview from '../assets/journey-previews/threads-meet.png?url';
 import oneThreadPreview from '../assets/journey-previews/one-thread.png?url';
 const base=import.meta.env.BASE_URL;
-const mappedLegends=legends.filter(legend=>legend.originalCoordinates);
+const mappedLegends=legends.filter(legend=>resolveLegend(legend).place?.coordinates);
 const locationTotals=new Map<string,number>();
 const mapPoints=mappedLegends.map(legend=>{
-  const {latitude,longitude}=legend.originalCoordinates!;
+  const {latitude,longitude}=resolveLegend(legend).place!.coordinates!;
   const key=`${latitude},${longitude}`,index=locationTotals.get(key)||0;
   locationTotals.set(key,index+1);
   // A small deterministic spread keeps every record visible at shared locations.
