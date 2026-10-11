@@ -2248,7 +2248,7 @@
     "en": "About geographic uncertainty"
   },
   "about.coordinateResultsLink": {
-    "no": "Se tabellen over stedsplasseringer og kildegrunnlag",
-    "en": "View place decisions and source references"
+    "no": "Se stedsdataene (JSON)",
+    "en": "View place data (JSON)"
   }
 }
