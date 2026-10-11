@@ -1,9 +1,9 @@
 import type { Map as MapLibreMap } from 'maplibre-gl';
 
-// Only place circles encode geographic uncertainty; legend circles stay native and solid.
+// Place circles and place groups encode geographic uncertainty; individual legend circles stay native and solid.
 // Circle layers have no dashed stroke property. Repaint their existing borders
 // at the same screen position, size and colour; keep native hit targets intact.
-const circleLayers = new Set(['point-place-centers', 'network-nodes']);
+const circleLayers = new Set(['point-place-centers', 'network-nodes', 'clusters']);
 export function expressionValue(value: any, feature: any, zoom: number, state: any = {}): any {
   if (!Array.isArray(value)) return value;
   const [op, ...args] = value, read = (x: any) => expressionValue(x, feature, zoom, state);

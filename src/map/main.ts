@@ -300,6 +300,7 @@ uncertaintyButton.replaceChildren(createElement(MapPin, {width:18,height:18,"str
 navigationGroup?.append(uncertaintyButton);
 const syncUncertaintyButton = () => {
  const label = tr("map.showUncertainty");
+ uncertaintyButton.hidden = mapMode === "heatmap";
  uncertaintyButton.title = label;
  uncertaintyButton.setAttribute("aria-label", label);
  uncertaintyButton.setAttribute("aria-pressed", String(uncertaintyToggle.checked));
@@ -1156,8 +1157,11 @@ const syncPointStyleLayers = () => {
 const setMapMode = (mode: string, save = true) => {
   if (!['places', 'points', 'clusters', 'heatmap', 'network'].includes(mode)) mode = 'points';
   mapMode = mode;
+  page.querySelector<HTMLElement>('.uncertainty-settings')!.hidden = mode === 'heatmap';
+  page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked || mode === 'heatmap';
+  syncUncertaintyButton();
   const uncertaintyKey = page.querySelector<HTMLElement>('[data-uncertainty-key] p')!;
-  uncertaintyKey.dataset.i18n = mode === 'heatmap' ? 'map.uncertaintyDensityKey' : 'map.uncertaintyKey';
+  uncertaintyKey.dataset.i18n = mode === 'clusters' ? 'map.uncertaintyClusterKey' : 'map.uncertaintyKey';
   uncertaintyKey.textContent = tr(uncertaintyKey.dataset.i18n);
   syncPaletteSelection();
   page
@@ -1410,6 +1414,7 @@ map.on("load", async () => {
     data: dataset.legends,
     cluster: true,
     clusterRadius: 44,
+    clusterProperties: {uncertainCount: ["+", ["get", "locationUncertain"]]},
     clusterMaxZoom: 11,
     promoteId: "id",
   });
@@ -2466,16 +2471,17 @@ radiusOutput.value = heatRadius.value;
 requestAnimationFrame(translate);
 
 const locationUncertainty = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
-const renderUncertainty = installUncertaintyStrokes(map, () => uncertaintyToggle.checked, feature => {
+const renderUncertainty = installUncertaintyStrokes(map, () => uncertaintyToggle.checked && mapMode !== "heatmap", feature => {
+ if (feature.properties.cluster) return Number(feature.properties.uncertainCount || 0) > 0;
  const id = feature.properties.placeId || String(feature.properties.id || '').replace(/^place:/, '');
  if (feature.properties.locationUncertain != null) return Boolean(feature.properties.locationUncertain);
  return ['area', 'ambiguous'].includes(locationUncertainty.get(id) || 'none');
 });
 uncertaintyToggle.addEventListener('change', () => {
- page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked;
+ page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked || mapMode === 'heatmap';
  renderUncertainty();syncUncertaintyButton();updateUrl();
 });
-page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked;
+page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked || mapMode === 'heatmap';
 panel.addEventListener('click', event => {
  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-profile-place]');
  if (!button) return;
