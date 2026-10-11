@@ -1,0 +1,217 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { mapData } from "../../map/data";
+import ui from "../../i18n/ui.json";
+import "maplibre-gl/dist/maplibre-gl.css";
+import "../../map/style.css";
+const base = import.meta.env.BASE_URL;
+const legendProperties = mapData.legends.features.map((feature) => feature.properties);
+const mapYears = [...legendProperties, ...mapData.unmappedLegends].map((properties) => Number(properties.year)).filter(Boolean);
+const mapMinYear = Math.min(...mapYears);
+const mapMaxYear = Math.max(...mapYears);
+const mapUndatedCount = [...legendProperties, ...mapData.unmappedLegends].filter((properties) => !properties.year).length;
+const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length + mapData.unmappedLegends.length)) * 100);
+---
+
+<BaseLayout title="Kart over sagn" active="map">
+  <article class="map-page" data-map-page data-base={base} data-undated-count={mapUndatedCount} data-undated-percent={mapUndatedPercent}>
+    <div class="map-workspace browser-layout browser">
+    <aside class="filter-sidebar map-filters" data-map-filters>
+      <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="sliders-horizontal"></i><span data-i18n="map.filters">Filtre</span></span><i data-lucide="chevron-down"></i></button>
+      <form id="map-filters">
+        <div class="filter-title"><h2 data-i18n="map.filters">Filtre</h2><a class="context-help context-help-icon"  href={`${base}about/#map-filters`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.filtersHelp">Om filtrene</span></a><button class="text-button clear-filters" type="button" data-map-filter-clear hidden><i data-lucide="rotate-ccw"></i><span data-i18n="map.clearFiltersLong">Nullstill filtre</span></button></div>
+        <details class="multi-select" data-map-filter="theme" data-multi-filter="theme"><summary><span data-i18n="map.filterThemes">ML-kategorier</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchThemes">Søk i ML-kategorier…</span><input type="search" data-map-filter-search placeholder="Søk i ML-kategorier…" data-i18n-placeholder="map.searchThemes"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="narrator" data-multi-filter="narrator"><summary><span data-i18n="map.filterNarrators">Informanter</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchNarrators">Søk etter informant…</span><input type="search" data-map-filter-search placeholder="Søk etter informant…" data-i18n-placeholder="map.searchNarrators"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="collector" data-multi-filter="collector"><summary><span data-i18n="map.filterCollectors">Samlere</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchCollectors">Søk etter samler…</span><input type="search" data-map-filter-search placeholder="Søk etter samler…" data-i18n-placeholder="map.searchCollectors"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="place" data-multi-filter="place"><summary><span data-i18n="map.filterPlaces">Steder</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchPlaces">Søk etter sted…</span><input type="search" data-map-filter-search placeholder="Søk etter sted…" data-i18n-placeholder="map.searchPlaces"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><label class="unknown-toggle"><input type="checkbox" data-map-include-unknown="place" checked/><span data-i18n="filters.includeUnknownPlaces">Inkluder ukjente steder</span></label><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="volume" data-multi-filter="volume"><summary><span data-i18n="map.filterVolumes">Undersjangre</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchVolumes">Søk i undersjangre…</span><input type="search" data-map-filter-search placeholder="Meklēt sējumu…" data-i18n-placeholder="map.searchVolumes"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="county" data-multi-filter="county"><summary><span data-i18n="map.filterCounty">Fylker</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only">Søk</span><input type="search" data-map-filter-search placeholder="Søk…"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details><details class="multi-select" data-map-filter="genre" data-multi-filter="genre"><summary><span data-i18n="map.filterGenre">Sjangre</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only">Søk</span><input type="search" data-map-filter-search placeholder="Søk…"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details><details class="multi-select" data-map-filter="translation" data-multi-filter="translation"><summary><span data-i18n="map.filterTranslation">Oversettelse</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only">Søk</span><input type="search" data-map-filter-search placeholder="Søk…"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details><fieldset class="timeline"><legend data-i18n="map.timeRange">Innsamlingsår</legend><div class="timeline-values"><output data-map-year-from>{mapMinYear}</output><span>–</span><output data-map-year-to>{mapMaxYear}</output></div><div class="dual-range"><span class="range-track" aria-hidden="true"></span><input type="range" min={mapMinYear} max={mapMaxYear} value={mapMinYear} data-map-year-from-input aria-label="Fra år"/><input type="range" min={mapMinYear} max={mapMaxYear} value={mapMaxYear} data-map-year-to-input aria-label="Til år"/></div><label class="undated-toggle"><input type="checkbox" data-map-undated checked/><span data-i18n="map.includeUndated">Inkluder udaterte sagn</span><small data-map-undated-note></small></label></fieldset>
+      </form>
+      <details class="download-menu" data-map-download data-disabled="true"><summary aria-disabled="true"><i data-lucide="download"></i><span data-i18n="map.download">Last ned</span><i data-lucide="chevron-down"></i></summary><div class="download-options"><a class="context-help"  href={`${base}about/#exports`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.exportsHelp">Om nedlasting</span></a><div class="download-formats"><button type="button" data-map-export="csv" disabled>CSV</button><button type="button" data-map-export="geojson" disabled>GeoJSON</button><button type="button" data-map-export="graphml" disabled>GraphML</button></div></div></details><a class="map-alternative-link" href={`${base}browse/`} data-i18n="map.accessibleAlternative">Bruk sagnutforskeren som et tekstalternativ til kartet.</a><p class="download-hint" data-map-download-hint data-i18n="map.downloadHint">Gjør et utvalg før nedlasting.</p>
+    </aside>
+    <button type="button" class="map-filter-collapse" data-map-filter-collapse aria-expanded="true" aria-controls="map-filters" aria-label="Skjul filtre" title="Skjul filtre"><i data-lucide="chevron-left"></i></button>
+    <section
+      class="map-stage"
+      aria-label="Kart over sagn"
+      data-i18n-aria-label="map.title"
+    >
+      <div class="corpus-map" data-map tabindex="0"></div>
+      <div class="map-toolbar">
+        <div class="map-toolbar-primary">
+          <div
+            class="map-mode"
+            role="group"
+            aria-label="Visningstype"
+            data-i18n-aria-label="map.visualizationType"
+          >
+            <button
+              type="button"
+              data-map-mode="points"
+              aria-pressed="true"
+              data-i18n="map.modePoints">Sagn</button
+            >
+            <button type="button" data-map-mode="places" aria-pressed="false" data-i18n="map.modePlaces">Steder</button>
+            <button
+              type="button"
+              data-map-mode="clusters"
+              aria-pressed="false"
+              data-i18n="map.modeClusters">Klynger</button
+            >
+            <button
+              type="button"
+              data-map-mode="heatmap"
+              aria-pressed="false"
+              data-i18n="map.modeHeatmap">Tetthet</button
+            >
+            <button
+              type="button"
+              data-map-mode="network"
+              aria-pressed="false"
+              data-i18n="map.modeNetwork">Nettverk</button
+            >
+          </div>
+          <details class="layer-menu" data-layer-menu>
+            <summary
+              ><i data-lucide="layers"></i><span data-i18n="map.layers"
+                >Innstillinger</span
+              ><i data-lucide="chevron-down"></i></summary
+            >
+            <div class="layer-panel"><a class="context-help" data-map-method href={`${base}about/#map-density`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.viewHelp">Om denne visningen</span></a>
+      <details class="network-toolbar" data-network-toolbar open hidden>
+        <summary class="network-settings-toggle"><i data-lucide="sliders-horizontal"></i><span data-i18n="map.networkSettings">Nettverksinnstillinger</span><i data-lucide="chevron-down"></i></summary>
+        <div class="network-settings-body">
+        <div class="network-context-row"><p data-network-context></p><a class="network-info-button" data-network-method href={`${base}about/#network`} target="_blank" rel="noopener"><i data-lucide="info"></i><span class="sr-only" data-i18n="map.networkMethodMetadata">Hvordan er nettverket bygget?</span></a></div>
+        <p data-network-visibility aria-live="polite"></p>
+        <label class="network-show-all"><input type="checkbox" data-network-strongest-only /><span data-i18n="map.networkStrongestOnly">Vis de sterkeste 10 % for hvert sted</span></label>
+        <div class="network-field"><span data-i18n="map.networkType">Nettverkstype</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkSharedCollectors">Felles samlere</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="collectors" data-i18n="map.networkSharedCollectors">Felles samlere</button><button type="button" data-network-value="plots" data-i18n="map.networkSharedTypes">Felles ML-kategorier</button></div><select data-network-type hidden><option value="plots">Felles ML-kategorier</option><option value="collectors" selected>Felles samlere</option></select></details></div>
+        <div class="network-field"><span class="network-field-heading"><span data-i18n="map.networkColorBy">Fargelegg etter</span><a class="context-help context-help-icon"  href={`${base}about/#network-colors`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.networkColorsTitle">Nettverkets farger og størrelse</span></a></span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkColorCollector">Samler</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="collector" data-i18n="map.networkColorCollector">Samler</button><button type="button" data-network-value="theme" data-i18n="map.networkColorTheme">Dominerende ML-kategori</button><button type="button" data-network-value="single" data-i18n="map.networkColorSingle">Én farge</button></div><select data-network-color hidden><option value="collector" selected>Samler</option><option value="theme">Dominerende ML-kategori</option><option value="single">Én farge</option></select></details></div>
+        <fieldset class="map-palette" data-network-palette hidden><legend data-i18n="map.dataColor">Datafarge</legend><label><input type="radio" name="network-palette" value="yellow" /><span class="map-palette-swatch map-palette-yellow"></span><span data-i18n="map.colorYellow">Gul</span></label><label><input type="radio" name="network-palette" value="blue" /><span class="map-palette-swatch map-palette-blue"></span><span data-i18n="map.colorBlue">Blå</span></label><label><input type="radio" name="network-palette" value="green" /><span class="map-palette-swatch map-palette-green"></span><span data-i18n="map.colorGreen">Grønn</span></label><label><input type="radio" name="network-palette" value="coral" /><span class="map-palette-swatch map-palette-coral"></span><span data-i18n="map.colorCoral">Korall</span></label></fieldset>
+        <div class="network-field"><span data-i18n="map.networkOtherElements">When a place is selected</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkFadeOthers">Fade other nodes and threads</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="fade" data-i18n="map.networkFadeOthers">Fade other nodes and threads</button><button type="button" data-network-value="hide" data-i18n="map.networkHideOthers">Hide other nodes and threads</button></div><select data-network-others hidden><option value="fade" selected>Fade other nodes and threads</option><option value="hide">Hide other nodes and threads</option></select></details></div>
+        <div class="network-field"><span data-i18n="map.networkSizeBy">Boblestørrelse etter</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkSizeByLegends">Antall sagn</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="legends" data-i18n="map.networkSizeByLegends">Antall sagn</button><button type="button" data-network-value="connections" data-i18n="map.networkSizeByConnections">Antall forbindelser</button></div><select data-network-size-by hidden><option value="legends" selected>Antall sagn</option><option value="connections">Antall forbindelser</option></select></details></div>
+        <label class="network-thread-control" for="network-bubble-size"><span data-i18n="map.networkBubbleSize">Boblestørrelse</span><span class="network-thread-range"><input id="network-bubble-size" data-network-size type="range" min="25" max="200" step="5" value="60" /><output for="network-bubble-size" data-network-size-output>60%</output></span></label>
+        <label class="network-thread-control" for="network-thread-intensity"><span data-i18n="map.networkThreadIntensity">Linjens intensitet</span><span class="network-thread-range"><input id="network-thread-intensity" data-network-intensity type="range" min="0" max="200" step="5" value="15" /><output for="network-thread-intensity" data-network-intensity-output>15%</output></span></label>
+        </div>
+      </details>
+              <section class="layer-group">
+                <h2 data-i18n="map.basemap">Bakgrunnskart</h2>
+                <div class="layer-select">
+                  <span data-i18n="map.basemapStyle">Kartstil</span>
+                  <details class="basemap-select" data-basemap-menu>
+                    <summary><span data-basemap-label></span><i data-lucide="chevron-down"></i></summary>
+                    <div class="basemap-options" role="radiogroup">
+                      <button type="button" role="radio" data-basemap-option="dark" data-i18n="map.basemapOpenDark"><i data-lucide="check"></i>Dark</button>
+                      <button type="button" role="radio" data-basemap-option="fiord" data-i18n="map.basemapFiord"><i data-lucide="check"></i>Fiord</button>
+                      <button type="button" role="radio" data-basemap-option="positron" data-i18n="map.basemapPositron"><i data-lucide="check"></i>Positron</button>
+                      <button type="button" role="radio" data-basemap-option="streets" data-i18n="map.basemapOSM"><i data-lucide="check"></i>OpenStreetMap</button>
+                    </div>
+                  </details>
+                  <input type="hidden" data-basemap-style />
+                </div>
+                <label class="layer-option"
+                  ><input type="checkbox" data-layer="geography" checked /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.geography">Geografisk bakgrunn</span
+                  ></label
+                >
+                <label class="layer-option"
+                  ><input type="checkbox" data-layer="labels" checked /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.labels">Stedsnavn</span></label
+                >
+              </section>
+          <a class="map-unlocated-count" data-map-unlocated-count target="_blank" rel="noopener" hidden><i data-lucide="map-pin-off"></i><span></span><i data-lucide="external-link"></i></a>
+              <a class="context-help"  href={`${base}about/#map-data`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.dataHelp">Hvorfor er antall sagn forskjellig?</span></a><section class="layer-group" data-visualization-settings>
+                <fieldset class="map-palette" data-map-palette>
+                  <legend data-i18n="map.dataColor">Datafarge</legend>
+                  <label class="map-palette-wide"><input type="radio" name="map-palette" value="spectrum" /><span class="map-palette-swatch map-palette-spectrum"></span><span data-i18n="map.colorSpectrum">Blå–gul–korall</span></label>
+                  <label><input type="radio" name="map-palette" value="green" /><span class="map-palette-swatch map-palette-green"></span><span data-i18n="map.colorGreen">Grønn</span></label>
+                  <label><input type="radio" name="map-palette" value="blue" /><span class="map-palette-swatch map-palette-blue"></span><span data-i18n="map.colorBlue">Blå</span></label>
+                  <label><input type="radio" name="map-palette" value="yellow" /><span class="map-palette-swatch map-palette-yellow"></span><span data-i18n="map.colorYellow">Gul</span></label>
+                  <label class="map-palette-wide"><input type="radio" name="map-palette" value="coral" /><span class="map-palette-swatch map-palette-coral"></span><span data-i18n="map.colorCoral">Korall</span></label>
+                </fieldset>
+                <fieldset class="point-color-by" data-places-sizing hidden><legend data-i18n="map.networkSizeBy">Boblestørrelse etter</legend><label><input type="radio" name="places-size-by" value="legends" checked /><span data-i18n="map.networkSizeByLegends">Antall sagn</span></label><label><input type="radio" name="places-size-by" value="uniform" /><span data-i18n="map.uniformSize">Lik størrelse</span></label></fieldset>
+                <fieldset class="point-color-by" data-point-color-by data-point-layer-control>
+                  <legend data-i18n="map.colorBy">Fargelegg etter</legend>
+                  <label><input type="radio" name="point-color-by" value="single" /><span data-i18n="map.colorBySingle">Én farge</span></label>
+                  <label><input type="radio" name="point-color-by" value="theme" checked /><span data-i18n="map.colorByTheme">ML-kategori</span></label>
+                  <label><input type="radio" name="point-color-by" value="narrator" /><span data-i18n="map.colorByNarrator">Informant</span></label>
+                  <label><input type="radio" name="point-color-by" value="collector" /><span data-i18n="map.colorByCollector">Samler</span></label>
+                </fieldset>
+                <fieldset class="point-style-choice" data-point-style-choice data-point-layer-control>
+                  <legend data-i18n="map.pointStyle">Punktvisning</legend>
+                  <label><input type="radio" name="point-style" value="rays" /><span data-i18n="map.pointStyleRays">Stråler</span></label>
+                  <label><input type="radio" name="point-style" value="bubbles" /><span data-i18n="map.pointStyleBubbles">Bobler</span></label>
+                </fieldset>
+      <div class="point-controls point-settings-controls" data-point-controls>
+        <label data-places-size-control hidden><span data-i18n="map.networkBubbleSize">Boblestørrelse</span><input type="range" min="15" max="200" step="5" value="100" data-places-size aria-label="Boblestørrelse" /><output data-places-size-output>100%</output></label>
+        <label><span data-i18n="map.pointIntensity">Fargeintensitet</span><input type="range" min="20" max="200" step="5" value="60" data-point-intensity /><output data-point-intensity-output>60%</output></label>
+      </div>
+                <label class="layer-option" data-unmapped-control
+                  ><input type="checkbox" data-layer="unmapped" /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.showUnmapped"
+                    >Vis sagn uten koordinater</span
+                  ></label
+                >
+              </section>
+            </div>
+          </details>
+        </div>
+        <div class="map-count-group">
+        <a class="map-count" data-map-count aria-live="polite" target="_blank" rel="noopener"><span data-map-count-text></span><i data-lucide="external-link"></i></a>
+        </div>
+      </div>
+
+      <div class="network-tooltip" data-network-tooltip hidden></div>
+      <div class="heat-controls" data-heat-controls hidden>
+        <label
+          ><span data-i18n="map.intensity">Intensitet</span><input
+            type="range"
+            min="40"
+            max="200"
+            value="100"
+            step="10"
+            data-heat-intensity
+          /><output data-heat-output>100%</output></label
+        >
+        <label
+          ><span data-i18n="map.radius">Radius</span><input
+            type="range"
+            min="8"
+            max="48"
+            value="14"
+            step="2"
+            data-heat-radius
+          /><output data-radius-output>14</output></label
+        >
+        <div class="heat-key" data-heat-key hidden>
+          <span data-i18n="map.heatLow">Lav</span><span class="heat-ramp"></span><span data-i18n="map.heatMedium">Middels</span><span data-i18n="map.heatHigh">Høy</span>
+        </div>
+      </div>
+      <div class="network-view-title" data-network-view-title hidden><div class="network-title-label"><i data-lucide="network"></i><span data-network-title-text data-i18n="map.networkTitleCollectors">Nettverk etter felles samlere</span></div><div class="network-active-filters" data-network-active-filters hidden></div></div>
+      <aside class="map-panel" data-map-panel aria-live="polite" hidden></aside>
+      <div class="map-empty-state" data-map-empty-state hidden><strong data-i18n="map.emptyTitle">Ingen sagn funnet for dette utvalget.</strong><button type="button" data-map-empty-clear data-i18n="map.clearFiltersLong">Nullstill filtre</button></div>
+      <div class="map-legend" data-map-legend>
+        <strong class="map-legend-title" data-i18n="map.legendTitle">Tegnforklaring</strong>
+        <span class="point-key"
+          ><span class="point-dot"></span><span data-i18n="map.oneLegendPoint"
+            >Ett punkt = ett sagn</span
+          ></span
+        >
+        <span class="overlap-key" data-i18n="map.overlapNote"
+          >Ytre sirkel = sted; ring = sagn; linjen knytter sagnet til stedets koordinater.</span
+        >
+      </div>
+    </section>
+    </div>
+    <script
+      type="application/json"
+      id="corpus-map-data"
+      is:inline
+      set:html={JSON.stringify(mapData).replace(/</g, "\u003c")}
+    />
+  </article>
+  <script>
+    import "../../map/main";
+  </script>
+</BaseLayout>

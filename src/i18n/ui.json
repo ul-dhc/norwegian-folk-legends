@@ -1,216 +1,2082 @@
 {
-  "nav.home": { "no": "Hjem", "en": "Home" },
-  "nav.browse": { "no": "Utforsk", "en": "Browse" },
-  "nav.map": { "no": "Kart", "en": "Map" },
-  "nav.data": { "no": "Data", "en": "Data" },
-  "nav.ml": { "no": "ML-indeks", "en": "ML Index" },
-  "nav.about": { "no": "Om prosjektet", "en": "About" },
-  "status.development": { "no": "Under utvikling", "en": "In development" },
-  "home.eyebrow": { "no": "Norsk folketradisjon", "en": "Norwegian folk tradition" },
-  "home.intro": { "no": "Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.", "en": "Discover 1,477 Norwegian folk legends. Explore places, people and legend types, or follow a journey through the landscape." },
-  "home.searchPlaceholder": { "no": "Søk i sagn, steder eller personer…", "en": "Search legends, places or people…" },
-  "common.search": { "no": "Søk", "en": "Search" },
-  "common.legends": { "no": "sagn", "en": "legends" },
-  "common.mlTypes": { "no": "ML-typer", "en": "ML types" },
-  "common.collectors": { "no": "samlere", "en": "collectors" },
-  "common.informants": { "no": "informanter", "en": "informants" },
-  "common.places": { "no": "steder", "en": "places" },
-  "common.counties": { "no": "fylker", "en": "counties" },
-  "home.today": { "no": "I dag", "en": "Today" },
-  "home.daily": { "no": "Dagens sagn", "en": "Legend of the day" },
-  "home.developmentNotice": { "no": "Denne ressursen er under utvikling.", "en": "This resource is in development." },
-  "home.openBrowser": { "no": "Åpne sagnutforskeren", "en": "Open the legend explorer" },
-  "home.readDaily": { "no": "Les sagnet", "en": "Read the legend" },
-  "home.nextModules": { "no": "Neste moduler", "en": "Upcoming modules" },
-  "home.exploreMore": { "no": "Flere måter å utforske samlingen på", "en": "More ways to explore the collection" },
-  "home.mapDescription": { "no": "Utforsk sagn etter sted og fylke.", "en": "Explore legends by place and county." },
-  "home.mlDescription": { "no": "Bla gjennom Migratory Legend-kategoriene.", "en": "Browse the Migratory Legend categories." },
-  "home.journeyDescription": { "no": "Følg forbindelser mellom fortellinger, steder og mennesker.", "en": "Follow connections between stories, places, and people." },
-  "browse.collection": { "no": "Samlingen", "en": "The collection" },
-  "browse.title": { "no": "Utforsk sagn", "en": "Browse legends" },
-  "browse.intro": { "no": "Søk i tekstene og avgrens samlingen etter sagntype, person, sted og tid.", "en": "Search the texts and narrow the collection by legend type, people, place and date." },
-  "filters.title": { "no": "Filtre", "en": "Filters" },
-  "filters.reset": { "no": "Nullstill alle", "en": "Reset all" },
-  "filters.ml": { "no": "ML-kategori", "en": "ML category" },
-  "filters.allMl": { "no": "Alle kategorier", "en": "All categories" },
-  "filters.subgenre": { "no": "Undersjanger", "en": "Subgenre" },
-  "filters.allSubgenres": { "no": "Alle undersjangre", "en": "All subgenres" },
-  "filters.county": { "no": "Fylke", "en": "County (fylke)" },
-  "filters.allCounties": { "no": "Alle fylker", "en": "All counties" },
-  "filters.place": { "no": "Sted", "en": "Place" },
-  "filters.allPlaces": { "no": "Alle steder", "en": "All places" },
-  "filters.collector": { "no": "Samler", "en": "Collector" },
-  "filters.allCollectors": { "no": "Alle samlere", "en": "All collectors" },
-  "filters.informant": { "no": "Informant", "en": "Informant" },
-  "filters.allInformants": { "no": "Alle informanter", "en": "All informants" },
-  "filters.year": { "no": "Innsamlingsår", "en": "Year collected" },
-  "filters.from": { "no": "Fra", "en": "From" },
-  "filters.to": { "no": "Til", "en": "To" },
-  "filters.undated": { "no": "Ta med udaterte sagn", "en": "Include undated legends" },
-  "filters.translation": { "no": "Oversettelse", "en": "Translation" },
-  "filters.allLegends": { "no": "Alle sagn", "en": "All legends" },
-  "filters.translated": { "no": "Oversatt", "en": "Translated" },
-  "filters.pending": { "no": "Oversettelse mangler", "en": "Translation pending" },
-  "browse.searchPlaceholder": { "no": "Søk i titler, tekster, steder eller personer…", "en": "Search titles, texts, places or people…" },
-  "browse.text": { "no": "Tekst", "en": "Text" },
-  "browse.sort": { "no": "Sorter", "en": "Sort" },
-  "browse.sortTitle": { "no": "Tittel", "en": "Title" },
-  "browse.sortYear": { "no": "År", "en": "Year" },
-  "browse.sortCounty": { "no": "Fylke", "en": "County" },
-  "browse.empty": { "no": "Ingen sagn funnet.", "en": "No legends found." },
-  "browse.emptyHelp": { "no": "Prøv et annet søk eller nullstill filtrene.", "en": "Try another search or reset the filters." },
-  "browse.read": { "no": "Les hele sagnet →", "en": "Read full legend →" },
-  "browse.previous": { "no": "← Forrige", "en": "← Previous" },
-  "browse.next": { "no": "Neste →", "en": "Next →" },
-  "browser.goToPage": { "no": "Gå til", "en": "Go to" },
-  "browser.pagePlaceholder": { "no": "side", "en": "page" },
-  "browser.paginationLabel": { "no": "Resultatsider", "en": "Results pages" },
-  "browser.currentPage": { "no": "Gjeldende side av {total}", "en": "Current page of {total}" },
-  "browser.pageRange": { "no": "Skriv inn et sidetall fra 1 til {total}", "en": "Enter a page number from 1 to {total}" },
-  "browse.page": { "no": "Side {page} av {total}", "en": "Page {page} of {total}" },
-  "browse.source": { "no": "Se kilden hos UiO ↗", "en": "View source at UiO ↗" },
-  "common.pending": { "no": "Mangler", "en": "Pending" },
-  "text.norwegian": { "no": "Norsk", "en": "Norwegian" },
-  "text.english": { "no": "Engelsk", "en": "English" },
-  "text.parallel": { "no": "Parallelt", "en": "Parallel" },
-  "text.original": { "no": "NORSK ORIGINAL", "en": "NORWEGIAN ORIGINAL" },
-  "text.translation": { "no": "ENGELSK OVERSETTELSE", "en": "ENGLISH TRANSLATION" },
-  "detail.back": { "no": "← Tilbake til oversikten", "en": "← Back to browser" },
-  "detail.link": { "no": "Lenke", "en": "Link" },
-  "common.copy": { "no": "Kopier", "en": "Copy" },
-  "detail.cite": { "no": "Siter", "en": "Cite" },
-  "detail.citation": { "no": "Sitering", "en": "Citation" },
-  "detail.shortCitation": { "no": "Kort referanse", "en": "Short citation" },
-  "detail.extendedCitation": { "no": "Utvidet referanse", "en": "Extended citation" },
-  "detail.information": { "no": "Informasjon", "en": "Information" },
-  "detail.infoHelp": { "no": "om sagnet og kilden", "en": "about the legend and its source" },
-  "detail.more": { "no": "Flere metadata", "en": "Additional metadata" },
-  "meta.place": { "no": "Sted", "en": "Place" },
-  "meta.county": { "no": "Fylke", "en": "County" },
-  "meta.informant": { "no": "Informant", "en": "Informant" },
-  "meta.collector": { "no": "Samler", "en": "Collector" },
-  "meta.year": { "no": "År", "en": "Year" },
-  "meta.genre": { "no": "Sjanger", "en": "Genre" },
-  "meta.subgenre": { "no": "Undersjanger", "en": "Subgenre" },
-  "meta.archive": { "no": "Arkivsignatur", "en": "Archive signature" },
-  "meta.textSignature": { "no": "Tekstsignatur", "en": "Text signature" },
-  "meta.source": { "no": "Digital kilde", "en": "Digital source" },
-  "meta.uioId": { "no": "UiO-ID", "en": "UiO ID" },
-  "meta.sourceTextId": { "no": "Samlingens tekst-ID", "en": "Collection text ID" },
-  "detail.previous": { "no": "← Forrige sagn", "en": "← Previous legend" },
-  "detail.next": { "no": "Neste sagn →", "en": "Next legend →" },
-  "common.copied": { "no": "Kopiert", "en": "Copied" },
-  "nav.journey": { "no": "Reiser", "en": "Journeys" },
-  "journey.playAgain": { "no": "↻ Start på nytt", "en": "↻ Play again" },
-  "journey.share": { "no": "⤴ Del", "en": "⤴ Share" },
-  "journey.musicBy": { "no": "Musikk av", "en": "Music by" },
-  "journey.musicFrom": { "no": "fra", "en": "from" },
-  "common.back": { "no": "Tilbake", "en": "Back" },
-  "browser.lede": { "no": "Søk, utforsk og fest sagn du vil vende tilbake til.", "en": "Search, explore, and pin legends you want to return to." },
-  "browser.filters": { "no": "Filtre", "en": "Filters" },
-  "browser.clearFilters": { "no": "Nullstill filtre", "en": "Reset filters" },
-  "browser.themes": { "no": "ML-kategorier", "en": "ML categories" },
-  "browser.narrators": { "no": "Informanter", "en": "Informants" },
-  "browser.collectors": { "no": "Samlere", "en": "Collectors" },
-  "browser.places": { "no": "Steder", "en": "Places" },
-  "browser.volumes": { "no": "Undersjangre", "en": "Subgenres" },
-  "browser.counties": { "no": "Fylker", "en": "Counties" },
-  "browser.genres": { "no": "Sjangre", "en": "Genres" },
-  "browser.translation": { "no": "Oversettelse", "en": "Translation" },
-  "browser.translated": { "no": "Oversatt", "en": "Translated" },
-  "browser.norwegianOnly": { "no": "Kun norsk", "en": "Norwegian only" },
-  "browser.allF": { "no": "Alle", "en": "All" },
-  "browser.allM": { "no": "Alle", "en": "All" },
-  "browser.selectAll": { "no": "Velg alle", "en": "Select all" },
-  "browser.clearAll": { "no": "Fjern alle", "en": "Clear all" },
-  "browser.searchTheme": { "no": "Søk i ML-kategorier", "en": "Search ML categories" },
-  "browser.searchNarrator": { "no": "Søk etter informant", "en": "Search informants" },
-  "browser.searchCollector": { "no": "Søk etter samler", "en": "Search collectors" },
-  "browser.searchPlace": { "no": "Søk etter sted", "en": "Search places" },
-  "browser.searchVolume": { "no": "Søk etter undersjanger", "en": "Search subgenres" },
-  "browser.unknownNarrators": { "no": "Ukjente informanter", "en": "Unknown informants" },
-  "browser.unknownCollectors": { "no": "Ukjente samlere", "en": "Unknown collectors" },
-  "browser.includeUnknownPlaces": { "no": "Inkluder ukjente steder", "en": "Include unknown places" },
-  "browser.period": { "no": "Innsamlingsår", "en": "Year collected" },
-  "browser.includeUndated": { "no": "Inkluder udaterte sagn", "en": "Include undated legends" },
-  "browser.collapseFilters": { "no": "Skjul filtre", "en": "Hide filters" },
-  "browser.expandFilters": { "no": "Vis filtre", "en": "Show filters" },
-  "browser.search": { "no": "Søk", "en": "Search" },
-  "browser.searchHelp": { "no": "Bruk anførselstegn for å søke etter en eksakt frase.", "en": "Use quotation marks to search for an exact phrase." },
-  "browser.textLanguage": { "no": "Tekstspråk", "en": "Text language" },
-  "browser.clearPins": { "no": "Fjern festede", "en": "Clear pins" },
-  "browser.list": { "no": "Liste", "en": "List" },
-  "browser.grid": { "no": "Rutenett", "en": "Grid" },
-  "browser.titleColumn": { "no": "Tittel", "en": "Title" },
-  "browser.excerptColumn": { "no": "Utdrag", "en": "Excerpt" },
-  "browser.noResults": { "no": "Ingen sagn funnet.", "en": "No legends found." },
-  "browser.noResultsHelp": { "no": "Endre søket eller filtrene.", "en": "Change the search or filters." },
-  "browser.perPage": { "no": "Vis per side", "en": "Show per page" },
-  "browser.readAll": { "no": "Les hele sagnet", "en": "Read full legend" },
-  "browser.pin": { "no": "Fest sagn", "en": "Pin legend" },
-  "browser.unpin": { "no": "Fjern feste fra sagn", "en": "Unpin legend" },
-  "browser.expand": { "no": "Vis forhåndsvisning", "en": "Show preview" },
-  "browser.collapse": { "no": "Skjul forhåndsvisning", "en": "Hide preview" },
-  "browser.download": { "no": "Last ned", "en": "Download" },
-  "browser.downloadHint": { "no": "Avgrens resultatene for å laste ned et utvalg.", "en": "Narrow the results to download a selection." },
-  "browser.citation": { "no": "Kildehenvisning", "en": "Citation" },
-  "browser.resultsOf": { "no": "av", "en": "of" },
-  "browser.withoutUndated": { "no": "uten udaterte", "en": "without undated" },
-  "browser.sortAscending": { "no": "Stigende", "en": "Ascending" },
-  "browser.sortDescending": { "no": "Synkende", "en": "Descending" },
-  "browser.all": { "no": "Alle", "en": "All" },
-  "browser.selected": { "no": "{count} valgt", "en": "{count} selected" },
-  "browser.resultsNoun": { "no": "resultater", "en": "results" },
-  "browser.openNewWindow": { "no": "Åpne i nytt vindu", "en": "Open in new window" },
-  "filters.undatedCount": { "no": "{percent}% · {count} udaterte sagn", "en": "{percent}% · {count} undated legends" },
-  "map.searchThemes": { "no": "Søk i ML-kategorier", "en": "Search ML categories" },
-  "map.searchNarrators": { "no": "Søk etter informant", "en": "Search informants" },
-  "map.searchCollectors": { "no": "Søk etter samler", "en": "Search collectors" },
-  "map.searchVolumes": { "no": "Søk etter undersjanger", "en": "Search subgenres" },
-  "map.selectAll": { "no": "Velg alle", "en": "Select all" },
-  "map.clearAll": { "no": "Fjern alle", "en": "Clear all" },
-  "map.unknownNarrators": { "no": "Ukjente informanter", "en": "Unknown informants" },
-  "map.unknownCollectors": { "no": "Ukjente samlere", "en": "Unknown collectors" },
-  "map.collapseFilters": { "no": "Skjul filtre", "en": "Hide filters" },
-  "map.expandFilters": { "no": "Vis filtre", "en": "Show filters" },
-  "meta.narrator": { "no": "Informant", "en": "Informant" },
-  "meta.chapter": { "no": "ML-kategori", "en": "ML category" },
-  "meta.volume": { "no": "Undersjanger", "en": "Subgenre" },
-  "meta.theme": { "no": "ML-kategori", "en": "ML category" },
-  "meta.original": { "no": "Originale metadata", "en": "Original metadata" },
-  "meta.sources": { "no": "Kilder", "en": "Sources" },
-  "detail.moreMetadata": { "no": "Flere metadata", "en": "Additional metadata" },
-  "detail.copy": { "no": "Kopier sagn", "en": "Copy legend" },
-  "detail.copyLink": { "no": "Kopier lenke", "en": "Copy link" },
-  "detail.copied": { "no": "Kopiert", "en": "Copied" },
-  "home.mapTitle": {"no": "Sagn i landskapet", "en": "Legends in the landscape"},
-  "home.mapAlt": {"no": "Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.", "en": "A map of Norway with one point of light for each geolocated legend."},
-  "home.mapCaption": {"no": "Ett lyspunkt, ett stedfestet sagn.", "en": "One light, one geolocated legend."},
-  "home.topicsEyebrow": {"no": "Temaer i samlingen", "en": "Themes in the collection"},
-  "home.topicsTitle": {"no": "Temaer i samlingen", "en": "Themes in the collection"},
-  "home.exploreTopic": {"no": "Utforsk temaet", "en": "Explore the theme"},
-  "home.journeysEyebrow": {"no": "Gjennom landskapet", "en": "Through the landscape"},
-  "home.journeysTitle": {"no": "Tre reiser inn i sagnene", "en": "Three journeys into the legends"},
-  "home.beginJourney": {"no": "Utforsk reisen", "en": "Explore the journey"},
-  "home.weaveTitle": {"no": "Der trådene møtes", "en": "Where threads meet"},
-  "home.threadTitle": {"no": "Én tråd", "en": "One thread"},
-  "home.moeTitle": {"no": "Moltke Moe", "en": "Moltke Moe"},
-  "home.weaveDescription": {"no": "En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.", "en": "An open-ended journey through places, voices and legends. Follow the connections as they gather in the landscape."},
-  "home.threadDescription": {"no": "Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.", "en": "A call from the water, an encounter with the hulder, a restless spirit. Follow a theme from place to place."},
-  "home.moeDescription": {"no": "Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.", "en": "Meet the voices of Bø through legends, photographs and handwritten pages from the archive."},
-  "about.intro": {"no": "«Norske sagn» er en digital plattform for å utforske norske sagn og eksperimentere med digital historiefortelling, interaktive reiser og nye måter å knytte sammen fortellinger, mennesker og steder på.", "en": "“Norske sagn” is a digital platform for exploring Norwegian folk legends and experimenting with digital storytelling, interactive journeys and new ways of connecting stories, people and places."},
-  "about.sourceTitle": {"no": "Den opprinnelige samlingen", "en": "The original collection"},
-  "about.source": {"no": "Plattformen bygger på den digitale samlingen «Eventyr og sagn», opprettet av Kyrre Kverndokk og tilgjengeliggjort av Norsk Folkeminnesamling ved Universitetet i Oslo (UiO).", "en": "The platform builds on the “Eventyr og sagn” digital collection, created by Kyrre Kverndokk and made available by the Norwegian Folklore Archives at the University of Oslo (UiO)."},
-  "about.sourceLink": {"no": "Besøk Eventyr og sagn ved UiO", "en": "Visit Eventyr og sagn at UiO"},
-  "about.samlaTitle": {"no": "Arkivmateriale fra SAMLA", "en": "Archival materials from SAMLA"},
-  "about.samla": {"no": "SAMLA er det norske digitale arkivet for tradisjons- og kulturhistoriske arkiver. SAMLA inneholder et bredt spekter av kulturelle uttrykk og praksiser fra majoritetsbefolkningen, minoritetsbefolkninger og urfolkskulturer i Norge. Samlet gir samlingene et bredt bilde av utviklingen av hverdagsliv, verdensbilder og verdier.", "en": "SAMLA is the Norwegian digital archive for the tradition and cultural history archives. SAMLA contains a wide variety of cultural expressions and practices from the majority population, minority populations, and indigenous cultures in Norway. Together, the collections provide a broad picture of the development of everyday life, worldviews and values."},
-  "about.samlaLink": {"no": "Utforsk SAMLA", "en": "Explore SAMLA"},
-  "about.developerTitle": {"no": "Utvikling av plattformen", "en": "Platform development"},
-  "about.developerBefore": {"no": "Plattformen er utviklet av", "en": "The platform is developed by the"},
-  "about.developerLink": {"no": "Digital Humanities Center ved Universitetet i Latvia", "en": "University of Latvia Digital Humanities Center"},
-  "about.samlaUse": {"no": "Plattformen bruker også digitalisert arkivmateriale fra SAMLA, med lenker til kildene i arkivet.", "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."},
-  "about.development": {"no": "Utviklingen startet i 2026, og plattformen er fortsatt under utvikling.", "en": "Development began in 2026, and the platform is still under development."},
-  "about.contactTitle": {"no": "Kontakt", "en": "Contact"},
-  "about.samlaFuture": {"no": "I fremtiden kan arkivmateriale fra SAMLA bidra til å utvide og berike plattformens sagnsamling.", "en": "In the future, archival materials from SAMLA could expand and enrich the platform’s collection of legends."},
-  "about.openSource": {"no": "Plattformen har åpen kildekode og er tilgjengelig på", "en": "The platform is open source and available on"}
+  "nav.home": {
+    "no": "Hjem",
+    "en": "Home"
+  },
+  "nav.browse": {
+    "no": "Utforsk",
+    "en": "Browse"
+  },
+  "nav.map": {
+    "no": "Kart",
+    "en": "Map"
+  },
+  "nav.data": {
+    "no": "Data",
+    "en": "Data"
+  },
+  "nav.ml": {
+    "no": "ML-indeks",
+    "en": "ML Index"
+  },
+  "nav.about": {
+    "no": "Om prosjektet",
+    "en": "About"
+  },
+  "status.development": {
+    "no": "Under utvikling",
+    "en": "In development"
+  },
+  "home.eyebrow": {
+    "no": "Norsk folketradisjon",
+    "en": "Norwegian folk tradition"
+  },
+  "home.intro": {
+    "no": "Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.",
+    "en": "Discover 1,477 Norwegian folk legends. Explore places, people and legend types, or follow a journey through the landscape."
+  },
+  "home.searchPlaceholder": {
+    "no": "Søk i sagn, steder eller personer…",
+    "en": "Search legends, places or people…"
+  },
+  "common.search": {
+    "no": "Søk",
+    "en": "Search"
+  },
+  "common.legends": {
+    "no": "sagn",
+    "en": "legends"
+  },
+  "common.mlTypes": {
+    "no": "ML-typer",
+    "en": "ML types"
+  },
+  "common.collectors": {
+    "no": "samlere",
+    "en": "collectors"
+  },
+  "common.informants": {
+    "no": "informanter",
+    "en": "informants"
+  },
+  "common.places": {
+    "no": "steder",
+    "en": "places"
+  },
+  "common.counties": {
+    "no": "fylker",
+    "en": "counties"
+  },
+  "home.today": {
+    "no": "I dag",
+    "en": "Today"
+  },
+  "home.daily": {
+    "no": "Dagens sagn",
+    "en": "Legend of the day"
+  },
+  "home.developmentNotice": {
+    "no": "Denne ressursen er under utvikling.",
+    "en": "This resource is in development."
+  },
+  "home.openBrowser": {
+    "no": "Åpne sagnutforskeren",
+    "en": "Open the legend explorer"
+  },
+  "home.readDaily": {
+    "no": "Les sagnet",
+    "en": "Read the legend"
+  },
+  "home.nextModules": {
+    "no": "Neste moduler",
+    "en": "Upcoming modules"
+  },
+  "home.exploreMore": {
+    "no": "Flere måter å utforske samlingen på",
+    "en": "More ways to explore the collection"
+  },
+  "home.mapDescription": {
+    "no": "Utforsk sagn etter sted og fylke.",
+    "en": "Explore legends by place and county."
+  },
+  "home.mlDescription": {
+    "no": "Bla gjennom Migratory Legend-kategoriene.",
+    "en": "Browse the Migratory Legend categories."
+  },
+  "home.journeyDescription": {
+    "no": "Følg forbindelser mellom fortellinger, steder og mennesker.",
+    "en": "Follow connections between stories, places, and people."
+  },
+  "browse.collection": {
+    "no": "Samlingen",
+    "en": "The collection"
+  },
+  "browse.title": {
+    "no": "Utforsk sagn",
+    "en": "Browse legends"
+  },
+  "browse.intro": {
+    "no": "Søk i tekstene og avgrens samlingen etter sagntype, person, sted og tid.",
+    "en": "Search the texts and narrow the collection by legend type, people, place and date."
+  },
+  "filters.title": {
+    "no": "Filtre",
+    "en": "Filters"
+  },
+  "filters.reset": {
+    "no": "Nullstill alle",
+    "en": "Reset all"
+  },
+  "filters.ml": {
+    "no": "ML-kategori",
+    "en": "ML category"
+  },
+  "filters.allMl": {
+    "no": "Alle kategorier",
+    "en": "All categories"
+  },
+  "filters.subgenre": {
+    "no": "Undersjanger",
+    "en": "Subgenre"
+  },
+  "filters.allSubgenres": {
+    "no": "Alle undersjangre",
+    "en": "All subgenres"
+  },
+  "filters.county": {
+    "no": "Fylke",
+    "en": "County (fylke)"
+  },
+  "filters.allCounties": {
+    "no": "Alle fylker",
+    "en": "All counties"
+  },
+  "filters.place": {
+    "no": "Sted",
+    "en": "Place"
+  },
+  "filters.allPlaces": {
+    "no": "Alle steder",
+    "en": "All places"
+  },
+  "filters.collector": {
+    "no": "Samler",
+    "en": "Collector"
+  },
+  "filters.allCollectors": {
+    "no": "Alle samlere",
+    "en": "All collectors"
+  },
+  "filters.informant": {
+    "no": "Informant",
+    "en": "Informant"
+  },
+  "filters.allInformants": {
+    "no": "Alle informanter",
+    "en": "All informants"
+  },
+  "filters.year": {
+    "no": "Innsamlingsår",
+    "en": "Year collected"
+  },
+  "filters.from": {
+    "no": "Fra",
+    "en": "From"
+  },
+  "filters.to": {
+    "no": "Til",
+    "en": "To"
+  },
+  "filters.undated": {
+    "no": "Ta med udaterte sagn",
+    "en": "Include undated legends"
+  },
+  "filters.translation": {
+    "no": "Oversettelse",
+    "en": "Translation"
+  },
+  "filters.allLegends": {
+    "no": "Alle sagn",
+    "en": "All legends"
+  },
+  "filters.translated": {
+    "no": "Oversatt",
+    "en": "Translated"
+  },
+  "filters.pending": {
+    "no": "Oversettelse mangler",
+    "en": "Translation pending"
+  },
+  "browse.searchPlaceholder": {
+    "no": "Søk i titler, tekster, steder eller personer…",
+    "en": "Search titles, texts, places or people…"
+  },
+  "browse.text": {
+    "no": "Tekst",
+    "en": "Text"
+  },
+  "browse.sort": {
+    "no": "Sorter",
+    "en": "Sort"
+  },
+  "browse.sortTitle": {
+    "no": "Tittel",
+    "en": "Title"
+  },
+  "browse.sortYear": {
+    "no": "År",
+    "en": "Year"
+  },
+  "browse.sortCounty": {
+    "no": "Fylke",
+    "en": "County"
+  },
+  "browse.empty": {
+    "no": "Ingen sagn funnet.",
+    "en": "No legends found."
+  },
+  "browse.emptyHelp": {
+    "no": "Prøv et annet søk eller nullstill filtrene.",
+    "en": "Try another search or reset the filters."
+  },
+  "browse.read": {
+    "no": "Les hele sagnet →",
+    "en": "Read full legend →"
+  },
+  "browse.previous": {
+    "no": "← Forrige",
+    "en": "← Previous"
+  },
+  "browse.next": {
+    "no": "Neste →",
+    "en": "Next →"
+  },
+  "browser.goToPage": {
+    "no": "Gå til",
+    "en": "Go to"
+  },
+  "browser.pagePlaceholder": {
+    "no": "side",
+    "en": "page"
+  },
+  "browser.paginationLabel": {
+    "no": "Resultatsider",
+    "en": "Results pages"
+  },
+  "browser.currentPage": {
+    "no": "Gjeldende side av {total}",
+    "en": "Current page of {total}"
+  },
+  "browser.pageRange": {
+    "no": "Skriv inn et sidetall fra 1 til {total}",
+    "en": "Enter a page number from 1 to {total}"
+  },
+  "browse.page": {
+    "no": "Side {page} av {total}",
+    "en": "Page {page} of {total}"
+  },
+  "browse.source": {
+    "no": "Se kilden hos UiO ↗",
+    "en": "View source at UiO ↗"
+  },
+  "common.pending": {
+    "no": "Mangler",
+    "en": "Pending"
+  },
+  "text.norwegian": {
+    "no": "Norsk",
+    "en": "Norwegian"
+  },
+  "text.english": {
+    "no": "Engelsk",
+    "en": "English"
+  },
+  "text.parallel": {
+    "no": "Parallelt",
+    "en": "Parallel"
+  },
+  "text.original": {
+    "no": "NORSK ORIGINAL",
+    "en": "NORWEGIAN ORIGINAL"
+  },
+  "text.translation": {
+    "no": "ENGELSK OVERSETTELSE",
+    "en": "ENGLISH TRANSLATION"
+  },
+  "detail.back": {
+    "no": "← Tilbake til oversikten",
+    "en": "← Back to browser"
+  },
+  "detail.link": {
+    "no": "Lenke",
+    "en": "Link"
+  },
+  "common.copy": {
+    "no": "Kopier",
+    "en": "Copy"
+  },
+  "detail.cite": {
+    "no": "Siter",
+    "en": "Cite"
+  },
+  "detail.citation": {
+    "no": "Sitering",
+    "en": "Citation"
+  },
+  "detail.shortCitation": {
+    "no": "Kort referanse",
+    "en": "Short citation"
+  },
+  "detail.extendedCitation": {
+    "no": "Utvidet referanse",
+    "en": "Extended citation"
+  },
+  "detail.information": {
+    "no": "Informasjon",
+    "en": "Information"
+  },
+  "detail.infoHelp": {
+    "no": "om sagnet og kilden",
+    "en": "about the legend and its source"
+  },
+  "detail.more": {
+    "no": "Flere metadata",
+    "en": "Additional metadata"
+  },
+  "meta.place": {
+    "no": "Sted",
+    "en": "Place"
+  },
+  "meta.county": {
+    "no": "Fylke",
+    "en": "County"
+  },
+  "meta.informant": {
+    "no": "Informant",
+    "en": "Informant"
+  },
+  "meta.collector": {
+    "no": "Samler",
+    "en": "Collector"
+  },
+  "meta.year": {
+    "no": "År",
+    "en": "Year"
+  },
+  "meta.genre": {
+    "no": "Sjanger",
+    "en": "Genre"
+  },
+  "meta.subgenre": {
+    "no": "Undersjanger",
+    "en": "Subgenre"
+  },
+  "meta.archive": {
+    "no": "Arkivsignatur",
+    "en": "Archive signature"
+  },
+  "meta.textSignature": {
+    "no": "Tekstsignatur",
+    "en": "Text signature"
+  },
+  "meta.source": {
+    "no": "Digital kilde",
+    "en": "Digital source"
+  },
+  "meta.uioId": {
+    "no": "UiO-ID",
+    "en": "UiO ID"
+  },
+  "meta.sourceTextId": {
+    "no": "Samlingens tekst-ID",
+    "en": "Collection text ID"
+  },
+  "detail.previous": {
+    "no": "← Forrige sagn",
+    "en": "← Previous legend"
+  },
+  "detail.next": {
+    "no": "Neste sagn →",
+    "en": "Next legend →"
+  },
+  "common.copied": {
+    "no": "Kopiert",
+    "en": "Copied"
+  },
+  "nav.journey": {
+    "no": "Reiser",
+    "en": "Journeys"
+  },
+  "journey.playAgain": {
+    "no": "↻ Start på nytt",
+    "en": "↻ Play again"
+  },
+  "journey.share": {
+    "no": "⤴ Del",
+    "en": "⤴ Share"
+  },
+  "journey.musicBy": {
+    "no": "Musikk av",
+    "en": "Music by"
+  },
+  "journey.musicFrom": {
+    "no": "fra",
+    "en": "from"
+  },
+  "common.back": {
+    "no": "Tilbake",
+    "en": "Back"
+  },
+  "browser.lede": {
+    "no": "Søk, utforsk og fest sagn du vil vende tilbake til.",
+    "en": "Search, explore, and pin legends you want to return to."
+  },
+  "browser.filters": {
+    "no": "Filtre",
+    "en": "Filters"
+  },
+  "browser.clearFilters": {
+    "no": "Nullstill filtre",
+    "en": "Reset filters"
+  },
+  "browser.themes": {
+    "no": "ML-kategorier",
+    "en": "ML categories"
+  },
+  "browser.narrators": {
+    "no": "Informanter",
+    "en": "Informants"
+  },
+  "browser.collectors": {
+    "no": "Samlere",
+    "en": "Collectors"
+  },
+  "browser.places": {
+    "no": "Steder",
+    "en": "Places"
+  },
+  "browser.volumes": {
+    "no": "Undersjangre",
+    "en": "Subgenres"
+  },
+  "browser.counties": {
+    "no": "Fylker",
+    "en": "Counties"
+  },
+  "browser.genres": {
+    "no": "Sjangre",
+    "en": "Genres"
+  },
+  "browser.translation": {
+    "no": "Oversettelse",
+    "en": "Translation"
+  },
+  "browser.translated": {
+    "no": "Oversatt",
+    "en": "Translated"
+  },
+  "browser.norwegianOnly": {
+    "no": "Kun norsk",
+    "en": "Norwegian only"
+  },
+  "browser.allF": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "browser.allM": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "browser.selectAll": {
+    "no": "Velg alle",
+    "en": "Select all"
+  },
+  "browser.clearAll": {
+    "no": "Fjern alle",
+    "en": "Clear all"
+  },
+  "browser.searchTheme": {
+    "no": "Søk i ML-kategorier",
+    "en": "Search ML categories"
+  },
+  "browser.searchNarrator": {
+    "no": "Søk etter informant",
+    "en": "Search informants"
+  },
+  "browser.searchCollector": {
+    "no": "Søk etter samler",
+    "en": "Search collectors"
+  },
+  "browser.searchPlace": {
+    "no": "Søk etter sted",
+    "en": "Search places"
+  },
+  "browser.searchVolume": {
+    "no": "Søk etter undersjanger",
+    "en": "Search subgenres"
+  },
+  "browser.unknownNarrators": {
+    "no": "Ukjente informanter",
+    "en": "Unknown informants"
+  },
+  "browser.unknownCollectors": {
+    "no": "Ukjente samlere",
+    "en": "Unknown collectors"
+  },
+  "browser.includeUnknownPlaces": {
+    "no": "Inkluder ukjente steder",
+    "en": "Include unknown places"
+  },
+  "browser.period": {
+    "no": "Innsamlingsår",
+    "en": "Year collected"
+  },
+  "browser.includeUndated": {
+    "no": "Inkluder udaterte sagn",
+    "en": "Include undated legends"
+  },
+  "browser.collapseFilters": {
+    "no": "Skjul filtre",
+    "en": "Hide filters"
+  },
+  "browser.expandFilters": {
+    "no": "Vis filtre",
+    "en": "Show filters"
+  },
+  "browser.search": {
+    "no": "Søk",
+    "en": "Search"
+  },
+  "browser.searchHelp": {
+    "no": "Bruk anførselstegn for å søke etter en eksakt frase.",
+    "en": "Use quotation marks to search for an exact phrase."
+  },
+  "browser.textLanguage": {
+    "no": "Tekstspråk",
+    "en": "Text language"
+  },
+  "browser.clearPins": {
+    "no": "Fjern festede",
+    "en": "Clear pins"
+  },
+  "browser.list": {
+    "no": "Liste",
+    "en": "List"
+  },
+  "browser.grid": {
+    "no": "Rutenett",
+    "en": "Grid"
+  },
+  "browser.titleColumn": {
+    "no": "Tittel",
+    "en": "Title"
+  },
+  "browser.excerptColumn": {
+    "no": "Utdrag",
+    "en": "Excerpt"
+  },
+  "browser.noResults": {
+    "no": "Ingen sagn funnet.",
+    "en": "No legends found."
+  },
+  "browser.noResultsHelp": {
+    "no": "Endre søket eller filtrene.",
+    "en": "Change the search or filters."
+  },
+  "browser.perPage": {
+    "no": "Vis per side",
+    "en": "Show per page"
+  },
+  "browser.readAll": {
+    "no": "Les hele sagnet",
+    "en": "Read full legend"
+  },
+  "browser.pin": {
+    "no": "Fest sagn",
+    "en": "Pin legend"
+  },
+  "browser.unpin": {
+    "no": "Fjern feste fra sagn",
+    "en": "Unpin legend"
+  },
+  "browser.expand": {
+    "no": "Vis forhåndsvisning",
+    "en": "Show preview"
+  },
+  "browser.collapse": {
+    "no": "Skjul forhåndsvisning",
+    "en": "Hide preview"
+  },
+  "browser.download": {
+    "no": "Last ned",
+    "en": "Download"
+  },
+  "browser.downloadHint": {
+    "no": "Avgrens resultatene for å laste ned et utvalg.",
+    "en": "Narrow the results to download a selection."
+  },
+  "browser.citation": {
+    "no": "Kildehenvisning",
+    "en": "Citation"
+  },
+  "browser.resultsOf": {
+    "no": "av",
+    "en": "of"
+  },
+  "browser.withoutUndated": {
+    "no": "uten udaterte",
+    "en": "without undated"
+  },
+  "browser.sortAscending": {
+    "no": "Stigende",
+    "en": "Ascending"
+  },
+  "browser.sortDescending": {
+    "no": "Synkende",
+    "en": "Descending"
+  },
+  "browser.copySelectionLink": {
+    "no": "Kopier lenke",
+    "en": "Copy link"
+  },
+  "browser.selectionLinkCopied": {
+    "no": "Lenke kopiert",
+    "en": "Link copied"
+  },
+  "browser.selectionScope": {
+    "no": "Valgte sagn: {count}",
+    "en": "Selected legends: {count}"
+  },
+  "browser.allInSelection": {
+    "no": "Alle ({count})",
+    "en": "All ({count})"
+  },
+  "browser.all": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "browser.selected": {
+    "no": "{count} valgt",
+    "en": "{count} selected"
+  },
+  "browser.resultsNoun": {
+    "no": "resultater",
+    "en": "results"
+  },
+  "browser.openNewWindow": {
+    "no": "Åpne i nytt vindu",
+    "en": "Open in new window"
+  },
+  "filters.undatedCount": {
+    "no": "{percent}% · {count} udaterte sagn",
+    "en": "{percent}% · {count} undated legends"
+  },
+  "map.searchThemes": {
+    "no": "Søk i ML-kategorier",
+    "en": "Search ML categories"
+  },
+  "map.searchNarrators": {
+    "no": "Søk etter informant",
+    "en": "Search informants"
+  },
+  "map.searchCollectors": {
+    "no": "Søk etter samler",
+    "en": "Search collectors"
+  },
+  "map.searchVolumes": {
+    "no": "Søk etter undersjanger",
+    "en": "Search subgenres"
+  },
+  "map.selectAll": {
+    "no": "Velg alle",
+    "en": "Select all"
+  },
+  "map.clearAll": {
+    "no": "Fjern alle",
+    "en": "Clear all"
+  },
+  "map.unknownNarrators": {
+    "no": "Ukjente informanter",
+    "en": "Unknown informants"
+  },
+  "map.unknownCollectors": {
+    "no": "Ukjente samlere",
+    "en": "Unknown collectors"
+  },
+  "map.collapseFilters": {
+    "no": "Skjul filtre",
+    "en": "Hide filters"
+  },
+  "map.expandFilters": {
+    "no": "Vis filtre",
+    "en": "Show filters"
+  },
+  "meta.narrator": {
+    "no": "Informant",
+    "en": "Informant"
+  },
+  "meta.chapter": {
+    "no": "ML-kategori",
+    "en": "ML category"
+  },
+  "meta.volume": {
+    "no": "Undersjanger",
+    "en": "Subgenre"
+  },
+  "meta.theme": {
+    "no": "ML-kategori",
+    "en": "ML category"
+  },
+  "meta.original": {
+    "no": "Originale metadata",
+    "en": "Original metadata"
+  },
+  "meta.sources": {
+    "no": "Kilder",
+    "en": "Sources"
+  },
+  "detail.moreMetadata": {
+    "no": "Flere metadata",
+    "en": "Additional metadata"
+  },
+  "detail.copy": {
+    "no": "Kopier sagn",
+    "en": "Copy legend"
+  },
+  "detail.copyLink": {
+    "no": "Kopier lenke",
+    "en": "Copy link"
+  },
+  "detail.copied": {
+    "no": "Kopiert",
+    "en": "Copied"
+  },
+  "home.mapTitle": {
+    "no": "Sagn i landskapet",
+    "en": "Legends in the landscape"
+  },
+  "home.mapAlt": {
+    "no": "Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.",
+    "en": "A map of Norway with one point of light for each geolocated legend."
+  },
+  "home.mapCaption": {
+    "no": "Ett lyspunkt, ett stedfestet sagn.",
+    "en": "One light, one geolocated legend."
+  },
+  "home.topicsEyebrow": {
+    "no": "Temaer i samlingen",
+    "en": "Themes in the collection"
+  },
+  "home.topicsTitle": {
+    "no": "Temaer i samlingen",
+    "en": "Themes in the collection"
+  },
+  "home.exploreTopic": {
+    "no": "Utforsk temaet",
+    "en": "Explore the theme"
+  },
+  "home.journeysEyebrow": {
+    "no": "Gjennom landskapet",
+    "en": "Through the landscape"
+  },
+  "home.journeysTitle": {
+    "no": "Tre reiser inn i sagnene",
+    "en": "Three journeys into the legends"
+  },
+  "home.beginJourney": {
+    "no": "Utforsk reisen",
+    "en": "Explore the journey"
+  },
+  "home.weaveTitle": {
+    "no": "Der trådene møtes",
+    "en": "Where threads meet"
+  },
+  "home.threadTitle": {
+    "no": "Én tråd",
+    "en": "One thread"
+  },
+  "home.moeTitle": {
+    "no": "Moltke Moe",
+    "en": "Moltke Moe"
+  },
+  "home.weaveDescription": {
+    "no": "En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.",
+    "en": "An open-ended journey through places, voices and legends. Follow the connections as they gather in the landscape."
+  },
+  "home.threadDescription": {
+    "no": "Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.",
+    "en": "A call from the water, an encounter with the hulder, a restless spirit. Follow a theme from place to place."
+  },
+  "home.moeDescription": {
+    "no": "Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.",
+    "en": "Meet the voices of Bø through legends, photographs and handwritten pages from the archive."
+  },
+  "about.methodsTitle": {
+    "no": "Slik leser du kartet og utforskeren",
+    "en": "Understanding the map and browser"
+  },
+  "about.contents": {
+    "no": "På denne siden",
+    "en": "On this page"
+  },
+  "about.viewHelp": {
+    "no": "Om denne visningen",
+    "en": "About this view"
+  },
+  "about.filtersHelp": {
+    "no": "Om filtrene",
+    "en": "About the filters"
+  },
+  "about.dataHelp": {
+    "no": "Hvorfor er antall sagn forskjellig?",
+    "en": "Why do legend counts differ?"
+  },
+  "about.browseHelp": {
+    "no": "Slik fungerer utforskeren",
+    "en": "How Browse works"
+  },
+  "about.mapDataTitle": {
+    "no": "Kartdata og manglende koordinater",
+    "en": "Map data and missing coordinates"
+  },
+  "about.totalRecords": {
+    "no": "Sagn i datasettet",
+    "en": "Legends in the dataset"
+  },
+  "about.mappedRecords": {
+    "no": "Sagn med koordinater",
+    "en": "Legends with coordinates"
+  },
+  "about.unmappedRecords": {
+    "no": "Sagn uten koordinater",
+    "en": "Legends without coordinates"
+  },
+  "about.mapDataText": {
+    "no": "Kartet bruker stedskoordinater fra datasettet. Flere sagn kan dele koordinatene til samme sted; de er ikke nøyaktige posisjoner for hendelser eller innsamling. Antallet i det synlige kartområdet teller bare sagn med koordinater innenfor området og de aktive filtrene.",
+    "en": "The map uses place coordinates recorded in the dataset. Several legends can share one place’s coordinates; these are not precise locations of events or collection. The visible-area count includes only legends with coordinates inside the current map area and active filters."
+  },
+  "about.mapMissingText": {
+    "no": "Sagn uten koordinater beholdes i datasettet og kan åpnes gjennom lenken i Innstillinger. De kan ikke plasseres geografisk eller inngå i nettverket. Valget «Vis sagn uten koordinater» viser en symbolsk samling i havet, ikke en registrert posisjon.",
+    "en": "Legends without coordinates remain in the dataset and can be opened through the link in Settings. They cannot be geographically located or included in the network. “Show legends without coordinates” displays a symbolic group in the sea, not a recorded location."
+  },
+  "about.legendMapTitle": {
+    "no": "Sagn: bobler og stråler",
+    "en": "Legends: bubbles and rays"
+  },
+  "about.legendMapText": {
+    "no": "Den store sirkelen markerer et registrert sted og viser antall sagn der. Hver liten boble eller stråle representerer ett sagn. De små tegnene fordeles rundt stedet for å gjøre overlappende sagn lesbare; bare stedets sentrum er en registrert koordinat. Boblenes midter er transparente.",
+    "en": "The large circle marks a recorded place and shows its legend count. Each small bubble or ray represents one legend. Small marks are spread around the place to make overlapping records readable; only the place’s centre is a recorded coordinate. Bubble centres are transparent."
+  },
+  "about.legendColorText": {
+    "no": "Fargelegging etter ML-kategori, informant eller samler bruker opplysningene i det enkelte sagnet. ML betyr Migratory Legends. Én farge bruker den valgte prosjektfargen. Fargeintensitet endrer hvor tydelige tegnene er, ikke antall sagn.",
+    "en": "Colouring by ML category, informant or collector uses the individual legend’s metadata. ML means Migratory Legends. Single colour uses the selected project colour. Colour intensity changes the visibility of the marks, not the legend count."
+  },
+  "about.clusterMapTitle": {
+    "no": "Klynger: grupper etter zoomnivå",
+    "en": "Clusters: groups at different zoom levels"
+  },
+  "about.clusterMapText": {
+    "no": "Klynger samler kartpunkter som ligger nær hverandre på skjermen. Tallet angir antall sagn i gruppen. Gruppene endres når du zoomer; de er ikke historiske regioner eller nye steder i datasettet. Ved nær zoom vises stedene og de enkelte sagnene som bobler.",
+    "en": "Clusters group map points that are close together on screen. The number is the legend count in the group. Groups change as you zoom; they are not historical regions or new places in the dataset. At close zoom, places and individual legends appear as bubbles."
+  },
+  "about.densityMapTitle": {
+    "no": "Tetthet: konsentrasjon av sagn",
+    "en": "Density: concentrations of legends"
+  },
+  "about.densityMapText": {
+    "no": "Tetthetskartet viser hvor mange valgte sagn som er samlet nær hverandre. Blå–gul–korall går fra lavere til høyere tetthet; enfargede paletter bruker den samme valgte fargen. Dette viser fordelingen i samlingen, ikke hvor vanlig en fortelling var i befolkningen.",
+    "en": "The density map shows concentrations of selected legends. Blue–yellow–coral runs from lower to higher density; single-colour palettes use shades of the chosen colour. This shows the collection’s distribution, not how common a story was in the population."
+  },
+  "about.densityControlsText": {
+    "no": "Intensitet endrer hvor synlig tettheten er. Radius endrer hvor langt hvert punkt sprer seg på skjermen; større radius slår sammen større områder. Begge er visningsinnstillinger og endrer ikke kildeopplysningene.",
+    "en": "Intensity changes the visibility of the density. Radius changes how far each point spreads on screen; a larger radius blends broader areas. Both are display settings and do not change source records."
+  },
+  "about.networkTitle": {
+    "no": "Nettverk: forbindelser mellom steder",
+    "en": "Network: connections between places"
+  },
+  "about.networkColorsTitle": {
+    "no": "Nettverkets farger og størrelse",
+    "en": "Network colours and sizes"
+  },
+  "about.networkColorsText": {
+    "en": "Size bubbles by lets you choose the number of eligible selected legends or the number of attached connections. Connections counts distinct other places linked in the complete filtered network, including lines omitted from the strongest-10% overview. It counts places, not shared collectors or ML types. Filters change these counts; switching between all connections and the strongest 10%, or hovering or selecting a place, does not. Connection sizing uses a square-root scale relative to the most connected place in the complete dataset for this network type; isolated places remain visible as small circles. Bubble size adjusts the overall scale. Thicker lines mean more shared ML types or collectors, depending on network type. Thread intensity changes line visibility independently of the circles. Centres remain transparent. Selecting a place highlights its connections and fades the surrounding network by default. In Network settings, you can choose to hide the other nodes and threads instead. Clearing the selection restores the overview.",
+    "no": "Boblestørrelse etter lar deg velge antall kvalifiserte, valgte sagn eller antall tilknyttede forbindelser. Antall forbindelser teller ulike andre steder som er koblet i hele det filtrerte nettverket, også linjer som utelates fra oversikten med de sterkeste 10 %. Det teller steder, ikke felles samlere eller ML-kategorier. Filtre endrer antallene; å bytte mellom alle forbindelser og de sterkeste 10 %, eller å holde pekeren over eller velge et sted, gjør det ikke. Størrelse etter forbindelser bruker en kvadratrotskala i forhold til stedet med flest forbindelser i hele datasettet for denne nettverkstypen; isolerte steder forblir synlige som små sirkler. Boblestørrelse justerer den samlede skalaen. Tykkere linjer betyr flere felles ML-kategorier eller samlere, avhengig av nettverkstype. Linjens intensitet endrer linjenes synlighet uavhengig av sirklene. Midten er gjennomsiktig. Når du velger et sted, fremheves forbindelsene, mens resten av nettverket tones ned som standard. I Nettverksinnstillinger kan du i stedet velge å skjule andre noder og linjer. Når valget fjernes, vises oversikten igjen."
+  },
+  "about.networkCategoriesText": {
+    "no": "ML-farger viser stedets vanligste kategori. I Felles ML-kategorier bruker linjen den mest representerte felles kategorien i de tilknyttede sagnene; i Felles samlere bruker den den vanligste ML-kategorien blant de tilknyttede sagnene. Samlerfarger viser samleren som er navngitt oftest i stedets sagn; linjefargen bruker de tilknyttede registreringene. Dette plasserer ikke samlere på kartet eller viser hvor de bodde. Én farge bruker prosjektets gule, blå, grønne eller korallfarge.",
+    "en": "ML colours show a place’s most frequent type. In Shared ML types, a line uses the most represented shared type in its supporting legends; in Shared collectors, it uses the most frequent ML type among its supporting legends. Collector colours show the most frequently named collector in a place’s legends; line colour uses the supporting records. This does not place collectors on the map or indicate where they lived. Single colour uses the project’s yellow, blue, green or coral."
+  },
+  "about.filtersTitle": {
+    "no": "Filtre og innsamlingsår",
+    "en": "Filters and collection years"
+  },
+  "about.filtersText": {
+    "no": "Filtrene bruker metadata fra sagnene: ML-kategori, informant, samler, sted, fylke, sjanger, undersjanger og tilgjengelig oversettelse. Valgene kombineres: et sagn må passe til alle aktive filtre. Årsintervallet gjelder registrert innsamlingsår, ikke året hendelsen skal ha skjedd. Udaterte sagn kan inkluderes separat.",
+    "en": "Filters use legend metadata: ML type, informant, collector, place, county, genre, subgenre and translation availability. Filters combine: a legend must match every active filter. The year range uses the recorded collection year, not the year the described event supposedly happened. Undated legends can be included separately."
+  },
+  "about.browseSelectionTitle": {
+    "no": "Valgte tekster, sortering og festing",
+    "en": "Selected texts, sorting and pinning"
+  },
+  "about.browseSelectionText": {
+    "no": "«Åpne i sagnutforskeren» fra et sted eller en forbindelse åpner de nøyaktige sagn-ID-ene som støtter utvalget. «Valgte sagn» viser denne avgrensningen. Filtrenes alternativer og antall gjelder dette utvalget; felles metadata, som ett sted, velges automatisk. «Alle (N)» betyr alle tilgjengelige alternativer i utvalget. Sagn med manglende metadata beholdes.",
+    "en": "Opening a place or connection in Browse carries the exact legend IDs supporting that selection. “Selected legends” makes this scope visible. Filter options and counts apply to that selection; common metadata, such as a single place, is selected automatically. “All (N)” means all available options within the selection. Records with missing metadata remain included."
+  },
+  "about.browseActionsText": {
+    "no": "«Kopier lenke» deler de valgte tekstene, også når du har snevret dem inn med flere filtre. «Fjern filtre» går tilbake til hele samlingen. Den gule kolonneoverskriften viser aktiv sortering; pilen viser retningen. Festede sagn lagres i denne nettleseren, flyttes foran de andre resultatene og kan åpnes som et eget utvalg.",
+    "en": "Copy link shares the selected texts, including any further filtering. Clear filters returns to the full collection. The yellow column heading shows the active sort; its arrow shows the direction. Pinned legends are stored in this browser, move ahead of other results, and can be opened as a separate selection."
+  },
+  "about.exportsTitle": {
+    "no": "Nedlastinger og kildeopplysninger",
+    "en": "Downloads and source records"
+  },
+  "about.exportsText": {
+    "no": "Nedlastinger fra sagnutforskeren bruker det aktive utvalget og de valgte filtrene. Kartets nettverkseksport inneholder hele det filtrerte nettverket, også når oversikten bare viser de sterkeste forbindelsene. Eksporten beholder sagn-ID-ene og registrerte koordinater. Farger, boblestørrelse og linjeintensitet er visningsvalg, ikke nye kildeopplysninger.",
+    "en": "Browse downloads use the active selection and filters. Map network exports contain the entire filtered network even when the overview shows only the strongest connections. Exports preserve legend IDs and recorded coordinates. Colours, bubble size and thread intensity are display choices, not new source information."
+  },
+  "about.intro": {
+    "no": "«Norske sagn» er en digital plattform for å utforske norske sagn og eksperimentere med digital historiefortelling, interaktive reiser og nye måter å knytte sammen fortellinger, mennesker og steder på.",
+    "en": "“Norske sagn” is a digital platform for exploring Norwegian folk legends and experimenting with digital storytelling, interactive journeys and new ways of connecting stories, people and places."
+  },
+  "about.sourceTitle": {
+    "no": "Den opprinnelige samlingen",
+    "en": "The original collection"
+  },
+  "about.source": {
+    "no": "Plattformen bygger på den digitale samlingen «Eventyr og sagn», opprettet av Kyrre Kverndokk og tilgjengeliggjort av Norsk Folkeminnesamling ved Universitetet i Oslo (UiO).",
+    "en": "The platform builds on the “Eventyr og sagn” digital collection, created by Kyrre Kverndokk and made available by the Norwegian Folklore Archives at the University of Oslo (UiO)."
+  },
+  "about.sourceLink": {
+    "no": "Besøk Eventyr og sagn ved UiO",
+    "en": "Visit Eventyr og sagn at UiO"
+  },
+  "about.samlaTitle": {
+    "no": "Arkivmateriale fra SAMLA",
+    "en": "Archival materials from SAMLA"
+  },
+  "about.samla": {
+    "no": "SAMLA er det norske digitale arkivet for tradisjons- og kulturhistoriske arkiver. SAMLA inneholder et bredt spekter av kulturelle uttrykk og praksiser fra majoritetsbefolkningen, minoritetsbefolkninger og urfolkskulturer i Norge. Samlet gir samlingene et bredt bilde av utviklingen av hverdagsliv, verdensbilder og verdier.",
+    "en": "SAMLA is the Norwegian digital archive for the tradition and cultural history archives. SAMLA contains a wide variety of cultural expressions and practices from the majority population, minority populations, and indigenous cultures in Norway. Together, the collections provide a broad picture of the development of everyday life, worldviews and values."
+  },
+  "about.samlaLink": {
+    "no": "Utforsk SAMLA",
+    "en": "Explore SAMLA"
+  },
+  "about.developerTitle": {
+    "no": "Utvikling av plattformen",
+    "en": "Platform development"
+  },
+  "about.developerBefore": {
+    "no": "Plattformen er utviklet av",
+    "en": "The platform is developed by the"
+  },
+  "about.developerLink": {
+    "no": "Digital Humanities Center ved Universitetet i Latvia",
+    "en": "University of Latvia Digital Humanities Center"
+  },
+  "about.samlaUse": {
+    "no": "Plattformen bruker også digitalisert arkivmateriale fra SAMLA, med lenker til kildene i arkivet.",
+    "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."
+  },
+  "about.development": {
+    "no": "Utviklingen startet i 2026, og plattformen er fortsatt under utvikling.",
+    "en": "Development began in 2026, and the platform is still under development."
+  },
+  "about.contactTitle": {
+    "no": "Kontakt",
+    "en": "Contact"
+  },
+  "about.samlaFuture": {
+    "no": "I fremtiden kan arkivmateriale fra SAMLA bidra til å utvide og berike plattformens sagnsamling.",
+    "en": "In the future, archival materials from SAMLA could expand and enrich the platform’s collection of legends."
+  },
+  "about.openSource": {
+    "no": "Plattformen har åpen kildekode og er tilgjengelig på",
+    "en": "The platform is open source and available on"
+  },
+  "map.title": {
+    "no": "Kart over sagn",
+    "en": "Map of legends"
+  },
+  "map.intro": {
+    "no": "Utforsk sagnsamlingen etter sted.",
+    "en": "Explore the legend corpus by recorded place."
+  },
+  "map.layers": {
+    "no": "Innstillinger",
+    "en": "Settings"
+  },
+  "map.basemap": {
+    "no": "Bakgrunnskart",
+    "en": "Basemap"
+  },
+  "map.dataLayers": {
+    "no": "Datalag",
+    "en": "Data layers"
+  },
+  "map.dataColor": {
+    "no": "Datafarge",
+    "en": "Data color"
+  },
+  "map.colorGreen": {
+    "no": "Grønn",
+    "en": "Green"
+  },
+  "map.colorBlue": {
+    "no": "Blå",
+    "en": "Blue"
+  },
+  "map.colorYellow": {
+    "no": "Gul",
+    "en": "Yellow"
+  },
+  "map.pointStyle": {
+    "no": "Punktvisning",
+    "en": "Point display"
+  },
+  "map.pointStyleRays": {
+    "no": "Stråler",
+    "en": "Rays"
+  },
+  "map.pointStyleBubbles": {
+    "no": "Bobler",
+    "en": "Bubbles"
+  },
+  "map.rayLegend": {
+    "no": "Én stråle = ett sagn",
+    "en": "One ray = one legend"
+  },
+  "map.rayExplanation": {
+    "no": "Midtpunkt = sted; hver stråle fører til ett sagn.",
+    "en": "Center point = place; each ray leads to one legend."
+  },
+  "map.bubbleLegend": {
+    "no": "Én boble = ett sagn",
+    "en": "One bubble = one legend"
+  },
+  "map.bubbleExplanation": {
+    "no": "Midtboble = sted; liten boble og stråle = sagn.",
+    "en": "Center bubble = place; small bubble and ray = legend."
+  },
+  "map.geography": {
+    "no": "Geografisk bakgrunn",
+    "en": "Geographic background"
+  },
+  "map.boundaries": {
+    "no": "Administrative grenser",
+    "en": "Administrative boundaries"
+  },
+  "map.labels": {
+    "no": "Stedsnavn",
+    "en": "Place labels"
+  },
+  "map.points": {
+    "no": "Steder",
+    "en": "Locations"
+  },
+  "map.clusters": {
+    "no": "Klynger",
+    "en": "Clusters"
+  },
+  "map.heatmap": {
+    "no": "Tetthet",
+    "en": "Density"
+  },
+  "map.close": {
+    "no": "Lukk",
+    "en": "Close"
+  },
+  "map.selectedPlace": {
+    "no": "Valgt sted",
+    "en": "Selected place"
+  },
+  "map.legendCount": {
+    "no": "Antall sagn",
+    "en": "Number of legends"
+  },
+  "map.yearSpan": {
+    "no": "År",
+    "en": "Years"
+  },
+  "map.collectors": {
+    "no": "Samlere",
+    "en": "Collectors"
+  },
+  "map.narrators": {
+    "no": "Informanter",
+    "en": "Informants"
+  },
+  "map.openTexts": {
+    "no": "Åpne filtrerte sagn",
+    "en": "Open filtered texts"
+  },
+  "map.noYear": {
+    "no": "–",
+    "en": "–"
+  },
+  "map.noSelection": {
+    "no": "Velg et sted på kartet",
+    "en": "Select a place on the map"
+  },
+  "map.noSelectionHelp": {
+    "no": "Velg et punkt eller en klynge",
+    "en": "Select a point or cluster"
+  },
+  "map.resultsInView": {
+    "no": "Synlig kartområde: {count} / {total} sagn",
+    "en": "Visible map area: {count} / {total} legends"
+  },
+  "map.openVisibleSelection": {
+    "no": "Åpne de {count} sagnene i det synlige kartområdet i et nytt vindu",
+    "en": "Open the {count} legends in the visible map area in a new window"
+  },
+  "map.unmapped": {
+    "no": "{places} steder og {legends} sagn mangler koordinater.",
+    "en": "{places} places and {legends} legends have no mappable coordinates."
+  },
+  "map.accessibleAlternative": {
+    "no": "Bruk sagnutforskeren som et tekstalternativ til kartet.",
+    "en": "Use the text browser as a textual alternative to the map."
+  },
+  "map.openBrowser": {
+    "no": "Åpne sagnutforskeren",
+    "en": "Open text browser"
+  },
+  "map.pointLegend": {
+    "no": "Sted; sirkelstørrelsen viser antall sagn",
+    "en": "Location; circle size shows the number of legends"
+  },
+  "map.selectionLegend": {
+    "no": "Valgt sted",
+    "en": "Selected location"
+  },
+  "map.heatLow": {
+    "no": "Lav",
+    "en": "Low"
+  },
+  "map.heatMedium": {
+    "no": "Middels",
+    "en": "Medium"
+  },
+  "map.heatHigh": {
+    "no": "Høy",
+    "en": "High"
+  },
+  "map.networkLegend": {
+    "no": "Lines connect places sharing at least two collectors.",
+    "en": "Lines connect places sharing at least two collectors."
+  },
+  "map.zoomIn": {
+    "no": "Zoom inn",
+    "en": "Zoom in"
+  },
+  "map.zoomOut": {
+    "no": "Zoom ut",
+    "en": "Zoom out"
+  },
+  "map.resetNorth": {
+    "no": "Vend mot nord",
+    "en": "Reset bearing to north"
+  },
+  "map.legendPoints": {
+    "no": "Sagnpunkter",
+    "en": "Legend points"
+  },
+  "map.oneLegendPoint": {
+    "no": "Ett punkt = ett sagn",
+    "en": "One point = one legend"
+  },
+  "map.intensity": {
+    "no": "Intensitet",
+    "en": "Intensity"
+  },
+  "map.networkSettings": {
+    "no": "Nettverksinnstillinger",
+    "en": "Network settings"
+  },
+  "map.networkType": {
+    "no": "Nettverkstype",
+    "en": "Network type"
+  },
+  "map.networkNarrators": {
+    "no": "Narrators–places",
+    "en": "Informants–places"
+  },
+  "map.networkCollectors": {
+    "no": "Collectors–places",
+    "en": "Collectors–places"
+  },
+  "map.networkThemes": {
+    "no": "Themes–places",
+    "en": "ML categories–places"
+  },
+  "map.showUnmapped": {
+    "no": "Vis sagn uten koordinater",
+    "en": "Show legends without coordinates"
+  },
+  "map.unmappedTitle": {
+    "no": "Sagn uten koordinater",
+    "en": "Unmapped legends"
+  },
+  "map.unmappedExplanation": {
+    "no": "Disse sagnene mangler koordinater. Markøren i Norskehavet viser en symbolsk samling, ikke et registrert sted.",
+    "en": "These legends have no coordinates. The marker in the Norwegian Sea represents a symbolic collection, not a recorded location."
+  },
+  "map.networkLegend.narrators": {
+    "no": "Lines connect places sharing narrators.",
+    "en": "Lines connect places sharing informants."
+  },
+  "map.networkLegend.collectors": {
+    "no": "Lines connect places sharing at least two collectors.",
+    "en": "Lines connect places sharing at least two collectors."
+  },
+  "map.networkLegend.themes": {
+    "no": "Lines connect places sharing at least two themes; the strongest relationships are shown.",
+    "en": "Lines connect places sharing at least two ML categories; the strongest relationships are shown."
+  },
+  "map.visualizationType": {
+    "no": "Visningstype",
+    "en": "Visualization type"
+  },
+  "map.modePoints": {
+    "no": "Sagn",
+    "en": "Legends"
+  },
+  "map.modeClusters": {
+    "no": "Klynger",
+    "en": "Clusters"
+  },
+  "map.modeHeatmap": {
+    "no": "Tetthet",
+    "en": "Density"
+  },
+  "map.radius": {
+    "no": "Radius",
+    "en": "Radius"
+  },
+  "map.overlapNote": {
+    "no": "Ytre sirkel = sted; ring = sagn; linjen knytter sagnet til stedets koordinater.",
+    "en": "Outer circle = place; ring = legend; a line ties the legend to the place coordinate."
+  },
+  "map.profile.place": {
+    "no": "Stedsprofil",
+    "en": "Place profile"
+  },
+  "map.profile.collector": {
+    "no": "Samlerprofil",
+    "en": "Collector profile"
+  },
+  "map.profile.narrator": {
+    "no": "Informantprofil",
+    "en": "Informant profile"
+  },
+  "map.profile.category": {
+    "no": "ML-kategoriprofil",
+    "en": "ML category profile"
+  },
+  "map.profile.legend": {
+    "no": "Sagnprofil",
+    "en": "Legend profile"
+  },
+  "map.profile.connection": {
+    "no": "Forbindelsesprofil",
+    "en": "Connection profile"
+  },
+  "map.colorBy": {
+    "no": "Fargelegg etter",
+    "en": "Color by"
+  },
+  "map.colorByTheme": {
+    "no": "ML-kategori",
+    "en": "ML category"
+  },
+  "map.colorBySingle": {
+    "no": "Én farge",
+    "en": "Single colour"
+  },
+  "map.pointIntensity": {
+    "no": "Fargeintensitet",
+    "en": "Colour intensity"
+  },
+  "map.colorByNarrator": {
+    "no": "Informant",
+    "en": "Informant"
+  },
+  "map.colorByCollector": {
+    "no": "Samler",
+    "en": "Collector"
+  },
+  "map.placeThemeCount": {
+    "no": "ML-kategorier",
+    "en": "ML categories"
+  },
+  "map.placeTopThemes": {
+    "no": "Hyppigste ML-kategorier",
+    "en": "Most frequent ML categories"
+  },
+  "map.openLegendBrowser": {
+    "no": "Åpne i sagnutforskeren",
+    "en": "Open in legend browser"
+  },
+  "map.pointStatus": {
+    "no": "{mapped} kartfestede sagn · {unmapped} uten koordinater",
+    "en": "{mapped} mapped legends · {unmapped} without coordinates"
+  },
+  "map.onlyUnknownNarrators": {
+    "no": "Bare ukjente informanter",
+    "en": "Only unknown informants"
+  },
+  "map.onlyUnknownCollectors": {
+    "no": "Bare ukjente samlere",
+    "en": "Only unknown collectors"
+  },
+  "map.onlyUnknown.narrator": {
+    "no": "Bare ukjente",
+    "en": "Unknown only"
+  },
+  "map.onlyUnknown.collector": {
+    "no": "Bare ukjente",
+    "en": "Unknown only"
+  },
+  "map.unknownPerson": {
+    "no": "Ukjent",
+    "en": "Unknown"
+  },
+  "map.noNarrators": {
+    "no": "Ingen informanter valgt",
+    "en": "No informants selected"
+  },
+  "map.noCollectors": {
+    "no": "Ingen samlere valgt",
+    "en": "No collectors selected"
+  },
+  "map.dispersedPointExplanation": {
+    "no": "Sagnringene er plassert rundt koordinatene i kilden. Ringenes plassering viser ikke et nøyaktig opphavssted.",
+    "en": "Legend rings are arranged inside the place medallion around the coordinate recorded in the source; their position inside it is not a precise place of origin."
+  },
+  "map.showingPointRecords": {
+    "no": "Viser {shown} av {total} sagn.",
+    "en": "Showing {shown} of {total} legends."
+  },
+  "map.legendRecord": {
+    "no": "Sagn",
+    "en": "Legend"
+  },
+  "map.openLegend": {
+    "no": "Åpne sagnet",
+    "en": "Open legend"
+  },
+  "map.basemapStyle": {
+    "no": "Kartstil",
+    "en": "Map style"
+  },
+  "map.basemapEditorial": {
+    "no": "Dempet kart",
+    "en": "Quiet map"
+  },
+  "map.basemapCoast": {
+    "no": "Kystlinje",
+    "en": "Coastline"
+  },
+  "map.basemapOpenDark": {
+    "no": "Dark",
+    "en": "Dark"
+  },
+  "map.basemapFiord": {
+    "no": "Fiord",
+    "en": "Fiord"
+  },
+  "map.basemapPositron": {
+    "no": "Positron",
+    "en": "Positron"
+  },
+  "map.basemapOSM": {
+    "no": "OpenStreetMap",
+    "en": "OpenStreetMap"
+  },
+  "map.basemapTerrain": {
+    "no": "Mørkt terreng",
+    "en": "Dark terrain"
+  },
+  "map.basemapMinimal": {
+    "no": "Minimal",
+    "en": "Minimal"
+  },
+  "map.filters": {
+    "no": "Filtre",
+    "en": "Filters"
+  },
+  "map.clearFilters": {
+    "no": "Nullstill",
+    "en": "Clear"
+  },
+  "map.filterThemes": {
+    "no": "ML-kategorier",
+    "en": "ML categories"
+  },
+  "map.filterNarrators": {
+    "no": "Informanter",
+    "en": "Informants"
+  },
+  "map.filterCollectors": {
+    "no": "Samlere",
+    "en": "Collectors"
+  },
+  "map.filterPlaces": {
+    "no": "Steder",
+    "en": "Places"
+  },
+  "map.filterVolumes": {
+    "no": "Undersjangre",
+    "en": "Subgenres"
+  },
+  "map.filterAll.theme": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.narrator": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.collector": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.place": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.volume": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.timeRange": {
+    "no": "Innsamlingsår",
+    "en": "Time range"
+  },
+  "map.fromYear": {
+    "no": "Fra",
+    "en": "From"
+  },
+  "map.toYear": {
+    "no": "Til",
+    "en": "To"
+  },
+  "map.includeUndated": {
+    "no": "Inkluder udaterte sagn",
+    "en": "Include undated legends"
+  },
+  "map.openExplorer": {
+    "no": "Åpne i sagnutforskeren",
+    "en": "Open in legend explorer"
+  },
+  "map.modeNetwork": {
+    "no": "Nettverk",
+    "en": "Network"
+  },
+  "map.clearFiltersLong": {
+    "no": "Nullstill filtre",
+    "en": "Clear filters"
+  },
+  "map.searchPlaces": {
+    "no": "Søk etter sted…",
+    "en": "Search places…"
+  },
+  "map.download": {
+    "no": "Last ned",
+    "en": "Download"
+  },
+  "map.downloadHint": {
+    "no": "Gjør et utvalg før nedlasting.",
+    "en": "Make a selection before downloading."
+  },
+  "map.advancedFilters": {
+    "no": "Flere filtre",
+    "en": "Advanced filters"
+  },
+  "map.advancedDataNote": {
+    "no": "Additional research filters will become available when structured motif source and geographic precision data exist.",
+    "en": "Additional research filters will become available when structured motif source and geographic precision data exist."
+  },
+  "map.emptyTitle": {
+    "no": "Ingen sagn funnet for dette utvalget.",
+    "en": "No legends were found for this selection."
+  },
+  "map.exportCsv": {
+    "no": "Eksporter CSV",
+    "en": "Export CSV"
+  },
+  "map.enterFullscreen": {
+    "no": "Vis kartet i fullskjerm",
+    "en": "View map full screen"
+  },
+  "map.exitFullscreen": {
+    "no": "Avslutt fullskjerm",
+    "en": "Exit full screen"
+  },
+  "map.resetExtent": {
+    "no": "Vis hele Norge",
+    "en": "Show all of Norway"
+  },
+  "map.selectionCount": {
+    "no": "Utvalg: {count} sagn",
+    "en": "Selection: {count} legends"
+  },
+  "map.filterSummary": {
+    "no": "Valgte filtre: {from}–{to}, aktive kategorier: {filters}",
+    "en": "Selected filters: {from}–{to}, active categories: {filters}"
+  },
+  "map.activeFilters": {
+    "no": "Aktive filtre",
+    "en": "Active filters"
+  },
+  "map.withoutUnknownNarrators": {
+    "no": "Uten ukjente informanter",
+    "en": "Without unknown informants"
+  },
+  "map.withoutUnknownCollectors": {
+    "no": "Uten ukjente samlere",
+    "en": "Without unknown collectors"
+  },
+  "map.withoutUnknownPlaces": {
+    "no": "Uten ukjente steder",
+    "en": "Without unknown places"
+  },
+  "map.notAvailable": {
+    "no": "Ikke tilgjengelig",
+    "en": "Not available"
+  },
+  "map.analyticalSummary": {
+    "no": "Analytisk oversikt",
+    "en": "Analytical summary"
+  },
+  "map.dominantTheme": {
+    "no": "Dominerende ML-kategori",
+    "en": "Dominant ML category"
+  },
+  "map.activePeriod": {
+    "no": "Aktiv periode",
+    "en": "Active period"
+  },
+  "map.clusterSummary": {
+    "no": "Kartklynge",
+    "en": "Map cluster"
+  },
+  "map.selectedCluster": {
+    "no": "Valgt sagnklynge",
+    "en": "Selected legend cluster"
+  },
+  "map.visibleMapFragmentSingular": {
+    "no": "Synlig i kartområdet",
+    "en": "Visible in the map area"
+  },
+  "map.visibleMapFragmentPlural": {
+    "no": "Synlig i kartområdet",
+    "en": "Visible in the map area"
+  },
+  "map.legendCluster": {
+    "no": "Sagnklynge",
+    "en": "Legend cluster"
+  },
+  "map.visibleLegendCluster": {
+    "no": "Sagnklynge",
+    "en": "Legend cluster"
+  },
+  "map.visibleLegendClusters": {
+    "no": "Sagnklynger",
+    "en": "Legend clusters"
+  },
+  "map.mapSelected": {
+    "no": "Valgt på kartet",
+    "en": "Selected on the map"
+  },
+  "map.hotspotSummary": {
+    "no": "Tetthetsområde",
+    "en": "Density area"
+  },
+  "map.legendTitle": {
+    "no": "Tegnforklaring",
+    "en": "Legend"
+  },
+  "map.basemapStandard": {
+    "no": "Standard",
+    "en": "Teikas Standard"
+  },
+  "map.basemapStreets": {
+    "no": "Gatekart",
+    "en": "Street map"
+  },
+  "map.basemapLight": {
+    "no": "Lyst kart",
+    "en": "Light map"
+  },
+  "map.basemapDark": {
+    "no": "Mørkt kart",
+    "en": "Dark map"
+  },
+  "map.basemapSatellite": {
+    "no": "Satellite — access required",
+    "en": "Satellite – access required"
+  },
+  "map.networkSources": {
+    "no": "Kildeforbindelser",
+    "en": "Source relationships"
+  },
+  "map.networkDensity": {
+    "no": "Forbindelsestetthet",
+    "en": "Relationship density"
+  },
+  "map.networkLess": {
+    "no": "Færre",
+    "en": "Fewer"
+  },
+  "map.networkMore": {
+    "no": "Flere",
+    "en": "More"
+  },
+  "map.networkShowAll": {
+    "no": "Vis alle forbindelser",
+    "en": "Show all connections"
+  },
+  "map.networkStrongestConnections": {
+    "no": "Viser {shown} av {total} forbindelser – de sterkeste 10 % for hvert sted",
+    "en": "Showing {shown} of {total} connections – the strongest 10% for each place"
+  },
+  "map.networkVisibleConnections": {
+    "no": "Viser {shown} av {total} forbindelser",
+    "en": "Showing {shown} of {total} connections"
+  },
+  "map.networkOverviewHint": {
+    "no": "Velg et sted for å se alle forbindelsene.",
+    "en": "Select a place to see all its connections."
+  },
+  "map.networkOverviewExplanation": {
+    "no": "Alle forbindelser vises som standard. «Vis de sterkeste 10 % for hvert sted» beholder de sterkeste 10 % av forbindelsene for hvert sted, rangert etter antall felles ML-kategorier. Antallet rundes opp, slik at alle steder med registrerte forbindelser beholder minst én. Ved likt antall prioriteres antall tilknyttede sagn, deretter en stabil rekkefølge. En linje vises hvis den er valgt for minst ett av endepunktene, og telles bare én gang. Derfor kan et sted vise mer enn 10 % av sine forbindelser. Steder uten registrerte forbindelser forblir synlige; ingen forbindelser oppfinnes. Velg eller hold pekeren over et sted for å se alle forbindelsene. Fjern avkrysningen for å gjenopprette hele nettverket. Nedlastinger inneholder alltid hele det filtrerte nettverket.",
+    "en": "All connections are shown by default. “Show strongest 10% for each place” keeps the strongest 10% of connections for each place, ranked by the number of shared ML types. The number is rounded up so every place with recorded connections retains at least one. Ties use the number of supporting legends, then a stable order. A line appears if selected for either endpoint and is counted once. A place can therefore show more than 10% of its connections. Places with no recorded connections remain visible; no connections are invented. Select or hover over a place to see all its connections. Uncheck that option to restore the full network. Downloads always contain the complete filtered network."
+  },
+  "map.networkBubbleSize": {
+    "no": "Boblestørrelse",
+    "en": "Bubble size"
+  },
+  "map.networkThreadIntensity": {
+    "no": "Linjens intensitet",
+    "en": "Thread intensity"
+  },
+  "map.networkColorBy": {
+    "no": "Fargelegg etter",
+    "en": "Color by"
+  },
+  "map.networkColorCollector": {
+    "no": "Samler",
+    "en": "Collector"
+  },
+  "map.networkColorTheme": {
+    "no": "Dominerende ML-kategori",
+    "en": "Dominant ML category"
+  },
+  "map.networkColorCount": {
+    "no": "Antall sagn",
+    "en": "Legend count"
+  },
+  "map.networkColorRegion": {
+    "no": "Region",
+    "en": "Region"
+  },
+  "map.networkColorSingle": {
+    "no": "Én farge",
+    "en": "Single color"
+  },
+  "map.networkFocus": {
+    "no": "Fokus",
+    "en": "Focus mode"
+  },
+  "map.networkFocusAll": {
+    "no": "Hele nettverket",
+    "en": "Whole network"
+  },
+  "map.networkFocusRelated": {
+    "no": "Bare tilknyttede steder",
+    "en": "Connected places only"
+  },
+  "map.comparePlaces": {
+    "no": "Sammenlign steder",
+    "en": "Compare places"
+  },
+  "map.networkBuiltFrom": {
+    "no": "Nettverk basert på {count} valgte sagn",
+    "en": "Network built from {count} selected legends"
+  },
+  "map.networkStatus": {
+    "no": "{legends} sagn · {places} noder · {edges} forbindelser",
+    "en": "{legends} legends · {places} nodes · {edges} relationships"
+  },
+  "map.networkNodeSize": {
+    "no": "Større node = flere sagn",
+    "en": "Larger node = more legends"
+  },
+  "map.networkEdgeStrength": {
+    "no": "Tykkere linje = større likhet",
+    "en": "Thicker line = greater similarity"
+  },
+  "map.networkMappedLegends": {
+    "no": "Kartfestede sagn",
+    "en": "Mapped legends"
+  },
+  "map.networkUnmappedCollector": {
+    "no": "Ytterligere {count} sagn i utvalget har ikke et kartfestet sted og er ikke med i dette nettverket.",
+    "en": "Additional selected legends without a mapped place: {count}. They are excluded from this network."
+  },
+  "map.networkOpenUnmapped": {
+    "no": "Se sagn uten kartfestet sted",
+    "en": "View unlocated legends"
+  },
+  "map.networkStatLegends": {
+    "no": "Sagn",
+    "en": "Legends"
+  },
+  "map.networkLegendCount": {
+    "no": "{count} sagn",
+    "en": "{count} legends"
+  },
+  "map.networkPlotCount": {
+    "no": "{count} ML-kategorier",
+    "en": "{count} ML categories"
+  },
+  "map.networkRelatedCount": {
+    "no": "{count} forbindelser",
+    "en": "{count} connections"
+  },
+  "map.dominantThemes": {
+    "no": "Dominerende ML-kategorier",
+    "en": "Dominant ML categories"
+  },
+  "map.networkTopPlots": {
+    "no": "Hyppigste ML-kategorier",
+    "en": "Most frequent ML categories"
+  },
+  "map.openPlaceLegends": {
+    "no": "Se sagn fra dette stedet",
+    "en": "View this place’s legends"
+  },
+  "map.compareWithPlace": {
+    "no": "Sammenlign med et annet sted",
+    "en": "Compare with another place"
+  },
+  "map.plotSimilarity": {
+    "no": "Likhet mellom ML-kategorier",
+    "en": "ML category similarity"
+  },
+  "map.similarity": {
+    "no": "Likhet",
+    "en": "Similarity"
+  },
+  "map.sharedPlots": {
+    "no": "Felles ML-kategorier",
+    "en": "Shared ML categories"
+  },
+  "map.strongestMatches": {
+    "no": "Sterkeste likheter",
+    "en": "Strongest matches"
+  },
+  "map.compareBothPlaces": {
+    "no": "Sammenlign sagn fra begge steder",
+    "en": "Compare both places’ legends"
+  },
+  "map.networkComparison": {
+    "no": "Sammenligning av repertoar",
+    "en": "Repertoire comparison"
+  },
+  "map.firstPlace": {
+    "no": "Første sted",
+    "en": "First place"
+  },
+  "map.secondPlace": {
+    "no": "Andre sted",
+    "en": "Second place"
+  },
+  "map.chooseSecondPlace": {
+    "no": "Velg et annet sted å sammenligne.",
+    "en": "Choose a second place to compare."
+  },
+  "map.onlyIn": {
+    "no": "Bare i {place}",
+    "en": "Only in {place}"
+  },
+  "map.shared": {
+    "no": "Felles",
+    "en": "Shared"
+  },
+  "map.openComparisonLegends": {
+    "no": "Åpne sagnene i sammenligningen",
+    "en": "Open comparison legends"
+  },
+  "map.filterAll.county": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.genre": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.translation": {
+    "no": "Alle",
+    "en": "All"
+  },
+  "map.filterCounty": {
+    "no": "Fylker",
+    "en": "Counties"
+  },
+  "map.searchCounty": {
+    "no": "Søk…",
+    "en": "Search…"
+  },
+  "map.countyTag": {
+    "no": "Fylker: {value}",
+    "en": "Counties: {value}"
+  },
+  "map.filterGenre": {
+    "no": "Sjangre",
+    "en": "Genres"
+  },
+  "map.searchGenre": {
+    "no": "Søk…",
+    "en": "Search…"
+  },
+  "map.genreTag": {
+    "no": "Sjangre: {value}",
+    "en": "Genres: {value}"
+  },
+  "map.filterTranslation": {
+    "no": "Oversettelse",
+    "en": "Translation"
+  },
+  "map.searchTranslation": {
+    "no": "Søk…",
+    "en": "Search…"
+  },
+  "map.translationTag": {
+    "no": "Oversettelse: {value}",
+    "en": "Translation: {value}"
+  },
+  "map.undatedNote": {
+    "no": "{count} sagn ({percent} %) er udaterte",
+    "en": "{count} legends ({percent}%) are undated"
+  },
+  "map.translation.translated": {
+    "no": "Oversatt",
+    "en": "Translated"
+  },
+  "map.translation.norwegian-only": {
+    "no": "Kun norsk",
+    "en": "Norwegian only"
+  },
+  "filters.includeUnknownPlaces": {
+    "no": "Inkluder ukjente steder",
+    "en": "Include unknown places"
+  },
+  "map.unlocatedCount": {
+    "no": "{count} sagn utelatt fra kartet – mangler koordinater",
+    "en": "{count} legends excluded from the map – no coordinates"
+  },
+  "map.unlocatedCountShort": {
+    "no": "{count} uten koordinater",
+    "en": "{count} unlocated"
+  },
+  "map.coordinateCountDetails": {
+    "no": "I utvalget har {mapped} sagn koordinater og {unmapped} mangler et kartfestet sted. Se sagn uten koordinater.",
+    "en": "In the selection, {mapped} legends have coordinates and {unmapped} lack a mapped place. View legends without coordinates."
+  },
+  "map.mobileCount": {
+    "no": "{count} / {total} sagn",
+    "en": "{count} / {total} legends"
+  },
+  "map.colorSpectrum": {
+    "no": "Blå–gul–korall",
+    "en": "Blue–gold–coral"
+  },
+  "map.colorCoral": {
+    "no": "Korall",
+    "en": "Coral"
+  },
+  "map.networkEdgeRecords": {
+    "no": "Tykkere linje = flere sagn",
+    "en": "Thicker line = more legends"
+  },
+  "map.networkMethodMetadata": {
+    "no": "Hvordan er nettverket bygget?",
+    "en": "How is this network built?"
+  },
+  "map.networkConnections": {
+    "no": "Forbindelser",
+    "en": "Connections"
+  },
+  "map.networkMetadataDetails": {
+    "no": "Forbindelsene bygger på registrerte ML-kategorier og steder. De viser ikke reiser, møter eller historisk overføring. Samlere og informanter brukes bare som filtre, ikke som geografiske noder. Sagn uten koordinater eller ML-kategori inngår ikke. Klikk på en linje for å se kategoriene og sagnene.",
+    "en": "Connections use recorded ML types and places. They do not show travel, meetings or historical transmission. Collectors and informants remain filters, not geographic nodes. Records without coordinates or an ML type are excluded. Click a line to see the shared types and legends."
+  },
+  "map.networkMethod.plots": {
+    "no": "Felles ML-kategorier mellom steder",
+    "en": "Shared ML types between places"
+  },
+  "map.networkExplanation.plots": {
+    "no": "Alle noder er steder med koordinater i datasettet. En linje betyr at begge stedene har sagn med samme ML-kategori. Tykkelsen viser antall felles kategorier, ikke en beregnet likhet.",
+    "en": "Every node is a place with coordinates in the dataset. A line means both places have legends with the same ML type. Its thickness shows the number of shared types, not a calculated similarity."
+  },
+  "map.networkKind.place": {
+    "no": "Sted",
+    "en": "Place"
+  },
+  "map.networkKind.collector": {
+    "no": "Samler",
+    "en": "Collector"
+  },
+  "map.networkKind.narrator": {
+    "no": "Informant",
+    "en": "Informant"
+  },
+  "map.networkKind.category": {
+    "no": "ML-kategori",
+    "en": "ML category"
+  },
+  "map.networkEmpty": {
+    "no": "Ingen steder med registrert ML-kategori i utvalget. Prøv andre filtre.",
+    "en": "No places with a recorded ML type in the selection. Try different filters."
+  },
+  "map.networkSharedTypes": {
+    "no": "Felles ML-kategorier",
+    "en": "Shared ML types"
+  },
+  "map.networkEdgeMLTypes": {
+    "no": "Tykkere linje = flere felles ML-kategorier",
+    "en": "Thicker line = more shared ML types"
+  },
+  "map.networkSharedTypeCount": {
+    "no": "Felles ML-kategorier: {count}",
+    "en": "Shared ML types: {count}"
+  },
+  "map.networkTypeRecordCounts": {
+    "no": "Antall sagn per kategori: {from} / {to}.",
+    "en": "Legend counts for each type: {from} / {to}."
+  },
+  "about.exportsHelp": {
+    "en": "About downloads",
+    "no": "Om nedlasting"
+  },
+  "map.selectedThemeCount": {
+    "no": "{count} ML-kategorier",
+    "en": "{count} ML categories"
+  },
+  "map.selectedThemeCountOne": {
+    "no": "{count} ML-kategori",
+    "en": "{count} ML category"
+  },
+  "map.noSelectedValues": {
+    "no": "Ingen valgt",
+    "en": "None selected"
+  },
+  "map.datedOnly": {
+    "no": "Bare daterte sagn",
+    "en": "Dated legends only"
+  },
+  "map.knownPlacesOnly": {
+    "no": "Bare kjente steder",
+    "en": "Known places only"
+  },
+  "map.networkOtherElements": {
+    "no": "Når et sted er valgt",
+    "en": "When a place is selected"
+  },
+  "map.networkFadeOthers": {
+    "no": "Ton ned andre noder og linjer",
+    "en": "Fade other nodes and threads"
+  },
+  "map.networkHideOthers": {
+    "no": "Skjul andre noder og linjer",
+    "en": "Hide other nodes and threads"
+  },
+  "map.networkTitleCollectors": {
+    "no": "Nettverk etter felles samlere",
+    "en": "Network by shared collectors"
+  },
+  "map.networkTitleTypes": {
+    "no": "Nettverk etter felles ML-kategorier",
+    "en": "Network by shared ML types"
+  },
+  "map.networkSharedCollectors": {
+    "no": "Felles samlere",
+    "en": "Shared collectors"
+  },
+  "map.networkEdgeCollectors": {
+    "no": "Tykkere linje = flere felles samlere",
+    "en": "Thicker line = more shared collectors"
+  },
+  "map.networkSharedCollectorCount": {
+    "no": "{count} felles samlere",
+    "en": "{count} shared collectors"
+  },
+  "map.networkCollectorRecordCounts": {
+    "no": "For hver samler vises antall tilknyttede sagn i {from} / {to}. Et sagn kan forekomme i flere forbindelser.",
+    "en": "For each collector, counts show supporting legends in {from} / {to}. A legend can support more than one connection."
+  },
+  "map.networkPlaceCollectors": {
+    "no": "Samlere i stedets sagn",
+    "en": "Collectors named in this place’s legends"
+  },
+  "about.collectorNetworkTitle": {
+    "no": "Nettverk: felles samlere mellom steder",
+    "en": "Network: shared collectors between places"
+  },
+  "about.collectorNetworkText": {
+    "no": "Boblene er registrerte steder. En linje forbinder to steder når sagnregistreringene deres navngir samme samler, identifisert med datasettets samler-ID. Tykkere linjer betyr flere felles samlere. Klikk på en linje for å se samlerne, antall sagn på hvert sted og de tilknyttede tekstene. Dette viser felles samlerattribusjon, ikke bosted, reiser eller historisk overføring.",
+    "en": "Bubbles are recorded places. A line connects two places when their legend records name the same collector, matched by the dataset’s collector ID. Thicker lines mean more shared collectors. Click a line to see the collectors, legend counts at each place and the supporting texts. This shows shared collector attribution, not residence, travel or historical transmission."
+  },
+  "about.collectorNetworkScope": {
+    "no": "Nettverket bruker filtrerte sagn med stedskoordinater og en registrert samler-ID; ML-kategori er ikke nødvendig. Sagn uten samler-ID eller koordinater bidrar ikke til dette nettverket, men finnes fortsatt i sagnutforskeren. Registrerte steder med kvalifiserte sagn forblir synlige selv uten forbindelser. Ingen samlere plasseres på kartet. Alle forbindelser vises som standard. Det valgfrie 10 %-utvalget beholder de sterkeste 10 % for hvert sted, rangert etter antall felles samlere, med antall tilknyttede sagn og en stabil rekkefølge ved likt antall. Velg eller hold pekeren over et sted for å se alle forbindelsene; fjern avkrysningen for 10 %-utvalget for å vise alle forbindelser. Nedlastinger bruker alltid hele det filtrerte nettverket.",
+    "en": "The network uses filtered legends with place coordinates and a recorded collector ID; an ML category is not required. Records without a collector ID or coordinates do not contribute to this network but remain available in Browse. Recorded places with eligible legends stay visible even when they have no connections. No collectors are placed on the map. All connections are shown by default. The optional strongest-10% view keeps the strongest 10% for each place, ranked by shared collector count, with supporting legend count and a stable order breaking ties. Select or hover over a place to see all its connections; unchecking the strongest-10% option restores all connections. Downloads always use the complete filtered network."
+  },
+  "map.networkSharedCollectorCountOne": {
+    "no": "{count} felles samler",
+    "en": "{count} shared collector"
+  },
+  "map.networkSizeBy": {
+    "no": "Boblestørrelse etter",
+    "en": "Size bubbles by"
+  },
+  "map.networkSizeByLegends": {
+    "no": "Antall sagn",
+    "en": "Number of legends"
+  },
+  "map.networkSizeByConnections": {
+    "no": "Antall forbindelser",
+    "en": "Number of connections"
+  },
+  "map.modePlaces": {
+    "no": "Steder",
+    "en": "Places"
+  },
+  "about.placesMapTitle": {
+    "no": "Steder: én sirkel per registrert sted",
+    "en": "Places: one circle per recorded place"
+  },
+  "about.placesMapText": {
+    "no": "Stedsvisningen viser én hul sirkel ved hvert registrerte steds koordinater. Boblestørrelse etter kan bruke antall tilknyttede sagn i det aktive utvalget (standard), eller gi alle steder like store sirkler. Klikk på en sirkel for å vise stedets individuelle sagn som bobler og åpne stedsprofilen. Du kan velge et sagn, lese teksten eller åpne stedets sagn i utforskeren, som i sagnkartet. Velg et annet sted for å flytte utvidelsen, eller lukk profilen eller klikk på et tomt område for å folde den sammen. Filtrene endrer antall sagn ved hvert sted. Sirkler er stedsreferanser fra datasettet, som også kan være brede regioner eller usikre stedsnavn; de angir ikke en presis hendelsesposisjon. Boblestørrelse skalerer stedssirklene. Fargelegging etter samler, ML-kategori eller informant bruker den vanligste kjente verdien i stedets filtrerte sagn; ved likt antall brukes alfabetisk rekkefølge. Steder uten en kjent verdi får en nøytral farge. Én farge bruker den valgte prosjektfargen. De utvidede sagnboblene beholder fargene fra sine egne opplysninger.",
+    "en": "Places shows one hollow circle at each recorded place’s coordinates. Size bubbles by can use the number of attached legends in the active selection (the default), or give every place a uniform circle. Click a circle to expand that place’s individual legends as bubbles and open its place profile. You can select a legend, read its text or open the place’s legends in Browse, just as in the legend map. Selecting another place moves the expansion; closing the profile or clicking an empty area collapses it. Filters update the legend count at each place. Circles represent the dataset’s place references, which may include broad regions or uncertain names; they do not indicate precise event locations. Bubble size scales the place circles. Colouring by collector, ML category or informant uses the most frequent known value in that place’s filtered legends; ties use alphabetical order. Places without a known value use a neutral colour. Single colour uses the selected project colour. Expanded legend bubbles retain their own metadata colours."
+  },
+  "map.connectedPlaces": {
+    "no": "Tilknyttede steder",
+    "en": "Connected places"
+  },
+  "map.placeNetworkRecords": {
+    "no": "{count} av stedets sagn bidrar til denne nettverkstypen.",
+    "en": "{count} of this place’s legends contribute to this network type."
+  },
+  "map.networkStrongestOnly": {
+    "no": "Vis de sterkeste 10 % for hvert sted",
+    "en": "Show strongest 10% for each place"
+  },
+  "map.uniformSize": {
+    "no": "Lik størrelse",
+    "en": "Uniform size"
+  }
 }

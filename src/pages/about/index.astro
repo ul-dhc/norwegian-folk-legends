@@ -1,10 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ui from '../../i18n/ui.json';
+import { mapData } from '../../map/data';
 const sections = [
   { title: 'about.sourceTitle', paragraphs: ['about.source'], link: 'about.sourceLink', href: 'https://www2.hf.uio.no/eventyr_og_sagn/' },
   { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla', 'about.samlaFuture'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' }
 ];
+const methods = [
+ {id:'map-data',title:'about.mapDataTitle',paragraphs:['about.mapDataText','about.mapMissingText']},
+ {id:'map-places',title:'about.placesMapTitle',paragraphs:['about.placesMapText']},
+ {id:'map-legends',title:'about.legendMapTitle',paragraphs:['about.legendMapText','about.legendColorText']},
+ {id:'map-clusters',title:'about.clusterMapTitle',paragraphs:['about.clusterMapText']},
+ {id:'map-density',title:'about.densityMapTitle',paragraphs:['about.densityMapText','about.densityControlsText']},
+ {id:'network',title:'about.networkTitle',paragraphs:['map.networkExplanation.plots','map.networkMetadataDetails','map.networkOverviewExplanation']},
+ {id:'network-collectors',title:'about.collectorNetworkTitle',paragraphs:['about.collectorNetworkText','about.collectorNetworkScope']},
+ {id:'network-colors',title:'about.networkColorsTitle',paragraphs:['about.networkColorsText','about.networkCategoriesText']},
+ {id:'map-filters',title:'about.filtersTitle',paragraphs:['about.filtersText']},
+ {id:'browse-selection',title:'about.browseSelectionTitle',paragraphs:['about.browseSelectionText','about.browseActionsText']},
+ {id:'exports',title:'about.exportsTitle',paragraphs:['about.exportsText']},
+];
+const coverage = [{key:'about.totalRecords',count:mapData.legends.features.length+mapData.unmappedLegends.length},{key:'about.mappedRecords',count:mapData.legends.features.length},{key:'about.unmappedRecords',count:mapData.unmappedLegends.length}];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
 <BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original UiO collection, Kyrre Kverndokk, archival materials from SAMLA, and development by the University of Latvia Digital Humanities Center.">
@@ -31,10 +46,26 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
           <li><span>Kyrre Kverndokk</span><a class="about-link" href="mailto:kyrre.kverndokk@uib.no">kyrre.kverndokk@uib.no</a></li>
         </ul>
       </section>
+    <nav class="about-contents" aria-label={copy('about.contents')}><strong data-i18n="about.methodsTitle">{copy('about.methodsTitle')}</strong><ul>{methods.map(section=><li><a href={`#${section.id}`} data-i18n={section.title}>{copy(section.title)}</a></li>)}</ul></nav>
+      {methods.map(section=><section id={section.id} aria-labelledby={`${section.id}-title`}>
+        <h2 id={`${section.id}-title`} data-i18n={section.title}>{copy(section.title)}</h2>
+        {section.id==='map-data'&&<dl class="about-coverage">{coverage.map(item=><div><dt data-i18n={item.key}>{copy(item.key)}</dt><dd>{item.count.toLocaleString('no-NO')}</dd></div>)}</dl>}
+        {section.paragraphs.map(key=><p data-i18n={key}>{copy(key)}</p>)}
+      </section>)}
     </div>
   </div>
   <style>
     .about-page{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,6rem)}
+    .about-contents{max-width:820px;padding:1.5rem 0;border-bottom:1px solid var(--line);color:var(--muted)}
+    .about-contents strong{font-weight:500;color:var(--ink)}
+    .about-contents ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1.5rem;list-style:none;padding:0;margin:1rem 0 0}
+    .about-contents a{color:var(--blue);text-underline-offset:.2em;font-size:.9rem}
+    .about-main section[id]{scroll-margin-top:1.5rem}
+    .about-main section:target h2{color:var(--pin)}
+    .about-coverage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+    .about-coverage dt{font-size:.8rem;color:var(--muted);line-height:1.5}
+    .about-coverage dd{margin:.4rem 0 0;font-size:1.8rem;color:var(--blue);font-variant-numeric:tabular-nums}
+    @media(max-width:600px){.about-contents ul{grid-template-columns:1fr}.about-coverage{gap:.6rem}.about-coverage dd{font-size:1.5rem}}
     .about-heading{max-width:820px;padding-bottom:2rem;border-bottom:1px solid var(--line)}
     .about-contacts{list-style:none;padding:0;margin:1.25rem 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
     .about-contacts li{display:grid;gap:.65rem}

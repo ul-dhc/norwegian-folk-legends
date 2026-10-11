@@ -21,6 +21,57 @@ The original HTML/JavaScript prototype remains in the repository while its
 Browse, Map, Network, Timeline, Journey, and ML Index features are migrated to
 the Astro platform.
 
+## Map explorer
+
+The Astro `/map/` workspace adapts the TEIKAS map design and controls to the
+Norwegian collection. It uses the same generated records, place IDs and UiO
+record IDs as Browse and the individual legend pages.
+
+- Searchable multi-select filters cover ML categories, informants, collectors,
+  places, subgenres, counties, genres and translation availability. Collection
+  years and undated records can be filtered separately. Empty selections remain
+  distinct from selecting all, including after a reload.
+- Legends (the default), Places, Clusters, Density and Network are available.
+  Places initially shows one hollow circle per recorded place; clicking expands
+  its individual legends. Circle size can follow legend count or be uniform.
+  Settings include
+  OpenFreeMap Dark, Fiord and Positron, plus standard OpenStreetMap, independent
+  geographic and label layers, palettes, colour by category or person, rays or
+  bubbles, and intensity. OpenFreeMap styles are bundled in public/data/map;
+  vector tiles, sprites and fonts are served by OpenFreeMap. The default follows
+  the site theme: Positron in light mode and Dark in dark mode.
+- Density has its own palette setting. Blue–gold–coral is available only for
+  Density and is its default. Legends, clusters and network retain the earlier
+  category colours; Legends defaults to yellow place anchors and ML categories. Green, blue, yellow and coral are
+  available in both settings, and each setting is remembered independently.
+  Density defaults to 100% intensity and radius 14.
+- Rays and bubbles spread records around their shared place coordinate to make
+  them selectable. Their display positions are illustrative. Exports retain the
+  original place coordinates. Unlocated records are kept separately; their
+  optional Norwegian Sea marker is symbolic and is never exported as a location.
+- Network connects recorded places through shared collectors (the default) or
+  shared ML types. Each edge retains exact shared metadata, supporting record
+  counts and IDs. Thickness represents the number of shared collectors or types.
+  All connections are shown by default; the strongest 10% for each place is an
+  optional overview. Node size can follow legend count or unique neighbouring
+  places. Visual scales use the complete dataset as a stable reference.
+  Selection highlights the place and its connections, fading the surrounding
+  network by default; hiding unrelated nodes and threads is optional.
+  No collector, informant or ML-category node is assigned an invented location.
+  Lines indicate shared recorded metadata, not travel or transmission.
+  Records without coordinates remain unlocated and are linked from Settings.
+- Filters, view, map extent and settings are reflected in the URL. Place and
+  network panels pass their exact selected record IDs to Browse.
+- CSV and GeoJSON downloads include selected unlocated records (null geometry in
+  GeoJSON). GraphML represents the complete filtered network of either type.
+- Map backgrounds use OpenFreeMap or standard OpenStreetMap, with attribution
+  displayed on the map. Full screen retains filters and Settings. Mobile maps use
+  two-finger gestures so one finger can scroll the page; Browse provides a text
+  alternative. About documents the methods through contextual links.
+
+Run `npm run test:map` to build and verify record coverage, source coordinates,
+place totals, missing-coordinate handling and filter metadata.
+
 ## Legend journey
 
 The Astro `/journey/` page uses `src/journey/`. It replaces the previous journey

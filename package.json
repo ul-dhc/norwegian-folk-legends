@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "data:generate": "python3 scripts/csv_to_json.py",
     "test:journey": "pnpm build && node --test tests/journey.test.js",
+    "test:map": "npm run build && node --test tests/map.test.js",
     "test:ml-index": "npm run build && node --test tests/ml-index.test.js"
   },
   "dependencies": {

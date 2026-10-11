@@ -46,3 +46,48 @@
 :root[data-theme=dark] .browser[data-view] .result-card.is-pinned:focus-visible{
   border:1px solid var(--action-fill);box-shadow:none
 }
+
+/* Unused slider tracks show the surface beneath them. */
+input[type="range"]:not(.dual-range input){appearance:none;-webkit-appearance:none;height:24px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;--slider-color:var(--blue);cursor:pointer}
+.map-page input[type="range"]:not(.dual-range input){--slider-color:var(--interaction-green)}
+input[type="range"]:not(.dual-range input)::-webkit-slider-runnable-track{height:6px;border:1px solid var(--line);border-radius:999px;background:linear-gradient(to right,var(--slider-color) 0 var(--slider-progress,50%),transparent var(--slider-progress,50%) 100%)}
+input[type="range"]:not(.dual-range input)::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:16px;height:16px;margin-top:-6px;border:0;border-radius:50%;background:var(--slider-color)}
+input[type="range"]:not(.dual-range input)::-moz-range-track{height:4px;border:1px solid var(--line);border-radius:999px;background:transparent}
+input[type="range"]:not(.dual-range input)::-moz-range-progress{height:4px;border-radius:999px;background:var(--slider-color)}
+input[type="range"]:not(.dual-range input)::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:var(--slider-color)}
+input[type="range"]:not(.dual-range input):focus-visible{outline:2px solid var(--slider-color);outline-offset:3px;border-radius:6px}
+:root .dual-range .range-track,
+:root[data-theme=dark] .browser-layout .dual-range .range-track,
+:root .browser-layout .dual-range .range-track,
+:root .timeline.is-active .dual-range .range-track,
+:root .browser-layout .timeline.is-active .dual-range .range-track{background:linear-gradient(to right,transparent 0 var(--range-left),var(--browse-green,var(--blue)) var(--range-left) calc(100% - var(--range-right)),transparent calc(100% - var(--range-right)))}
+
+/* Transparent checkbox surfaces, using the shared Lucide check. */
+:root input[type="checkbox"]{appearance:none;-webkit-appearance:none;display:grid;place-content:center;flex-shrink:0;width:17px;height:17px;padding:0;border:1px solid var(--line);border-radius:4px;background:transparent!important;box-shadow:none;cursor:pointer;--checkbox-color:var(--browse-green,var(--blue))}
+:root .map-page input[type="checkbox"]{--checkbox-color:var(--interaction-green)}
+:root input[type="checkbox"]::before{content:"";display:block;width:13px!important;height:13px!important;border:0!important;transform:none!important;background:var(--checkbox-color);mask:url('../assets/check.svg') center/contain no-repeat;opacity:0;transition:opacity .14s ease}
+:root input[type="checkbox"]:checked::before{opacity:1}
+:root input[type="checkbox"]:checked{border-color:var(--checkbox-color);box-shadow:none}
+:root input[type="checkbox"]:focus-visible{outline:2px solid var(--checkbox-color);outline-offset:3px}
+
+.result-summary .copy-selection-link{display:inline-flex;align-items:center;gap:.4rem;min-height:32px;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font:inherit;font-size:.75rem}
+.result-summary .copy-selection-link .lucide{width:15px;height:15px}
+
+:root .browser-layout .list-head button[aria-pressed=true],
+:root .browser-layout .list-head button[aria-pressed=true]:hover{color:var(--action-ink);background:var(--action-fill);box-shadow:inset 0 0 0 1px var(--action-fill)}
+:root .browser-layout .list-head button[aria-pressed=true] .lucide{color:var(--action-ink);stroke-width:2}
+
+.browser[data-view=grid] .pin-button{position:static;grid-column:2;grid-row:1;align-self:start;justify-self:end;top:auto;right:auto}
+.browser[data-view=grid] .result-card h2{align-self:start}
+
+/* Contextual explanations open About without resetting the current selection. */
+.context-help{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);font-size:.75rem;text-decoration:none;line-height:1.5;padding:.4rem 0}
+.context-help .lucide{width:17px;height:17px;flex-shrink:0}
+.context-help:hover{color:var(--blue);text-decoration:underline;text-underline-offset:.2em}
+.context-help-icon{width:32px;height:32px;justify-content:center;padding:0;flex-shrink:0;border-radius:50%}
+.context-help-icon span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.context-help:focus-visible{outline:2px solid var(--pin);outline-offset:3px}
+.layer-panel>.context-help{display:flex;margin:.2rem 0 .7rem}
+.layer-panel>.context-help[hidden]{display:none}
+.network-field-heading{display:flex;align-items:center;justify-content:space-between}
+.network-info-button{text-decoration:none}
