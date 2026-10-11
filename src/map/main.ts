@@ -1410,7 +1410,6 @@ map.on("load", async () => {
     data: dataset.legends,
     cluster: true,
     clusterRadius: 44,
-    clusterProperties: {uncertainCount: ["+", ["get", "locationUncertain"]]},
     clusterMaxZoom: 11,
     promoteId: "id",
   });
@@ -2469,7 +2468,6 @@ requestAnimationFrame(translate);
 const locationUncertainty = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
 const renderUncertainty = installUncertaintyStrokes(map, () => uncertaintyToggle.checked, feature => {
  const id = feature.properties.placeId || String(feature.properties.id || '').replace(/^place:/, '');
- if (feature.properties.cluster) return Number(feature.properties.uncertainCount || 0) > 0;
  if (feature.properties.locationUncertain != null) return Boolean(feature.properties.locationUncertain);
  return ['area', 'ambiguous'].includes(locationUncertainty.get(id) || 'none');
 });

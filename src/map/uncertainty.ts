@@ -1,8 +1,9 @@
 import type { Map as MapLibreMap } from 'maplibre-gl';
 
+// Only place circles encode geographic uncertainty; legend circles stay native and solid.
 // Circle layers have no dashed stroke property. Repaint their existing borders
 // at the same screen position, size and colour; keep native hit targets intact.
-const circleLayers = new Set(['point-place-centers', 'point-end-bubbles', 'points', 'network-nodes', 'clusters']);
+const circleLayers = new Set(['point-place-centers', 'network-nodes']);
 export function expressionValue(value: any, feature: any, zoom: number, state: any = {}): any {
   if (!Array.isArray(value)) return value;
   const [op, ...args] = value, read = (x: any) => expressionValue(x, feature, zoom, state);
@@ -72,7 +73,7 @@ export function installUncertaintyStrokes(map: MapLibreMap, enabled: () => boole
     canvas.hidden = !enabled();
     if (!enabled()) { canvas.dataset.dashedCount = "0"; return; }
     const layers = [...circleLayers].filter(id => map.getLayer(id) && map.getLayoutProperty(id, 'visibility') !== 'none');
-    if (!layers.length) return;
+    if (!layers.length) { canvas.dataset.dashedCount = "0"; return; }
     const features = map.queryRenderedFeatures({layers}), seen = new Set<string>();
     let dashed = 0;
     for (const feature of features) {

@@ -2140,8 +2140,8 @@
     "en": "How geographic uncertainty is shown"
   },
   "about.coordinateUncertaintyText": {
-    "no": "«Vis geografisk usikkerhet» er slått av som standard. Stiplede fargede sirkler markerer områdereferanser, uttrykkelig usikre eller alternative navn og konkurrerende registertreff i registrert fylke. Historiske navnetreff, manglende fylkessamsvar og navn som ennå ikke er kontrollert, oppgis i stedsprofilen uten automatisk stipling. Heltrukne sirkler betyr ikke at koordinatene er verifisert. Klynger blir stiplet dersom de inneholder opptegnelser med en slik stedsusikkerhet. Tetthetskartet kombinerer opptegnelser til en flate; undersøk stedene i Steder. Reisene bruker samme regel for registrerte steder; regionale reserveplasseringer er omtrentlige.",
-    "en": "Show location uncertainty is off by default. Dashed coloured circles mark area references, explicitly uncertain or alternative names, and competing register matches within the recorded county. Historical name matches, missing county agreement and names not yet checked are explained in place profiles without automatically using dashed circles. Solid circles do not mean the coordinates are verified. Clusters are dashed if they include records with such location uncertainty. Density combines records into a surface; inspect locations in Places. Journeys follows the same rule for recorded places; regional fallback locations are approximate."
+    "no": "«Vis geografisk usikkerhet» er slått av som standard. Stiplede fargede stedssirkler markerer områdereferanser, uttrykkelig usikre eller alternative navn og konkurrerende registertreff i registrert fylke. Historiske navnetreff, manglende fylkessamsvar og navn som ennå ikke er kontrollert, oppgis i stedsprofilen uten automatisk stipling. Heltrukne sirkler betyr ikke at koordinatene er verifisert. Individuelle sagnsirkler og samlede klynger beholder heltrukne konturer; usikkerheten gjelder stedsreferansene, ikke tekstene. Tetthetskartet kombinerer opptegnelser til en flate; undersøk stedene i Steder. Reisene bruker samme regel for registrerte steder; regionale reserveplasseringer er omtrentlige.",
+    "en": "Show location uncertainty is off by default. Dashed coloured place circles mark area references, explicitly uncertain or alternative names, and competing register matches within the recorded county. Historical name matches, missing county agreement and names not yet checked are explained in place profiles without automatically using dashed circles. Solid circles do not mean the coordinates are verified. Individual legend circles and aggregate clusters stay solid; uncertainty belongs to place references, not the texts. Density combines records into a surface; inspect locations in Places. Journeys follows the same rule for recorded places; regional fallback locations are approximate."
   },
   "about.coordinateUncertaintyLimits": {
     "no": "Samsvar med et geografisk objekt bekrefter ikke det nøyaktige innsamlingsstedet. Kartet viser ikke historiske områdegrenser eller individuelle nøyaktighetsgrader. Farge, lysstyrke og størrelse uttrykker ikke sikkerheten i plasseringen. Områdepunkter er representasjonspunkter. Sagn uten koordinater oppgis separat i Innstillinger. Av de 383 stedene har 272 historiske administrative navnetreff, 11 underbygde SSR-treff (inkludert 10 områder), 98 andre uavklarte treff og 2 ingen koordinater. Kategoriene beskriver tilgjengelig kildegrunnlag, ikke om et sted finnes eller koordinaten er feil.",
@@ -2208,8 +2208,8 @@
     "en": "Show location uncertainty"
   },
   "map.uncertaintyKey": {
-    "no": "Stiplet: områdepunkter eller vesentlig tvetydighet i stedsnavnet. Manglende kontroll oppgis bare i stedsprofilen. Heltrukken betyr ikke verifisert.",
-    "en": "Dashed: area locations or substantial place ambiguity. Unchecked coordinates are noted only in the profile. Solid does not mean verified."
+    "no": "Stiplede stedssirkler: områdepunkter eller vesentlig tvetydighet i stedsnavnet. Manglende kontroll oppgis bare i stedsprofilen. Heltrukken betyr ikke verifisert.",
+    "en": "Dashed place circles: area locations or substantial place ambiguity. Unchecked coordinates are noted only in the profile. Solid does not mean verified."
   },
   "map.locationStatus": {
     "no": "Geografisk plassering",
