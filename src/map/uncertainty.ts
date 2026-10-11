@@ -41,7 +41,7 @@ export function expressionValue(value: any, feature: any, zoom: number, state: a
   if (op === '!') return !values[0];
   return undefined;
 }
-export function installUncertaintyStrokes(map: MapLibreMap, enabled: () => boolean, status: (feature: any) => string) {
+export function installUncertaintyStrokes(map: MapLibreMap, enabled: () => boolean, isUncertain: (feature: any) => boolean) {
   const canvas = document.createElement('canvas');
   canvas.className = 'uncertainty-strokes';
   canvas.setAttribute('aria-hidden', 'true');
@@ -84,7 +84,7 @@ export function installUncertaintyStrokes(map: MapLibreMap, enabled: () => boole
       const strokeWidth = expressionValue(widths.get(layer), feature, map.getZoom(), state);
       const radius = Number(read('circle-radius', 0)), opacity = Number(read('circle-stroke-opacity', 1)), colour = read('circle-stroke-color', 'transparent');
       if (!Number.isFinite(radius) || !Number.isFinite(strokeWidth) || strokeWidth <= 0 || opacity <= 0 || typeof colour !== 'string') continue;
-      const point = map.project(feature.geometry.coordinates as [number,number]), uncertain = status(feature) !== 'matched';
+      const point = map.project(feature.geometry.coordinates as [number,number]), uncertain = isUncertain(feature);
       context.globalAlpha = Math.min(1, opacity); context.strokeStyle = colour; context.lineWidth = strokeWidth;
       context.setLineDash(uncertain ? [Math.max(1.5, strokeWidth * 2), Math.max(1.5, strokeWidth * 2)] : []);
       context.beginPath(); context.arc(point.x, point.y, radius + strokeWidth / 2, 0, Math.PI * 2); context.stroke();

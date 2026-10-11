@@ -29,7 +29,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -62,7 +66,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -95,7 +103,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -128,7 +140,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -161,7 +177,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -186,7 +206,11 @@
       "countyContext": {
         "Nordland": 4
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -211,7 +235,11 @@
       "countyContext": {
         "Aust-Agder": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -244,7 +272,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -277,7 +309,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -310,7 +346,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -343,7 +383,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -376,7 +420,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -409,7 +457,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -442,7 +494,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -475,7 +531,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -508,7 +568,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -541,7 +605,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -574,7 +642,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -607,7 +679,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -640,7 +716,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -673,7 +753,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -698,7 +782,11 @@
       "countyContext": {
         "Hordaland": 2
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -723,7 +811,11 @@
       "countyContext": {
         "Hordaland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -748,7 +840,11 @@
       "countyContext": {
         "Hordaland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -773,7 +869,11 @@
       "countyContext": {
         "Hordaland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -806,7 +906,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -839,7 +943,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -872,7 +980,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -905,7 +1017,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -938,7 +1054,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -971,7 +1091,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -996,7 +1120,11 @@
       "countyContext": {
         "Telemark": 32
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -1021,7 +1149,11 @@
       "countyContext": {
         "Telemark": 6
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1046,7 +1178,11 @@
       "countyContext": {
         "Rogaland": 3
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -1071,7 +1207,11 @@
       "countyContext": {
         "Rogaland": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -1104,7 +1244,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1137,7 +1281,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1170,7 +1318,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1203,7 +1355,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1236,7 +1392,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1261,7 +1421,11 @@
       "countyContext": {
         "Rogaland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -1294,7 +1458,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1319,7 +1487,11 @@
       "countyContext": {
         "Møre og Romsdal": 2
       },
-      "reason": "no_unique_supported_match"
+      "reason": "no_unique_supported_match",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1344,7 +1516,11 @@
       "countyContext": {
         "Møre og Romsdal": 2
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -1377,7 +1553,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1410,7 +1590,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1444,7 +1628,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1477,7 +1665,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1502,7 +1694,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -1527,7 +1723,11 @@
       "countyContext": {
         "Hordaland": 9
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1560,7 +1760,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1605,7 +1809,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -1638,7 +1846,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1671,7 +1883,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1696,7 +1912,11 @@
       "countyContext": {
         "Oppland": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1729,7 +1949,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1762,7 +1986,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1795,7 +2023,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1828,7 +2060,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1853,7 +2089,11 @@
       "countyContext": {
         "Hedmark": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1886,7 +2126,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1919,7 +2163,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1958,7 +2206,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -1991,7 +2243,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2016,7 +2272,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -2041,7 +2301,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2074,7 +2338,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2107,7 +2375,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2132,7 +2404,11 @@
       "countyContext": {
         "Rogaland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -2157,7 +2433,11 @@
       "countyContext": {
         "Rogaland": 3
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -2182,7 +2462,11 @@
       "countyContext": {
         "Sør-Trøndelag": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2215,7 +2499,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2248,7 +2536,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2281,7 +2573,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2306,7 +2602,11 @@
       "countyContext": {
         "Sør-Trøndelag": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2339,7 +2639,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2372,7 +2676,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2405,7 +2713,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2438,7 +2750,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2463,7 +2779,11 @@
       "countyContext": {
         "Sør-Trøndelag": 6
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2496,7 +2816,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2529,7 +2853,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2562,7 +2890,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2595,7 +2927,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2628,7 +2964,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2661,7 +3001,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2694,7 +3038,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2727,7 +3075,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2760,7 +3112,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2793,7 +3149,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2826,7 +3186,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2859,7 +3223,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2892,7 +3260,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2917,7 +3289,11 @@
       "countyContext": {
         "Oppland": 8
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2950,7 +3326,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -2975,7 +3355,11 @@
       "countyContext": {
         "Oppland": 4
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3008,7 +3392,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3053,7 +3441,11 @@
       "countyContext": {
         "Buskerud": 5
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -3086,7 +3478,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3111,7 +3507,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3136,7 +3536,11 @@
       "countyContext": {
         "Hordaland": 3
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3161,7 +3565,11 @@
       "countyContext": {
         "Vest-Agder": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3194,7 +3602,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3227,7 +3639,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3260,7 +3676,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3305,7 +3725,11 @@
       "countyContext": {
         "Nordland": 8
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -3338,7 +3762,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3371,7 +3799,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3404,7 +3836,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3429,7 +3865,11 @@
       "countyContext": {
         "Sogn og Fjordane": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3462,7 +3902,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3495,7 +3939,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3520,7 +3968,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3553,7 +4005,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3586,7 +4042,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3612,7 +4072,11 @@
         "Hedmark": 5,
         "Vestfold": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3637,7 +4101,11 @@
       "countyContext": {
         "Buskerud": 9
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -3670,7 +4138,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3703,7 +4175,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3736,7 +4212,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3769,7 +4249,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3794,7 +4278,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -3827,7 +4315,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3852,7 +4344,11 @@
       "countyContext": {
         "Sogn og Fjordane": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3885,7 +4381,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3918,7 +4418,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3951,7 +4455,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -3984,7 +4492,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4017,7 +4529,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4050,7 +4566,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4069,7 +4589,11 @@
       "countyContext": {
         "Troms": 3
       },
-      "reason": "no_recorded_coordinates"
+      "reason": "no_recorded_coordinates",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_coordinates"
+      }
     }
   },
   {
@@ -4094,7 +4618,11 @@
       "countyContext": {
         "Nord-Trøndelag": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4127,7 +4655,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4160,7 +4692,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4185,7 +4721,11 @@
       "countyContext": {
         "Sogn og Fjordane": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4230,7 +4770,11 @@
       "countyContext": {
         "Rogaland": 1
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -4263,7 +4807,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4288,7 +4836,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -4327,7 +4879,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4352,7 +4908,11 @@
       "countyContext": {
         "Rogaland": 7
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -4391,7 +4951,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4424,7 +4988,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4457,7 +5025,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4490,7 +5062,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4515,7 +5091,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4548,7 +5128,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4573,7 +5157,11 @@
       "countyContext": {
         "Hordaland": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4606,7 +5194,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4645,7 +5237,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4678,7 +5274,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4717,7 +5317,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4750,7 +5354,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4775,7 +5383,11 @@
       "countyContext": {
         "Oppland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4808,7 +5420,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4841,7 +5457,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4874,7 +5494,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4907,7 +5531,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4940,7 +5568,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -4965,7 +5597,11 @@
       "countyContext": {
         "Vest-Agder": 14
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -4990,7 +5626,11 @@
       "countyContext": {
         "Vest-Agder": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -5023,7 +5663,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5056,7 +5700,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5101,7 +5749,11 @@
       "countyContext": {
         "Nordland": 8
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -5126,7 +5778,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -5159,7 +5815,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5192,7 +5852,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5217,7 +5881,11 @@
       "countyContext": {
         "Sogn og Fjordane": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5250,7 +5918,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5289,7 +5961,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5322,7 +5998,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5347,7 +6027,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5380,7 +6064,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5413,7 +6101,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5438,7 +6130,11 @@
       "countyContext": {
         "Vest-Agder": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -5471,7 +6167,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5496,7 +6196,11 @@
       "countyContext": {
         "Telemark": 3
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -5521,7 +6225,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5554,7 +6262,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5587,7 +6299,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5620,7 +6336,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5659,7 +6379,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5684,7 +6408,11 @@
       "countyContext": {
         "Nord-Trøndelag": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5717,7 +6445,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5750,7 +6482,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5775,7 +6511,11 @@
       "countyContext": {
         "Akershus": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -5808,7 +6548,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5841,7 +6585,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5866,7 +6614,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5891,7 +6643,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5916,7 +6672,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5941,7 +6701,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5974,7 +6738,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -5999,7 +6767,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6024,7 +6796,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6057,7 +6833,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6082,7 +6862,11 @@
       "countyContext": {
         "Oppland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6115,7 +6899,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6148,7 +6936,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6173,7 +6965,11 @@
       "countyContext": {
         "Finnmark": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6206,7 +7002,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6231,7 +7031,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -6264,7 +7068,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6289,7 +7097,11 @@
       "countyContext": {
         "Sogn og Fjordane": 3
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6314,7 +7126,11 @@
       "countyContext": {
         "Nordland": 2
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6339,7 +7155,11 @@
       "countyContext": {
         "Hordaland": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6372,7 +7192,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6421,7 +7245,11 @@
       "countyContext": {
         "Møre og Romsdal": 2
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -6446,7 +7274,11 @@
       "countyContext": {
         "Nordland": 2
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6491,7 +7323,11 @@
       "countyContext": {
         "Buskerud": 4
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -6524,7 +7360,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6557,7 +7397,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6590,7 +7434,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6623,7 +7471,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6656,7 +7508,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6689,7 +7545,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6722,7 +7582,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6755,7 +7619,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6788,7 +7656,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6813,7 +7685,11 @@
       "countyContext": {
         "Hedmark": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6846,7 +7722,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6879,7 +7759,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6904,7 +7788,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -6937,7 +7825,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -6982,7 +7874,11 @@
       "countyContext": {
         "Buskerud": 6
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -7015,7 +7911,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7048,7 +7948,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7081,7 +7985,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7114,7 +8022,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7159,7 +8071,11 @@
       "countyContext": {
         "Møre og Romsdal": 17
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -7184,7 +8100,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7209,7 +8129,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7234,7 +8158,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7259,7 +8187,11 @@
       "countyContext": {
         "Møre og Romsdal": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7292,7 +8224,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7325,7 +8261,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7358,7 +8298,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7391,7 +8335,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7424,7 +8372,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7457,7 +8409,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7490,7 +8446,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7523,7 +8483,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7556,7 +8520,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7581,7 +8549,11 @@
       "countyContext": {
         "Nordland": 26
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -7614,7 +8586,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7639,7 +8615,11 @@
       "countyContext": {
         "Rogaland": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -7672,7 +8652,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7697,7 +8681,11 @@
       "countyContext": {
         "Vestfold": 1
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -7730,7 +8718,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7763,7 +8755,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7796,7 +8792,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7829,7 +8829,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7862,7 +8866,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7895,7 +8903,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7920,7 +8932,11 @@
       "countyContext": {
         "Vestfold": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7945,7 +8961,11 @@
       "countyContext": {
         "Aust-Agder": 7
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -7979,7 +8999,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8012,7 +9036,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8045,7 +9073,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8078,7 +9110,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8111,7 +9147,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8144,7 +9184,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8177,7 +9221,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8210,7 +9258,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8243,7 +9295,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8268,7 +9324,11 @@
       "countyContext": {
         "Sogn og Fjordane": 14
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8301,7 +9361,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8334,7 +9398,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8359,7 +9427,11 @@
       "countyContext": {
         "Hedmark": 21
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8392,7 +9464,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8425,7 +9501,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8458,7 +9538,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8491,7 +9575,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8524,7 +9612,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8557,7 +9649,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8590,7 +9686,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8623,7 +9723,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8656,7 +9760,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8689,7 +9797,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8722,7 +9834,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8755,7 +9871,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8788,7 +9908,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8813,7 +9937,11 @@
       "countyContext": {
         "Sogn og Fjordane": 14
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8838,7 +9966,11 @@
       "countyContext": {
         "Hordaland": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8883,7 +10015,11 @@
       "countyContext": {
         "Møre og Romsdal": 11
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "area",
+        "reason": "area_represented_by_point"
+      }
     }
   },
   {
@@ -8916,7 +10052,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8949,7 +10089,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -8982,7 +10126,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9015,7 +10163,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9048,7 +10200,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9081,7 +10237,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9114,7 +10274,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9147,7 +10311,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9180,7 +10348,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9213,7 +10385,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9246,7 +10422,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9279,7 +10459,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9312,7 +10496,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9345,7 +10533,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9378,7 +10570,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9403,7 +10599,11 @@
       "countyContext": {
         "Hordaland": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9436,7 +10636,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9469,7 +10673,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9502,7 +10710,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9535,7 +10747,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9568,7 +10784,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9601,7 +10821,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9634,7 +10858,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9667,7 +10895,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9700,7 +10932,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9725,7 +10961,11 @@
       "countyContext": {
         "Oppland": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9758,7 +10998,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9791,7 +11035,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9836,7 +11084,11 @@
       "countyContext": {
         "Telemark": 1
       },
-      "reason": "unique_exact_name_and_all_recorded_counties"
+      "reason": "unique_exact_name_and_all_recorded_counties",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9869,7 +11121,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9894,7 +11150,11 @@
       "countyContext": {
         "Troms": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "source_explicitly_uncertain"
+      }
     }
   },
   {
@@ -9927,7 +11187,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9960,7 +11224,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -9993,7 +11261,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10026,7 +11298,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10045,7 +11321,11 @@
       "countyContext": {
         "Finnmark": 8
       },
-      "reason": "no_recorded_coordinates"
+      "reason": "no_recorded_coordinates",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_coordinates"
+      }
     }
   },
   {
@@ -10078,7 +11358,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10111,7 +11395,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10144,7 +11432,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10169,7 +11461,11 @@
       "countyContext": {
         "Sogn og Fjordane": 4
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10194,7 +11490,11 @@
       "countyContext": {
         "Oppland": 2
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10227,7 +11527,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10260,7 +11564,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10285,7 +11593,11 @@
       "countyContext": {
         "Oppland": 29
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10310,7 +11622,11 @@
       "countyContext": {
         "Sogn og Fjordane": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10343,7 +11659,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10376,7 +11696,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10409,7 +11733,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10434,7 +11762,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10467,7 +11799,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10500,7 +11836,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10525,7 +11865,11 @@
       "countyContext": {
         "Sogn og Fjordane": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10550,7 +11894,11 @@
       "countyContext": {
         "Sogn og Fjordane": 2
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10583,7 +11931,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10616,7 +11968,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10649,7 +12005,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10674,7 +12034,11 @@
       "countyContext": {
         "Nordland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10707,7 +12071,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10740,7 +12108,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10773,7 +12145,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10806,7 +12182,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10839,7 +12219,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10872,7 +12256,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10905,7 +12293,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10938,7 +12330,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -10983,7 +12379,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11016,7 +12416,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11042,7 +12446,11 @@
         "Telemark": 7,
         "Oppland": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11075,7 +12483,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11108,7 +12520,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11141,7 +12557,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11174,7 +12594,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11207,7 +12631,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11232,7 +12660,11 @@
       "countyContext": {
         "Hedmark": 8
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11265,7 +12697,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11298,7 +12734,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11331,7 +12771,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11364,7 +12808,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11397,7 +12845,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11430,7 +12882,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11463,7 +12919,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11496,7 +12956,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11521,7 +12985,11 @@
       "countyContext": {
         "Hedmark": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11546,7 +13014,11 @@
       "countyContext": {
         "Rogaland": 2
       },
-      "reason": "multiple_matches_in_recorded_county"
+      "reason": "multiple_matches_in_recorded_county",
+      "mapUncertainty": {
+        "kind": "ambiguous",
+        "reason": "competing_authority_matches"
+      }
     }
   },
   {
@@ -11585,7 +13057,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11618,7 +13094,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11651,7 +13131,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11684,7 +13168,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11717,7 +13205,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11742,7 +13234,11 @@
       "countyContext": {
         "Hedmark": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11775,7 +13271,11 @@
           "kind": "county",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/104/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11800,7 +13300,11 @@
       "countyContext": {
         "Oslo": 1
       },
-      "reason": "county_context_not_confirmed"
+      "reason": "county_context_not_confirmed",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11825,7 +13329,11 @@
       "countyContext": {
         "Oppland": 1
       },
-      "reason": "qualified_or_uncertain_recorded_name"
+      "reason": "qualified_or_uncertain_recorded_name",
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11858,7 +13366,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11897,7 +13409,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11930,7 +13446,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11963,7 +13483,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -11996,7 +13520,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   },
   {
@@ -12029,7 +13557,11 @@
           "kind": "municipality",
           "sourceUrl": "https://data.ssb.no/api/klass/v1/classifications/131/codes?from=1838-01-01&to=1955-01-01&language=nb"
         }
-      ]
+      ],
+      "mapUncertainty": {
+        "kind": "none",
+        "reason": "no_substantial_ambiguity_established"
+      }
     }
   }
 ]

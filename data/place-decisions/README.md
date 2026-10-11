@@ -22,3 +22,8 @@ Sources: [UiO – Eventyr og sagn](https://www2.hf.uio.no/eventyr_og_sagn/),
 [Kartverket – SSR](https://kartverket.no/en/api-and-data/stedsnavndata/brukarrettleiing-stadnamn-api),
 [SSB municipality classifications](https://www.ssb.no/klass/klassifikasjoner/131)
 and [SSB county classifications](https://www.ssb.no/klass/klassifikasjoner/104).
+
+Map uncertainty is separate from verification. Dashed circles identify area references,
+explicitly uncertain or alternative source names, and competing register matches within
+the recorded county. Other unchecked locations remain solid with a profile note.
+A solid circle does not mean the coordinate is verified.

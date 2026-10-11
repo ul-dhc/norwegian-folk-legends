@@ -28,12 +28,12 @@ export function createJourneyMap(container,onError){
  const uncertaintyRecords=new Map(),uncertaintyDots=new Map();
  let showUncertainty=false;
  function rememberUncertainty(record){
-  if(!record.placeId||!record.geographicStatus||!Number.isFinite(record.lat)||!Number.isFinite(record.lon))return;
-  uncertaintyRecords.set(point(record).join(','),record.geographicStatus);
+  if(!record.geographicStatus||!Number.isFinite(record.lat)||!Number.isFinite(record.lon))return;
+  const key=point(record).join(',');uncertaintyRecords.set(key,uncertaintyRecords.get(key)||record.locationUncertain===true);
  }
  function applyUncertainty(dot,original){
   const status=uncertaintyRecords.get([dot.getLatLng().lat,dot.getLatLng().lng].join(','));
-  dot.setStyle(showUncertainty&&status&&status!=='matched'
+  dot.setStyle(showUncertainty&&status===true
    ?{...original,dashArray:'2 2',fill:false,weight:Math.max(.8,original.weight||0)}
    :{...original,dashArray:original.dashArray||null});
  }

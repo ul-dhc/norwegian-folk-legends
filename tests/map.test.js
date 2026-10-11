@@ -217,10 +217,29 @@ test('Journeys and the map use the same updated place coordinates and location s
       assert.equal(record.lat, place.coordinates.latitude, record.id);
       assert.equal(record.lon, place.coordinates.longitude, record.id);
       assert.equal(record.geographicStatus, place.geography.displayStatus);
+      assert.equal(record.locationUncertain, ['area', 'ambiguous'].includes(place.geography.mapUncertainty.kind));
       assert.equal(record.coordinateSource, place.geography.coordinateSource);
     } else {
       assert.equal(record.geographicStatus, 'unresolved');
       assert.ok(['none', 'existing county coordinate'].includes(record.coordinateSource));
     }
+  }
+});
+
+
+test('map uncertainty distinguishes evidence of ambiguity from incomplete verification', () => {
+  const kind = id => places.get(id).geography.mapUncertainty.kind;
+  assert.equal(kind('place-alta'), 'none');
+  assert.equal(kind('place-b-herad'), 'none');
+  assert.equal(kind('place-forsand'), 'ambiguous');
+  assert.equal(kind('place-bruvik-eller-hosanger'), 'ambiguous');
+  assert.equal(kind('place-arendalskanten'), 'area');
+  assert.equal(kind('place-hallingdal'), 'area');
+  assert.equal(kind('place-treungen'), 'none');
+  for (const place of places.values()) {
+    const geo = place.geography;
+    if (geo.reason === 'county_context_not_confirmed') assert.equal(geo.mapUncertainty.kind, 'none');
+    if (geo.reason === 'multiple_matches_in_recorded_county') assert.equal(geo.mapUncertainty.kind, 'ambiguous');
+    assert.ok(['none', 'area', 'ambiguous'].includes(geo.mapUncertainty.kind));
   }
 });

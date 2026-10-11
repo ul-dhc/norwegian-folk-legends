@@ -1,5 +1,6 @@
 export type PlaceGeography = {
  verification: string; precision: string; displayStatus: string; coordinateSource: string; reason: string;
+ mapUncertainty?: {kind: "none" | "area" | "ambiguous"; reason: string};
  nameEvidence?: Array<{name:string;code:string;kind:string;sourceUrl:string}>;
  authority: {name: string; id: number; featureType: string; sourceUrl: string; coordinateSystem: string} | null;
 };

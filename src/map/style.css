@@ -734,3 +734,8 @@ body.map-fullscreen-active{overflow:hidden}
 .map-uncertainty-control[aria-pressed=true]{color:var(--interaction-green)!important;background:color-mix(in srgb,var(--interaction-green),transparent 90%)!important}
 
 .uncertainty-strokes{position:absolute;inset:0;pointer-events:none!important;z-index:1}
+
+.place-geography .place-location-notice{display:flex;align-items:flex-start;gap:.5rem;font-size:.8rem;line-height:1.5;color:var(--ink);margin:.65rem 0}
+.place-location-notice svg{width:1rem;height:1rem;flex:none;margin-top:.1rem;color:#b6953c}
+.map-stage[data-map-theme=dark] .place-location-notice svg{color:#f3df91}
+.place-geography .map-panel-note{font-size:.76rem;margin-top:.5rem}

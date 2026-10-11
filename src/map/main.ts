@@ -72,6 +72,8 @@ const dataset = JSON.parse(
       : key,
   formatter = () => new Intl.NumberFormat(document.documentElement.lang),
   params = new URLSearchParams(location.search);
+const placeUncertaintyById = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
+for (const feature of dataset.legends.features) (feature.properties as any).locationUncertain = ['area', 'ambiguous'].includes(placeUncertaintyById.get(feature.properties.placeId) || 'none') ? 1 : 0;
 const uncertaintyToggle = page.querySelector<HTMLInputElement>('[data-show-uncertainty]')!;
 uncertaintyToggle.checked = params.get('uncertainty') === '1';
 const requestedLayers = new Set(
@@ -648,7 +650,7 @@ const updatePointSources = () => {
     }
     const dominant = [...categoryCounts].sort((a,b) => b[1].count-a[1].count || a[0].localeCompare(b[0], "no"))[0]?.[1].record;
     const placeColor = pointColorBy === "single" ? colors.green : dominant ? categoryColor(dominant) : colors.categoryNeutral;
-    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: group[0].properties.placeId, centerKey: key, placeName: group[0].properties.placeName, placeColor, count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
+    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: group[0].properties.placeId, centerKey: key, placeName: group[0].properties.placeName, placeColor, locationUncertain: group.some(feature => (feature.properties as any).locationUncertain === 1), count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
   });
   legendSource.setData({ type: "FeatureCollection", features } as any);
   placeSource.setData({ type: "FeatureCollection", features: centers } as any);
@@ -1408,6 +1410,7 @@ map.on("load", async () => {
     data: dataset.legends,
     cluster: true,
     clusterRadius: 44,
+    clusterProperties: {uncertainCount: ["+", ["get", "locationUncertain"]]},
     clusterMaxZoom: 11,
     promoteId: "id",
   });
@@ -2463,10 +2466,12 @@ radiusOutput.value = heatRadius.value;
 
 requestAnimationFrame(translate);
 
-const locationStatuses = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.displayStatus || 'unresolved']));
+const locationUncertainty = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
 const renderUncertainty = installUncertaintyStrokes(map, () => uncertaintyToggle.checked, feature => {
  const id = feature.properties.placeId || String(feature.properties.id || '').replace(/^place:/, '');
- return locationStatuses.get(id) || 'unresolved';
+ if (feature.properties.cluster) return Number(feature.properties.uncertainCount || 0) > 0;
+ if (feature.properties.locationUncertain != null) return Boolean(feature.properties.locationUncertain);
+ return ['area', 'ambiguous'].includes(locationUncertainty.get(id) || 'none');
 });
 uncertaintyToggle.addEventListener('change', () => {
  page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked;
