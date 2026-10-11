@@ -2140,12 +2140,12 @@
     "en": "How geographic uncertainty is shown"
   },
   "about.coordinateUncertaintyText": {
-    "no": "«Vis geografisk usikkerhet» i Innstillinger er slått av som standard. Når valget er på, viser heltrukne konturer steder med samsvar i autoritativ kilde, stiplede konturer omtrentlige områder og prikkede konturer uavklarte plasseringer. Stedsprofilen viser status og kilde uansett dette valget. Navn med samme koordinater har separate profiler; du kan velge mellom navnene i profilen. Valget finnes i alle kartvisninger, både i Innstillinger og som en knapp ved zoomkontrollene. Reisene har samme valg i sine innstillinger for de registrerte stedsplasseringene som vises i scenen.",
-    "en": "Show location uncertainty in Settings is off by default. When enabled, solid outlines indicate authority-matched localities, dashed outlines indicate approximate areas, and dotted outlines indicate unresolved locations. Place profiles always show the status and source. Names sharing coordinates retain separate profiles; select a recorded name in the profile to switch between them. The toggle is available in every map view, both in Settings and as a button beside the zoom controls. Journeys provides the same option in its settings for the recorded place locations shown in the scene."
+    "no": "«Vis geografisk usikkerhet» i Innstillinger er slått av som standard. Når valget er på, blir de eksisterende fargede sirklene stiplet for omtrentlige eller ikke uavhengig kontrollerte plasseringer; steder med samsvar i autoritativ kilde beholder heltrukne konturer. Stedsprofilen viser status og kilde uansett dette valget. Navn med samme koordinater har separate profiler; du kan velge mellom navnene i profilen. Valget finnes i alle kartvisninger, både i Innstillinger og som en knapp ved zoomkontrollene. Reisene har samme valg i sine innstillinger for de registrerte stedsplasseringene som vises i scenen. Tetthetskartet kombinerer opptegnelser til en flate; usikkerhet for individuelle steder kan undersøkes i Steder.",
+    "en": "Show location uncertainty in Settings is off by default. When enabled, the existing coloured circles become dashed for approximate or not independently checked locations; authority-matched localities retain solid strokes. Place profiles always show the status and source. Names sharing coordinates retain separate profiles; select a recorded name in the profile to switch between them. The toggle is available in every map view, both in Settings and as a button beside the zoom controls. Journeys provides the same option in its settings for the recorded place locations shown in the scene. Density combines records into a surface; individual location uncertainty can be inspected in Places."
   },
   "about.coordinateUncertaintyLimits": {
-    "no": "Samsvar med et geografisk objekt bekrefter ikke det nøyaktige innsamlingsstedet. Kartet viser ikke historiske områdegrenser eller individuelle nøyaktighetsgrader. Farge, lysstyrke og størrelse uttrykker ikke sikkerheten i plasseringen. Områdepunkter er representasjonspunkter. Sagn uten koordinater oppgis separat i Innstillinger.",
-    "en": "Matching a geographic feature does not establish an exact collection site. The map does not display historical area boundaries or individual accuracy ratings. Colour, brightness and size do not express location confidence. Area markers are representative points. Legends without coordinates are identified separately in Settings."
+    "no": "Samsvar med et geografisk objekt bekrefter ikke det nøyaktige innsamlingsstedet. Kartet viser ikke historiske områdegrenser eller individuelle nøyaktighetsgrader. Farge, lysstyrke og størrelse uttrykker ikke sikkerheten i plasseringen. Områdepunkter er representasjonspunkter. Sagn uten koordinater oppgis separat i Innstillinger. Av de 383 stedene har 272 historiske administrative navnetreff, 11 underbygde SSR-treff (inkludert 10 områder), 98 andre uavklarte treff og 2 ingen koordinater. Kategoriene beskriver tilgjengelig kildegrunnlag, ikke om et sted finnes eller koordinaten er feil.",
+    "en": "Matching a geographic feature does not establish an exact collection site. The map does not display historical area boundaries or individual accuracy ratings. Colour, brightness and size do not express location confidence. Area markers are representative points. Legends without coordinates are identified separately in Settings. Of the 383 places, 272 have historical administrative-name matches, 11 have supported SSR matches (including 10 areas), 98 have other unresolved matches and 2 have no coordinates. These categories describe the evidence available, not whether a place exists or its coordinate is wrong."
   },
   "about.dataGuideIntro": {
     "no": "Undersøk samlingen gjennom temaer, ML-typer, fylker, samlere, innsamlingsår og oversettelser. Tallene beskriver opptegnelsene i samlingen og sier ikke hvor utbredte sagnene var i befolkningen.",
@@ -2208,8 +2208,8 @@
     "en": "Show location uncertainty"
   },
   "map.uncertaintyKey": {
-    "no": "Heltrukken: samsvar med autoritativ kilde. Stiplet: omtrentlig område. Prikket: uavklart plassering.",
-    "en": "Solid: authority-matched locality. Dashed: approximate area. Dotted: unresolved location."
+    "no": "Stiplede fargede sirkler: omtrentlig eller ikke uavhengig kontrollert plassering. Se status og kilder i stedsprofilen.",
+    "en": "Dashed coloured circles: approximate or not independently checked locations. See status and sources in the place profile."
   },
   "map.locationStatus": {
     "no": "Geografisk plassering",
@@ -2224,8 +2224,8 @@
     "en": "Approximate area location"
   },
   "map.location.unresolved": {
-    "no": "Plasseringen er ikke verifisert",
-    "en": "Location not verified"
+    "no": "Stedstreffet er ikke avklart",
+    "en": "Place match not resolved"
   },
   "map.location.unlocated": {
     "no": "Ingen registrerte koordinater",
@@ -2254,5 +2254,17 @@
   "about.coordinateDecisionTableLink": {
     "no": "Se tabellen over stedsplasseringer og kildegrunnlag",
     "en": "View place decisions and source references"
+  },
+  "map.location.historical": {
+    "no": "Historisk administrativt navnetreff; koordinaten er ikke kontrollert",
+    "en": "Historical administrative-name match; coordinate not independently checked"
+  },
+  "map.historicalLocationNote": {
+    "no": "Navnet finnes i SSBs historiske kommune- eller fylkesinndelinger. Dette er et navnetreff, ikke en bekreftelse av den historiske grensen eller sagnets nøyaktige sted. Den eksisterende koordinaten beholdes.",
+    "en": "The name appears in SSB’s historical municipality or county classifications. This is a name match, not confirmation of the historical boundary or the legend’s exact location. The existing coordinate is retained."
+  },
+  "map.uncertaintyDensityKey": {
+    "no": "Tetthetskartet kombinerer sagn og har ingen individuelle sirkelkonturer. Velg Steder for å undersøke stedsplasseringene.",
+    "en": "Density combines legends and has no individual circle borders. Choose Places to inspect location uncertainty."
   }
 }

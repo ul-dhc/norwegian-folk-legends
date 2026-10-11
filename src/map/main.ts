@@ -1,8 +1,9 @@
 import * as maplibregl from "maplibre-gl";
-import { createElement, Maximize, Minimize, CircleHelp } from "lucide";
+import { createElement, Maximize, Minimize, MapPin } from "lucide";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 maplibregl.setWorkerUrl(workerUrl);
 import { buildMetadataNetwork, strongestConnectionIds } from "./networks.js";
+import { installUncertaintyStrokes } from "./uncertainty";
 import { placeProfileMarkup } from "./place-profile";
 import type { LegendProperties, MapDataset, PlaceProperties, NetworkEdge, NetworkNode } from "./types";
 const page = document.querySelector<HTMLElement>("[data-map-page]")!,
@@ -293,7 +294,7 @@ navigationGroup?.append(centerMapButton);
 const uncertaintyButton = document.createElement("button");
 uncertaintyButton.type = "button";
 uncertaintyButton.className = "map-uncertainty-control";
-uncertaintyButton.replaceChildren(createElement(CircleHelp, {width:18,height:18,"stroke-width":1.8,"aria-hidden":"true"}));
+uncertaintyButton.replaceChildren(createElement(MapPin, {width:18,height:18,"stroke-width":1.8,"aria-hidden":"true"}));
 navigationGroup?.append(uncertaintyButton);
 const syncUncertaintyButton = () => {
  const label = tr("map.showUncertainty");
@@ -1153,6 +1154,9 @@ const syncPointStyleLayers = () => {
 const setMapMode = (mode: string, save = true) => {
   if (!['places', 'points', 'clusters', 'heatmap', 'network'].includes(mode)) mode = 'points';
   mapMode = mode;
+  const uncertaintyKey = page.querySelector<HTMLElement>('[data-uncertainty-key]')!;
+  uncertaintyKey.dataset.i18n = mode === 'heatmap' ? 'map.uncertaintyDensityKey' : 'map.uncertaintyKey';
+  uncertaintyKey.textContent = tr(uncertaintyKey.dataset.i18n);
   syncPaletteSelection();
   page
     .querySelectorAll<HTMLButtonElement>("[data-map-mode]")
@@ -2459,26 +2463,16 @@ radiusOutput.value = heatRadius.value;
 
 requestAnimationFrame(translate);
 
-const uncertaintyMarkers = new Map<string, maplibregl.Marker>();
-const renderUncertainty = () => {
- const ids = new Set(filteredFeatures.map(feature => feature.properties.placeId));
- if (mapMode === 'network') { ids.clear(); for (const node of networkNodes) ids.add(node.id.replace(/^place:/, "")); }
- const key = page.querySelector<HTMLElement>('[data-uncertainty-key]')!;
- key.hidden = !uncertaintyToggle.checked;
- for (const [id, marker] of uncertaintyMarkers) if (!uncertaintyToggle.checked || !ids.has(id)) {marker.remove();uncertaintyMarkers.delete(id);}
- if (!uncertaintyToggle.checked) return;
- for (const place of dataset.places.features) {
-  if (!ids.has(place.properties.id) || uncertaintyMarkers.has(place.properties.id)) continue;
-  const element = document.createElement('span');
-  element.className = `location-uncertainty-marker location-${place.properties.geography?.displayStatus || 'unresolved'}`;
-  element.setAttribute('aria-hidden','true');
-  element.dataset.placeId = place.properties.id;
-  if (place.properties.geography?.displayStatus === 'unresolved') element.append(createElement(CircleHelp, {width:11,height:11,'stroke-width':1.8}));
-  uncertaintyMarkers.set(place.properties.id, new maplibregl.Marker({element}).setLngLat(place.geometry.coordinates).addTo(map));
- }
-};
-uncertaintyToggle.addEventListener('change', () => {renderUncertainty();syncUncertaintyButton();updateUrl();});
-map.on('idle', renderUncertainty);
+const locationStatuses = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.displayStatus || 'unresolved']));
+const renderUncertainty = installUncertaintyStrokes(map, () => uncertaintyToggle.checked, feature => {
+ const id = feature.properties.placeId || String(feature.properties.id || '').replace(/^place:/, '');
+ return locationStatuses.get(id) || 'unresolved';
+});
+uncertaintyToggle.addEventListener('change', () => {
+ page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked;
+ renderUncertainty();syncUncertaintyButton();updateUrl();
+});
+page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked;
 panel.addEventListener('click', event => {
  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-profile-place]');
  if (!button) return;

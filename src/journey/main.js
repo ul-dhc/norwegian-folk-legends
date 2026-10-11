@@ -62,7 +62,7 @@ function mapSettings(){
  el('journey-settings-title').textContent=en?'Journey settings':'Reiseinnstillinger';
  el('journey-map-settings-title').textContent=en?'Map atmosphere':'Kartets uttrykk';
  el('journey-uncertainty').querySelector('span').textContent=en?'Show location uncertainty':'Vis geografisk usikkerhet';
- el('journey-uncertainty').querySelector('small').textContent=en?'Solid: matched locality. Dashed: approximate area. Dotted: unresolved location.':'Heltrukken: samsvar i stedsregister. Stiplet: omtrentlig område. Prikket: uavklart plassering.';
+ el('journey-uncertainty').querySelector('small').textContent=en?'Dashed coloured circles: approximate or not independently checked locations.':'Stiplede fargede sirkler: omtrentlige eller ikke uavhengig kontrollerte plasseringer.';
  el('journey-uncertainty').setAttribute('aria-pressed',String(showUncertainty));
  el('journey-uncertainty-help').textContent=en?'About location uncertainty':'Om geografisk usikkerhet';
  el('journey-reading-time-label').textContent=en?'Reading and typing pace':'Lese- og skrivehastighet';

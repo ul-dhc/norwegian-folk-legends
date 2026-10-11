@@ -727,12 +727,10 @@ body.map-fullscreen-active{overflow:hidden}
 .network-filter-clear .lucide{width:13px;height:13px}
 @media(max-width:600px){.network-view-title{max-width:calc(100% - 1rem)}.network-active-filters{max-width:100%}.network-filter-chip{max-width:240px}}
 
-.location-uncertainty-marker{display:block;width:30px;height:30px;border:2px dotted var(--ink);border-radius:50%;pointer-events:none!important;opacity:.8;background:transparent}
-.location-uncertainty-marker.location-matched{border-style:solid}
-.location-uncertainty-marker.location-approximate{border-style:dashed}
-.location-uncertainty-marker svg{position:absolute;right:-7px;top:-7px;color:var(--ink);background:var(--raised);border-radius:50%}
 .uncertainty-key p{font-size:.78rem;line-height:1.6;color:var(--muted)}
 .place-coordinate-note button{border:0;background:transparent;color:var(--blue);padding:0;font:inherit;text-align:left;text-decoration:underline;text-underline-offset:.2em}
 
 .map-uncertainty-control .lucide{width:18px;height:18px}
 .map-uncertainty-control[aria-pressed=true]{color:var(--interaction-green)!important;background:color-mix(in srgb,var(--interaction-green),transparent 90%)!important}
+
+.uncertainty-strokes{position:absolute;inset:0;pointer-events:none!important;z-index:1}

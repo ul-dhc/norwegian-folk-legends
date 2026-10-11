@@ -8,13 +8,14 @@ supporting authority reference. The source links identify the legend records;
 they do not establish that UiO supplied the coordinates.
 
 Register coordinates are used only for a unique approved exact name with matching
-recorded county context. Historical administrative names and ambiguous references
-retain their supplied coordinates with unresolved status. Register points represent
+recorded county context. Historical administrative names retain their supplied coordinates with a historical-name
+match status; other ambiguous references retain them with unresolved status. Register points represent
 localities or areas, not verified collection sites. Historical boundary geometries
 have not been applied. Coincident points do not cause place records to be merged.
 
 The current result has 1 authority-matched locality, 10 approximate area matches,
-370 unresolved locations and 2 places without coordinates (11 legends). Five map
+272 historical administrative-name matches with unchecked coordinates, 98 other
+unresolved locations and 2 places without coordinates (11 legends). Five map
 positions change. The table retains each original name and coordinate.
 
 Sources: [UiO – Eventyr og sagn](https://www2.hf.uio.no/eventyr_og_sagn/),

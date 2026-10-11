@@ -25,19 +25,21 @@ export function createJourneyMap(container,onError){
   terrainMap=landscape.getMaplibreMap();terrainMap.on('error',onError);
   terrainMap.on('load',()=>{terrainReady=true;applyMapType(terrainMap,mapType);});
  }).catch(onError);
- const uncertaintyPane=map.createPane('journeyUncertainty');uncertaintyPane.style.zIndex=450;uncertaintyPane.style.pointerEvents='none';
- const uncertaintyLayer=L.layerGroup().addTo(map),uncertaintyRecords=new Map();
+ const uncertaintyRecords=new Map(),uncertaintyDots=new Map();
  let showUncertainty=false;
  function rememberUncertainty(record){
   if(!record.placeId||!record.geographicStatus||!Number.isFinite(record.lat)||!Number.isFinite(record.lon))return;
-  const key=record.placeId+':'+record.lat+':'+record.lon;
-  if(uncertaintyRecords.has(key))return;
-  uncertaintyRecords.set(key,record);
-  if(showUncertainty)drawUncertainty(record);
+  uncertaintyRecords.set(point(record).join(','),record.geographicStatus);
  }
- function drawUncertainty(record){
-  const status=['matched','approximate'].includes(record.geographicStatus)?record.geographicStatus:'unresolved';
-  L.marker(point(record),{pane:'journeyUncertainty',interactive:false,keyboard:false,icon:L.divIcon({className:'journey-uncertainty-marker location-'+status,html:'',iconSize:[18,18],iconAnchor:[9,9]})}).addTo(uncertaintyLayer);
+ function applyUncertainty(dot,original){
+  const status=uncertaintyRecords.get([dot.getLatLng().lat,dot.getLatLng().lng].join(','));
+  dot.setStyle(showUncertainty&&status&&status!=='matched'
+   ?{...original,dashArray:'2 2',fill:false,weight:Math.max(.8,original.weight||0)}
+   :{...original,dashArray:original.dashArray||null});
+ }
+ function placeDot(coords,options){
+  const dot=L.circleMarker(coords,options);
+  uncertaintyDots.set(dot,options);applyUncertainty(dot,options);return dot;
  }
  const traces=L.layerGroup().addTo(map),constellation=L.layerGroup().addTo(map),effects=L.layerGroup().addTo(map);
  let head=null,current=null,raf=null,movement=null,still=false,destinationLabel=null,closingCoords=null ,fullOverview=false,introZoom=null,zoomActive=false,activeFrame=null,roadsPrepared=false;
@@ -52,7 +54,7 @@ export function createJourneyMap(container,onError){
   const key=coords.join(',');
   // Shared locations use one dot, anchored exactly to the thread endpoint.
   if(visitedDots.has(key))return;
-  const dot=L.circleMarker(coords,{renderer,className:'journey-visited-dot',radius:3.2,color,weight:1.1,opacity:.85,fill:false,interactive:false}).addTo(traces);
+  const dot=placeDot(coords,{renderer,className:'journey-visited-dot',radius:3.2,color,weight:1.1,opacity:.85,fill:false,interactive:false}).addTo(traces);
   visitedDots.set(key,dot);
  }
  function lineBetween(a,b,color,group=traces){
@@ -70,7 +72,7 @@ export function createJourneyMap(container,onError){
   const revealLine=(line,i)=>{if(!reveal||still)return;const element=line?.getElement();if(!element)return;element.setAttribute('pathLength','1');element.classList.add('journey-spoke-reveal');element.style.animationDelay=(1600+Math.min(i*65,1200))+'ms';};
   if(kind==='collector'&&hub){nodes.forEach((r,i)=>revealLine(lineBetween(hub,point(r),color,group),i));}
   else edges.forEach(([a,b],i)=>revealLine(lineBetween(point(a),point(b),color,group),i));
-  nodes.forEach((r,i)=>{const coords=point(r);if(group===traces)remember(coords);const dot=L.circleMarker(coords,{renderer:networkRenderer,className:'journey-neon-point',radius:1.8,color,weight:0,opacity:1,fill:true,fillOpacity:.8,interactive:false}).addTo(group);if(reveal&&!still){const element=dot.getElement();element.classList.add('journey-endpoint-reveal');element.style.animationDelay=(2800+Math.min(i*65,1200))+'ms';}});
+  nodes.forEach((r,i)=>{const coords=point(r);if(group===traces)remember(coords);const dot=placeDot(coords,{renderer:networkRenderer,className:'journey-neon-point',radius:1.8,color,weight:0,opacity:1,fill:true,fillOpacity:.8,interactive:false}).addTo(group);if(reveal&&!still){const element=dot.getElement();element.classList.add('journey-endpoint-reveal');element.style.animationDelay=(2800+Math.min(i*65,1200))+'ms';}});
   if(kind==='collector'&&hub&&nodes.length>1){L.marker(hub,{icon:L.divIcon({className:'journey-collector-hub'+(reveal&&!still?' journey-hub-reveal':''),html:`<span style="--hub-colour:${color}"></span>`,iconSize:[64,64],iconAnchor:[32,32]}),interactive:false,keyboard:false}).addTo(group);}
   return nodes;
  }
@@ -157,7 +159,7 @@ export function createJourneyMap(container,onError){
  }
  const observer=new ResizeObserver(()=>{map.invalidateSize({pan:false});frameClosing();});observer.observe(container);
  return {
-  setUncertainty(value){showUncertainty=value;uncertaintyLayer.clearLayers();if(value)uncertaintyRecords.forEach(drawUncertainty);},
+  setUncertainty(value){showUncertainty=value;uncertaintyDots.forEach((options,dot)=>{if(dot._map)applyUncertainty(dot,options);else uncertaintyDots.delete(dot);});},
   intro(records,all=false,reading=false,opening=false,reveal=true){
    // Welcome and opening share the same geography and paths. Begin changes only the text.
    if(opening&&fullOverview&&constellation.getLayers().length){
@@ -231,7 +233,7 @@ export function createJourneyMap(container,onError){
    startIntroZoom(.97,20000);breathe(false);
   },
   setStill(value){still=value;if(value){introZoom?.cancel();introZoom=null;breathe(false);effects.clearLayers();container.classList.add('journey-effects-still');}else{container.classList.remove('journey-effects-still');breathe(true);}if(value){map.stop();if(movement){movement.elapsed=movement.camera+movement.duration;}}},
-  reset(){uncertaintyLayer.clearLayers();uncertaintyRecords.clear();roadsPrepared=false;activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
+  reset(){uncertaintyDots.clear();uncertaintyRecords.clear();roadsPrepared=false;activeFrame=null;networkPane.classList.remove('moe-slow-network');map.options.zoomSnap=1;introZoom?.cancel();introZoom=null;container.classList.remove('journey-network-overview');closingCoords=null;cancel();clearDestination();traces.clearLayers();constellation.clearLayers();head=null;current=null;remembered.clear();seenEdges.clear();travelledEdges.clear();visitedDots.clear();breathe(false);},
   travel(target,{story=false,allowRoad=false,kind='place',colour=null,minDuration=0,onRoute=()=>{},done=()=>{}}={}){
    if(!story)rememberUncertainty(target);
    closingCoords=null;cancel();clearDestination();breathe(false);

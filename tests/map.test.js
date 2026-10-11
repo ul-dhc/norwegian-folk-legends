@@ -196,6 +196,13 @@ test('geographic decisions preserve originals and relocate only supported author
       assert.ok(Object.keys(geo.countyContext).length);
       for (const county of Object.keys(geo.countyContext)) assert.ok(authority.counties.some(c => c.fylkesnavn.toLocaleLowerCase() === county.toLocaleLowerCase()));
     } else assert.deepEqual(place.coordinates, original.coordinates);
+    if (geo.displayStatus === 'historical') {
+      assert.equal(geo.verification, 'historical_name_matched');
+      assert.equal(geo.precision, 'unknown');
+      assert.ok(geo.nameEvidence.length);
+      assert.ok(geo.nameEvidence.every(item => item.sourceUrl.startsWith('https://data.ssb.no/')));
+      assert.deepEqual(place.coordinates, original.coordinates);
+    }
     if (!original.coordinates) assert.equal(geo.displayStatus, 'unlocated');
   }
   for (const point of dataset.places.features) assert.deepEqual(point.properties.geography, places.get(point.id).geography);
