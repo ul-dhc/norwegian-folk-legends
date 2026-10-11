@@ -1,7 +1,7 @@
 {
   "query": "Korgen",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:16.721839+00:00",
+  "retrievedAt": "2026-10-11T15:30:57.939375+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Korgen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

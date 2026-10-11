@@ -1,7 +1,7 @@
 {
   "query": "Straumsnes",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:23.233510+00:00",
+  "retrievedAt": "2026-10-11T15:32:02.443067+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Straumsnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

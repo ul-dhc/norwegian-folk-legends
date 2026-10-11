@@ -1,7 +1,7 @@
 {
   "query": "Fron",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:08:46.770221+00:00",
+  "retrievedAt": "2026-10-11T15:30:30.348267+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fron&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

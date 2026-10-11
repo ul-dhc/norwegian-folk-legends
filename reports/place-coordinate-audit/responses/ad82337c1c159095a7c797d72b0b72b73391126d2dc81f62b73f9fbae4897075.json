@@ -1,7 +1,7 @@
 {
   "query": "Ringsaker",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:58.207782+00:00",
+  "retrievedAt": "2026-10-11T15:31:38.486802+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ringsaker&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

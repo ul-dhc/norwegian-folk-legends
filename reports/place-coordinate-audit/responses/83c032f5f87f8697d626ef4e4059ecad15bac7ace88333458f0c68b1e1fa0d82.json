@@ -1,7 +1,7 @@
 {
   "query": "Sør-Rana",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:31.295871+00:00",
+  "retrievedAt": "2026-10-11T15:32:10.530515+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Rana&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

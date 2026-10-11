@@ -1,7 +1,7 @@
 {
   "query": "Frøya",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:48.471146+00:00",
+  "retrievedAt": "2026-10-11T15:30:32.039448+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

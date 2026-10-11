@@ -1,7 +1,7 @@
 {
   "query": "Jostedal",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:13.958748+00:00",
+  "retrievedAt": "2026-10-11T15:30:55.192113+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Jostedal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

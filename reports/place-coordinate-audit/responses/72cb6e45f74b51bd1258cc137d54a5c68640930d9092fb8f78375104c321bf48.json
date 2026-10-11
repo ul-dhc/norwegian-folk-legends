@@ -1,7 +1,7 @@
 {
   "query": "Egersundkanten",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:08:34.302324+00:00",
+  "retrievedAt": "2026-10-11T15:30:17.153290+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Egersundkanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Trysil",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:40.162783+00:00",
+  "retrievedAt": "2026-10-11T15:32:19.708779+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Trysil&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

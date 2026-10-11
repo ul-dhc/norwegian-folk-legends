@@ -1,7 +1,7 @@
 {
   "query": "Mandalskanten",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:31.609706+00:00",
+  "retrievedAt": "2026-10-11T15:31:12.484098+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mandalskanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Krødsherad",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:17.403523+00:00",
+  "retrievedAt": "2026-10-11T15:30:58.651306+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kr%C3%B8dsherad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Nord-Odal",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:47.045915+00:00",
+  "retrievedAt": "2026-10-11T15:31:27.627807+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Odal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Lårdal (Høydalsmo)",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:29.811733+00:00",
+  "retrievedAt": "2026-10-11T15:31:11.041214+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A5rdal+%28H%C3%B8ydalsmo%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

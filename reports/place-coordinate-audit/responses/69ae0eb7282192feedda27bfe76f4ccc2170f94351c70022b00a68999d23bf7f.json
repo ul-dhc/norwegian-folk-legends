@@ -1,7 +1,7 @@
 {
   "query": "Nesset",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+  "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

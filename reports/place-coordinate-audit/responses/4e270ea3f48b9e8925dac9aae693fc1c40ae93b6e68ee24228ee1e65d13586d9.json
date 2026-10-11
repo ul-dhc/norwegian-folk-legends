@@ -1,7 +1,7 @@
 {
   "query": "Lærdal",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:30.173506+00:00",
+  "retrievedAt": "2026-10-11T15:31:11.391487+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A6rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

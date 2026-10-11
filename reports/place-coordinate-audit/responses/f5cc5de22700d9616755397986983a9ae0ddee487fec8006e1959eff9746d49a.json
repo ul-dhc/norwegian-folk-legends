@@ -1,7 +1,7 @@
 {
   "query": "Nordsømna",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:51.223565+00:00",
+  "retrievedAt": "2026-10-11T15:31:32.175937+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nords%C3%B8mna&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

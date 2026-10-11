@@ -1,7 +1,7 @@
 {
   "query": "Lindesneskanten (Sør-Audnedal)",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:26.342918+00:00",
+  "retrievedAt": "2026-10-11T15:31:07.564096+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten+%28S%C3%B8r-Audnedal%29&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

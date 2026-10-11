@@ -1,7 +1,7 @@
 {
   "query": "Ogndal",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:53.096389+00:00",
+  "retrievedAt": "2026-10-11T15:31:32.974579+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ogndal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Tromøy",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:39.819057+00:00",
+  "retrievedAt": "2026-10-11T15:32:19.025130+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Trom%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

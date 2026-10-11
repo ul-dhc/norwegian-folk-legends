@@ -1,7 +1,7 @@
 {
   "query": "Ålvundeid",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:11:01.748864+00:00",
+  "retrievedAt": "2026-10-11T15:32:40.666983+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85lvundeid&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

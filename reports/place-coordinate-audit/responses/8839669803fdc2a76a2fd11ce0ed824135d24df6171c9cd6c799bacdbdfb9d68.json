@@ -1,7 +1,7 @@
 {
   "query": "Øyslebø",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:11:08.861037+00:00",
+  "retrievedAt": "2026-10-11T15:32:48.028950+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98ysleb%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

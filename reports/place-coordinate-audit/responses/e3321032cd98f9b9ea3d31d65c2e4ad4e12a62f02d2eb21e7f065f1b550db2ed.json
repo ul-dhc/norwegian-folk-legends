@@ -1,7 +1,7 @@
 {
   "query": "Meldal",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:31.946483+00:00",
+  "retrievedAt": "2026-10-11T15:31:12.814775+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Meldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

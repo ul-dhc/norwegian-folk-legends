@@ -1,7 +1,7 @@
 {
   "query": "Hægeland",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:09.672173+00:00",
+  "retrievedAt": "2026-10-11T15:30:50.817752+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A6geland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

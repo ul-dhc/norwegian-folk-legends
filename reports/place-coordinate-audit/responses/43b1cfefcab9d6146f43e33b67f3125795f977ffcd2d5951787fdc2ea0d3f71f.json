@@ -1,7 +1,7 @@
 {
   "query": "Foldereid",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:43.145995+00:00",
+  "retrievedAt": "2026-10-11T15:30:26.007680+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Foldereid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

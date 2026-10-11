@@ -1,7 +1,7 @@
 {
   "query": "Åsskard",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:11:03.548300+00:00",
+  "retrievedAt": "2026-10-11T15:32:42.457909+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85sskard&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

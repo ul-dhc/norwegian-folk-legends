@@ -1,7 +1,7 @@
 {
   "query": "Sandar",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:09.048642+00:00",
+  "retrievedAt": "2026-10-11T15:31:48.283062+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sandar&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

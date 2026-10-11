@@ -1,7 +1,7 @@
 {
   "query": "Andøya",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:16.621396+00:00",
+  "retrievedAt": "2026-10-11T15:29:59.460617+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=And%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

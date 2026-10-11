@@ -1,7 +1,7 @@
 {
   "query": "Buksnes",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:27.571000+00:00",
+  "retrievedAt": "2026-10-11T15:30:10.387027+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Buksnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

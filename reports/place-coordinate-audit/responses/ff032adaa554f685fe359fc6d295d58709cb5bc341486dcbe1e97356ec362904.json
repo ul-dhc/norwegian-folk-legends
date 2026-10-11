@@ -1,7 +1,7 @@
 {
   "query": "Sør-Fron",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:10:30.323953+00:00",
+  "retrievedAt": "2026-10-11T15:32:09.554604+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Fron&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

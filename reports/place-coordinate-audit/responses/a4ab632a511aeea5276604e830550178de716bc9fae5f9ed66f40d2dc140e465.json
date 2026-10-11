@@ -1,7 +1,7 @@
 {
   "query": "Lindås",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:24.513909+00:00",
+  "retrievedAt": "2026-10-11T15:31:05.767838+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lind%C3%A5s&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

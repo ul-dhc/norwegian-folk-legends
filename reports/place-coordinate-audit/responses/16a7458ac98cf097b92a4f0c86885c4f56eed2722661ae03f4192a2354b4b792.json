@@ -1,7 +1,7 @@
 {
   "query": "Brunlanes",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:23.319278+00:00",
+  "retrievedAt": "2026-10-11T15:30:06.162996+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Brunlanes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Flakstad",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:42.078333+00:00",
+  "retrievedAt": "2026-10-11T15:30:24.979486+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Flakstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

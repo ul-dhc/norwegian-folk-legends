@@ -1,7 +1,7 @@
 {
   "query": "Hålandsdal",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:09:10.523274+00:00",
+  "retrievedAt": "2026-10-11T15:30:51.755661+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A5landsdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

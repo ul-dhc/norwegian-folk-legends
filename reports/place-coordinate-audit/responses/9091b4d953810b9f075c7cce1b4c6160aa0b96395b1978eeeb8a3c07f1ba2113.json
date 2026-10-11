@@ -1,7 +1,7 @@
 {
   "query": "Rollag",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:59.157387+00:00",
+  "retrievedAt": "2026-10-11T15:31:38.720981+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rollag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

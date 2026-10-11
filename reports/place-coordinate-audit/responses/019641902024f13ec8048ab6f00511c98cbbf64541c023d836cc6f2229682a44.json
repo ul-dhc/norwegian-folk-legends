@@ -1,7 +1,7 @@
 {
   "query": "Sauherad",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:11.189509+00:00",
+  "retrievedAt": "2026-10-11T15:31:50.476859+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sauherad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

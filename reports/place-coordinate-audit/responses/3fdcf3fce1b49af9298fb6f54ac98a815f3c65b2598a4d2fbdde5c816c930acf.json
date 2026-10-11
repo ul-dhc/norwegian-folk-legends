@@ -1,7 +1,7 @@
 {
   "query": "Tysfjord",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:41.576074+00:00",
+  "retrievedAt": "2026-10-11T15:32:20.770487+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tysfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

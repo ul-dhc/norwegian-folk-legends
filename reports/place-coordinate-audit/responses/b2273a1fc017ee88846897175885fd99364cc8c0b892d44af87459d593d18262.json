@@ -1,7 +1,7 @@
 {
   "query": "Namdalen",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:35.842554+00:00",
+  "retrievedAt": "2026-10-11T15:31:16.512092+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Namdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T15:16:58.030908+00:00",
+  "generatedAt": "2026-10-11T15:32:49.248398+00:00",
   "authority": "Kartverket – Sentralt stedsnavnregister (SSR)",
   "documentation": "https://kartverket.no/en/api-and-data/stedsnavndata/brukarrettleiing-stadnamn-api",
   "api": "https://ws.geonorge.no/stedsnavn/v1/navn",
@@ -29,7 +29,7 @@
         {
           "query": "Akershus",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:14.873144+00:00",
+          "retrievedAt": "2026-10-11T15:29:57.674510+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Akershus&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -154,7 +154,7 @@
         {
           "query": "Alstahaug",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:15.207001+00:00",
+          "retrievedAt": "2026-10-11T15:29:58.028217+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Alstahaug&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -244,7 +244,7 @@
         {
           "query": "Alta",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:15.543984+00:00",
+          "retrievedAt": "2026-10-11T15:29:58.381762+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Alta&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -405,7 +405,7 @@
         {
           "query": "Alvdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:15.897426+00:00",
+          "retrievedAt": "2026-10-11T15:29:58.745547+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Alvdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -494,7 +494,7 @@
         {
           "query": "Alversund",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:16.261069+00:00",
+          "retrievedAt": "2026-10-11T15:29:59.260849+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Alversund&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -583,7 +583,7 @@
         {
           "query": "Andøya",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:16.621396+00:00",
+          "retrievedAt": "2026-10-11T15:29:59.460617+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=And%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -1163,7 +1163,7 @@
         {
           "query": "Arendalskanten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:16.984756+00:00",
+          "retrievedAt": "2026-10-11T15:29:59.815318+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Arendalskanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -1183,7 +1183,7 @@
         {
           "query": "Arendalskanten",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:18.072517+00:00",
+          "retrievedAt": "2026-10-11T15:30:00.913902+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Arendalskanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -2123,7 +2123,7 @@
         {
           "query": "Aukra",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:17.316645+00:00",
+          "retrievedAt": "2026-10-11T15:30:00.154846+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aukra&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -2213,7 +2213,7 @@
         {
           "query": "Aure",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:17.665993+00:00",
+          "retrievedAt": "2026-10-11T15:30:00.517114+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aure&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -2626,7 +2626,7 @@
         {
           "query": "Aurland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:18.384285+00:00",
+          "retrievedAt": "2026-10-11T15:30:01.455968+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aurland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -2751,7 +2751,7 @@
         {
           "query": "Aust-Agder",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:18.727183+00:00",
+          "retrievedAt": "2026-10-11T15:30:01.583272+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aust-Agder&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -2771,7 +2771,7 @@
         {
           "query": "Aust-Agder",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:19.896838+00:00",
+          "retrievedAt": "2026-10-11T15:30:02.748043+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aust-Agder&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -4021,7 +4021,7 @@
         {
           "query": "Balestrand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:19.085633+00:00",
+          "retrievedAt": "2026-10-11T15:30:01.946715+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Balestrand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -4146,7 +4146,7 @@
         {
           "query": "Beiarn",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:19.446756+00:00",
+          "retrievedAt": "2026-10-11T15:30:02.307724+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Beiarn&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -4166,7 +4166,7 @@
         {
           "query": "Beiarn",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:20.566256+00:00",
+          "retrievedAt": "2026-10-11T15:30:03.391215+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Beiarn&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -5307,7 +5307,7 @@
         {
           "query": "Bindal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:20.133482+00:00",
+          "retrievedAt": "2026-10-11T15:30:02.975425+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bindal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -5327,7 +5327,7 @@
         {
           "query": "Bindal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:21.338258+00:00",
+          "retrievedAt": "2026-10-11T15:30:04.154539+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bindal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -6464,7 +6464,7 @@
         {
           "query": "Bjelland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:20.863386+00:00",
+          "retrievedAt": "2026-10-11T15:30:03.691807+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bjelland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -7669,7 +7669,7 @@
         {
           "query": "Bodin",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:21.575806+00:00",
+          "retrievedAt": "2026-10-11T15:30:04.444693+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bodin&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -7689,7 +7689,7 @@
         {
           "query": "Bodin",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:22.705621+00:00",
+          "retrievedAt": "2026-10-11T15:30:05.554899+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bodin&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -8822,7 +8822,7 @@
         {
           "query": "Botne",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:21.915537+00:00",
+          "retrievedAt": "2026-10-11T15:30:04.755140+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Botne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -9127,7 +9127,7 @@
         {
           "query": "Brandbu",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:22.299974+00:00",
+          "retrievedAt": "2026-10-11T15:30:05.091901+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Brandbu&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -9396,7 +9396,7 @@
         {
           "query": "Breim",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:22.961405+00:00",
+          "retrievedAt": "2026-10-11T15:30:05.851140+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Breim&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -9485,7 +9485,7 @@
         {
           "query": "Brunlanes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:23.319278+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.162996+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Brunlanes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -9505,7 +9505,7 @@
         {
           "query": "Brunlanes",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:24.538110+00:00",
+          "retrievedAt": "2026-10-11T15:30:07.389829+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Brunlanes&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10638,7 +10638,7 @@
         {
           "query": "Bruvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:23.675992+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.515246+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10768,7 +10768,7 @@
         {
           "query": "Bruvik (ev. Hosanger)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:24.029641+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.975320+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik+%28ev.+Hosanger%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10788,7 +10788,7 @@
         {
           "query": "ev. Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:25.095689+00:00",
+          "retrievedAt": "2026-10-11T15:30:07.965253+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=ev.+Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10808,7 +10808,7 @@
         {
           "query": "Bruvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:23.675992+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.515246+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10939,7 +10939,7 @@
         {
           "query": "Bruvik eller Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:24.739431+00:00",
+          "retrievedAt": "2026-10-11T15:30:07.567894+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik+eller+Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10959,7 +10959,7 @@
         {
           "query": "Bruvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:23.675992+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.515246+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -10979,7 +10979,7 @@
         {
           "query": "Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:25.830414+00:00",
+          "retrievedAt": "2026-10-11T15:30:08.630048+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -11156,7 +11156,7 @@
         {
           "query": "Bruvik(eller Hosanger)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:25.447649+00:00",
+          "retrievedAt": "2026-10-11T15:30:08.286143+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik%28eller+Hosanger%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -11176,7 +11176,7 @@
         {
           "query": "eller Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:26.514447+00:00",
+          "retrievedAt": "2026-10-11T15:30:09.374963+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=eller+Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -11196,7 +11196,7 @@
         {
           "query": "Bruvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:23.675992+00:00",
+          "retrievedAt": "2026-10-11T15:30:06.515246+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -11327,7 +11327,7 @@
         {
           "query": "Bruvik-Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:26.182093+00:00",
+          "retrievedAt": "2026-10-11T15:30:08.974260+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik-Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -11347,7 +11347,7 @@
         {
           "query": "Bruvik-Hosanger",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:27.253621+00:00",
+          "retrievedAt": "2026-10-11T15:30:10.096075+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bruvik-Hosanger&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -12251,7 +12251,7 @@
         {
           "query": "Brønnøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:26.860609+00:00",
+          "retrievedAt": "2026-10-11T15:30:09.689506+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Br%C3%B8nn%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -12340,7 +12340,7 @@
         {
           "query": "Buksnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:27.571000+00:00",
+          "retrievedAt": "2026-10-11T15:30:10.387027+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Buksnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -12537,7 +12537,7 @@
         {
           "query": "Buskerud",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:27.913127+00:00",
+          "retrievedAt": "2026-10-11T15:30:10.767428+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Buskerud&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -12734,7 +12734,7 @@
         {
           "query": "Bygland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:28.281222+00:00",
+          "retrievedAt": "2026-10-11T15:30:11.110147+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bygland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -12895,7 +12895,7 @@
         {
           "query": "Byneset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:28.638003+00:00",
+          "retrievedAt": "2026-10-11T15:30:11.467100+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Byneset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -13200,7 +13200,7 @@
         {
           "query": "Bærum",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:28.988703+00:00",
+          "retrievedAt": "2026-10-11T15:30:11.821526+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=B%C3%A6rum&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -13326,7 +13326,7 @@
         {
           "query": "Bø",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:29.427163+00:00",
+          "retrievedAt": "2026-10-11T15:30:12.272027+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=B%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -18406,7 +18406,7 @@
         {
           "query": "Bøherad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:29.676995+00:00",
+          "retrievedAt": "2026-10-11T15:30:12.536085+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=B%C3%B8herad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -18426,7 +18426,7 @@
         {
           "query": "Bøherad",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:30.753352+00:00",
+          "retrievedAt": "2026-10-11T15:30:13.603353+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=B%C3%B8herad&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -19078,7 +19078,7 @@
         {
           "query": "Dalane",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:30.121163+00:00",
+          "retrievedAt": "2026-10-11T15:30:12.944897+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Dalane&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -24162,7 +24162,7 @@
         {
           "query": "Dalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:31.594794+00:00",
+          "retrievedAt": "2026-10-11T15:30:14.468136+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Dalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49125,7 +49125,7 @@
         {
           "query": "Dovre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:31.125857+00:00",
+          "retrievedAt": "2026-10-11T15:30:13.952095+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Dovre&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49286,7 +49286,7 @@
         {
           "query": "Drangedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:31.806221+00:00",
+          "retrievedAt": "2026-10-11T15:30:14.666160+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Drangedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49483,7 +49483,7 @@
         {
           "query": "Drevja",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:32.160717+00:00",
+          "retrievedAt": "2026-10-11T15:30:15.003191+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Drevja&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49572,7 +49572,7 @@
         {
           "query": "Edøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:32.538367+00:00",
+          "retrievedAt": "2026-10-11T15:30:15.354023+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ed%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49698,7 +49698,7 @@
         {
           "query": "Egersund",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:32.874202+00:00",
+          "retrievedAt": "2026-10-11T15:30:15.715731+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Egersund&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49862,7 +49862,7 @@
         {
           "query": "Egersundkanten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:33.241137+00:00",
+          "retrievedAt": "2026-10-11T15:30:16.072116+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Egersundkanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -49882,7 +49882,7 @@
         {
           "query": "Egersundkanten",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:34.302324+00:00",
+          "retrievedAt": "2026-10-11T15:30:17.153290+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Egersundkanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -50482,7 +50482,7 @@
         {
           "query": "Egge",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:33.579726+00:00",
+          "retrievedAt": "2026-10-11T15:30:16.423197+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Egge&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -51183,7 +51183,7 @@
         {
           "query": "Eid",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:33.969037+00:00",
+          "retrievedAt": "2026-10-11T15:30:16.850141+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -52519,7 +52519,7 @@
         {
           "query": "Eide",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:34.718757+00:00",
+          "retrievedAt": "2026-10-11T15:30:17.591464+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eide&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -56411,7 +56411,7 @@
         {
           "query": "Eidfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:34.989182+00:00",
+          "retrievedAt": "2026-10-11T15:30:17.854684+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eidfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -56536,7 +56536,7 @@
         {
           "query": "Eidsberg",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:35.354349+00:00",
+          "retrievedAt": "2026-10-11T15:30:18.194372+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eidsberg&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -56556,7 +56556,7 @@
         {
           "query": "Eidsberg",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:36.616751+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.475098+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eidsberg&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -57690,7 +57690,7 @@
         {
           "query": "Eidskog",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:35.715801+00:00",
+          "retrievedAt": "2026-10-11T15:30:18.634809+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eidskog&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -57779,7 +57779,7 @@
         {
           "query": "Eiken",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:36.070940+00:00",
+          "retrievedAt": "2026-10-11T15:30:18.926885+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eiken&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -58084,7 +58084,7 @@
         {
           "query": "Eikesdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:36.782172+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.643580+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eikesdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -58202,7 +58202,7 @@
         {
           "query": "Eksingedalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:37.140130+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.982553+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eksingedalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -58350,7 +58350,7 @@
         {
           "query": "Elverum",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:37.514918+00:00",
+          "retrievedAt": "2026-10-11T15:30:20.365815+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Elverum&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -59735,7 +59735,7 @@
         {
           "query": "Eresfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:37.826194+00:00",
+          "retrievedAt": "2026-10-11T15:30:20.716351+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eresfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -59811,7 +59811,7 @@
         {
           "query": "Etne",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:38.179568+00:00",
+          "retrievedAt": "2026-10-11T15:30:21.276924+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Etne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -60012,7 +60012,7 @@
         {
           "query": "Etnedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:38.535097+00:00",
+          "retrievedAt": "2026-10-11T15:30:21.454539+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Etnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -60105,7 +60105,7 @@
         {
           "query": "Etnedalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:38.885978+00:00",
+          "retrievedAt": "2026-10-11T15:30:21.887697+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Etnedalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -60225,7 +60225,7 @@
         {
           "query": "Evanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:39.310272+00:00",
+          "retrievedAt": "2026-10-11T15:30:22.132704+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Evanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -60314,7 +60314,7 @@
         {
           "query": "Evje",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:39.594905+00:00",
+          "retrievedAt": "2026-10-11T15:30:22.506904+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Evje&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -60943,7 +60943,7 @@
         {
           "query": "Fauske",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:39.962775+00:00",
+          "retrievedAt": "2026-10-11T15:30:22.857250+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fauske&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61320,7 +61320,7 @@
         {
           "query": "Finnmark",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:40.303977+00:00",
+          "retrievedAt": "2026-10-11T15:30:23.200709+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Finnmark&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61410,7 +61410,7 @@
         {
           "query": "Finnskogen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:40.681908+00:00",
+          "retrievedAt": "2026-10-11T15:30:23.559291+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Finnskogen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61526,7 +61526,7 @@
         {
           "query": "Finsland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:41.032926+00:00",
+          "retrievedAt": "2026-10-11T15:30:23.916558+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Finsland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61651,7 +61651,7 @@
         {
           "query": "Fjaler",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:41.381936+00:00",
+          "retrievedAt": "2026-10-11T15:30:24.246598+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fjaler&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61740,7 +61740,7 @@
         {
           "query": "Fjotland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:41.726914+00:00",
+          "retrievedAt": "2026-10-11T15:30:24.589360+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fjotland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -61911,7 +61911,7 @@
         {
           "query": "Flakstad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:42.078333+00:00",
+          "retrievedAt": "2026-10-11T15:30:24.979486+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Flakstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -62216,7 +62216,7 @@
         {
           "query": "Flatdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:42.440826+00:00",
+          "retrievedAt": "2026-10-11T15:30:25.324773+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Flatdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -62364,7 +62364,7 @@
         {
           "query": "Flåbygd",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:42.780966+00:00",
+          "retrievedAt": "2026-10-11T15:30:25.669172+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fl%C3%A5bygd&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -62384,7 +62384,7 @@
         {
           "query": "Flåbygd",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:43.887691+00:00",
+          "retrievedAt": "2026-10-11T15:30:26.764163+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fl%C3%A5bygd&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63512,7 +63512,7 @@
         {
           "query": "Foldereid",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:43.145995+00:00",
+          "retrievedAt": "2026-10-11T15:30:26.007680+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Foldereid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63637,7 +63637,7 @@
         {
           "query": "Folldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:43.497169+00:00",
+          "retrievedAt": "2026-10-11T15:30:26.360659+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Folldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63726,7 +63726,7 @@
         {
           "query": "Forsand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:49.862475+00:00",
+          "retrievedAt": "2026-10-11T15:30:27.096609+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Forsand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63746,7 +63746,7 @@
         {
           "query": "Forsand ()",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:48.817080+00:00",
+          "retrievedAt": "2026-10-11T15:30:28.125379+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Forsand+%28%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63947,7 +63947,7 @@
         {
           "query": "Forsand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:49.862475+00:00",
+          "retrievedAt": "2026-10-11T15:30:27.441300+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Forsand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -63967,7 +63967,7 @@
         {
           "query": "Forsand()",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:50.217981+00:00",
+          "retrievedAt": "2026-10-11T15:30:28.493044+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Forsand%28%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -64168,7 +64168,7 @@
         {
           "query": "Fosen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:44.916812+00:00",
+          "retrievedAt": "2026-10-11T15:30:27.782778+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fosen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -64356,7 +64356,7 @@
         {
           "query": "Frei",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:45.266821+00:00",
+          "retrievedAt": "2026-10-11T15:30:28.857075+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Frei&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -64517,7 +64517,7 @@
         {
           "query": "Fron",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:45.981898+00:00",
+          "retrievedAt": "2026-10-11T15:30:29.208903+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fron&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -64537,7 +64537,7 @@
         {
           "query": "Fron",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:46.770221+00:00",
+          "retrievedAt": "2026-10-11T15:30:30.348267+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fron&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -65677,7 +65677,7 @@
         {
           "query": "Fræna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:47.043117+00:00",
+          "retrievedAt": "2026-10-11T15:30:29.540927+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%A6na&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -65766,7 +65766,7 @@
         {
           "query": "Frøya (Froan)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:47.388066+00:00",
+          "retrievedAt": "2026-10-11T15:30:29.913440+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%B8ya+%28Froan%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -65786,7 +65786,7 @@
         {
           "query": "Froan",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:47.744414+00:00",
+          "retrievedAt": "2026-10-11T15:30:31.000417+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Froan&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -65806,7 +65806,7 @@
         {
           "query": "Frøya",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:48.471146+00:00",
+          "retrievedAt": "2026-10-11T15:30:32.039448+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66183,7 +66183,7 @@
         {
           "query": "Fusa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:49.529058+00:00",
+          "retrievedAt": "2026-10-11T15:30:30.623285+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fusa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66344,7 +66344,7 @@
         {
           "query": "Fyresdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:50.586814+00:00",
+          "retrievedAt": "2026-10-11T15:30:31.319779+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fyresdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66433,7 +66433,7 @@
         {
           "query": "Fåberg",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:50.928273+00:00",
+          "retrievedAt": "2026-10-11T15:30:31.677949+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=F%C3%A5berg&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66630,7 +66630,7 @@
         {
           "query": "Gaular",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:51.283220+00:00",
+          "retrievedAt": "2026-10-11T15:30:32.386055+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gaular&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66755,7 +66755,7 @@
         {
           "query": "Gauldalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:51.637854+00:00",
+          "retrievedAt": "2026-10-11T15:30:32.747981+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gauldalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -66835,7 +66835,7 @@
         {
           "query": "Gausdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:52.001497+00:00",
+          "retrievedAt": "2026-10-11T15:30:33.098991+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gausdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -67032,7 +67032,7 @@
         {
           "query": "Gildeskål",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:52.326923+00:00",
+          "retrievedAt": "2026-10-11T15:30:33.439227+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gildesk%C3%A5l&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -67122,7 +67122,7 @@
         {
           "query": "Gjemnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:52.724118+00:00",
+          "retrievedAt": "2026-10-11T15:30:33.843093+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gjemnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -67283,7 +67283,7 @@
         {
           "query": "Gjerstad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:53.056528+00:00",
+          "retrievedAt": "2026-10-11T15:30:34.171669+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gjerstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -68344,7 +68344,7 @@
         {
           "query": "Gjøvdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:53.415812+00:00",
+          "retrievedAt": "2026-10-11T15:30:34.516308+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gj%C3%B8vdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -68434,7 +68434,7 @@
         {
           "query": "Glemmen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:53.762411+00:00",
+          "retrievedAt": "2026-10-11T15:30:34.865258+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Glemmen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -68559,7 +68559,7 @@
         {
           "query": "Gloppen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:54.129142+00:00",
+          "retrievedAt": "2026-10-11T15:30:35.227775+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gloppen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -68792,7 +68792,7 @@
         {
           "query": "Gol",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:54.460753+00:00",
+          "retrievedAt": "2026-10-11T15:30:35.598581+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gol&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -68917,7 +68917,7 @@
         {
           "query": "Gran",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:54.865978+00:00",
+          "retrievedAt": "2026-10-11T15:30:35.977082+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gran&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -70950,7 +70950,7 @@
         {
           "query": "Granvin",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:55.167818+00:00",
+          "retrievedAt": "2026-10-11T15:30:36.277143+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Granvin&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -71075,7 +71075,7 @@
         {
           "query": "Greipstad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:55.529117+00:00",
+          "retrievedAt": "2026-10-11T15:30:36.633159+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Greipstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -71201,7 +71201,7 @@
         {
           "query": "Grindheim",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:55.926786+00:00",
+          "retrievedAt": "2026-10-11T15:30:36.974366+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Grindheim&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -71615,7 +71615,7 @@
         {
           "query": "Grong",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:56.225179+00:00",
+          "retrievedAt": "2026-10-11T15:30:37.329182+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Grong&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -71776,7 +71776,7 @@
         {
           "query": "Gudbrandsdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:56.602854+00:00",
+          "retrievedAt": "2026-10-11T15:30:37.695052+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gudbrandsdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -72232,7 +72232,7 @@
         {
           "query": "Gulen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:56.930533+00:00",
+          "retrievedAt": "2026-10-11T15:30:38.041404+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gulen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -72501,7 +72501,7 @@
         {
           "query": "Hadeland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:57.275149+00:00",
+          "retrievedAt": "2026-10-11T15:30:38.419372+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hadeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -72625,7 +72625,7 @@
         {
           "query": "Hadsel",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:57.631121+00:00",
+          "retrievedAt": "2026-10-11T15:30:38.762789+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hadsel&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -72715,7 +72715,7 @@
         {
           "query": "Hallingdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:58.010726+00:00",
+          "retrievedAt": "2026-10-11T15:30:39.094014+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hallingdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -72907,7 +72907,7 @@
         {
           "query": "Halsa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:58.342817+00:00",
+          "retrievedAt": "2026-10-11T15:30:39.465863+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Halsa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -73104,7 +73104,7 @@
         {
           "query": "Haltfjilldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:58.705076+00:00",
+          "retrievedAt": "2026-10-11T15:30:39.867682+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Haltfjilldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -73124,7 +73124,7 @@
         {
           "query": "Haltfjilldal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:08:59.805100+00:00",
+          "retrievedAt": "2026-10-11T15:30:40.931642+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Haltfjilldal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74256,7 +74256,7 @@
         {
           "query": "Hardanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:59.051244+00:00",
+          "retrievedAt": "2026-10-11T15:30:40.156986+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hardanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74372,7 +74372,7 @@
         {
           "query": "Harkmark",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:59.400456+00:00",
+          "retrievedAt": "2026-10-11T15:30:40.532203+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Harkmark&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74448,7 +74448,7 @@
         {
           "query": "Hattfjelldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:00.120208+00:00",
+          "retrievedAt": "2026-10-11T15:30:41.214191+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hattfjelldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74540,7 +74540,7 @@
         {
           "query": "Heddal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:00.463623+00:00",
+          "retrievedAt": "2026-10-11T15:30:41.591862+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Heddal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74665,7 +74665,7 @@
         {
           "query": "Hedmark",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:00.814653+00:00",
+          "retrievedAt": "2026-10-11T15:30:41.950401+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hedmark&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -74685,7 +74685,7 @@
         {
           "query": "Hedmark",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:01.934602+00:00",
+          "retrievedAt": "2026-10-11T15:30:43.055240+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hedmark&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -75842,7 +75842,7 @@
         {
           "query": "Helgeland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:01.175994+00:00",
+          "retrievedAt": "2026-10-11T15:30:42.289458+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Helgeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76382,7 +76382,7 @@
         {
           "query": "Hemne",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:01.521301+00:00",
+          "retrievedAt": "2026-10-11T15:30:42.652538+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hemne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76471,7 +76471,7 @@
         {
           "query": "Hemsedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:02.233526+00:00",
+          "retrievedAt": "2026-10-11T15:30:43.356063+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hemsedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76668,7 +76668,7 @@
         {
           "query": "Herdla",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:02.576470+00:00",
+          "retrievedAt": "2026-10-11T15:30:43.707607+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Herdla&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76793,7 +76793,7 @@
         {
           "query": "Hermansverk",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:02.932722+00:00",
+          "retrievedAt": "2026-10-11T15:30:44.068439+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hermansverk&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76869,7 +76869,7 @@
         {
           "query": "Hitra",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:03.309869+00:00",
+          "retrievedAt": "2026-10-11T15:30:44.421668+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hitra&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -76994,7 +76994,7 @@
         {
           "query": "Hjartdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:03.647542+00:00",
+          "retrievedAt": "2026-10-11T15:30:44.776374+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hjartdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77158,7 +77158,7 @@
         {
           "query": "Hjartdal (Sauland)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:03.989396+00:00",
+          "retrievedAt": "2026-10-11T15:30:45.126890+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hjartdal+%28Sauland%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77178,7 +77178,7 @@
         {
           "query": "Sauland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:05.061987+00:00",
+          "retrievedAt": "2026-10-11T15:30:46.197234+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sauland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77198,7 +77198,7 @@
         {
           "query": "Hjartdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:03.647542+00:00",
+          "retrievedAt": "2026-10-11T15:30:44.776374+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hjartdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77434,7 +77434,7 @@
         {
           "query": "Hjelmeland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:04.351303+00:00",
+          "retrievedAt": "2026-10-11T15:30:45.494876+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hjelmeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77811,7 +77811,7 @@
         {
           "query": "Hjørundfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:04.696323+00:00",
+          "retrievedAt": "2026-10-11T15:30:45.826797+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hj%C3%B8rundfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -77831,7 +77831,7 @@
         {
           "query": "Hjørundfjord",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:05.787545+00:00",
+          "retrievedAt": "2026-10-11T15:30:46.928823+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hj%C3%B8rundfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -78969,7 +78969,7 @@
         {
           "query": "Hof",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:05.429104+00:00",
+          "retrievedAt": "2026-10-11T15:30:46.546272+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hof&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -79081,7 +79081,7 @@
         {
           "query": "Hol",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:06.152659+00:00",
+          "retrievedAt": "2026-10-11T15:30:47.311605+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hol&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -81245,7 +81245,7 @@
         {
           "query": "Holt",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:06.507342+00:00",
+          "retrievedAt": "2026-10-11T15:30:47.691244+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Holt&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -83998,7 +83998,7 @@
         {
           "query": "Holum",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:06.821388+00:00",
+          "retrievedAt": "2026-10-11T15:30:47.951387+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Holum&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -84340,7 +84340,7 @@
         {
           "query": "Hordaland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:07.172819+00:00",
+          "retrievedAt": "2026-10-11T15:30:48.332174+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hordaland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -84360,7 +84360,7 @@
         {
           "query": "Hordaland",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:08.438960+00:00",
+          "retrievedAt": "2026-10-11T15:30:49.600916+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hordaland&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -85517,7 +85517,7 @@
         {
           "query": "Hosanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:25.830414+00:00",
+          "retrievedAt": "2026-10-11T15:30:08.630048+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -85606,7 +85606,7 @@
         {
           "query": "Hustad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:07.537465+00:00",
+          "retrievedAt": "2026-10-11T15:30:48.692372+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hustad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -86006,7 +86006,7 @@
         {
           "query": "Hvaler",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:07.877324+00:00",
+          "retrievedAt": "2026-10-11T15:30:49.027248+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hvaler&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -86131,7 +86131,7 @@
         {
           "query": "Hyen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:08.582074+00:00",
+          "retrievedAt": "2026-10-11T15:30:49.762759+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hyen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -86207,7 +86207,7 @@
         {
           "query": "Hå",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:08.962395+00:00",
+          "retrievedAt": "2026-10-11T15:30:50.091215+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A5&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -86332,7 +86332,7 @@
         {
           "query": "Hålandsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:09.324474+00:00",
+          "retrievedAt": "2026-10-11T15:30:50.458207+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A5landsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -86352,7 +86352,7 @@
         {
           "query": "Hålandsdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:10.523274+00:00",
+          "retrievedAt": "2026-10-11T15:30:51.755661+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A5landsdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -87485,7 +87485,7 @@
         {
           "query": "Hægeland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:09.672173+00:00",
+          "retrievedAt": "2026-10-11T15:30:50.817752+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%A6geland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -87862,7 +87862,7 @@
         {
           "query": "Høgsfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:10.027175+00:00",
+          "retrievedAt": "2026-10-11T15:30:51.158405+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8gsfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -87882,7 +87882,7 @@
         {
           "query": "Høgsfjord",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:11.218956+00:00",
+          "retrievedAt": "2026-10-11T15:30:52.428030+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8gsfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -89035,7 +89035,7 @@
         {
           "query": "Høland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:10.718573+00:00",
+          "retrievedAt": "2026-10-11T15:30:51.910686+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -89055,7 +89055,7 @@
         {
           "query": "Høland",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:11.995315+00:00",
+          "retrievedAt": "2026-10-11T15:30:53.187249+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8land&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -90188,7 +90188,7 @@
         {
           "query": "Idd",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:11.422225+00:00",
+          "retrievedAt": "2026-10-11T15:30:52.663869+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Idd&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -90292,7 +90292,7 @@
         {
           "query": "Innherad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:12.137821+00:00",
+          "retrievedAt": "2026-10-11T15:30:53.348181+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Innherad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -90368,7 +90368,7 @@
         {
           "query": "Innvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:12.484479+00:00",
+          "retrievedAt": "2026-10-11T15:30:53.686566+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Innvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -90457,7 +90457,7 @@
         {
           "query": "Jostedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:12.835481+00:00",
+          "retrievedAt": "2026-10-11T15:30:54.050667+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Jostedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -90477,7 +90477,7 @@
         {
           "query": "Jostedal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:13.958748+00:00",
+          "retrievedAt": "2026-10-11T15:30:55.192113+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Jostedal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -91625,7 +91625,7 @@
         {
           "query": "Jostedalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:13.227802+00:00",
+          "retrievedAt": "2026-10-11T15:30:54.393855+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Jostedalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -91705,7 +91705,7 @@
         {
           "query": "Jæren",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:13.529005+00:00",
+          "retrievedAt": "2026-10-11T15:30:54.747706+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=J%C3%A6ren&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -91849,7 +91849,7 @@
         {
           "query": "Jølster",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:14.241989+00:00",
+          "retrievedAt": "2026-10-11T15:30:55.461757+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=J%C3%B8lster&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -91974,7 +91974,7 @@
         {
           "query": "Kabelvåg",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:14.595993+00:00",
+          "retrievedAt": "2026-10-11T15:30:55.809531+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kabelv%C3%A5g&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -92162,7 +92162,7 @@
         {
           "query": "Karlsøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:14.954974+00:00",
+          "retrievedAt": "2026-10-11T15:30:56.196489+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Karls%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -92297,7 +92297,7 @@
         {
           "query": "Karmøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:15.303948+00:00",
+          "retrievedAt": "2026-10-11T15:30:56.538655+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Karm%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -92445,7 +92445,7 @@
         {
           "query": "Kinsarvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:15.678527+00:00",
+          "retrievedAt": "2026-10-11T15:30:57.864109+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kinsarvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -92652,7 +92652,7 @@
         {
           "query": "Kolbu",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:16.012732+00:00",
+          "retrievedAt": "2026-10-11T15:30:57.244371+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kolbu&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93245,7 +93245,7 @@
         {
           "query": "Konsmo",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:16.370931+00:00",
+          "retrievedAt": "2026-10-11T15:30:57.580677+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Konsmo&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93406,7 +93406,7 @@
         {
           "query": "Korgen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:16.721839+00:00",
+          "retrievedAt": "2026-10-11T15:30:57.939375+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Korgen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93567,7 +93567,7 @@
         {
           "query": "Kragerø (Skåtøy)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:17.062027+00:00",
+          "retrievedAt": "2026-10-11T15:30:58.328073+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Krager%C3%B8+%28Sk%C3%A5t%C3%B8y%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93587,7 +93587,7 @@
         {
           "query": "Skåtøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:18.156233+00:00",
+          "retrievedAt": "2026-10-11T15:30:59.368795+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sk%C3%A5t%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93607,7 +93607,7 @@
         {
           "query": "Kragerø",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:19.203144+00:00",
+          "retrievedAt": "2026-10-11T15:31:00.433947+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Krager%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93850,7 +93850,7 @@
         {
           "query": "Krødsherad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:17.403523+00:00",
+          "retrievedAt": "2026-10-11T15:30:58.651306+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kr%C3%B8dsherad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -93870,7 +93870,7 @@
         {
           "query": "Krødsherad",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:18.495889+00:00",
+          "retrievedAt": "2026-10-11T15:30:59.739408+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kr%C3%B8dsherad&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -94139,7 +94139,7 @@
         {
           "query": "Kvam",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:17.771856+00:00",
+          "retrievedAt": "2026-10-11T15:30:59.043859+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kvam&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -95439,7 +95439,7 @@
         {
           "query": "Kvikne",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:18.829669+00:00",
+          "retrievedAt": "2026-10-11T15:31:00.058995+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kvikne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -95672,7 +95672,7 @@
         {
           "query": "Kvinesdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:19.548464+00:00",
+          "retrievedAt": "2026-10-11T15:31:00.814572+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kvinesdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -95843,7 +95843,7 @@
         {
           "query": "Kviteseid",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:19.900517+00:00",
+          "retrievedAt": "2026-10-11T15:31:01.136346+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kviteseid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -95968,7 +95968,7 @@
         {
           "query": "Kvænangen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:20.241220+00:00",
+          "retrievedAt": "2026-10-11T15:31:01.489390+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kv%C3%A6nangen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96143,7 +96143,7 @@
         {
           "query": "Land",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:20.643465+00:00",
+          "retrievedAt": "2026-10-11T15:31:01.843757+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96415,7 +96415,7 @@
         {
           "query": "Land (Torpa)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:20.981907+00:00",
+          "retrievedAt": "2026-10-11T15:31:02.235281+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Land+%28Torpa%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96435,7 +96435,7 @@
         {
           "query": "Torpa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:22.066930+00:00",
+          "retrievedAt": "2026-10-11T15:31:03.264484+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Torpa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96455,7 +96455,7 @@
         {
           "query": "Land",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:20.643465+00:00",
+          "retrievedAt": "2026-10-11T15:31:01.843757+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96845,7 +96845,7 @@
         {
           "query": "Lardal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:21.339757+00:00",
+          "retrievedAt": "2026-10-11T15:31:02.531820+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lardal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -96865,7 +96865,7 @@
         {
           "query": "Lardal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:22.556722+00:00",
+          "retrievedAt": "2026-10-11T15:31:03.774570+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lardal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -97998,7 +97998,7 @@
         {
           "query": "Leiranger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:21.720300+00:00",
+          "retrievedAt": "2026-10-11T15:31:02.897988+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Leiranger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -98123,7 +98123,7 @@
         {
           "query": "Leirfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:22.741368+00:00",
+          "retrievedAt": "2026-10-11T15:31:04.024501+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Leirfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -98213,7 +98213,7 @@
         {
           "query": "Leksvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:23.109841+00:00",
+          "retrievedAt": "2026-10-11T15:31:04.332599+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Leksvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -98338,7 +98338,7 @@
         {
           "query": "Lesja",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:23.473481+00:00",
+          "retrievedAt": "2026-10-11T15:31:04.677708+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lesja&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -98499,7 +98499,7 @@
         {
           "query": "Lindesneskanten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:23.846593+00:00",
+          "retrievedAt": "2026-10-11T15:31:05.052992+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -98519,7 +98519,7 @@
         {
           "query": "Lindesneskanten",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:24.962299+00:00",
+          "retrievedAt": "2026-10-11T15:31:06.166306+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -99643,7 +99643,7 @@
         {
           "query": "Lindesneskanten (Sør-Audnedal)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:24.244794+00:00",
+          "retrievedAt": "2026-10-11T15:31:05.453508+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten+%28S%C3%B8r-Audnedal%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -99663,7 +99663,7 @@
         {
           "query": "Sør-Audnedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:25.234280+00:00",
+          "retrievedAt": "2026-10-11T15:31:06.463250+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Audnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -99683,7 +99683,7 @@
         {
           "query": "Lindesneskanten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:23.846593+00:00",
+          "retrievedAt": "2026-10-11T15:31:05.052992+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -99703,7 +99703,7 @@
         {
           "query": "Lindesneskanten (Sør-Audnedal)",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:26.342918+00:00",
+          "retrievedAt": "2026-10-11T15:31:07.564096+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lindesneskanten+%28S%C3%B8r-Audnedal%29&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100011,7 +100011,7 @@
         {
           "query": "Lindås",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:24.513909+00:00",
+          "retrievedAt": "2026-10-11T15:31:05.767838+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lind%C3%A5s&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100352,7 +100352,7 @@
         {
           "query": "Lista",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:25.582765+00:00",
+          "retrievedAt": "2026-10-11T15:31:06.812714+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lista&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100549,7 +100549,7 @@
         {
           "query": "Lofoten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:25.936064+00:00",
+          "retrievedAt": "2026-10-11T15:31:07.138643+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lofoten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100653,7 +100653,7 @@
         {
           "query": "Lofoten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:25.936064+00:00",
+          "retrievedAt": "2026-10-11T15:31:07.868086+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lofoten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100673,7 +100673,7 @@
         {
           "query": "Lofoten ()",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:32.282672+00:00",
+          "retrievedAt": "2026-10-11T15:31:08.924832+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lofoten+%28%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100778,7 +100778,7 @@
         {
           "query": "Lom",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:27.005676+00:00",
+          "retrievedAt": "2026-10-11T15:31:08.402575+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lom&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100867,7 +100867,7 @@
         {
           "query": "Luster",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:27.348604+00:00",
+          "retrievedAt": "2026-10-11T15:31:08.568942+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Luster&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -100995,7 +100995,7 @@
         {
           "query": "Luster (Urnes)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:27.711798+00:00",
+          "retrievedAt": "2026-10-11T15:31:09.277373+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Luster+%28Urnes%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -101015,7 +101015,7 @@
         {
           "query": "Urnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:28.774929+00:00",
+          "retrievedAt": "2026-10-11T15:31:10.338670+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Urnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -101035,7 +101035,7 @@
         {
           "query": "Luster",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:27.348604+00:00",
+          "retrievedAt": "2026-10-11T15:31:08.568942+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Luster&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -101415,7 +101415,7 @@
         {
           "query": "Lyngdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:28.066141+00:00",
+          "retrievedAt": "2026-10-11T15:31:09.632293+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lyngdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -101900,7 +101900,7 @@
         {
           "query": "Lyngen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:29.128082+00:00",
+          "retrievedAt": "2026-10-11T15:31:09.968794+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lyngen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -102847,7 +102847,7 @@
         {
           "query": "Lårdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:29.456868+00:00",
+          "retrievedAt": "2026-10-11T15:31:10.697095+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A5rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -102939,7 +102939,7 @@
         {
           "query": "Lårdal (Høydalsmo)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:29.811733+00:00",
+          "retrievedAt": "2026-10-11T15:31:11.041214+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A5rdal+%28H%C3%B8ydalsmo%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -102959,7 +102959,7 @@
         {
           "query": "Høydalsmo",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:30.512291+00:00",
+          "retrievedAt": "2026-10-11T15:31:12.126114+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8ydalsmo&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -102979,7 +102979,7 @@
         {
           "query": "Lårdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:29.456868+00:00",
+          "retrievedAt": "2026-10-11T15:31:10.697095+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A5rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -103107,7 +103107,7 @@
         {
           "query": "Lærdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:30.173506+00:00",
+          "retrievedAt": "2026-10-11T15:31:11.391487+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=L%C3%A6rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -103304,7 +103304,7 @@
         {
           "query": "Mandal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:30.882395+00:00",
+          "retrievedAt": "2026-10-11T15:31:11.769785+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mandal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -103432,7 +103432,7 @@
         {
           "query": "Mandalskanten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:31.609706+00:00",
+          "retrievedAt": "2026-10-11T15:31:12.484098+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mandalskanten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -103452,7 +103452,7 @@
         {
           "query": "Mandalskanten",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:32.727142+00:00",
+          "retrievedAt": "2026-10-11T15:31:13.599640+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mandalskanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -104585,7 +104585,7 @@
         {
           "query": "Meldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:31.946483+00:00",
+          "retrievedAt": "2026-10-11T15:31:12.814775+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Meldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -104746,7 +104746,7 @@
         {
           "query": "Mo",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:33.136628+00:00",
+          "retrievedAt": "2026-10-11T15:31:13.261804+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mo&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -110658,7 +110658,7 @@
         {
           "query": "Mo (Skafså)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:33.378676+00:00",
+          "retrievedAt": "2026-10-11T15:31:13.898568+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mo+%28Skafs%C3%A5%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -110678,7 +110678,7 @@
         {
           "query": "Skafså",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:34.408959+00:00",
+          "retrievedAt": "2026-10-11T15:31:14.959532+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Skafs%C3%A5&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -110698,7 +110698,7 @@
         {
           "query": "Mo",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:33.136628+00:00",
+          "retrievedAt": "2026-10-11T15:31:13.261804+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mo&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -116682,7 +116682,7 @@
         {
           "query": "Modum",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:33.711014+00:00",
+          "retrievedAt": "2026-10-11T15:31:14.222498+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Modum&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -116702,7 +116702,7 @@
         {
           "query": "Modum",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:34.843092+00:00",
+          "retrievedAt": "2026-10-11T15:31:15.432363+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Modum&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -117835,7 +117835,7 @@
         {
           "query": "Molde",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:34.069921+00:00",
+          "retrievedAt": "2026-10-11T15:31:14.613291+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Molde&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118140,7 +118140,7 @@
         {
           "query": "Mykland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:35.121471+00:00",
+          "retrievedAt": "2026-10-11T15:31:15.690024+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mykland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118373,7 +118373,7 @@
         {
           "query": "Målselv",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:35.469691+00:00",
+          "retrievedAt": "2026-10-11T15:31:16.068046+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=M%C3%A5lselv&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118472,7 +118472,7 @@
         {
           "query": "Namdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:35.842554+00:00",
+          "retrievedAt": "2026-10-11T15:31:16.512092+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Namdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118628,7 +118628,7 @@
         {
           "query": "Nannestad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:36.177754+00:00",
+          "retrievedAt": "2026-10-11T15:31:16.772872+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nannestad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118718,7 +118718,7 @@
         {
           "query": "Nedstrand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:36.532975+00:00",
+          "retrievedAt": "2026-10-11T15:31:17.048753+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nedstrand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -118843,7 +118843,7 @@
         {
           "query": "Nes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.009443+00:00",
+          "retrievedAt": "2026-10-11T15:31:17.549952+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -126011,7 +126011,7 @@
         {
           "query": "Nesna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.242239+00:00",
+          "retrievedAt": "2026-10-11T15:31:17.865490+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -126136,7 +126136,7 @@
         {
           "query": "Nesset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -127956,7 +127956,7 @@
         {
           "query": "Nesset (Eidsvåg)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.951843+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.471685+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset+%28Eidsv%C3%A5g%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -127976,7 +127976,7 @@
         {
           "query": "Eidsvåg",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:38.987833+00:00",
+          "retrievedAt": "2026-10-11T15:31:19.546663+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eidsv%C3%A5g&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -127996,7 +127996,7 @@
         {
           "query": "Nesset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -130104,7 +130104,7 @@
         {
           "query": "Nesset (Eikesdalen)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:38.301804+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.863582+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset+%28Eikesdalen%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -130124,7 +130124,7 @@
         {
           "query": "Eikesdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:36.782172+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.643580+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eikesdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -130144,7 +130144,7 @@
         {
           "query": "Nesset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -132038,7 +132038,7 @@
         {
           "query": "Nesset(Eikesdalen)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:38.635812+00:00",
+          "retrievedAt": "2026-10-11T15:31:19.183495+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset%28Eikesdalen%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -132058,7 +132058,7 @@
         {
           "query": "Eikesdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:36.782172+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.643580+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eikesdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -132078,7 +132078,7 @@
         {
           "query": "Nesset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -133972,7 +133972,7 @@
         {
           "query": "Nesset, Eikesdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:39.353248+00:00",
+          "retrievedAt": "2026-10-11T15:31:19.882005+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset%2C+Eikesdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -133992,7 +133992,7 @@
         {
           "query": "Nesset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:37.625968+00:00",
+          "retrievedAt": "2026-10-11T15:31:18.143733+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -134012,7 +134012,7 @@
         {
           "query": "Eikesdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:08:36.782172+00:00",
+          "retrievedAt": "2026-10-11T15:30:19.643580+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eikesdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -135906,7 +135906,7 @@
         {
           "query": "Nissedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:39.761258+00:00",
+          "retrievedAt": "2026-10-11T15:31:20.291927+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nissedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136032,7 +136032,7 @@
         {
           "query": "Nord-Aukra (øya Gossa)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:40.081289+00:00",
+          "retrievedAt": "2026-10-11T15:31:20.584965+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra+%28%C3%B8ya+Gossa%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136052,7 +136052,7 @@
         {
           "query": "øya Gossa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:41.122569+00:00",
+          "retrievedAt": "2026-10-11T15:31:21.665871+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%B8ya+Gossa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136072,7 +136072,7 @@
         {
           "query": "Nord-Aukra",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:42.170206+00:00",
+          "retrievedAt": "2026-10-11T15:31:22.748542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136092,7 +136092,7 @@
         {
           "query": "Nord-Aukra (øya Gossa)",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:43.260231+00:00",
+          "retrievedAt": "2026-10-11T15:31:23.799134+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra+%28%C3%B8ya+Gossa%29&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136616,7 +136616,7 @@
         {
           "query": "Nord-Aukra, Gossa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:40.401719+00:00",
+          "retrievedAt": "2026-10-11T15:31:20.947602+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra%2C+Gossa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136636,7 +136636,7 @@
         {
           "query": "Nord-Aukra",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:42.170206+00:00",
+          "retrievedAt": "2026-10-11T15:31:22.024225+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136656,7 +136656,7 @@
         {
           "query": "Gossa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:42.539717+00:00",
+          "retrievedAt": "2026-10-11T15:31:23.069859+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gossa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136748,7 +136748,7 @@
         {
           "query": "Nord-Aurdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:40.760245+00:00",
+          "retrievedAt": "2026-10-11T15:31:21.313988+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aurdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -136768,7 +136768,7 @@
         {
           "query": "Nord-Aurdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:42.062359+00:00",
+          "retrievedAt": "2026-10-11T15:31:22.620952+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aurdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -137914,7 +137914,7 @@
         {
           "query": "Nord-Etnedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:42.872137+00:00",
+          "retrievedAt": "2026-10-11T15:31:23.449017+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Etnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -137934,7 +137934,7 @@
         {
           "query": "Nord-Etnedal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:44.139273+00:00",
+          "retrievedAt": "2026-10-11T15:31:24.676133+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Etnedal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -139058,7 +139058,7 @@
         {
           "query": "Nord-Fron",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:43.585978+00:00",
+          "retrievedAt": "2026-10-11T15:31:24.124859+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Fron&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -139078,7 +139078,7 @@
         {
           "query": "Nord-Fron",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:44.876427+00:00",
+          "retrievedAt": "2026-10-11T15:31:25.514919+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Fron&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -140218,7 +140218,7 @@
         {
           "query": "Nord-Frøya",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:44.284980+00:00",
+          "retrievedAt": "2026-10-11T15:31:24.868663+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -140238,7 +140238,7 @@
         {
           "query": "Nord-Frøya",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:45.617731+00:00",
+          "retrievedAt": "2026-10-11T15:31:26.157436+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Fr%C3%B8ya&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -141371,7 +141371,7 @@
         {
           "query": "Nord-Norge",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:45.033258+00:00",
+          "retrievedAt": "2026-10-11T15:31:25.591928+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Norge&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -141447,7 +141447,7 @@
         {
           "query": "Nord-Odal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:45.695582+00:00",
+          "retrievedAt": "2026-10-11T15:31:26.256092+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Odal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -141467,7 +141467,7 @@
         {
           "query": "Nord-Odal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:47.045915+00:00",
+          "retrievedAt": "2026-10-11T15:31:27.627807+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Odal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -142600,7 +142600,7 @@
         {
           "query": "Nord-Rana",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:52.394192+00:00",
+          "retrievedAt": "2026-10-11T15:31:26.673991+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Rana&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -142620,7 +142620,7 @@
         {
           "query": "Nord-Rana ()",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:51.520264+00:00",
+          "retrievedAt": "2026-10-11T15:31:27.701447+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Rana+%28%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -142640,7 +142640,7 @@
         {
           "query": "Nord-Rana",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:12:06.922255+00:00",
+          "retrievedAt": "2026-10-11T15:31:29.138405+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Rana&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -143786,7 +143786,7 @@
         {
           "query": "Nord-Trøndelag",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:46.412508+00:00",
+          "retrievedAt": "2026-10-11T15:31:26.982781+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Tr%C3%B8ndelag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -143806,7 +143806,7 @@
         {
           "query": "Nord-Trøndelag",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:47.194236+00:00",
+          "retrievedAt": "2026-10-11T15:31:28.114405+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Tr%C3%B8ndelag&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -145077,7 +145077,7 @@
         {
           "query": "Nordfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:47.791658+00:00",
+          "retrievedAt": "2026-10-11T15:31:28.415006+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -145447,7 +145447,7 @@
         {
           "query": "Nordfold",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:48.147533+00:00",
+          "retrievedAt": "2026-10-11T15:31:29.129731+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordfold&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -145467,7 +145467,7 @@
         {
           "query": "Nordfold",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:49.177650+00:00",
+          "retrievedAt": "2026-10-11T15:31:30.110385+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordfold&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -146587,7 +146587,7 @@
         {
           "query": "Nordhordland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:48.505008+00:00",
+          "retrievedAt": "2026-10-11T15:31:29.462833+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -146663,7 +146663,7 @@
         {
           "query": "Nordland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:49.249864+00:00",
+          "retrievedAt": "2026-10-11T15:31:30.219735+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -147436,7 +147436,7 @@
         {
           "query": "Nordmøre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:49.567502+00:00",
+          "retrievedAt": "2026-10-11T15:31:30.516165+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordm%C3%B8re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -147524,7 +147524,7 @@
         {
           "query": "Nordsømna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:49.921805+00:00",
+          "retrievedAt": "2026-10-11T15:31:30.869101+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nords%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -147544,7 +147544,7 @@
         {
           "query": "Nordsømna",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:51.223565+00:00",
+          "retrievedAt": "2026-10-11T15:31:32.175937+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nords%C3%B8mna&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -148664,7 +148664,7 @@
         {
           "query": "Numedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:50.610640+00:00",
+          "retrievedAt": "2026-10-11T15:31:31.225887+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Numedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -148776,7 +148776,7 @@
         {
           "query": "Odda",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:51.680880+00:00",
+          "retrievedAt": "2026-10-11T15:31:31.574330+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Odda&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -149153,7 +149153,7 @@
         {
           "query": "Oddernes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:52.042047+00:00",
+          "retrievedAt": "2026-10-11T15:31:32.273173+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Oddernes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -149314,7 +149314,7 @@
         {
           "query": "Ofoten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:52.729076+00:00",
+          "retrievedAt": "2026-10-11T15:31:32.617524+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ofoten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -149423,7 +149423,7 @@
         {
           "query": "Ogndal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:53.096389+00:00",
+          "retrievedAt": "2026-10-11T15:31:32.974579+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ogndal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -149512,7 +149512,7 @@
         {
           "query": "Oppdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:53.456744+00:00",
+          "retrievedAt": "2026-10-11T15:31:33.336896+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Oppdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -150213,7 +150213,7 @@
         {
           "query": "Oppland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:53.797351+00:00",
+          "retrievedAt": "2026-10-11T15:31:33.683305+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Oppland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -150557,7 +150557,7 @@
         {
           "query": "Randesund",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:54.150932+00:00",
+          "retrievedAt": "2026-10-11T15:31:34.060412+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Randesund&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -150646,7 +150646,7 @@
         {
           "query": "Rauland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:54.519466+00:00",
+          "retrievedAt": "2026-10-11T15:31:34.392684+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rauland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -150807,7 +150807,7 @@
         {
           "query": "Rendal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:54.875333+00:00",
+          "retrievedAt": "2026-10-11T15:31:34.750578+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rendal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -151008,7 +151008,7 @@
         {
           "query": "Rendalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:55.231888+00:00",
+          "retrievedAt": "2026-10-11T15:31:35.106495+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rendalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -151236,7 +151236,7 @@
         {
           "query": "Rennesøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:55.570074+00:00",
+          "retrievedAt": "2026-10-11T15:31:35.449916+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rennes%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -151361,7 +151361,7 @@
         {
           "query": "Rindal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:55.957630+00:00",
+          "retrievedAt": "2026-10-11T15:31:35.813013+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rindal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -151705,7 +151705,7 @@
         {
           "query": "Rindal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:55.957630+00:00",
+          "retrievedAt": "2026-10-11T15:31:36.163892+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rindal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -152050,7 +152050,7 @@
         {
           "query": "Ringebu",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:56.648691+00:00",
+          "retrievedAt": "2026-10-11T15:31:36.519998+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ringebu&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -152211,7 +152211,7 @@
         {
           "query": "Ringerike",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:56.998245+00:00",
+          "retrievedAt": "2026-10-11T15:31:36.875922+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ringerike&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -152431,7 +152431,7 @@
         {
           "query": "Ringsaker",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:57.342753+00:00",
+          "retrievedAt": "2026-10-11T15:31:37.222220+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ringsaker&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -152451,7 +152451,7 @@
         {
           "query": "Ringsaker",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:58.207782+00:00",
+          "retrievedAt": "2026-10-11T15:31:38.486802+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ringsaker&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -153584,7 +153584,7 @@
         {
           "query": "Rissa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:57.693787+00:00",
+          "retrievedAt": "2026-10-11T15:31:37.604153+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rissa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -153673,7 +153673,7 @@
         {
           "query": "Rogaland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:58.773266+00:00",
+          "retrievedAt": "2026-10-11T15:31:37.954009+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rogaland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -153693,7 +153693,7 @@
         {
           "query": "Rogaland",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:09:59.655333+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.154179+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rogaland&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -154914,7 +154914,7 @@
         {
           "query": "Rollag",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.157387+00:00",
+          "retrievedAt": "2026-10-11T15:31:38.720981+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rollag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155111,7 +155111,7 @@
         {
           "query": "Romsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.837298+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.395542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155300,7 +155300,7 @@
         {
           "query": "Romsdal (Gjelsten)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:00.271418+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.719373+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal+%28Gjelsten%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155320,7 +155320,7 @@
         {
           "query": "Gjelsten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:00.909158+00:00",
+          "retrievedAt": "2026-10-11T15:31:40.793665+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gjelsten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155340,7 +155340,7 @@
         {
           "query": "Romsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.837298+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.395542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155529,7 +155529,7 @@
         {
           "query": "Romsdal (Miøy)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:00.554491+00:00",
+          "retrievedAt": "2026-10-11T15:31:40.110017+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal+%28Mi%C3%B8y%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155549,7 +155549,7 @@
         {
           "query": "Miøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:01.624888+00:00",
+          "retrievedAt": "2026-10-11T15:31:41.165856+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mi%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155569,7 +155569,7 @@
         {
           "query": "Romsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.837298+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.395542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155758,7 +155758,7 @@
         {
           "query": "Romsdal (Otrøy)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:01.971537+00:00",
+          "retrievedAt": "2026-10-11T15:31:40.453278+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal+%28Otr%C3%B8y%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155778,7 +155778,7 @@
         {
           "query": "Otrøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:03.029457+00:00",
+          "retrievedAt": "2026-10-11T15:31:41.562089+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Otr%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155798,7 +155798,7 @@
         {
           "query": "Romsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.837298+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.395542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -155982,7 +155982,7 @@
         {
           "query": "Romsdal, Vistdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:02.369221+00:00",
+          "retrievedAt": "2026-10-11T15:31:41.909783+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal%2C+Vistdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -156002,7 +156002,7 @@
         {
           "query": "Romsdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:59.837298+00:00",
+          "retrievedAt": "2026-10-11T15:31:39.395542+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -156022,7 +156022,7 @@
         {
           "query": "Vistdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:03.369189+00:00",
+          "retrievedAt": "2026-10-11T15:31:43.153008+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vistdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -156206,7 +156206,7 @@
         {
           "query": "Rovde",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:02.661303+00:00",
+          "retrievedAt": "2026-10-11T15:31:42.503786+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rovde&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -156226,7 +156226,7 @@
         {
           "query": "Rovde",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:03.879355+00:00",
+          "retrievedAt": "2026-10-11T15:31:43.570238+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rovde&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -157363,7 +157363,7 @@
         {
           "query": "Råde",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:04.108267+00:00",
+          "retrievedAt": "2026-10-11T15:31:42.651079+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%A5de&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -157524,7 +157524,7 @@
         {
           "query": "Rælingen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:04.455596+00:00",
+          "retrievedAt": "2026-10-11T15:31:43.642184+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%A6lingen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -157649,7 +157649,7 @@
         {
           "query": "Rødenes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:04.784983+00:00",
+          "retrievedAt": "2026-10-11T15:31:43.998958+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8denes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -157669,7 +157669,7 @@
         {
           "query": "Rødenes",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:05.995314+00:00",
+          "retrievedAt": "2026-10-11T15:31:45.262018+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8denes&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -158802,7 +158802,7 @@
         {
           "query": "Røldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:05.149364+00:00",
+          "retrievedAt": "2026-10-11T15:31:44.357460+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8ldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -158927,7 +158927,7 @@
         {
           "query": "Rømskog",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:05.495160+00:00",
+          "retrievedAt": "2026-10-11T15:31:44.683007+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8mskog&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -158947,7 +158947,7 @@
         {
           "query": "Rømskog",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:06.608182+00:00",
+          "retrievedAt": "2026-10-11T15:31:45.801614+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8mskog&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -160080,7 +160080,7 @@
         {
           "query": "Røyken",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:06.221923+00:00",
+          "retrievedAt": "2026-10-11T15:31:45.429958+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8yken&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -160277,7 +160277,7 @@
         {
           "query": "Salangen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:06.929716+00:00",
+          "retrievedAt": "2026-10-11T15:31:46.129036+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Salangen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -160410,7 +160410,7 @@
         {
           "query": "Saltdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:07.263874+00:00",
+          "retrievedAt": "2026-10-11T15:31:46.448196+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Saltdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -160430,7 +160430,7 @@
         {
           "query": "Saltdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:08.465091+00:00",
+          "retrievedAt": "2026-10-11T15:31:47.683472+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Saltdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -161572,7 +161572,7 @@
         {
           "query": "Salten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:07.625377+00:00",
+          "retrievedAt": "2026-10-11T15:31:46.811232+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Salten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -161724,7 +161724,7 @@
         {
           "query": "Samnanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:07.987694+00:00",
+          "retrievedAt": "2026-10-11T15:31:47.164625+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Samnanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -161849,7 +161849,7 @@
         {
           "query": "Sand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:08.728010+00:00",
+          "retrievedAt": "2026-10-11T15:31:47.918652+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -165417,7 +165417,7 @@
         {
           "query": "Sandar",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:09.048642+00:00",
+          "retrievedAt": "2026-10-11T15:31:48.283062+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sandar&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -165437,7 +165437,7 @@
         {
           "query": "Sandar",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:10.553039+00:00",
+          "retrievedAt": "2026-10-11T15:31:49.499354+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sandar&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -166570,7 +166570,7 @@
         {
           "query": "Sande",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:09.433516+00:00",
+          "retrievedAt": "2026-10-11T15:31:48.618475+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sande&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -168914,7 +168914,7 @@
         {
           "query": "Sandsvær",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:10.107052+00:00",
+          "retrievedAt": "2026-10-11T15:31:48.933654+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sandsv%C3%A6r&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -168934,7 +168934,7 @@
         {
           "query": "Sandsvær",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:11.091452+00:00",
+          "retrievedAt": "2026-10-11T15:31:50.188423+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sandsv%C3%A6r&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -170067,7 +170067,7 @@
         {
           "query": "Sauda",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:10.458160+00:00",
+          "retrievedAt": "2026-10-11T15:31:49.644608+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sauda&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -170228,7 +170228,7 @@
         {
           "query": "Sauherad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:11.189509+00:00",
+          "retrievedAt": "2026-10-11T15:31:50.476859+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sauherad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -170248,7 +170248,7 @@
         {
           "query": "Sauherad",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:12.252006+00:00",
+          "retrievedAt": "2026-10-11T15:31:51.556321+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sauherad&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -171381,7 +171381,7 @@
         {
           "query": "Sel",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:11.505405+00:00",
+          "retrievedAt": "2026-10-11T15:31:50.702541+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sel&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -171722,7 +171722,7 @@
         {
           "query": "Selje",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:11.889306+00:00",
+          "retrievedAt": "2026-10-11T15:31:51.046690+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Selje&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -171955,7 +171955,7 @@
         {
           "query": "Seljord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:12.577456+00:00",
+          "retrievedAt": "2026-10-11T15:31:51.761797+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Seljord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -172152,7 +172152,7 @@
         {
           "query": "Sem (Slagen)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:12.920334+00:00",
+          "retrievedAt": "2026-10-11T15:31:52.114642+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sem+%28Slagen%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -172172,7 +172172,7 @@
         {
           "query": "Slagen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:13.977095+00:00",
+          "retrievedAt": "2026-10-11T15:31:53.174583+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Slagen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -172192,7 +172192,7 @@
         {
           "query": "Sem",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:15.074848+00:00",
+          "retrievedAt": "2026-10-11T15:31:54.245959+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sem&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -173145,7 +173145,7 @@
         {
           "query": "Setesdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:13.275337+00:00",
+          "retrievedAt": "2026-10-11T15:31:52.541022+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Setesdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -173270,7 +173270,7 @@
         {
           "query": "Sigdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:13.621001+00:00",
+          "retrievedAt": "2026-10-11T15:31:52.833632+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sigdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -173290,7 +173290,7 @@
         {
           "query": "Sigdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:14.758294+00:00",
+          "retrievedAt": "2026-10-11T15:31:53.946439+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sigdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -174423,7 +174423,7 @@
         {
           "query": "Sirdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:14.337255+00:00",
+          "retrievedAt": "2026-10-11T15:31:53.547617+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sirdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -174513,7 +174513,7 @@
         {
           "query": "Skiptvet",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:15.410987+00:00",
+          "retrievedAt": "2026-10-11T15:31:54.615828+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Skiptvet&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -174602,7 +174602,7 @@
         {
           "query": "Skjerstad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:15.780010+00:00",
+          "retrievedAt": "2026-10-11T15:31:54.964619+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Skjerstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -174943,7 +174943,7 @@
         {
           "query": "Skudenes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:16.106430+00:00",
+          "retrievedAt": "2026-10-11T15:31:55.297380+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Skudenes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175068,7 +175068,7 @@
         {
           "query": "Skånevik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:16.468056+00:00",
+          "retrievedAt": "2026-10-11T15:31:55.647699+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sk%C3%A5nevik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175193,7 +175193,7 @@
         {
           "query": "Skåre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:16.854924+00:00",
+          "retrievedAt": "2026-10-11T15:31:56.016713+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sk%C3%A5re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175498,7 +175498,7 @@
         {
           "query": "Snertingdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:17.168664+00:00",
+          "retrievedAt": "2026-10-11T15:31:56.359246+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Snertingdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175659,7 +175659,7 @@
         {
           "query": "Sogn og Fjordane",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:17.622353+00:00",
+          "retrievedAt": "2026-10-11T15:31:56.718527+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sogn+og+Fjordane&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175764,7 +175764,7 @@
         {
           "query": "Sogndal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:17.899997+00:00",
+          "retrievedAt": "2026-10-11T15:31:57.074656+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sogndal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175876,7 +175876,7 @@
         {
           "query": "Sokndal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:18.256719+00:00",
+          "retrievedAt": "2026-10-11T15:31:57.434623+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sokndal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -175965,7 +175965,7 @@
         {
           "query": "Soknedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:18.838390+00:00",
+          "retrievedAt": "2026-10-11T15:31:57.769855+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Soknedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176054,7 +176054,7 @@
         {
           "query": "Solør",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:18.947556+00:00",
+          "retrievedAt": "2026-10-11T15:31:58.131141+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sol%C3%B8r&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176170,7 +176170,7 @@
         {
           "query": "Spangereid",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:19.288104+00:00",
+          "retrievedAt": "2026-10-11T15:31:58.488059+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Spangereid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176259,7 +176259,7 @@
         {
           "query": "Stadsbygd",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:19.654842+00:00",
+          "retrievedAt": "2026-10-11T15:31:58.861761+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stadsbygd&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176420,7 +176420,7 @@
         {
           "query": "Steigen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:20.006122+00:00",
+          "retrievedAt": "2026-10-11T15:31:59.429999+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Steigen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176689,7 +176689,7 @@
         {
           "query": "Stjørdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:20.366336+00:00",
+          "retrievedAt": "2026-10-11T15:31:59.592379+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stj%C3%B8rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176778,7 +176778,7 @@
         {
           "query": "Stoksund",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:20.728762+00:00",
+          "retrievedAt": "2026-10-11T15:32:00.067547+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stoksund&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176867,7 +176867,7 @@
         {
           "query": "Stor-Elvdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:21.062964+00:00",
+          "retrievedAt": "2026-10-11T15:32:00.346210+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stor-Elvdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -176887,7 +176887,7 @@
         {
           "query": "Stor-Elvdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:22.568651+00:00",
+          "retrievedAt": "2026-10-11T15:32:01.675664+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stor-Elvdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -178024,7 +178024,7 @@
         {
           "query": "Stord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:21.419567+00:00",
+          "retrievedAt": "2026-10-11T15:32:00.695520+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -178153,7 +178153,7 @@
         {
           "query": "Strand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:21.872787+00:00",
+          "retrievedAt": "2026-10-11T15:32:01.085723+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Strand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -185442,7 +185442,7 @@
         {
           "query": "Stranda",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:22.665264+00:00",
+          "retrievedAt": "2026-10-11T15:32:01.842879+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stranda&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -200839,7 +200839,7 @@
         {
           "query": "Strandvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:22.834517+00:00",
+          "retrievedAt": "2026-10-11T15:32:02.044638+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Strandvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -201360,7 +201360,7 @@
         {
           "query": "Straumsnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:23.233510+00:00",
+          "retrievedAt": "2026-10-11T15:32:02.443067+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Straumsnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -202997,7 +202997,7 @@
         {
           "query": "Stryn",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:23.541907+00:00",
+          "retrievedAt": "2026-10-11T15:32:02.776697+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Stryn&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203122,7 +203122,7 @@
         {
           "query": "Suldal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:23.985133+00:00",
+          "retrievedAt": "2026-10-11T15:32:03.080868+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Suldal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203247,7 +203247,7 @@
         {
           "query": "Sunnfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:24.257126+00:00",
+          "retrievedAt": "2026-10-11T15:32:03.439278+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203323,7 +203323,7 @@
         {
           "query": "Sunnhordland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:24.594179+00:00",
+          "retrievedAt": "2026-10-11T15:32:03.814712+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203407,7 +203407,7 @@
         {
           "query": "Sunnmøre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:24.943012+00:00",
+          "retrievedAt": "2026-10-11T15:32:04.244479+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnm%C3%B8re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203483,7 +203483,7 @@
         {
           "query": "Sunnylven",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:25.295820+00:00",
+          "retrievedAt": "2026-10-11T15:32:04.510532+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnylven&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -203503,7 +203503,7 @@
         {
           "query": "Sunnylven",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:26.485701+00:00",
+          "retrievedAt": "2026-10-11T15:32:05.697591+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnylven&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -204640,7 +204640,7 @@
         {
           "query": "Surnadal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:25.664677+00:00",
+          "retrievedAt": "2026-10-11T15:32:04.876590+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Surnadal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -204729,7 +204729,7 @@
         {
           "query": "Søgne",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:26.032357+00:00",
+          "retrievedAt": "2026-10-11T15:32:05.366564+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8gne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -204854,7 +204854,7 @@
         {
           "query": "Sømna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:26.725555+00:00",
+          "retrievedAt": "2026-10-11T15:32:05.950069+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -204979,7 +204979,7 @@
         {
           "query": "Søndeled",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:27.066932+00:00",
+          "retrievedAt": "2026-10-11T15:32:06.422931+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndeled&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -205140,7 +205140,7 @@
         {
           "query": "Søndre Høland",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:27.456413+00:00",
+          "retrievedAt": "2026-10-11T15:32:06.626022+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndre+H%C3%B8land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -205160,7 +205160,7 @@
         {
           "query": "Søndre Høland",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:28.705033+00:00",
+          "retrievedAt": "2026-10-11T15:32:07.922507+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndre+H%C3%B8land&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -206293,7 +206293,7 @@
         {
           "query": "Søndre Land",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:27.783455+00:00",
+          "retrievedAt": "2026-10-11T15:32:06.994931+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndre+Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -206382,7 +206382,7 @@
         {
           "query": "Sør-Audnedal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:25.234280+00:00",
+          "retrievedAt": "2026-10-11T15:31:06.463250+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Audnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -206402,7 +206402,7 @@
         {
           "query": "Sør-Audnedal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:28.181877+00:00",
+          "retrievedAt": "2026-10-11T15:32:07.443314+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Audnedal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -207539,7 +207539,7 @@
         {
           "query": "Sør-Aurdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:28.853227+00:00",
+          "retrievedAt": "2026-10-11T15:32:08.088693+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Aurdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -207559,7 +207559,7 @@
         {
           "query": "Sør-Aurdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:30.053555+00:00",
+          "retrievedAt": "2026-10-11T15:32:09.232279+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Aurdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -208705,7 +208705,7 @@
         {
           "query": "Sør-Fron",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:29.199969+00:00",
+          "retrievedAt": "2026-10-11T15:32:08.495492+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Fron&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -208725,7 +208725,7 @@
         {
           "query": "Sør-Fron",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:30.323953+00:00",
+          "retrievedAt": "2026-10-11T15:32:09.554604+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Fron&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -209858,7 +209858,7 @@
         {
           "query": "Sør-Frøya",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:29.530322+00:00",
+          "retrievedAt": "2026-10-11T15:32:08.759550+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -209878,7 +209878,7 @@
         {
           "query": "Sør-Frøya",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:30.784711+00:00",
+          "retrievedAt": "2026-10-11T15:32:10.009174+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Fr%C3%B8ya&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -211011,7 +211011,7 @@
         {
           "query": "Sør-Odal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:30.955773+00:00",
+          "retrievedAt": "2026-10-11T15:32:10.171979+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Odal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -211031,7 +211031,7 @@
         {
           "query": "Sør-Odal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:32.114887+00:00",
+          "retrievedAt": "2026-10-11T15:32:11.382203+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Odal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -212168,7 +212168,7 @@
         {
           "query": "Sør-Rana",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:31.295871+00:00",
+          "retrievedAt": "2026-10-11T15:32:10.530515+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Rana&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -212188,7 +212188,7 @@
         {
           "query": "Sør-Rana",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:32.489889+00:00",
+          "retrievedAt": "2026-10-11T15:32:11.730448+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Rana&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -213333,7 +213333,7 @@
         {
           "query": "Sør-Trøndelag",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:31.668247+00:00",
+          "retrievedAt": "2026-10-11T15:32:10.877082+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Tr%C3%B8ndelag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -213353,7 +213353,7 @@
         {
           "query": "Sør-Trøndelag",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:32.734632+00:00",
+          "retrievedAt": "2026-10-11T15:32:11.964319+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Tr%C3%B8ndelag&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -214413,7 +214413,7 @@
         {
           "query": "Sør-Varanger",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:33.088189+00:00",
+          "retrievedAt": "2026-10-11T15:32:12.304832+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Varanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -214502,7 +214502,7 @@
         {
           "query": "Sørfjorden",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:33.454766+00:00",
+          "retrievedAt": "2026-10-11T15:32:12.656880+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8rfjorden&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -216034,7 +216034,7 @@
         {
           "query": "Sørfold",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:33.770012+00:00",
+          "retrievedAt": "2026-10-11T15:32:12.990492+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8rfold&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -216123,7 +216123,7 @@
         {
           "query": "Telemark",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:34.166218+00:00",
+          "retrievedAt": "2026-10-11T15:32:13.371857+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Telemark&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -216348,7 +216348,7 @@
         {
           "query": "Time",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:34.489654+00:00",
+          "retrievedAt": "2026-10-11T15:32:13.689540+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Time&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -216437,7 +216437,7 @@
         {
           "query": "Tjølling",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:34.836898+00:00",
+          "retrievedAt": "2026-10-11T15:32:14.044106+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8lling&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -216457,7 +216457,7 @@
         {
           "query": "Tjølling",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:35.996798+00:00",
+          "retrievedAt": "2026-10-11T15:32:15.179671+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8lling&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -217590,7 +217590,7 @@
         {
           "query": "Tjøme",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:35.201676+00:00",
+          "retrievedAt": "2026-10-11T15:32:14.440657+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8me&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -217679,7 +217679,7 @@
         {
           "query": "Tjøtta",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:35.565621+00:00",
+          "retrievedAt": "2026-10-11T15:32:14.742349+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8tta&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -217948,7 +217948,7 @@
         {
           "query": "Tolga",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:36.257305+00:00",
+          "retrievedAt": "2026-10-11T15:32:15.457952+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tolga&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218037,7 +218037,7 @@
         {
           "query": "Torpa",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:22.066930+00:00",
+          "retrievedAt": "2026-10-11T15:31:03.264484+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Torpa&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218198,7 +218198,7 @@
         {
           "query": "Torvastad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:36.611141+00:00",
+          "retrievedAt": "2026-10-11T15:32:15.809151+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Torvastad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218288,7 +218288,7 @@
         {
           "query": "Toten",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:36.952199+00:00",
+          "retrievedAt": "2026-10-11T15:32:16.164502+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Toten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218436,7 +218436,7 @@
         {
           "query": "Tovdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:37.320035+00:00",
+          "retrievedAt": "2026-10-11T15:32:16.522133+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tovdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218598,7 +218598,7 @@
         {
           "query": "Tresfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:37.662610+00:00",
+          "retrievedAt": "2026-10-11T15:32:16.876090+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tresfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -218618,7 +218618,7 @@
         {
           "query": "Tresfjord",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:38.864071+00:00",
+          "retrievedAt": "2026-10-11T15:32:18.063876+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tresfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -219751,7 +219751,7 @@
         {
           "query": "Treungen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:38.018511+00:00",
+          "retrievedAt": "2026-10-11T15:32:17.231617+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Treungen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -219863,7 +219863,7 @@
         {
           "query": "Troms",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:38.375870+00:00",
+          "retrievedAt": "2026-10-11T15:32:17.579272+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Troms&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -219883,7 +219883,7 @@
         {
           "query": "Troms",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:39.703822+00:00",
+          "retrievedAt": "2026-10-11T15:32:18.914924+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Troms&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -221109,7 +221109,7 @@
         {
           "query": "Troms",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:38.375870+00:00",
+          "retrievedAt": "2026-10-11T15:32:18.303633+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Troms&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -221129,7 +221129,7 @@
         {
           "query": "Troms",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:39.703822+00:00",
+          "retrievedAt": "2026-10-11T15:32:19.641155+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Troms&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -222356,7 +222356,7 @@
         {
           "query": "Tromøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:39.819057+00:00",
+          "retrievedAt": "2026-10-11T15:32:19.025130+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Trom%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -222376,7 +222376,7 @@
         {
           "query": "Tromøy",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:40.621860+00:00",
+          "retrievedAt": "2026-10-11T15:32:20.150578+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Trom%C3%B8y&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -223509,7 +223509,7 @@
         {
           "query": "Trysil",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:40.162783+00:00",
+          "retrievedAt": "2026-10-11T15:32:19.708779+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Trysil&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -223634,7 +223634,7 @@
         {
           "query": "Tynset",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:41.232437+00:00",
+          "retrievedAt": "2026-10-11T15:32:20.411324+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tynset&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -223759,7 +223759,7 @@
         {
           "query": "Tysfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:41.576074+00:00",
+          "retrievedAt": "2026-10-11T15:32:20.770487+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tysfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -223863,7 +223863,7 @@
         {
           "query": "Ullensvang",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:41.920974+00:00",
+          "retrievedAt": "2026-10-11T15:32:21.119922+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ullensvang&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -223988,7 +223988,7 @@
         {
           "query": "Ulstein",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:42.290235+00:00",
+          "retrievedAt": "2026-10-11T15:32:21.488752+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ulstein&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -224185,7 +224185,7 @@
         {
           "query": "Ulvik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:42.638571+00:00",
+          "retrievedAt": "2026-10-11T15:32:21.850806+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ulvik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -224418,7 +224418,7 @@
         {
           "query": "Urnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:09:28.774929+00:00",
+          "retrievedAt": "2026-10-11T15:31:10.338670+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Urnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -224710,7 +224710,7 @@
         {
           "query": "Valdres",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:42.981098+00:00",
+          "retrievedAt": "2026-10-11T15:32:22.192674+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Valdres&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -224862,7 +224862,7 @@
         {
           "query": "Valestrand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:43.333593+00:00",
+          "retrievedAt": "2026-10-11T15:32:22.536343+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Valestrand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -224987,7 +224987,7 @@
         {
           "query": "Valle",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:44.084012+00:00",
+          "retrievedAt": "2026-10-11T15:32:22.970905+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Valle&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -226732,7 +226732,7 @@
         {
           "query": "Vang",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:44.438906+00:00",
+          "retrievedAt": "2026-10-11T15:32:23.315924+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vang&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -229904,7 +229904,7 @@
         {
           "query": "Vangsnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:44.769548+00:00",
+          "retrievedAt": "2026-10-11T15:32:23.613621+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vangsnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -230232,7 +230232,7 @@
         {
           "query": "Vardal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:45.127227+00:00",
+          "retrievedAt": "2026-10-11T15:32:23.971704+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vardal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -230252,7 +230252,7 @@
         {
           "query": "Vardal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:46.432996+00:00",
+          "retrievedAt": "2026-10-11T15:32:25.173648+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vardal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -231385,7 +231385,7 @@
         {
           "query": "Vats",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:45.505881+00:00",
+          "retrievedAt": "2026-10-11T15:32:24.307254+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vats&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -231510,7 +231510,7 @@
         {
           "query": "Vefsn",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:45.848629+00:00",
+          "retrievedAt": "2026-10-11T15:32:24.659927+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vefsn&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -231530,7 +231530,7 @@
         {
           "query": "Vefsn",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:46.997238+00:00",
+          "retrievedAt": "2026-10-11T15:32:25.824898+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vefsn&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -232679,7 +232679,7 @@
         {
           "query": "Vefsn, Sømna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:46.532940+00:00",
+          "retrievedAt": "2026-10-11T15:32:25.352792+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vefsn%2C+S%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -232699,7 +232699,7 @@
         {
           "query": "Vefsn",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:45.848629+00:00",
+          "retrievedAt": "2026-10-11T15:32:24.659927+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vefsn&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -232719,7 +232719,7 @@
         {
           "query": "Sømna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:26.725555+00:00",
+          "retrievedAt": "2026-10-11T15:32:05.950069+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -232854,7 +232854,7 @@
         {
           "query": "Vega",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:47.247298+00:00",
+          "retrievedAt": "2026-10-11T15:32:26.068014+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vega&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -232943,7 +232943,7 @@
         {
           "query": "Vegårshei",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:47.590087+00:00",
+          "retrievedAt": "2026-10-11T15:32:26.424239+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Veg%C3%A5rshei&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -233068,7 +233068,7 @@
         {
           "query": "Veitastrond",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:47.937674+00:00",
+          "retrievedAt": "2026-10-11T15:32:26.788946+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Veitastrond&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -233144,7 +233144,7 @@
         {
           "query": "Veitestrand",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:48.298801+00:00",
+          "retrievedAt": "2026-10-11T15:32:27.116032+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Veitestrand&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -233164,7 +233164,7 @@
         {
           "query": "Veitestrand",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:49.633549+00:00",
+          "retrievedAt": "2026-10-11T15:32:28.412968+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Veitestrand&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -234284,7 +234284,7 @@
         {
           "query": "Velfjord",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:48.658116+00:00",
+          "retrievedAt": "2026-10-11T15:32:27.474157+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Velfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -234304,7 +234304,7 @@
         {
           "query": "Velfjord",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:49.857501+00:00",
+          "retrievedAt": "2026-10-11T15:32:28.670691+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Velfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -235481,7 +235481,7 @@
         {
           "query": "Vennesla",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:48.999714+00:00",
+          "retrievedAt": "2026-10-11T15:32:27.865028+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vennesla&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -235606,7 +235606,7 @@
         {
           "query": "Verdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:50.071792+00:00",
+          "retrievedAt": "2026-10-11T15:32:28.897001+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Verdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -235875,7 +235875,7 @@
         {
           "query": "Vesna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:50.428914+00:00",
+          "retrievedAt": "2026-10-11T15:32:29.257107+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vesna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -235895,7 +235895,7 @@
         {
           "query": "Vesna",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:51.928564+00:00",
+          "retrievedAt": "2026-10-11T15:32:30.703634+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vesna&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -237015,7 +237015,7 @@
         {
           "query": "Vest-Agder",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:50.840393+00:00",
+          "retrievedAt": "2026-10-11T15:32:29.607650+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vest-Agder&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -237104,7 +237104,7 @@
         {
           "query": "Vestby",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:51.190176+00:00",
+          "retrievedAt": "2026-10-11T15:32:30.068950+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestby&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -241009,7 +241009,7 @@
         {
           "query": "Vestfold",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:51.838274+00:00",
+          "retrievedAt": "2026-10-11T15:32:30.694279+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestfold&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -241029,7 +241029,7 @@
         {
           "query": "Vestfold",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:52.781828+00:00",
+          "retrievedAt": "2026-10-11T15:32:31.570018+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestfold&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -242186,7 +242186,7 @@
         {
           "query": "Vestnes",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:52.200348+00:00",
+          "retrievedAt": "2026-10-11T15:32:31.028610+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -242599,7 +242599,7 @@
         {
           "query": "Vestre Gausdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:52.926574+00:00",
+          "retrievedAt": "2026-10-11T15:32:31.753614+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestre+Gausdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -242619,7 +242619,7 @@
         {
           "query": "Vestre Gausdal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:54.195726+00:00",
+          "retrievedAt": "2026-10-11T15:32:33.047621+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestre+Gausdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -243752,7 +243752,7 @@
         {
           "query": "Vestre Slidre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:53.246113+00:00",
+          "retrievedAt": "2026-10-11T15:32:32.075884+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestre+Slidre&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -243772,7 +243772,7 @@
         {
           "query": "Vestre Slidre",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:54.577348+00:00",
+          "retrievedAt": "2026-10-11T15:32:33.407945+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vestre+Slidre&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -244909,7 +244909,7 @@
         {
           "query": "Vevelstad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:53.618453+00:00",
+          "retrievedAt": "2026-10-11T15:32:32.476633+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vevelstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -245106,7 +245106,7 @@
         {
           "query": "Vigmostad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:54.669949+00:00",
+          "retrievedAt": "2026-10-11T15:32:33.520625+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vigmostad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -245267,7 +245267,7 @@
         {
           "query": "Vik",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:55.154166+00:00",
+          "retrievedAt": "2026-10-11T15:32:33.951441+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vik&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -251568,7 +251568,7 @@
         {
           "query": "Vikna",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:55.378863+00:00",
+          "retrievedAt": "2026-10-11T15:32:34.565483+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vikna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -251694,7 +251694,7 @@
         {
           "query": "Vinje",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:55.786384+00:00",
+          "retrievedAt": "2026-10-11T15:32:35.070672+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vinje&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -252454,7 +252454,7 @@
         {
           "query": "Volda",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:56.111249+00:00",
+          "retrievedAt": "2026-10-11T15:32:35.372041+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Volda&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -252579,7 +252579,7 @@
         {
           "query": "Voss",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:56.467176+00:00",
+          "retrievedAt": "2026-10-11T15:32:35.425389+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Voss&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -252704,7 +252704,7 @@
         {
           "query": "Vågan",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:56.835406+00:00",
+          "retrievedAt": "2026-10-11T15:32:35.752519+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5gan&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -254056,7 +254056,7 @@
         {
           "query": "Vågå",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:57.148298+00:00",
+          "retrievedAt": "2026-10-11T15:32:36.056842+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5g%C3%A5&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -254076,7 +254076,7 @@
         {
           "query": "Vågå",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:10:58.540467+00:00",
+          "retrievedAt": "2026-10-11T15:32:37.508778+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5g%C3%A5&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -255213,7 +255213,7 @@
         {
           "query": "Våle",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:57.508663+00:00",
+          "retrievedAt": "2026-10-11T15:32:36.421189+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5le&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -255662,7 +255662,7 @@
         {
           "query": "Våler",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:57.859223+00:00",
+          "retrievedAt": "2026-10-11T15:32:36.778245+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5ler&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -256350,7 +256350,7 @@
         {
           "query": "Værøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:58.593316+00:00",
+          "retrievedAt": "2026-10-11T15:32:37.501532+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A6r%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -256475,7 +256475,7 @@
         {
           "query": "Ytre Rendal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:58.900122+00:00",
+          "retrievedAt": "2026-10-11T15:32:37.826366+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ytre+Rendal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -256495,7 +256495,7 @@
         {
           "query": "Ytre Rendal",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:00.143587+00:00",
+          "retrievedAt": "2026-10-11T15:32:39.062768+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ytre+Rendal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -257632,7 +257632,7 @@
         {
           "query": "Ytterøy",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:59.279676+00:00",
+          "retrievedAt": "2026-10-11T15:32:38.195696+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ytter%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -257721,7 +257721,7 @@
         {
           "query": "Åkra",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:10:59.625595+00:00",
+          "retrievedAt": "2026-10-11T15:32:38.530960+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85kra&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -257918,7 +257918,7 @@
         {
           "query": "Ål",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:00.327345+00:00",
+          "retrievedAt": "2026-10-11T15:32:39.276286+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85l&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -258007,7 +258007,7 @@
         {
           "query": "Ålvundeid",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:00.691248+00:00",
+          "retrievedAt": "2026-10-11T15:32:39.597060+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85lvundeid&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -258027,7 +258027,7 @@
         {
           "query": "Ålvundeid",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:01.748864+00:00",
+          "retrievedAt": "2026-10-11T15:32:40.666983+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85lvundeid&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -258696,7 +258696,7 @@
         {
           "query": "Åmli",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:01.039495+00:00",
+          "retrievedAt": "2026-10-11T15:32:39.956866+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85mli&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -259289,7 +259289,7 @@
         {
           "query": "Åmot",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:01.494052+00:00",
+          "retrievedAt": "2026-10-11T15:32:40.374197+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85mot&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -263161,7 +263161,7 @@
         {
           "query": "Åmot (Osen)",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:02.104536+00:00",
+          "retrievedAt": "2026-10-11T15:32:41.012473+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85mot+%28Osen%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -263181,7 +263181,7 @@
         {
           "query": "Osen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:03.389526+00:00",
+          "retrievedAt": "2026-10-11T15:32:42.276333+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Osen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -263201,7 +263201,7 @@
         {
           "query": "Åmot",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:01.494052+00:00",
+          "retrievedAt": "2026-10-11T15:32:40.374197+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85mot&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -279403,7 +279403,7 @@
         {
           "query": "Årdal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:02.449153+00:00",
+          "retrievedAt": "2026-10-11T15:32:41.374845+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85rdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -279947,7 +279947,7 @@
         {
           "query": "Åseral",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:02.833087+00:00",
+          "retrievedAt": "2026-10-11T15:32:41.738528+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85seral&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -280046,7 +280046,7 @@
         {
           "query": "Åsskard",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:03.548300+00:00",
+          "retrievedAt": "2026-10-11T15:32:42.457909+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%85sskard&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -280136,7 +280136,7 @@
         {
           "query": "Øksendal",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:03.894589+00:00",
+          "retrievedAt": "2026-10-11T15:32:42.799249+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98ksendal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -280801,7 +280801,7 @@
         {
           "query": "Øre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:04.253985+00:00",
+          "retrievedAt": "2026-10-11T15:32:43.141157+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -280998,7 +280998,7 @@
         {
           "query": "Ørsta",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:04.588078+00:00",
+          "retrievedAt": "2026-10-11T15:32:43.489113+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98rsta&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -281087,7 +281087,7 @@
         {
           "query": "Østerdalen",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:04.971345+00:00",
+          "retrievedAt": "2026-10-11T15:32:43.849828+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98sterdalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -281779,7 +281779,7 @@
         {
           "query": "Østfold",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:05.318714+00:00",
+          "retrievedAt": "2026-10-11T15:32:44.189469+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98stfold&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -281799,7 +281799,7 @@
         {
           "query": "Østfold",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:06.408596+00:00",
+          "retrievedAt": "2026-10-11T15:32:45.310460+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98stfold&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -282693,7 +282693,7 @@
         {
           "query": "Østmarka",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:05.687439+00:00",
+          "retrievedAt": "2026-10-11T15:32:44.555856+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98stmarka&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -283029,7 +283029,7 @@
         {
           "query": "Østre Slidre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:06.018731+00:00",
+          "retrievedAt": "2026-10-11T15:32:44.902584+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98stre+Slidre&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -283049,7 +283049,7 @@
         {
           "query": "Østre Slidre",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:07.279885+00:00",
+          "retrievedAt": "2026-10-11T15:32:46.181375+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98stre+Slidre&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -284177,7 +284177,7 @@
         {
           "query": "Øvre Eiker",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:06.743602+00:00",
+          "retrievedAt": "2026-10-11T15:32:45.607287+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98vre+Eiker&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -284197,7 +284197,7 @@
         {
           "query": "Øvre Eiker",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:08.026106+00:00",
+          "retrievedAt": "2026-10-11T15:32:46.869493+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98vre+Eiker&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
@@ -285338,7 +285338,7 @@
         {
           "query": "Øvrebø",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:07.443306+00:00",
+          "retrievedAt": "2026-10-11T15:32:46.322344+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98vreb%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -286517,7 +286517,7 @@
         {
           "query": "Øyer",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:08.156099+00:00",
+          "retrievedAt": "2026-10-11T15:32:47.024781+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98yer&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -286642,7 +286642,7 @@
         {
           "query": "Øyestad",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:08.537715+00:00",
+          "retrievedAt": "2026-10-11T15:32:47.439003+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98yestad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -286983,7 +286983,7 @@
         {
           "query": "Øyslebø",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:08.861037+00:00",
+          "retrievedAt": "2026-10-11T15:32:48.028950+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98ysleb%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -287108,7 +287108,7 @@
         {
           "query": "Øystre Slidre",
           "fuzzy": false,
-          "retrievedAt": "2026-10-11T15:11:09.228279+00:00",
+          "retrievedAt": "2026-10-11T15:32:48.276819+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98ystre+Slidre&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
@@ -287128,7 +287128,7 @@
         {
           "query": "Øystre Slidre",
           "fuzzy": true,
-          "retrievedAt": "2026-10-11T15:11:09.666000+00:00",
+          "retrievedAt": "2026-10-11T15:32:48.896825+00:00",
           "pages": [
             {
               "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=%C3%98ystre+Slidre&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

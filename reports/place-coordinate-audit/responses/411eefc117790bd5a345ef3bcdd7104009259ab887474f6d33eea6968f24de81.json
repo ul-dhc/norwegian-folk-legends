@@ -1,7 +1,7 @@
 {
   "query": "Holum",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:06.821388+00:00",
+  "retrievedAt": "2026-10-11T15:30:47.951387+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Holum&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

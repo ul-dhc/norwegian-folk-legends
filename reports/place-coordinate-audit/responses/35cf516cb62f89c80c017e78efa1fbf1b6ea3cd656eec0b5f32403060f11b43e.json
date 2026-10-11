@@ -1,7 +1,7 @@
 {
   "query": "Finnskogen",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:40.681908+00:00",
+  "retrievedAt": "2026-10-11T15:30:23.559291+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Finnskogen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

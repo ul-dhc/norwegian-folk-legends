@@ -1,7 +1,7 @@
 {
   "query": "Skudenes",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:16.106430+00:00",
+  "retrievedAt": "2026-10-11T15:31:55.297380+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Skudenes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Rindal",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:55.957630+00:00",
+  "retrievedAt": "2026-10-11T15:31:36.163892+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rindal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -103,16 +103,15 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 }
 @media(hover:hover) and (pointer:fine){
  .ml-data-page .ml-facet-row:hover:not(:disabled){
-  background:var(--data-hover-bg);border-color:var(--data-hover-line);
-  box-shadow:inset 3px 0 var(--data-hover-line),0 3px 12px var(--data-hover-glow);
+  background:transparent;border-color:transparent;box-shadow:none;color:var(--data-hover-ink);
  }
- .ml-data-page .ml-facet-row:hover:not(:disabled) b{color:var(--data-hover-ink)}
- .ml-data-page .ml-facet-row:hover:not(:disabled):not(.is-selected) .ml-facet-track>span{
-  background:var(--data-hover-line);filter:drop-shadow(0 0 5px var(--data-hover-glow));
+ .ml-data-page .ml-facet-row:hover:not(:disabled) :is(b,small){color:var(--data-hover-ink)}
+ .ml-data-page .ml-facet-row:hover:not(:disabled) .ml-facet-track>span{
+  background:var(--data-hover-line);filter:none;
  }
  .ml-data-page .ml-facet-row.is-selected:hover{
-  background:color-mix(in srgb,var(--chart-blue),var(--data-hover-bg) 80%);
-  border-color:var(--chart-blue);box-shadow:inset 3px 0 var(--chart-blue),0 3px 12px var(--data-hover-glow);
+  background:color-mix(in srgb,var(--chart-blue),transparent 89%);
+  border-color:var(--blue);box-shadow:none;
  }
  .ml-data-page .ml-histogram button:hover:not(:disabled){
   background:var(--data-hover-bg);border-color:var(--data-hover-line);box-shadow:0 3px 12px var(--data-hover-glow);
@@ -169,4 +168,11 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
  .ml-data-page :is(.ml-kpi,.ml-dash-card){transition:none}
  .ml-data-page :is(.ml-kpi,.ml-dash-card):hover{transform:none}
+}
+/* Facet rows highlight their content without lighting up the containing card. */
+.ml-data-page .ml-dash-card:has(.ml-facet-row):hover:has(button:hover:not(:disabled)),
+.ml-data-page .ml-dash-card:has(.ml-facet-row):is(:hover,:focus-within){
+ border-color:var(--line);
+ box-shadow:0 2px 6px color-mix(in srgb,var(--ink),transparent 97%);
+ transform:none;
 }

@@ -1,7 +1,7 @@
 {
   "query": "Ulstein",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:42.290235+00:00",
+  "retrievedAt": "2026-10-11T15:32:21.488752+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ulstein&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

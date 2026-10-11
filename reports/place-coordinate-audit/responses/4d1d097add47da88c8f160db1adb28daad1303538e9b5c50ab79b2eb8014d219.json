@@ -1,7 +1,7 @@
 {
   "query": "Nord-Aukra (øya Gossa)",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:40.081289+00:00",
+  "retrievedAt": "2026-10-11T15:31:20.584965+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nord-Aukra+%28%C3%B8ya+Gossa%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

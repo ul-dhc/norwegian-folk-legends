@@ -1,7 +1,7 @@
 {
   "query": "Rennesøy",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:55.570074+00:00",
+  "retrievedAt": "2026-10-11T15:31:35.449916+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rennes%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

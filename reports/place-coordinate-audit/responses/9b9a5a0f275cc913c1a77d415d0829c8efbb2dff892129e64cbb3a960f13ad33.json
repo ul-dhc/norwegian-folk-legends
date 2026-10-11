@@ -1,7 +1,7 @@
 {
   "query": "Vågå",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:10:58.540467+00:00",
+  "retrievedAt": "2026-10-11T15:32:37.508778+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A5g%C3%A5&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

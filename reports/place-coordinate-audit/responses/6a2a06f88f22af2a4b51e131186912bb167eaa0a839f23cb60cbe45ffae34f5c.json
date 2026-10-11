@@ -1,7 +1,7 @@
 {
   "query": "Fåberg",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:50.928273+00:00",
+  "retrievedAt": "2026-10-11T15:30:31.677949+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=F%C3%A5berg&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

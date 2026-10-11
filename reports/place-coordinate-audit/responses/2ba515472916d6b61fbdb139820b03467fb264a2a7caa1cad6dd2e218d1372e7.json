@@ -1,7 +1,7 @@
 {
   "query": "Miøy",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:01.624888+00:00",
+  "retrievedAt": "2026-10-11T15:31:41.165856+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mi%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

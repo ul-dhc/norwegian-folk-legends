@@ -1,7 +1,7 @@
 {
   "query": "Aust-Agder",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:08:19.896838+00:00",
+  "retrievedAt": "2026-10-11T15:30:02.748043+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aust-Agder&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

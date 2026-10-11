@@ -1,7 +1,7 @@
 {
   "query": "Rødenes",
   "fuzzy": true,
-  "retrievedAt": "2026-10-11T15:10:05.995314+00:00",
+  "retrievedAt": "2026-10-11T15:31:45.262018+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8denes&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",

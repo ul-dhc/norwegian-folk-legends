@@ -1,7 +1,7 @@
 {
   "query": "Karmøy",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:15.303948+00:00",
+  "retrievedAt": "2026-10-11T15:30:56.538655+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Karm%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

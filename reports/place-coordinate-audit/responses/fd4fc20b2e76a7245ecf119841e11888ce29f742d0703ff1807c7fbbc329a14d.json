@@ -1,7 +1,7 @@
 {
   "query": "Nesset (Eidsvåg)",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:37.951843+00:00",
+  "retrievedAt": "2026-10-11T15:31:18.471685+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nesset+%28Eidsv%C3%A5g%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

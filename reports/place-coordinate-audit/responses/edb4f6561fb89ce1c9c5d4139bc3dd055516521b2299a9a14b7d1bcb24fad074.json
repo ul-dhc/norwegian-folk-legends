@@ -1,7 +1,7 @@
 {
   "query": "Hadeland",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:57.275149+00:00",
+  "retrievedAt": "2026-10-11T15:30:38.419372+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hadeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

@@ -1,7 +1,7 @@
 {
   "query": "Fjaler",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:08:41.381936+00:00",
+  "retrievedAt": "2026-10-11T15:30:24.246598+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fjaler&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

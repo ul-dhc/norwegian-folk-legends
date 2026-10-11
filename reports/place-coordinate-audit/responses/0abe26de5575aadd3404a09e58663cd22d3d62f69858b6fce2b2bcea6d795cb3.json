@@ -1,7 +1,7 @@
 {
   "query": "Hemsedal",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:02.233526+00:00",
+  "retrievedAt": "2026-10-11T15:30:43.356063+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hemsedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

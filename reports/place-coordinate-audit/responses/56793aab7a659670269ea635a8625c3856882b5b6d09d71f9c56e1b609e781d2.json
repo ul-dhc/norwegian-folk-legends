@@ -1,7 +1,7 @@
 {
   "query": "Romsdal (Otrøy)",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:01.971537+00:00",
+  "retrievedAt": "2026-10-11T15:31:40.453278+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Romsdal+%28Otr%C3%B8y%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

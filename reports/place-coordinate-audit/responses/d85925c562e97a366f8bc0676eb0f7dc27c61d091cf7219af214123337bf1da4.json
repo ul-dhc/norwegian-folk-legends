@@ -1,7 +1,7 @@
 {
   "query": "Tjølling",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:10:34.836898+00:00",
+  "retrievedAt": "2026-10-11T15:32:14.044106+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8lling&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

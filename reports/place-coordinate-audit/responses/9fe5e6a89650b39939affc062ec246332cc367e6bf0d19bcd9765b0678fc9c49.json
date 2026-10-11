@@ -1,7 +1,7 @@
 {
   "query": "Konsmo",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:16.370931+00:00",
+  "retrievedAt": "2026-10-11T15:30:57.580677+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Konsmo&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",

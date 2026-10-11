@@ -1,7 +1,7 @@
 {
   "query": "Land",
   "fuzzy": false,
-  "retrievedAt": "2026-10-11T15:09:20.643465+00:00",
+  "retrievedAt": "2026-10-11T15:31:01.843757+00:00",
   "pages": [
     {
       "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
