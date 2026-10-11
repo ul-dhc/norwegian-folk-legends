@@ -24,6 +24,9 @@ const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;
 const audio=el('journey-audio');
 let collectionFacts={},allRecords=[];
 let records=[],route=[],links=[],scenes=[],version='',sceneIndex=-1,ready=false,failed=false,started=false,paused=false;
+let threadBrightness=100;
+try{const saved=localStorage.getItem('journey-thread-brightness');if(saved!==null&&Number.isFinite(Number(saved)))threadBrightness=Math.max(0,Math.min(200,Number(saved)));}catch{}
+root.style.setProperty('--thread-brightness',String(threadBrightness/100));
 let readingTime=100;
 try{const saved=Number(localStorage.getItem('journey-reading-time'));if(Number.isFinite(saved)&&saved>=70&&saved<=200)readingTime=Math.round(saved/10)*10;}catch{}
 let still=matchMedia('(prefers-reduced-motion: reduce)').matches,map=null,progressAnimation=null,restTimer=null,resizeTimer=null,sceneToken=0;
@@ -58,6 +61,9 @@ let selectedMap='coastlines';
 try{const saved=localStorage.getItem('journey-map-type-v3');if(['quiet','terrain','coastlines'].includes(saved))selectedMap=saved;}catch{}
 function mapSettings(){
  const en=language()==='en';
+ el('journey-thread-brightness-label').textContent=en?'Thread brightness':'Lysstyrke på forbindelser';
+ el('journey-thread-brightness').value=threadBrightness;el('journey-thread-brightness').style.setProperty('--slider-progress',(threadBrightness/2)+'%');
+ el('journey-thread-brightness-output').textContent=threadBrightness+'%';
  el('journey-settings-toggle').setAttribute('aria-label',en?'Journey settings':'Reiseinnstillinger');
  el('journey-settings-title').textContent=en?'Journey settings':'Reiseinnstillinger';
  el('journey-map-settings-title').textContent=en?'Map atmosphere':'Kartets uttrykk';
@@ -601,6 +607,7 @@ el('journey-next').addEventListener('click',()=>{advance();});
 el('journey-back').addEventListener('click',()=>{if(sceneIndex>0){sceneIndex--;showScene();}});
 el('journey-fullscreen').addEventListener('click',fullscreen);
 el('journey-close').addEventListener('click',async()=>{cancelSceneFades();legendReveal?.cancel();legendReveal=null;photoDissolve?.cancel();photoDissolve=null;encounterDrift?.cancel();encounterDrift=null;lastPhotoPassage=-1;lastPaintedScene='';clock.stop();typingClock.stop();typingDuration=0;map?.cancel();progressAnimation?.cancel();audio.pause();started=false;paused=false;sceneIndex=-1;sceneToken++;clearTimeout(restTimer);root.classList.remove('controls-resting','is-fullscreen','liv-reading','archive-open');document.body.classList.remove('journey-active','journey-fullscreen');if(document.fullscreenElement)await document.exitFullscreen();for(const id of ['journey-reading','journey-caption','journey-ending','journey-moe-card','journey-moe-art','journey-archive','journey-photo-place'])el(id).hidden=true;el('journey-welcome').hidden=false;map?.reset();map?.intro(records,mode==='moe'||mode==='weave');root.dataset.scene='intro';welcome();root.scrollIntoView({behavior:'instant',block:'start'});});
+el('journey-thread-brightness').addEventListener('input',event=>{threadBrightness=Number(event.target.value);root.style.setProperty('--thread-brightness',String(threadBrightness/100));el('journey-thread-brightness-output').textContent=threadBrightness+'%';try{localStorage.setItem('journey-thread-brightness',String(threadBrightness));}catch{}});
 el('journey-reading-time').addEventListener('input',event=>{
  const previous=readingTime;
  readingTime=270-Number(event.target.value);

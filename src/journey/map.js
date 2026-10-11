@@ -270,7 +270,7 @@ export function createJourneyMap(container,onError){
   storyLandscape(from,target,keepCamera=false){
    clearDestination();constellation.clearLayers();breathe(false);
    const coords=[point(from),point(target)],colour='#D2B957';
-   L.polyline(coords,{renderer:networkRenderer,color:colour,weight:1.2,opacity:.65,dashArray:'3 7',interactive:false}).addTo(constellation);
+   L.polyline(coords,{renderer:networkRenderer,className:'journey-constellation-thread',color:colour,weight:1.2,opacity:.65,dashArray:'3 7',interactive:false}).addTo(constellation);
    for(const [index,place] of [from,target].entries()){
     L.circleMarker(coords[index],{radius:3,color:colour,weight:1,fillColor:colour,fillOpacity:.8,interactive:false}).addTo(constellation);
     const label=document.createElement('span');label.textContent=place.sted;

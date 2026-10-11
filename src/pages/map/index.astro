@@ -17,7 +17,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
   <article class="map-page" data-map-page data-base={base} data-undated-count={mapUndatedCount} data-undated-percent={mapUndatedPercent}>
     <div class="map-workspace browser-layout browser">
     <aside class="filter-sidebar map-filters" data-map-filters>
-      <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="sliders-horizontal"></i><span data-i18n="map.filters">Filtre</span></span><i data-lucide="chevron-down"></i></button>
+      <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="settings-2"></i><span data-i18n="map.filters">Filtre</span></span><i data-lucide="chevron-down"></i></button>
       <form id="map-filters">
         <div class="filter-title"><h2 data-i18n="map.filters">Filtre</h2><a class="context-help context-help-icon"  href={`${base}about/#map-filters`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.filtersHelp">Om filtrene</span></a><button class="text-button clear-filters" type="button" data-map-filter-clear hidden><i data-lucide="rotate-ccw"></i><span data-i18n="map.clearFiltersLong">Nullstill filtre</span></button></div>
         <details class="multi-select" data-map-filter="theme" data-multi-filter="theme"><summary><span data-i18n="map.filterThemes">ML-kategorier</span><small data-map-filter-count>Alle</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchThemes">Søk i ML-kategorier…</span><input class="platform-search" type="search" data-map-filter-search placeholder="Søk i ML-kategorier…" data-i18n-placeholder="map.searchThemes"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Velg alle</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Fjern alle</button></div><div class="multi-options"></div></div></details>
@@ -72,13 +72,13 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
           </div>
           <details class="layer-menu" data-layer-menu>
             <summary
-              ><i data-lucide="layers"></i><span data-i18n="map.layers"
+              ><i data-lucide="settings-2"></i><span data-i18n="map.layers"
                 >Innstillinger</span
               ><i data-lucide="chevron-down"></i></summary
             >
             <div class="layer-panel"><a class="context-help" data-map-method href={`${base}about/#map-density`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.viewHelp">Om denne visningen</span></a>
       <details class="network-toolbar" data-network-toolbar open hidden>
-        <summary class="network-settings-toggle"><i data-lucide="sliders-horizontal"></i><span data-i18n="map.networkSettings">Nettverksinnstillinger</span><i data-lucide="chevron-down"></i></summary>
+        <summary class="network-settings-toggle"><i data-lucide="settings-2"></i><span data-i18n="map.networkSettings">Nettverksinnstillinger</span><i data-lucide="chevron-down"></i></summary>
         <div class="network-settings-body">
         <div class="network-context-row"><p data-network-context></p><a class="network-info-button" data-network-method href={`${base}about/#network`} target="_blank" rel="noopener"><i data-lucide="info"></i><span class="sr-only" data-i18n="map.networkMethodMetadata">Hvordan er nettverket bygget?</span></a></div>
         <p data-network-visibility aria-live="polite"></p>
@@ -89,7 +89,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
         <div class="network-field"><span data-i18n="map.networkOtherElements">When a place is selected</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkFadeOthers">Fade other nodes and threads</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="fade" data-i18n="map.networkFadeOthers">Fade other nodes and threads</button><button type="button" data-network-value="hide" data-i18n="map.networkHideOthers">Hide other nodes and threads</button></div><select data-network-others hidden><option value="fade" selected>Fade other nodes and threads</option><option value="hide">Hide other nodes and threads</option></select></details></div>
         <div class="network-field"><span data-i18n="map.networkSizeBy">Boblestørrelse etter</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkSizeByLegends">Antall sagn</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="legends" data-i18n="map.networkSizeByLegends">Antall sagn</button><button type="button" data-network-value="connections" data-i18n="map.networkSizeByConnections">Antall forbindelser</button></div><select data-network-size-by hidden><option value="legends" selected>Antall sagn</option><option value="connections">Antall forbindelser</option></select></details></div>
         <label class="network-thread-control" for="network-bubble-size"><span data-i18n="map.networkBubbleSize">Boblestørrelse</span><span class="network-thread-range"><input id="network-bubble-size" data-network-size type="range" min="25" max="200" step="5" value="60" /><output for="network-bubble-size" data-network-size-output>60%</output></span></label>
-        <label class="network-thread-control" for="network-thread-intensity"><span data-i18n="map.networkThreadIntensity">Linjens intensitet</span><span class="network-thread-range"><input id="network-thread-intensity" data-network-intensity type="range" min="0" max="200" step="5" value="15" /><output for="network-thread-intensity" data-network-intensity-output>15%</output></span></label>
+        <label class="network-thread-control" for="network-thread-intensity"><span data-i18n="map.networkThreadIntensity">Lysstyrke på forbindelser</span><span class="network-thread-range"><input id="network-thread-intensity" data-network-intensity type="range" min="0" max="200" step="5" value="15" /><output for="network-thread-intensity" data-network-intensity-output>15%</output></span></label>
         </div>
       </details>
               <section class="layer-group uncertainty-settings">

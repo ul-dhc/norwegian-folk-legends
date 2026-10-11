@@ -1660,8 +1660,8 @@
     "en": "Bubble size"
   },
   "map.networkThreadIntensity": {
-    "no": "Linjens intensitet",
-    "en": "Thread intensity"
+    "no": "Lysstyrke på forbindelser",
+    "en": "Thread brightness"
   },
   "map.networkColorBy": {
     "no": "Fargelegg etter",
@@ -2159,13 +2159,21 @@
     "no": "Klikk på en rad eller stolpe for å avgrense utvalget. Valg på tvers av diagrammer kombineres, og tallene oppdateres for det gjeldende utvalget. Aktive valg vises over diagrammene og kan fjernes igjen. Bruk sorteringsmenyen i et diagram for å endre rekkefølgen. «Vis tekster» åpner sagnene som ligger bak tallene; de kan også åpnes i sagnutforskeren.",
     "en": "Click a chart row or bar to narrow the selection. Choices across charts combine, and counts update for the current selection. Active choices appear above the charts and can be removed. Use a chart’s sorting menu to change its order. Show texts opens the legends behind the counts; they can also be opened in the Browser."
   },
+  "about.dataNetworkTitle": {
+    "no": "Utforske forbindelser i nettverket",
+    "en": "Exploring connections in the network"
+  },
+  "about.dataNetworkText": {
+    "no": "Oversikt og Nettverk bruker de samme filtrene. Fritt oppsett kobler metadatakategorier direkte, med fylker, samlere, ML-typer og temaer aktivert som standard. Linjetykkelsen viser hvor mange sagn som deler de tilknyttede verdiene. Enkeltsagn vises i tekstpanelet, ikke som noder i nettverket. Informanter og steder kan legges til med kategorivalgene. Todelt oppsett sammenligner to kategorier; linjetykkelsen viser antall sagn. Hierarkisk oppsett ordner de aktiverte metadatakategoriene i rader. Klikk på en node eller linje for å velge tekstene bak forbindelsen; tekstpanelet og CSV-filen følger utvalget. Ukjente verdier og navnevarianter fra kilden beholdes. Dra noder eller bakgrunnen, og bruk zoom, navn og størrelseskontroller. Innstillinger skiller bevegelse (Drift, Bane, Kaos), effekter (Regn, Ekko, Bølge), og nodeformer. Forbindelsene dokumenterer felles opptegnelser fremfor historisk påvirkning.",
+    "en": "Overview and Network use the same filters. Free layout connects metadata categories directly, with counties, collectors, ML types and topics enabled by default. Line thickness shows how many legends share the connected values. Individual legends appear in the text panel, not as network nodes. Use category toggles to add narrators or places. Bipartite layout compares two categories; line thickness shows the number of legends. Hierarchical layout arranges the enabled metadata categories in rows. Click a node or line to select its underlying texts; the text panel and CSV follow this selection. Unknown values and source name variants remain available. Drag nodes or the background, and use zoom, labels and size controls. Settings separates movement (Drift, Orbit, Chaos), effects (Rain, Echo, Wave), and node shapes. Connections document shared records rather than historical influence."
+  },
   "about.dataSharingTitle": {
     "no": "Dele, laste ned og lese manglende data",
     "en": "Sharing, downloading and reading missing data"
   },
   "about.dataSharingText": {
-    "no": "Kopier lenken for å dele gjeldende utvalg, eller last ned diagramtallene som CSV. Udaterte sagn og ukjente metadata beholdes som egne alternativer der de finnes. En manglende opplysning betyr at den ikke er registrert i datasettet, ikke at en samler, informant eller dato ikke fantes.",
-    "en": "Copy the link to share the current selection, or download chart counts as CSV. Undated legends and unknown metadata remain separate options where available. A missing value means it is not recorded in the dataset, rather than evidence that no collector, informant or date existed."
+    "no": "Kopier lenken for å dele gjeldende utvalg, eller last ned metadata for de utvalgte sagnene som CSV. Udaterte sagn og ukjente metadata beholdes som egne alternativer der de finnes. En manglende opplysning betyr at den ikke er registrert i datasettet, ikke at en samler, informant eller dato ikke fantes.",
+    "en": "Copy the link to share the current selection, or download metadata for the selected legends as CSV. Undated legends and unknown metadata remain separate options where available. A missing value means it is not recorded in the dataset, rather than evidence that no collector, informant or date existed."
   },
   "about.journeysGuideIntro": {
     "no": "Reisene gir en fortellende inngang til samlingen. Velg en reise på startsiden for Reiser og følg tekstene, stedene og forbindelsene.",

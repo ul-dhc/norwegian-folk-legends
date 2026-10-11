@@ -522,7 +522,7 @@
 .map-stage{box-shadow:none}
 .map-filter-collapse::before{display:none!important}.map-filter-collapse .lucide{width:20px;height:20px}.filters-collapsed .map-filter-collapse .lucide{transform:rotate(180deg)}
 .map-center-control .lucide{width:18px;height:18px}
-.map-mode button[aria-pressed=true]{background:var(--action-fill);color:var(--action-ink)}
+.map-mode button[aria-pressed=true]{background:var(--control-selected-bg);color:var(--ink)}
 .map-filters .multi-options{max-height:240px;overflow:auto}
 .map-filters .multi-options label[hidden]{display:none}
 .map-alternative-link{display:block;padding:.75rem 0;font: .8rem/1.5 var(--sans);color:var(--blue)}
