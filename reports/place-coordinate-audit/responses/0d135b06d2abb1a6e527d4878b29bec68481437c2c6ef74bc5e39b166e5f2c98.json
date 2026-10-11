@@ -1,0 +1,47 @@
+{
+  "query": "Søndre Land",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:27.783455+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndre+Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=S%C3%B8ndre+Land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Søndre Land",
+          "kommunenummer": "3447"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 60.6976,
+        "øst": 10.35096
+      },
+      "skrivemåte": "Søndre Land",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 249398,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

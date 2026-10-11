@@ -1,0 +1,147 @@
+{
+  "query": "Buksnes",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:27.571000+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Buksnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Buksnes&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.11766,
+        "øst": 13.58324
+      },
+      "skrivemåte": "Buksnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 78866,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.90525,
+        "øst": 15.61566
+      },
+      "skrivemåte": "Buksnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 806674,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.11716,
+        "øst": 13.5603
+      },
+      "skrivemåte": "Buksnes kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 806879,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.90314,
+        "øst": 15.62019
+      },
+      "skrivemåte": "Buksnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 571858,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.11681,
+        "øst": 13.56421
+      },
+      "skrivemåte": "Buksnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1075979,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

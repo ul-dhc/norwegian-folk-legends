@@ -1,0 +1,47 @@
+{
+  "query": "Søndre Høland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:27.456413+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8ndre+H%C3%B8land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=S%C3%B8ndre+H%C3%B8land&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurskog-Høland",
+          "kommunenummer": "3226"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.71741,
+        "øst": 11.44874
+      },
+      "skrivemåte": "Søndre Høland kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 247832,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "query": "Tysfjord",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:41.576074+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tysfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Tysfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 68.09683,
+        "øst": 16.37451
+      },
+      "skrivemåte": "Tysfjord",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1082602,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

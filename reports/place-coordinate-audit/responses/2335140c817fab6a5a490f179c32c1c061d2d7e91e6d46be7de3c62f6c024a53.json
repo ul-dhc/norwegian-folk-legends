@@ -1,0 +1,147 @@
+{
+  "query": "Karlsøy",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:14.954974+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Karls%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Karls%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fedje",
+          "kommunenummer": "4633"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.78369,
+        "øst": 4.69159
+      },
+      "skrivemåte": "Karlsøyna",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 388815,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.00266,
+        "øst": 19.88943
+      },
+      "skrivemåte": "Karlsøy",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747105,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.99536,
+        "øst": 19.96407
+      },
+      "skrivemåte": "Karlsøya",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 80649,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sarpsborg",
+          "kommunenummer": "3105"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.15429,
+        "øst": 11.14338
+      },
+      "skrivemåte": "Karlsøybrua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 386406,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.00088,
+        "øst": 15.76549
+      },
+      "skrivemåte": "Karlsøy",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 381541,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

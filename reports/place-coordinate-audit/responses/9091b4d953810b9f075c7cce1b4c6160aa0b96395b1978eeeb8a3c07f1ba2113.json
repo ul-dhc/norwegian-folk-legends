@@ -1,0 +1,147 @@
+{
+  "query": "Rollag",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:59.157387+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rollag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Rollag&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rollag",
+          "kommunenummer": "3336"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9843,
+        "øst": 9.29644
+      },
+      "skrivemåte": "Rollag",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 367213,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tinn",
+          "kommunenummer": "4026"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.92307,
+        "øst": 8.78815
+      },
+      "skrivemåte": "Rollag",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 983253,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tinn",
+          "kommunenummer": "4026"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9262,
+        "øst": 8.80117
+      },
+      "skrivemåte": "Rollag",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 410256,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rollag",
+          "kommunenummer": "3336"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.02105,
+        "øst": 9.27316
+      },
+      "skrivemåte": "Rollag stavkirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 5031,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tinn",
+          "kommunenummer": "4026"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9245,
+        "øst": 8.80084
+      },
+      "skrivemåte": "Rollag",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 489237,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "query": "Frøya",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:48.471146+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Fr%C3%B8ya&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 6,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 6,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.67213,
+        "øst": 8.33431
+      },
+      "skrivemåte": "Frøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 73815,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bremanger",
+          "kommunenummer": "4648"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.78535,
+        "øst": 4.84828
+      },
+      "skrivemåte": "Frøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 253850,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bremanger",
+          "kommunenummer": "4648"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.7757,
+        "øst": 4.89752
+      },
+      "skrivemåte": "Frøya kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 434796,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.69091,
+        "øst": 8.43732
+      },
+      "skrivemåte": "Frøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 377764,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Skjær i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.82095,
+        "øst": 9.44358
+      },
+      "skrivemåte": "Frøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 758267,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bremanger",
+          "kommunenummer": "4648"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.77228,
+        "øst": 4.89188
+      },
+      "skrivemåte": "Frøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 54391,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

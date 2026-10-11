@@ -1,0 +1,547 @@
+{
+  "query": "Nordland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:49.249864+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Nordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 21,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 21,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Værøy",
+          "kommunenummer": "1857"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.69334,
+        "øst": 12.70323
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 76370,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.8509,
+        "øst": 5.88764
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1588,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.21548,
+        "øst": 23.20213
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 271404,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.24328,
+        "øst": 9.97937
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 437323,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Værøy",
+          "kommunenummer": "1857"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.69264,
+        "øst": 12.70037
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1075886,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.83471,
+        "øst": 5.97567
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 472323,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hole",
+          "kommunenummer": "3310"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9768,
+        "øst": 10.32135
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 775771,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.07273,
+        "øst": 14.574
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 76282,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 58.83648,
+        "øst": 5.97358
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 122588,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.03972,
+        "øst": 5.95107
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 304303,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vang",
+          "kommunenummer": "3454"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.15428,
+        "øst": 8.54756
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 856298,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.04052,
+        "øst": 5.94736
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 216234,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.94695,
+        "øst": 6.01886
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 789709,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Asker",
+          "kommunenummer": "3203"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.60862,
+        "øst": 10.46679
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 950541,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stjørdal",
+          "kommunenummer": "5035"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.49161,
+        "øst": 10.85867
+      },
+      "skrivemåte": "Nordlandet",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 863241,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tingvoll",
+          "kommunenummer": "1560"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.96629,
+        "øst": 8.2311
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 12668,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.04163,
+        "øst": 5.9456
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 277226,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.24392,
+        "øst": 9.9749
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 509268,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hole",
+          "kommunenummer": "3310"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.97204,
+        "øst": 10.32325
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 64485,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.08227,
+        "øst": 15.32975
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 745081,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjøvik",
+          "kommunenummer": "3407"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.83144,
+        "øst": 10.60881
+      },
+      "skrivemåte": "Nordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 615992,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

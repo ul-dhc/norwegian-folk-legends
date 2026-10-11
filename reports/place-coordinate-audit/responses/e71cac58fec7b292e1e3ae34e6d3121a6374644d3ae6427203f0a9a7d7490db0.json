@@ -1,0 +1,51 @@
+{
+  "query": "Gauldalen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:51.637854+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gauldalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Gauldalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Holtålen",
+          "kommunenummer": "5026"
+        },
+        {
+          "kommunenavn": "Midtre Gauldal",
+          "kommunenummer": "5027"
+        }
+      ],
+      "navneobjekttype": "Dalføre",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.96809,
+        "øst": 10.96748
+      },
+      "skrivemåte": "Gauldalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 753030,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

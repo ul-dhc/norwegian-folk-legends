@@ -1,0 +1,21 @@
+{
+  "query": "Frøya (Froan)",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:47.388066+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Fr%C3%B8ya+%28Froan%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Fr%C3%B8ya+%28Froan%29&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 0,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 0,
+  "truncated": false,
+  "names": []
+}

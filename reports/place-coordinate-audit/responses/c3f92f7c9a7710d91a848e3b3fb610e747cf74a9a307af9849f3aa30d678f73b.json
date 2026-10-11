@@ -1,0 +1,97 @@
+{
+  "query": "Frei",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:45.266821+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Frei&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Frei&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansund",
+          "kommunenummer": "1505"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.07102,
+        "øst": 7.72692
+      },
+      "skrivemåte": "Frei",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 922313,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansund",
+          "kommunenummer": "1505"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.09309,
+        "øst": 7.83852
+      },
+      "skrivemåte": "Frei",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 571868,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansund",
+          "kommunenummer": "1505"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.02497,
+        "øst": 7.80119
+      },
+      "skrivemåte": "Frei",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 980568,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

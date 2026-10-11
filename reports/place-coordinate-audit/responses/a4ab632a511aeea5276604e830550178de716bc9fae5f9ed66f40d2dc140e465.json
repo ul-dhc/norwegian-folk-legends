@@ -1,0 +1,322 @@
+{
+  "query": "Lindås",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:24.513909+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Lind%C3%A5s&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Lind%C3%A5s&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 12,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 12,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alver",
+          "kommunenummer": "4631"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.73639,
+        "øst": 5.16102
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 674686,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alver",
+          "kommunenummer": "4631"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 60.5491,
+        "øst": 5.28565
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 570154,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Asker",
+          "kommunenummer": "3203"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.80239,
+        "øst": 10.4712
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 368734,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flesberg",
+          "kommunenummer": "3334"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.91128,
+        "øst": 9.41347
+      },
+      "skrivemåte": "Linås",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 294450,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alver",
+          "kommunenummer": "4631"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.73687,
+        "øst": 5.15913
+      },
+      "skrivemåte": "Lindås kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 916667,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Holmestrand",
+          "kommunenummer": "3903"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.60849,
+        "øst": 10.20547
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 392931,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kongsberg",
+          "kommunenummer": "3303"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.5562,
+        "øst": 9.61712
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1080610,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sveio",
+          "kommunenummer": "4612"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.64731,
+        "øst": 5.4514
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 124894,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sveio",
+          "kommunenummer": "4612"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.64178,
+        "øst": 5.45273
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 936422,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.80251,
+        "øst": 8.18289
+      },
+      "skrivemåte": "Lindsås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 850133,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.34071,
+        "øst": 18.2854
+      },
+      "skrivemåte": "Lindås",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 79745,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aure",
+          "kommunenummer": "1576"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.20023,
+        "øst": 8.56372
+      },
+      "skrivemåte": "Lindåsen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 133110,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "query": "Bygland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:28.281222+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Bygland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Bygland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.8285,
+        "øst": 7.79616
+      },
+      "skrivemåte": "Bygland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 774,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kviteseid",
+          "kommunenummer": "4028"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.47333,
+        "øst": 8.41175
+      },
+      "skrivemåte": "Byggland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 487453,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.82566,
+        "øst": 7.80313
+      },
+      "skrivemåte": "Bygland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 850766,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.80156,
+        "øst": 8.18425
+      },
+      "skrivemåte": "Bygland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 607125,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tønsberg",
+          "kommunenummer": "3905"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.40606,
+        "øst": 10.11932
+      },
+      "skrivemåte": "Byggland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 63151,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

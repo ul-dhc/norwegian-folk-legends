@@ -1,0 +1,347 @@
+{
+  "query": "Hjelmeland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:04.351303+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hjelmeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Hjelmeland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 13,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 13,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.23669,
+        "øst": 6.17914
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 145176,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        }
+      ],
+      "navneobjekttype": "Tettbebyggelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.23693,
+        "øst": 6.17907
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 912992,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.38504,
+        "øst": 5.72695
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1080312,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.23626,
+        "øst": 6.18078
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 896734,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.38372,
+        "øst": 5.73982
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 653343,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.2357,
+        "øst": 6.18045
+      },
+      "skrivemåte": "Hjelmeland kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 729938,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.38493,
+        "øst": 5.73933
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 532330,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.52802,
+        "øst": 6.28703
+      },
+      "skrivemåte": "Tjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 852183,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stad",
+          "kommunenummer": "4649"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.9428,
+        "øst": 5.87394
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 920502,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Høyanger",
+          "kommunenummer": "4638"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.14208,
+        "øst": 5.47629
+      },
+      "skrivemåte": "Indre Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 313193,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.73505,
+        "øst": 6.12344
+      },
+      "skrivemåte": "Tjelmeland",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 64687,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.93974,
+        "øst": 5.99507
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 489039,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Høyanger",
+          "kommunenummer": "4638"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.14645,
+        "øst": 5.45212
+      },
+      "skrivemåte": "Hjelmeland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 312536,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

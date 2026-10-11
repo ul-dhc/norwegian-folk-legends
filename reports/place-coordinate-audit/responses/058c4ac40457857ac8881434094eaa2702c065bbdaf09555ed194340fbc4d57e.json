@@ -1,0 +1,1995 @@
+{
+  "query": "Mandalskanten",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:09:32.727142+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Mandalskanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Mandalskanten&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 79,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 79,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.54562,
+        "øst": 20.58496
+      },
+      "skrivemåte": "Manndalsklubben",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 382621,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Dalføre",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.22038,
+        "øst": 7.52019
+      },
+      "skrivemåte": "Mandalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 206127,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Øygarden",
+          "kommunenummer": "4626"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.20629,
+        "øst": 5.13644
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 592990,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.53987,
+        "øst": 5.39517
+      },
+      "skrivemåte": "Mandalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 712809,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinesdal",
+          "kommunenummer": "4227"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.44741,
+        "øst": 6.90807
+      },
+      "skrivemåte": "Mandalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 581957,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Seljord",
+          "kommunenummer": "4022"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.5743,
+        "øst": 8.43925
+      },
+      "skrivemåte": "Mandal kapell",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 488420,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sørreisa",
+          "kommunenummer": "5526"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.11047,
+        "øst": 18.27783
+      },
+      "skrivemåte": "Bergedalskanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 421257,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sørreisa",
+          "kommunenummer": "5526"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.10888,
+        "øst": 18.28607
+      },
+      "skrivemåte": "Slåttdalskanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 299280,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.03482,
+        "øst": 7.44938
+      },
+      "skrivemåte": "Mandalsveien",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 977543,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.12065,
+        "øst": 7.19067
+      },
+      "skrivemåte": "Mandalsveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 988121,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Seljord",
+          "kommunenummer": "4022"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.5674,
+        "øst": 8.43193
+      },
+      "skrivemåte": "Mandalsåi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 767095,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Seljord",
+          "kommunenummer": "4022"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.5796,
+        "øst": 8.45336
+      },
+      "skrivemåte": "Mandalselvi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 731412,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "By",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.02682,
+        "øst": 7.45347
+      },
+      "skrivemåte": "Mandal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 364950,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.02637,
+        "øst": 7.45021
+      },
+      "skrivemåte": "Mandal kommune",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 934142,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Foss",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.20724,
+        "øst": 7.77323
+      },
+      "skrivemåte": "Mandalsfossen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 38709,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.86076,
+        "øst": 9.80683
+      },
+      "skrivemåte": "Manndal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 863110,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Idrettshall",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.02567,
+        "øst": 7.44516
+      },
+      "skrivemåte": "Mandalshallen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1088344,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.02723,
+        "øst": 7.45961
+      },
+      "skrivemåte": "Mandal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 470138,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.86063,
+        "øst": 9.80865
+      },
+      "skrivemåte": "Manndal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 698916,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        },
+        {
+          "kommunenavn": "Åseral",
+          "kommunenummer": "4224"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 58.09163,
+        "øst": 7.5249
+      },
+      "skrivemåte": "Mandalsåni",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 850990,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.45044,
+        "øst": 7.39893
+      },
+      "skrivemåte": "Maldalsheii",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 918,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tønsberg",
+          "kommunenummer": "3905"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.42162,
+        "øst": 10.20795
+      },
+      "skrivemåte": "Mandalstua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 209320,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.59271,
+        "øst": 13.18108
+      },
+      "skrivemåte": "Manndalskleiva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 683660,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Vegkryss",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.06872,
+        "øst": 7.53299
+      },
+      "skrivemåte": "Mandalskrysset",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1083273,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karmøy",
+          "kommunenummer": "1149"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.28347,
+        "øst": 5.32319
+      },
+      "skrivemåte": "Mandalsflua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 269196,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Nes",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.83249,
+        "øst": 8.35084
+      },
+      "skrivemåte": "Skanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 887710,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Mo",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.80789,
+        "øst": 8.39489
+      },
+      "skrivemåte": "Skanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 220444,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        },
+        {
+          "kommunenavn": "Åseral",
+          "kommunenummer": "4224"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 58.09163,
+        "øst": 7.5249
+      },
+      "skrivemåte": "Mandalselva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 850990,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.46837,
+        "øst": 7.45932
+      },
+      "skrivemåte": "Mandalselva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 37174,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lund",
+          "kommunenummer": "1112"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.32359,
+        "øst": 6.50046
+      },
+      "skrivemåte": "Mandalsmyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 148813,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.20915,
+        "øst": 7.74916
+      },
+      "skrivemåte": "Mandalsheia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 850122,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.8653,
+        "øst": 9.81354
+      },
+      "skrivemåte": "Manndalsvika",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 880921,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Fjellområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.52868,
+        "øst": 20.57962
+      },
+      "skrivemåte": "Manndalsklubben",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 539729,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Moss",
+          "kommunenummer": "3103"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.38804,
+        "øst": 10.65642
+      },
+      "skrivemåte": "Åskanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1063978,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.86276,
+        "øst": 9.80667
+      },
+      "skrivemåte": "Manndalsbukta",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 758652,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.48668,
+        "øst": 22.24603
+      },
+      "skrivemåte": "Kommandanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 697356,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.58824,
+        "øst": 13.21401
+      },
+      "skrivemåte": "Mandalsaksla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 561689,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.69611,
+        "øst": 13.28455
+      },
+      "skrivemåte": "Manndalsåsen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 198680,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.42226,
+        "øst": 6.81151
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 588294,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.39224,
+        "øst": 17.16148
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 510879,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.5909,
+        "øst": 7.25296
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 497583,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.46696,
+        "øst": 20.55424
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 747559,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53214,
+        "øst": 20.54762
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 204639,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nesna",
+          "kommunenummer": "1828"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.26092,
+        "øst": 13.00043
+      },
+      "skrivemåte": "Skandalskråga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 592076,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.8778,
+        "øst": 15.59843
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 867722,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bergen",
+          "kommunenummer": "4601"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.4129,
+        "øst": 5.63706
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 385957,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.69606,
+        "øst": 13.27821
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 300268,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.08576,
+        "øst": 9.95986
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 270930,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjerstad",
+          "kommunenummer": "4211"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.92361,
+        "øst": 8.86359
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 934514,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.43227,
+        "øst": 6.61361
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 345967,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.5311,
+        "øst": 20.54845
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 746630,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.85102,
+        "øst": 9.77644
+      },
+      "skrivemåte": "Manndalsveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1020593,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.38265,
+        "øst": 20.57206
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 931933,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53091,
+        "øst": 20.54703
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 141001,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bodø",
+          "kommunenummer": "1804"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.5222,
+        "øst": 14.79844
+      },
+      "skrivemåte": "Myrkanten",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 998496,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        }
+      ],
+      "navneobjekttype": "Annen bygning for religionsutøvelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.52302,
+        "øst": 20.5325
+      },
+      "skrivemåte": "Manndalen",
+      "skrivemåtestatus": "foreslått og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 154529,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.36214,
+        "øst": 6.62681
+      },
+      "skrivemåte": "Mandalsfjellet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 892830,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.43254,
+        "øst": 6.61386
+      },
+      "skrivemåte": "Manndalsrinnen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 43970,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.06824,
+        "øst": 7.51191
+      },
+      "skrivemåte": "Mandalselvbrua",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1093783,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Bakke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.17578,
+        "øst": 7.74263
+      },
+      "skrivemåte": "Mandals kleive",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 301815,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kviteseid",
+          "kommunenummer": "4028"
+        }
+      ],
+      "navneobjekttype": "Hylle",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.34863,
+        "øst": 8.62468
+      },
+      "skrivemåte": "Brakandalsaten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 233718,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bakke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.16234,
+        "øst": 7.66485
+      },
+      "skrivemåte": "Mandals kleive",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 932682,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alver",
+          "kommunenummer": "4631"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.64154,
+        "øst": 5.51596
+      },
+      "skrivemåte": "Matendalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 287557,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.53198,
+        "øst": 5.50689
+      },
+      "skrivemåte": "Åsdalskant",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 651662,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurskog-Høland",
+          "kommunenummer": "3226"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.746,
+        "øst": 11.65094
+      },
+      "skrivemåte": "Måsakanten",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1092220,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjerdrum",
+          "kommunenummer": "3230"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.06829,
+        "øst": 11.01761
+      },
+      "skrivemåte": "Skaukanten",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1070087,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bykle",
+          "kommunenummer": "4222"
+        }
+      ],
+      "navneobjekttype": "Bakke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.30451,
+        "øst": 7.31958
+      },
+      "skrivemåte": "Juvskanten",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 902612,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.03646,
+        "øst": 7.48951
+      },
+      "skrivemåte": "Kanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 329207,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Søndre Land",
+          "kommunenummer": "3447"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 60.75689,
+        "øst": 10.24706
+      },
+      "skrivemåte": "Kanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 70735,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lærdal",
+          "kommunenummer": "4642"
+        }
+      ],
+      "navneobjekttype": "Jorde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.06303,
+        "øst": 7.51221
+      },
+      "skrivemåte": "Kanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 470502,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lillehammer",
+          "kommunenummer": "3405"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.12712,
+        "øst": 10.49182
+      },
+      "skrivemåte": "Kanthaugen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 675967,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.0603,
+        "øst": 9.12245
+      },
+      "skrivemåte": "Grandalsknatten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 724412,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Birkenes",
+          "kommunenummer": "4216"
+        }
+      ],
+      "navneobjekttype": "Høyde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.51083,
+        "øst": 8.13841
+      },
+      "skrivemåte": "Grandalsknotten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 839872,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": null,
+      "kommuner": null,
+      "navneobjekttype": "Geologisk struktur",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 56.43528,
+        "øst": 3.97694
+      },
+      "skrivemåte": "Mandalhøgda",
+      "skrivemåtestatus": "internasjonal og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 830504,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hitra",
+          "kommunenummer": "5056"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.57044,
+        "øst": 8.43783
+      },
+      "skrivemåte": "Mannskanken",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 642260,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Grimstad",
+          "kommunenummer": "4202"
+        }
+      ],
+      "navneobjekttype": "Skog",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.45232,
+        "øst": 8.41362
+      },
+      "skrivemåte": "Uverskanten",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 60533,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.85848,
+        "øst": 8.33198
+      },
+      "skrivemåte": "Finnskanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 51720,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Holme",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.23067,
+        "øst": 17.79684
+      },
+      "skrivemåte": "Mandaholmen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 229618,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvam",
+          "kommunenummer": "4622"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.37469,
+        "øst": 6.06064
+      },
+      "skrivemåte": "Teigskanten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 490683,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

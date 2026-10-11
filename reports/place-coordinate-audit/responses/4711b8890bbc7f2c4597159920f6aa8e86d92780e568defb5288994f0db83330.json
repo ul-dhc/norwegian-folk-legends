@@ -1,0 +1,4713 @@
+{
+  "query": "Tresfjord",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:10:38.864071+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tresfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Tresfjord&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 187,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 187,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.52492,
+        "øst": 7.12579
+      },
+      "skrivemåte": "Tresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 801788,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.52181,
+        "øst": 7.13814
+      },
+      "skrivemåte": "Tresfjord kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 12855,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.58583,
+        "øst": 7.12575
+      },
+      "skrivemåte": "Tresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 497896,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.63408,
+        "øst": 7.10857
+      },
+      "skrivemåte": "Tresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 536773,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.6031,
+        "øst": 7.115
+      },
+      "skrivemåte": "Tresfjordbrua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 587074,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.45881,
+        "øst": 10.79013
+      },
+      "skrivemåte": "Trefjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 242459,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.45976,
+        "øst": 10.79059
+      },
+      "skrivemåte": "Trefjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 438463,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.4619,
+        "øst": 10.78829
+      },
+      "skrivemåte": "Trefjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 13511,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.52069,
+        "øst": 7.13656
+      },
+      "skrivemåte": "Tresfjordvegen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1058258,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.66102,
+        "øst": 8.11089
+      },
+      "skrivemåte": "Eresfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 11250,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 62.66624,
+        "øst": 8.11336
+      },
+      "skrivemåte": "Eresfjord kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 496280,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.32473,
+        "øst": 23.51319
+      },
+      "skrivemåte": "Lille Lerresfjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 809790,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.61575,
+        "øst": 7.04437
+      },
+      "skrivemåte": "Misfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 921924,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 68.09683,
+        "øst": 16.37451
+      },
+      "skrivemåte": "Tysfjord",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1082602,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Museum/galleri/bibliotek",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.51658,
+        "øst": 7.13748
+      },
+      "skrivemåte": "Tresfjord Bygdamuseum",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 217014,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flakstad",
+          "kommunenummer": "1859"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.06989,
+        "øst": 13.13202
+      },
+      "skrivemåte": "Torsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 775770,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Masfjorden",
+          "kommunenummer": "4634"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.87151,
+        "øst": 5.5543
+      },
+      "skrivemåte": "Matresfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 191278,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.46446,
+        "øst": 10.78038
+      },
+      "skrivemåte": "Trefjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 924371,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sør-Aurdal",
+          "kommunenummer": "3449"
+        }
+      ],
+      "navneobjekttype": "Vik",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.65414,
+        "øst": 9.36323
+      },
+      "skrivemåte": "Trytehølsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 665806,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Måsøy",
+          "kommunenummer": "5618"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.00306,
+        "øst": 23.91403
+      },
+      "skrivemåte": "Tufjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 626561,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gamvik",
+          "kommunenummer": "5626"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.88511,
+        "øst": 28.40244
+      },
+      "skrivemåte": "Tyfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 20942,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": null,
+      "kommuner": null,
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 73.31178,
+        "øst": -26.85647
+      },
+      "skrivemåte": "Isfjord",
+      "skrivemåtestatus": "internasjonal og prioritert",
+      "språk": "Dansk",
+      "stedsnummer": 972725,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fjord",
+          "kommunenummer": "1578"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.23243,
+        "øst": 7.41769
+      },
+      "skrivemåte": "Tafjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 374017,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Måsøy",
+          "kommunenummer": "5618"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.00496,
+        "øst": 23.90875
+      },
+      "skrivemåte": "Tufjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 262551,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Måsøy",
+          "kommunenummer": "5618"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.9988,
+        "øst": 23.89048
+      },
+      "skrivemåte": "Tufjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 263211,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fjord",
+          "kommunenummer": "1578"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.23251,
+        "øst": 7.41571
+      },
+      "skrivemåte": "Tafjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 983486,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordkapp",
+          "kommunenummer": "5620"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.08965,
+        "øst": 25.78095
+      },
+      "skrivemåte": "Tufjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1056554,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gamvik",
+          "kommunenummer": "5626"
+        }
+      ],
+      "navneobjekttype": "Gammel bosettingsplass",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.88753,
+        "øst": 28.33751
+      },
+      "skrivemåte": "Tyfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 81935,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.08854,
+        "øst": 7.68129
+      },
+      "skrivemåte": "Trysfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 485941,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.72284,
+        "øst": 8.07315
+      },
+      "skrivemåte": "Eresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 132461,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Smøla",
+          "kommunenummer": "1573"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.36444,
+        "øst": 8.18017
+      },
+      "skrivemåte": "Hellesfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 559809,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fauske - Fuossko",
+          "kommunenummer": "1841"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.29815,
+        "øst": 15.16642
+      },
+      "skrivemåte": "Valnesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 566687,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fjaler",
+          "kommunenummer": "4646"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.3045,
+        "øst": 5.05644
+      },
+      "skrivemåte": "Vilnesfjord lykt",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 8087,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.71712,
+        "øst": 8.12205
+      },
+      "skrivemåte": "Eresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 840890,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 70.65305,
+        "øst": 22.62835
+      },
+      "skrivemåte": "Dønnesfjorden",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 701485,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Iveland",
+          "kommunenummer": "4218"
+        }
+      ],
+      "navneobjekttype": "Vann",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.33693,
+        "øst": 7.91664
+      },
+      "skrivemåte": "Jensesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 273147,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tysvær",
+          "kommunenummer": "1146"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.42283,
+        "øst": 5.38024
+      },
+      "skrivemåte": "Førdesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 47494,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.64985,
+        "øst": 22.62268
+      },
+      "skrivemåte": "Dønnesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 262703,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.26416,
+        "øst": 6.67888
+      },
+      "skrivemåte": "Vollesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 789294,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Skole",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.66144,
+        "øst": 8.11488
+      },
+      "skrivemåte": "Eresfjord barne- og ungdomsskule",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 766093,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bindal",
+          "kommunenummer": "1811"
+        },
+        {
+          "kommunenavn": "Sømna",
+          "kommunenummer": "1812"
+        },
+        {
+          "kommunenavn": "Brønnøy",
+          "kommunenummer": "1813"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.29023,
+        "øst": 12.31322
+      },
+      "skrivemåte": "Ursfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 864282,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.29166,
+        "øst": 21.98048
+      },
+      "skrivemåte": "Ullsfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 141528,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.74583,
+        "øst": 29.30657
+      },
+      "skrivemåte": "Risfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 505443,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordkapp",
+          "kommunenummer": "5620"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.03999,
+        "øst": 25.88405
+      },
+      "skrivemåte": "Risfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 688412,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.9873,
+        "øst": 27.53392
+      },
+      "skrivemåte": "Oksfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 202226,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.74083,
+        "øst": 29.26428
+      },
+      "skrivemåte": "Vester-Risfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 383453,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.23956,
+        "øst": 22.35047
+      },
+      "skrivemåte": "Øksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 929466,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flakstad",
+          "kommunenummer": "1859"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.0353,
+        "øst": 13.34776
+      },
+      "skrivemåte": "Nusfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 684549,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Harstad - Hárstták",
+          "kommunenummer": "5503"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.83563,
+        "øst": 16.34515
+      },
+      "skrivemåte": "Kasfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 78408,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.56168,
+        "øst": 22.88781
+      },
+      "skrivemåte": "Husfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 821572,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.10322,
+        "øst": 13.54833
+      },
+      "skrivemåte": "Elsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 743329,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 69.69428,
+        "øst": 18.62055
+      },
+      "skrivemåte": "Ersfjord",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 18652,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bindal",
+          "kommunenummer": "1811"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.11254,
+        "øst": 12.094
+      },
+      "skrivemåte": "Lysfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 742009,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.48334,
+        "øst": 17.4058
+      },
+      "skrivemåte": "Ersfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 807186,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flakstad",
+          "kommunenummer": "1859"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.02908,
+        "øst": 13.35691
+      },
+      "skrivemåte": "Nusfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 805562,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.25881,
+        "øst": 22.35017
+      },
+      "skrivemåte": "Øksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 80089,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.95544,
+        "øst": 11.03211
+      },
+      "skrivemåte": "Hasfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 693232,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.69154,
+        "øst": 18.61994
+      },
+      "skrivemåte": "Ersfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1076917,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Fonn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.2309,
+        "øst": 6.80675
+      },
+      "skrivemåte": "Træsfonn",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 672002,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flakstad",
+          "kommunenummer": "1859"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.03512,
+        "øst": 13.34572
+      },
+      "skrivemåte": "Nusfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1075924,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bindal",
+          "kommunenummer": "1811"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.11131,
+        "øst": 12.09321
+      },
+      "skrivemåte": "Lysfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 989008,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Masfjorden",
+          "kommunenummer": "4634"
+        }
+      ],
+      "navneobjekttype": "Tunnel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.83847,
+        "øst": 5.58754
+      },
+      "skrivemåte": "Masfjordtunnelen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 695842,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.13091,
+        "øst": 7.04033
+      },
+      "skrivemåte": "Rosfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 107488,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Tunnel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.15305,
+        "øst": 22.33584
+      },
+      "skrivemåte": "Øksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 287671,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.52027,
+        "øst": 22.25286
+      },
+      "skrivemåte": "Hasfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 323309,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 64.9564,
+        "øst": 11.03315
+      },
+      "skrivemåte": "Hasfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 318547,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 64.95359,
+        "øst": 11.03205
+      },
+      "skrivemåte": "Hasfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 379521,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.12579,
+        "øst": 7.05486
+      },
+      "skrivemåte": "Rosfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 364550,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gamvik",
+          "kommunenummer": "5626"
+        }
+      ],
+      "navneobjekttype": "Gammel bosettingsplass",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.99363,
+        "øst": 28.18497
+      },
+      "skrivemåte": "Risfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 329656,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.10402,
+        "øst": 13.54456
+      },
+      "skrivemåte": "Elsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 146743,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Adressetilleggsnavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.95359,
+        "øst": 11.03205
+      },
+      "skrivemåte": "Hasfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 483218,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tysvær",
+          "kommunenummer": "1146"
+        },
+        {
+          "kommunenavn": "Karmøy",
+          "kommunenummer": "1149"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.38806,
+        "øst": 5.381
+      },
+      "skrivemåte": "Førresfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 365508,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.55113,
+        "øst": 6.4597
+      },
+      "skrivemåte": "Kjøsnesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 289321,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.88184,
+        "øst": 15.60334
+      },
+      "skrivemåte": "Buksnesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 867721,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.00588,
+        "øst": 7.56341
+      },
+      "skrivemåte": "Tregdefjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 936638,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bjørnafjorden",
+          "kommunenummer": "4624"
+        }
+      ],
+      "navneobjekttype": "Våg i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.0801,
+        "øst": 5.79243
+      },
+      "skrivemåte": "Lygresfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 236282,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        },
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        },
+        {
+          "kommunenavn": "Gjesdal",
+          "kommunenummer": "1122"
+        },
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.99384,
+        "øst": 5.81625
+      },
+      "skrivemåte": "Høgsfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 364128,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.42464,
+        "øst": 17.39564
+      },
+      "skrivemåte": "Beisfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 746986,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Båtsfjord",
+          "kommunenummer": "5632"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.67156,
+        "øst": 29.82948
+      },
+      "skrivemåte": "Båtsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 627112,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kinn",
+          "kommunenummer": "4602"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.92175,
+        "øst": 5.1029
+      },
+      "skrivemåte": "Vågsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 738981,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.02378,
+        "øst": 10.11372
+      },
+      "skrivemåte": "Viksfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 122225,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.29631,
+        "øst": 23.47197
+      },
+      "skrivemåte": "Store Lerresfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 384788,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.37614,
+        "øst": 17.59589
+      },
+      "skrivemåte": "Beisfjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 138161,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stor-Elvdal",
+          "kommunenummer": "3423"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.66472,
+        "øst": 11.00997
+      },
+      "skrivemåte": "Tresa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 313056,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Båtsfjord",
+          "kommunenummer": "5632"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.62924,
+        "øst": 29.69479
+      },
+      "skrivemåte": "Båtsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 384452,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.28386,
+        "øst": 23.53805
+      },
+      "skrivemåte": "Store Lerresfjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 81806,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.39435,
+        "øst": 18.38538
+      },
+      "skrivemåte": "Rossfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 624682,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Båtsfjord",
+          "kommunenummer": "5632"
+        }
+      ],
+      "navneobjekttype": "Flyplass",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 70.60255,
+        "øst": 29.69302
+      },
+      "skrivemåte": "Båtsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 511947,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.94568,
+        "øst": 19.46857
+      },
+      "skrivemåte": "Hessfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 815880,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Haram",
+          "kommunenummer": "1580"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.53354,
+        "øst": 6.58964
+      },
+      "skrivemåte": "Tennfjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 496234,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.24739,
+        "øst": 23.3862
+      },
+      "skrivemåte": "Korsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747578,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vardø",
+          "kommunenummer": "5634"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.42029,
+        "øst": 30.79107
+      },
+      "skrivemåte": "Persfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 930593,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.69082,
+        "øst": 23.05571
+      },
+      "skrivemåte": "Båtsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 80481,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hadsel",
+          "kommunenummer": "1866"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.35481,
+        "øst": 15.06754
+      },
+      "skrivemåte": "Tennfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 684884,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.62904,
+        "øst": 23.14937
+      },
+      "skrivemåte": "Slettnesfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 263438,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ål",
+          "kommunenummer": "3328"
+        }
+      ],
+      "navneobjekttype": "Vann",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.69111,
+        "øst": 8.38885
+      },
+      "skrivemåte": "Vatsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 113517,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Båtsfjord",
+          "kommunenummer": "5632"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.6298,
+        "øst": 29.72582
+      },
+      "skrivemåte": "Båtsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 571942,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.79975,
+        "øst": 23.09254
+      },
+      "skrivemåte": "Saksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 640027,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Leirfjord",
+          "kommunenummer": "1822"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.06797,
+        "øst": 12.83692
+      },
+      "skrivemåte": "Meisfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072444,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.39361,
+        "øst": 18.38959
+      },
+      "skrivemåte": "Rossfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1077743,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Haram",
+          "kommunenummer": "1580"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.5347,
+        "øst": 6.58371
+      },
+      "skrivemåte": "Tennfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 981989,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.37957,
+        "øst": 17.60183
+      },
+      "skrivemåte": "Beisfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1076488,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Stasjon",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.04989,
+        "øst": 10.12295
+      },
+      "skrivemåte": "Viksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 245173,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.09923,
+        "øst": 6.52096
+      },
+      "skrivemåte": "Træsflot",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 766603,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.39271,
+        "øst": 18.39878
+      },
+      "skrivemåte": "Rossfjord kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 624680,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.09294,
+        "øst": 7.67359
+      },
+      "skrivemåte": "Trysfjordbrua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1086680,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Balsfjord",
+          "kommunenummer": "5532"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.3112,
+        "øst": 19.34666
+      },
+      "skrivemåte": "Balsfjord kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 625153,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53264,
+        "øst": 19.6411
+      },
+      "skrivemåte": "Ullsfjord kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 200072,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dyrøy",
+          "kommunenummer": "5528"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.98296,
+        "øst": 17.55148
+      },
+      "skrivemåte": "Faksfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 260935,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.99796,
+        "øst": 11.67153
+      },
+      "skrivemåte": "Tennfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 924132,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Leirfjord",
+          "kommunenummer": "1822"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.06856,
+        "øst": 12.83721
+      },
+      "skrivemåte": "Meisfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 15200,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.60406,
+        "øst": 11.39688
+      },
+      "skrivemåte": "Nufsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 621545,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hyllestad",
+          "kommunenummer": "4637"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.14366,
+        "øst": 5.27345
+      },
+      "skrivemåte": "Ytrefjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 494473,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.03046,
+        "øst": 18.71827
+      },
+      "skrivemåte": "Løksfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 930724,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordkapp",
+          "kommunenummer": "5620"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.0756,
+        "øst": 25.87063
+      },
+      "skrivemåte": "Duksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 20295,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.74789,
+        "øst": 23.3291
+      },
+      "skrivemåte": "Skippernesfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 606588,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.46144,
+        "øst": 10.78269
+      },
+      "skrivemåte": "Trefjordneset",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 25100,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Balsfjord",
+          "kommunenummer": "5532"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.2703,
+        "øst": 18.71813
+      },
+      "skrivemåte": "Aursfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 625076,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.56061,
+        "øst": 23.55733
+      },
+      "skrivemåte": "Kvistnesfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 821424,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Deatnu - Tana",
+          "kommunenummer": "5628"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.47457,
+        "øst": 27.94513
+      },
+      "skrivemåte": "Tarmfjord",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 970314,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.84038,
+        "øst": 18.86249
+      },
+      "skrivemåte": "Trondjorda",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 807979,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aukra",
+          "kommunenummer": "1547"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.81831,
+        "øst": 6.88781
+      },
+      "skrivemåte": "Riksfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 132767,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Balsfjord",
+          "kommunenummer": "5532"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.30346,
+        "øst": 18.65389
+      },
+      "skrivemåte": "Aursfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 292003,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Balsfjord",
+          "kommunenummer": "5532"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.2696,
+        "øst": 18.72462
+      },
+      "skrivemåte": "Aursfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 539516,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.08998,
+        "øst": 21.80925
+      },
+      "skrivemåte": "Tverfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1078219,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.04408,
+        "øst": 7.71248
+      },
+      "skrivemåte": "Trysfjordgapet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 142100,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.31587,
+        "øst": 23.47947
+      },
+      "skrivemåte": "Lille Lerresfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 445792,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.7304,
+        "øst": 29.27828
+      },
+      "skrivemåte": "Øster-Risfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 141426,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.03241,
+        "øst": 18.70749
+      },
+      "skrivemåte": "Ytre Løksfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1086687,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hadsel",
+          "kommunenummer": "1866"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 68.66776,
+        "øst": 14.9483
+      },
+      "skrivemåte": "Ytre Eidsfjord",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 624727,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        },
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.18514,
+        "øst": 16.17837
+      },
+      "skrivemåte": "Tysfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 320809,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.39447,
+        "øst": 26.59548
+      },
+      "skrivemåte": "Adamsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 504133,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.71176,
+        "øst": 29.36316
+      },
+      "skrivemåte": "Kongsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 809445,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kinn",
+          "kommunenummer": "4602"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.60148,
+        "øst": 5.17644
+      },
+      "skrivemåte": "Nesfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 757980,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        },
+        {
+          "kommunenavn": "Sola",
+          "kommunenummer": "1124"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.92803,
+        "øst": 5.64855
+      },
+      "skrivemåte": "Hafrsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 304018,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Våg i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.96626,
+        "øst": 9.93509
+      },
+      "skrivemåte": "Trafjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 304894,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.58412,
+        "øst": 6.93263
+      },
+      "skrivemåte": "Tomrefjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 922887,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.72053,
+        "øst": 29.31909
+      },
+      "skrivemåte": "Kongsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 80420,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.96869,
+        "øst": 18.84829
+      },
+      "skrivemåte": "Skarsfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 878995,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.80199,
+        "øst": 18.76902
+      },
+      "skrivemåte": "Skulsfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 18912,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.24934,
+        "øst": 21.79195
+      },
+      "skrivemåte": "Bergsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 201340,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gamvik",
+          "kommunenummer": "5626"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.81261,
+        "øst": 27.9569
+      },
+      "skrivemåte": "Ivarsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 445866,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.79205,
+        "øst": 15.05535
+      },
+      "skrivemåte": "Saursfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 198995,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.25513,
+        "øst": 21.76461
+      },
+      "skrivemåte": "Bergsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 202210,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.98152,
+        "øst": 18.80114
+      },
+      "skrivemåte": "Skarsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 444165,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.5358,
+        "øst": 17.7788
+      },
+      "skrivemåte": "Baltsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 746780,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Utmark",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.49995,
+        "øst": 17.23273
+      },
+      "skrivemåte": "Trelsjorda",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 416128,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.80385,
+        "øst": 18.77053
+      },
+      "skrivemåte": "Skulsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1076846,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.1614,
+        "øst": 19.81443
+      },
+      "skrivemåte": "Skipsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 140959,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinesdal",
+          "kommunenummer": "4227"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.72429,
+        "øst": 6.99262
+      },
+      "skrivemåte": "Grønsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 279073,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53085,
+        "øst": 17.78608
+      },
+      "skrivemåte": "Baltsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1077889,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.79477,
+        "øst": 15.05603
+      },
+      "skrivemåte": "Saursfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1076245,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.95227,
+        "øst": 5.64405
+      },
+      "skrivemåte": "Revheim kirke",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 183031,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        },
+        {
+          "kommunenavn": "Sola",
+          "kommunenummer": "1124"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.95868,
+        "øst": 5.6082
+      },
+      "skrivemåte": "Hafrsfjord bru",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 449135,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.72082,
+        "øst": 29.31833
+      },
+      "skrivemåte": "Kongsfjord bedehuskapell",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 333927,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Vik",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.10509,
+        "øst": 9.93701
+      },
+      "skrivemåte": "Nesfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 487423,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.04839,
+        "øst": 7.40051
+      },
+      "skrivemåte": "Skogsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 45147,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.03477,
+        "øst": 19.09437
+      },
+      "skrivemåte": "Skogsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 19672,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.96747,
+        "øst": 18.84696
+      },
+      "skrivemåte": "Skarsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 869879,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gildeskål",
+          "kommunenummer": "1838"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.97531,
+        "øst": 14.15468
+      },
+      "skrivemåte": "Sundsfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 319237,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.87549,
+        "øst": 15.08742
+      },
+      "skrivemåte": "Østre Innerskotsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 684829,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.9297,
+        "øst": 11.15474
+      },
+      "skrivemåte": "Vangsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 864667,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.05286,
+        "øst": 7.10299
+      },
+      "skrivemåte": "Grønsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 606568,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53241,
+        "øst": 17.78058
+      },
+      "skrivemåte": "Baltsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 139806,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.01836,
+        "øst": 19.06428
+      },
+      "skrivemåte": "Skogsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 869689,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Gammel bosettingsplass",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.37979,
+        "øst": 26.6251
+      },
+      "skrivemåte": "Adamsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747135,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordkapp",
+          "kommunenummer": "5620"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.0241,
+        "øst": 25.8981
+      },
+      "skrivemåte": "Skipsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747250,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordkapp",
+          "kommunenummer": "5620"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.02618,
+        "øst": 25.89329
+      },
+      "skrivemåte": "Skipsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 208309,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": null,
+      "kommuner": null,
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.97769,
+        "øst": -26.35892
+      },
+      "skrivemåte": "Øfjord",
+      "skrivemåtestatus": "internasjonal og prioritert",
+      "språk": "Dansk",
+      "stedsnummer": 972657,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.96068,
+        "øst": 10.22468
+      },
+      "skrivemåte": "Åfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 195386,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.46269,
+        "øst": 27.10611
+      },
+      "skrivemåte": "Ifjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 566220,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.4125,
+        "øst": 10.52114
+      },
+      "skrivemåte": "Tvåjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 190346,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.89875,
+        "øst": 9.96286
+      },
+      "skrivemåte": "Åfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 256571,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestnes",
+          "kommunenummer": "1535"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.51465,
+        "øst": 7.13071
+      },
+      "skrivemåte": "Tressa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 618844,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Tuft",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.62996,
+        "øst": 22.40397
+      },
+      "skrivemåte": "Ofjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 809703,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.42596,
+        "øst": 10.22794
+      },
+      "skrivemåte": "Tvåjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 797911,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Hotell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.4573,
+        "øst": 27.1365
+      },
+      "skrivemåte": "Ifjord",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 809216,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.46302,
+        "øst": 27.10741
+      },
+      "skrivemåte": "Ifjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 815034,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stor-Elvdal",
+          "kommunenummer": "3423"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.59495,
+        "øst": 11.00139
+      },
+      "skrivemåte": "Tresen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 10002,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tynset",
+          "kommunenummer": "3427"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.33909,
+        "øst": 10.90139
+      },
+      "skrivemåte": "Tujord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 132213,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Molde",
+          "kommunenummer": "1506"
+        }
+      ],
+      "navneobjekttype": "Barnehage",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.67307,
+        "øst": 8.13183
+      },
+      "skrivemåte": "Eresfjord barnehage",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1091005,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 70.31134,
+        "øst": 23.68729
+      },
+      "skrivemåte": "Lerresfjordelva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 141772,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.39886,
+        "øst": 26.60359
+      },
+      "skrivemåte": "Ytre Adamsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1088364,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 70.29134,
+        "øst": 23.57629
+      },
+      "skrivemåte": "Lerresfjordbotn",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 384783,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.45129,
+        "øst": 10.79848
+      },
+      "skrivemåte": "Trefjordfjellet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 13495,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Idrettsanlegg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.95345,
+        "øst": 10.15642
+      },
+      "skrivemåte": "Åfjord travbane",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1083878,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.86154,
+        "øst": 14.92443
+      },
+      "skrivemåte": "Ytre Skotsfjord",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 562833,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,7629 @@
+{
+  "query": "Troms",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:10:39.703822+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Troms&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Troms&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 301,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 301,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "By",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65455,
+        "øst": 18.96366
+      },
+      "skrivemåte": "Tromsø",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 503295,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.92024,
+        "øst": 8.85953
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 195798,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 64.80741,
+        "øst": 13.12577
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 75089,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.462,
+        "øst": 10.26339
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 129563,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Holme i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.79013,
+        "øst": 8.57713
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 802121,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Holme i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.84089,
+        "øst": 8.62333
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 73103,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45306,
+        "øst": 10.18496
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 532009,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45644,
+        "øst": 10.19327
+      },
+      "skrivemåte": "Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 714009,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "By",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65455,
+        "øst": 18.96366
+      },
+      "skrivemåte": "Tromssa",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Kvensk",
+      "stedsnummer": 503295,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Surnadal",
+          "kommunenummer": "1566"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.94712,
+        "øst": 8.42284
+      },
+      "skrivemåte": "Tromsen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 72668,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        },
+        {
+          "kommunenavn": "Harstad - Hárstták",
+          "kommunenummer": "5503"
+        },
+        {
+          "kommunenavn": "Kvæfjord",
+          "kommunenummer": "5510"
+        },
+        {
+          "kommunenavn": "Dielddanuorri - Tjeldsund",
+          "kommunenummer": "5512"
+        },
+        {
+          "kommunenavn": "Ibestad",
+          "kommunenummer": "5514"
+        },
+        {
+          "kommunenavn": "Gratangen",
+          "kommunenummer": "5516"
+        },
+        {
+          "kommunenavn": "Loabák - Lavangen",
+          "kommunenummer": "5518"
+        },
+        {
+          "kommunenavn": "Bardu",
+          "kommunenummer": "5520"
+        },
+        {
+          "kommunenavn": "Salangen",
+          "kommunenummer": "5522"
+        },
+        {
+          "kommunenavn": "Målselv",
+          "kommunenummer": "5524"
+        },
+        {
+          "kommunenavn": "Sørreisa",
+          "kommunenummer": "5526"
+        },
+        {
+          "kommunenavn": "Dyrøy",
+          "kommunenummer": "5528"
+        },
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        },
+        {
+          "kommunenavn": "Balsfjord",
+          "kommunenummer": "5532"
+        },
+        {
+          "kommunenavn": "Karlsøy",
+          "kommunenummer": "5534"
+        },
+        {
+          "kommunenavn": "Lyngen",
+          "kommunenummer": "5536"
+        },
+        {
+          "kommunenavn": "Storfjord - Omasvuotna - Omasvuono",
+          "kommunenummer": "5538"
+        },
+        {
+          "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+          "kommunenummer": "5540"
+        },
+        {
+          "kommunenavn": "Skjervøy",
+          "kommunenummer": "5542"
+        },
+        {
+          "kommunenavn": "Nordreisa - Ráisa - Raisi",
+          "kommunenummer": "5544"
+        },
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Fylke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65278,
+        "øst": 18.94419
+      },
+      "skrivemåte": "Troms fylke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 571034,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.66761,
+        "øst": 18.9258
+      },
+      "skrivemåte": "Tromsøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 868425,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dønna",
+          "kommunenummer": "1827"
+        }
+      ],
+      "navneobjekttype": "Holme i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.22766,
+        "øst": 12.26023
+      },
+      "skrivemåte": "Tromsøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 318726,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45749,
+        "øst": 10.18965
+      },
+      "skrivemåte": "Tromsnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 130551,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.72875,
+        "øst": 12.81617
+      },
+      "skrivemåte": "Tromsstad",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 303413,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.72202,
+        "øst": 11.64593
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 558630,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Annen terrengdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.74716,
+        "øst": 8.20304
+      },
+      "skrivemåte": "Trome",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 779907,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.46236,
+        "øst": 10.56085
+      },
+      "skrivemåte": "Tromsbua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 736347,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 64.80741,
+        "øst": 13.12577
+      },
+      "skrivemåte": "Stortromselva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 75089,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Brønnøy",
+          "kommunenummer": "1813"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.43277,
+        "øst": 12.47912
+      },
+      "skrivemåte": "Tromsmyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 843307,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordreisa - Ráisa - Raisi",
+          "kommunenummer": "5544"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.53061,
+        "øst": 21.37201
+      },
+      "skrivemåte": "Tronsanes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 686248,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjøvik",
+          "kommunenummer": "3407"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.76094,
+        "øst": 10.57321
+      },
+      "skrivemåte": "Tromsåsen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 919087,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Adressetilleggsnavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.72875,
+        "øst": 12.81617
+      },
+      "skrivemåte": "Tromsstad",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 303556,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.46171,
+        "øst": 8.84683
+      },
+      "skrivemåte": "Tromøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 485945,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eigersund",
+          "kommunenummer": "1101"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.54663,
+        "øst": 6.10058
+      },
+      "skrivemåte": "Trommo",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 568995,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vennesla",
+          "kommunenummer": "4223"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.37092,
+        "øst": 7.77469
+      },
+      "skrivemåte": "Tromyr",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 24069,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngen",
+          "kommunenummer": "5536"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.8938,
+        "øst": 20.38926
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 869721,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Smøla",
+          "kommunenummer": "1573"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.35889,
+        "øst": 8.1938
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 377799,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aure",
+          "kommunenummer": "1576"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.20612,
+        "øst": 8.29043
+      },
+      "skrivemåte": "Trommå",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 110030,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 68.08181,
+        "øst": 15.49614
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 320996,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ulvik",
+          "kommunenummer": "4620"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.49617,
+        "øst": 6.93343
+      },
+      "skrivemåte": "Trommi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 915392,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.44989,
+        "øst": 8.86431
+      },
+      "skrivemåte": "Tromøy kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 667925,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.88925,
+        "øst": 11.50504
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 836360,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hitra",
+          "kommunenummer": "5056"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.44776,
+        "øst": 8.30588
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 557020,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Hylle",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.08097,
+        "øst": 6.08763
+      },
+      "skrivemåte": "Trommo",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 165496,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Berg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.78285,
+        "øst": 18.33834
+      },
+      "skrivemåte": "Tromma",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 808226,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alstahaug",
+          "kommunenummer": "1820"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.79764,
+        "øst": 12.53969
+      },
+      "skrivemåte": "Tro",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 299078,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alstahaug",
+          "kommunenummer": "1820"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.79041,
+        "øst": 12.52553
+      },
+      "skrivemåte": "Tro",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 76068,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.72275,
+        "øst": 14.82144
+      },
+      "skrivemåte": "Tro",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 199217,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 64.77498,
+        "øst": 13.0534
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 135022,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45814,
+        "øst": 10.58316
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 586199,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.63536,
+        "øst": 19.0518
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 322313,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Harstad - Hárstták",
+          "kommunenummer": "5503"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.98812,
+        "øst": 16.51603
+      },
+      "skrivemåte": "Tromsneset",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 200711,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65044,
+        "øst": 18.98167
+      },
+      "skrivemåte": "Tromsø bru",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 875438,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.64563,
+        "øst": 19.02442
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1076828,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bydel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.64424,
+        "øst": 18.99916
+      },
+      "skrivemåte": "Tromsdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 79315,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65415,
+        "øst": 18.96515
+      },
+      "skrivemåte": "Tromsøbrua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 978485,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 69.64801,
+        "øst": 18.98749
+      },
+      "skrivemåte": "Tromsdalen kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 443345,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hustadvika",
+          "kommunenummer": "1579"
+        }
+      ],
+      "navneobjekttype": "Skjær i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.0371,
+        "øst": 7.31676
+      },
+      "skrivemåte": "Dromskjæra",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 740558,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Harstad - Hárstták",
+          "kommunenummer": "5503"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.98937,
+        "øst": 16.51787
+      },
+      "skrivemåte": "Tromshågen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 479429,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Oslo",
+          "fylkesnummer": "03"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Oslo",
+          "kommunenummer": "0301"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.92247,
+        "øst": 10.76959
+      },
+      "skrivemåte": "Tromsøgata",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 997425,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hammerfest",
+          "kommunenummer": "5603"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.67312,
+        "øst": 23.66301
+      },
+      "skrivemåte": "Tromsveien",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1056196,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.77702,
+        "øst": 18.39896
+      },
+      "skrivemåte": "Tromvik",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747115,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sykkylven",
+          "kommunenummer": "1528"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.37502,
+        "øst": 6.61339
+      },
+      "skrivemåte": "Tromyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 218090,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vågå",
+          "kommunenummer": "3435"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.88501,
+        "øst": 9.00171
+      },
+      "skrivemåte": "Tromyre",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 344022,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Inderøy",
+          "kommunenummer": "5053"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.87035,
+        "øst": 10.9022
+      },
+      "skrivemåte": "Tromyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 109761,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.20857,
+        "øst": 7.62758
+      },
+      "skrivemåte": "Trommyr",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 204677,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Meråker",
+          "kommunenummer": "5034"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.45098,
+        "øst": 11.68547
+      },
+      "skrivemåte": "Tromyra",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 627527,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Botn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.64391,
+        "øst": 6.57765
+      },
+      "skrivemåte": "Tromhom",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 711569,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flå",
+          "kommunenummer": "3320"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.37306,
+        "øst": 9.6436
+      },
+      "skrivemåte": "Trommald",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 492784,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Grane",
+          "kommunenummer": "1825"
+        }
+      ],
+      "navneobjekttype": "Mo",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.53225,
+        "øst": 13.42954
+      },
+      "skrivemåte": "Tromoan",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 561363,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.66728,
+        "øst": 21.97493
+      },
+      "skrivemåte": "Trombolken",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 384537,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Skjær i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.78688,
+        "øst": 18.34242
+      },
+      "skrivemåte": "Tromkua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 808212,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.46203,
+        "øst": 8.89243
+      },
+      "skrivemåte": "Tromøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 298028,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sykkylven",
+          "kommunenummer": "1528"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.42254,
+        "øst": 6.82712
+      },
+      "skrivemåte": "Trompen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 860712,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.77345,
+        "øst": 18.41037
+      },
+      "skrivemåte": "Tromvika",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 289432,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aremark",
+          "kommunenummer": "3124"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.21504,
+        "øst": 11.682
+      },
+      "skrivemåte": "Tromopp",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 365165,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Måsøy",
+          "kommunenummer": "5618"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.87045,
+        "øst": 24.64163
+      },
+      "skrivemåte": "Tromsebukta",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 654362,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Måsøy",
+          "kommunenummer": "5618"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.87242,
+        "øst": 24.62402
+      },
+      "skrivemåte": "Tromseneset",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 594371,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lurøy",
+          "kommunenummer": "1834"
+        }
+      ],
+      "navneobjekttype": "Holme i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.31012,
+        "øst": 12.49779
+      },
+      "skrivemåte": "Tromsholmen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 622301,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trysil",
+          "kommunenummer": "3421"
+        }
+      ],
+      "navneobjekttype": "Berg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.37833,
+        "øst": 12.31523
+      },
+      "skrivemåte": "Tromskjæret",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 782679,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.92041,
+        "øst": 8.87904
+      },
+      "skrivemåte": "Tromsataren",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 934540,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dønna",
+          "kommunenummer": "1827"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.22289,
+        "øst": 12.27633
+      },
+      "skrivemåte": "Tromsøytaren",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 692856,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Sokn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.64845,
+        "øst": 18.98786
+      },
+      "skrivemåte": "Tromsøysund sokn",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1083721,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Målselv",
+          "kommunenummer": "5524"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.2432,
+        "øst": 18.30144
+      },
+      "skrivemåte": "Tromshumpen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 537378,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45405,
+        "øst": 10.19184
+      },
+      "skrivemåte": "Tromsavegen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 978788,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Idrettsanlegg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.67449,
+        "øst": 18.95549
+      },
+      "skrivemåte": "Tromsøbadet",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 985743,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bardu",
+          "kommunenummer": "5520"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.8803,
+        "øst": 18.35391
+      },
+      "skrivemåte": "Tromsøveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1010399,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Bygg for jordbruk, fiske og fangst",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.50462,
+        "øst": 10.43356
+      },
+      "skrivemåte": "Tromsnesbua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 463918,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tynset",
+          "kommunenummer": "3427"
+        },
+        {
+          "kommunenavn": "Alvdal",
+          "kommunenummer": "3428"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.17436,
+        "øst": 10.69475
+      },
+      "skrivemåte": "Tron",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 617011,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Voss",
+          "kommunenummer": "4621"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.84823,
+        "øst": 6.46611
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 870364,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.47157,
+        "øst": 5.46963
+      },
+      "skrivemåte": "Trådi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 66953,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Voss",
+          "kommunenummer": "4621"
+        }
+      ],
+      "navneobjekttype": "Utmark",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.78937,
+        "øst": 6.60956
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 141155,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Voss",
+          "kommunenummer": "4621"
+        }
+      ],
+      "navneobjekttype": "Utmark",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.78235,
+        "øst": 6.59497
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 20138,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.65421,
+        "øst": 7.28567
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 450776,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hustadvika",
+          "kommunenummer": "1579"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.96864,
+        "øst": 7.08453
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 657668,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nord-Fron",
+          "kommunenummer": "3436"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.55489,
+        "øst": 9.64044
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 114548,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.49886,
+        "øst": 7.68086
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 693520,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.49942,
+        "øst": 7.59491
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 451995,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sør-Fron",
+          "kommunenummer": "3438"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.52565,
+        "øst": 9.96896
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 234051,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.39136,
+        "øst": 7.06677
+      },
+      "skrivemåte": "Troi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 817697,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Grane",
+          "kommunenummer": "1825"
+        }
+      ],
+      "navneobjekttype": "Annen vanndetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.5306,
+        "øst": 13.43197
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 944409,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hustadvika",
+          "kommunenummer": "1579"
+        }
+      ],
+      "navneobjekttype": "Skjær i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.96968,
+        "øst": 7.08621
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 580958,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Annen vanndetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.91884,
+        "øst": 14.76736
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 976566,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.92083,
+        "øst": 14.76954
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 274197,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nord-Fron",
+          "kommunenummer": "3436"
+        }
+      ],
+      "navneobjekttype": "Enebolig/mindre boligbygg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.57689,
+        "øst": 9.69968
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 296871,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Jorde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.67707,
+        "øst": 7.3198
+      },
+      "skrivemåte": "Trodi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 71757,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Brønnøy",
+          "kommunenummer": "1813"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.53568,
+        "øst": 12.45101
+      },
+      "skrivemåte": "Troa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 804937,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.33063,
+        "øst": 17.33729
+      },
+      "skrivemåte": "Tromtinden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 324358,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.77997,
+        "øst": 18.41738
+      },
+      "skrivemåte": "Tromvika",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 775391,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Midt-Telemark",
+          "kommunenummer": "4020"
+        }
+      ],
+      "navneobjekttype": "Foss",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.45617,
+        "øst": 8.95838
+      },
+      "skrivemåte": "Tromfoss",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 817071,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Heim",
+          "kommunenummer": "5055"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.09134,
+        "øst": 8.63158
+      },
+      "skrivemåte": "Trommyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 594448,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Midtre Gauldal",
+          "kommunenummer": "5027"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.05008,
+        "øst": 10.31748
+      },
+      "skrivemåte": "Tromyran",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 761900,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurskog-Høland",
+          "kommunenummer": "3226"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.80266,
+        "øst": 11.61022
+      },
+      "skrivemåte": "Tromåsen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 915479,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flå",
+          "kommunenummer": "3320"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.37121,
+        "øst": 9.63648
+      },
+      "skrivemåte": "Trommald",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 896804,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flå",
+          "kommunenummer": "3320"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.37333,
+        "øst": 9.63633
+      },
+      "skrivemåte": "Trommald",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 161403,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Raarvihke - Røyrvik",
+          "kommunenummer": "5043"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.75338,
+        "øst": 13.14011
+      },
+      "skrivemåte": "Tromsfjellet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 743004,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": null,
+      "kommuner": null,
+      "navneobjekttype": "Banke i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.36667,
+        "øst": 19.08333
+      },
+      "skrivemåte": "Tromsøflaket",
+      "skrivemåtestatus": "internasjonal og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 466575,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Øyer",
+          "kommunenummer": "3440"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.40293,
+        "øst": 10.50539
+      },
+      "skrivemåte": "Tromstjønnet",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 190324,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurskog-Høland",
+          "kommunenummer": "3226"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.80266,
+        "øst": 11.61022
+      },
+      "skrivemåte": "Tromsåshøgda",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 915479,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.73193,
+        "øst": 12.81305
+      },
+      "skrivemåte": "Tromselvbrua",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 958903,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        },
+        {
+          "kommunenavn": "Øyer",
+          "kommunenummer": "3440"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.41751,
+        "øst": 10.48653
+      },
+      "skrivemåte": "Vesle Tromsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 554967,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 69.70276,
+        "øst": 18.99695
+      },
+      "skrivemåte": "Tromsø Varde",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 868389,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Idrettsanlegg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.67586,
+        "øst": 18.95594
+      },
+      "skrivemåte": "Tromsøhallen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 509492,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.47444,
+        "øst": 8.91208
+      },
+      "skrivemåte": "Tromlingene",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 485935,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.71662,
+        "øst": 11.65431
+      },
+      "skrivemåte": "Tromsdalselva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 438589,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.63059,
+        "øst": 19.03734
+      },
+      "skrivemåte": "Tromsdalselva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 18299,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 69.3407,
+        "øst": 17.37328
+      },
+      "skrivemåte": "Tromdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 322307,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bremanger",
+          "kommunenummer": "4648"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.87354,
+        "øst": 5.47343
+      },
+      "skrivemåte": "Troda",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 677363,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.3392,
+        "øst": 6.30124
+      },
+      "skrivemåte": "Trong",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 783831,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Levanger",
+          "kommunenummer": "5037"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.64149,
+        "øst": 11.22583
+      },
+      "skrivemåte": "Trole",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 655456,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.89704,
+        "øst": 9.13356
+      },
+      "skrivemåte": "Trommedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 117415,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Høyanger",
+          "kommunenummer": "4638"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.16783,
+        "øst": 6.30961
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 130610,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sogndal",
+          "kommunenummer": "4640"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.24229,
+        "øst": 7.08668
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 215000,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.1954,
+        "øst": 5.9597
+      },
+      "skrivemåte": "Trong",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 175314,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vennesla",
+          "kommunenummer": "4223"
+        }
+      ],
+      "navneobjekttype": "Hei",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.38278,
+        "øst": 7.6575
+      },
+      "skrivemåte": "Trommehei",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 884584,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Sund i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.66168,
+        "øst": 18.99141
+      },
+      "skrivemåte": "Tromsøysundet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 79399,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.48493,
+        "øst": 10.36476
+      },
+      "skrivemåte": "Øvre Tromsnes",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 767570,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Raarvihke - Røyrvik",
+          "kommunenummer": "5043"
+        }
+      ],
+      "navneobjekttype": "Vann",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.81477,
+        "øst": 13.23764
+      },
+      "skrivemåte": "Litltromsvatnet",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 324414,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lærdal",
+          "kommunenummer": "4642"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.11246,
+        "øst": 7.4276
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 192280,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringerike",
+          "kommunenummer": "3305"
+        }
+      ],
+      "navneobjekttype": "Vann",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.45836,
+        "øst": 10.16245
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 248542,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.60716,
+        "øst": 19.14581
+      },
+      "skrivemåte": "Tromsdalstinden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 21384,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rollag",
+          "kommunenummer": "3336"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.01256,
+        "øst": 9.28178
+      },
+      "skrivemåte": "Tråen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 355381,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gausdal",
+          "kommunenummer": "3441"
+        }
+      ],
+      "navneobjekttype": "Berg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.36714,
+        "øst": 9.70545
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 190682,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gildeskål",
+          "kommunenummer": "1838"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.11011,
+        "øst": 13.89459
+      },
+      "skrivemåte": "Troll",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 198149,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Rygg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.54491,
+        "øst": 10.60547
+      },
+      "skrivemåte": "Tromsneshøgda",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 920232,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Skog",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.42025,
+        "øst": 7.46218
+      },
+      "skrivemåte": "Tronå",
+      "skrivemåtestatus": "foreslått og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 473973,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Surnadal",
+          "kommunenummer": "1566"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.04655,
+        "øst": 8.94416
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 641204,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Høyde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.38856,
+        "øst": 6.63226
+      },
+      "skrivemåte": "Tronå",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 953954,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sarpsborg",
+          "kommunenummer": "3105"
+        }
+      ],
+      "navneobjekttype": "Skog",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.29275,
+        "øst": 11.08987
+      },
+      "skrivemåte": "Trompeten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 933012,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gran",
+          "kommunenummer": "3446"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.47573,
+        "øst": 10.18709
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 66721,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hitra",
+          "kommunenummer": "5056"
+        }
+      ],
+      "navneobjekttype": "Våg i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.45089,
+        "øst": 8.30878
+      },
+      "skrivemåte": "Tromvågen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 819405,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Tunnel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.68074,
+        "øst": 18.98337
+      },
+      "skrivemåte": "Tromsøysund 1",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 894689,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sømna",
+          "kommunenummer": "1812"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.32359,
+        "øst": 11.74403
+      },
+      "skrivemåte": "Troll",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 149875,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hadsel",
+          "kommunenummer": "1866"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.61947,
+        "øst": 14.93215
+      },
+      "skrivemåte": "Tromslåttelva",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 261524,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Tunnel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.68074,
+        "øst": 18.98291
+      },
+      "skrivemåte": "Tromsøysund 2",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 287699,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skien",
+          "kommunenummer": "4003"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.37258,
+        "øst": 9.56788
+      },
+      "skrivemåte": "Trommeren",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 305838,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.32384,
+        "øst": 10.04352
+      },
+      "skrivemåte": "Tromvegen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 361185,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjøvik",
+          "kommunenummer": "3407"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.76232,
+        "øst": 10.56995
+      },
+      "skrivemåte": "Tromsåstoppen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 344244,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Voss",
+          "kommunenummer": "4621"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.65241,
+        "øst": 6.42856
+      },
+      "skrivemåte": "Trodo",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 431298,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sel",
+          "kommunenummer": "3437"
+        }
+      ],
+      "navneobjekttype": "Annen kulturdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.87318,
+        "øst": 9.30576
+      },
+      "skrivemåte": "Trond",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 314936,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.42243,
+        "øst": 10.22336
+      },
+      "skrivemåte": "Tromsnesvegen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1027290,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Annen terrengdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.43255,
+        "øst": 7.49257
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 401084,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rollag",
+          "kommunenummer": "3336"
+        }
+      ],
+      "navneobjekttype": "Gammel bosettingsplass",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.05351,
+        "øst": 9.13476
+      },
+      "skrivemåte": "Tromperud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 211327,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Museum/galleri/bibliotek",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.63484,
+        "øst": 18.91189
+      },
+      "skrivemåte": "Tromsø museum",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 934495,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 69.70276,
+        "øst": 18.99695
+      },
+      "skrivemåte": "Tromsøyvarden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 868389,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drammen",
+          "kommunenummer": "3301"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.72224,
+        "øst": 10.15658
+      },
+      "skrivemåte": "Trompeten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1033235,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Museum/galleri/bibliotek",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.63665,
+        "øst": 18.90625
+      },
+      "skrivemåte": "Troms folkemuseum",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 449486,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.4367,
+        "øst": 7.10244
+      },
+      "skrivemåte": "Trodi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 128079,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Vegsving",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.58666,
+        "øst": 18.9403
+      },
+      "skrivemåte": "Tromsøsvingen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1089578,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.91708,
+        "øst": 14.75778
+      },
+      "skrivemåte": "Troålia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 622612,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Grane",
+          "kommunenummer": "1825"
+        }
+      ],
+      "navneobjekttype": "Annen vanndetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.53054,
+        "øst": 13.42638
+      },
+      "skrivemåte": "Troia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 458420,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lærdal",
+          "kommunenummer": "4642"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.03933,
+        "øst": 7.81144
+      },
+      "skrivemåte": "Tråo",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 313508,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tinn",
+          "kommunenummer": "4026"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.00052,
+        "øst": 8.67591
+      },
+      "skrivemåte": "Troen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 276588,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lærdal",
+          "kommunenummer": "4642"
+        }
+      ],
+      "navneobjekttype": "Bygg for jordbruk, fiske og fangst",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.03368,
+        "øst": 7.81016
+      },
+      "skrivemåte": "Troni",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 896899,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringerike",
+          "kommunenummer": "3305"
+        }
+      ],
+      "navneobjekttype": "Bygg for jordbruk, fiske og fangst",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.12313,
+        "øst": 9.97983
+      },
+      "skrivemåte": "Tromperud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 247699,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vik",
+          "kommunenummer": "4639"
+        }
+      ],
+      "navneobjekttype": "Jorde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.1666,
+        "øst": 6.64324
+      },
+      "skrivemåte": "Trona",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 919904,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.64961,
+        "øst": 18.95701
+      },
+      "skrivemåte": "Tromsø kommune",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 86632,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Harstad - Hárstták",
+          "kommunenummer": "5503"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.69798,
+        "øst": 16.53554
+      },
+      "skrivemåte": "Tromslagaråsen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 906589,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Boligfelt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.46386,
+        "øst": 10.19193
+      },
+      "skrivemåte": "Tromsnesskogen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 284830,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fengsel",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.68599,
+        "øst": 18.99525
+      },
+      "skrivemåte": "Tromsø fengsel",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 752492,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Skole",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.65056,
+        "øst": 19.01367
+      },
+      "skrivemåte": "Tromstun skole",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 417838,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.72253,
+        "øst": 11.64187
+      },
+      "skrivemåte": "Tromsdalsvegen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1024997,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringebu",
+          "kommunenummer": "3439"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.48428,
+        "øst": 10.35953
+      },
+      "skrivemåte": "Tromsnesgeilen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1013745,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Adressetilleggsnavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.81647,
+        "øst": 13.14281
+      },
+      "skrivemåte": "Tromsdalshytta",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 121616,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Turisthytte",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.81647,
+        "øst": 13.14281
+      },
+      "skrivemåte": "Tromsdalshytta",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 363554,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rana",
+          "kommunenummer": "1833"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.38931,
+        "øst": 15.40376
+      },
+      "skrivemåte": "Tromberget",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 259560,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.78044,
+        "øst": 18.35741
+      },
+      "skrivemåte": "Tromtinden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 686113,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Hei",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.11442,
+        "øst": 7.69592
+      },
+      "skrivemåte": "Trommeheia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 506060,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Hei",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.11378,
+        "øst": 7.38836
+      },
+      "skrivemåte": "Trommeheia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 568689,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Sund i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.4649,
+        "øst": 8.79985
+      },
+      "skrivemåte": "Tromøysundet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 910630,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.79051,
+        "øst": 18.36334
+      },
+      "skrivemåte": "Tromkroken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 747221,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.14216,
+        "øst": 7.43852
+      },
+      "skrivemåte": "Trommemyra",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 343485,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sigdal",
+          "kommunenummer": "3332"
+        }
+      ],
+      "navneobjekttype": "Foss",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9558,
+        "øst": 9.64559
+      },
+      "skrivemåte": "Trommefoss",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 396476,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Fyrlykt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.47011,
+        "øst": 8.8231
+      },
+      "skrivemåte": "Tromøysundet",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 874086,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nord-Aurdal",
+          "kommunenummer": "3451"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.16021,
+        "øst": 9.45576
+      },
+      "skrivemåte": "Trommemyri",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 674936,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.14244,
+        "øst": 7.43903
+      },
+      "skrivemåte": "Trommemyra",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 932433,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Indre Østfold",
+          "kommunenummer": "3118"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.63475,
+        "øst": 11.12116
+      },
+      "skrivemåte": "Trammelberg",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 489966,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.1468,
+        "øst": 6.66997
+      },
+      "skrivemåte": "Trombeskar",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 247434,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Botn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.42945,
+        "øst": 6.69424
+      },
+      "skrivemåte": "Trommekjer",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 892782,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.47134,
+        "øst": 8.82263
+      },
+      "skrivemåte": "Tromøy bru",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 301936,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.47218,
+        "øst": 8.82214
+      },
+      "skrivemåte": "Tromøybrua",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 106004,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.43697,
+        "øst": 8.76262
+      },
+      "skrivemåte": "Trommestad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 60589,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sør-Odal",
+          "kommunenummer": "3415"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.09023,
+        "øst": 11.82874
+      },
+      "skrivemåte": "Tromhaugen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 102757,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bakke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.40518,
+        "øst": 7.58802
+      },
+      "skrivemåte": "Trombakken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 265505,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.26135,
+        "øst": 6.64995
+      },
+      "skrivemåte": "Trollå",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 42174,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringerike",
+          "kommunenummer": "3305"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.46241,
+        "øst": 10.16864
+      },
+      "skrivemåte": "Tronåa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 512982,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.92092,
+        "øst": 14.75949
+      },
+      "skrivemåte": "Troåga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 881188,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Oppdal",
+          "kommunenummer": "5021"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.53441,
+        "øst": 9.56819
+      },
+      "skrivemåte": "Tronda",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 12608,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Folldal",
+          "kommunenummer": "3429"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.34197,
+        "øst": 10.19195
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 193682,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sogndal",
+          "kommunenummer": "4640"
+        },
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.45886,
+        "øst": 6.64909
+      },
+      "skrivemåte": "Troget",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 311863,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.7702,
+        "øst": 11.71901
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 717026,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.6755,
+        "øst": 11.76711
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 900360,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loabák - Lavangen",
+          "kommunenummer": "5518"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.72634,
+        "øst": 17.97035
+      },
+      "skrivemåte": "Trosen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 871921,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunndal",
+          "kommunenummer": "1563"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.68369,
+        "øst": 8.73242
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 739921,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.64152,
+        "øst": 11.1985
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 229203,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.86685,
+        "øst": 6.78567
+      },
+      "skrivemåte": "Trodal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 833316,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Solund",
+          "kommunenummer": "4636"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.00073,
+        "øst": 4.72055
+      },
+      "skrivemåte": "Trovågen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 719910,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.74216,
+        "øst": 12.84501
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 925726,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Sund i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.50089,
+        "øst": 10.96659
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 875155,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Sund i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.91708,
+        "øst": 10.06302
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 941010,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Sund i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.58929,
+        "øst": 11.75645
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 594283,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Hei",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.01649,
+        "øst": 6.92198
+      },
+      "skrivemåte": "Trohei",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 468504,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Hei",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.23426,
+        "øst": 7.39395
+      },
+      "skrivemåte": "Trohei",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 826285,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.80801,
+        "øst": 5.73936
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 854570,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kviteseid",
+          "kommunenummer": "4028"
+        }
+      ],
+      "navneobjekttype": "Juv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.45495,
+        "øst": 8.39824
+      },
+      "skrivemåte": "Trongi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 595945,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.40582,
+        "øst": 6.66922
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 66343,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.91274,
+        "øst": 5.77289
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 732725,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.0322,
+        "øst": 7.12127
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 385098,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.94076,
+        "øst": 5.83107
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 159587,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Giske",
+          "kommunenummer": "1532"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.54957,
+        "øst": 5.93468
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 824899,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dønna",
+          "kommunenummer": "1827"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.15707,
+        "øst": 12.7224
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 470215,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Enebakk",
+          "kommunenummer": "3220"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.73803,
+        "øst": 11.14363
+      },
+      "skrivemåte": "Troåsa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 508594,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lom",
+          "kommunenummer": "3434"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.56626,
+        "øst": 7.97686
+      },
+      "skrivemåte": "Troget",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 799266,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.40365,
+        "øst": 6.6549
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 915340,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 60.01908,
+        "øst": 6.52828
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 854022,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Boligfelt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.45158,
+        "øst": 10.31021
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 317603,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lom",
+          "kommunenummer": "3434"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.54935,
+        "øst": 8.28863
+      },
+      "skrivemåte": "Troget",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 555010,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Botn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.90091,
+        "øst": 12.83437
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 258216,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.57054,
+        "øst": 6.71882
+      },
+      "skrivemåte": "Tronjå",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 832479,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.74024,
+        "øst": 12.84694
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent",
+      "språk": "Norsk",
+      "stedsnummer": 971308,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dønna",
+          "kommunenummer": "1827"
+        }
+      ],
+      "navneobjekttype": "Botn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.1473,
+        "øst": 12.71486
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 895222,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurland",
+          "kommunenummer": "4641"
+        }
+      ],
+      "navneobjekttype": "Berg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.87393,
+        "øst": 7.11478
+      },
+      "skrivemåte": "Trossa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 150650,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.75761,
+        "øst": 11.33794
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 650130,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Høyde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.021,
+        "øst": 6.9698
+      },
+      "skrivemåte": "Trosli",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 44621,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Meløy",
+          "kommunenummer": "1837"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.79245,
+        "øst": 13.50922
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 77072,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurland",
+          "kommunenummer": "4641"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.76941,
+        "øst": 7.09183
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 797446,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osen",
+          "kommunenummer": "5020"
+        }
+      ],
+      "navneobjekttype": "Utmark",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.3255,
+        "øst": 10.37386
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 397003,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Målselv",
+          "kommunenummer": "5524"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.71026,
+        "øst": 19.75789
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 624398,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dønna",
+          "kommunenummer": "1827"
+        }
+      ],
+      "navneobjekttype": "Skar",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.10908,
+        "øst": 12.53305
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 865533,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandefjord",
+          "kommunenummer": "3907"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.1714,
+        "øst": 10.30152
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 85366,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Mo",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.29966,
+        "øst": 9.90567
+      },
+      "skrivemåte": "Troene",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 148186,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bardu",
+          "kommunenummer": "5520"
+        }
+      ],
+      "navneobjekttype": "Stryk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.71844,
+        "øst": 18.662
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 503447,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.66819,
+        "øst": 11.43337
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 560347,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gausdal",
+          "kommunenummer": "3441"
+        }
+      ],
+      "navneobjekttype": "Holme",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.22202,
+        "øst": 9.77951
+      },
+      "skrivemåte": "Tronoa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 172619,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Øyer",
+          "kommunenummer": "3440"
+        }
+      ],
+      "navneobjekttype": "Sti",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.39149,
+        "øst": 10.45444
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1090787,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sortland - Suortá",
+          "kommunenummer": "1870"
+        }
+      ],
+      "navneobjekttype": "Kai",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.64243,
+        "øst": 15.5196
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 946453,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rindal",
+          "kommunenummer": "5061"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.10385,
+        "øst": 9.20651
+      },
+      "skrivemåte": "Trøkna",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 862738,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sirdal",
+          "kommunenummer": "4228"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.64287,
+        "øst": 6.53097
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 589788,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aure",
+          "kommunenummer": "1576"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.34119,
+        "øst": 8.49914
+      },
+      "skrivemåte": "Trollå",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 838397,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurland",
+          "kommunenummer": "4641"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.8766,
+        "øst": 7.24776
+      },
+      "skrivemåte": "Troane",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 514091,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bømlo",
+          "kommunenummer": "4613"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89166,
+        "øst": 5.10258
+      },
+      "skrivemåte": "Tronko",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 290886,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestre Slidre",
+          "kommunenummer": "3452"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.93065,
+        "øst": 8.69778
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 737869,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lom",
+          "kommunenummer": "3434"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.91296,
+        "øst": 8.61267
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 436913,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stor-Elvdal",
+          "kommunenummer": "3423"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.42759,
+        "øst": 11.12914
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 797079,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurland",
+          "kommunenummer": "4641"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.76777,
+        "øst": 7.08714
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 372473,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gulen",
+          "kommunenummer": "4635"
+        }
+      ],
+      "navneobjekttype": "Slette",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.02636,
+        "øst": 5.06335
+      },
+      "skrivemåte": "Troget",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 642391,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.87871,
+        "øst": 11.31505
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 634422,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lesja",
+          "kommunenummer": "3432"
+        }
+      ],
+      "navneobjekttype": "Annen terrengdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.13936,
+        "øst": 9.02813
+      },
+      "skrivemåte": "Trolle",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 717885,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.89335,
+        "øst": 6.03506
+      },
+      "skrivemåte": "Trodal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 425632,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tønsberg",
+          "kommunenummer": "3905"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.38134,
+        "øst": 10.15406
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 512090,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tønsberg",
+          "kommunenummer": "3905"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.43595,
+        "øst": 10.07013
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 452007,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vindafjord",
+          "kommunenummer": "1160"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.53973,
+        "øst": 5.55064
+      },
+      "skrivemåte": "Trovåg",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 852307,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvam",
+          "kommunenummer": "4622"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.36317,
+        "øst": 6.09523
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 551607,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Bakke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.17135,
+        "øst": 7.36689
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 325216,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bodø",
+          "kommunenummer": "1804"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.3071,
+        "øst": 14.52461
+      },
+      "skrivemåte": "Tronli",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 622261,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.86295,
+        "øst": 5.7312
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 691652,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Annen terrengdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.17173,
+        "øst": 7.36593
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 404366,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.87733,
+        "øst": 11.31103
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 378092,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Øvre Eiker",
+          "kommunenummer": "3314"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.80623,
+        "øst": 9.88299
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 368585,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvam",
+          "kommunenummer": "4622"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.13626,
+        "øst": 5.89643
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 915578,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Levanger",
+          "kommunenummer": "5037"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.63082,
+        "øst": 11.32011
+      },
+      "skrivemåte": "Troset",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 377369,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dovre",
+          "kommunenummer": "3431"
+        }
+      ],
+      "navneobjekttype": "Gammel bosettingsplass",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.07436,
+        "øst": 9.09794
+      },
+      "skrivemåte": "Trodal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 717790,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osen",
+          "kommunenummer": "5020"
+        }
+      ],
+      "navneobjekttype": "Ur",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.35399,
+        "øst": 10.48796
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 883404,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Voss",
+          "kommunenummer": "4621"
+        }
+      ],
+      "navneobjekttype": "Annen terrengdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.67908,
+        "øst": 5.93887
+      },
+      "skrivemåte": "Troppi",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 734538,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.81741,
+        "øst": 11.42681
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 75213,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordre Follo",
+          "kommunenummer": "3207"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.69309,
+        "øst": 10.89948
+      },
+      "skrivemåte": "Trånås",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 854424,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hitra",
+          "kommunenummer": "5056"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.66065,
+        "øst": 9.08275
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 575075,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alvdal",
+          "kommunenummer": "3428"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.17864,
+        "øst": 10.63156
+      },
+      "skrivemåte": "Tronly",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 193016,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Midtre Gauldal",
+          "kommunenummer": "5027"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.9713,
+        "øst": 10.56239
+      },
+      "skrivemåte": "Troøyan",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 255529,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.90532,
+        "øst": 11.47505
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 227377,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Holmestrand",
+          "kommunenummer": "3903"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.49281,
+        "øst": 10.13107
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 209487,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunndal",
+          "kommunenummer": "1563"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.66695,
+        "øst": 8.73273
+      },
+      "skrivemåte": "Trolla",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 242444,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hadsel",
+          "kommunenummer": "1866"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.55451,
+        "øst": 14.87149
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 94008,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.85626,
+        "øst": 5.73409
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 603618,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.37486,
+        "øst": 9.97009
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 451736,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sveio",
+          "kommunenummer": "4612"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.49243,
+        "øst": 5.28203
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1037285,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.45738,
+        "øst": 11.16022
+      },
+      "skrivemåte": "Tronga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 776182,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sandefjord",
+          "kommunenummer": "3907"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.20582,
+        "øst": 10.10824
+      },
+      "skrivemåte": "Tronka",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 694799,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lindesnes",
+          "kommunenummer": "4205"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.03581,
+        "øst": 7.1208
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 673,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bodø",
+          "kommunenummer": "1804"
+        }
+      ],
+      "navneobjekttype": "Li",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.53853,
+        "øst": 14.91336
+      },
+      "skrivemåte": "Trolia",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 821951,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvam",
+          "kommunenummer": "4622"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.36262,
+        "øst": 6.09368
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 105766,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Birkenes",
+          "kommunenummer": "4216"
+        }
+      ],
+      "navneobjekttype": "Varde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.42628,
+        "øst": 8.21038
+      },
+      "skrivemåte": "Trotto",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 590323,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bamble",
+          "kommunenummer": "4012"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.95848,
+        "øst": 9.62027
+      },
+      "skrivemåte": "Trosby",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 183897,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Beiarn",
+          "kommunenummer": "1839"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.92591,
+        "øst": 14.77519
+      },
+      "skrivemåte": "Trones",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 380640,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Bygg for jordbruk, fiske og fangst",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.77116,
+        "øst": 8.46783
+      },
+      "skrivemåte": "Trogbu",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1091530,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alvdal",
+          "kommunenummer": "3428"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.17862,
+        "øst": 10.63394
+      },
+      "skrivemåte": "Tronbu",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 781897,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.00073,
+        "øst": 5.81547
+      },
+      "skrivemåte": "Troppa",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 430688,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Levanger",
+          "kommunenummer": "5037"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.63062,
+        "øst": 11.32333
+      },
+      "skrivemåte": "Troset",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 870563,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loabák - Lavangen",
+          "kommunenummer": "5518"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.73264,
+        "øst": 17.94975
+      },
+      "skrivemåte": "Trosen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1077313,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunndal",
+          "kommunenummer": "1563"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.57466,
+        "øst": 8.88953
+      },
+      "skrivemåte": "Tronget",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 618728,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

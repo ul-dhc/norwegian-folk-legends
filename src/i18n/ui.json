@@ -2078,5 +2078,21 @@
   "map.uniformSize": {
     "no": "Lik størrelse",
     "en": "Uniform size"
+  },
+  "map.sharedCoordinatesTitle": {
+    "no": "Stedsnavn ved samme koordinater",
+    "en": "Place names at the same coordinates"
+  },
+  "map.sharedCoordinatesGrouped": {
+    "no": "Disse stedsnavnene har identiske koordinater i datasettet og vises som én boble. Tallene gjelder alle opptegnelsene samlet. Dette bekrefter ikke at navnene viser til samme sted. De opprinnelige navnene er bevart; antall sagn nedenfor følger gjeldende filtre.",
+    "en": "These place names have identical coordinates in the dataset and share one map bubble. The profile totals combine their records. This does not confirm that the names refer to the same place. Original names are preserved; the legend counts below reflect the current filters."
+  },
+  "map.sharedCoordinatesSeparate": {
+    "no": "Disse stedsnavnene har identiske koordinater i datasettet. Dette bekrefter ikke at de viser til samme sted. Denne profilen gjelder bare det valgte stedsnavnet; antall sagn nedenfor følger gjeldende filtre.",
+    "en": "These place names have identical coordinates in the dataset. This does not confirm that they refer to the same place. This profile describes only the selected place name; the legend counts below reflect the current filters."
+  },
+  "map.sharedCoordinatesSummary": {
+    "no": "Én boble for {count} registrerte stedsnavn med identiske koordinater.",
+    "en": "One bubble groups {count} recorded place names with identical coordinates."
   }
 }

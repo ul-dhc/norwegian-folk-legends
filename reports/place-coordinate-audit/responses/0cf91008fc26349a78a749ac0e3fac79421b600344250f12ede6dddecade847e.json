@@ -1,0 +1,72 @@
+{
+  "query": "Idd",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:11.422225+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Idd&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Idd&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 2,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 2,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Halden",
+          "kommunenummer": "3101"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.09491,
+        "øst": 11.42927
+      },
+      "skrivemåte": "Idd",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 177450,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Halden",
+          "kommunenummer": "3101"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.08629,
+        "øst": 11.43471
+      },
+      "skrivemåte": "Idd kirke",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 572313,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

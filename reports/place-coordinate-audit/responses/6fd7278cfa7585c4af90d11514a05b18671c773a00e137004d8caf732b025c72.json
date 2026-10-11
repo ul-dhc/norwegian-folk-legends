@@ -1,0 +1,1097 @@
+{
+  "query": "Tjølling",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:10:35.996798+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Tj%C3%B8lling&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Tj%C3%B8lling&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 43,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 43,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.05576,
+        "øst": 10.12697
+      },
+      "skrivemåte": "Tjøllingvollen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 451321,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.05674,
+        "øst": 10.12543
+      },
+      "skrivemåte": "Tjølling kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 608149,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.04356,
+        "øst": 10.067
+      },
+      "skrivemåte": "Tjøllingveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1050148,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tønsberg",
+          "kommunenummer": "3905"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.27217,
+        "øst": 10.4252
+      },
+      "skrivemåte": "Tjøllinggaten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1045884,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Idrettsanlegg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.06355,
+        "øst": 10.14064
+      },
+      "skrivemåte": "Tjølling travbane",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 573198,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Tettbebyggelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.05485,
+        "øst": 10.11874
+      },
+      "skrivemåte": "Tjøllingvollen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 573245,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.03989,
+        "øst": 10.16272
+      },
+      "skrivemåte": "Tjøllingholmen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 512650,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.05588,
+        "øst": 10.12837
+      },
+      "skrivemåte": "Tjølling prestegård",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 633254,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Skole",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 59.03949,
+        "øst": 10.07318
+      },
+      "skrivemåte": "Tjølling ungdomskole",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072427,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.33198,
+        "øst": 6.14481
+      },
+      "skrivemåte": "Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 675564,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Sokn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.10324,
+        "øst": 11.54474
+      },
+      "skrivemåte": "Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 446266,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.33825,
+        "øst": 6.14539
+      },
+      "skrivemåte": "Følling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 289349,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sunnfjord",
+          "kommunenummer": "4647"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.33114,
+        "øst": 6.15132
+      },
+      "skrivemåte": "Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1052725,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.10203,
+        "øst": 11.5434
+      },
+      "skrivemåte": "Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 204692,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.70357,
+        "øst": 6.03969
+      },
+      "skrivemåte": "Tvilling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 775931,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Holme i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.99928,
+        "øst": 10.16139
+      },
+      "skrivemåte": "Flaten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 365964,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Skjær i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.00017,
+        "øst": 10.15996
+      },
+      "skrivemåte": "Lille Tjøllingflaten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 695018,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.10301,
+        "øst": 11.54679
+      },
+      "skrivemåte": "Ner-Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 439103,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.09951,
+        "øst": 11.54185
+      },
+      "skrivemåte": "Sør-Følling",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 499094,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lier",
+          "kommunenummer": "3312"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89303,
+        "øst": 10.29105
+      },
+      "skrivemåte": "Sylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 611311,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Moss",
+          "kommunenummer": "3103"
+        }
+      ],
+      "navneobjekttype": "Tettbebyggelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.40689,
+        "øst": 10.69651
+      },
+      "skrivemåte": "Dilling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 53933,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 68.09438,
+        "øst": 13.50414
+      },
+      "skrivemåte": "Kylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 260712,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lier",
+          "kommunenummer": "3312"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89754,
+        "øst": 10.27485
+      },
+      "skrivemåte": "Sylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072725,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lesja",
+          "kommunenummer": "3432"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.17966,
+        "øst": 8.90673
+      },
+      "skrivemåte": "Filling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 556975,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rendalen",
+          "kommunenummer": "3424"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.038,
+        "øst": 11.12791
+      },
+      "skrivemåte": "Felling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 361355,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.47087,
+        "øst": 6.51614
+      },
+      "skrivemåte": "Billing",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 791739,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bømlo",
+          "kommunenummer": "4613"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.69866,
+        "øst": 5.36236
+      },
+      "skrivemåte": "Killing",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 587299,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ål",
+          "kommunenummer": "3328"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.63472,
+        "øst": 8.54124
+      },
+      "skrivemåte": "Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072422,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Moss",
+          "kommunenummer": "3103"
+        }
+      ],
+      "navneobjekttype": "Stasjon",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.39825,
+        "øst": 10.69403
+      },
+      "skrivemåte": "Dilling stasjon",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 427532,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hol",
+          "kommunenummer": "3330"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.60843,
+        "øst": 8.3035
+      },
+      "skrivemåte": "Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072452,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Moss",
+          "kommunenummer": "3103"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.40307,
+        "øst": 10.69746
+      },
+      "skrivemåte": "Dilling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 791495,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lier",
+          "kommunenummer": "3312"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89866,
+        "øst": 10.28151
+      },
+      "skrivemåte": "Sylling kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 489341,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ål",
+          "kommunenummer": "3328"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.66941,
+        "øst": 8.68813
+      },
+      "skrivemåte": "Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 188949,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drammen",
+          "kommunenummer": "3301"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.76371,
+        "øst": 10.06128
+      },
+      "skrivemåte": "Øllinga",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1034296,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fjord",
+          "kommunenummer": "1578"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.25147,
+        "øst": 7.23222
+      },
+      "skrivemåte": "Rellingen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 497840,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ål",
+          "kommunenummer": "3328"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.63406,
+        "øst": 8.5402
+      },
+      "skrivemåte": "Nørdre Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 249122,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hemnes",
+          "kommunenummer": "1832"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.06834,
+        "øst": 14.00124
+      },
+      "skrivemåte": "Fylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 285917,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.81667,
+        "øst": 11.41643
+      },
+      "skrivemåte": "Bolling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 959756,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ål",
+          "kommunenummer": "3328"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.63405,
+        "øst": 8.54287
+      },
+      "skrivemåte": "Søre Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 566750,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ålesund",
+          "kommunenummer": "1508"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.52314,
+        "øst": 6.72863
+      },
+      "skrivemåte": "Fylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 315824,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rauma",
+          "kommunenummer": "1539"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.33883,
+        "øst": 8.06468
+      },
+      "skrivemåte": "Kylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 496210,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rendalen",
+          "kommunenummer": "3424"
+        }
+      ],
+      "navneobjekttype": "Enebolig/mindre boligbygg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.74562,
+        "øst": 11.19214
+      },
+      "skrivemåte": "Helling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 604300,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gran",
+          "kommunenummer": "3446"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.47497,
+        "øst": 10.48577
+      },
+      "skrivemåte": "Sylling",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 213674,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

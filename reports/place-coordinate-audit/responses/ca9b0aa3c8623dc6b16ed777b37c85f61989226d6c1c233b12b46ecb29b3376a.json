@@ -1,0 +1,2222 @@
+{
+  "query": "Sigdal",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:10:14.758294+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sigdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Sigdal&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 88,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 88,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vennesla",
+          "kommunenummer": "4223"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.39078,
+        "øst": 7.80385
+      },
+      "skrivemåte": "Sigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 216402,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eigersund",
+          "kommunenummer": "1101"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.48865,
+        "øst": 6.23432
+      },
+      "skrivemåte": "Sigdadalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 755501,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinesdal",
+          "kommunenummer": "4227"
+        }
+      ],
+      "navneobjekttype": "Myr",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.24988,
+        "øst": 6.84471
+      },
+      "skrivemåte": "Sigdalsmyr",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 759465,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sigdal",
+          "kommunenummer": "3332"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.04591,
+        "øst": 9.63673
+      },
+      "skrivemåte": "Sigdal kommune",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 630498,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tokke",
+          "kommunenummer": "4034"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.37996,
+        "øst": 8.03924
+      },
+      "skrivemåte": "Sveigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 548752,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åmli",
+          "kommunenummer": "4217"
+        }
+      ],
+      "navneobjekttype": "Søkk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.78736,
+        "øst": 8.51919
+      },
+      "skrivemåte": "Sigdalsklova",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 820166,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Modum",
+          "kommunenummer": "3316"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.90889,
+        "øst": 9.89198
+      },
+      "skrivemåte": "Sigdalsveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 907804,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sigdal",
+          "kommunenummer": "3332"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.95021,
+        "øst": 9.81138
+      },
+      "skrivemåte": "Sigdalsveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1034559,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.44367,
+        "øst": 6.30934
+      },
+      "skrivemåte": "Ligdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 661664,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.48978,
+        "øst": 6.56706
+      },
+      "skrivemåte": "Sirdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 424746,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.35458,
+        "øst": 6.18768
+      },
+      "skrivemåte": "Stora Sigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 54973,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.25631,
+        "øst": 10.18084
+      },
+      "skrivemåte": "Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 485220,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flekkefjord",
+          "kommunenummer": "4207"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.21329,
+        "øst": 6.56401
+      },
+      "skrivemåte": "Sigden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 164408,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.25996,
+        "øst": 10.17953
+      },
+      "skrivemåte": "Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 620692,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eigersund",
+          "kommunenummer": "1101"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.63354,
+        "øst": 6.45184
+      },
+      "skrivemåte": "Sigdalstjørna",
+      "skrivemåtestatus": "vedtatt navneledd og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 303806,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Krødsherad",
+          "kommunenummer": "3318"
+        }
+      ],
+      "navneobjekttype": "Tjern",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.0941,
+        "øst": 9.72657
+      },
+      "skrivemåte": "Sigdalstjenna",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 247823,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.25482,
+        "øst": 10.17488
+      },
+      "skrivemåte": "Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 363259,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.513,
+        "øst": 7.30353
+      },
+      "skrivemåte": "Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 979007,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vik",
+          "kommunenummer": "4639"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.09748,
+        "øst": 6.87558
+      },
+      "skrivemåte": "Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 592520,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.51384,
+        "øst": 7.3054
+      },
+      "skrivemåte": "Øvre Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 435651,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.23684,
+        "øst": 6.01681
+      },
+      "skrivemåte": "Sagdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 184980,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Luster",
+          "kommunenummer": "4644"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.51368,
+        "øst": 7.28523
+      },
+      "skrivemåte": "Nedre Vigdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 435654,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansund",
+          "kommunenummer": "1505"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.12738,
+        "øst": 7.81414
+      },
+      "skrivemåte": "Sigden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1060022,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vik",
+          "kommunenummer": "4639"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.09782,
+        "øst": 6.87314
+      },
+      "skrivemåte": "Vigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 737788,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.7714,
+        "øst": 11.4853
+      },
+      "skrivemåte": "Sigden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1026106,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjerstad",
+          "kommunenummer": "4211"
+        }
+      ],
+      "navneobjekttype": "Høl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.89948,
+        "øst": 9.06603
+      },
+      "skrivemåte": "Sigder",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 790816,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steigen",
+          "kommunenummer": "1848"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.92251,
+        "øst": 15.103
+      },
+      "skrivemåte": "Sigden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 138154,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tysvær",
+          "kommunenummer": "1146"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.45577,
+        "øst": 5.46427
+      },
+      "skrivemåte": "Serdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 572793,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sigdal",
+          "kommunenummer": "3332"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.04781,
+        "øst": 9.63755
+      },
+      "skrivemåte": "Sigdal prestegård",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072467,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nissedal",
+          "kommunenummer": "4030"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.00704,
+        "øst": 8.72865
+      },
+      "skrivemåte": "Sigurdsdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 229278,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.35367,
+        "øst": 6.19022
+      },
+      "skrivemåte": "Litla Sigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 540972,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sokndal",
+          "kommunenummer": "1111"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.34104,
+        "øst": 6.33471
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 87396,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eidfjord",
+          "kommunenummer": "4619"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.50026,
+        "øst": 7.14907
+      },
+      "skrivemåte": "Simadal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 856254,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.83246,
+        "øst": 7.73683
+      },
+      "skrivemåte": "Songdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 205272,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Karmøy",
+          "kommunenummer": "1149"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.343,
+        "øst": 5.20284
+      },
+      "skrivemåte": "Stokkdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 87934,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjøvik",
+          "kommunenummer": "3407"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.79933,
+        "øst": 10.60467
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 102971,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bamble",
+          "kommunenummer": "4012"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.93931,
+        "øst": 9.54529
+      },
+      "skrivemåte": "Tegdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 729278,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Senja",
+          "kommunenummer": "5530"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.34214,
+        "øst": 18.10234
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 630476,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.91214,
+        "øst": 23.25622
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 815750,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alta",
+          "kommunenummer": "5601"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.93896,
+        "øst": 23.28853
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 505412,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Eiendom",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.3635,
+        "øst": 10.50583
+      },
+      "skrivemåte": "Skogdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 848509,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Grue",
+          "kommunenummer": "3417"
+        }
+      ],
+      "navneobjekttype": "Enebolig/mindre boligbygg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.48909,
+        "øst": 11.95846
+      },
+      "skrivemåte": "Skogdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 298104,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.4535,
+        "øst": 9.92592
+      },
+      "skrivemåte": "Sirisdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 452246,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringerike",
+          "kommunenummer": "3305"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.15155,
+        "øst": 10.21958
+      },
+      "skrivemåte": "Styggdalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 982531,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kragerø",
+          "kommunenummer": "4014"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.91203,
+        "øst": 9.21193
+      },
+      "skrivemåte": "Styggdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 152317,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kongsberg",
+          "kommunenummer": "3303"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.54288,
+        "øst": 9.70056
+      },
+      "skrivemåte": "Styggdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 424624,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ringerike",
+          "kommunenummer": "3305"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.5163,
+        "øst": 9.86899
+      },
+      "skrivemåte": "Styggdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 150346,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjerstad",
+          "kommunenummer": "4211"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.90018,
+        "øst": 8.89413
+      },
+      "skrivemåte": "Styggdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 327506,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kragerø",
+          "kommunenummer": "4014"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.93414,
+        "øst": 9.25325
+      },
+      "skrivemåte": "Roligdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 698050,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Tettbebyggelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.35562,
+        "øst": 10.16646
+      },
+      "skrivemåte": "Spongdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 438421,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.12243,
+        "øst": 5.64096
+      },
+      "skrivemåte": "Stoggdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 357614,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.32347,
+        "øst": 7.69214
+      },
+      "skrivemåte": "Sigdåsen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 523679,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.12436,
+        "øst": 5.64064
+      },
+      "skrivemåte": "Stoggdal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 730371,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.12074,
+        "øst": 5.64421
+      },
+      "skrivemåte": "Stoggdal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 85115,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Heim",
+          "kommunenummer": "5055"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.36927,
+        "øst": 8.91564
+      },
+      "skrivemåte": "Sengsdalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 437722,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.12705,
+        "øst": 5.64061
+      },
+      "skrivemåte": "Stoggdal",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 388126,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alvdal",
+          "kommunenummer": "3428"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.21176,
+        "øst": 10.59274
+      },
+      "skrivemåte": "Sivilldalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 193073,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Modum",
+          "kommunenummer": "3316"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89341,
+        "øst": 9.9166
+      },
+      "skrivemåte": "Gamle Sigdalsvei",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 909033,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Krødsherad",
+          "kommunenummer": "3318"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.12107,
+        "øst": 9.7433
+      },
+      "skrivemåte": "Sigdalstjennveien",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 984051,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestfold",
+          "fylkesnummer": "39"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Larvik",
+          "kommunenummer": "3909"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.33886,
+        "øst": 9.95468
+      },
+      "skrivemåte": "Sprangdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 512706,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.01421,
+        "øst": 10.39207
+      },
+      "skrivemåte": "Stigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 31694,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvinesdal",
+          "kommunenummer": "4227"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.40244,
+        "øst": 6.92903
+      },
+      "skrivemåte": "Stigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 213189,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Notodden",
+          "kommunenummer": "4005"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.68357,
+        "øst": 8.98975
+      },
+      "skrivemåte": "Stigdalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 833998,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hyllestad",
+          "kommunenummer": "4637"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.13715,
+        "øst": 5.22514
+      },
+      "skrivemåte": "Sions dal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 104020,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Bru",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.21369,
+        "øst": 8.9454
+      },
+      "skrivemåte": "Singusdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 836257,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bremanger",
+          "kommunenummer": "4648"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.83168,
+        "øst": 5.66688
+      },
+      "skrivemåte": "Sigdestad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 434328,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.21378,
+        "øst": 8.94271
+      },
+      "skrivemåte": "Singusdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 244446,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hå",
+          "kommunenummer": "1119"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.65833,
+        "øst": 5.65087
+      },
+      "skrivemåte": "Sigdvegen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1030690,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fitjar",
+          "kommunenummer": "4615"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.9307,
+        "øst": 5.20087
+      },
+      "skrivemåte": "Siglo",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 307784,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.2359,
+        "øst": 6.32321
+      },
+      "skrivemåte": "Sadal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 120354,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vaksdal",
+          "kommunenummer": "4628"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.48819,
+        "øst": 5.76701
+      },
+      "skrivemåte": "Sædalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 248970,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Fitjar",
+          "kommunenummer": "4615"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.92733,
+        "øst": 5.2038
+      },
+      "skrivemåte": "Siglo",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 989931,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bergen",
+          "kommunenummer": "4601"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.34625,
+        "øst": 5.38478
+      },
+      "skrivemåte": "Sædal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 990655,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Ås",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.18147,
+        "øst": 8.89361
+      },
+      "skrivemåte": "Sigur",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 891502,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Boligfelt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.17187,
+        "øst": 7.98194
+      },
+      "skrivemåte": "Sødal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 910074,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.97407,
+        "øst": 10.38298
+      },
+      "skrivemåte": "Uggdalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 195146,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.16973,
+        "øst": 7.98302
+      },
+      "skrivemåte": "Sødal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 977596,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Søndre Land",
+          "kommunenummer": "3447"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.79348,
+        "øst": 10.24687
+      },
+      "skrivemåte": "Sedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 987388,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kristiansand",
+          "kommunenummer": "4204"
+        }
+      ],
+      "navneobjekttype": "Bomstasjon",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.17479,
+        "øst": 7.97272
+      },
+      "skrivemåte": "Sødal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 41898,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Orkland",
+          "kommunenummer": "5059"
+        }
+      ],
+      "navneobjekttype": "Bekk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.13828,
+        "øst": 9.59928
+      },
+      "skrivemåte": "Segla",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 680597,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Heim",
+          "kommunenummer": "5055"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.21319,
+        "øst": 9.06372
+      },
+      "skrivemåte": "Sødalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 801748,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bergen",
+          "kommunenummer": "4601"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.24649,
+        "øst": 5.36714
+      },
+      "skrivemåte": "Søre Sædalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 490828,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjøvik",
+          "kommunenummer": "3407"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.80721,
+        "øst": 10.3948
+      },
+      "skrivemåte": "Sedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 555933,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bergen",
+          "kommunenummer": "4601"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.24897,
+        "øst": 5.36751
+      },
+      "skrivemåte": "Nordre Sædalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 126995,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skjervøy",
+          "kommunenummer": "5542"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.05248,
+        "øst": 20.78814
+      },
+      "skrivemåte": "Siŋal",
+      "skrivemåtestatus": "foreslått og prioritert",
+      "språk": "Nordsamisk",
+      "stedsnummer": 747227,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Søndre Land",
+          "kommunenummer": "3447"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.78986,
+        "øst": 10.24363
+      },
+      "skrivemåte": "Søre Sedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 494634,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Røros",
+          "kommunenummer": "5025"
+        }
+      ],
+      "navneobjekttype": "Jorde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.69986,
+        "øst": 11.73588
+      },
+      "skrivemåte": "Sødal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 286727,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vang",
+          "kommunenummer": "3454"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.20877,
+        "øst": 8.32313
+      },
+      "skrivemåte": "Sedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 423372,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

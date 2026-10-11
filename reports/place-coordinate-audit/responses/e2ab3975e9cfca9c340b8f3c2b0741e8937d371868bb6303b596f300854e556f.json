@@ -1,0 +1,72 @@
+{
+  "query": "Heddal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:00.463623+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Heddal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Heddal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 2,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 2,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Notodden",
+          "kommunenummer": "4005"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.58745,
+        "øst": 9.1721
+      },
+      "skrivemåte": "Heddal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 185252,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Notodden",
+          "kommunenummer": "4005"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.58081,
+        "øst": 9.10888
+      },
+      "skrivemåte": "Heddal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 64337,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

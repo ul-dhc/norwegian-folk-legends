@@ -1,0 +1,59 @@
+{
+  "query": "Nordmøre",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:49.567502+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordm%C3%B8re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Nordm%C3%B8re&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        },
+        {
+          "fylkesnavn": "Møre og Romsdal",
+          "fylkesnummer": "15"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gjemnes",
+          "kommunenummer": "1557"
+        },
+        {
+          "kommunenavn": "Hustadvika",
+          "kommunenummer": "1579"
+        },
+        {
+          "kommunenavn": "Heim",
+          "kommunenummer": "5055"
+        }
+      ],
+      "navneobjekttype": "Landskapsområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.91875,
+        "øst": 7.9259
+      },
+      "skrivemåte": "Nordmøre",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 389819,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

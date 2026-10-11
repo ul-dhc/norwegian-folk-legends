@@ -74,8 +74,8 @@ input[type="range"]:not(.dual-range input):focus-visible{outline:2px solid var(-
 .result-summary .copy-selection-link .lucide{width:15px;height:15px}
 
 :root .browser-layout .list-head button[aria-pressed=true],
-:root .browser-layout .list-head button[aria-pressed=true]:hover{color:var(--action-ink);background:var(--action-fill);box-shadow:inset 0 0 0 1px var(--action-fill)}
-:root .browser-layout .list-head button[aria-pressed=true] .lucide{color:var(--action-ink);stroke-width:2}
+:root .browser-layout .list-head button[aria-pressed=true]:hover{color:var(--pin);background:transparent;box-shadow:none}
+:root .browser-layout .list-head button[aria-pressed=true] .lucide{color:var(--pin);stroke-width:2}
 
 .browser[data-view=grid] .pin-button{position:static;grid-column:2;grid-row:1;align-self:start;justify-self:end;top:auto;right:auto}
 .browser[data-view=grid] .result-card h2{align-self:start}

@@ -1,0 +1,147 @@
+{
+  "query": "Røyken",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:06.221923+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%B8yken&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=R%C3%B8yken&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Asker",
+          "kommunenummer": "3203"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.74781,
+        "øst": 10.39667
+      },
+      "skrivemåte": "Røyken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 731993,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Fjell",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.28791,
+        "øst": 16.0002
+      },
+      "skrivemåte": "Røyken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 807151,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Asker",
+          "kommunenummer": "3203"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.74652,
+        "øst": 10.38665
+      },
+      "skrivemåte": "Røyken kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 391409,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gran",
+          "kommunenummer": "3446"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.4302,
+        "øst": 10.47482
+      },
+      "skrivemåte": "Røyken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 188183,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gran",
+          "kommunenummer": "3446"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.42702,
+        "øst": 10.47848
+      },
+      "skrivemåte": "Røyken",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 637113,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

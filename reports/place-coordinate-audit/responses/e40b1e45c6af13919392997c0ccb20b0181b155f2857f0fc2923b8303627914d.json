@@ -1,0 +1,785 @@
+{
+  "query": "Sør-Trøndelag",
+  "fuzzy": true,
+  "retrievedAt": "2026-10-11T15:10:32.734632+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Tr%C3%B8ndelag&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=S%C3%B8r-Tr%C3%B8ndelag&fuzzy=true&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 25,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 25,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.42917,
+        "øst": 10.39452
+      },
+      "skrivemåte": "Sør-Trøndelag fylke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 328026,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Vaktstasjon/beredsskapsbygning",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.39603,
+        "øst": 10.38976
+      },
+      "skrivemåte": "Sør-Trøndelag 110-sentral",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 977585,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        },
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        },
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        },
+        {
+          "kommunenavn": "Frøya",
+          "kommunenummer": "5014"
+        },
+        {
+          "kommunenavn": "Osen",
+          "kommunenummer": "5020"
+        },
+        {
+          "kommunenavn": "Oppdal",
+          "kommunenummer": "5021"
+        },
+        {
+          "kommunenavn": "Rennebu",
+          "kommunenummer": "5022"
+        },
+        {
+          "kommunenavn": "Røros",
+          "kommunenummer": "5025"
+        },
+        {
+          "kommunenavn": "Holtålen",
+          "kommunenummer": "5026"
+        },
+        {
+          "kommunenavn": "Nærøysund",
+          "kommunenummer": "5060"
+        },
+        {
+          "kommunenavn": "Rindal",
+          "kommunenummer": "5061"
+        },
+        {
+          "kommunenavn": "Midtre Gauldal",
+          "kommunenummer": "5027"
+        },
+        {
+          "kommunenavn": "Melhus",
+          "kommunenummer": "5028"
+        },
+        {
+          "kommunenavn": "Skaun",
+          "kommunenummer": "5029"
+        },
+        {
+          "kommunenavn": "Malvik",
+          "kommunenummer": "5031"
+        },
+        {
+          "kommunenavn": "Selbu",
+          "kommunenummer": "5032"
+        },
+        {
+          "kommunenavn": "Tydal",
+          "kommunenummer": "5033"
+        },
+        {
+          "kommunenavn": "Meråker",
+          "kommunenummer": "5034"
+        },
+        {
+          "kommunenavn": "Stjørdal",
+          "kommunenummer": "5035"
+        },
+        {
+          "kommunenavn": "Frosta",
+          "kommunenummer": "5036"
+        },
+        {
+          "kommunenavn": "Levanger",
+          "kommunenummer": "5037"
+        },
+        {
+          "kommunenavn": "Verdal",
+          "kommunenummer": "5038"
+        },
+        {
+          "kommunenavn": "Snåase - Snåsa",
+          "kommunenummer": "5041"
+        },
+        {
+          "kommunenavn": "Lierne",
+          "kommunenummer": "5042"
+        },
+        {
+          "kommunenavn": "Raarvihke - Røyrvik",
+          "kommunenummer": "5043"
+        },
+        {
+          "kommunenavn": "Namsskogan",
+          "kommunenummer": "5044"
+        },
+        {
+          "kommunenavn": "Grong",
+          "kommunenummer": "5045"
+        },
+        {
+          "kommunenavn": "Høylandet",
+          "kommunenummer": "5046"
+        },
+        {
+          "kommunenavn": "Overhalla",
+          "kommunenummer": "5047"
+        },
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        },
+        {
+          "kommunenavn": "Leka",
+          "kommunenummer": "5052"
+        },
+        {
+          "kommunenavn": "Inderøy",
+          "kommunenummer": "5053"
+        },
+        {
+          "kommunenavn": "Indre Fosen",
+          "kommunenummer": "5054"
+        },
+        {
+          "kommunenavn": "Heim",
+          "kommunenummer": "5055"
+        },
+        {
+          "kommunenavn": "Hitra",
+          "kommunenummer": "5056"
+        },
+        {
+          "kommunenavn": "Ørland",
+          "kommunenummer": "5057"
+        },
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        },
+        {
+          "kommunenavn": "Orkland",
+          "kommunenummer": "5059"
+        }
+      ],
+      "navneobjekttype": "Fylke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.01445,
+        "øst": 11.48189
+      },
+      "skrivemåte": "Trøndelag fylke",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 980645,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Forsamlingshus/kulturhus",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.42934,
+        "øst": 10.39172
+      },
+      "skrivemåte": "Trøndelag Teater",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 900711,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Vaktstasjon/beredsskapsbygning",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.43585,
+        "øst": 10.40503
+      },
+      "skrivemåte": "Sør-Trøndelag politidistrikt",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 830449,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Inderøy",
+          "kommunenummer": "5053"
+        }
+      ],
+      "navneobjekttype": "Enebolig/mindre boligbygg",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.88002,
+        "øst": 11.031
+      },
+      "skrivemåte": "NORD-TRØNDELAG E",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1086583,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Annen kulturdetalj",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.43077,
+        "øst": 10.46878
+      },
+      "skrivemåte": "Trøndelag Traverbane",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 457697,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 64.01441,
+        "øst": 11.48188
+      },
+      "skrivemåte": "Nord-Trøndelag fylke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 147197,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Helseinstitusjon",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.40119,
+        "øst": 10.36171
+      },
+      "skrivemåte": "Trøndelag Vanføreheim",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 905479,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Museum/galleri/bibliotek",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.42053,
+        "øst": 10.35734
+      },
+      "skrivemåte": "Trøndelag Folkemuseum",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 840657,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Fabrikk",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.43938,
+        "øst": 10.42744
+      },
+      "skrivemåte": "Trøndelag melkesentral",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 785252,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Aurskog-Høland",
+          "kommunenummer": "3226"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.75861,
+        "øst": 11.82183
+      },
+      "skrivemåte": "Sør-Trandem",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 672372,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Vaktstasjon/beredsskapsbygning",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.43585,
+        "øst": 10.40503
+      },
+      "skrivemåte": "Trøndelag politidistrikt",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 830449,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": null,
+      "kommuner": null,
+      "navneobjekttype": "Geologisk struktur",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.53694,
+        "øst": 9.55139
+      },
+      "skrivemåte": "Trøndelagsplattformen",
+      "skrivemåtestatus": "internasjonal og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 595618,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Sykehus",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.45225,
+        "øst": 10.45142
+      },
+      "skrivemåte": "Trøndelag psykiatriske sykehus",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 101010,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Trondheim",
+          "kommunenummer": "5001"
+        }
+      ],
+      "navneobjekttype": "Helseinstitusjon",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 63.43965,
+        "øst": 10.4836
+      },
+      "skrivemåte": "Trøndelag psykiatriske sykehus",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 787142,
+      "stedstatus": "relikt"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nore og Uvdal",
+          "kommunenummer": "3338"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.24559,
+        "øst": 7.95014
+      },
+      "skrivemåte": "Trønderbu",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 65636,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bjørnafjorden",
+          "kommunenummer": "4624"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.15998,
+        "øst": 5.36034
+      },
+      "skrivemåte": "Sørstrøno",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 4958,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nord-Odal",
+          "kommunenummer": "3414"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.39624,
+        "øst": 11.64559
+      },
+      "skrivemåte": "Sør-Trøhaugen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 362292,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Berlevåg",
+          "kommunenummer": "5630"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.8612,
+        "øst": 29.10013
+      },
+      "skrivemåte": "Trønderneset",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 627978,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vang",
+          "kommunenummer": "3454"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.19304,
+        "øst": 8.38655
+      },
+      "skrivemåte": "Søre Strond",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 192597,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Melhus",
+          "kommunenummer": "5028"
+        }
+      ],
+      "navneobjekttype": "Skole",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.27694,
+        "øst": 10.25269
+      },
+      "skrivemåte": "Trøndertun folkehøgskole",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 924765,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Frosta",
+          "kommunenummer": "5036"
+        }
+      ],
+      "navneobjekttype": "Fabrikk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.57196,
+        "øst": 10.72252
+      },
+      "skrivemåte": "Produsentpakkeriet Trøndelag",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1085575,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kongsvinger",
+          "kommunenummer": "3401"
+        }
+      ],
+      "navneobjekttype": "Boligfelt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.19267,
+        "øst": 12.0115
+      },
+      "skrivemåte": "Sør-Tråstad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 404075,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Oslo",
+          "fylkesnummer": "03"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Oslo",
+          "kommunenummer": "0301"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.93525,
+        "øst": 10.76388
+      },
+      "skrivemåte": "Trøndergata",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 997412,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

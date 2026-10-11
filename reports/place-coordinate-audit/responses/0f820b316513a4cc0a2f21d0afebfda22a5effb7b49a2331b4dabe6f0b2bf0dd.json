@@ -1,0 +1,72 @@
+{
+  "query": "Treungen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:38.018511+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Treungen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Treungen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 2,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 2,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nissedal",
+          "kommunenummer": "4030"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.02064,
+        "øst": 8.5202
+      },
+      "skrivemåte": "Treungen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 730488,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Åfjord",
+          "kommunenummer": "5058"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.17809,
+        "øst": 9.98197
+      },
+      "skrivemåte": "Treungen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 377203,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

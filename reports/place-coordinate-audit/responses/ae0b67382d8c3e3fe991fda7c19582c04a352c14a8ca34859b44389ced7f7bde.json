@@ -1,0 +1,151 @@
+{
+  "query": "Etne",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:38.179568+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Etne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Etne&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.66528,
+        "øst": 5.93708
+      },
+      "skrivemåte": "Etne",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 3732,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.66472,
+        "øst": 5.9344
+      },
+      "skrivemåte": "Etne",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 752007,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.6698,
+        "øst": 5.94458
+      },
+      "skrivemåte": "Etne kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 785292,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nord-Aurdal",
+          "kommunenummer": "3451"
+        },
+        {
+          "kommunenavn": "Øystre Slidre",
+          "kommunenummer": "3453"
+        }
+      ],
+      "navneobjekttype": "Elv",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.18654,
+        "øst": 9.30255
+      },
+      "skrivemåte": "Etne",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 249739,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.65286,
+        "øst": 6.0215
+      },
+      "skrivemåte": "Etne",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 549495,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

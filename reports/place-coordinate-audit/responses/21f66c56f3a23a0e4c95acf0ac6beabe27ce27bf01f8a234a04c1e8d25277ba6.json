@@ -1,0 +1,172 @@
+{
+  "query": "Gloppen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:54.129142+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Gloppen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Gloppen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 6,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 6,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gloppen",
+          "kommunenummer": "4650"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.80266,
+        "øst": 6.11159
+      },
+      "skrivemåte": "Gloppefjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 677698,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gloppen",
+          "kommunenummer": "4650"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 61.77729,
+        "øst": 6.21569
+      },
+      "skrivemåte": "Gloppen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 388004,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gloppen",
+          "kommunenummer": "4650"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.81016,
+        "øst": 6.15321
+      },
+      "skrivemåte": "Gloppen",
+      "skrivemåtestatus": "uvurdert og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 692021,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Farsund",
+          "kommunenummer": "4206"
+        }
+      ],
+      "navneobjekttype": "Nes i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.18632,
+        "øst": 6.81853
+      },
+      "skrivemåte": "Gloppen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 451838,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Grunne i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.31139,
+        "øst": 13.56695
+      },
+      "skrivemåte": "Gloppen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 320800,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vestvågøy",
+          "kommunenummer": "1860"
+        }
+      ],
+      "navneobjekttype": "Haug",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.26964,
+        "øst": 13.80303
+      },
+      "skrivemåte": "Gloppen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 320958,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

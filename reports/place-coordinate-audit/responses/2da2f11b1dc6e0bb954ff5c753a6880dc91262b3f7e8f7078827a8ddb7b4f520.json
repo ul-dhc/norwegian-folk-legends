@@ -1,0 +1,147 @@
+{
+  "query": "Vevelstad",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:53.618453+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Vevelstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Vevelstad&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vevelstad",
+          "kommunenummer": "1816"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.70049,
+        "øst": 12.44124
+      },
+      "skrivemåte": "Vevelstad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 147499,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordre Follo",
+          "kommunenummer": "3207"
+        }
+      ],
+      "navneobjekttype": "Boligfelt",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.75816,
+        "øst": 10.8469
+      },
+      "skrivemåte": "Vevelstad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 567368,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vevelstad",
+          "kommunenummer": "1816"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.70873,
+        "øst": 12.4544
+      },
+      "skrivemåte": "Vevelstad kirke",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 137207,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vevelstad",
+          "kommunenummer": "1816"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.701,
+        "øst": 12.44624
+      },
+      "skrivemåte": "Vevelstad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 379003,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Nordre Follo",
+          "kommunenummer": "3207"
+        }
+      ],
+      "navneobjekttype": "Enebolig/mindre boligbygg",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.75973,
+        "øst": 10.84154
+      },
+      "skrivemåte": "Vevelstad",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 5379,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

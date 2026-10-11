@@ -1,0 +1,122 @@
+{
+  "query": "Drangedal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:31.806221+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Drangedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Drangedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 4,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 4,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.09756,
+        "øst": 9.06214
+      },
+      "skrivemåte": "Drangedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 813333,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drangedal",
+          "kommunenummer": "4016"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.09744,
+        "øst": 9.05879
+      },
+      "skrivemåte": "Drangedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 669221,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Evje og Hornnes",
+          "kommunenummer": "4219"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.58491,
+        "øst": 7.93807
+      },
+      "skrivemåte": "Drangedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 942382,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hjartdal",
+          "kommunenummer": "4024"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.73395,
+        "øst": 8.76764
+      },
+      "skrivemåte": "Drangedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 551421,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

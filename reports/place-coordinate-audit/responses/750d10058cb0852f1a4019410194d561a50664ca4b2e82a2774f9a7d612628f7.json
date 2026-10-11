@@ -1,0 +1,84 @@
+{
+  "query": "Setesdal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:13.275337+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Setesdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Setesdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 2,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 2,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Evje og Hornnes",
+          "kommunenummer": "4219"
+        },
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        },
+        {
+          "kommunenavn": "Valle",
+          "kommunenummer": "4221"
+        },
+        {
+          "kommunenavn": "Bykle",
+          "kommunenummer": "4222"
+        }
+      ],
+      "navneobjekttype": "Dalføre",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.05458,
+        "øst": 7.57455
+      },
+      "skrivemåte": "Setesdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 851969,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lyngdal",
+          "kommunenummer": "4225"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.41858,
+        "øst": 7.35507
+      },
+      "skrivemåte": "Setesdal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 280054,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

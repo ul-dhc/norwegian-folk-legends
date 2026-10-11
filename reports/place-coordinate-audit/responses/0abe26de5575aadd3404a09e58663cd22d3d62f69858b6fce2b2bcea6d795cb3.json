@@ -1,0 +1,147 @@
+{
+  "query": "Hemsedal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:02.233526+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hemsedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Hemsedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hemsedal",
+          "kommunenummer": "3326"
+        }
+      ],
+      "navneobjekttype": "Dalføre",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.7936,
+        "øst": 8.69202
+      },
+      "skrivemåte": "Hemsedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 614011,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hemsedal",
+          "kommunenummer": "3326"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.8501,
+        "øst": 8.61638
+      },
+      "skrivemåte": "Hemsedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 630842,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        }
+      ],
+      "navneobjekttype": "Seter/støl",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.85624,
+        "øst": 7.98546
+      },
+      "skrivemåte": "Hemsedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 326502,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hemsedal",
+          "kommunenummer": "3326"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.86181,
+        "øst": 8.56345
+      },
+      "skrivemåte": "Hemsedal kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 190150,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Drammen",
+          "kommunenummer": "3301"
+        }
+      ],
+      "navneobjekttype": "Bygg for jordbruk, fiske og fangst",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.68337,
+        "øst": 10.12832
+      },
+      "skrivemåte": "Hemsedal",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 40706,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

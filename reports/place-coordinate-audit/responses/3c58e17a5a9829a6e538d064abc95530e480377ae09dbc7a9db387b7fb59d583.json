@@ -1,0 +1,97 @@
+{
+  "query": "Eksingedalen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:37.140130+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Eksingedalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Eksingedalen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stor-Elvdal",
+          "kommunenummer": "3423"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.86537,
+        "øst": 10.21198
+      },
+      "skrivemåte": "Eksingedalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 360216,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vaksdal",
+          "kommunenummer": "4628"
+        }
+      ],
+      "navneobjekttype": "Dalføre",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.77819,
+        "øst": 5.96566
+      },
+      "skrivemåte": "Eksingedalen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 918802,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Engerdal",
+          "kommunenummer": "3425"
+        }
+      ],
+      "navneobjekttype": "Dal",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 62.07038,
+        "øst": 12.14975
+      },
+      "skrivemåte": "Eksingedalen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 480754,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "query": "Hosanger",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:25.830414+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Hosanger&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 2,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 2,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Tettbebyggelse",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.57516,
+        "øst": 5.47764
+      },
+      "skrivemåte": "Hosanger",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 6590,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.5773,
+        "øst": 5.47469
+      },
+      "skrivemåte": "Hosanger kyrkje",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 673569,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

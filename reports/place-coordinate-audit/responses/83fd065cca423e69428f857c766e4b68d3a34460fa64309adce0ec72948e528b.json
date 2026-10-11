@@ -1,0 +1,97 @@
+{
+  "query": "Rælingen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:04.455596+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%A6lingen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=R%C3%A6lingen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Akershus",
+          "fylkesnummer": "32"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rælingen",
+          "kommunenummer": "3224"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.92083,
+        "øst": 11.08322
+      },
+      "skrivemåte": "Rælingen kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 429094,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Indre Østfold",
+          "kommunenummer": "3118"
+        }
+      ],
+      "navneobjekttype": "Annen kulturdetalj",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.64618,
+        "øst": 11.17725
+      },
+      "skrivemåte": "Rælingen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 24016,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eidskog",
+          "kommunenummer": "3416"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.13171,
+        "øst": 12.20602
+      },
+      "skrivemåte": "Rælingen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 126551,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "query": "Sunnhordland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:24.594179+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sunnhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Sunnhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Etne",
+          "kommunenummer": "4611"
+        },
+        {
+          "kommunenavn": "Stord",
+          "kommunenummer": "4614"
+        },
+        {
+          "kommunenavn": "Kvinnherad",
+          "kommunenummer": "4617"
+        }
+      ],
+      "navneobjekttype": "Landskapsområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.6305,
+        "øst": 5.95809
+      },
+      "skrivemåte": "Sunnhordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 692498,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

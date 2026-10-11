@@ -1,0 +1,63 @@
+{
+  "query": "Aust-Agder",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:18.727183+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Aust-Agder&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Aust-Agder&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Arendal",
+          "kommunenummer": "4203"
+        },
+        {
+          "kommunenavn": "Vegårshei",
+          "kommunenummer": "4212"
+        },
+        {
+          "kommunenavn": "Birkenes",
+          "kommunenummer": "4216"
+        },
+        {
+          "kommunenavn": "Bygland",
+          "kommunenummer": "4220"
+        },
+        {
+          "kommunenavn": "Bykle",
+          "kommunenummer": "4222"
+        }
+      ],
+      "navneobjekttype": "Annen administrativ inndeling",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 58.46444,
+        "øst": 8.76701
+      },
+      "skrivemåte": "Aust-Agder fylke",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 208345,
+      "stedstatus": "relikt"
+    }
+  ]
+}

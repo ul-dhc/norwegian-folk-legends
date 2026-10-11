@@ -1,0 +1,97 @@
+{
+  "query": "Værøy",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:58.593316+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=V%C3%A6r%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=V%C3%A6r%C3%B8y&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Værøy",
+          "kommunenummer": "1857"
+        }
+      ],
+      "navneobjekttype": "Øy i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.6778,
+        "øst": 12.664
+      },
+      "skrivemåte": "Værøya",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 198346,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Værøy",
+          "kommunenummer": "1857"
+        }
+      ],
+      "navneobjekttype": "Fyrstasjon",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.65104,
+        "øst": 12.72447
+      },
+      "skrivemåte": "Værøy",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 865453,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Askvoll",
+          "kommunenummer": "4645"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.31106,
+        "øst": 4.73329
+      },
+      "skrivemåte": "Værøy",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 553120,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

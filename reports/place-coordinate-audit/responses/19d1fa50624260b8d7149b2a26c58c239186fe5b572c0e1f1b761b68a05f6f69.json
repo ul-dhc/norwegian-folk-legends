@@ -1,0 +1,21 @@
+{
+  "query": "Nordsømna",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:49.921805+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nords%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Nords%C3%B8mna&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 0,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 0,
+  "truncated": false,
+  "names": []
+}

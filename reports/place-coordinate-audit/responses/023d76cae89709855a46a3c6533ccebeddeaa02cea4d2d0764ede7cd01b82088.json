@@ -1,0 +1,21 @@
+{
+  "query": "Sør-Audnedal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:25.234280+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8r-Audnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=S%C3%B8r-Audnedal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 0,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 0,
+  "truncated": false,
+  "names": []
+}

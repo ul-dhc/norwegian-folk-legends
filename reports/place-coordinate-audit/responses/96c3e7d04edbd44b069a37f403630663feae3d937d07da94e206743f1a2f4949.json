@@ -1,0 +1,147 @@
+{
+  "query": "Buskerud",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:08:27.913127+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Buskerud&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Buskerud&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sigdal",
+          "kommunenummer": "3332"
+        }
+      ],
+      "navneobjekttype": "Utmark",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.03393,
+        "øst": 9.64474
+      },
+      "skrivemåte": "Buskerud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 32623,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Modum",
+          "kommunenummer": "3316"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.89568,
+        "øst": 9.90758
+      },
+      "skrivemåte": "Buskerud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1072550,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Andøy",
+          "kommunenummer": "1871"
+        }
+      ],
+      "navneobjekttype": "Fritidsbolig",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.97211,
+        "øst": 15.54909
+      },
+      "skrivemåte": "Buskerud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 360952,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Indre Østfold",
+          "kommunenummer": "3118"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.54358,
+        "øst": 11.42307
+      },
+      "skrivemåte": "Buskerud",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 84020,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Buskerud",
+          "fylkesnummer": "33"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Modum",
+          "kommunenummer": "3316"
+        }
+      ],
+      "navneobjekttype": "Skole",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 59.88246,
+        "øst": 9.88961
+      },
+      "skrivemåte": "Buskerud landbruksskole",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 550664,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

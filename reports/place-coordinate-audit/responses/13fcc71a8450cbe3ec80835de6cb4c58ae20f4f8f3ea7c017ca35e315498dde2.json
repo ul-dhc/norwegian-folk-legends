@@ -1,0 +1,21 @@
+{
+  "query": "Sigdal",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:13.621001+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Sigdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Sigdal&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 0,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 0,
+  "truncated": false,
+  "names": []
+}

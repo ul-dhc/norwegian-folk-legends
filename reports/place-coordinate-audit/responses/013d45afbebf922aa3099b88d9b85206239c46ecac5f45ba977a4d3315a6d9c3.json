@@ -1,0 +1,47 @@
+{
+  "query": "Nordhordland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:48.505008+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Nordhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Nordhordland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alver",
+          "kommunenummer": "4631"
+        }
+      ],
+      "navneobjekttype": "Landskapsområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.77222,
+        "øst": 5.66631
+      },
+      "skrivemåte": "Nordhordland",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 634800,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

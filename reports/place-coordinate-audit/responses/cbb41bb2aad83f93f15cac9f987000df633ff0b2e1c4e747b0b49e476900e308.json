@@ -1,0 +1,1088 @@
+{
+  "query": "Sørfjorden",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:33.454766+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=S%C3%B8rfjorden&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=S%C3%B8rfjorden&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 42,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 42,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sortland - Suortá",
+          "kommunenummer": "1870"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.71501,
+        "øst": 15.6655
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 443198,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.59411,
+        "øst": 18.28868
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 868584,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gildeskål",
+          "kommunenummer": "1838"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.02897,
+        "øst": 13.991
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 623781,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Leirfjord",
+          "kommunenummer": "1822"
+        },
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.96303,
+        "øst": 12.76845
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 207399,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hemnes",
+          "kommunenummer": "1832"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.17681,
+        "øst": 13.75038
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 440002,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sørfold",
+          "kommunenummer": "1845"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.57993,
+        "øst": 15.82316
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 806738,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.73203,
+        "øst": 22.00538
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 565280,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rødøy",
+          "kommunenummer": "1836"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.49283,
+        "øst": 13.23478
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 925638,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bindal",
+          "kommunenummer": "1811"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.05364,
+        "øst": 12.11019
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 197792,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bodø",
+          "kommunenummer": "1804"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 67.41281,
+        "øst": 14.86742
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 930433,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Ullensvang",
+          "kommunenummer": "4618"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.18387,
+        "øst": 6.57114
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 24295,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        },
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.07211,
+        "øst": 16.66014
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 805795,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Risør",
+          "kommunenummer": "4201"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.72903,
+        "øst": 9.09949
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 62545,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.42326,
+        "øst": 19.5567
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 688253,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Loppa",
+          "kommunenummer": "5614"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.23678,
+        "øst": 22.08347
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 943409,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Indre Fosen",
+          "kommunenummer": "5054"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.7343,
+        "øst": 10.05431
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 619244,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Brønnøy",
+          "kommunenummer": "1813"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.43258,
+        "øst": 12.45607
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 197700,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.34336,
+        "øst": 22.46353
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 141527,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Gamvik",
+          "kommunenummer": "5626"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 71.03496,
+        "øst": 27.82042
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 202111,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rana",
+          "kommunenummer": "1833"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "sidenavn",
+      "representasjonspunkt": {
+        "nord": 66.30974,
+        "øst": 13.48941
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 560617,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Bergen",
+          "kommunenummer": "4601"
+        },
+        {
+          "kommunenavn": "Vaksdal",
+          "kommunenummer": "4628"
+        },
+        {
+          "kommunenavn": "Osterøy",
+          "kommunenummer": "4630"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 60.52467,
+        "øst": 5.71151
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 263791,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.78591,
+        "øst": 12.69871
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 440462,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.74063,
+        "øst": 27.29961
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 931111,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 64.46585,
+        "øst": 10.74208
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 149227,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Indre Fosen",
+          "kommunenummer": "5054"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 63.75538,
+        "øst": 10.1449
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 741215,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rødøy",
+          "kommunenummer": "1836"
+        }
+      ],
+      "navneobjekttype": "Bygdelag (bygd)",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.4913,
+        "øst": 13.29318
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 622635,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.86127,
+        "øst": 18.73901
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 443735,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Flatanger",
+          "kommunenummer": "5049"
+        }
+      ],
+      "navneobjekttype": "Vik i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.46085,
+        "øst": 10.7427
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 389106,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Innlandet",
+          "fylkesnummer": "34"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Alvdal",
+          "kommunenummer": "3428"
+        }
+      ],
+      "navneobjekttype": "Del av innsjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 61.97069,
+        "øst": 10.22908
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 284693,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Agder",
+          "fylkesnummer": "42"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vegårshei",
+          "kommunenummer": "4212"
+        }
+      ],
+      "navneobjekttype": "Del av innsjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.78587,
+        "øst": 8.83847
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 122199,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rødøy",
+          "kommunenummer": "1836"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.49133,
+        "øst": 13.29269
+      },
+      "skrivemåte": "Sørfjorden kirke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 683613,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+          "kommunenummer": "5007"
+        }
+      ],
+      "navneobjekttype": "Våg i sjø",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.73562,
+        "øst": 11.62377
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 938130,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.8011,
+        "øst": 12.69053
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1083932,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Rødøy",
+          "kommunenummer": "1836"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 66.44484,
+        "øst": 13.25941
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 77681,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Lebesby",
+          "kommunenummer": "5624"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.73211,
+        "øst": 27.29913
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1075479,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Grend",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.74265,
+        "øst": 21.95206
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 539782,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.06196,
+        "øst": 16.65469
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 441497,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Finnmark - Finnmárku - Finmarkku",
+          "fylkesnummer": "56"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Hasvik",
+          "kommunenummer": "5616"
+        }
+      ],
+      "navneobjekttype": "Adressenavn",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 70.32225,
+        "øst": 22.49292
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 1055079,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Sortland - Suortá",
+          "kommunenummer": "1870"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.69693,
+        "øst": 15.71718
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 260509,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Tromsø",
+          "kommunenummer": "5501"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.58706,
+        "øst": 18.28673
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 964984,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Vefsn",
+          "kommunenummer": "1824"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 65.77384,
+        "øst": 12.71117
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 76105,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Dyrøy",
+          "kommunenummer": "5528"
+        }
+      ],
+      "navneobjekttype": "Gard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.95745,
+        "øst": 17.56423
+      },
+      "skrivemåte": "Sørfjorden",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 321857,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

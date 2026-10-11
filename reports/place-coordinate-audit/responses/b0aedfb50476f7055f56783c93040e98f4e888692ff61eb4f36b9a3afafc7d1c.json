@@ -1,0 +1,147 @@
+{
+  "query": "Råde",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:10:04.108267+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=R%C3%A5de&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=R%C3%A5de&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 5,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 5,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Råde",
+          "kommunenummer": "3112"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.35177,
+        "øst": 10.87167
+      },
+      "skrivemåte": "Råde",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 935265,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Råde",
+          "kommunenummer": "3112"
+        }
+      ],
+      "navneobjekttype": "Tettsted",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 59.35174,
+        "øst": 10.87234
+      },
+      "skrivemåte": "Råde",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 391341,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Råde",
+          "kommunenummer": "3112"
+        }
+      ],
+      "navneobjekttype": "Stasjon",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.34746,
+        "øst": 10.86513
+      },
+      "skrivemåte": "Råde stasjon",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 2512,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Østfold",
+          "fylkesnummer": "31"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Råde",
+          "kommunenummer": "3112"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 59.34625,
+        "øst": 10.89358
+      },
+      "skrivemåte": "Råde kirke",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 366514,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Trøndelag - Trööndelage",
+          "fylkesnummer": "50"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Steinkjer",
+          "kommunenummer": "5006"
+        }
+      ],
+      "navneobjekttype": "Navnegard",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 64.04408,
+        "øst": 11.62087
+      },
+      "skrivemåte": "Råde",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 754199,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "query": "Ofoten",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:52.729076+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Ofoten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Ofoten&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18"
+        },
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Narvik",
+          "kommunenummer": "1806"
+        },
+        {
+          "kommunenavn": "Lødingen",
+          "kommunenummer": "1851"
+        },
+        {
+          "kommunenavn": "Evenes",
+          "kommunenummer": "1853"
+        },
+        {
+          "kommunenavn": "Hábmer - Hamarøy",
+          "kommunenummer": "1875"
+        },
+        {
+          "kommunenavn": "Dielddanuorri - Tjeldsund",
+          "kommunenummer": "5512"
+        }
+      ],
+      "navneobjekttype": "Landskapsområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 68.33799,
+        "øst": 15.9548
+      },
+      "skrivemåte": "Ofoten",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 450830,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

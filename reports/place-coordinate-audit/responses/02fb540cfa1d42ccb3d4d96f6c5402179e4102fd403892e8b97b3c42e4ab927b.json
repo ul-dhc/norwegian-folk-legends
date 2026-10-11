@@ -1,0 +1,97 @@
+{
+  "query": "Kragerø",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:19.203144+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Krager%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Krager%C3%B8&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kragerø",
+          "kommunenummer": "4014"
+        }
+      ],
+      "navneobjekttype": "By",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.8693,
+        "øst": 9.41493
+      },
+      "skrivemåte": "Kragerø",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 183707,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kragerø",
+          "kommunenummer": "4014"
+        }
+      ],
+      "navneobjekttype": "Kommune",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 58.86791,
+        "øst": 9.41101
+      },
+      "skrivemåte": "Kragerø",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 388369,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Telemark",
+          "fylkesnummer": "40"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kragerø",
+          "kommunenummer": "4014"
+        }
+      ],
+      "navneobjekttype": "Bruk",
+      "navnestatus": "historisk",
+      "representasjonspunkt": {
+        "nord": 58.80225,
+        "øst": 9.40839
+      },
+      "skrivemåte": "Kragerø",
+      "skrivemåtestatus": "historisk og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 1077495,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

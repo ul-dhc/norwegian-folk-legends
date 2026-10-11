@@ -1,0 +1,101 @@
+{
+  "query": "Kvænangen",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:20.241220+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Kv%C3%A6nangen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Kv%C3%A6nangen&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 3,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 3,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Skjervøy",
+          "kommunenummer": "5542"
+        },
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.74616,
+        "øst": 22.0883
+      },
+      "skrivemåte": "Kvænangen",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 808281,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Landskapsområde",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 69.88607,
+        "øst": 22.03637
+      },
+      "skrivemåte": "Kvænangen",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 878789,
+      "stedstatus": "aktiv"
+    },
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Troms - Romsa - Tromssa",
+          "fylkesnummer": "55"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Kvænangen",
+          "kommunenummer": "5546"
+        }
+      ],
+      "navneobjekttype": "Kirke",
+      "navnestatus": "undernavn",
+      "representasjonspunkt": {
+        "nord": 69.93117,
+        "øst": 21.72644
+      },
+      "skrivemåte": "Kvænangen",
+      "skrivemåtestatus": "privat og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 929146,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

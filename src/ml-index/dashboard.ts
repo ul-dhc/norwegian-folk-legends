@@ -94,7 +94,7 @@ export function createDashboard(options: Options) {
   const max=Math.max(...counts.values(),1);
   const compact=typeQuery.toLowerCase().replace(/\s/g,'');
   const visible=set.filter(type=>!compact||`${type.code}${type.no}${type.en}`.toLowerCase().replace(/\s/g,'').includes(compact));
-  return `<section class="ml-dash-card ml-type-chart">${chartHeading(tr('types'),sortControl('type',tr('types')))}<label class="ml-type-chart-search"><span class="sr-only">${tr('typeSearch')}</span><input type="search" id="ml-dash-type-search" placeholder="${tr('typeSearch')}" value="${esc(typeQuery)}"/></label><ol class="ml-facet-list">${visible.map(type=>rowButton('type',key(type),name(type),counts.get(type.id)||0,max,scope.type?.id===type.id,type.code)).join('')}</ol></section>`;
+  return `<section class="ml-dash-card ml-type-chart">${chartHeading(tr('types'),sortControl('type',tr('types')))}<label class="ml-type-chart-search"><span class="sr-only">${tr('typeSearch')}</span><input class="platform-search" type="search" id="ml-dash-type-search" placeholder="${tr('typeSearch')}" value="${esc(typeQuery)}"/></label><ol class="ml-facet-list">${visible.map(type=>rowButton('type',key(type),name(type),counts.get(type.id)||0,max,scope.type?.id===type.id,type.code)).join('')}</ol></section>`;
  }
  function namedChart(field:'county'|'collector'|'narrator',label:string) {
   const counts=countsBy(cohort(field),field) as Map<string,number>;

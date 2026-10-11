@@ -1,0 +1,135 @@
+{
+  "query": "Rogaland",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:58.773266+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=Rogaland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=Rogaland&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Eigersund",
+          "kommunenummer": "1101"
+        },
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        },
+        {
+          "kommunenavn": "Haugesund",
+          "kommunenummer": "1106"
+        },
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        },
+        {
+          "kommunenavn": "Sokndal",
+          "kommunenummer": "1111"
+        },
+        {
+          "kommunenavn": "Lund",
+          "kommunenummer": "1112"
+        },
+        {
+          "kommunenavn": "Bjerkreim",
+          "kommunenummer": "1114"
+        },
+        {
+          "kommunenavn": "Hå",
+          "kommunenummer": "1119"
+        },
+        {
+          "kommunenavn": "Klepp",
+          "kommunenummer": "1120"
+        },
+        {
+          "kommunenavn": "Time",
+          "kommunenummer": "1121"
+        },
+        {
+          "kommunenavn": "Gjesdal",
+          "kommunenummer": "1122"
+        },
+        {
+          "kommunenavn": "Sola",
+          "kommunenummer": "1124"
+        },
+        {
+          "kommunenavn": "Randaberg",
+          "kommunenummer": "1127"
+        },
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        },
+        {
+          "kommunenavn": "Hjelmeland",
+          "kommunenummer": "1133"
+        },
+        {
+          "kommunenavn": "Suldal",
+          "kommunenummer": "1134"
+        },
+        {
+          "kommunenavn": "Sauda",
+          "kommunenummer": "1135"
+        },
+        {
+          "kommunenavn": "Kvitsøy",
+          "kommunenummer": "1144"
+        },
+        {
+          "kommunenavn": "Bokn",
+          "kommunenummer": "1145"
+        },
+        {
+          "kommunenavn": "Tysvær",
+          "kommunenummer": "1146"
+        },
+        {
+          "kommunenavn": "Karmøy",
+          "kommunenummer": "1149"
+        },
+        {
+          "kommunenavn": "Utsira",
+          "kommunenummer": "1151"
+        },
+        {
+          "kommunenavn": "Vindafjord",
+          "kommunenummer": "1160"
+        }
+      ],
+      "navneobjekttype": "Fylke",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.96473,
+        "øst": 5.73119
+      },
+      "skrivemåte": "Rogaland fylke",
+      "skrivemåtestatus": "godkjent og prioritert",
+      "språk": "Norsk",
+      "stedsnummer": 511115,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

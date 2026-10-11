@@ -1,0 +1,59 @@
+{
+  "query": "Høgsfjord",
+  "fuzzy": false,
+  "retrievedAt": "2026-10-11T15:09:10.027175+00:00",
+  "pages": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/navn?sok=H%C3%B8gsfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+      "metadata": {
+        "side": 1,
+        "sokeStreng": "sok=H%C3%B8gsfjord&fuzzy=false&treffPerSide=500&side=1&utkoordsys=4258",
+        "totaltAntallTreff": 1,
+        "treffPerSide": 500,
+        "viserFra": 1,
+        "viserTil": 500
+      }
+    }
+  ],
+  "totalHits": 1,
+  "truncated": false,
+  "names": [
+    {
+      "fylker": [
+        {
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11"
+        }
+      ],
+      "kommuner": [
+        {
+          "kommunenavn": "Stavanger",
+          "kommunenummer": "1103"
+        },
+        {
+          "kommunenavn": "Sandnes",
+          "kommunenummer": "1108"
+        },
+        {
+          "kommunenavn": "Gjesdal",
+          "kommunenummer": "1122"
+        },
+        {
+          "kommunenavn": "Strand",
+          "kommunenummer": "1130"
+        }
+      ],
+      "navneobjekttype": "Fjord",
+      "navnestatus": "hovednavn",
+      "representasjonspunkt": {
+        "nord": 58.99384,
+        "øst": 5.81625
+      },
+      "skrivemåte": "Høgsfjorden",
+      "skrivemåtestatus": "vedtatt",
+      "språk": "Norsk",
+      "stedsnummer": 364128,
+      "stedstatus": "aktiv"
+    }
+  ]
+}

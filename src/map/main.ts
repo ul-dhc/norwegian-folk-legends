@@ -560,6 +560,17 @@ const categoryColor = (properties: LegendProperties) => pointColorBy === "single
     ? colors.categoryNeutral
     : colors.category[pointCategoryIndex(properties)];
 const canonicalPointCoordinates = new Map(dataset.places.features.map((feature) => [feature.properties.id, feature.geometry.coordinates]));
+const colocatedPlaces = new Map<string, typeof dataset.places.features>();
+for (const feature of dataset.places.features) {
+  const key = feature.geometry.coordinates.join(",");
+  const group = colocatedPlaces.get(key) || [];
+  group.push(feature);
+  colocatedPlaces.set(key, group);
+}
+const placesAtCoordinates = (placeId: string) => {
+  const coordinates = canonicalPointCoordinates.get(placeId);
+  return coordinates ? colocatedPlaces.get(coordinates.join(",")) || [] : [];
+};
 const pointGroupCoordinates = (feature: (typeof dataset.legends.features)[number]) => {
   const coordinates = feature.geometry.coordinates,
     canonical = canonicalPointCoordinates.get(feature.properties.placeId);
@@ -573,7 +584,7 @@ const updatePointSources = () => {
   const zoom = map.getZoom(), displayStyle = effectivePointStyle(), overviewSpacing = Math.max(0, Math.min(1.6, (zoom - 6) * 0.35)), detailSpacing = Math.max(0, zoom - 9) * 0.85,
     spacing = 1.1 + overviewSpacing + detailSpacing, rayLength = displayStyle === "rays" ? 1.05 + Number(pointIntensity.value) / 360 : 1, groups = new Map<string, any[]>();
   filteredFeatures.forEach((feature) => {
-    const [longitude, latitude] = pointGroupCoordinates(feature), key = `${feature.properties.placeId}|${longitude.toFixed(6)}|${latitude.toFixed(6)}`;
+    const [longitude, latitude] = pointGroupCoordinates(feature), key = mapMode === "places" ? `coordinates|${longitude}|${latitude}` : `${feature.properties.placeId}|${longitude.toFixed(6)}|${latitude.toFixed(6)}`;
     const group = groups.get(key) || [];
     group.push(feature);
     groups.set(key, group);
@@ -616,7 +627,8 @@ const updatePointSources = () => {
     }
     const dominant = [...categoryCounts].sort((a,b) => b[1].count-a[1].count || a[0].localeCompare(b[0], "no"))[0]?.[1].record;
     const placeColor = pointColorBy === "single" ? colors.green : dominant ? categoryColor(dominant) : colors.categoryNeutral;
-    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: group[0].properties.placeId, centerKey: key, placeName: group[0].properties.placeName, placeColor, count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
+    const primaryPlace = mapMode === "places" ? [...placesAtCoordinates(group[0].properties.placeId)].sort((a, b) => b.properties.count - a.properties.count || a.properties.name.localeCompare(b.properties.name, "no"))[0] : undefined;
+    centers.push({ type: "Feature", id: `${group[0].properties.placeId}-${longitude}-${latitude}`, geometry: { type: "Point", coordinates: [longitude, latitude] }, properties: { placeId: primaryPlace?.properties.id || group[0].properties.placeId, centerKey: key, placeName: primaryPlace?.properties.name || group[0].properties.placeName, placeColor, count: group.length, radius: 11 + spacing * Math.sqrt(group.length) } });
   });
   legendSource.setData({ type: "FeatureCollection", features } as any);
   placeSource.setData({ type: "FeatureCollection", features: centers } as any);
@@ -759,8 +771,12 @@ const applyFilters = (save = true) => {
   if (save) updateUrl();
 };
 const sharedPlaceProfile = (placeId: string, name: string, options: {tone?: string; connections?: number; networkRecords?: number; extra?: string} = {}) => {
-  const records = filteredFeatures.filter(feature => feature.properties.placeId === placeId).map(feature => feature.properties as LegendProperties);
-  return placeProfileMarkup({name, records, href: `${recordHref(records.map(record => record.id))}&place=${encodeURIComponent(placeId)}`, tone: options.tone || colors.green,
+  const locationPlaces = placesAtCoordinates(placeId), grouped = mapMode === "places" && locationPlaces.length > 1;
+  const placeIds = new Set(grouped ? locationPlaces.map(place => place.properties.id) : [placeId]);
+  const records = filteredFeatures.filter(feature => placeIds.has(feature.properties.placeId)).map(feature => feature.properties as LegendProperties);
+  const recordedPlaces = locationPlaces.length > 1 ? locationPlaces.map(place => ({name: place.properties.name,
+    count: filteredFeatures.filter(feature => feature.properties.placeId === place.properties.id).length})) : undefined;
+  return placeProfileMarkup({name, records, recordedPlaces, grouped, href: `${recordHref(records.map(record => record.id))}${grouped ? "" : `&place=${encodeURIComponent(placeId)}`}`, tone: options.tone || colors.green,
     tr, format: count => formatter().format(count), english: document.documentElement.dataset.uiLang === "en",
     categoryColor: record => {
       if (!record.themeNo) return colors.categoryNeutral;
@@ -812,10 +828,10 @@ const renderLegend = (properties: LegendProperties) => {
 const renderPointPlace = (placeId: string, centerKey: string | null = null) => {
   if (selectedPointLegend) map.setFeatureState({ source: "legends", id: selectedPointLegend }, { selected: false });
   selectedPointLegend = null;
-  const records = filteredFeatures.filter((feature) => feature.properties.placeId === placeId), placeName = records[0]?.properties.placeName;
-  if (!records.length || !placeName) return;
+  const records = filteredFeatures.filter((feature) => feature.properties.placeId === placeId), placeName = dataset.places.features.find(feature => feature.properties.id === placeId)?.properties.name;
+  if (!placeName || (!records.length && !(mapMode === "places" && placesAtCoordinates(placeId).some(place => filteredFeatures.some(feature => feature.properties.placeId === place.properties.id))))) return;
   selectedId = placeId;
-  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => feature.properties.placeId === placeId)?.properties.centerKey || null;
+  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => (feature.properties.placeId === placeId || mapMode === "places" && placesAtCoordinates(placeId).some(place => place.properties.id === feature.properties.placeId)))?.properties.centerKey || null;
   updatePointCenterSelection();
   showPointLinks(selectedPointCenter, true);
   panel.hidden = false;
