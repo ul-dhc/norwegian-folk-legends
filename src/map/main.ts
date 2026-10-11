@@ -1156,7 +1156,7 @@ const syncPointStyleLayers = () => {
 const setMapMode = (mode: string, save = true) => {
   if (!['places', 'points', 'clusters', 'heatmap', 'network'].includes(mode)) mode = 'points';
   mapMode = mode;
-  const uncertaintyKey = page.querySelector<HTMLElement>('[data-uncertainty-key]')!;
+  const uncertaintyKey = page.querySelector<HTMLElement>('[data-uncertainty-key] p')!;
   uncertaintyKey.dataset.i18n = mode === 'heatmap' ? 'map.uncertaintyDensityKey' : 'map.uncertaintyKey';
   uncertaintyKey.textContent = tr(uncertaintyKey.dataset.i18n);
   syncPaletteSelection();

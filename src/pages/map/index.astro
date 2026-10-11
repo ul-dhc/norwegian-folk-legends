@@ -92,9 +92,11 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
         <label class="network-thread-control" for="network-thread-intensity"><span data-i18n="map.networkThreadIntensity">Linjens intensitet</span><span class="network-thread-range"><input id="network-thread-intensity" data-network-intensity type="range" min="0" max="200" step="5" value="15" /><output for="network-thread-intensity" data-network-intensity-output>15%</output></span></label>
         </div>
       </details>
-              <section class="layer-group">
+              <section class="layer-group uncertainty-settings">
                 <label class="unknown-toggle"><input type="checkbox" data-show-uncertainty /><span data-i18n="map.showUncertainty">Vis geografisk usikkerhet</span></label>
-                <div class="uncertainty-key" data-uncertainty-key hidden><p data-i18n="map.uncertaintyKey">Heltrukken: samsvar med autoritativ kilde. Stiplet: omtrentlig område. Prikket: uavklart plassering.</p><a class="context-help" href={`${base}about/#coordinate-uncertainty`} data-i18n="map.locationMethod">Om geografisk usikkerhet</a></div>
+                <div class="uncertainty-key" data-uncertainty-key hidden><p data-i18n="map.uncertaintyKey">Stiplede stedssirkler: områdepunkter eller vesentlig stedstvetydighet. Manglende kontroll oppgis bare i stedsprofilen. Heltrukken betyr ikke verifisert.</p><a class="context-help" href={`${base}about/#coordinate-uncertainty`} data-i18n="map.locationMethod">Om geografisk usikkerhet</a></div>
+              </section>
+              <section class="layer-group">
                 <h2 data-i18n="map.basemap">Bakgrunnskart</h2>
                 <div class="layer-select">
                   <span data-i18n="map.basemapStyle">Kartstil</span>

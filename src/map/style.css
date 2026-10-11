@@ -739,3 +739,21 @@ body.map-fullscreen-active{overflow:hidden}
 .place-location-notice svg{width:1rem;height:1rem;flex:none;margin-top:.1rem;color:#b6953c}
 .map-stage[data-map-theme=dark] .place-location-notice svg{color:#f3df91}
 .place-geography .map-panel-note{font-size:.76rem;margin-top:.5rem}
+
+/* A shared type hierarchy for the settings panel in every map view. */
+.layer-panel{--settings-heading:#1f396c;font:.85rem/1.45 var(--sans)}
+.map-stage[data-map-theme=dark] .layer-panel{--settings-heading:#f3df91}
+.layer-panel .layer-group + .layer-group{margin-top:.85rem;padding-top:.85rem}
+.layer-panel .layer-group h2,.layer-panel fieldset legend,.layer-panel .network-settings-toggle{font:600 .8rem/1.4 var(--sans);color:var(--settings-heading)}
+.layer-panel .layer-group h2{margin-bottom:.4rem}
+.layer-panel .layer-option,.layer-panel .unknown-toggle,.layer-panel .network-show-all,.layer-panel .layer-select,.layer-panel .basemap-select summary,.layer-panel .network-choice summary,.layer-panel .point-controls label{font:400 .85rem/1.45 var(--sans);color:var(--ink)}
+.layer-panel .unknown-toggle{display:flex;align-items:flex-start;gap:.65rem;padding:.35rem .4rem;margin:0;cursor:pointer}
+.layer-panel .unknown-toggle input{width:18px;height:18px;flex:none;margin:.1rem 0 0}
+.layer-panel .uncertainty-key{padding:0 .4rem 0 2.2rem;margin:.3rem 0 0}
+.layer-panel .uncertainty-key p,.layer-panel .network-settings-body p,.layer-panel .map-unlocated-count,.layer-panel .context-help{font:400 .75rem/1.5 var(--sans);color:var(--muted)}
+.layer-panel .uncertainty-key p{margin:0 0 .4rem}
+.layer-panel .context-help{gap:.4rem}
+.layer-panel .context-help .lucide{width:15px;height:15px;flex:none}
+.layer-panel>.context-help{margin:.35rem .4rem .6rem}
+.layer-panel .network-field,.layer-panel .network-thread-control{font:.8rem/1.45 var(--sans)}
+.layer-panel .network-choice>div button,.layer-panel .basemap-options button{font:400 .85rem/1.45 var(--sans)}
