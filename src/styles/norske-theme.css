@@ -93,3 +93,11 @@ input[type="range"]:not(.dual-range input):focus-visible{outline:2px solid var(-
 .layer-panel>.context-help[hidden]{display:none}
 .network-field-heading{display:flex;align-items:center;justify-content:space-between}
 .network-info-button{text-decoration:none}
+
+/* A smaller masthead leaves more space for collection exploration. */
+@media(min-width:1151px){
+ .site-header{min-height:64px}
+ .site-header .wordmark{font-size:1.8rem}
+ .site-header .brand-block{gap:3px}
+ .site-header .site-subtitle{font-size:10px}
+}
