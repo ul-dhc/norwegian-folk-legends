@@ -243,3 +243,61 @@ test('map uncertainty distinguishes evidence of ambiguity from incomplete verifi
     assert.ok(['none', 'area', 'ambiguous'].includes(geo.mapUncertainty.kind));
   }
 });
+
+const { placeProfileSelection, placeProfileMarkup } = await import('../src/map/place-profile.ts');
+test('shared-coordinate profiles include all seven Rindal legends and preserve each name’s subset', () => {
+  const names = dataset.places.features.filter(place => ['Rindal', 'Rindal?'].includes(place.properties.name));
+  assert.equal(names.length, 2);
+  assert.deepEqual(names[0].geometry.coordinates, names[1].geometry.coordinates);
+  const locationPlaces = names.map(place => place.properties);
+  const all = dataset.legends.features.map(feature => feature.properties);
+  for (const selected of locationPlaces) {
+    const profile = placeProfileSelection(selected.id, locationPlaces, all, true);
+    assert.equal(profile.records.length, 7);
+    assert.deepEqual(profile.recordedPlaces.map(place => place.count).sort(), [1, 6]);
+    assert.equal(new Set(profile.records.map(record => record.id)).size, 7);
+    const href = '/browse/?selection=' + encodeURIComponent(profile.records.map(record => record.id).join(','));
+    const markup = placeProfileMarkup({name: 'Rindal / Rindal?', ...profile, grouped: true,
+      recordedPlaces: profile.recordedPlaces.map(place => ({...place, href: '/browse/?selection=' + place.legendIds.join(',')})),
+      href, tone: '#aaa', tr: key => key, format: String, categoryColor: () => '#aaa', english: true});
+    assert.ok(markup.includes(`href="${href}"`));
+    assert.ok(!markup.includes('&amp;place='));
+    for (const place of profile.recordedPlaces) {
+      assert.ok(markup.includes(`href="/browse/?selection=${place.legendIds.join(',')}"`));
+      const individual = placeProfileSelection(place.id, locationPlaces, all, false);
+      assert.equal(individual.records.length, place.count);
+    }
+    const filtered = placeProfileSelection(selected.id, locationPlaces, profile.records.slice(0, 2), true);
+    assert.equal(filtered.records.length, 2);
+    assert.equal(filtered.recordedPlaces.reduce((sum, place) => sum + place.count, 0), 2);
+  }
+});
+
+test('every shared-coordinate group exposes all its legends from any constituent place name', () => {
+  const groups = new Map();
+  for (const place of dataset.places.features) {
+    const key = place.geometry.coordinates.join(',');
+    const group = groups.get(key) || [];
+    group.push(place.properties);
+    groups.set(key, group);
+  }
+  const shared = [...groups.values()].filter(group => group.length > 1);
+  assert.equal(shared.length, 26);
+  const all = dataset.legends.features.map(feature => feature.properties);
+  for (const group of shared) {
+    const placeIds = new Set(group.map(place => place.id));
+    const expected = all.filter(record => placeIds.has(record.placeId)).map(record => record.id).sort();
+    for (const place of group) {
+      const profile = placeProfileSelection(place.id, group, all, true);
+      assert.deepEqual(profile.records.map(record => record.id).sort(), expected, place.name);
+      assert.equal(profile.recordedPlaces.reduce((sum, item) => sum + item.count, 0), expected.length);
+      assert.deepEqual(profile.recordedPlaces.flatMap(item => item.legendIds).sort(), expected);
+      for (const item of profile.recordedPlaces) {
+        assert.deepEqual(item.legendIds.sort(), all.filter(record => record.placeId === item.id).map(record => record.id).sort());
+      }
+      const filtered = all.filter((_, index) => index % 2 === 0);
+      assert.deepEqual(placeProfileSelection(place.id, group, filtered, true).records.map(record => record.id).sort(),
+        filtered.filter(record => placeIds.has(record.placeId)).map(record => record.id).sort());
+    }
+  }
+});
