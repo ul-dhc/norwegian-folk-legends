@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/journey.css';
 import 'leaflet/dist/leaflet.css';
 import journeyAudio from '../../../audio/background-music.mp3?url';
-const base=import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout active="journey" title="Reiser" description="En langsom reise gjennom norske sagn og landskap.">
   <section id="legend-journey" data-endpoint={`${base}journey-data.json`} data-i18n-skip tabindex="-1">

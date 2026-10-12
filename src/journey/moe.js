@@ -1,56 +1,272 @@
-export const moeIds=['SIN263','SIN473'];
-export const moeRoute=records=>moeIds.map(id=>records.find(r=>r.source_text_id===id)).filter(Boolean).map(r=>({...r,journeyColour:'#D2B957'}));
-const pair=(en,no)=>({en,no});
-export const moeIntro=pair('Across a landscape of collected stories, meet two of Moltke Moe’s narrators. Follow a photograph and a handwritten page into the Norwegian digital folklore archive SAMLA.','Møt to av Moltke Moes fortellere i et landskap av innsamlede sagn. Følg et fotografi og en håndskrevet side inn i det norske digitale folkeminnearkivet SAMLA.');
-export const moeSources=[
- ['Moltke Moe portrait · Norsk Folkeminnesamling · NFS Foto 50 / SAMLA · date and reuse licence not stated on the collection page','https://samla.no/viewer/personar/Moe/-/-/1/RELEVANCE/DOCSTRCT_TOP%3Aother_small_print%3B%3BMD2_ALLPERSONS%3ABergsg%C3%A5rd%2C%2BArne%3B%3BMD2_ALLPERSONS%3AMoe%2C%2BMoltke/'],
- ['SAMLA search guide · metadata and available transcriptions','https://samla.no/viewer/hjelp/sok/'],
- ['Liv Bratterud with Moltke Moe, summer 1878 · Unknown photographer / Nasjonalbiblioteket · blds_01062 · CC BY 2.0 · original photograph; reading scene uses an original-pixel silhouette mask','https://commons.wikimedia.org/wiki/File:Liv_Brattefud_af_B%C3%B8_herad_fort%C3%A6ller_%C3%A6ventyr_for_Moltke_Moe,_sommeren_1878.jpg'],
- ['Liv photograph licence · Creative Commons Attribution 2.0','https://creativecommons.org/licenses/by/2.0/'],
- ['Childhood portrait · C. T. Thorkildsen / Nasjonalbiblioteket · blds_06261 · no known copyright restrictions','https://commons.wikimedia.org/wiki/File:Portrett_av_Vedastine,_Marie_og_Moltke_Moe.jpg'],
- ['Moltke Moe – Store norske leksikon','https://snl.no/Moltke_Moe'],
- ['Moltke Moe – Lokalhistoriewiki','https://lokalhistoriewiki.no/wiki/Moltke_Moe'],
- ['Therese Foldvik, SAMLA (31.01.2023): Moltke Moe i tidsklemma','https://samla.w.uib.no/2023/01/31/jeg-er-raed-for-at-vi-spraenger-manden-moltke-moe-og-tidsklemma/'],
- ['Portrait, 1911 · Maal og Minne (1914) · Commons lists Knut Liestøl · Public domain in Norway','https://commons.wikimedia.org/wiki/File:Moltke_Moe.png'],
- ['Unknown photographer / Norsk Folkemuseum · NF.07226-001 · presumed 1880–1889 · Public Domain Mark','https://digitaltmuseum.org/011013389822/fra-en-serie-fotografier-fra-et-album-som-har-tilhort-folklorist-og-professor'],
- ['Moeminnet · Ringerikes Museum · further family context','https://digitaltmuseum.org/0211816596540/moeminnet'],
- ['Liv Bratterud · SAMLA person search (context, not an exact manuscript match)','https://samla.no/viewer/term/-/MD_Informant%3A%22Bratterud%2CU005C+Liv%22/1/-/-/'],
- ['Ingeborg Olavsdatter Næset · SAMLA person search (context)','https://samla.no/viewer/term/-/MD2_ALLPERSONS%3A%22N%C3%A6set%2CU005C+IngeborgU005C+Olavsdatter%22/1/-/-/'],
- ['Tollev Anundsson Krossvegen · SAMLA person search','https://samla.no/viewer/term/-/MD_Informant%3A%22Krossvegen%2CU005C+TollevU005C+Anundsson%22/1/-/-/'],
- ['SIN473 · NFS Moltke Moe 7, p. 1 · SAMLA scan 4 (opening)','https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/4/#topDocAnchor'],
- ['SIN473 · continuation and narrator attribution · p. 2 · SAMLA scan 5','https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/5/#topDocAnchor'],
- ['Neighbouring material · p. 3 · SAMLA scan 6','https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/6/#topDocAnchor'],
- ['NFS Moltke Moe 7 · SAMLA IIIF manifest · Provided by SAMLA · record rights status not evaluated or unclear','https://samla.no/viewer/api/v2/records/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/manifest/'],
- ['SIN219 · NFS Moltke Moe 7, pp. 4–5 · SAMLA scan 7','https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/7/#topDocAnchor'],
- ['SIN219 · continued · SAMLA scan 8','https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/8/#topDocAnchor']
+export const moeIds = ['SIN263', 'SIN473'];
+export const moeRoute = (records) =>
+  moeIds
+    .map((id) => records.find((r) => r.source_text_id === id))
+    .filter(Boolean)
+    .map((r) => ({ ...r, journeyColour: '#D2B957' }));
+const pair = (en, no) => ({ en, no });
+export const moeIntro = pair(
+  'Across a landscape of collected stories, meet two of Moltke Moe’s narrators. Follow a photograph and a handwritten page into the Norwegian digital folklore archive SAMLA.',
+  'Møt to av Moltke Moes fortellere i et landskap av innsamlede sagn. Følg et fotografi og en håndskrevet side inn i det norske digitale folkeminnearkivet SAMLA.',
+);
+export const moeSources = [
+  [
+    'Moltke Moe portrait · Norsk Folkeminnesamling · NFS Foto 50 / SAMLA · date and reuse licence not stated on the collection page',
+    'https://samla.no/viewer/personar/Moe/-/-/1/RELEVANCE/DOCSTRCT_TOP%3Aother_small_print%3B%3BMD2_ALLPERSONS%3ABergsg%C3%A5rd%2C%2BArne%3B%3BMD2_ALLPERSONS%3AMoe%2C%2BMoltke/',
+  ],
+  [
+    'SAMLA search guide · metadata and available transcriptions',
+    'https://samla.no/viewer/hjelp/sok/',
+  ],
+  [
+    'Liv Bratterud with Moltke Moe, summer 1878 · Unknown photographer / Nasjonalbiblioteket · blds_01062 · CC BY 2.0 · original photograph; reading scene uses an original-pixel silhouette mask',
+    'https://commons.wikimedia.org/wiki/File:Liv_Brattefud_af_B%C3%B8_herad_fort%C3%A6ller_%C3%A6ventyr_for_Moltke_Moe,_sommeren_1878.jpg',
+  ],
+  [
+    'Liv photograph licence · Creative Commons Attribution 2.0',
+    'https://creativecommons.org/licenses/by/2.0/',
+  ],
+  [
+    'Childhood portrait · C. T. Thorkildsen / Nasjonalbiblioteket · blds_06261 · no known copyright restrictions',
+    'https://commons.wikimedia.org/wiki/File:Portrett_av_Vedastine,_Marie_og_Moltke_Moe.jpg',
+  ],
+  ['Moltke Moe – Store norske leksikon', 'https://snl.no/Moltke_Moe'],
+  ['Moltke Moe – Lokalhistoriewiki', 'https://lokalhistoriewiki.no/wiki/Moltke_Moe'],
+  [
+    'Therese Foldvik, SAMLA (31.01.2023): Moltke Moe i tidsklemma',
+    'https://samla.w.uib.no/2023/01/31/jeg-er-raed-for-at-vi-spraenger-manden-moltke-moe-og-tidsklemma/',
+  ],
+  [
+    'Portrait, 1911 · Maal og Minne (1914) · Commons lists Knut Liestøl · Public domain in Norway',
+    'https://commons.wikimedia.org/wiki/File:Moltke_Moe.png',
+  ],
+  [
+    'Unknown photographer / Norsk Folkemuseum · NF.07226-001 · presumed 1880–1889 · Public Domain Mark',
+    'https://digitaltmuseum.org/011013389822/fra-en-serie-fotografier-fra-et-album-som-har-tilhort-folklorist-og-professor',
+  ],
+  [
+    'Moeminnet · Ringerikes Museum · further family context',
+    'https://digitaltmuseum.org/0211816596540/moeminnet',
+  ],
+  [
+    'Liv Bratterud · SAMLA person search (context, not an exact manuscript match)',
+    'https://samla.no/viewer/term/-/MD_Informant%3A%22Bratterud%2CU005C+Liv%22/1/-/-/',
+  ],
+  [
+    'Ingeborg Olavsdatter Næset · SAMLA person search (context)',
+    'https://samla.no/viewer/term/-/MD2_ALLPERSONS%3A%22N%C3%A6set%2CU005C+IngeborgU005C+Olavsdatter%22/1/-/-/',
+  ],
+  [
+    'Tollev Anundsson Krossvegen · SAMLA person search',
+    'https://samla.no/viewer/term/-/MD_Informant%3A%22Krossvegen%2CU005C+TollevU005C+Anundsson%22/1/-/-/',
+  ],
+  [
+    'SIN473 · NFS Moltke Moe 7, p. 1 · SAMLA scan 4 (opening)',
+    'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/4/#topDocAnchor',
+  ],
+  [
+    'SIN473 · continuation and narrator attribution · p. 2 · SAMLA scan 5',
+    'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/5/#topDocAnchor',
+  ],
+  [
+    'Neighbouring material · p. 3 · SAMLA scan 6',
+    'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/6/#topDocAnchor',
+  ],
+  [
+    'NFS Moltke Moe 7 · SAMLA IIIF manifest · Provided by SAMLA · record rights status not evaluated or unclear',
+    'https://samla.no/viewer/api/v2/records/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/manifest/',
+  ],
+  [
+    'SIN219 · NFS Moltke Moe 7, pp. 4–5 · SAMLA scan 7',
+    'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/7/#topDocAnchor',
+  ],
+  [
+    'SIN219 · continued · SAMLA scan 8',
+    'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/8/#topDocAnchor',
+  ],
 ];
-const bio=(key,title,en,no,lat,lon,image,credit)=>({kind:'moe',i:0,j:key,title,text:pair(en,no),target:lat?{lat,lon,sted:title,precision:'region',journeyColour:'#D2B957'}:null,image,credit});
-export function moeScenes(route,records,readPages,{portrait,childhood,liv,manuscript}={}){
- const count=records.filter(r=>r.collectorId==='collector-moltke-moe').length;
- const livRecord=route[0],notebookRecord=route[1];if(!livRecord||!notebookRecord)return [];
- const photoCredit='Liv Bratterud & Moltke Moe · Summer 1878 · Unknown photographer / Nasjonalbiblioteket · blds_01062 · CC BY 2.0';
- const pageUrl=moeSources.find(([name])=>name.startsWith('SIN473'))[1];
- const stage=(j,title,en,no,extra={})=>({...bio(j,title,en,no),...extra});
- const result=[
- stage('all','Norge','These places are connected by the work of collecting. Behind each record are people who told a story, someone who wrote it down, and an archive that kept it.','Disse stedene er knyttet sammen gjennom innsamling. Bak hver opptegnelse finnes mennesker som fortalte, noen som skrev ned, og et arkiv som tok vare på ordene.',{duration:20000}),
- stage('network','Moltke Moe',`${count} records connect us to Moltke Moe here, but they are only a small part of his work. A far larger collection survives in Norsk Folkeminnesamling, the Norwegian Folklore Archives in Oslo.\n\nSAMLA, the digital archive of Norwegian folklore, makes digitized material from this collection accessible, opening paths far beyond the stories on this map.`,`${count} opptegnelser knytter oss til Moltke Moe her, men de er bare en liten del av arbeidet hans. En langt større samling er bevart i Norsk Folkeminnesamling i Oslo.\n\nSAMLA gjør digitalisert materiale fra denne samlingen tilgjengelig og åpner veier langt utover fortellingene på dette kartet.`),
- stage('childhood',pair('Before the notebooks','Før notatbøkene'),'Before the notebooks, there was a childhood among stories. Born in Krødsherad in 1859, Moltke grew up there and in Vestre Aker, the son of folklore collector Jørgen Moe. Here he stands with Vedastine and Marie. As a schoolboy, he began helping with folklore collecting; by eighteen, he was collecting himself.','Før notatbøkene var det en barndom blant fortellinger. Moltke ble født i Krødsherad i 1859 og vokste opp der og i Vestre Aker, som sønn av folkeminnesamleren Jørgen Moe. Her står han sammen med Vedastine og Marie. Som skolegutt begynte han å hjelpe til med folkeminneinnsamling; fra attenårsalderen samlet han selv.',{image:childhood,effect:'whole-photo',credit:'Vedastine, Marie & Moltke Moe · C. T. Thorkildsen / Nasjonalbiblioteket · blds_06261',target:{lat:60.18,lon:9.62,sted:'Krødsherad',precision:'region',journeyColour:'#D2B957'},duration:30000}),
- stage('collector',pair('A life among stories','Et liv blant fortellinger'),'From the boy in a family photograph to the man we meet in archival portraits, and finally the scholar among his books in 1911. In 1886, aged twenty-six, Moltke became a professor in Kristiania. Between these photographs lie years of listening, collecting and corresponding. We return now to the voices behind that work.','Fra gutten på et familiebilde til mannen vi møter i arkivportrettene, og til slutt forskeren blant bøkene i 1911. I 1886, tjueseks år gammel, ble Moltke professor i Kristiania. Mellom fotografiene ligger år med lytting, innsamling og brevveksling. Nå vender vi tilbake til stemmene bak dette arbeidet.',{image:portrait,effect:'whole-photo',credit:'Nasjonalbiblioteket · NFS Foto 50 / SAMLA · Maal og Minne',target:{lat:59.92,lon:10.73,sted:'Kristiania',precision:'region',journeyColour:'#D2B957'},duration:34000}),
- stage('roads',pair('Places connected','Steder i forbindelse'),'The threads now follow today’s roads and ferry connections. Legend recording locations join the nearest road. Watch them unfold together across the places in Moltke’s records. They help us read the landscape; they do not reconstruct his journeys. Our first stop is Bø in Telemark.','Trådene følger nå dagens veier og fergeforbindelser. Steder der sagnene ble skrevet ned knyttes til nærmeste vei. De folder seg ut mellom stedene i Moltkes opptegnelser. De hjelper oss å lese landskapet, men gjenskaper ikke reisene hans. Første stopp er Bø i Telemark.',{duration:24000}),
- stage('liv','Bø · Liv Bratterud','Here we can see a narrator as well as read her words. The photograph shows Liv Bratterud telling stories to Moltke in the summer of 1878. Her legend in this dataset was recorded later, in 1882.','Her kan vi se en forteller, ikke bare lese ordene hennes. Fotografiet viser Liv Bratterud som forteller til Moltke sommeren 1878. Sagnet hennes i dette datasettet ble skrevet ned senere, i 1882.',{target:livRecord,image:liv,effect:'liv-photo',credit:photoCredit,duration:22000})
- ];
- const addReading=(r,i,extra={})=>{const pages=readPages(r);pages.forEach((page,p)=>result.push({kind:'read',i,p,total:pages.length,...page,...extra}));};
- addReading(livRecord,0,{effect:'encounter',image:liv,credit:photoCredit});
- result.push(stage('landscape','Bø → Heddal','The record places Liv’s telling in Bø. But the story takes us to Heddal parsonage, and a call from the water. A narrator can remain in one place while her words carry us into another landscape.','Opptegnelsen knytter Livs fortelling til Bø. Men sagnet fører oss til Heddal prestegård og et rop fra vannet. En forteller kan bli på ett sted mens ordene hennes fører oss inn i et annet landskap.',{target:{lat:59.579,lon:9.177,sted:'Heddal',precision:'region',journeyColour:'#D2B957'}}));
- result.push(stage('tollov','Bø · Tølløv Krossvegjen','Back in Bø, another narrator leaves a different trace. Tølløv Krossvegjen tells of a field at Erikstein harvested during the night. Our way into this encounter is a page in Moltke’s notebook.','Tilbake i Bø etterlater en annen forteller et annet spor. Tølløv Krossvegjen forteller om en åker på Erikstein som ble skåret om natten. Her møter vi fortelleren gjennom en side i Moltkes notatbok.',{i:1,target:notebookRecord,duration:12000,brief:true}));
- addReading(notebookRecord,1,{image:manuscript,effect:'manuscript-preview'});
- result.push(stage('manuscript',pair('From a voice to a page','Fra en stemme til en side'),'“Dæ va ein mann her bol på Erikstein.” The words you have just read begin at the foot of this page. The continuation names Tølløv. The notebook holds this local memory alongside everyday sayings and beliefs. In the archive, the story still has neighbours.','«Dæ va ein mann her bol på Erikstein.» Ordene du nettopp leste, begynner nederst på denne siden. Fortsettelsen navngir Tølløv. Notatboken bevarer dette lokale minnet sammen med hverdagens ordtak og trosforestillinger. I arkivet har fortellingen fremdeles naboer.',{i:1,target:notebookRecord,image:manuscript,effect:'manuscript',credit:'NFS Moltke Moe 7, pp. 1–2 · SAMLA · SIN473',manuscript:pageUrl,duration:40000}));
- result.push(stage('return',pair('What survives','Det som blir bevart'),'Moltke died in 1913. His notebooks, notes and letters helped form the foundation of Norsk Folkeminnesamling. Behind this network lay a lifetime of work: collecting, corresponding, teaching and helping others.','Moltke døde i 1913. Skrivebøkene, notatene og brevene hans ble en del av grunnlaget for Norsk Folkeminnesamling. Bak nettverket lå et liv med arbeid: innsamling, brev, undervisning og hjelp til andre.',{i:1}));
- result.push(stage('archive',pair('SAMLA · Discover the traces','SAMLA · Utforsk sporene'),'Today the Norwegian digital folklore archive SAMLA opens another way into this work. Start with the page you have seen, continue through the notebook, or search for Liv’s name. The map brings the traces together; the archive lets you investigate them yourself.','I dag åpner det norske digitale folkeminnearkivet SAMLA en ny vei inn i dette arbeidet. Begynn med siden du har sett, bla videre i notatboken eller søk etter Livs navn. Kartet knytter sporene sammen; arkivet lar deg undersøke dem selv.',{i:1,image:manuscript,effect:'archive',credit:'NFS Moltke Moe 7 · SAMLA',manuscript:pageUrl,explore:true}));
- result.push({kind:'end',i:1});
- for(const scene of result){
-  const headings={childhood:'Krødsherad · 1859',collector:'Kristiania · 1886–1911',roads:pair('Norway','Norge'),manuscript:'Bø · 1880',return:pair('After 1913','Etter 1913'),archive:'SAMLA'};
-  if(headings[scene.j]){scene.chapter=scene.title;scene.title=headings[scene.j];}
- }
- return result;
+const bio = (key, title, en, no, lat, lon, image, credit) => ({
+  kind: 'moe',
+  i: 0,
+  j: key,
+  title,
+  text: pair(en, no),
+  target: lat ? { lat, lon, sted: title, precision: 'region', journeyColour: '#D2B957' } : null,
+  image,
+  credit,
+});
+export function moeScenes(
+  route,
+  records,
+  readPages,
+  { portrait, childhood, liv, manuscript } = {},
+) {
+  const count = records.filter((r) => r.collectorId === 'collector-moltke-moe').length;
+  const livRecord = route[0],
+    notebookRecord = route[1];
+  if (!livRecord || !notebookRecord) return [];
+  const photoCredit =
+    'Liv Bratterud & Moltke Moe · Summer 1878 · Unknown photographer / Nasjonalbiblioteket · blds_01062 · CC BY 2.0';
+  const pageUrl = moeSources.find(([name]) => name.startsWith('SIN473'))[1];
+  const stage = (j, title, en, no, extra = {}) => ({ ...bio(j, title, en, no), ...extra });
+  const result = [
+    stage(
+      'all',
+      'Norge',
+      'These places are connected by the work of collecting. Behind each record are people who told a story, someone who wrote it down, and an archive that kept it.',
+      'Disse stedene er knyttet sammen gjennom innsamling. Bak hver opptegnelse finnes mennesker som fortalte, noen som skrev ned, og et arkiv som tok vare på ordene.',
+      { duration: 20000 },
+    ),
+    stage(
+      'network',
+      'Moltke Moe',
+      `${count} records connect us to Moltke Moe here, but they are only a small part of his work. A far larger collection survives in Norsk Folkeminnesamling, the Norwegian Folklore Archives in Oslo.\n\nSAMLA, the digital archive of Norwegian folklore, makes digitized material from this collection accessible, opening paths far beyond the stories on this map.`,
+      `${count} opptegnelser knytter oss til Moltke Moe her, men de er bare en liten del av arbeidet hans. En langt større samling er bevart i Norsk Folkeminnesamling i Oslo.\n\nSAMLA gjør digitalisert materiale fra denne samlingen tilgjengelig og åpner veier langt utover fortellingene på dette kartet.`,
+    ),
+    stage(
+      'childhood',
+      pair('Before the notebooks', 'Før notatbøkene'),
+      'Before the notebooks, there was a childhood among stories. Born in Krødsherad in 1859, Moltke grew up there and in Vestre Aker, the son of folklore collector Jørgen Moe. Here he stands with Vedastine and Marie. As a schoolboy, he began helping with folklore collecting; by eighteen, he was collecting himself.',
+      'Før notatbøkene var det en barndom blant fortellinger. Moltke ble født i Krødsherad i 1859 og vokste opp der og i Vestre Aker, som sønn av folkeminnesamleren Jørgen Moe. Her står han sammen med Vedastine og Marie. Som skolegutt begynte han å hjelpe til med folkeminneinnsamling; fra attenårsalderen samlet han selv.',
+      {
+        image: childhood,
+        effect: 'whole-photo',
+        credit:
+          'Vedastine, Marie & Moltke Moe · C. T. Thorkildsen / Nasjonalbiblioteket · blds_06261',
+        target: {
+          lat: 60.18,
+          lon: 9.62,
+          sted: 'Krødsherad',
+          precision: 'region',
+          journeyColour: '#D2B957',
+        },
+        duration: 30000,
+      },
+    ),
+    stage(
+      'collector',
+      pair('A life among stories', 'Et liv blant fortellinger'),
+      'From the boy in a family photograph to the man we meet in archival portraits, and finally the scholar among his books in 1911. In 1886, aged twenty-six, Moltke became a professor in Kristiania. Between these photographs lie years of listening, collecting and corresponding. We return now to the voices behind that work.',
+      'Fra gutten på et familiebilde til mannen vi møter i arkivportrettene, og til slutt forskeren blant bøkene i 1911. I 1886, tjueseks år gammel, ble Moltke professor i Kristiania. Mellom fotografiene ligger år med lytting, innsamling og brevveksling. Nå vender vi tilbake til stemmene bak dette arbeidet.',
+      {
+        image: portrait,
+        effect: 'whole-photo',
+        credit: 'Nasjonalbiblioteket · NFS Foto 50 / SAMLA · Maal og Minne',
+        target: {
+          lat: 59.92,
+          lon: 10.73,
+          sted: 'Kristiania',
+          precision: 'region',
+          journeyColour: '#D2B957',
+        },
+        duration: 34000,
+      },
+    ),
+    stage(
+      'roads',
+      pair('Places connected', 'Steder i forbindelse'),
+      'The threads now follow today’s roads and ferry connections. Legend recording locations join the nearest road. Watch them unfold together across the places in Moltke’s records. They help us read the landscape; they do not reconstruct his journeys. Our first stop is Bø in Telemark.',
+      'Trådene følger nå dagens veier og fergeforbindelser. Steder der sagnene ble skrevet ned knyttes til nærmeste vei. De folder seg ut mellom stedene i Moltkes opptegnelser. De hjelper oss å lese landskapet, men gjenskaper ikke reisene hans. Første stopp er Bø i Telemark.',
+      { duration: 24000 },
+    ),
+    stage(
+      'liv',
+      'Bø · Liv Bratterud',
+      'Here we can see a narrator as well as read her words. The photograph shows Liv Bratterud telling stories to Moltke in the summer of 1878. Her legend in this dataset was recorded later, in 1882.',
+      'Her kan vi se en forteller, ikke bare lese ordene hennes. Fotografiet viser Liv Bratterud som forteller til Moltke sommeren 1878. Sagnet hennes i dette datasettet ble skrevet ned senere, i 1882.',
+      { target: livRecord, image: liv, effect: 'liv-photo', credit: photoCredit, duration: 22000 },
+    ),
+  ];
+  const addReading = (r, i, extra = {}) => {
+    const pages = readPages(r);
+    pages.forEach((page, p) =>
+      result.push({ kind: 'read', i, p, total: pages.length, ...page, ...extra }),
+    );
+  };
+  addReading(livRecord, 0, { effect: 'encounter', image: liv, credit: photoCredit });
+  result.push(
+    stage(
+      'landscape',
+      'Bø → Heddal',
+      'The record places Liv’s telling in Bø. But the story takes us to Heddal parsonage, and a call from the water. A narrator can remain in one place while her words carry us into another landscape.',
+      'Opptegnelsen knytter Livs fortelling til Bø. Men sagnet fører oss til Heddal prestegård og et rop fra vannet. En forteller kan bli på ett sted mens ordene hennes fører oss inn i et annet landskap.',
+      {
+        target: {
+          lat: 59.579,
+          lon: 9.177,
+          sted: 'Heddal',
+          precision: 'region',
+          journeyColour: '#D2B957',
+        },
+      },
+    ),
+  );
+  result.push(
+    stage(
+      'tollov',
+      'Bø · Tølløv Krossvegjen',
+      'Back in Bø, another narrator leaves a different trace. Tølløv Krossvegjen tells of a field at Erikstein harvested during the night. Our way into this encounter is a page in Moltke’s notebook.',
+      'Tilbake i Bø etterlater en annen forteller et annet spor. Tølløv Krossvegjen forteller om en åker på Erikstein som ble skåret om natten. Her møter vi fortelleren gjennom en side i Moltkes notatbok.',
+      { i: 1, target: notebookRecord, duration: 12000, brief: true },
+    ),
+  );
+  addReading(notebookRecord, 1, { image: manuscript, effect: 'manuscript-preview' });
+  result.push(
+    stage(
+      'manuscript',
+      pair('From a voice to a page', 'Fra en stemme til en side'),
+      '“Dæ va ein mann her bol på Erikstein.” The words you have just read begin at the foot of this page. The continuation names Tølløv. The notebook holds this local memory alongside everyday sayings and beliefs. In the archive, the story still has neighbours.',
+      '«Dæ va ein mann her bol på Erikstein.» Ordene du nettopp leste, begynner nederst på denne siden. Fortsettelsen navngir Tølløv. Notatboken bevarer dette lokale minnet sammen med hverdagens ordtak og trosforestillinger. I arkivet har fortellingen fremdeles naboer.',
+      {
+        i: 1,
+        target: notebookRecord,
+        image: manuscript,
+        effect: 'manuscript',
+        credit: 'NFS Moltke Moe 7, pp. 1–2 · SAMLA · SIN473',
+        manuscript: pageUrl,
+        duration: 40000,
+      },
+    ),
+  );
+  result.push(
+    stage(
+      'return',
+      pair('What survives', 'Det som blir bevart'),
+      'Moltke died in 1913. His notebooks, notes and letters helped form the foundation of Norsk Folkeminnesamling. Behind this network lay a lifetime of work: collecting, corresponding, teaching and helping others.',
+      'Moltke døde i 1913. Skrivebøkene, notatene og brevene hans ble en del av grunnlaget for Norsk Folkeminnesamling. Bak nettverket lå et liv med arbeid: innsamling, brev, undervisning og hjelp til andre.',
+      { i: 1 },
+    ),
+  );
+  result.push(
+    stage(
+      'archive',
+      pair('SAMLA · Discover the traces', 'SAMLA · Utforsk sporene'),
+      'Today the Norwegian digital folklore archive SAMLA opens another way into this work. Start with the page you have seen, continue through the notebook, or search for Liv’s name. The map brings the traces together; the archive lets you investigate them yourself.',
+      'I dag åpner det norske digitale folkeminnearkivet SAMLA en ny vei inn i dette arbeidet. Begynn med siden du har sett, bla videre i notatboken eller søk etter Livs navn. Kartet knytter sporene sammen; arkivet lar deg undersøke dem selv.',
+      {
+        i: 1,
+        image: manuscript,
+        effect: 'archive',
+        credit: 'NFS Moltke Moe 7 · SAMLA',
+        manuscript: pageUrl,
+        explore: true,
+      },
+    ),
+  );
+  result.push({ kind: 'end', i: 1 });
+  for (const scene of result) {
+    const headings = {
+      childhood: 'Krødsherad · 1859',
+      collector: 'Kristiania · 1886–1911',
+      roads: pair('Norway', 'Norge'),
+      manuscript: 'Bø · 1880',
+      return: pair('After 1913', 'Etter 1913'),
+      archive: 'SAMLA',
+    };
+    if (headings[scene.j]) {
+      scene.chapter = scene.title;
+      scene.title = headings[scene.j];
+    }
+  }
+  return result;
 }

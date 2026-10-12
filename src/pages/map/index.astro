@@ -1,16 +1,22 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { mapData } from "../../map/data";
-import ui from "../../i18n/ui.json";
-import "maplibre-gl/dist/maplibre-gl.css";
-import "../../map/style.css";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { mapData } from '../../map/data';
+import ui from '../../i18n/ui.json';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import '../../map/style.css';
 const base = import.meta.env.BASE_URL;
 const legendProperties = mapData.legends.features.map((feature) => feature.properties);
-const mapYears = [...legendProperties, ...mapData.unmappedLegends].map((properties) => Number(properties.year)).filter(Boolean);
+const mapYears = [...legendProperties, ...mapData.unmappedLegends]
+  .map((properties) => Number(properties.year))
+  .filter(Boolean);
 const mapMinYear = Math.min(...mapYears);
 const mapMaxYear = Math.max(...mapYears);
-const mapUndatedCount = [...legendProperties, ...mapData.unmappedLegends].filter((properties) => !properties.year).length;
-const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length + mapData.unmappedLegends.length)) * 100);
+const mapUndatedCount = [...legendProperties, ...mapData.unmappedLegends].filter(
+  (properties) => !properties.year,
+).length;
+const mapUndatedPercent = Math.round(
+  (mapUndatedCount / (legendProperties.length + mapData.unmappedLegends.length)) * 100,
+);
 ---
 
 <BaseLayout title="Kart over sagn" active="map">

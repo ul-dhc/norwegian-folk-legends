@@ -1,0 +1,7 @@
+node_modules/
+build/
+.astro/
+src/data/
+src/journey/*.json
+src/ml-index/*.json
+norske_json/

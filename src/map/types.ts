@@ -1,8 +1,18 @@
 export type PlaceGeography = {
- verification: string; precision: string; displayStatus: string; coordinateSource: string; reason: string;
- mapUncertainty?: {kind: "none" | "area" | "ambiguous"; reason: string};
- nameEvidence?: Array<{name:string;code:string;kind:string;sourceUrl:string}>;
- authority: {name: string; id: number; featureType: string; sourceUrl: string; coordinateSystem: string} | null;
+  verification: string;
+  precision: string;
+  displayStatus: string;
+  coordinateSource: string;
+  reason: string;
+  mapUncertainty?: { kind: 'none' | 'area' | 'ambiguous'; reason: string };
+  nameEvidence?: Array<{ name: string; code: string; kind: string; sourceUrl: string }>;
+  authority: {
+    name: string;
+    id: number;
+    featureType: string;
+    sourceUrl: string;
+    coordinateSystem: string;
+  } | null;
 };
 export type PlaceProperties = {
   id: string;
@@ -33,20 +43,26 @@ export type LegendProperties = {
   collector: string;
   narrator: string;
   year: string | null;
-  coordinateSource: "original" | "place";
+  coordinateSource: 'original' | 'place';
+  locationUncertain?: number;
+  visuallyDispersed?: boolean;
+  placeCount?: number;
+  centerKey?: string;
+  categoryColor?: string;
 };
 
 export type PlaceFeature = {
-  type: "Feature";
+  type: 'Feature';
   id: string;
-  geometry: { type: "Point"; coordinates: [number, number] };
+  geometry: { type: 'Point'; coordinates: [number, number] };
   properties: PlaceProperties;
 };
 
-export type FeatureCollection = {
-  type: "FeatureCollection";
-  features: any[];
+export type LegendFeature = {
+ type:'Feature';id:string;geometry:{type:'Point';coordinates:[number,number]};properties:LegendProperties;
 };
+export type FeatureCollection<Feature=LegendFeature> = {type:'FeatureCollection';features:Feature[]};
+export type DisplayLegendFeature = LegendFeature & {properties:LegendProperties & {centerKey:string;placeCount:number;categoryColor:string;visuallyDispersed:true}};
 
 export type NetworkNode = {
   kind?: string;
@@ -58,7 +74,7 @@ export type NetworkNode = {
   connectionCount: number;
   plotCount: number;
   dominantTheme: string;
-  collectors?: Array<{id: string; name: string; count: number}>;
+  collectors?: Array<{ id: string; name: string; count: number }>;
   themes: Array<[string, number]>;
   plots: Array<[string, number]>;
   legendIds: string[];
@@ -78,7 +94,7 @@ export type NetworkEdge = {
 };
 
 export type MapDataset = {
-  places: { type: "FeatureCollection"; features: PlaceFeature[] };
+  places: { type: 'FeatureCollection'; features: PlaceFeature[] };
   legends: FeatureCollection;
   unmappedLegends: LegendProperties[];
   networks: Record<string, FeatureCollection>;

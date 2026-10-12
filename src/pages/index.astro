@@ -1,40 +1,115 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import {legends,collectors,narrators,places,resolveLegend,displayPersonName,collectorsById,narratorsById} from '../lib/data';
+import {
+  legends,
+  collectors,
+  narrators,
+  places,
+  resolveLegend,
+  displayPersonName,
+  collectorsById,
+  narratorsById,
+} from '../lib/data';
 import norway from '../data/norway-outline.json';
-import {topics,types} from '../ml-index/data';
-import {BookOpen,Moon,Flame,Waves,Mountain,Trees,House,Castle} from 'lucide';
-const topicIcons={magic:BookOpen,witchcraft:Moon,ghosts:Flame,water:Waves,trolls:Mountain,fairies:Trees,nisse:House,local:Castle};
+import { topics, types } from '../ml-index/data';
+import { BookOpen, Moon, Flame, Waves, Mountain, Trees, House, Castle } from 'lucide';
+const topicIcons = {
+  magic: BookOpen,
+  witchcraft: Moon,
+  ghosts: Flame,
+  water: Waves,
+  trolls: Mountain,
+  fairies: Trees,
+  nisse: House,
+  local: Castle,
+};
 import livPhotograph from '../assets/moe/liv-bratterud.jpg?url';
 import threadsMeetPreview from '../assets/journey-previews/threads-meet.png?url';
 import oneThreadPreview from '../assets/journey-previews/one-thread.png?url';
-const base=import.meta.env.BASE_URL;
-const mappedLegends=legends.filter(legend=>resolveLegend(legend).place?.coordinates);
-const locationTotals=new Map<string,number>();
-const mapPoints=mappedLegends.map(legend=>{
-  const {latitude,longitude}=resolveLegend(legend).place!.coordinates!;
-  const key=`${latitude},${longitude}`,index=locationTotals.get(key)||0;
-  locationTotals.set(key,index+1);
+const base = import.meta.env.BASE_URL;
+const mappedLegends = legends.filter((legend) => resolveLegend(legend).place?.coordinates);
+const locationTotals = new Map<string, number>();
+const mapPoints = mappedLegends.map((legend) => {
+  const { latitude, longitude } = resolveLegend(legend).place!.coordinates!;
+  const key = `${latitude},${longitude}`,
+    index = locationTotals.get(key) || 0;
+  locationTotals.set(key, index + 1);
   // A small deterministic spread keeps every record visible at shared locations.
-  const angle=index*2.39996323,radius=index?Math.sqrt(index)*1.6:0;
-  return {id:legend.id,x:24+(longitude-4)*22+Math.cos(angle)*radius,y:24+(72-latitude)*43+Math.sin(angle)*radius};
+  const angle = index * 2.39996323,
+    radius = index ? Math.sqrt(index) * 1.6 : 0;
+  return {
+    id: legend.id,
+    x: 24 + (longitude - 4) * 22 + Math.cos(angle) * radius,
+    y: 24 + (72 - latitude) * 43 + Math.sin(angle) * radius,
+  };
 });
-const homeTopics=topics.map(topic=>{
-  const topicTypes=types.filter(type=>type.topic===topic.id&&type.records.length);
-  const ids=topicTypes.map(type=>type.id),records=legends.filter(legend=>ids.includes(legend.mlCategoryId||''));
-  const collectorCount=new Set(records.filter(legend=>displayPersonName(collectorsById.get(legend.collectorId||''))).map(legend=>legend.collectorId)).size;
-  const narratorCount=new Set(records.filter(legend=>displayPersonName(narratorsById.get(legend.narratorId||''))).map(legend=>legend.narratorId)).size;
-  return {...topic,count:records.length,ids,collectorCount,narratorCount};
-}).filter(topic=>topic.count);
-const journeys=[
-  {mode:'weave',title:'Der trådene møtes',key:'weave',description:'En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.'},
-  {mode:'thread',title:'Én tråd',key:'thread',description:'Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.'},
-  {mode:'moe',title:'Moltke Moe',key:'moe',description:'Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.'}
+const homeTopics = topics
+  .map((topic) => {
+    const topicTypes = types.filter((type) => type.topic === topic.id && type.records.length);
+    const ids = topicTypes.map((type) => type.id),
+      records = legends.filter((legend) => ids.includes(legend.mlCategoryId || ''));
+    const collectorCount = new Set(
+      records
+        .filter((legend) => displayPersonName(collectorsById.get(legend.collectorId || '')))
+        .map((legend) => legend.collectorId),
+    ).size;
+    const narratorCount = new Set(
+      records
+        .filter((legend) => displayPersonName(narratorsById.get(legend.narratorId || '')))
+        .map((legend) => legend.narratorId),
+    ).size;
+    return { ...topic, count: records.length, ids, collectorCount, narratorCount };
+  })
+  .filter((topic) => topic.count);
+const journeys = [
+  {
+    mode: 'weave',
+    title: 'Der trådene møtes',
+    key: 'weave',
+    description:
+      'En åpen reise gjennom steder, stemmer og sagn. Følg forbindelsene som vokser frem i landskapet.',
+  },
+  {
+    mode: 'thread',
+    title: 'Én tråd',
+    key: 'thread',
+    description:
+      'Et rop fra vannet, et møte med huldra, en hvileløs ånd. Følg et tema fra sted til sted.',
+  },
+  {
+    mode: 'moe',
+    title: 'Moltke Moe',
+    key: 'moe',
+    description: 'Møt stemmene fra Bø gjennom sagn, fotografier og håndskrevne sider fra arkivet.',
+  },
 ];
-const today=new Date(),currentDate=new Intl.DateTimeFormat('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',year:'numeric'}).format(today),currentDateISO=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Oslo',year:'numeric',month:'2-digit',day:'2-digit'}).format(today),dayNumber=Math.floor(Date.UTC(today.getUTCFullYear(),today.getUTCMonth(),today.getUTCDate())/86400000),daily=legends[dayNumber%legends.length],dailyData=resolveLegend(daily);
-const excerpt=(daily.text.no||'').replace(/\s+/g,' ').trim(),dailyExcerpt=excerpt.length>520?`${excerpt.slice(0,520).trimEnd()}…`:excerpt;
-const attribution=[[dailyData.place?.name,dailyData.county?.name,daily.year].filter(Boolean).join(' · '),displayPersonName(dailyData.narrator),displayPersonName(dailyData.collector)].filter(Boolean);
-const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,knownNarrators=narrators.filter(item=>displayPersonName(item)).length;
+const today = new Date(),
+  currentDate = new Intl.DateTimeFormat('nb-NO', {
+    timeZone: 'Europe/Oslo',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  }).format(today),
+  currentDateISO = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Europe/Oslo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(today),
+  dayNumber = Math.floor(
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()) / 86400000,
+  ),
+  daily = legends[dayNumber % legends.length],
+  dailyData = resolveLegend(daily);
+const excerpt = (daily.text.no || '').replace(/\s+/g, ' ').trim(),
+  dailyExcerpt = excerpt.length > 520 ? `${excerpt.slice(0, 520).trimEnd()}…` : excerpt;
+const attribution = [
+  [dailyData.place?.name, dailyData.county?.name, daily.year].filter(Boolean).join(' · '),
+  displayPersonName(dailyData.narrator),
+  displayPersonName(dailyData.collector),
+].filter(Boolean);
+const knownCollectors = collectors.filter((item) => displayPersonName(item)).length,
+  knownNarrators = narrators.filter((item) => displayPersonName(item)).length;
 ---
 <BaseLayout active="home" title="Norske sagn">
   <section class="hero norske-home-hero"><div class="shell home-introduction"><div class="home-copy"><p class="home-development"><span class="development-badge" data-i18n="status.development">Under utvikling</span></p><h1 class="display">Norske sagn</h1><p class="lede" data-i18n="home.intro">Utforsk 1 477 norske sagn gjennom fortellinger, steder, samlere og vandresagntyper.</p><form class="hero-search" action={`${base}browse/`} method="get"><label class="sr-only" for="home-search" data-i18n="common.search">Søk</label><input class="platform-search" id="home-search" name="q" type="search" placeholder="Søk i sagn, steder eller personer…"/><button class="button primary" type="submit" data-i18n="common.search">Søk</button></form><div class="hero-actions"><a class="button icon-link" href={`${base}browse/`}><span data-i18n="home.openBrowser">Åpne sagnutforskeren</span><i data-lucide="arrow-right"></i></a></div></div><figure class="norway-map"><svg viewBox="20 40 620 610" role="img" aria-labelledby="norway-map-title norway-map-description"><title id="norway-map-title" data-i18n="home.mapTitle">Sagn i landskapet</title><desc id="norway-map-description" data-i18n="home.mapAlt">Et kart over Norge med ett lyspunkt for hvert stedfestet sagn.</desc><defs><radialGradient id="norway-ambient-light" gradientUnits="userSpaceOnUse" cx="310" cy="345" r="220"><stop offset="0" stop-color="#ead9b3" stop-opacity=".95"/><stop offset=".35" stop-color="#ddcfae" stop-opacity=".65"/><stop offset=".7" stop-color="#c8dace" stop-opacity=".2"/><stop offset="1" stop-color="#c8dace" stop-opacity="0"/></radialGradient></defs><path class="norway-outline" d={norway.path}/><path class="norway-land-wash" d={norway.path} fill="url(#norway-ambient-light)"/><g class="norway-lights">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.65" data-legend-id={point.id}/>)}</g><g class="norway-light-wash" fill="url(#norway-ambient-light)" aria-hidden="true">{mapPoints.map(point=><circle cx={point.x} cy={point.y} r="1.8"/>)}</g></svg></figure></div></section>
@@ -149,36 +224,6 @@ const knownCollectors=collectors.filter(item=>displayPersonName(item)).length,kn
     @media(prefers-reduced-motion:reduce){.norway-land-wash,.norway-light-wash,.journey-scenery img,.journey-open,.journey-spotlight,.collection-summary .stat strong,.collection-summary .stat span{transition:none} .collection-summary .stat:hover strong{transform:none}.journey-spotlight:hover img{transform:none}}
   </style>
   <script>
-    const topicMotion=matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
-    document.querySelectorAll<HTMLElement>('.topic-block').forEach(card=>{card.addEventListener('pointermove',event=>{if(!topicMotion.matches)return;const rect=card.getBoundingClientRect();card.style.setProperty('--topic-x',`${(event.clientX-rect.left)/rect.width*100}%`);card.style.setProperty('--topic-y',`${(event.clientY-rect.top)/rect.height*100}%`)},{passive:true})});
-    const refreshTopicCopy=()=>{const lang=document.documentElement.dataset.uiLang==='en'?'en':'no';document.querySelectorAll<HTMLElement>('[data-topic-copy]').forEach(element=>{element.textContent=element.dataset[lang]||element.dataset.no||''})};
-    refreshTopicCopy();window.addEventListener('ui-language-change',refreshTopicCopy);
-    const map=document.querySelector<HTMLElement>('.norway-map');
-    const ambientMotion=matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
-    if(map){
-      const svg=map.querySelector('svg')!,light=map.querySelector('radialGradient')!;
-      let frame=0,previousTime=0,currentX=310,currentY=345,targetX=310,targetY=345;
-      const drift=(now:number)=>{
-        const elapsed=previousTime?Math.min(64,now-previousTime):16;previousTime=now;
-        const ease=1-Math.exp(-elapsed/240);
-        currentX+=(targetX-currentX)*ease;currentY+=(targetY-currentY)*ease;
-        light.setAttribute('cx',String(currentX));light.setAttribute('cy',String(currentY));
-        if(Math.hypot(targetX-currentX,targetY-currentY)>.15)frame=requestAnimationFrame(drift);else{frame=0;previousTime=0}
-      };
-      const locate=(event:PointerEvent)=>{const matrix=svg.getScreenCTM();if(!matrix)return;const point=new DOMPoint(event.clientX,event.clientY).matrixTransform(matrix.inverse());targetX=point.x;targetY=point.y};
-      map.addEventListener('pointerenter',event=>{if(!ambientMotion.matches)return;locate(event);currentX=targetX;currentY=targetY;light.setAttribute('cx',String(currentX));light.setAttribute('cy',String(currentY));map.classList.add('is-lit')});
-      map.addEventListener('pointermove',event=>{if(!ambientMotion.matches)return;locate(event);if(!frame)frame=requestAnimationFrame(drift)},{passive:true});
-      const settle=()=>{map.classList.remove('is-lit');cancelAnimationFrame(frame);frame=0;previousTime=0};
-      map.addEventListener('pointerleave',settle);ambientMotion.addEventListener('change',settle);
-    }
-    const dateElement=document.querySelector<HTMLTimeElement>('[data-daily-date]');
-    const refreshDate=()=>{if(!dateElement)return;const now=new Date();dateElement.dateTime=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Oslo',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);dateElement.textContent=new Intl.DateTimeFormat('nb-NO',{timeZone:'Europe/Oslo',day:'2-digit',month:'2-digit',year:'numeric'}).format(now)};
-    refreshDate();setInterval(refreshDate,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDate()});
-    const counters=[...document.querySelectorAll<HTMLElement>('[data-count-up]')];
-    const numberFormat=()=>new Intl.NumberFormat(document.documentElement.dataset.uiLang==='en'?'en-US':'nb-NO');
-    const showFinal=()=>counters.forEach(counter=>counter.textContent=numberFormat().format(Number(counter.dataset.countUp||0)));
-    const animateCounter=(counter:HTMLElement)=>{const target=Number(counter.dataset.countUp||0),started=performance.now(),duration=1100;const tick=(now:number)=>{const progress=Math.min((now-started)/duration,1),eased=1-Math.pow(1-progress,3);counter.textContent=numberFormat().format(Math.round(target*eased));if(progress<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};
-    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(!entries.some(entry=>entry.isIntersecting))return;observer.disconnect();counters.forEach((counter,index)=>window.setTimeout(()=>animateCounter(counter),index*90))},{threshold:.35});const summary=document.querySelector('.collection-summary');if(summary)observer.observe(summary)}else showFinal();
-    window.addEventListener('ui-language-change',showFinal);
-  </script>
+  import '../scripts/home';
+</script>
 </BaseLayout>

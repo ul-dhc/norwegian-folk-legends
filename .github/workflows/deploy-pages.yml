@@ -35,8 +35,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check source types
+        run: pnpm check
+
       - name: Build website
         run: pnpm build
+
+      - name: Test built website
+        run: pnpm test
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3

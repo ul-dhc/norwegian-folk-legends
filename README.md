@@ -134,3 +134,41 @@ animation, fullscreen, the reading-time slider and responsive passage layout.
 
 Pushes to `main` run `.github/workflows/deploy-pages.yml`, which builds the Astro
 site and replaces the GitHub Pages deployment.
+
+## Source structure and maintenance
+
+Astro pages define the document markup and server-side data. Browser interactions
+are imported as modules so page templates remain readable.
+
+| Directory | Responsibility |
+| --- | --- |
+| `src/browse/` | Search, filters, result cards and selection |
+| `src/reading/` | Individual legend interactions and citations |
+| `src/scripts/` | Shared site shell and homepage interactions |
+| `src/lib/` | Data access, source-preserving search and clipboard helpers |
+| `src/map/` | Map coordinator, layer creation, point geometry, controls, theme and exports |
+| `src/journey/` | Journey engine, routes, rendering, media, reading timing and fullscreen |
+| `src/ml-index/` | Collection statistics, Data dashboard, classification and relationship networks |
+| `src/styles/components/` | Ordered parts of the shared polish stylesheet |
+
+`src/map/main.ts` coordinates mutable view state. Its extracted modules receive
+explicit context; live getters preserve updates to filters, mode, palette and
+selection. The CSS imports in `src/styles/polish.css` retain the original cascade
+order. Map geometry, source coordinates, record IDs, translations and journey
+selection rules remain collection-specific. Location uncertainty remains available
+in Legends, Places, Clusters, Network and Journey, and is omitted from Density.
+Exports retain original coordinates and all filtered network connections.
+
+```sh
+pnpm check       # Type-check source, excluding generated build files
+pnpm build       # Build the static website
+pnpm test        # Test the existing build and source algorithms
+pnpm test:all    # Build, then run every test
+pnpm format      # Format JS, TS and CSS
+pnpm format:check
+```
+
+Tests can inspect an isolated production build with
+`LEGENDS_BUILD_DIR=/absolute/path/to/build pnpm test`. CI checks types, builds and
+runs the complete test suite before uploading the deployment artifact. Keep
+generated JSON and editorial data changes separate from structural refactors.
