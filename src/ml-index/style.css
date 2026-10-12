@@ -223,9 +223,9 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 .ml-network-node text{fill:var(--ink);font-family:var(--sans);font-weight:500;paint-order:stroke;stroke:var(--chart-card);stroke-width:2px;stroke-linejoin:round;pointer-events:none}
 .ml-network-svg.layout-bipartite text{stroke-width:.75px}
 .ml-network-svg.labels-contextual .ml-network-node text{opacity:0}.ml-network-svg.labels-contextual .ml-network-node:hover text,.ml-network-svg.labels-contextual .ml-network-node:focus-visible text,.ml-network-svg.labels-contextual .ml-network-node.is-active text{opacity:1}
-.ml-network-edge .ml-edge-base{fill:none;stroke:color-mix(in srgb,var(--ink) 22%,transparent);--edge-opacity:.3;pointer-events:none}
+.ml-network-edge .ml-edge-base{fill:none;stroke:color-mix(in srgb,var(--thread-color) 22%,transparent);--edge-opacity:.3;pointer-events:none}
 .ml-network-edge.is-active .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 78%,var(--ink));--edge-opacity:.78}
-.ml-network-svg.has-selection .ml-network-edge:not(.is-active) .ml-edge-base{stroke:color-mix(in srgb,var(--ink) 40%,transparent);--edge-opacity:.35}
+.ml-network-svg.has-selection .ml-network-edge:not(.is-active) .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 30%,transparent);--edge-opacity:.22}
 .ml-network-svg:not(.layout-free) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 46%,transparent);--edge-opacity:.1}
 .ml-edge-flow{fill:none;stroke:color-mix(in srgb,var(--thread-color) 68%,transparent);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-width:.72px;--edge-opacity:.34;vector-effect:non-scaling-stroke;pointer-events:none}
 .ml-network-edge.is-active .ml-edge-flow{stroke:color-mix(in srgb,var(--thread-color) 90%,var(--ink));--edge-opacity:.94}
@@ -350,3 +350,10 @@ body.ml-network-presented{overflow:hidden}
 .ml-network-inspector button[data-network-action=texts] b{font-size:.72rem;font-variant-numeric:tabular-nums;font-weight:600}
 
 .ml-network-filters [data-export-stats]{margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+
+.ml-network-edge{--thread-source:var(--thread-source-light)}
+.ml-network-workspace{--network-bipartite-thread:var(--network-bipartite-thread-light)}
+:root[data-theme=dark] .ml-network-edge{--thread-source:var(--thread-source-dark)}
+:root[data-theme=dark] .ml-network-workspace{--network-bipartite-thread:var(--network-bipartite-thread-dark)}
+
+.ml-network-svg.layout-free:not(.has-selection) .ml-edge-base{--edge-opacity:.46}

@@ -104,7 +104,7 @@ export function createNetwork({lang,types,topics,change,sync}:NetworkOptions){
    const a=cameraPoint(positions.get(edge.source)!,zoom,pan),b=cameraPoint(positions.get(edge.target)!,zoom,pan),one=nodeById.get(edge.source),two=nodeById.get(edge.target);
    const path=`M${a.x},${a.y} L${b.x},${b.y}`;
    const name=`${label(one.field,one.value)} / ${label(two.field,two.value)}: ${edge.recordIds.length} ${tr().count}`;
-   return `<g style="--thread-color:var(--node-color);--wave-delay:${-((a.x+b.x)/2/900)*4.8}s" class="field-${two.field} ml-network-edge ${activeEdge(edge)?'is-active':''} ${selection&&!activeEdge(edge)?'is-muted':''}"><path class="ml-edge-base" pathLength="100" d="${path}" stroke-width="${activeEdge(edge)?Math.min(1.65,.45+Math.sqrt(edge.recordIds.length)*.32):.48}"/>${layout!=='free'||animation==='rain'?`<path class="ml-edge-flow" d="${path}" pathLength="100" style="--rain-duration:${4.4+(index%5)*.32}s;--rain-delay:${-(index%9)*.43}s"/>`: ''}<path class="ml-network-edge-hit" d="${path}" role="button" tabindex="0" data-network-edge="${index}" aria-label="${esc(name)}" aria-pressed="${activeEdge(edge)}"><title>${esc(name)}</title></path></g>`;
+   return `<g style="--thread-source-light:var(--network-${one.field}-light);--thread-source-dark:var(--network-${one.field}-dark);--thread-color:${layout==='free'?'color-mix(in srgb,color-mix(in srgb,var(--thread-source) 50%,var(--node-color)) 80%,var(--ink))':layout==='bipartite'&&palette==='troll'?'var(--network-bipartite-thread)':'var(--node-color)'};--wave-delay:${-((a.x+b.x)/2/900)*4.8}s" class="field-${two.field} ml-network-edge ${activeEdge(edge)?'is-active':''} ${selection&&!activeEdge(edge)?'is-muted':''}"><path class="ml-edge-base" pathLength="100" d="${path}" stroke-width="${activeEdge(edge)?Math.min(1.65,.45+Math.sqrt(edge.recordIds.length)*.32):.48}"/>${layout!=='free'||animation==='rain'?`<path class="ml-edge-flow" d="${path}" pathLength="100" style="--rain-duration:${4.4+(index%5)*.32}s;--rain-delay:${-(index%9)*.43}s"/>`: ''}<path class="ml-network-edge-hit" d="${path}" role="button" tabindex="0" data-network-edge="${index}" aria-label="${esc(name)}" aria-pressed="${activeEdge(edge)}"><title>${esc(name)}</title></path></g>`;
   }).join('')}</g><g class="ml-network-nodes">${graph.nodes.map((node:any,index:number)=>{
    const p=cameraPoint(positions.get(node.id)!,zoom,pan),name=label(node.field,node.value),related=activeNode(node)||relatedIds.has(node.id);
    const radius=nodeRadius(node,layout)*nodeSize;
@@ -268,8 +268,17 @@ export function createNetwork({lang,types,topics,change,sync}:NetworkOptions){
   for(const [field,value] of fieldColors){colourProbe.style.color=value;fieldColors.set(field,getComputedStyle(colourProbe).color);}colourProbe.remove();
   let effectElapsed=0;
   const echo=echoDistances(graph,graph.nodes.filter((n:any)=>activeNode(n)).map((n:any)=>n.id).concat(selection?.kind==='edge'?graph.edges.filter((e:any)=>activeEdge(e)).flatMap((e:any)=>[e.source,e.target]):[]));
-  const edges=graph.edges.map((e:any)=>({e,a:activeEdge(e),color:fieldColors.get(nodeById.get(e.target).field)||'gray',width:activeEdge(e)?Math.min(1.65,.45+Math.sqrt(e.recordIds.length)*.32):.48,phase:Math.floor(((cameraPoint(positions.get(e.source)!,zoom,pan).x+cameraPoint(positions.get(e.target)!,zoom,pan).x)/2/900)*12)/12,echoDelay:Math.min(echo.get(e.source)??Infinity,echo.get(e.target)??Infinity,6)*140,hasEcho:echo.has(e.source)||echo.has(e.target)}));
-  colourProbe.style.color='var(--ink)';svg.parentElement!.append(colourProbe);const neutralColor=getComputedStyle(colourProbe).color;colourProbe.remove();
+  colourProbe.style.color='var(--ink)';svg.parentElement!.append(colourProbe);const neutralColor=getComputedStyle(colourProbe).color;
+  const threadColours=new Map<string,string>();
+  const threadColour=(edge:any)=>{
+   const from=nodeById.get(edge.source).field,to=nodeById.get(edge.target).field,key=layout==='free'?[from,to].sort().join(':'):from+':'+to;
+   if(threadColours.has(key))return threadColours.get(key)!;
+   const target=fieldColors.get(to)||'gray',source=fieldColors.get(from)||'gray';
+   colourProbe.style.color=layout==='free'?`color-mix(in srgb,color-mix(in srgb,${source} 50%,${target}) 80%,${neutralColor})`:layout==='bipartite'&&palette==='troll'?'var(--network-bipartite-thread)':target;
+   const color=getComputedStyle(colourProbe).color;threadColours.set(key,color);return color;
+  };
+  const edges=graph.edges.map((e:any)=>({e,a:activeEdge(e),color:threadColour(e),width:activeEdge(e)?Math.min(1.65,.45+Math.sqrt(e.recordIds.length)*.32):.48,phase:Math.floor(((cameraPoint(positions.get(e.source)!,zoom,pan).x+cameraPoint(positions.get(e.target)!,zoom,pan).x)/2/900)*12)/12,echoDelay:Math.min(echo.get(e.source)??Infinity,echo.get(e.target)??Infinity,6)*140,hasEcho:echo.has(e.source)||echo.has(e.target)}));
+  colourProbe.remove();
   const edgeGroups=new Map<string,typeof edges>();for(const edge of edges){const key=edge.color+':'+edge.a+':'+edge.width+(animation==='wave'?':'+edge.phase:animation==='echo'?':'+edge.echoDelay+':'+edge.hasEcho:'');const group=edgeGroups.get(key)||[];group.push(edge);edgeGroups.set(key,group);}
   const draw=()=>{
    displayedPositions=new Map();screenPositions=new Map();
@@ -280,7 +289,7 @@ export function createNetwork({lang,types,topics,change,sync}:NetworkOptions){
     for(const group of edgeGroups.values()){const {a,color,width,phase,echoDelay,hasEcho}=group[0];
      const wavePhase=((effectElapsed/4800+phase)%1+1)%1;
      const pulse=animation==='wave'?Math.max(0,1-Math.abs(wavePhase-.08)/.1):animation==='echo'&&hasEcho?Math.max(0,Math.sin(Math.PI*Math.min(1,Math.max(0,(effectElapsed-echoDelay)/1700)))):0;
-     const baseAlpha=a?.78:selection?.14:layout==='free'?.066:.046;ctx.globalAlpha=Math.min(1,baseAlpha*(1+pulse*2.2)*threadBrightness);ctx.strokeStyle=a||layout!=='free'?color:neutralColor;ctx.lineWidth=width;ctx.beginPath();
+     const baseAlpha=a?.78:selection?.04:layout==='free'?.1:.046;ctx.globalAlpha=Math.min(1,baseAlpha*(1+pulse*2.2)*threadBrightness);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.beginPath();
      for(const {e} of group){const one=screenPositions.get(e.source)!,two=screenPositions.get(e.target)!;ctx.moveTo(one.x,one.y);ctx.lineTo(two.x,two.y);}ctx.stroke();
      if(layout!=='free'||animation==='rain'){ctx.globalAlpha=Math.min(1,(a?.94:animation==='rain'?.72:.23)*(1+pulse*1.4)*threadBrightness);ctx.strokeStyle=color;ctx.lineWidth=a?Math.min(1.9,width+.25):animation==='rain'?.9:.72;ctx.setLineDash(animation==='rain'?[1.15,5.25]:[]);ctx.lineDashOffset=animation==='rain'?-clock/50:0;ctx.stroke();ctx.setLineDash([]);}
     }ctx.restore();

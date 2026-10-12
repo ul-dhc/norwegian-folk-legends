@@ -8,6 +8,7 @@ export const networkPalettes = [
     dark: ['#309c72', '#548ac5', '#d46d50', '#a1ac4c', '#ac70ae', '#d8a52f'] },
   // Embers and stone: predominantly warm, with a smoky neutral.
   { id: 'troll', name: 'Troll', source: 'Norske sagn · embers and stone',
+    bipartiteThread: { light: '#9c6150', dark: '#c18a76' },
     light: ['#cc4824', '#7b293e', '#bd8215', '#665a51', '#a14f1b', '#d16a70'],
     dark: ['#f06a35', '#bf526c', '#edb343', '#a8998a', '#d38b48', '#ed9698'] },
   // Mist and woodland flowers: soft, muted colours.
@@ -21,5 +22,7 @@ export const networkPalettes = [
 ];
 export function paletteVariables(id) {
   const palette = networkPalettes.find(item => item.id === id) || networkPalettes[0];
-  return paletteFields.flatMap((field, index) => ['light', 'dark'].map(theme => `--network-${field}-${theme}:${palette[theme][index]}`)).join(';');
+  const variables = paletteFields.flatMap((field, index) => ['light', 'dark'].map(theme => `--network-${field}-${theme}:${palette[theme][index]}`));
+  if (palette.bipartiteThread) for (const theme of ['light', 'dark']) variables.push(`--network-bipartite-thread-${theme}:${palette.bipartiteThread[theme]}`);
+  return variables.join(';');
 }
