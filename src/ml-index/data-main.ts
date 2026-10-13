@@ -8,8 +8,10 @@ let selectedTopic:Topic|undefined;
 let selectedType:Type|undefined;
 const codeKey=(type:Type)=>type.code.replace(/\s/g,'');
 const dashboard=createDashboard({types,topics,base,lang,scopeChange:(topic,type)=>{selectedTopic=topic;selectedType=type;sync(true);render();},stateChange:()=>sync(true)});
-function read(){
+async function read(){
  const params=new URLSearchParams(location.search);
+ if(location.hash==='#network')params.set('view','network');else if(location.hash==='#overview')params.delete('view');
+ if(params.get('view')==='network')await dashboard.loadNetwork();
  selectedType=types.find(type=>codeKey(type).toLowerCase()===(params.get('type')||'').replace(/\s/g,'').toLowerCase());
  selectedTopic=topics.find(topic=>topic.id===(selectedType?.topic||params.get('topic')));
  dashboard.read(params);
@@ -19,9 +21,20 @@ function sync(push=false){
  dashboard.write(params);
  if(selectedTopic)params.set('topic',selectedTopic.id);
  if(selectedType)params.set('type',codeKey(selectedType));
- history[push?'pushState':'replaceState']({},'',location.pathname+(params.size?'?'+params:''));
+ history[push?'pushState':'replaceState']({},'',location.pathname+(params.size?'?'+params:'')+'#'+dashboard.view);
+ updateTabLinks(params);
 }
 function render(){dashboard.render({topic:selectedTopic,type:selectedType});}
 window.addEventListener('ui-language-change',render);
-window.addEventListener('popstate',()=>{read();render();});
-read();render();
+function updateTabLinks(params:URLSearchParams){
+ document.querySelectorAll<HTMLAnchorElement>('[data-data-view]').forEach(link=>{const next=new URLSearchParams(params);if(link.dataset.dataView==='network')next.set('view','network');else next.delete('view');link.href=location.pathname+(next.size?'?'+next:'')+'#'+link.dataset.dataView;});
+}
+const restore=async()=>{await read();render();updateTabLinks(new URLSearchParams(location.search));};
+window.addEventListener('popstate',restore);
+window.addEventListener('hashchange',restore);
+document.querySelector('.data-overview-tabs')?.addEventListener('click',async event=>{
+ const link=(event.target as Element).closest<HTMLAnchorElement>('[data-data-view]');
+ if(!link||(event as MouseEvent).metaKey||(event as MouseEvent).ctrlKey||(event as MouseEvent).shiftKey||(event as MouseEvent).altKey)return;
+ event.preventDefault();await dashboard.setView(link.dataset.dataView!);
+});
+void restore();

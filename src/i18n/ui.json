@@ -2290,5 +2290,9 @@
   "map.uncertaintyClusterKey": {
     "en": "Dashed clusters include one or more uncertain place references. Individual legend circles stay solid. Open the place profile to see the specific issue.",
     "no": "Stiplede klynger inneholder én eller flere usikre stedsreferanser. Individuelle sagnsirkler forblir heltrukne. Åpne stedsprofilen for å se den konkrete usikkerheten."
+  },
+  "about.dataNetworkControls": {
+    "no": "Nodestørrelse kan være lik for alle eller følge antallet forskjellige forbindelser. Forbindelser til skjulte metadatakategorier teller også; størrelsene sammenlignes innenfor hver kategori i utvalget. Skaler noder og tekst uavhengig av dette. Velg flere noder i Innstillinger og kombiner dem som minst én eller alle valgte noder. Filtrene har søk. Fullskjerm viser bare visualiseringen; Escape går tilbake til kontrollene.",
+    "en": "Nodes can have equal sizes or follow the number of distinct connections. Connections to hidden metadata categories also count; sizes are compared within each category of the selection. Scale nodes and text independently. In Settings, enable multiple-node selection and combine any or all selected nodes. Filter menus support search. Fullscreen shows only the visualization; Escape returns to the controls."
   }
 }

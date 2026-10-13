@@ -1,3 +1,4 @@
+import './select-menu.css';
 // Keep the native select as the form/state source; render its menu with site tokens.
 let opened: { select: HTMLSelectElement; trigger: HTMLButtonElement; menu: HTMLElement; active: number; input?: HTMLInputElement } | null = null;
 let serial = 0;

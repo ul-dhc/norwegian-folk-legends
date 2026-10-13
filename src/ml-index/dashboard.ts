@@ -1,5 +1,6 @@
 import { enhanceSelects } from './select-menu';
-import {createNetwork} from './network';
+import type {createNetwork} from './network';
+import {copy as networkCopy,settingsCopy} from './network-copy';
 import {dashboardCopy} from './dashboard-copy';
 import {flattenTypes, selectRecords, countsBy, selectionLink, UNKNOWN} from './statistics.js';
 import type {types as sourceTypes, topics as sourceTopics} from './data';
@@ -17,8 +18,22 @@ export function createDashboard(options: Options) {
  const root = document.getElementById('ml-dashboard-content')!;
  const networkEnabled=!!root.closest('.ml-data-page');
  let view='overview';
- const network=createNetwork({types,topics,lang,sync:options.stateChange,change:()=>{previewSize=12;render();options.stateChange();}});
- network.attach(root);
+ let network:ReturnType<typeof createNetwork>={copy:()=>({...networkCopy[lang()],...settingsCopy[lang()]}),label:(_field:string,value:string)=>value,read:()=>{},write:()=>{},reset:()=>{},selectedRows:(rows:any[])=>rows,handleClick:()=>false,handleSetting:()=>false,attach:()=>{},mount:()=>{},render:()=>'',setStyles:()=>{},presentation:false,graphChanged:false,suppressClick:false};
+ let networkLoading:Promise<void>|undefined;
+ async function loadNetwork(){
+  if(!networkLoading)networkLoading=import('./network').then(({createNetwork})=>{
+   network=createNetwork({types,topics,lang,sync:options.stateChange,change:()=>{previewSize=12;render();options.stateChange();}});
+   network.attach(root);
+  }).catch(error=>{networkLoading=undefined;throw error;});
+  await networkLoading;
+ }
+ async function setView(next:string){
+  if(next!=='overview'&&next!=='network')return;
+  if(next==='network')await loadNetwork();
+  view=next;if(view==='network')delete filters.decade;
+  network.reset();render();options.stateChange();
+ }
+
  const tr = (key:keyof typeof dashboardCopy.en) => dashboardCopy[lang()][key];
  const esc = (value:unknown) => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
  const name = (type:Type) => lang()==='en'?(type.en||type.no):type.no;
@@ -135,7 +150,7 @@ export function createDashboard(options: Options) {
   if(scope.topic)choices.push({field:'topic',value:scope.topic.id,label:scope.topic[lang()]});
   if(scope.type)choices.push({field:'type',value:key(scope.type),label:scope.type.code});
   for(const [field,value] of Object.entries(filters))choices.push({field,value:value!,label:label(field as Filter,value!)});
-  return `<div class="ml-dashboard-filters" aria-label="${tr('active')}">${choices.length?choices.map(choice=>`<button type="button" data-remove-filter="${choice.field}" aria-label="${esc(tr('remove')+': '+choice.label)}">${esc(choice.label)}<i data-lucide="x"></i></button>`).join(''):''}${choices.length?`<button type="button" data-reset-stats class="ml-reset">${tr('reset')}<i data-lucide="rotate-ccw"></i></button>`:''}</div>`;
+  return `<div class="ml-dashboard-filters" aria-label="${tr('active')}">${choices.length?choices.map(choice=>`<button type="button" data-filter-category="${choice.field}" data-remove-filter="${choice.field}" aria-label="${esc(tr('remove')+': '+choice.label)}">${esc(choice.label)}<i data-lucide="x"></i></button>`).join(''):''}${choices.length?`<button type="button" data-reset-stats class="ml-reset">${tr('reset')}<i data-lucide="rotate-ccw"></i></button>`:''}</div>`;
  }
  function previewText(row:Row) {
   const no=row.excerptNo||'',en=row.excerptEn||'';
@@ -162,18 +177,22 @@ export function createDashboard(options: Options) {
   if(scope.topic!==nextScope.topic)typeQuery='';
   if(scope.topic!==nextScope.topic||scope.type!==nextScope.type)previewSize=12;
   scope=nextScope;
+  network.setStyles(view==='network');
   const rows=cohort();
   const networkHtml=view==='network'?network.render(rows,networkFilters(),panelOpen,`<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button>`):'';
   const selectedRows=resultRows();
   const periods=[...new Set(all.filter(row=>row.year).map(row=>String(Math.floor(Number(row.year)/10)*10)))].sort();
-  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen&&!networkEnabled?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading">${networkEnabled?`<div class="ml-data-view-switch" role="group" aria-label="${network.copy().network}">${['overview','network'].map(mode=>`<button type="button" data-data-view="${mode}" aria-pressed="${view===mode}"><i data-lucide="${mode==='overview'?'chart-no-axes-column':'network'}"></i>${mode==='overview'?network.copy().overview:network.copy().network}</button>`).join('')}</div>`:''}<div class="ml-research-intro"><h2 id="ml-dashboard-title" class="${networkEnabled?'sr-only':''}" tabindex="-1">${view==='network'?network.copy().title:tr('title')}</h2>${networkEnabled?'':`<p>${tr('hint')}</p>`}</div>${view==='network'?'':`<div class="ml-research-actions">${view==='network'?'':`<label class="ml-period-control"><span class="sr-only">${tr('period')}</span><select id="ml-period"><option value="">${tr('allYears')}</option>${periods.map(period=>`<option value="${period}" ${filters.decade===period?'selected':''}>${period}–${Number(period)+9}</option>`).join('')}<option value="undated" ${filters.decade==='undated'?'selected':''}>${tr('undated')}</option></select></label>`}<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" title="${tr('share')}"><i data-lucide="link"></i></button>${view==='network'?'':`<button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button>`}</div>`}</header><p id="ml-stats-status" role="status"></p>${chips()}${view==='network'?networkHtml:`${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${typesChart()}${namedChart('county',tr('counties'))}${datesChart()}${namedChart('collector',tr('collectors'))}${translationChart()}</div>`}${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
+  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen&&!networkEnabled?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading"><div class="ml-research-intro"><h2 id="ml-dashboard-title" class="${networkEnabled?'sr-only':''}" tabindex="-1">${view==='network'?network.copy().title:tr('title')}</h2><p>${view==='network'?network.copy().hint:tr('hint')}</p></div>${view==='network'?'':`<div class="ml-research-actions">${view==='network'?'':`<label class="ml-period-control"><span class="sr-only">${tr('period')}</span><select id="ml-period"><option value="">${tr('allYears')}</option>${periods.map(period=>`<option value="${period}" ${filters.decade===period?'selected':''}>${period}–${Number(period)+9}</option>`).join('')}<option value="undated" ${filters.decade==='undated'?'selected':''}>${tr('undated')}</option></select></label>`}<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" title="${tr('share')}"><i data-lucide="link"></i></button>${view==='network'?'':`<button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button>`}</div>`}</header><p id="ml-stats-status" role="status"></p>${view==='network'?'':chips()}${view==='network'?networkHtml:`${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${typesChart()}${namedChart('county',tr('counties'))}${datesChart()}${namedChart('collector',tr('collectors'))}${translationChart()}</div>`}${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
   if(view==='network'){const panel=root.querySelector('.ml-network-texts');if(panel)root.querySelector('.ml-network-surface')?.append(panel);}
+  if(view==='network')root.querySelector('.ml-network-workspace')?.insertAdjacentHTML('afterbegin',chips());
+  document.querySelectorAll<HTMLAnchorElement>('[data-data-view]').forEach(tab=>{tab.setAttribute('aria-current',tab.dataset.dataView===view?'page':'false');});
   network.mount(root);
   enhanceSelects(root);
   const stage=root.querySelector('.ml-network-stage');if(stage&&!network.graphChanged){stage.scrollTop=stageScroll.top;stage.scrollLeft=stageScroll.left;}
   const modal=!networkEnabled&&panelOpen&&document.getElementById('ml-dashboard')?.hidden===false&&matchMedia('(max-width:950px)').matches;
   document.querySelectorAll<HTMLElement>('.ml-dashboard-canvas,.site-header,.ml-hero,.ml-view-switch,.ml-method,.site-footer').forEach(element=>element.inert=modal);
-  document.querySelectorAll<HTMLElement>('.ml-research-heading,.ml-data-view-switch,.ml-dashboard-filters,.site-header,.ml-hero,.site-footer').forEach(element=>element.inert=modal||network.presentation);
+  document.querySelectorAll<HTMLElement>('.ml-research-heading,.data-overview-tabs,.data-help-footer,.ml-dashboard-filters,.site-header,.ml-hero,.site-footer,.skip-link').forEach(element=>element.inert=modal||network.presentation);
+  document.querySelectorAll<HTMLElement>('.ml-network-filters,.ml-network-filter-scrim,.ml-network-toolbar,.ml-network-coverage,.ml-network-caption,.ml-network-inspector').forEach(element=>element.inert=network.presentation);
   document.body.classList.toggle('ml-network-presented',network.presentation);
   document.body.classList.toggle('ml-panel-visible',modal);
   document.documentElement.classList.toggle('ml-modal-open',modal);
@@ -227,7 +246,7 @@ export function createDashboard(options: Options) {
   if(target.closest('[data-network-action="fullscreen"]'))panelOpen=false;
   if(network.handleClick(root,target,event))return;
   const button=target.closest<HTMLElement>('button');if(!button)return;
-  if(button.dataset.dataView){view=button.dataset.dataView;if(view==='network')delete filters.decade;network.reset();render();options.stateChange();root.querySelector<HTMLElement>(`[data-data-view="${view}"]`)?.focus({preventScroll:true});return;}
+  if(button.dataset.dataView){await setView(button.dataset.dataView);return;}
   if(button.dataset.networkAction==='texts'){panelOpen=!panelOpen;previewSize=12;render();options.stateChange();if(panelOpen){const panel=root.querySelector<HTMLElement>('.ml-network-texts');panel?.scrollIntoView({block:'start',behavior:'instant'});panel?.querySelector<HTMLElement>('[data-close-texts]')?.focus({preventScroll:true});}else root.querySelector<HTMLElement>('[data-network-action="texts"]')?.focus({preventScroll:true});return;}
   if(button.dataset.sort){const open=button.getAttribute('aria-expanded')==='true';if(open)closeSortMenus();else openSortMenu(button);return;}
   if(button.dataset.sortOption){const field=button.dataset.sortOption;sorts[field]=button.dataset.sortValue as Sort;render();options.stateChange();root.querySelector<HTMLElement>(`[data-sort="${field}"]`)?.focus({preventScroll:true});return;}
@@ -271,5 +290,5 @@ export function createDashboard(options: Options) {
   if(event.key==='Escape'&&panelOpen&&document.getElementById('ml-dashboard')?.hidden===false){panelOpen=false;render();options.stateChange();root.querySelector<HTMLElement>(view==='network'?'[data-network-action="texts"]':'[data-toggle-texts]')?.focus({preventScroll:true});}
  });
  matchMedia('(max-width:950px)').addEventListener('change',()=>render());
- return {read,write,render};
+ return {read,write,render,loadNetwork,setView,get view(){return view;}};
 }

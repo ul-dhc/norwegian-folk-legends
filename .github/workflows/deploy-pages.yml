@@ -38,6 +38,9 @@ jobs:
       - name: Build website
         run: pnpm build
 
+      - name: Verify collection and explorers
+        run: pnpm test
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
