@@ -16,7 +16,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
 <BaseLayout title="Kart over sagn" active="map">
   <article class="map-page" data-map-page data-base={base} data-undated-count={mapUndatedCount} data-undated-percent={mapUndatedPercent}>
     <div class="map-workspace browser-layout browser">
-    <aside class="filter-sidebar map-filters" data-map-filters>
+    <aside class="platform-filter-panel filter-sidebar map-filters" data-map-filters>
       <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="settings-2"></i><span data-i18n="map.filters">Filtre</span></span><i data-lucide="chevron-down"></i></button>
       <form id="map-filters">
         <div class="filter-title"><h2 data-i18n="map.filters">Filtre</h2><a class="context-help context-help-icon"  href={`${base}about/#map-filters`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.filtersHelp">Om filtrene</span></a><button class="text-button clear-filters" type="button" data-map-filter-clear hidden><i data-lucide="rotate-ccw"></i><span data-i18n="map.clearFiltersLong">Nullstill filtre</span></button></div>
