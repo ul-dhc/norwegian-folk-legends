@@ -74,7 +74,7 @@ place totals, missing-coordinate handling and filter metadata.
 
 ## Data workspace and metadata network
 
-`/data/` provides Overview and Network tabs; existing `?view=network` links remain
+`/data/` opens Network by default, followed by the Overview tab; existing `?view=network` links remain
 valid and `#overview` / `#network` identify the active tab. Shared topic, type,
 county, collector, narrator and translation filters are preserved across views.
 Network code and styles load when Network is opened; its styles are removed when

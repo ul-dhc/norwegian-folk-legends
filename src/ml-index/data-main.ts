@@ -10,8 +10,8 @@ const codeKey=(type:Type)=>type.code.replace(/\s/g,'');
 const dashboard=createDashboard({types,topics,base,lang,scopeChange:(topic,type)=>{selectedTopic=topic;selectedType=type;sync(true);render();},stateChange:()=>sync(true)});
 async function read(){
  const params=new URLSearchParams(location.search);
- if(location.hash==='#network')params.set('view','network');else if(location.hash==='#overview')params.delete('view');
- if(params.get('view')==='network')await dashboard.loadNetwork();
+ if(location.hash==='#network')params.set('view','network');else if(location.hash==='#overview')params.set('view','overview');
+ if(params.get('view')!=='overview')await dashboard.loadNetwork();
  selectedType=types.find(type=>codeKey(type).toLowerCase()===(params.get('type')||'').replace(/\s/g,'').toLowerCase());
  selectedTopic=topics.find(topic=>topic.id===(selectedType?.topic||params.get('topic')));
  dashboard.read(params);
@@ -27,7 +27,7 @@ function sync(push=false){
 function render(){dashboard.render({topic:selectedTopic,type:selectedType});}
 window.addEventListener('ui-language-change',render);
 function updateTabLinks(params:URLSearchParams){
- document.querySelectorAll<HTMLAnchorElement>('[data-data-view]').forEach(link=>{const next=new URLSearchParams(params);if(link.dataset.dataView==='network')next.set('view','network');else next.delete('view');link.href=location.pathname+(next.size?'?'+next:'')+'#'+link.dataset.dataView;});
+ document.querySelectorAll<HTMLAnchorElement>('[data-data-view]').forEach(link=>{const next=new URLSearchParams(params);next.set('view',link.dataset.dataView!);link.href=location.pathname+(next.size?'?'+next:'')+'#'+link.dataset.dataView;});
 }
 const restore=async()=>{await read();render();updateTabLinks(new URLSearchParams(location.search));};
 window.addEventListener('popstate',restore);

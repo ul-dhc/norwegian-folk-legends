@@ -17,7 +17,7 @@ export function createDashboard(options: Options) {
  const all = flattenTypes(types) as Row[];
  const root = document.getElementById('ml-dashboard-content')!;
  const networkEnabled=!!root.closest('.ml-data-page');
- let view='overview';
+ let view=networkEnabled?'network':'overview';
  let network:ReturnType<typeof createNetwork>={copy:()=>({...networkCopy[lang()],...settingsCopy[lang()]}),label:(_field:string,value:string)=>value,read:()=>{},write:()=>{},reset:()=>{},selectedRows:(rows:any[])=>rows,handleClick:()=>false,handleSetting:()=>false,attach:()=>{},mount:()=>{},render:()=>'',setStyles:()=>{},presentation:false,graphChanged:false,suppressClick:false};
  let networkLoading:Promise<void>|undefined;
  async function loadNetwork(){
@@ -50,7 +50,7 @@ export function createDashboard(options: Options) {
  const cohort = (skip='') => selectRecords(all,{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
-  view=networkEnabled&&params.get('view')==='network'?'network':'overview';
+  view=networkEnabled&&params.get('view')!=='overview'?'network':'overview';
   network.read(params);
   filters = {};
   sorts = {};
@@ -67,7 +67,8 @@ export function createDashboard(options: Options) {
   typeQuery=''; previewSize=12;
  }
  function write(params:URLSearchParams) {
-  if(networkEnabled&&view==='network'){params.set('view','network');network.write(params);}
+  if(networkEnabled)params.set('view',view);
+  if(networkEnabled&&view==='network')network.write(params);
   for (const [field,value] of Object.entries(filters)) if(value)params.set(field,value);
   if(panelOpen)params.set('texts','1');
   for(const [field,value] of Object.entries(sorts))if(value!=='count-desc')params.set(`sort_${field}`,value);
