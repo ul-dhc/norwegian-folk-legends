@@ -19,6 +19,10 @@ import {creditedBridge,journeySummary,continuousBridge,roadBridge} from './credi
 import {createJourneyMap} from './map.js';
 import {insightCandidates,chooseInsight} from './insights.js';
 const root=document.querySelector('#legend-journey'),el=id=>document.getElementById(id);
+const siteHeader=document.querySelector('.site-header');
+const fitJourneyViewport=()=>root.style.setProperty('--journey-header-height',`${siteHeader?.getBoundingClientRect().height||0}px`);
+fitJourneyViewport();
+if(siteHeader)new ResizeObserver(fitJourneyViewport).observe(siteHeader);
 const language=()=>document.documentElement.dataset.uiLang==='en'?'en':'no',t=()=>cinema[language()];
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const audio=el('journey-audio');
