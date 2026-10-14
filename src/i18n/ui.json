@@ -944,8 +944,12 @@
     "en": "The original collection"
   },
   "about.source": {
-    "no": "Plattformen bygger på den digitale samlingen «Eventyr og sagn», opprettet av Kyrre Kverndokk og tilgjengeliggjort av Norsk Folkeminnesamling ved Universitetet i Oslo (UiO).",
-    "en": "The platform builds on the “Eventyr og sagn” digital collection, created by Kyrre Kverndokk and made available by the Norwegian Folklore Archives at the University of Oslo (UiO)."
+    "no": "Plattformen bygger på den digitale samlingen «Eventyr og sagn», opprettet og tilgjengeliggjort av Norsk Folkeminnesamling ved Universitetet i Oslo (UiO).",
+    "en": "The platform builds on the “Eventyr og sagn” digital collection, created and made available by the Norwegian Folklore Archives at the University of Oslo (UiO)."
+  },
+  "about.sinNumbers": {
+    "no": "SIN-numrene er vilkårlige digitale identifikatorer som ble tildelt tekstfilene da den opprinnelige samlingen ble digitalisert. De er ikke arkivsignaturer og har ingen betydning for fortellingenes innhold. Vi beholder dem i datasettet for å kunne koble opptegnelsene til den opprinnelige databasen, men viser dem ikke i reisene.",
+    "en": "SIN numbers are arbitrary digital identifiers assigned to text files when the original collection was digitised. They are not archival reference numbers and have no meaning for the stories themselves. We retain them in the dataset to link records to the original database, but do not display them in Journeys."
   },
   "about.sourceLink": {
     "no": "Besøk Eventyr og sagn ved UiO",
