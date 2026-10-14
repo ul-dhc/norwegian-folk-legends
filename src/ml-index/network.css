@@ -112,14 +112,18 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 .ml-data-page .ml-collector-chart .ml-facet-row:focus-visible{outline:2px solid var(--chart-mint);outline-offset:2px;border-color:var(--chart-mint)}
 @media(hover:hover) and (pointer:fine){.ml-data-page .ml-collector-chart .ml-facet-row:hover:not(:disabled){background:var(--surface);border-color:var(--chart-mint);color:var(--ink)}.ml-data-page .ml-collector-chart .ml-facet-row:hover:not(:disabled) :is(b,small){color:var(--ink)}.ml-data-page .ml-collector-chart .ml-facet-row:hover:not(:disabled) .ml-facet-track>span{background:color-mix(in srgb,var(--chart-mint) 36%,var(--chart-card))}}
 
-.ml-palette-picker{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.ml-network-settings .ml-palette-picker button{display:grid;grid-template-columns:1fr 14px;gap:7px;padding:10px!important;background:transparent;color:var(--ink);border:1px solid var(--line);font-size:11px;text-align:left}
-/* One painted stroke previews all six palette colours. */
-.ml-palette-swatches{grid-column:1/-1;display:block;width:100%;height:24px;background:var(--palette-light);mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat;-webkit-mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat}
+/* Open pigment studies: colour and the selected name carry the hierarchy. */
+.ml-palette-picker{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px}
+.ml-network-settings .ml-palette-picker button{display:grid;grid-template-columns:1fr 14px;gap:6px;padding:6px 4px!important;min-width:0;background:transparent!important;color:var(--muted);border:0!important;border-radius:0;box-shadow:none!important;font-size:12px;text-align:left}
+.ml-palette-swatches{grid-column:1/-1;display:block;width:100%;height:44px;background:var(--palette-light);mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat;-webkit-mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat;transform:rotate(-4deg)}
+.ml-palette-picker button:nth-child(2n) .ml-palette-swatches{transform:rotate(3deg) scaleX(.96)}
+.ml-palette-picker button:nth-child(3n) .ml-palette-swatches{transform:rotate(-2deg) scaleX(.93)}
 :root[data-theme=dark] .ml-palette-swatches{background:var(--palette-dark)}
 .ml-palette-picker button>svg{width:13px!important;height:13px!important;visibility:hidden;color:var(--blue)}
 .ml-palette-picker button[aria-pressed=true]>svg{visibility:visible}
-.ml-network-settings .ml-palette-picker button[aria-pressed=true]{background:var(--control-selected-bg);color:var(--ink);border-color:var(--control-selected-line)}
+.ml-network-settings .ml-palette-picker button[aria-pressed=true]{color:var(--ink);font-weight:600}
+.ml-network-settings .ml-palette-picker button:hover{color:var(--ink)}
+.ml-network-settings .ml-palette-picker button:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:5px}
 
 .ml-network-edges :is(.ml-edge-base,.ml-edge-flow){opacity:clamp(0,calc(var(--edge-opacity,1) * var(--thread-brightness,1)),1)}
 
