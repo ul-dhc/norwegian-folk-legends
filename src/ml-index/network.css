@@ -114,9 +114,9 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 
 .ml-palette-picker{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .ml-network-settings .ml-palette-picker button{display:grid;grid-template-columns:1fr 14px;gap:7px;padding:10px!important;background:transparent;color:var(--ink);border:1px solid var(--line);font-size:11px;text-align:left}
-.ml-palette-swatches{grid-column:1/-1;display:flex;gap:4px}
-.ml-palette-swatches b{width:13px;height:13px;border-radius:50%;background:var(--swatch-light)}
-:root[data-theme=dark] .ml-palette-swatches b{background:var(--swatch-dark)}
+/* One painted stroke previews all six palette colours. */
+.ml-palette-swatches{grid-column:1/-1;display:block;width:100%;height:24px;background:var(--palette-light);mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat;-webkit-mask:url('../assets/palette-brush.svg') center/100% 100% no-repeat}
+:root[data-theme=dark] .ml-palette-swatches{background:var(--palette-dark)}
 .ml-palette-picker button>svg{width:13px!important;height:13px!important;visibility:hidden;color:var(--blue)}
 .ml-palette-picker button[aria-pressed=true]>svg{visibility:visible}
 .ml-network-settings .ml-palette-picker button[aria-pressed=true]{background:var(--control-selected-bg);color:var(--ink);border-color:var(--control-selected-line)}
