@@ -1,4 +1,5 @@
 import { copy } from './copy';
+import { mapLink } from './map-link.js';
 import type { types as collection, topics as topicData } from './data';
 
 type Type = (typeof collection)[number];
@@ -80,8 +81,8 @@ function renderContents() {
       const total = inTopic.reduce((n, type) => n + type.records.length, 0);
       return `<details class="ml-topic-section" data-toc-topic="${topic.id}" ${query || openTopics.has(topic.id) ? 'open' : ''}>
    <summary><i data-lucide="chevron-right"></i><span>${esc(topic[lang()])}</span><small>ML ${topic.min}–${topic.max}</small><b>${total} ${t('legends')}</b></summary>
-   <div class="ml-toc-body"><div class="ml-topic-actions"><span>${inTopic.length} ${t('types')} · ${total} ${t('legends')}</span><a class="icon-link" href="${explorerUrl(inTopic)}">${t('exploreTopic')}<i data-lucide="arrow-right"></i></a></div>
-    <ul>${matches.map((type) => `<li class="${highlightedType === type ? 'is-highlighted' : ''}" data-toc-type="${codeKey(type)}"><span class="ml-code">${type.code}</span><a class="ml-toc-title" href="${explorerUrl([type])}">${esc(title(type))}</a><a class="ml-toc-open icon-link" href="${explorerUrl([type])}" aria-label="${esc(type.code + ': ' + t('exploreType') + ' (' + type.records.length + ')')}"><span>${type.records.length} ${t('legends')}</span><i data-lucide="arrow-right"></i></a></li>`).join('')}</ul>
+   <div class="ml-toc-body"><div class="ml-topic-actions"><span>${inTopic.length} ${t('types')} · ${total} ${t('legends')}</span><a class="icon-link" href="${explorerUrl(inTopic)}">${t('exploreTopic')}<i data-lucide="arrow-right"></i></a><a class="icon-link" href="${esc(mapLink(base, inTopic))}" aria-label="${esc(topic[lang()] + ': ' + t('openMap'))}"><i data-lucide="map-pin"></i>${t('openMap')}</a></div>
+    <ul>${matches.map((type) => `<li class="${highlightedType === type ? 'is-highlighted' : ''}" data-toc-type="${codeKey(type)}"><span class="ml-code">${type.code}</span><a class="ml-toc-title" href="${explorerUrl([type])}">${esc(title(type))}</a><div class="ml-type-actions"><a class="ml-toc-open icon-link" href="${explorerUrl([type])}" aria-label="${esc(type.code + ': ' + t('exploreType') + ' (' + type.records.length + ')')}"><span>${type.records.length} ${t('legends')}</span><i data-lucide="arrow-right"></i></a><a class="icon-link ml-toc-map" href="${esc(mapLink(base, [type]))}" aria-label="${esc(type.code + ': ' + t('openMap'))}"><i data-lucide="map-pin"></i>${t('openMap')}</a></div></li>`).join('')}</ul>
    </div></details>`;
     })
     .join('');

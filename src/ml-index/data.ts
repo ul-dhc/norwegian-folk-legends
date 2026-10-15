@@ -57,6 +57,7 @@ export const types = mlCategories
       }));
     return {
       id: category.id,
+      mapTheme: [category.code, category.title].filter(Boolean).join(' · '),
       code: category.code.toUpperCase().replace('ML', 'ML '),
       no: category.title || category.code,
       en: (labels as Record<string, string>)[category.code.toLowerCase()] || '',

@@ -93,3 +93,34 @@ test('facet alternatives omit only their own constraint and exact explorer hando
   );
   assert.equal(selectRecords(records, scope, { county: 'missing-county' }).length, 0);
 });
+
+const { mapLink } = await import('../src/ml-index/map-link.js');
+const mapHtml = read('build/map/index.html');
+const mapPayload = JSON.parse(mapHtml.match(/<script[^>]*id="corpus-map-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
+const mapped = mapPayload.legends.features.map(feature => feature.properties);
+const unlocated = mapPayload.unmappedLegends;
+const assertMapSelection = (types) => {
+  const url = new URL(mapLink('/norwegian-folk-legends/', types), 'https://example.org');
+  const themes = new Set(url.searchParams.get('theme').split('|'));
+  const selected = [...mapped, ...unlocated].filter(record => themes.has(record.themeNo));
+  assert.deepEqual(selected.map(record => record.id).sort(), types.flatMap(type => type.records.map(record => record.id)).sort());
+  assert.equal(url.pathname, '/norwegian-folk-legends/map/');
+  return selected;
+};
+test('map links retain exact membership for every ML type and topic, including unlocated records', () => {
+  for (const type of payload.types) assertMapSelection([type]);
+  for (const topic of payload.topics) assertMapSelection(payload.types.filter(type => type.topic === topic.id));
+  const type = payload.types.find(type => type.records.some(record => unlocated.some(row => row.id === record.id)));
+  assert.ok(type);
+  assert.ok(assertMapSelection([type]).some(record => unlocated.some(row => row.id === record.id)));
+});
+test('identical type names and letter suffixes remain distinct in map filters', () => {
+  // A repeated display name must never replace the canonical code + title filter.
+  const sameName = payload.types.slice(0, 2).map(type => ({ ...type, no: 'Same title', en: 'Same title' }));
+  assert.equal(new Set(sameName.map(type => type.mapTheme)).size, sameName.length);
+  for (const type of sameName) assertMapSelection([type]);
+  const duplicateTitle = mapped.find(row => mapped.some(other => other.id !== row.id && other.titleNo === row.titleNo));
+  assert.ok(duplicateTitle, 'exercise repeated legend titles in the corpus');
+  for (const type of payload.types.filter(type => type.records.some(row => row.titleNo === duplicateTitle.titleNo))) assertMapSelection([type]);
+  for (const code of ['ML 6015', 'ML 6015A']) assertMapSelection([payload.types.find(type => type.code === code)]);
+});
