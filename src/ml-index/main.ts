@@ -28,6 +28,53 @@ const groupTypes = (topic: Topic) => types.filter((type) => type.topic === topic
 const explorerUrl = (set: Type[]) =>
   `${base}browse/?theme=${encodeURIComponent(set.map((type) => type.id).join(','))}`;
 const search = $('ml-search') as HTMLInputElement;
+const sort = $('ml-sort') as HTMLSelectElement;
+const fold = (value: string) =>
+  value
+    .toLocaleLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ø/g, 'o')
+    .replace(/æ/g, 'ae');
+function highlight(value: string) {
+  const term = fold(search.value.trim());
+  // Match against folded text while retaining original character positions.
+  const chars = [...value];
+  const positions = chars.flatMap((char, index) => [...fold(char)].map(() => index));
+  const index = term ? fold(value).indexOf(term) : -1;
+  if (index < 0) return esc(value);
+  const start = positions[index],
+    end = positions[index + term.length - 1] + 1;
+  return (
+    esc(chars.slice(0, start).join('')) +
+    '<mark>' +
+    esc(chars.slice(start, end).join('')) +
+    '</mark>' +
+    esc(chars.slice(end).join(''))
+  );
+}
+function actions(set: Type[], topic: Topic) {
+  const dataUrl = (view: string) => {
+    const params = new URLSearchParams({ topic: topic.id, view });
+    if (set.length === 1) params.set('type', codeKey(set[0]));
+    if (view === 'network') {
+      params.set('layout', 'free');
+      params.set('categories', 'county,collector,typeId,narrator');
+    }
+    return `${base}data/?${params}#${view}`;
+  };
+  return [
+    [explorerUrl(set), 'list', t('exploreType')],
+    [mapLink(base, set), 'map-pin', t('openMap')],
+    [dataUrl('network'), 'network', t('network')],
+    [dataUrl('overview'), 'chart-no-axes-column', t('overview')],
+  ]
+    .map(
+      ([href, icon, label]) =>
+        `<a href="${esc(href)}" aria-label="${esc((set.length === 1 ? set[0].code : topic[lang()]) + ': ' + label)}" data-tooltip="${esc(label)}"><i data-lucide="${icon}" aria-hidden="true"></i></a>`,
+    )
+    .join('');
+}
 let selectedTopic: Topic | undefined;
 let openTopics = new Set<string>();
 let highlightedType: Type | undefined;
@@ -42,6 +89,7 @@ function readState() {
   selectedTopic = topics.find((topic) => topic.id === (type?.topic || params.get('topic')));
   highlightedType = type;
   search.value = params.get('q') || '';
+  sort.value = params.get('sort') === 'alphabetical' ? 'alphabetical' : 'collection';
   openTopics = new Set(
     (params.get('open') || '').split(',').filter((id) => topics.some((topic) => topic.id === id)),
   );
@@ -50,6 +98,7 @@ function readState() {
 function stateUrl() {
   const params = new URLSearchParams();
   if (search.value) params.set('q', search.value);
+  if (sort.value === 'alphabetical') params.set('sort', sort.value);
   if (openTopics.size) params.set('open', [...openTopics].join(','));
   if (highlightedType) params.set('type', codeKey(highlightedType));
   return location.pathname + (params.size ? '?' + params : '');
@@ -62,27 +111,32 @@ function refreshIcons() {
 }
 
 function renderContents() {
-  const query = search.value.trim().toLocaleLowerCase();
+  const query = fold(search.value.trim());
   const compact = query.replace(/\s/g, '');
   let shown = 0;
-  $('ml-toc').innerHTML = topics
+  $('ml-toc').innerHTML = [...topics]
+    .sort((a, b) =>
+      sort.value === 'alphabetical'
+        ? a[lang()].localeCompare(b[lang()], lang() === 'no' ? 'nb' : 'en')
+        : a.min - b.min,
+    )
     .map((topic) => {
       const inTopic = groupTypes(topic);
-      const topicMatches = `${topic.no} ${topic.en}`.toLocaleLowerCase().includes(query);
+      const topicMatches = fold(`${topic.no} ${topic.en}`).includes(query);
       const matches = inTopic.filter(
         (type) =>
           !query ||
           topicMatches ||
-          `${type.code} ${type.no} ${type.en}`.toLocaleLowerCase().includes(query) ||
+          fold(`${type.code} ${type.no} ${type.en}`).includes(query) ||
           codeKey(type).toLowerCase().includes(compact),
       );
       if (!matches.length) return '';
       shown += matches.length;
       const total = inTopic.reduce((n, type) => n + type.records.length, 0);
       return `<details class="ml-topic-section" data-toc-topic="${topic.id}" ${query || openTopics.has(topic.id) ? 'open' : ''}>
-   <summary><i data-lucide="chevron-right"></i><span>${esc(topic[lang()])}</span><small>ML ${topic.min}–${topic.max}</small><b>${total} ${t('legends')}</b></summary>
-   <div class="ml-toc-body"><div class="ml-topic-actions"><span>${inTopic.length} ${t('types')} · ${total} ${t('legends')}</span><a class="icon-link" href="${explorerUrl(inTopic)}">${t('exploreTopic')}<i data-lucide="arrow-right"></i></a><a class="icon-link" href="${esc(mapLink(base, inTopic))}" aria-label="${esc(topic[lang()] + ': ' + t('openMap'))}"><i data-lucide="map-pin"></i>${t('openMap')}</a></div>
-    <ul>${matches.map((type) => `<li class="${highlightedType === type ? 'is-highlighted' : ''}" data-toc-type="${codeKey(type)}"><span class="ml-code">${type.code}</span><a class="ml-toc-title" href="${explorerUrl([type])}">${esc(title(type))}</a><div class="ml-type-actions"><a class="ml-toc-open icon-link" href="${explorerUrl([type])}" aria-label="${esc(type.code + ': ' + t('exploreType') + ' (' + type.records.length + ')')}"><span>${type.records.length} ${t('legends')}</span><i data-lucide="arrow-right"></i></a><a class="icon-link ml-toc-map" href="${esc(mapLink(base, [type]))}" aria-label="${esc(type.code + ': ' + t('openMap'))}"><i data-lucide="map-pin"></i>${t('openMap')}</a></div></li>`).join('')}</ul>
+   <summary><i data-lucide="chevron-right" aria-hidden="true"></i><span class="ml-topic-name">${highlight(topic[lang()])}</span><span class="ml-topic-meta"><small>ML ${topic.min}–${topic.max}</small><b>${total} ${t('legends')}</b></span></summary>
+   <div class="ml-toc-body"><nav class="ml-topic-actions ml-catalog-actions" aria-label="${esc(topic[lang()])}">${actions(inTopic, topic)}</nav>
+    <ul>${matches.map((type) => `<li class="${highlightedType === type ? 'is-highlighted' : ''}" data-toc-type="${codeKey(type)}"><span class="ml-code">${highlight(type.code)}</span><a class="ml-toc-title" href="${explorerUrl([type])}">${highlight(title(type))}</a><span class="ml-type-count" aria-label="${type.records.length} ${t('legends')}">${type.records.length}</span><nav class="ml-type-actions ml-catalog-actions" aria-label="${esc(type.code + ': ' + title(type))}">${actions([type], topic)}</nav></li>`).join('')}</ul>
    </div></details>`;
     })
     .join('');
@@ -110,6 +164,10 @@ $('ml-toc').addEventListener(
   },
   true,
 );
+sort.addEventListener('change', () => {
+  renderContents();
+  sync();
+});
 search.addEventListener('input', () => {
   renderContents();
   sync();

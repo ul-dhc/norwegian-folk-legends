@@ -1,6 +1,10 @@
 export const copy = {
   no: {
     unknown: 'Ukjent',
+    network: 'Nettverk',
+    overview: 'Dataoversikt',
+    collectionOrder: 'Katalogrekkefølge',
+    alphabetical: 'Alfabetisk',
     legends: 'sagn',
     types: 'sagntyper',
     exploreTopic: 'Utforsk hele temaet',
@@ -62,6 +66,10 @@ export const copy = {
   },
   en: {
     unknown: 'Unknown',
+    network: 'Network',
+    overview: 'Data overview',
+    collectionOrder: 'Catalogue order',
+    alphabetical: 'Alphabetical',
     legends: 'legends',
     types: 'legend types',
     exploreTopic: 'Explore the whole topic',

@@ -1,0 +1,234 @@
+/* TEIKAS catalogue layout, using the Norske sagn interface palette. */
+.ml-catalog-page .ml-contents-tools {
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ml-catalog-page .ml-search-label {
+  min-width: 15rem;
+  max-width: 32rem;
+}
+.ml-catalog-page .ml-search-label input {
+  border-radius: 999px;
+}
+.ml-catalog-sort select {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+}
+.ml-catalog-page .ml-contents-tools > div {
+  margin-left: auto;
+}
+.ml-catalog-page .ml-contents-tools button {
+  color: var(--muted);
+}
+.ml-catalog-page #ml-toc {
+  display: grid;
+  gap: 0.65rem;
+}
+.ml-catalog-page .ml-topic-section {
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--line), transparent 28%);
+  border-radius: 24px;
+  background: transparent;
+  transition: border-color 0.15s ease;
+}
+.ml-catalog-page .ml-topic-section[open] {
+  border-color: color-mix(in srgb, var(--blue) 22%, var(--line));
+}
+.ml-catalog-page .ml-topic-section > summary {
+  display: flex;
+  gap: 0.85rem;
+  min-height: 64px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 23px;
+  background: transparent;
+  color: var(--ink);
+}
+.ml-catalog-page .ml-topic-section > summary > svg {
+  color: var(--muted);
+}
+.ml-catalog-page .ml-topic-section[open] > summary > svg {
+  color: var(--blue);
+}
+.ml-catalog-page .ml-topic-section > summary > .ml-topic-name {
+  flex: 1;
+  min-width: 0;
+  font: 400 1.2rem/1.4 var(--serif);
+  overflow-wrap: anywhere;
+}
+.ml-catalog-page .ml-topic-section > summary > .ml-topic-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font: inherit;
+}
+.ml-topic-meta small,
+.ml-topic-meta b {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--line), transparent 28%);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.3;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.ml-topic-meta small {
+  font-family: ui-monospace, monospace;
+}
+.ml-catalog-page .ml-toc-body {
+  padding: 0 1.15rem 0.8rem 2.95rem;
+}
+.ml-catalog-page .ml-catalog-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  padding: 0.1rem 0 0.35rem;
+}
+.ml-catalog-page .ml-catalog-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.ml-catalog-page .ml-catalog-actions a:is(:hover, :focus-visible) {
+  background: transparent;
+  color: var(--pin);
+  text-decoration: none;
+}
+.ml-catalog-page .ml-catalog-actions svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  pointer-events: none;
+}
+.ml-catalog-page .ml-toc-body li {
+  grid-template-columns: 80px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0;
+  border-top-color: color-mix(in srgb, var(--line), transparent 55%);
+}
+.ml-catalog-page .ml-toc-title {
+  min-width: 0;
+  padding: 0.8rem 0;
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+.ml-catalog-page .ml-toc-title:hover {
+  color: var(--pin);
+  text-decoration: none;
+}
+.ml-type-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.ml-catalog-page .ml-type-actions {
+  padding: 0.2rem 0;
+}
+.ml-catalog-page mark {
+  background: color-mix(in srgb, var(--butter), transparent 35%);
+  color: inherit;
+}
+:root[data-theme='dark'] .ml-catalog-page mark {
+  background: color-mix(in srgb, var(--butter), transparent 75%);
+}
+.ml-catalog-page :is(a, button, input, select, summary):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+@media (max-width: 650px) {
+  .ml-catalog-page .ml-contents-tools {
+    flex-direction: row;
+    align-items: center;
+  }
+  .ml-catalog-page .ml-search-label {
+    max-width: none;
+    flex-basis: 100%;
+    min-width: 0;
+  }
+  .ml-catalog-sort select {
+    max-width: 10rem;
+  }
+  .ml-catalog-page .ml-contents-tools > div {
+    gap: 0.8rem;
+  }
+  .ml-catalog-page .ml-topic-section {
+    border-radius: 22px;
+  }
+  .ml-catalog-page .ml-topic-section > summary {
+    display: grid;
+    grid-template-columns: 1rem minmax(0, 1fr);
+    gap: 0.45rem 0.65rem;
+    padding: 0.85rem;
+    border-radius: 21px;
+  }
+  .ml-catalog-page .ml-topic-section > summary > .ml-topic-name {
+    font-size: 1.12rem;
+  }
+  .ml-catalog-page .ml-topic-section > summary > .ml-topic-meta {
+    grid-column: 2;
+    gap: 0.35rem;
+  }
+  .ml-topic-meta small,
+  .ml-topic-meta b {
+    padding: 0.25rem 0.55rem;
+    font-size: 0.7rem;
+  }
+  .ml-catalog-page .ml-toc-body {
+    padding: 0 0.85rem 0.65rem 2.5rem;
+  }
+  .ml-catalog-page .ml-toc-body li {
+    grid-template-columns: 80px minmax(0, 1fr) auto;
+    gap: 0 0.65rem;
+  }
+  .ml-catalog-page .ml-toc-body li > .ml-code {
+    grid-column: auto;
+    font-size: 0.72rem;
+  }
+  .ml-catalog-page .ml-toc-title {
+    font-size: 0.88rem;
+    padding: 0.65rem 0 0.2rem;
+  }
+  .ml-catalog-page .ml-type-actions {
+    grid-column: 1/-1;
+    justify-content: flex-end;
+    padding: 0 0 0.3rem;
+  }
+}
+@media (max-width: 400px) {
+  .ml-catalog-page .ml-toc-body li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .ml-catalog-page .ml-toc-body li > .ml-code {
+    grid-column: 1/-1;
+    padding-top: 0.65rem;
+  }
+  .ml-catalog-page .ml-contents-tools > div {
+    margin-left: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ml-catalog-page .ml-topic-section,
+  .ml-catalog-page .ml-catalog-actions a {
+    transition: none;
+  }
+}
