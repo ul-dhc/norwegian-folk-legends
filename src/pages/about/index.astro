@@ -74,6 +74,14 @@ const chapters = [
   {id:'journey-controls',title:'about.journeysControlsTitle',paragraphs:['about.journeysControlsText']},
   {id:'journey-geography',title:'about.journeysGeographyTitle',paragraphs:['about.journeysGeographyText']}]},
 ];
+const coverage = [
+  {
+    key: 'about.totalRecords',
+    count: mapData.legends.features.length + mapData.unmappedLegends.length,
+  },
+  { key: 'about.mappedRecords', count: mapData.legends.features.length },
+  { key: 'about.unmappedRecords', count: mapData.unmappedLegends.length },
+];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
 <BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original collection from the Norwegian Folklore Archives at UiO, archival materials from SAMLA, and development by the University of Latvia Digital Humanities Center.">
