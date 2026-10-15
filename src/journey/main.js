@@ -36,6 +36,14 @@ const lifePhotos = () => journeyLifePhotos(language());
 const fullscreen = () => toggleJourneyFullscreen(root, resize, controls);
 const root = document.querySelector('#legend-journey'),
   el = (id) => document.getElementById(id);
+const siteHeader = document.querySelector('.site-header');
+const fitJourneyViewport = () =>
+  root.style.setProperty(
+    '--journey-header-height',
+    `${siteHeader?.getBoundingClientRect().height || 0}px`,
+  );
+fitJourneyViewport();
+if (siteHeader) new ResizeObserver(fitJourneyViewport).observe(siteHeader);
 const language = () => (document.documentElement.dataset.uiLang === 'en' ? 'en' : 'no'),
   t = () => cinema[language()];
 const esc = (value) =>
@@ -132,7 +140,8 @@ const textFor = (r) =>
   language() === 'en' && !original && r.english_translation?.trim()
     ? r.english_translation
     : r.tekst;
-const heading = (r) => r.tittel || r.ml_title || r.id;
+const heading = (r) =>
+  r.tittel || r.ml_title || (language() === 'en' ? 'Untitled legend' : 'Sagn uten tittel');
 let showUncertainty = false;
 let selectedMap = 'coastlines';
 try {
@@ -1435,7 +1444,7 @@ el('journey-info-toggle').addEventListener('click', () => {
     )
       .map(
         (r) =>
-          `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.source_text_id)} · ${esc(r.informant)} · ${esc(r.archiveSignature)}</a>${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${en ? 'Original catalogue' : 'Originalkatalog'}</a>` : ''}</li>`,
+          `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(heading(r))} · ${esc(r.informant)} · ${esc(r.archiveSignature)}</a>${r.sourceUrl ? ` · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${en ? 'Original catalogue' : 'Originalkatalog'}</a>` : ''}</li>`,
       )
       .join('')}</ul>`;
   el('journey-info-content').insertAdjacentHTML(

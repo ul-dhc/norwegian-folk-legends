@@ -1,3 +1,4 @@
+import { encodeSelection } from '../lib/selection.js';
 export const UNKNOWN = '__unknown__';
 export function flattenTypes(types) {
   return types.flatMap((type) =>
@@ -58,5 +59,5 @@ export function countsBy(records, field) {
 export function selectionLink(base, records) {
   // The explorer already supports explicit record selections. Preserve the exact
   // intersection, including unknown metadata and letter-suffixed ML types.
-  return `${base}browse/?selection=${encodeURIComponent(records.map((record) => record.id).join(','))}`;
+  return `${base}browse/?selection=${encodeURIComponent(encodeSelection(records.map((record) => record.id)))}`;
 }

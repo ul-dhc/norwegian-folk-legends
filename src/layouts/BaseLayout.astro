@@ -5,6 +5,8 @@ import '../styles/responsive-fix.css';
 import '../styles/icons.css';
 import '../styles/norske-theme.css';
 import '../styles/search.css';
+import '../styles/filter-panels.css';
+import '../styles/tooltips.css';
 import uiTranslations from '../i18n/ui.json';
 const {
   title = 'Norske sagn',
@@ -19,4 +21,6 @@ const base = import.meta.env.BASE_URL;
 <main id="content"><slot/></main>{active === 'home' && <footer class="site-footer"><div class="institution-credit"><a href="https://dhc.lu.lv/" target="_blank" rel="noopener noreferrer">University of Latvia Digital Humanities Centre</a><span>, 2026</span></div></footer>}
 <script>
   import '../scripts/site-shell';
+import {attachPlatformTooltips} from '../scripts/tooltips';
+attachPlatformTooltips();
 </script></body></html>

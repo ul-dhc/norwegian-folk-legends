@@ -72,6 +72,35 @@ record IDs as Browse and the individual legend pages.
 Run `npm run test:map` to build and verify record coverage, source coordinates,
 place totals, missing-coordinate handling and filter metadata.
 
+## Data workspace and metadata network
+
+`/data/` opens Network by default, followed by the Overview tab; existing `?view=network` links remain
+valid and `#overview` / `#network` identify the active tab. Shared topic, type,
+county, collector, narrator and translation filters are preserved across views.
+Network code and styles load when Network is opened; its styles are removed when
+returning to Overview. The separate `/ml-index/` classification browser remains.
+
+Map, Browse and Network share compact filter panels. Network menus support typed
+search, Norwegian character folding, arrow keys, Enter and Escape. Shared
+control tooltips also work with keyboard focus. Mobile filters open as a drawer.
+
+Network Settings contain multiple-node selection (any/all) and node-size modes:
+Equal for all or By connection count. Connection sizing counts distinct metadata
+neighbours across all available categories, including hidden ones, and normalizes
+within each category of the filtered records. Node/text scale controls remain
+independent. Selected nodes stay above overlaps, while dimmed context remains
+visible. Small viewports compensate motion amplitude without changing its speed.
+Fullscreen displays only the visualization, with Escape and trapped keyboard
+focus; exiting restores the controls and selection.
+
+Map, Data and Browse use compact record selections, encoding consecutive numeric
+IDs as ranges. Decoding expands only known numeric source IDs; older comma-list
+links still work. CSV/GeoJSON/GraphML source data and Norwegian place uncertainty
+remain unchanged.
+
+Run `npm run build && node --test tests/*.test.js` to verify collection coverage,
+network selections, sizing, mobile motion and compact selection round-trips.
+
 ## Legend journey
 
 The Astro `/journey/` page uses `src/journey/`. It replaces the previous journey

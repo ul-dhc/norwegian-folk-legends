@@ -61,11 +61,11 @@ export const moeSources = [
     'https://samla.no/viewer/term/-/MD_Informant%3A%22Krossvegen%2CU005C+TollevU005C+Anundsson%22/1/-/-/',
   ],
   [
-    'SIN473 · NFS Moltke Moe 7, p. 1 · SAMLA scan 4 (opening)',
+    'NFS Moltke Moe 7, p. 1 · SAMLA scan 4 (opening)',
     'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/4/#topDocAnchor',
   ],
   [
-    'SIN473 · continuation and narrator attribution · p. 2 · SAMLA scan 5',
+    'NFS Moltke Moe 7 · continuation and narrator attribution · p. 2 · SAMLA scan 5',
     'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/5/#topDocAnchor',
   ],
   [
@@ -77,11 +77,11 @@ export const moeSources = [
     'https://samla.no/viewer/api/v2/records/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/manifest/',
   ],
   [
-    'SIN219 · NFS Moltke Moe 7, pp. 4–5 · SAMLA scan 7',
+    'NFS Moltke Moe 7, pp. 4–5 · SAMLA scan 7',
     'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/7/#topDocAnchor',
   ],
   [
-    'SIN219 · continued · SAMLA scan 8',
+    'NFS Moltke Moe 7 · continued · SAMLA scan 8',
     'https://samla.no/viewer/image/2fdf12a5-ee74-4cd4-ae6c-443cfbb7e605/8/#topDocAnchor',
   ],
 ];
@@ -107,7 +107,7 @@ export function moeScenes(
   if (!livRecord || !notebookRecord) return [];
   const photoCredit =
     'Liv Bratterud & Moltke Moe · Summer 1878 · Unknown photographer / Nasjonalbiblioteket · blds_01062 · CC BY 2.0';
-  const pageUrl = moeSources.find(([name]) => name.startsWith('SIN473'))[1];
+  const pageUrl = moeSources.find(([name]) => name.startsWith('NFS Moltke Moe 7, p. 1'))[1];
   const stage = (j, title, en, no, extra = {}) => ({ ...bio(j, title, en, no), ...extra });
   const result = [
     stage(
@@ -222,7 +222,7 @@ export function moeScenes(
         target: notebookRecord,
         image: manuscript,
         effect: 'manuscript',
-        credit: 'NFS Moltke Moe 7, pp. 1–2 · SAMLA · SIN473',
+        credit: 'NFS Moltke Moe 7, pp. 1–2 · SAMLA',
         manuscript: pageUrl,
         duration: 40000,
       },

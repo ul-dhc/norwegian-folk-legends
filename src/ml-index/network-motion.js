@@ -11,6 +11,12 @@ function seedsFor(id) {
     });
   return motionSeeds.get(id);
 }
+// Compensate for a shrunken view without magnifying movement when zoomed in.
+export function motionAmplitudeScale(screenScale) {
+  return Number.isFinite(screenScale) && screenScale > 0
+    ? Math.min(2.5, Math.max(1, 1 / screenScale))
+    : 1;
+}
 export function positionWithMotion(
   id,
   base,
@@ -18,6 +24,7 @@ export function positionWithMotion(
   style = 'drift',
   intensity = 1,
   centre = { x: 450, y: 285 },
+  amplitudeScale = 1,
 ) {
   if (intensity === 0) return { ...base, scale: 1, opacity: 1 };
   const { seed, driftSeed } = seedsFor(id),
@@ -35,7 +42,7 @@ export function positionWithMotion(
     const direction = seed % 2 === 0 ? 1 : -1,
       localSpeed = (0.00016 + (seed % 13) * 0.000009) * intensity * direction;
     const localAngle = phase + clock * localSpeed,
-      localRadius = (6 + (seed % 13)) * Math.min(1.6, intensity);
+      localRadius = (6 + (seed % 13)) * Math.min(1.6, intensity) * amplitudeScale;
     const orbitX = sharedX + (Math.cos(localAngle) - Math.cos(phase)) * localRadius,
       orbitY = sharedY + (Math.sin(localAngle) - Math.sin(phase)) * localRadius * 0.62;
     const depth = Math.sin(localAngle + phase * 0.37),
@@ -46,7 +53,7 @@ export function positionWithMotion(
     const farOpacity = 0.26 + ((depth + 1) / 2) * 0.74;
     opacity = 1 - (1 - farOpacity) * Math.min(1, intensity);
   } else if (style === 'chaos') {
-    const amplitude = (15 + (seed % 16)) * intensity,
+    const amplitude = (15 + (seed % 16)) * intensity * amplitudeScale,
       speed = 0.00045 + (seed % 11) * 0.000018;
     x +=
       Math.sin(clock * speed + phase) * amplitude +
@@ -55,13 +62,13 @@ export function positionWithMotion(
       Math.cos(clock * speed * 1.31 + phase * 1.27) * amplitude * 0.78 +
       Math.sin(clock * speed * 1.83 + phase) * amplitude * 0.24;
   } else {
-    const amplitude = (8 + (driftSeed % 45) / 10) * intensity;
+    const amplitude = (8 + (driftSeed % 45) / 10) * intensity * amplitudeScale;
     const angle = clock * 0.00022 * Math.max(0.25, intensity) + phase;
     x +=
-      Math.sin(clock * 0.00011 * Math.max(0.25, intensity)) * 5.5 * intensity +
+      Math.sin(clock * 0.00011 * Math.max(0.25, intensity)) * 5.5 * intensity * amplitudeScale +
       Math.sin(angle) * amplitude;
     y +=
-      Math.cos(clock * 0.00009 * Math.max(0.25, intensity)) * 4 * intensity +
+      Math.cos(clock * 0.00009 * Math.max(0.25, intensity)) * 4 * intensity * amplitudeScale +
       Math.cos(angle) * amplitude * 0.76;
   }
   return { x: Math.round(x * 1000) / 1000, y: Math.round(y * 1000) / 1000, scale, opacity };

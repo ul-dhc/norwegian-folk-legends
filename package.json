@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "node --test tests/*.test.js",
     "data:generate": "python3 scripts/csv_to_json.py",
     "test:journey": "pnpm build && node --test tests/journey.test.js",
     "test:map": "npm run build && node --test tests/map.test.js",

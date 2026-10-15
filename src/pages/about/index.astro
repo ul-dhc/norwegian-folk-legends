@@ -3,18 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ui from '../../i18n/ui.json';
 import { mapData } from '../../map/data';
 const sections = [
-  {
-    title: 'about.sourceTitle',
-    paragraphs: ['about.source'],
-    link: 'about.sourceLink',
-    href: 'https://www2.hf.uio.no/eventyr_og_sagn/',
-  },
-  {
-    title: 'about.samlaTitle',
-    paragraphs: ['about.samlaUse', 'about.samla', 'about.samlaFuture'],
-    link: 'about.samlaLink',
-    href: 'https://samla.no/viewer/',
-  },
+  { title: 'about.sourceTitle', paragraphs: ['about.source', 'about.sinNumbers'], link: 'about.sourceLink', href: 'https://www2.hf.uio.no/eventyr_og_sagn/' },
+  { title: 'about.samlaTitle', paragraphs: ['about.samlaUse', 'about.samla', 'about.samlaFuture'], link: 'about.samlaLink', href: 'https://samla.no/viewer/' }
 ];
 const methods = [
   {
@@ -74,78 +64,19 @@ const geography = [
   },
 ];
 const chapters = [
-  {
-    id: 'guide-map',
-    title: 'about.guideMap',
-    intro: 'about.mapGuideIntro',
-    sections: [
-      methods[0],
-      ...geography,
-      {
-        id: 'map-controls',
-        title: 'about.mapControlsTitle',
-        paragraphs: ['about.mapControlsText'],
-      },
-      ...methods.slice(1, 9),
-    ],
-  },
-  {
-    id: 'guide-browser',
-    title: 'about.guideBrowser',
-    intro: 'about.browserGuideIntro',
-    sections: methods.slice(9),
-  },
-  {
-    id: 'guide-data',
-    title: 'about.guideData',
-    intro: 'about.dataGuideIntro',
-    sections: [
-      {
-        id: 'data-controls',
-        title: 'about.dataControlsTitle',
-        paragraphs: ['about.dataControlsText'],
-      },
-      {
-        id: 'data-network',
-        title: 'about.dataNetworkTitle',
-        paragraphs: ['about.dataNetworkText'],
-      },
-      {
-        id: 'data-sharing',
-        title: 'about.dataSharingTitle',
-        paragraphs: ['about.dataSharingText'],
-      },
-    ],
-  },
-  {
-    id: 'guide-journeys',
-    title: 'about.guideJourneys',
-    intro: 'about.journeysGuideIntro',
-    sections: [
-      {
-        id: 'journey-controls',
-        title: 'about.journeysControlsTitle',
-        paragraphs: ['about.journeysControlsText'],
-      },
-      {
-        id: 'journey-geography',
-        title: 'about.journeysGeographyTitle',
-        paragraphs: ['about.journeysGeographyText'],
-      },
-    ],
-  },
-];
-const coverage = [
-  {
-    key: 'about.totalRecords',
-    count: mapData.legends.features.length + mapData.unmappedLegends.length,
-  },
-  { key: 'about.mappedRecords', count: mapData.legends.features.length },
-  { key: 'about.unmappedRecords', count: mapData.unmappedLegends.length },
+ {id:'guide-map',title:'about.guideMap',intro:'about.mapGuideIntro',sections:[methods[0],...geography,{id:'map-controls',title:'about.mapControlsTitle',paragraphs:['about.mapControlsText']},...methods.slice(1,9)]},
+ {id:'guide-browser',title:'about.guideBrowser',intro:'about.browserGuideIntro',sections:methods.slice(9)},
+ {id:'guide-data',title:'about.guideData',intro:'about.dataGuideIntro',sections:[
+  {id:'data-controls',title:'about.dataControlsTitle',paragraphs:['about.dataControlsText']},
+  {id:'data-network',title:'about.dataNetworkTitle',paragraphs:['about.dataNetworkText','about.dataNetworkControls']},
+  {id:'data-sharing',title:'about.dataSharingTitle',paragraphs:['about.dataSharingText']}]},
+ {id:'guide-journeys',title:'about.guideJourneys',intro:'about.journeysGuideIntro',sections:[
+  {id:'journey-controls',title:'about.journeysControlsTitle',paragraphs:['about.journeysControlsText']},
+  {id:'journey-geography',title:'about.journeysGeographyTitle',paragraphs:['about.journeysGeographyText']}]},
 ];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
-<BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original UiO collection, Kyrre Kverndokk, archival materials from SAMLA, and development by the University of Latvia Digital Humanities Center.">
+<BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original collection from the Norwegian Folklore Archives at UiO, archival materials from SAMLA, and development by the University of Latvia Digital Humanities Center.">
   <div class="shell about-shell about-page">
     <header class="about-heading">
       <h1 data-i18n="nav.about">Om prosjektet</h1>

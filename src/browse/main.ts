@@ -1,3 +1,4 @@
+import { decodeSelection } from '../lib/selection.js';
 import { esc, fold, searchNorm, marked, contextual } from '../lib/search';
 
 type R = {
@@ -234,10 +235,7 @@ const base = import.meta.env.BASE_URL;
 
 const selectionParams = new URLSearchParams(location.search),
   sharedSelection = new Set(
-    (selectionParams.get('selection') || '')
-      .split(',')
-      .map((id) => id.trim())
-      .filter(Boolean),
+    decodeSelection(selectionParams.get('selection') || '', data),
   ),
   pinnedOnly = selectionParams.get('pinned') === '1';
 let selectionOnly = sharedSelection.size > 0;

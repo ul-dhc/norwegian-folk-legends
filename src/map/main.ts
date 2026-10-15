@@ -6,6 +6,7 @@ import { css, basemapPalette, mapThemeColors } from './palette';
 import { installMapControls } from './controls';
 import { createPointLayers } from './point-layers';
 import { exportSelection as downloadMapSelection } from './export';
+import { encodeSelection } from '../lib/selection.js';
 import * as maplibregl from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 maplibregl.setWorkerUrl(workerUrl);
@@ -494,7 +495,7 @@ const updateCount = () => {
   );
   const visibleIds = visibleFeatures.map((feature) => feature.properties.id);
   if (visibleIds.length)
-    countLabel.href = `${base}browse/?selection=${encodeURIComponent(visibleIds.join(','))}`;
+    countLabel.href = `${base}browse/?selection=${encodeURIComponent(encodeSelection(visibleIds))}`;
   else countLabel.removeAttribute('href');
   const unlocatedLink = page.querySelector<HTMLAnchorElement>('[data-map-unlocated-count]')!;
   unlocatedLink.hidden = filteredUnmappedLegends.length === 0;
@@ -502,7 +503,7 @@ const updateCount = () => {
     count: formatter().format(filteredUnmappedLegends.length),
   });
   unlocatedLink.querySelector('span')!.textContent = unlocatedText;
-  unlocatedLink.href = `${base}browse/?selection=${encodeURIComponent(filteredUnmappedLegends.map((record) => record.id).join(','))}`;
+  unlocatedLink.href = `${base}browse/?selection=${encodeURIComponent(encodeSelection(filteredUnmappedLegends.map((record) => record.id)))}`;
   unlocatedLink.title = tr('map.coordinateCountDetails', {
     mapped: formatter().format(filteredFeatures.length),
     unmapped: formatter().format(filteredUnmappedLegends.length),
@@ -937,10 +938,9 @@ const renderUnmapped = () => {
       ? `<section class="place-theme-chart"><h3>${tr('map.placeTopThemes')}</h3><ol>${topThemes.map((theme) => `<li><div><span>${theme.label}</span><strong>${formatter().format(theme.count)}</strong></div><i><b style="--theme-share:${(theme.count / largestThemeCount) * 100}%"></b></i></li>`).join('')}</ol></section>`
       : '',
     ids = filteredUnmappedLegends.map((properties) => properties.id).filter(Boolean),
-    href =
-      ids.length && ids.join(',').length < 6500
-        ? `${base}browse/?selection=${encodeURIComponent(ids.join(','))}`
-        : `${base}browse/`;
+    href = ids.length
+      ? `${base}browse/?selection=${encodeURIComponent(encodeSelection(ids))}`
+      : `${base}browse/`;
   panel.hidden = false;
   panel.innerHTML = `<button class="map-panel-close" type="button" aria-label="${tr('map.close')}"><i data-lucide="x"></i></button><p class="map-panel-eyebrow">${tr('map.analyticalSummary')}</p><h2>${tr('map.unmappedTitle')}</h2><p class="map-panel-note unmapped-panel-note">${tr('map.unmappedExplanation')}</p><dl class="place-summary"><div><dt>${tr('map.legendCount')}</dt><dd>${formatter().format(filteredUnmappedLegends.length)}</dd></div><div><dt>${tr('map.placeThemeCount')}</dt><dd>${formatter().format(themes.size)}</dd></div><div><dt>${tr('map.narrators')}</dt><dd>${formatter().format(narrators.size)}</dd></div><div><dt>${tr('map.collectors')}</dt><dd>${formatter().format(collectors.size)}</dd></div></dl>${themeChart}<a class="button place-browser-button" href="${href}"><span>${tr('map.openLegendBrowser')}</span><i data-lucide="arrow-right"></i></a>`;
   window.renderLucideIcons?.();
@@ -964,10 +964,9 @@ const renderAggregate = (
   const dominantTheme =
       [...themes].sort((first, second) => second[1] - first[1])[0]?.[0] || tr('map.notAvailable'),
     ids = values.map((value) => value.id).filter(Boolean),
-    href =
-      ids.length && ids.join(',').length < 6500
-        ? `${base}browse/?selection=${encodeURIComponent(ids.join(','))}`
-        : `${base}browse/`;
+    href = ids.length
+      ? `${base}browse/?selection=${encodeURIComponent(encodeSelection(ids))}`
+      : `${base}browse/`;
   panel.hidden = false;
   panel.innerHTML = `<button class="map-panel-close" type="button" aria-label="${tr('map.close')}"><i data-lucide="x"></i></button><p class="map-panel-eyebrow">${eyebrow}</p><h2>${title}</h2><dl><div><dt>${tr('map.legendCount')}</dt><dd>${formatter().format(total)}</dd></div><div><dt>${tr('map.dominantTheme')}</dt><dd>${dominantTheme}</dd></div></dl><a class="button" href="${href}"><span>${tr('map.openTexts')}</span><i data-lucide="arrow-right"></i></a>`;
   window.renderLucideIcons?.();
@@ -1331,7 +1330,7 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   map.setPaintProperty('network', 'line-blur', 0);
 };
 const recordHref = (ids: string[]) =>
-  `${base}browse/?selection=${encodeURIComponent(ids.join(','))}`;
+  `${base}browse/?selection=${encodeURIComponent(encodeSelection(ids))}`;
 const networkKindLabel = (node: NetworkNode) => tr(`map.networkKind.${node.kind || 'place'}`);
 const renderNetworkNodePanel = (id: string) => {
   const node = networkNodes.find((item) => item.id === id);

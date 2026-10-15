@@ -41,7 +41,7 @@ jobs:
       - name: Build website
         run: pnpm build
 
-      - name: Test built website
+      - name: Verify collection and explorers
         run: pnpm test
 
       - name: Upload GitHub Pages artifact

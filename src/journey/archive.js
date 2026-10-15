@@ -44,8 +44,8 @@ export const archivePages = [
     page: 4,
     title: pair('Another story opens', 'En ny fortelling begynner'),
     text: pair(
-      'Below the dividing line, Tølløv’s name appears again. A second legend begins here and continues on the following page. In our dataset it is SIN219.',
-      'Under skillelinjen dukker Tølløvs navn opp igjen. Et annet sagn begynner her og fortsetter på neste side. I datasettet vårt er det SIN219.',
+      'Below the dividing line, Tølløv’s name appears again. A second legend begins here and continues on the following page.',
+      'Under skillelinjen dukker Tølløvs navn opp igjen. Et annet sagn begynner her og fortsetter på neste side.',
     ),
     position: 72,
   },
@@ -82,7 +82,7 @@ export function archiveMarkup(lang, sources, records = []) {
  <div class="legacy-landscape">
   <div class="legacy-manuscripts" aria-hidden="true">${archivePages.map((p, i) => `<img src="${p.image}" alt="" style="--sheet-index:${i}"/>`).join('')}</div>
   <div class="legacy-titles-window" tabindex="0" aria-label="${en ? 'Legends collected by Moltke Moe' : 'Sagn samlet av Moltke Moe'}">
-   <ol class="legacy-titles">${legends.map((r) => `<li><a href="${escape(r.url)}" target="_blank" rel="noopener"><span>${escape(r.tittel || r.ml_title || r.source_text_id)}</span><small>${escape(r.sted)} · ${escape(r.source_text_id)}</small></a></li>`).join('')}</ol>
+   <ol class="legacy-titles">${legends.map((r) => `<li><a href="${escape(r.url)}" target="_blank" rel="noopener"><span>${escape(r.tittel || r.ml_title || (en ? 'Untitled legend' : 'Sagn uten tittel'))}</span><small>${escape(r.sted)}</small></a></li>`).join('')}</ol>
   </div>
   <p class="legacy-page-credit">${en ? 'Manuscript pages' : 'Manuskriptsider'}: NFS Moltke Moe 7 · SAMLA</p>
  </div>

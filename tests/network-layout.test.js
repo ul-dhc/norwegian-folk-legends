@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  nodeRadius,
   layoutNetwork,
   cameraPoint,
   pinchCamera,
@@ -114,5 +115,14 @@ test('spreading structured layouts keeps category rows and columns intact', () =
         node[layout === 'bipartite' ? 'x' : 'y'],
       );
     assert.ok(nodes.some((n) => spread.get(n.id).x !== n.x || spread.get(n.id).y !== n.y));
+  }
+});
+
+test('uniform radii are equal while connection sizes preserve differences in an isolated category', () => {
+  const small = { degree: 0, connectionShare: 0.01 },
+    large = { degree: 0, connectionShare: 1 };
+  for (const layout of ['free', 'hierarchical', 'bipartite']) {
+    assert.equal(nodeRadius(small, layout, 'uniform'), nodeRadius(large, layout, 'uniform'));
+    assert.ok(nodeRadius(small, layout, 'connections') < nodeRadius(large, layout, 'connections'));
   }
 });

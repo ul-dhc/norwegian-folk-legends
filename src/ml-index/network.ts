@@ -7,127 +7,18 @@ import {
   echoDistances,
   scatterNetwork,
 } from './network-layout.js';
-import { positionWithMotion } from './network-motion.js';
+import { positionWithMotion, motionAmplitudeScale } from './network-motion.js';
 import {
   buildRelationships,
   buildFreeNetwork,
   freeFields,
   defaultFreeFields,
   relationshipSelection,
+  nodeConnectionSizes,
 } from './network-data.js';
 import { UNKNOWN } from './statistics.js';
-const copy = {
-  en: {
-    overview: 'Overview',
-    network: 'Network',
-    title: 'Connections in the collection',
-    hint: 'Explore documented links between people, places and legend types.',
-    filters: 'Filters',
-    layout: 'Layout',
-    free: 'Free',
-    hierarchical: 'Hierarchical',
-    bipartite: 'Bipartite',
-    left: 'Left category',
-    right: 'Right category',
-    limit: 'Nodes per category',
-    all: 'All',
-    labels: 'Labels',
-    contextual: 'Contextual',
-    nodeSize: 'Node size',
-    textSize: 'Text size',
-    fit: 'Fit view',
-    zoomIn: 'Zoom in',
-    zoomOut: 'Zoom out',
-    fullscreen: 'Fullscreen',
-    exitFullscreen: 'Exit fullscreen',
-    clear: 'Clear selection',
-    select: 'Select a node or connection',
-    help: 'Click a node or line to see its legends. Drag a node to move it; drag the background to pan.',
-    meaning:
-      'Connections represent records sharing the selected metadata. Thicker lines mean more legends, not historical influence.',
-    hierarchyHelp:
-      'Categories are arranged in rows. Click a node or connection to see its legends.',
-    coverage: 'legends represented',
-    nodes: 'nodes',
-    links: 'connections',
-    limited:
-      'Largest categories shown. Increase the node limit or narrow the filters to reveal other categories.',
-    raw: 'Names retain their source spelling; variants may appear separately.',
-    selected: 'Selected connection',
-    texts: 'Show these texts',
-    allChoices: 'All',
-    translation: 'Translation',
-    unknown: 'Unknown',
-    county: 'Counties',
-    collector: 'Collectors',
-    narrator: 'Narrators',
-    typeId: 'ML types',
-    topic: 'Topics',
-    record: 'Legends',
-    empty: 'No connections for these filters',
-    reset: 'Clear filters',
-    showFilters: 'Show filters',
-    hideFilters: 'Hide filters',
-    legend: 'Categories',
-    count: 'legends',
-    shown: 'shown',
-  },
-  no: {
-    overview: 'Oversikt',
-    network: 'Nettverk',
-    title: 'Forbindelser i samlingen',
-    hint: 'Utforsk dokumenterte forbindelser mellom personer, steder og sagntyper.',
-    filters: 'Filtre',
-    layout: 'Oppsett',
-    free: 'Fritt',
-    hierarchical: 'Hierarkisk',
-    bipartite: 'Todelt',
-    left: 'Venstre kategori',
-    right: 'Høyre kategori',
-    limit: 'Noder per kategori',
-    all: 'Alle',
-    labels: 'Navn',
-    contextual: 'Tilpasset',
-    nodeSize: 'Nodestørrelse',
-    textSize: 'Tekststørrelse',
-    fit: 'Tilpass visning',
-    zoomIn: 'Zoom inn',
-    zoomOut: 'Zoom ut',
-    fullscreen: 'Fullskjerm',
-    exitFullscreen: 'Avslutt fullskjerm',
-    clear: 'Fjern utvalg',
-    select: 'Velg en node eller forbindelse',
-    help: 'Klikk på en node eller linje for å se sagnene. Dra en node for å flytte den; dra bakgrunnen for å panorere.',
-    meaning:
-      'Forbindelser viser opptegnelser med felles metadata. Tykkere linjer betyr flere sagn, ikke historisk påvirkning.',
-    hierarchyHelp:
-      'Kategoriene er ordnet i rader. Klikk på en node eller forbindelse for å se sagnene.',
-    coverage: 'sagn representert',
-    nodes: 'noder',
-    links: 'forbindelser',
-    limited:
-      'De største kategoriene vises. Øk nodegrensen eller avgrens filtrene for å vise andre kategorier.',
-    raw: 'Navn beholder skrivemåten i kilden; varianter kan vises hver for seg.',
-    selected: 'Valgt forbindelse',
-    texts: 'Vis disse tekstene',
-    allChoices: 'Alle',
-    translation: 'Oversettelse',
-    unknown: 'Ukjent',
-    county: 'Fylker',
-    collector: 'Samlere',
-    narrator: 'Informanter',
-    typeId: 'ML-typer',
-    topic: 'Temaer',
-    record: 'Sagn',
-    empty: 'Ingen forbindelser med disse filtrene',
-    reset: 'Nullstill filtre',
-    showFilters: 'Vis filtre',
-    hideFilters: 'Skjul filtre',
-    legend: 'Kategorier',
-    count: 'sagn',
-    shown: 'vist',
-  },
-};
+import networkStyle from './network.css?inline';
+import { copy, settingsCopy, extraCopy, nodeSizeCopy } from './network-copy';
 type NetworkOptions = {
   lang: () => 'no' | 'en';
   types: any[];
@@ -136,6 +27,13 @@ type NetworkOptions = {
   sync: () => void;
 };
 export function createNetwork({ lang, types, topics, change, sync }: NetworkOptions) {
+  const style = document.createElement('style');
+  style.dataset.networkStyle = '';
+  style.textContent = networkStyle;
+  function setStyles(active: boolean) {
+    if (active && !style.isConnected) document.head.append(style);
+    else if (!active) style.remove();
+  }
   let layout = 'free',
     left = 'county',
     right = 'typeId',
@@ -146,7 +44,10 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     textSize = 1,
     filtersOpen = !matchMedia('(max-width:700px)').matches;
   let palette = 'sagn',
-    threadBrightness = 1;
+    threadBrightness = 1,
+    sizeMode = 'connections';
+  let sizeKey = '',
+    sizeMetrics = new Map<string, any>();
   let multiSelect = false,
     selectionLogic = 'any';
   let scaleControl: string | null = null,
@@ -164,6 +65,9 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     lastFrame = 0;
   let selection: any = null,
     graph: any = { nodes: [], edges: [] };
+  let revealKey = '',
+    revealStarted = 0;
+  const revealDuration = 780;
   let zoom = 1,
     pan = { x: 0, y: 0 },
     positions = new Map<string, { x: number; y: number }>();
@@ -174,66 +78,6 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     presentation = false,
     drag: any = null,
     pendingCamera: any = null;
-  const settingsCopy = {
-    en: {
-      settings: 'Settings',
-      close: 'Close settings',
-      movement: 'Visualization movement',
-      dynamic: 'Dynamic',
-      static: 'Static',
-      motion: 'Network movement',
-      drift: 'Drift',
-      orbit: 'Orbit',
-      chaos: 'Chaos',
-      intensity: 'Movement intensity',
-      animation: 'Animation style',
-      none: 'None',
-      rain: 'Rain',
-      echo: 'Echo',
-      wave: 'Wave',
-      shape: 'Node shape',
-      circle: 'All circles',
-      category: 'By category',
-      defaults: 'Reset visual settings',
-      show: 'Show in network',
-      place: 'Places',
-      year: 'Years',
-      translated: 'Translation',
-      untranslated: 'Not translated',
-      motionHelp: 'Movement acts in Free layout. Static pauses movement and effects.',
-      freeHelp:
-        'Categories connect when they occur in the same legend. Thicker lines represent more legends. Counties, collectors, ML types and topics are connected by default. Add narrators or places to explore further.',
-    },
-    no: {
-      settings: 'Innstillinger',
-      close: 'Lukk innstillinger',
-      movement: 'Bevegelse i visualiseringen',
-      dynamic: 'Dynamisk',
-      static: 'Statisk',
-      motion: 'Nettverksbevegelse',
-      drift: 'Drift',
-      orbit: 'Bane',
-      chaos: 'Kaos',
-      intensity: 'Bevegelsesintensitet',
-      animation: 'Animasjonsstil',
-      none: 'Ingen',
-      rain: 'Regn',
-      echo: 'Ekko',
-      wave: 'Bølge',
-      shape: 'Nodeform',
-      circle: 'Alle sirkler',
-      category: 'Etter kategori',
-      defaults: 'Nullstill visuelle innstillinger',
-      show: 'Vis i nettverket',
-      place: 'Steder',
-      year: 'År',
-      translated: 'Oversettelse',
-      untranslated: 'Ikke oversatt',
-      motionHelp: 'Bevegelse virker i fritt oppsett. Statisk stanser bevegelse og effekter.',
-      freeHelp:
-        'Kategorier kobles når de forekommer i samme sagn. Tykkere linjer viser flere sagn. Fylker, samlere, ML-typer og temaer er koblet som standard. Legg til informanter eller steder for å utforske videre.',
-    },
-  };
   const tr = () => ({ ...copy[lang()], ...settingsCopy[lang()] });
   const esc = (value: unknown) =>
     String(value ?? '').replace(
@@ -249,17 +93,13 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     }
     if (field === 'typeId') {
       const type = types.find((t) => t.id === value);
-      return `${type?.code || value} · ${lang() === 'en' ? type?.en || type?.no : type?.no}`;
+      return `${type?.code || value} · ${type?.[lang()] || type?.no || value}`;
     }
     if (field === 'translated')
-      return value === 'translated'
-        ? lang() === 'en'
-          ? 'Translated'
-          : 'Oversatt'
-        : tr().untranslated;
+      return value === 'translated' ? extraCopy[lang()].translated : tr().untranslated;
     return value;
   }
-  const selectedRows = <T,>(rows: T[]): T[] => relationshipSelection(rows, selection) as T[];
+  const selectedRows = <T>(rows: T[]): T[] => relationshipSelection(rows, selection) as T[];
   function commit() {
     try {
       localStorage.setItem(
@@ -273,6 +113,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
           palette,
           threadBrightness,
           nodeSize,
+          sizeMode,
           labelSize: textSize,
         }),
       );
@@ -292,6 +133,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
         'palette',
         'threadBrightness',
         'nodeSize',
+        'sizeMode',
         'labelSize',
       ])
         if (!params.has(key) && stored[key] !== undefined) params.set(key, String(stored[key]));
@@ -321,6 +163,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       ? params.get('animation')!
       : 'none';
     shape = params.get('shape') === 'category' ? 'category' : 'circle';
+    sizeMode = params.get('sizeMode') === 'uniform' ? 'uniform' : 'connections';
     threadBrightness = Math.max(0, Math.min(2, Number(params.get('threadBrightness') ?? 1)));
     if (!Number.isFinite(threadBrightness)) threadBrightness = 1;
     palette = networkPalettes.some((p) => p.id === params.get('palette'))
@@ -399,6 +242,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     params.set('threadBrightness', String(threadBrightness));
     params.set('intensity', String(intensity));
     params.set('categories', enabledFields.join(','));
+    params.set('sizeMode', sizeMode);
     params.set('zoom', String(zoom));
     if (pan.x) params.set('panX', String(pan.x));
     if (pan.y) params.set('panY', String(pan.y));
@@ -501,17 +345,16 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
           two = nodeById.get(edge.target);
         const path = `M${a.x},${a.y} L${b.x},${b.y}`;
         const name = `${label(one.field, one.value)} / ${label(two.field, two.value)}: ${edge.recordIds.length} ${tr().count}`;
-        return `<g style="--thread-source-light:var(--network-${one.field}-light);--thread-source-dark:var(--network-${one.field}-dark);--thread-color:${layout === 'free' ? 'color-mix(in srgb,color-mix(in srgb,var(--thread-source) 50%,var(--node-color)) 80%,var(--ink))' : layout === 'bipartite' && palette === 'troll' ? 'var(--network-bipartite-thread)' : 'var(--node-color)'};--wave-delay:${-((a.x + b.x) / 2 / 900) * 4.8}s" class="field-${two.field} ml-network-edge ${activeEdge(edge) ? 'is-active' : ''} ${selection && !activeEdge(edge) ? 'is-muted' : ''}"><path class="ml-edge-base" pathLength="100" d="${path}" stroke-width="${activeEdge(edge) ? Math.min(1.65, 0.45 + Math.sqrt(edge.recordIds.length) * 0.32) : 0.48}"/>${layout !== 'free' || animation === 'rain' ? `<path class="ml-edge-flow" d="${path}" pathLength="100" style="--rain-duration:${4.4 + (index % 5) * 0.32}s;--rain-delay:${-(index % 9) * 0.43}s"/>` : ''}<path class="ml-network-edge-hit" d="${path}" role="button" tabindex="0" data-network-edge="${index}" aria-label="${esc(name)}" aria-pressed="${activeEdge(edge)}"><title>${esc(name)}</title></path></g>`;
+        return `<g style="--thread-source-light:var(--network-${one.field}-light);--thread-source-dark:var(--network-${one.field}-dark);--thread-color:${layout === 'free' ? 'color-mix(in srgb,color-mix(in srgb,var(--thread-source) 50%,var(--node-color)) 80%,var(--ink))' : layout === 'bipartite' && palette === 'troll' ? 'var(--network-bipartite-thread)' : 'var(--node-color)'};--wave-delay:${-((a.x + b.x) / 2 / 900) * 4.8}s" class="field-${two.field} ml-network-edge ${activeEdge(edge) ? 'is-active' : ''} ${selection && !activeEdge(edge) ? 'is-muted' : ''}"><path class="ml-edge-base" pathLength="100" d="${path}" stroke-width="${activeEdge(edge) ? Math.min(1.65, 0.45 + Math.sqrt(edge.recordIds.length) * 0.32) : 0.48}"/>${layout !== 'free' || animation === 'rain' ? `<path class="ml-edge-flow" d="${path}" pathLength="100" style="--rain-duration:${4.4 + (index % 5) * 0.32}s;--rain-delay:${-(index % 9) * 0.43}s"/>` : ''}<path class="ml-network-edge-hit" d="${path}" role="button" tabindex="0" data-network-edge="${index}" aria-label="${esc(name)}" aria-pressed="${activeEdge(edge)}" data-tooltip="${esc(name)}"></path></g>`;
       })
       .join('')}</g><g class="ml-network-nodes">${graph.nodes
       .map((node: any, index: number) => {
         const p = cameraPoint(positions.get(node.id)!, zoom, pan),
           name = label(node.field, node.value),
           related = activeNode(node) || relatedIds.has(node.id);
-        const radius = nodeRadius(node, layout) * nodeSize;
+        const radius = nodeRadius(node, layout, sizeMode) * nodeSize;
         const column = graph.nodes.filter((n: any) => n.field === node.field),
           diagonal = layout === 'hierarchical' && column.length > 10;
-        const rightEdge = diagonal && p.x > 765;
         const labelX =
           layout === 'bipartite'
             ? node.side === 0
@@ -519,9 +362,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
               : radius + 8
             : layout === 'hierarchical'
               ? diagonal
-                ? rightEdge
-                  ? -radius - 6
-                  : radius + 6
+                ? radius + 6
                 : 0
               : p.x < 450
                 ? radius + 7
@@ -534,15 +375,13 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
                 : 'start'
               : layout === 'hierarchical'
                 ? diagonal
-                  ? rightEdge
-                    ? 'end'
-                    : 'start'
+                  ? 'start'
                   : 'middle'
                 : p.x < 450
                   ? 'start'
                   : 'end';
 
-        return `<g transform="translate(${p.x} ${p.y})" style="--wave-delay:${-(p.x / 900) * 4.8}s;--echo-delay:${Math.min(echo.get(node.id) || 0, 6) * 0.14}s" class="ml-network-node field-${node.field} ${selection && echo.has(node.id) ? 'has-echo-path' : ''} ${activeNode(node) ? 'is-selected' : ''} ${related ? 'is-active' : ''} ${selection && !related ? 'is-muted' : ''}" role="button" tabindex="0" data-network-node="${index}" aria-label="${esc(name)}: ${node.count} ${tr().count}" aria-pressed="${activeNode(node)}"><title>${esc(name)}: ${node.count} ${tr().count}</title><g class="node-depth"><circle class="node-hit-target" r="${Math.max(radius, 7)}"/>${nodeShape(node.field, radius)}</g>${labels ? `<text x="${labelX}" y="${labelY}" ${diagonal ? `transform="rotate(-45 ${labelX} ${labelY})"` : ''} text-anchor="${anchor}" font-size="${(layout === 'bipartite' ? 5 : 8) * textSize}">${esc(name)}</text>` : ''}</g>`;
+        return `<g transform="translate(${p.x} ${p.y})" style="--wave-delay:${-(p.x / 900) * 4.8}s;--echo-delay:${Math.min(echo.get(node.id) || 0, 6) * 0.14}s" class="ml-network-node field-${node.field} ${selection && echo.has(node.id) ? 'has-echo-path' : ''} ${activeNode(node) ? 'is-selected' : ''} ${related ? 'is-active' : ''} ${selection && !related ? 'is-muted' : ''}" role="button" tabindex="0" data-network-node="${index}" aria-label="${esc(name)}: ${node.count} ${tr().count}" aria-pressed="${activeNode(node)}" data-tooltip="${esc(name)}: ${node.count} ${tr().count}"><g class="node-depth"><circle class="node-hit-target" r="${Math.max(radius, 7)}"/>${nodeShape(node.field, radius)}</g>${labels ? `<text x="${labelX}" y="${labelY}" ${diagonal ? `transform="rotate(-45 ${labelX} ${labelY})"` : ''} text-anchor="${anchor}" font-size="${(layout === 'bipartite' ? 5 : 8) * textSize}">${esc(name)}</text>` : ''}</g>`;
       })
       .join('')}</g></g>`;
   }
@@ -567,6 +406,12 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       if (!selection.nodes.length) selection = null;
     } else if (selection && !selectedRows(rows).length) selection = null;
     const previousKey = graphKey;
+    const nextSizeKey = rows.map((row) => row.id).join(',');
+    if (sizeKey !== nextSizeKey) {
+      sizeKey = nextSizeKey;
+      sizeMetrics = nodeConnectionSizes(rows);
+    }
+    for (const node of graph.nodes) Object.assign(node, sizeMetrics.get(node.id));
     const t = tr(),
       height = arrange(),
       categories = layout !== 'bipartite' ? enabledFields : [left, right];
@@ -587,7 +432,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
             : selection
               ? `${label(selection.left, selection.leftValue)} / ${label(selection.right, selection.rightValue)}`
               : t.select;
-    return `<div style="${paletteVariables(palette)};--thread-brightness:${threadBrightness}" class="ml-network-workspace ${filtersOpen ? '' : 'filters-collapsed'} ${presentation ? 'is-presentation' : ''}" ${presentation ? `role="dialog" aria-modal="true" aria-label="${t.network}"` : ''}><button class="ml-network-filter-scrim" data-network-action="filters" aria-label="${t.hideFilters}" ${filtersOpen ? '' : 'hidden'}></button><aside class="ml-network-filters" ${filtersOpen ? '' : 'hidden'}><h3><i data-lucide="list-filter"></i>${t.filters}<button class="ml-mobile-filter-close" data-network-action="filters" aria-label="${t.hideFilters}"><i data-lucide="x"></i></button></h3>${layout !== 'bipartite' ? `<fieldset class="ml-network-categories"><legend>${t.show}</legend>${freeFields.map((field) => `<button type="button" class="ml-layer-chip field-${field}" data-network-action="category-${field}" aria-pressed="${enabledFields.includes(field)}"><b></b>${fieldLabel(field)}</button>`).join('')}</fieldset>` : ''}<label class="ml-network-multi"><input type="checkbox" data-network-setting="multi" ${multiSelect ? 'checked' : ''}/>${lang() === 'en' ? 'Select multiple nodes' : 'Velg flere noder'}</label>${multiSelect ? `<label class="ml-network-filter-field">${lang() === 'en' ? 'Match selected nodes' : 'Kombiner valgte noder'}<select data-network-setting="logic" aria-label="${lang() === 'en' ? 'Match selected nodes' : 'Kombiner valgte noder'}"><option value="any" ${selectionLogic === 'any' ? 'selected' : ''}>${lang() === 'en' ? 'Any selected node' : 'Minst én valgt node'}</option><option value="all" ${selectionLogic === 'all' ? 'selected' : ''}>${lang() === 'en' ? 'All selected nodes' : 'Alle valgte noder'}</option></select></label>` : ''}${filterHtml}<button type="button" data-reset-stats><i data-lucide="rotate-ccw"></i>${t.reset}</button>${downloadHtml}<p>${t.raw}</p></aside><section class="ml-network-surface" aria-label="${t.network}"><div class="ml-network-toolbar"><button type="button" data-network-action="filters" aria-expanded="${filtersOpen}" aria-label="${filtersOpen ? t.hideFilters : t.showFilters}"><i data-lucide="list-filter"></i></button><label>${t.layout}<select aria-label="${t.layout}" data-network-setting="layout">${['bipartite', 'free', 'hierarchical'].map((mode) => `<option value="${mode}" ${mode === layout ? 'selected' : ''}>${(t as any)[mode]}</option>`).join('')}</select></label>${layout === 'bipartite' ? `<label>${t.left}<select aria-label="${t.left}" data-network-setting="left">${options(left, right)}</select></label><label>${t.right}<select aria-label="${t.right}" data-network-setting="right">${options(right, left)}</select></label>` : ''}<button type="button" data-network-action="settings" aria-expanded="${settingsOpen}" aria-controls="ml-network-settings"><i data-lucide="settings-2"></i><span class="sr-only">${t.settings}</span></button><div class="ml-network-tools"><button type="button" data-network-action="motion" aria-pressed="${moving}" aria-label="${moving ? t.static : t.dynamic}"><i data-lucide="${moving ? 'pause' : 'play'}"></i></button><button type="button" data-network-action="labels" aria-pressed="${labels}" title="${t.labels}: ${!labels ? '–' : allLabels ? t.all : t.contextual}" aria-label="${t.labels}: ${!labels ? '–' : allLabels ? t.all : t.contextual}"><i data-lucide="${labels ? 'eye' : 'eye-off'}"></i></button>${scalePicker('nodeSize', t.nodeSize, nodeSize, 0.2, 2, 'circle')}${scalePicker('textSize', t.textSize, textSize, 0.5, 3, 'type')}<button type="button" data-network-action="scatter" aria-label="${lang() === 'en' ? 'Spread nodes' : 'Spre noder'}" title="${lang() === 'en' ? 'Spread nodes' : 'Spre noder'}"><i data-lucide="chart-scatter"></i></button><button type="button" data-network-action="fit" aria-label="${t.fit}" title="${t.fit}"><i data-lucide="rotate-ccw"></i></button><button type="button" data-network-action="zoomOut" aria-label="${t.zoomOut}" title="${t.zoomOut}"><i data-lucide="zoom-out"></i></button><output aria-label="Zoom">${Math.round(zoom * 100)}%</output><button type="button" data-network-action="zoomIn" aria-label="${t.zoomIn}" title="${t.zoomIn}"><i data-lucide="zoom-in"></i></button><button type="button" data-copy-stats aria-label="${lang() === 'en' ? 'Copy link' : 'Kopier lenke'}" title="${lang() === 'en' ? 'Copy link' : 'Kopier lenke'}"><i data-lucide="link"></i></button><button type="button" data-network-action="fullscreen" aria-label="${presentation ? t.exitFullscreen : t.fullscreen}" title="${presentation ? t.exitFullscreen : t.fullscreen}"><i data-lucide="maximize-2"></i></button></div><div class="ml-network-legend shape-${shape}" aria-label="${t.legend}">${categories.map((field) => `<span class="field-${field}"><b></b>${fieldLabel(field)}</span>`).join('')}</div></div><div class="ml-network-stage">${graph.edges.length > 500 ? '<canvas class="ml-network-link-canvas" width="2000" height="1280" aria-hidden="true"></canvas>' : ''}${rows.length ? `<svg class="ml-network-svg layout-${layout} ${graph.nodes.length > 500 ? 'is-dense' : ''} style-standard ${selection ? 'has-selection' : ''} animation-${animation} ${moving ? '' : 'motion-paused'} ${allLabels ? 'labels-all' : 'labels-contextual'}" role="group" viewBox="0 0 900 ${height}" style="height:${height}px" aria-label="${t.network}"><rect class="ml-network-background" width="900" height="${height}"/>${svgContent()}</svg>` : `<div class="ml-zero-state"><strong>${t.empty}</strong><p>${t.reset}</p></div>`}</div><p class="ml-network-coverage" role="status">${graph.represented} / ${rows.length} ${t.coverage} · ${graph.nodes.length} / ${graph.totalNodes} ${t.nodes} ${t.shown} · ${graph.edges.length} ${t.links}${graph.represented < rows.length ? `<br>${t.limited}` : ''}</p><p class="ml-network-caption">${layout === 'free' ? t.freeHelp : layout === 'hierarchical' ? t.hierarchyHelp : t.meaning}</p><div class="ml-network-inspector"><div><h3>${esc(selectionTitle)}</h3><p>${selection ? `${selected.length} ${t.count}` : t.help}</p></div><div><button type="button" data-network-action="texts" aria-expanded="${textsOpen}"><i data-lucide="list"></i>${selection ? t.texts : lang() === 'en' ? 'Show texts' : 'Vis tekster'} <b>${selected.length}</b></button>${selection ? `<button type="button" data-network-action="clear"><i data-lucide="x"></i>${t.clear}</button>` : ''}</div></div></section>${settingsPanel()}</div>`;
+    return `<div style="${paletteVariables(palette)};--thread-brightness:${threadBrightness}" class="ml-network-workspace ${filtersOpen ? '' : 'filters-collapsed'} ${presentation ? 'is-presentation' : ''}" ><button class="ml-network-filter-scrim" data-network-action="filters" aria-label="${t.hideFilters}" ${filtersOpen ? '' : 'hidden'}></button><aside class="platform-filter-panel ml-network-filters" ${filtersOpen ? '' : 'hidden'}><h3><i data-lucide="list-filter"></i>${t.filters}<button class="ml-mobile-filter-close" data-network-action="filters" aria-label="${t.hideFilters}"><i data-lucide="chevron-left"></i></button></h3>${layout !== 'bipartite' ? `<fieldset class="ml-network-categories"><legend>${t.show}</legend>${freeFields.map((field) => `<button type="button" class="ml-layer-chip field-${field}" data-network-action="category-${field}" aria-pressed="${enabledFields.includes(field)}"><b></b>${fieldLabel(field)}</button>`).join('')}</fieldset>` : ''}${filterHtml}<button type="button" data-reset-stats><i data-lucide="rotate-ccw"></i>${t.reset}</button>${downloadHtml}<p>${t.raw}</p></aside><section class="ml-network-surface" aria-label="${t.network}"><div class="ml-network-toolbar"><button type="button" data-network-action="filters" aria-expanded="${filtersOpen}" aria-label="${filtersOpen ? t.hideFilters : t.showFilters}"><i data-lucide="list-filter"></i></button><label>${t.layout}<select aria-label="${t.layout}" data-network-setting="layout">${['bipartite', 'free', 'hierarchical'].map((mode) => `<option value="${mode}" ${mode === layout ? 'selected' : ''}>${(t as any)[mode]}</option>`).join('')}</select></label>${layout === 'bipartite' ? `<label>${t.left}<select aria-label="${t.left}" data-network-setting="left">${options(left, right)}</select></label><label>${t.right}<select aria-label="${t.right}" data-network-setting="right">${options(right, left)}</select></label>` : ''}<button type="button" data-network-action="settings" aria-expanded="${settingsOpen}" aria-controls="ml-network-settings"><i data-lucide="settings-2"></i><span class="sr-only">${t.settings}</span></button><div class="ml-network-tools"><button type="button" data-network-action="motion" aria-pressed="${moving}" aria-label="${moving ? t.static : t.dynamic}"><i data-lucide="${moving ? 'pause' : 'play'}"></i></button><button type="button" data-network-action="labels" data-label-mode="${!labels ? 'off' : allLabels ? 'all' : 'active'}" aria-pressed="${!labels ? 'false' : allLabels ? 'true' : 'mixed'}" data-tooltip="${t.labels}: ${!labels ? t.labelsOff : allLabels ? t.all : t.contextual}" aria-label="${t.labels}: ${!labels ? t.labelsOff : allLabels ? t.all : t.contextual}"><i data-lucide="${!labels ? 'eye-off' : 'eye'}"></i></button>${scalePicker('nodeSize', t.nodeSize, nodeSize, 0.2, 2, 'circle')}${scalePicker('textSize', t.textSize, textSize, 0.5, 3, 'type')}<button type="button" data-network-action="scatter" aria-label="${extraCopy[lang()].scatter}" data-tooltip="${extraCopy[lang()].scatter}"><i data-lucide="chart-scatter"></i></button><button type="button" data-network-action="fit" aria-label="${t.fit}" data-tooltip="${t.fit}"><i data-lucide="rotate-ccw"></i></button><button type="button" data-network-action="zoomOut" aria-label="${t.zoomOut}" data-tooltip="${t.zoomOut}"><i data-lucide="zoom-out"></i></button><output aria-label="Zoom">${Math.round(zoom * 100)}%</output><button type="button" data-network-action="zoomIn" aria-label="${t.zoomIn}" data-tooltip="${t.zoomIn}"><i data-lucide="zoom-in"></i></button><button type="button" data-copy-stats aria-label="${extraCopy[lang()].share}" data-tooltip="${extraCopy[lang()].share}"><i data-lucide="link"></i></button></div><div class="ml-network-legend shape-${shape}" aria-label="${t.legend}">${categories.map((field) => `<span class="field-${field}"><b></b>${fieldLabel(field)}</span>`).join('')}</div></div><div class="ml-network-stage" ${presentation ? `role="dialog" aria-modal="true" aria-label="${t.network}"` : ''}>${graph.edges.length > 500 ? '<canvas class="ml-network-link-canvas" width="2000" height="1280" aria-hidden="true"></canvas>' : ''}${rows.length ? `<svg class="ml-network-svg layout-${layout} ${graph.nodes.length > 500 ? 'is-dense' : ''} style-standard ${selection ? 'has-selection' : ''} animation-${animation} ${moving ? '' : 'motion-paused'} ${allLabels ? 'labels-all' : 'labels-contextual'}" role="group" viewBox="0 0 900 ${height}" style="height:${height}px" aria-label="${t.network}"><rect class="ml-network-background" width="900" height="${height}"/>${svgContent()}</svg>` : `<div class="ml-zero-state"><strong>${t.empty}</strong><p>${t.reset}</p></div>`}<button type="button" class="ml-network-fullscreen" data-network-action="fullscreen" aria-label="${presentation ? t.exitFullscreen : t.fullscreen}" data-tooltip="${presentation ? t.exitFullscreen : t.fullscreen}"><i data-lucide="${presentation ? 'minimize-2' : 'maximize-2'}"></i></button></div><p class="ml-network-coverage" role="status">${graph.represented} / ${rows.length} ${t.coverage} · ${graph.nodes.length} / ${graph.totalNodes} ${t.nodes} ${t.shown} · ${graph.edges.length} ${t.links}${graph.represented < rows.length ? `<br>${t.limited}` : ''}</p><p class="ml-network-caption">${layout === 'free' ? t.freeHelp : layout === 'hierarchical' ? t.hierarchyHelp : t.meaning}</p><div class="ml-network-inspector"><div><h3>${esc(selectionTitle)}</h3><p>${selection ? `${selected.length} ${t.count}` : t.help}</p></div><div><button type="button" data-network-action="texts" aria-expanded="${textsOpen}"><i data-lucide="list"></i>${selection ? t.texts : extraCopy[lang()].texts} <b>${selected.length}</b></button>${selection ? `<button type="button" data-network-action="clear"><i data-lucide="x"></i>${t.clear}</button>` : ''}</div></div></section>${settingsPanel()}</div>`;
   }
   function scalePicker(
     key: string,
@@ -597,45 +442,18 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     max: number,
     icon: string,
   ) {
-    return `<div class="ml-network-scale"><button data-network-action="scale-${key}" aria-label="${title}" title="${title}: ${Math.round(value * 100)}%" aria-expanded="${scaleControl === key}" aria-controls="network-${key}"><i data-lucide="${icon}"></i></button>${scaleControl === key ? `<div id="network-${key}" class="ml-network-scale-popover"><label>${title}<input type="range" data-network-setting="${key}" aria-label="${title}" min="${min}" max="${max}" step=".1" value="${value}"/></label><output>${Math.round(value * 100)}%</output></div>` : ''}</div>`;
+    return `<div class="ml-network-scale"><button data-network-action="scale-${key}" aria-label="${title}" data-tooltip="${title}: ${Math.round(value * 100)}%" aria-expanded="${scaleControl === key}" aria-controls="network-${key}"><i data-lucide="${icon}"></i></button>${scaleControl === key ? `<div id="network-${key}" class="ml-network-scale-popover"><label>${title}<input type="range" data-network-setting="${key}" aria-label="${title}" min="${min}" max="${max}" step=".1" value="${value}"/></label><output>${Math.round(value * 100)}%</output></div>` : ''}</div>`;
   }
   function settingsPanel() {
     const t = tr(),
-      help =
-        lang() === 'en'
-          ? {
-              drift: 'Nodes drift slowly and gently around their positions.',
-              orbit:
-                'The whole network revolves slowly around its center while every node follows its own orbit, speed, and direction.',
-              chaos:
-                'Nodes move more actively and irregularly without losing the underlying structure.',
-            }
-          : {
-              drift: 'Nodene driver langsomt rundt posisjonene sine.',
-              orbit:
-                'Hele nettverket roterer langsomt rundt sentrum, mens hver node følger sin egen bane, hastighet og retning.',
-              chaos:
-                'Nodene beveger seg mer aktivt og uregelmessig uten å miste den underliggende strukturen.',
-            };
+      sizing = nodeSizeCopy[lang()],
+      help = extraCopy[lang()].motionHelp;
     const picker = (key: string, values: string[], value: string) =>
       `<select data-network-setting="${key}" aria-label="${(t as any)[key]}">${values.map((v) => `<option value="${v}" ${value === v ? 'selected' : ''}>${(t as any)[v]}</option>`).join('')}</select>`;
-    const animationHelp =
-      lang() === 'en'
-        ? {
-            none: 'No additional animation.',
-            rain: 'A continuous flow follows the connections.',
-            echo: 'Select a node or connection to send a pulse through its neighbours.',
-            wave: 'A repeating light wave passes across nodes and connections.',
-          }
-        : {
-            none: 'Ingen ekstra animasjon.',
-            rain: 'En kontinuerlig strøm følger forbindelsene.',
-            echo: 'Velg en node eller forbindelse for å sende en puls gjennom nabonodene.',
-            wave: 'En gjentakende lysbølge går gjennom noder og forbindelser.',
-          };
+    const animationHelp = extraCopy[lang()].animationHelp;
     const buttons = (key: string, values: string[], current: string) =>
       `<div class="ml-network-segmented">${values.map((v) => `<button data-network-action="${key}-${v}" aria-pressed="${v === current}">${key === 'moving' ? `<i data-lucide="${v === 'dynamic' ? 'play' : 'pause'}"></i>` : ''}${(t as any)[v]}</button>`).join('')}</div>`;
-    return `${settingsOpen ? `<button class="ml-network-settings-scrim" data-network-action="settings" aria-label="${t.close}"></button>` : ''}<aside id="ml-network-settings" class="ml-network-settings" role="dialog" aria-modal="false" ${settingsOpen ? '' : 'hidden'} aria-label="${t.settings}"><header><div><span>${lang() === 'en' ? 'Norwegian folk legends' : 'Norske sagn'}</span><h3>${t.settings}</h3></div><button data-network-action="settings" aria-label="${t.close}"><i data-lucide="x"></i></button></header><fieldset class="ml-palette-section"><legend>${lang() === 'en' ? 'Colour palette' : 'Fargepalett'}</legend><div class="ml-palette-picker">${networkPalettes.map((p) => `<button type="button" data-network-action="palette-${p.id}" aria-pressed="${palette === p.id}"><span class="ml-palette-swatches" aria-hidden="true">${p.light.map((color, i) => `<b style="--swatch-light:${color};--swatch-dark:${p.dark[i]}"></b>`).join('')}</span><span>${p.name}</span><i data-lucide="check"></i></button>`).join('')}</div></fieldset><fieldset class="ml-mobile-scale-setting"><legend>${t.nodeSize}</legend><input type="range" min=".2" max="2" step=".1" value="${nodeSize}" data-network-setting="nodeSize" aria-label="${t.nodeSize}"/></fieldset><fieldset class="ml-mobile-scale-setting"><legend>${t.textSize}</legend><input type="range" min=".5" max="3" step=".1" value="${textSize}" data-network-setting="textSize" aria-label="${t.textSize}"/></fieldset><fieldset><legend>${t.movement}</legend>${buttons('moving', ['dynamic', 'static'], moving ? 'dynamic' : 'static')}<p>${t.motionHelp}</p></fieldset><fieldset><legend>${t.motion}</legend>${picker('motion', ['drift', 'orbit', 'chaos'], motion)}<label class="ml-motion-intensity"><span>${t.intensity}<output>${Math.round(intensity * 100)}%</output></span><input type="range" min=".1" max="2" step=".05" value="${intensity}" data-network-setting="intensity" aria-label="${t.intensity}"/></label><p>${(help as any)[motion]}</p></fieldset><fieldset><legend>${lang() === 'en' ? 'Thread brightness' : 'Lysstyrke på forbindelser'}</legend><label class="ml-motion-intensity"><span><output>${Math.round(threadBrightness * 100)}%</output></span><input type="range" min="0" max="2" step=".05" value="${threadBrightness}" data-network-setting="threadBrightness" aria-label="${lang() === 'en' ? 'Thread brightness' : 'Lysstyrke på forbindelser'}"/></label></fieldset><fieldset><legend>${t.animation}</legend>${picker('animation', ['none', 'rain', 'echo', 'wave'], animation)}<p>${(animationHelp as any)[animation]}</p></fieldset><fieldset><legend>${t.shape}</legend>${buttons('shape', ['category', 'circle'], shape)}</fieldset><button data-network-action="defaults"><i data-lucide="rotate-ccw"></i>${t.defaults}</button></aside>`;
+    return `${settingsOpen ? `<button class="ml-network-settings-scrim" data-network-action="settings" aria-label="${t.close}"></button>` : ''}<aside id="ml-network-settings" class="ml-network-settings" role="dialog" aria-modal="false" ${settingsOpen ? '' : 'hidden'} aria-label="${t.settings}"><header><div><span>${lang() === 'en' ? 'Norwegian folk legends' : 'Norske sagn'}</span><h3>${t.settings}</h3></div><button data-network-action="settings" aria-label="${t.close}"><i data-lucide="x"></i></button></header><fieldset><legend>${lang() === 'no' ? 'Nodeutvalg' : 'Node selection'}</legend><label class="ml-network-multi"><input type="checkbox" data-network-setting="multi" ${multiSelect ? 'checked' : ''}/>${extraCopy[lang()].multi}</label>${multiSelect ? `<label class="ml-network-filter-field">${extraCopy[lang()].match}<select data-network-setting="logic" aria-label="${extraCopy[lang()].match}"><option value="any" ${selectionLogic === 'any' ? 'selected' : ''}>${extraCopy[lang()].any}</option><option value="all" ${selectionLogic === 'all' ? 'selected' : ''}>${extraCopy[lang()].every}</option></select></label>` : ''}</fieldset><fieldset><legend>${sizing.label}</legend><select data-network-setting="sizeMode" aria-label="${sizing.label}"><option value="uniform" ${sizeMode === 'uniform' ? 'selected' : ''}>${sizing.uniform}</option><option value="connections" ${sizeMode === 'connections' ? 'selected' : ''}>${sizing.connections}</option></select><p>${sizing.hint}</p></fieldset><fieldset class="ml-palette-section"><legend>${extraCopy[lang()].palette}</legend><div class="ml-palette-picker">${networkPalettes.map((p) => `<button type="button" data-network-action="palette-${p.id}" aria-pressed="${palette === p.id}"><span class="ml-palette-swatches" aria-hidden="true" style="--palette-light:linear-gradient(100deg,${p.light.join(',')});--palette-dark:linear-gradient(100deg,${p.dark.join(',')})"></span><span>${p.name}</span><i data-lucide="check"></i></button>`).join('')}</div></fieldset><fieldset class="ml-mobile-scale-setting"><legend>${t.nodeSize}</legend><input type="range" min=".2" max="2" step=".1" value="${nodeSize}" data-network-setting="nodeSize" aria-label="${t.nodeSize}"/></fieldset><fieldset class="ml-mobile-scale-setting"><legend>${t.textSize}</legend><input type="range" min=".5" max="3" step=".1" value="${textSize}" data-network-setting="textSize" aria-label="${t.textSize}"/></fieldset><fieldset><legend>${t.movement}</legend>${buttons('moving', ['dynamic', 'static'], moving ? 'dynamic' : 'static')}<p>${t.motionHelp}</p></fieldset><fieldset><legend>${t.motion}</legend>${picker('motion', ['drift', 'orbit', 'chaos'], motion)}<label class="ml-motion-intensity"><span>${t.intensity}<output>${Math.round(intensity * 100)}%</output></span><input type="range" min=".1" max="2" step=".05" value="${intensity}" data-network-setting="intensity" aria-label="${t.intensity}"/></label><p>${(help as any)[motion]}</p></fieldset><fieldset><legend>${extraCopy[lang()].threadBrightness}</legend><label class="ml-motion-intensity"><span><output>${Math.round(threadBrightness * 100)}%</output></span><input type="range" min="0" max="2" step=".05" value="${threadBrightness}" data-network-setting="threadBrightness" aria-label="${extraCopy[lang()].threadBrightness}"/></label></fieldset><fieldset><legend>${t.animation}</legend>${picker('animation', ['none', 'rain', 'echo', 'wave'], animation)}<p>${(animationHelp as any)[animation]}</p></fieldset><fieldset><legend>${t.shape}</legend>${buttons('shape', ['category', 'circle'], shape)}</fieldset><button data-network-action="defaults"><i data-lucide="rotate-ccw"></i>${t.defaults}</button></aside>`;
   }
   function updateCamera(root: HTMLElement) {
     root.querySelector('.ml-network-tools>output')!.textContent = `${Math.round(zoom * 100)}%`;
@@ -746,6 +564,8 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     }
     if (action === 'fullscreen') {
       presentation = !presentation;
+      settingsOpen = false;
+      scaleControl = null;
       commit();
       root
         .querySelector<HTMLElement>('[data-network-action="fullscreen"]')
@@ -801,6 +621,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       shape = 'circle';
       palette = 'sagn';
       threadBrightness = 1;
+      sizeMode = 'connections';
       nodeSize = 1;
       textSize = 1;
       labels = true;
@@ -852,6 +673,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     if (setting === 'animation') animation = target.value;
     if (setting === 'shape') shape = target.value;
     if (setting === 'layout') layout = target.value;
+    if (setting === 'sizeMode') sizeMode = target.value === 'uniform' ? 'uniform' : 'connections';
     if (setting === 'left') left = target.value;
     if (setting === 'right') right = target.value;
     if (setting === 'limit') limit = Number(target.value);
@@ -959,7 +781,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
         suppressClick = true;
         if (!event.touches.length) {
           pinch = null;
-          setTimeout(() => (suppressClick = false), 0);
+          setTimeout(() => (suppressClick = false), 200);
         }
       }
     });
@@ -1000,7 +822,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       if (presentation && event.key === 'Tab') {
         const items = [
           ...root.querySelectorAll<HTMLElement>(
-            '.ml-network-workspace a[href],.ml-network-workspace button:not(:disabled),.ml-network-workspace select,.ml-network-workspace input,.ml-network-workspace [data-network-node],.ml-network-workspace [data-network-edge]',
+            '.ml-network-stage button:not(:disabled),.ml-network-stage [data-network-node],.ml-network-stage [data-network-edge]',
           ),
         ].filter((el) => !el.closest('[hidden]') && el.getClientRects().length > 0);
         if (event.shiftKey && document.activeElement === items[0]) {
@@ -1032,6 +854,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       }
     });
     root.addEventListener('pointerdown', (event) => {
+      suppressClick = false;
       if (event.button !== 0 || pinch) return;
       const target = event.target as Element,
         svg = target.closest<SVGSVGElement>('.ml-network-svg');
@@ -1092,7 +915,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
         select(root, previous.index, false, previous.additive);
         suppressClick = true;
       }
-      setTimeout(() => (suppressClick = false), 0);
+      setTimeout(() => (suppressClick = false), 200);
     });
     root.addEventListener('pointercancel', () => {
       drag = null;
@@ -1116,6 +939,25 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
     if (!svg) return;
     const reducedMotion = matchMedia('(prefers-reduced-motion:reduce)').matches,
       dense = graph.nodes.length > 500;
+    const nextRevealKey = JSON.stringify([layout, selection]);
+    if (nextRevealKey !== revealKey) {
+      revealKey = nextRevealKey;
+      revealStarted = selection && layout !== 'free' && !reducedMotion ? performance.now() : 0;
+    }
+    const revealing = () => revealStarted > 0 && performance.now() - revealStarted < revealDuration;
+    const revealPoints = (edge: any, a: any, b: any) => {
+      if (!activeEdge(edge) || layout === 'free' || reducedMotion || !revealing()) return [a, b];
+      const t = Math.min(1, Math.max(0, (performance.now() - revealStarted) / revealDuration));
+      const progress = 1 - Math.pow(1 - t, 3);
+      const reverse =
+        activeNode(nodeById.get(edge.target)) && !activeNode(nodeById.get(edge.source));
+      const start = reverse ? b : a,
+        end = reverse ? a : b;
+      return [
+        start,
+        { x: start.x + (end.x - start.x) * progress, y: start.y + (end.y - start.y) * progress },
+      ];
+    };
     const nodes = [...svg.querySelectorAll<SVGGElement>('[data-network-node]')],
       edgePaths = [...svg.querySelectorAll('.ml-network-edge')].map((el) => [
         ...el.querySelectorAll('path'),
@@ -1199,11 +1041,19 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       threadColours.set(key, color);
       return color;
     };
+    const edgeStyle = getComputedStyle(svg),
+      freeEdgeAlpha = parseFloat(edgeStyle.getPropertyValue('--network-free-edge-alpha')) || 0.3,
+      structuredEdgeAlpha =
+        parseFloat(edgeStyle.getPropertyValue('--network-structured-edge-alpha')) || 0.1,
+      mutedEdgeAlpha = parseFloat(edgeStyle.getPropertyValue('--network-muted-edge-alpha')) || 0.09,
+      idleEdgeWidth = parseFloat(edgeStyle.getPropertyValue('--network-idle-edge-width')) || 0.75;
     const edges = graph.edges.map((e: any) => ({
       e,
       a: activeEdge(e),
       color: threadColour(e),
-      width: activeEdge(e) ? Math.min(1.65, 0.45 + Math.sqrt(e.recordIds.length) * 0.32) : 0.48,
+      width: activeEdge(e)
+        ? Math.min(1.65, 0.45 + Math.sqrt(e.recordIds.length) * 0.32)
+        : idleEdgeWidth,
       phase:
         Math.floor(
           ((cameraPoint(positions.get(e.source)!, zoom, pan).x +
@@ -1234,25 +1084,28 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
       edgeGroups.set(key, group);
     }
     const draw = () => {
+      const matrix = svg.getScreenCTM(),
+        amplitudeScale = motionAmplitudeScale(matrix ? Math.hypot(matrix.a, matrix.b) * zoom : 1);
       displayedPositions = new Map();
       screenPositions = new Map();
       graph.nodes.forEach((n: any, i: number) => {
         const base = positions.get(n.id)!,
           p =
             layout === 'free' && !reducedMotion && drag?.index !== i
-              ? positionWithMotion(n.id, base, clock, motion, intensity)
+              ? positionWithMotion(n.id, base, clock, motion, intensity, undefined, amplitudeScale)
               : { ...base, scale: 1, opacity: 1 };
         displayedPositions.set(n.id, p);
         const screen = cameraPoint(p, zoom, pan);
         screenPositions.set(n.id, screen);
         nodes[i].setAttribute('transform', `translate(${screen.x} ${screen.y})`);
-        depths[i].setAttribute('transform', `scale(${p.scale})`);
+        const depthScale = sizeMode === 'uniform' ? 1 : p.scale;
+        depths[i].setAttribute('transform', `scale(${depthScale})`);
         hitTargets[i].setAttribute(
           'r',
-          String(Math.max(nodeRadius(n, layout) * nodeSize, 7 / p.scale)),
+          String(Math.max(nodeRadius(n, layout, sizeMode) * nodeSize, 7 / depthScale)),
         );
         if (texts[i] && layout === 'free') {
-          const radius = nodeRadius(n, layout) * nodeSize * p.scale;
+          const radius = nodeRadius(n, layout, sizeMode) * nodeSize * depthScale;
           texts[i]!.setAttribute('x', String(screen.x < 450 ? radius + 7 : -radius - 7));
           texts[i]!.setAttribute('text-anchor', screen.x < 450 ? 'start' : 'end');
         }
@@ -1269,6 +1122,9 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
           if (parent?.children[i] !== node) parent?.insertBefore(node, parent.children[i] || null);
         });
       }
+      // Keep selected nodes above overlaps, including after Orbit depth sorting.
+      for (const node of nodes)
+        if (node.classList.contains('is-selected')) node.parentElement?.append(node);
       if (ctx && canvas) {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1291,14 +1147,23 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
                     ),
                   )
                 : 0;
-          const baseAlpha = a ? 0.78 : selection ? 0.04 : layout === 'free' ? 0.1 : 0.046;
+          const baseAlpha = a
+            ? 0.78
+            : selection
+              ? mutedEdgeAlpha
+              : layout === 'free'
+                ? freeEdgeAlpha
+                : structuredEdgeAlpha;
           ctx.globalAlpha = Math.min(1, baseAlpha * (1 + pulse * 2.2) * threadBrightness);
           ctx.strokeStyle = color;
           ctx.lineWidth = width;
           ctx.beginPath();
           for (const { e } of group) {
-            const one = screenPositions.get(e.source)!,
-              two = screenPositions.get(e.target)!;
+            const [one, two] = revealPoints(
+              e,
+              screenPositions.get(e.source)!,
+              screenPositions.get(e.target)!,
+            );
             ctx.moveTo(one.x, one.y);
             ctx.lineTo(two.x, two.y);
           }
@@ -1306,7 +1171,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
           if (layout !== 'free' || animation === 'rain') {
             ctx.globalAlpha = Math.min(
               1,
-              (a ? 0.94 : animation === 'rain' ? 0.72 : 0.23) *
+              (a ? 0.94 : animation === 'rain' ? 0.72 : 0.065) *
                 (1 + pulse * 1.4) *
                 threadBrightness,
             );
@@ -1323,27 +1188,35 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
         graph.edges.forEach((e: any, i: number) => {
           const a = screenPositions.get(e.source)!,
             b = screenPositions.get(e.target)!;
-          edgePaths[i]?.forEach((p) => p.setAttribute('d', `M${a.x},${a.y} L${b.x},${b.y}`));
+          const [start, end] = revealPoints(e, a, b);
+          edgePaths[i]?.forEach((p) =>
+            p.setAttribute(
+              'd',
+              p.classList.contains('ml-network-edge-hit')
+                ? `M${a.x},${a.y} L${b.x},${b.y}`
+                : `M${start.x},${start.y} L${end.x},${end.y}`,
+            ),
+          );
         });
     };
     redraw = draw;
     draw();
     lastFrame = performance.now();
-    if (canvas) {
-      viewportObserver = new ResizeObserver(() => {
-        resizeCanvas();
-        draw();
-      });
-      viewportObserver.observe(svg);
-    }
+    viewportObserver = new ResizeObserver(() => {
+      resizeCanvas();
+      draw();
+    });
+    viewportObserver.observe(svg);
     const tick = (now: number) => {
       frame = requestAnimationFrame(tick);
+      if (revealStarted && !revealing()) {
+        revealStarted = 0;
+        draw();
+      }
       if (
         document.hidden ||
-        !moving ||
-        reducedMotion ||
-        (layout !== 'free' && animation === 'none') ||
-        drag
+        drag ||
+        (!revealing() && (!moving || reducedMotion || (layout !== 'free' && animation === 'none')))
       ) {
         lastFrame = now;
         return;
@@ -1373,6 +1246,7 @@ export function createNetwork({ lang, types, topics, change, sync }: NetworkOpti
 
   let suppressClick = false;
   return {
+    setStyles,
     copy: tr,
     label,
     render,
