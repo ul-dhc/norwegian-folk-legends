@@ -432,7 +432,7 @@ function buildScenes() {
 const readingDuration = (s) =>
   mode === 'moe'
     ? s.effect === 'encounter'
-      ? Math.max(10000, (s.text.trim().split(/\s+/u).length / 240) * 60000 + 1000)
+      ? 2 * Math.max(10000, (s.text.trim().split(/\s+/u).length / 240) * 60000 + 1000)
       : Math.max(12000, (s.text.trim().split(/\s+/u).length / 145) * 60000 + 3500)
     : passageDuration(s.text);
 function schedule(ms, showProgress = false) {
