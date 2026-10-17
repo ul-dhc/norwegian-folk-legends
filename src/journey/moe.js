@@ -1,9 +1,27 @@
 export const moeIds = ['SIN263', 'SIN473'];
+const moeEnglish = {
+  SIN263: {
+    english_title: 'A Cry from the Water (“The Hour Has Come”)',
+    english_translation: `Once, a man came to the parsonage in Heddal, running and looking so terrified that the priest thought he had never seen anyone arrive in such a state.
+The priest told them to hold him back. But they did not think they would be able to keep hold of him.
+Then a voice called from the water: “The time has come, but not the man”
+At last the man asked for some water.
+Then the priest told them to fetch water from the river and give it to him.
+When he had drunk it, he died. But he had been saved from drowning.`,
+  },
+  SIN473: {
+    english_title: 'Reaping the Field',
+    english_translation: `There was a man over here at Erikstein who had a very large field.
+The field was ripe for reaping, and one day he said: “Oh! Whoever would reap this field for me, I would gladly give him my bull!”
+By morning the field had been reaped. The sheaves had not been tied, but they had clearly heard the sickles during the night.
+The field is still called “Uller-åkern.”`,
+  },
+};
 export const moeRoute = (records) =>
   moeIds
     .map((id) => records.find((r) => r.source_text_id === id))
     .filter(Boolean)
-    .map((r) => ({ ...r, journeyColour: '#D2B957' }));
+    .map((r) => ({ ...r, ...moeEnglish[r.source_text_id], journeyColour: '#D2B957' }));
 const pair = (en, no) => ({ en, no });
 export const moeIntro = pair(
   'Across a landscape of collected stories, meet two of Moltke Moe’s narrators. Follow a photograph and a handwritten page into the Norwegian digital folklore archive SAMLA.',

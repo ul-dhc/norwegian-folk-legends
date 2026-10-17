@@ -141,6 +141,7 @@ const textFor = (r) =>
     ? r.english_translation
     : r.tekst;
 const heading = (r) =>
+  (language() === 'en' && !original && r.english_title) ||
   r.tittel || r.ml_title || (language() === 'en' ? 'Untitled legend' : 'Sagn uten tittel');
 let showUncertainty = false;
 let selectedMap = 'coastlines';
