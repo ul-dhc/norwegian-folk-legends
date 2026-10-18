@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { journeySlugs } from '../journey/routes.js';
+import { journeyHash } from '../journey/routes.js';
 import {
   legends,
   collectors,
@@ -128,7 +128,7 @@ const knownCollectors = collectors.filter((item) => displayPersonName(item)).len
       </div>
     </a>)}</div>
   </section>
-  <section class="section shell home-journeys" aria-labelledby="journeys-title"><div class="section-head"><div><p class="eyebrow" data-i18n="home.journeysEyebrow">Gjennom landskapet</p><h2 id="journeys-title" data-i18n="home.journeysTitle">Tre reiser inn i sagnene</h2></div></div><div class="journey-spotlights">{journeys.map(journey=><a class:list={['journey-spotlight',`journey-${journey.mode}`]} href={`${base}journey/#${journeySlugs[journey.mode]}`}><div class="journey-scenery" aria-hidden="true">{journey.mode==='weave'&&<img src={threadsMeetPreview} alt="" loading="lazy" width="1470" height="711"/>}{journey.mode==='thread'&&<img src={oneThreadPreview} alt="" loading="lazy" width="1000" height="1000"/>}{journey.mode==='moe'&&<img src={livPhotograph} alt="" loading="lazy" width="1346" height="2048"/>}</div><div class="journey-story"><h3 data-i18n={`home.${journey.key}Title`}>{journey.title}</h3><p data-i18n={`home.${journey.key}Description`}>{journey.description}</p><span class="journey-open" data-i18n="home.beginJourney">Utforsk reisen</span></div></a>)}</div></section>
+  <section class="section shell home-journeys" aria-labelledby="journeys-title"><div class="section-head"><div><p class="eyebrow" data-i18n="home.journeysEyebrow">Gjennom landskapet</p><h2 id="journeys-title" data-i18n="home.journeysTitle">Tre reiser inn i sagnene</h2></div></div><div class="journey-spotlights">{journeys.map(journey=><a class:list={['journey-spotlight',`journey-${journey.mode}`]} href={`${base}journey/#${journeyHash(journey.mode)}`}><div class="journey-scenery" aria-hidden="true">{journey.mode==='weave'&&<img src={threadsMeetPreview} alt="" loading="lazy" width="1470" height="711"/>}{journey.mode==='thread'&&<img src={oneThreadPreview} alt="" loading="lazy" width="1000" height="1000"/>}{journey.mode==='moe'&&<img src={livPhotograph} alt="" loading="lazy" width="1346" height="2048"/>}</div><div class="journey-story"><h3 data-i18n={`home.${journey.key}Title`}>{journey.title}</h3><p data-i18n={`home.${journey.key}Description`}>{journey.description}</p><span class="journey-open" data-i18n="home.beginJourney">Utforsk reisen</span></div></a>)}</div></section>
   <style>
     :global(body:has(.norske-home-hero)){background:var(--paper)!important}
     :global(body:has(.norske-home-hero)::before),:global(body:has(.norske-home-hero)::after){display:none!important}
