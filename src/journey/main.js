@@ -14,6 +14,7 @@ import {
   known,
   ReadingClock,
   continueRoute,
+  jumpDestination,
   normalText,
   networkEdges,
 } from './engine.js';
@@ -144,7 +145,9 @@ const textFor = (r) =>
     : r.tekst;
 const heading = (r) =>
   (language() === 'en' && !original && r.english_title) ||
-  r.tittel || r.ml_title || (language() === 'en' ? 'Untitled legend' : 'Sagn uten tittel');
+  r.tittel ||
+  r.ml_title ||
+  (language() === 'en' ? 'Untitled legend' : 'Sagn uten tittel');
 let showUncertainty = false;
 let selectedMap = 'coastlines';
 try {
@@ -251,6 +254,10 @@ function controls() {
   );
   el('journey-pause').hidden = !active;
   el('journey-next').hidden = !active;
+  el('journey-jump').hidden = !active || mode !== 'weave';
+  el('journey-jump').textContent = t().jump;
+  el('journey-jump').title = t().jumpHint;
+  el('journey-jump').setAttribute('aria-label', `${t().jump}: ${t().jumpHint}`);
   el('journey-back').hidden = !active;
   el('journey-back').disabled = sceneIndex <= 0;
   el('journey-pause').textContent = paused ? '▶ ' + t().resume : 'Ⅱ ' + t().pause;
@@ -401,7 +408,7 @@ function buildScenes() {
       bridgeChoices.set(completed + i, count);
       bridgeCounts.set(kind, count + 1);
     }
-    if (networks.has(i)) scenes.push(networks.get(i));
+    if (networks.has(i) && links[i]?.kind !== 'jump') scenes.push(networks.get(i));
     scenes.push({ kind: 'travel', i });
     if (mode !== 'weave') scenes.push({ kind: 'context', i });
     const pages = shortEnough(r) ? passages(textFor(r), capacity(textFor(r), heading(r))) : [];
@@ -924,7 +931,12 @@ function renderScene(preserveMap = false) {
   } else if (s.kind === 'travel' || s.kind === 'story-travel') {
     const isStory = s.kind === 'story-travel',
       target = isStory ? s.place : r;
-    if (isStory) {
+    if (!isStory && links[s.i]?.kind === 'jump') {
+      caption(format(t().jumpArrival, { place: r.sted }));
+      if (!preserveMap) map?.focus(r);
+      schedule(typingDuration + 3500);
+      revealControls();
+      return;
     }
     const sentence = isStory
       ? format(s.place.role === 'family' ? t().familyTravel : t().storyTravel, {
@@ -1252,6 +1264,44 @@ function advance() {
     showScene();
   }
 }
+function jump() {
+  if (!started || mode !== 'weave') return;
+  const current = record();
+  const eligible = records.filter(shortEnough);
+  const destination = jumpDestination(eligible, current, visited, Math.random, recentPlaces);
+  if (!destination) {
+    status(t().jumpUnavailable);
+    return;
+  }
+  map?.cancel();
+  const reached = (scene()?.i ?? 0) + 1;
+  // Discard the unplayed plan, keeping already encountered texts and places.
+  route.slice(reached).forEach((r) => visited.delete(normalText(r.tekst)));
+  recentPlaces = recentPlaces.filter((r) => !route.includes(r));
+  recentPlaces = [...recentPlaces, ...route.slice(0, reached)].slice(-6);
+  scenes
+    .slice(0, sceneIndex + 1)
+    .filter((s) => s.networkKey)
+    .forEach((s) => shownNetworks.add(s.networkKey));
+  completed += reached;
+  for (const key of bridgeChoices.keys()) if (key >= completed) bridgeChoices.delete(key);
+  for (const key of insightPlan.keys()) if (key >= completed) insightPlan.delete(key);
+  previousRecord = current;
+  visited.add(normalText(destination.tekst));
+  route = colourThreads(
+    [destination, ...continueRoute(eligible, destination, visited, Math.random, recentPlaces, 4)],
+    current,
+  );
+  recentPlaces = [...recentPlaces, ...route].slice(-6);
+  links = describeRoute([current, ...route]).slice(1);
+  links[0] = { kind: 'jump' };
+  buildScenes();
+  sceneIndex = scenes.findIndex((s) => s.kind === 'travel' && s.i === 0);
+  showScene();
+  syncUrl();
+  revealControls();
+}
+
 function pause() {
   if (!started || scene()?.kind === 'end') return;
   paused = true;
@@ -1283,10 +1333,13 @@ function togglePause() {
 }
 function syncUrl(includeRoute = started, push = false) {
   const url = new URL(location.href);
-  url.hash = journeyHash(mode, currentTheme() && themeSelected ? themeKey : null,
+  url.hash = journeyHash(
+    mode,
+    currentTheme() && themeSelected ? themeKey : null,
     includeRoute && mode === 'weave' && route.length
       ? { v: version, route: route.map((r) => r.source_text_id).join(',') }
-      : {});
+      : {},
+  );
   if (url.href !== location.href)
     window.history[push ? 'pushState' : 'replaceState'](null, '', url);
 }
@@ -1503,6 +1556,7 @@ root.addEventListener('keydown', (event) => {
   }
 });
 el('journey-pause').addEventListener('click', togglePause);
+el('journey-jump').addEventListener('click', jump);
 el('journey-next').addEventListener('click', () => {
   advance();
 });

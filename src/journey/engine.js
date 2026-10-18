@@ -96,6 +96,50 @@ export function compose(records, random = Math.random, openingHistory = []) {
   }
   return route;
 }
+// A deliberate break: never imply an archival link where none is recorded.
+export function jumpDestination(
+  records,
+  previous,
+  visited = new Set(),
+  random = Math.random,
+  history = [],
+) {
+  if (!previous || !mapped(previous)) return null;
+  const distance = (r) => {
+    const rad = Math.PI / 180;
+    const a =
+      Math.sin(((r.lat - previous.lat) * rad) / 2) ** 2 +
+      Math.cos(previous.lat * rad) *
+        Math.cos(r.lat * rad) *
+        Math.sin(((r.lon - previous.lon) * rad) / 2) ** 2;
+    return 6371 * 2 * Math.asin(Math.sqrt(Math.min(1, a)));
+  };
+  let pool = records.filter(
+    (r) =>
+      mapped(r) &&
+      normalText(r.tekst) &&
+      normalText(r.tekst) !== normalText(previous.tekst) &&
+      !links(previous, r).length &&
+      distance(r) >= 1,
+  );
+  if (!pool.length) return null;
+  const unseen = pool.filter((r) => !visited.has(normalText(r.tekst)));
+  if (unseen.length) pool = unseen;
+  pool = avoidRecentPlaces(pool, [...history, previous]);
+  const distant = pool.filter((r) => distance(r) >= 100);
+  if (distant.length) pool = distant;
+  // Choose a place first, so places with many records do not dominate Jump.
+  const groups = new Map();
+  for (const r of pool) {
+    const key = `${r.lat},${r.lon}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(r);
+  }
+  const locations = [...groups.values()];
+  const location = locations[Math.floor(random() * locations.length)];
+  return location[Math.floor(random() * location.length)];
+}
+
 // One cancellable reading timer; pausing preserves the exact remaining time.
 export class ReadingClock {
   constructor(
@@ -165,6 +209,7 @@ export function continueRoute(
   visited = new Set(),
   random = Math.random,
   recentPlaces = [],
+  count = 5,
 ) {
   const pool = records.filter((r) => mapped(r) && normalText(r.tekst));
   const result = [];
@@ -172,7 +217,7 @@ export function continueRoute(
   const recent = [];
   const placeHistory = [...recentPlaces];
   if (previous && placeHistory.at(-1) !== previous) placeHistory.push(previous);
-  for (let i = 0; i < 5 && pool.length; i++) {
+  for (let i = 0; i < count && pool.length; i++) {
     let available = pool.filter(
       (r) => !visited.has(normalText(r.tekst)) && normalText(r.tekst) !== normalText(last?.tekst),
     );

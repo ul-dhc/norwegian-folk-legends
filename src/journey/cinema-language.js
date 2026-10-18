@@ -9,6 +9,11 @@ export const cinema = {
     pause: 'Pause',
     resume: 'Resume',
     next: 'Next',
+    jump: 'Jump',
+    jumpHint: 'Break the thread and jump to an unconnected place',
+    jumpArrival:
+      'We leave this thread behind and begin again in {place}. No connection between these records is recorded in the collection.',
+    jumpUnavailable: 'No unconnected place is available in this collection.',
     back: 'Back',
     sound: 'Sound',
     slower: 'Slower',
@@ -58,6 +63,11 @@ export const cinema = {
     pause: 'Pause',
     resume: 'Fortsett',
     next: 'Neste',
+    jump: 'Hopp',
+    jumpHint: 'Bryt tråden og hopp til et sted uten registrert forbindelse',
+    jumpArrival:
+      'Vi forlater denne tråden og begynner på nytt i {place}. Ingen forbindelse mellom disse opptegnelsene er registrert i samlingen.',
+    jumpUnavailable: 'Ingen steder uten registrert forbindelse er tilgjengelige i denne samlingen.',
     back: 'Tilbake',
     sound: 'Lyd',
     slower: 'Langsommere',
@@ -103,7 +113,7 @@ Object.assign(cinema.en, {
   weave: 'Where threads meet',
   thread: 'One thread',
   weaveNote:
-    'An ongoing journey. Coloured traces remain, and the landscape gathers their connections.',
+    'An ongoing journey. Coloured traces remain, and the landscape gathers their connections. Use Jump to leave a thread and begin elsewhere.',
   threadNote: 'Five legends, one quiet journey, with a place to pause at the end.',
   continue: 'The traces remain. From the last legend, another thread unfolds.',
   collectorNetwork: 'A collector’s connections',
@@ -118,7 +128,7 @@ Object.assign(cinema.no, {
   weave: 'Der trådene møtes',
   thread: 'Én tråd',
   weaveNote:
-    'En reise som fortsetter. Fargede spor blir igjen, og forbindelsene samles i landskapet.',
+    'En reise som fortsetter. Fargede spor blir igjen, og forbindelsene samles i landskapet. Bruk Hopp for å forlate en tråd og begynne et annet sted.',
   threadNote: 'Fem fortellinger, én rolig reise, med en pause ved slutten.',
   continue: 'Sporene blir igjen. Fra den siste fortellingen utfolder en ny tråd seg.',
   collectorNetwork: 'En samlers forbindelser',
