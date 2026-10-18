@@ -29,6 +29,7 @@ import { sameCollectorThread } from './roads.js';
 import { collectorColour, shortEnough, journeyEligible, colourThreads } from './appearance.js';
 import { cinema } from './cinema-language.js';
 import { THEMES, themeRoute } from './themes.js';
+import { journeyHash, readJourneyHash } from './routes.js';
 import { creditedBridge, journeySummary, continuousBridge, roadBridge } from './credits.js';
 import { createJourneyMap } from './map.js';
 import { insightCandidates, chooseInsight } from './insights.js';
@@ -90,6 +91,7 @@ let lastInsightKind = null;
 const bridgeChoices = new Map(),
   bridgeCounts = new Map();
 let themeKey = 'water';
+let themeSelected = false;
 const currentTheme = () => (mode === 'thread' ? THEMES[themeKey] : null);
 let mode = 'weave',
   visited = new Set(),
@@ -1279,21 +1281,45 @@ function resume() {
 function togglePause() {
   paused ? resume() : pause();
 }
-function syncUrl() {
+function syncUrl(includeRoute = started, push = false) {
   const url = new URL(location.href);
-  url.hash = new URLSearchParams({
-    v: version,
-    mode,
-    ...(currentTheme() ? { theme: themeKey } : {}),
-    route: route.map((r) => r.source_text_id).join(','),
-  }).toString();
-  window.history.replaceState(null, '', url);
+  url.hash = journeyHash(mode, currentTheme() && themeSelected ? themeKey : null,
+    includeRoute && mode === 'weave' && route.length
+      ? { v: version, route: route.map((r) => r.source_text_id).join(',') }
+      : {});
+  if (url.href !== location.href)
+    window.history[push ? 'pushState' : 'replaceState'](null, '', url);
 }
+function restoreUrl() {
+  const { mode: selectedMode, theme, saved } = readJourneyHash(location.hash, Object.keys(THEMES));
+  mode = selectedMode;
+  themeKey = theme || 'water';
+  themeSelected = Boolean(theme);
+  route = [];
+  restored = false;
+  versionChanged = false;
+  if (mode === 'thread' && theme) {
+    route = themeRoute(records, themeKey);
+    restored = Boolean(route.length);
+  } else if (mode === 'weave' && saved.has('route')) {
+    const ids = saved.get('route').split(',');
+    const restoredRoute = routeFromIds(records, ids);
+    if (restoredRoute.length === ids.length) {
+      route = restoredRoute;
+      restored = true;
+    }
+  }
+  versionChanged = restored && saved.has('v') && saved.get('v') !== version;
+  syncUrl(restored);
+}
+
 function start(random = true) {
   if (!ready) return;
   if (mode === 'moe') route = moeRoute(records);
-  else if (currentTheme()) route = themeRoute(records, themeKey);
-  else if (random || !restored || !route.length)
+  else if (currentTheme()) {
+    themeSelected = true;
+    route = themeRoute(records, themeKey);
+  } else if (random || !restored || !route.length)
     route = compose(
       records.filter(shortEnough),
       Math.random,
@@ -1377,13 +1403,16 @@ root.addEventListener('click', async (event) => {
     mapSettings();
   } else if (button.dataset.themeThread) {
     themeKey = button.dataset.themeThread;
+    themeSelected = true;
     route = [];
     restored = false;
+    syncUrl(false, true);
     welcome();
   } else if (button.dataset.mode) {
     mode = button.dataset.mode;
     route = [];
     restored = false;
+    syncUrl(false, true);
     welcome();
   } else if (button.hasAttribute('data-archive-page')) {
     const archive = el('journey-archive');
@@ -1484,7 +1513,7 @@ el('journey-back').addEventListener('click', () => {
   }
 });
 el('journey-fullscreen').addEventListener('click', fullscreen);
-el('journey-close').addEventListener('click', async () => {
+async function leaveJourney() {
   cancelSceneFades();
   legendReveal?.cancel();
   legendReveal = null;
@@ -1524,6 +1553,15 @@ el('journey-close').addEventListener('click', async () => {
   root.dataset.scene = 'intro';
   welcome();
   root.scrollIntoView({ behavior: 'instant', block: 'start' });
+}
+el('journey-close').addEventListener('click', leaveJourney);
+window.addEventListener('hashchange', async () => {
+  if (!ready) return;
+  if (started) await leaveJourney();
+  restoreUrl();
+  map?.reset();
+  map?.intro(records, mode === 'moe' || mode === 'weave');
+  welcome();
 });
 el('journey-thread-brightness').addEventListener('input', (event) => {
   threadBrightness = Number(event.target.value);
@@ -1720,22 +1758,7 @@ try {
   version = data.version;
   if (!records?.length) throw new Error('Empty collection');
   ready = true;
-  const saved = new URLSearchParams(location.hash.slice(1));
-  mode = ['thread', 'moe'].includes(saved.get('mode')) ? saved.get('mode') : 'weave';
-  if (mode === 'thread' && THEMES[saved.get('theme')]) {
-    themeKey = saved.get('theme');
-    route = themeRoute(records, themeKey);
-    restored = Boolean(route.length);
-    versionChanged = saved.get('v') !== version;
-  } else if (mode === 'weave' && saved.has('route')) {
-    const ids = saved.get('route').split(',');
-    const restoredRoute = routeFromIds(records, ids);
-    if (restoredRoute.length === ids.length) {
-      route = restoredRoute;
-      restored = true;
-      versionChanged = saved.get('v') !== version;
-    }
-  }
+  restoreUrl();
   map?.setStill(still);
   map?.intro(records, mode === 'moe' || mode === 'weave');
   root.dataset.scene = 'intro';
