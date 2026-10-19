@@ -497,41 +497,49 @@ test('fresh journeys choose different opening places while saved routes retain t
   );
 });
 
-test('category introductions cycle through facts rather than repeating the type announcement', async () => {
+test('category transitions introduce place and collector before the varied classification link', async () => {
   const { continuousBridge } = await import('../src/journey/credits.js');
-  const before = { sted: 'Bø', placeId: 'bo' },
-    record = {
-      sted: 'Vang',
-      placeId: 'vang',
-      samler: 'Collector',
-      informant: 'Narrator',
-      tittel: 'Legend title',
-    };
+  const before = { sted: 'Bø', placeId: 'bo' };
+  const record = {
+    sted: 'Halsa',
+    placeId: 'halsa',
+    samler: 'Maurits Fugelsøy',
+    informant: 'Narrator',
+  };
   for (const lang of ['en', 'no']) {
-    const lines = Array.from({ length: 5 }, (_, i) =>
+    const lines = Array.from({ length: 6 }, (_, i) =>
       continuousBridge(before, record, { kind: 'category' }, lang, i),
     );
-    assert.equal(new Set(lines).size, 5);
-    assert.equal(
-      lines.filter((s) =>
-        lang === 'en' ? s.includes('legend classification') : s.includes('samme sagntype'),
-      ).length,
-      1,
-    );
-    assert.ok(lines.every((s) => s.includes('Vang')));
+    assert.equal(new Set(lines.map((line) => line.split('.')[0])).size, 6);
+    for (const line of lines) {
+      assert.ok(line.indexOf('Halsa') < line.indexOf('Maurits Fugelsøy'));
+      assert.ok(line.indexOf('Maurits Fugelsøy') < line.indexOf('Narrator'));
+      assert.equal(line.split('Maurits Fugelsøy').length - 1, 1);
+      assert.equal(line.split('Narrator').length - 1, 1);
+      assert.match(
+        line.split('Narrator')[1],
+        lang === 'en' ? /classif|legend type/ : /sagntyp|klassif/,
+      );
+    }
     assert.equal(continuousBridge(before, record, { kind: 'category' }, lang, 2), lines[2]);
-    assert.match(
-      lines[2],
-      lang === 'en'
-        ? /related theme.*recorded by Collector/
-        : /beslektet tema.*nedtegnet av Collector/,
-    );
-    assert.equal(lines[2].split('Collector').length - 1, 1);
-    assert.ok(
-      !continuousBridge(before, record, { kind: 'elsewhere' }, lang, 2).includes(
-        lang === 'en' ? 'related theme' : 'beslektet tema',
-      ),
-    );
-    assert.ok(!lines.some((s) => /landscape stays|unfold|we find another/i.test(s)));
   }
+  assert.equal(
+    continuousBridge(before, { ...record, informant: 'Ukjent' }, { kind: 'category' }, 'en', 0),
+    'Our next stop is Halsa. Maurits Fugelsøy recorded this legend. These two legends share the same legend classification.',
+  );
+  const unknown = continuousBridge(
+    before,
+    { ...record, samler: 'Ukjent', informant: '' },
+    { kind: 'category' },
+  );
+  assert.equal(
+    unknown,
+    'Our next stop is Halsa. These two legends share the same legend classification.',
+  );
+  const repeated = continuousBridge(
+    { ...before, collectorId: 'same' },
+    { ...record, collectorId: 'same' },
+    { kind: 'category' },
+  );
+  assert.ok(repeated.startsWith('Our next stop is Halsa. Maurits Fugelsøy recorded this legend.'));
 });

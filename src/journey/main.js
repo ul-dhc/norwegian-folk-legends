@@ -31,7 +31,15 @@ import { collectorColour, shortEnough, journeyEligible, colourThreads } from './
 import { cinema } from './cinema-language.js';
 import { THEMES, themeRoute } from './themes.js';
 import { journeyHash, readJourneyHash } from './routes.js';
-import { creditedBridge, journeySummary, continuousBridge, roadBridge } from './credits.js';
+import {
+  creditedBridge,
+  journeySummary,
+  continuousBridge,
+  roadBridge,
+  storyPlaceBridge,
+  jumpBridge,
+  networkBridge,
+} from './credits.js';
 import { createJourneyMap } from './map.js';
 import { insightCandidates, chooseInsight } from './insights.js';
 const lifePhotos = () => journeyLifePhotos(language());
@@ -932,17 +940,14 @@ function renderScene(preserveMap = false) {
     const isStory = s.kind === 'story-travel',
       target = isStory ? s.place : r;
     if (!isStory && links[s.i]?.kind === 'jump') {
-      caption(format(t().jumpArrival, { place: r.sted }));
+      caption(jumpBridge(r, language(), bridgeChoices.get(completed + s.i) || 0));
       if (!preserveMap) map?.focus(r);
       schedule(typingDuration + 3500);
       revealControls();
       return;
     }
     const sentence = isStory
-      ? format(s.place.role === 'family' ? t().familyTravel : t().storyTravel, {
-          from: r.sted,
-          place: s.place.name,
-        })
+      ? storyPlaceBridge(r, s.place, language(), completed + s.i + s.j)
       : bridge(s.i);
     caption(sentence);
     // Wait for the route decision before typing: never promise a road when routing
@@ -1171,10 +1176,13 @@ function renderScene(preserveMap = false) {
     if (!preserveMap) map?.connections(members, s.kind, collectorColour(r));
 
     caption(
-      format(narrator ? t().narratorNetwork : t().collector, {
-        name: narrator ? r.informant : r.samler,
-        count: members.length,
-      }) + (networkEdges(members).nodes.length === 1 ? ' ' + t().onePlace : ''),
+      networkBridge(
+        r,
+        s.kind,
+        members.length,
+        language(),
+        bridgeChoices.get(completed + s.i) || 0,
+      ) + (networkEdges(members).nodes.length === 1 ? ' ' + t().onePlace : ''),
     );
     schedule(14000);
   } else if (s.kind === 'weave') {
@@ -1195,7 +1203,7 @@ function renderScene(preserveMap = false) {
   } else if (s.kind === 'story-hold') {
     caption(
       '“' + s.place.quote + '”',
-      format(t().storyHold, { from: r.sted, place: s.place.name }),
+      storyPlaceBridge(r, s.place, language(), completed + s.i + s.j, true),
     );
     schedule((passageDuration(s.place.quote) * readingTime) / 100);
   } else {
