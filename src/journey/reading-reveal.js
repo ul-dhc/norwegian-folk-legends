@@ -20,8 +20,9 @@ export function revealReadingLines(passage, duration) {
     }
     line.words.push(word);
   }
-  const revealEnd = Math.min(22000, duration * 0.35),
+  const revealEnd = lines.length > 1 ? Math.min(22000, duration * 0.35) : 0,
     fade = Math.min(1400, revealEnd / Math.max(1, lines.length));
+  const initialDuration = duration;
   const animations = lines.flatMap((line, index) => {
     // The opening line is there immediately. Later lines settle into place.
     const start = lines.length > 1 ? (index * (revealEnd - fade)) / (lines.length - 1) : 0;
@@ -39,7 +40,10 @@ export function revealReadingLines(passage, duration) {
     );
   });
   return {
-    revealEnd,
+    get revealEnd() {
+      // Keyframe offsets stay fixed when reading speed retimes the animations.
+      return revealEnd * (duration / initialDuration);
+    },
     play() {
       animations.forEach((a) => a.play());
     },

@@ -991,8 +991,6 @@ function renderScene(preserveMap = false) {
   } else if (s.kind === 'read') {
     if (mode === 'weave' && s.p === 0 && !preserveMap) map?.focus(r);
     el('journey-reading').hidden = false;
-    if (mode !== 'moe' && !livReading && !matchMedia('(prefers-reduced-motion: reduce)').matches)
-      el('journey-passage').animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1400 });
     const teller = r.source_text_id === 'SIN263' ? 'Liv' : 'Tølløv';
     el('journey-title').textContent =
       mode === 'moe'
@@ -1044,14 +1042,17 @@ function renderScene(preserveMap = false) {
       .join(' · ');
     const duration = (readingDuration(s) * readingTime) / 100;
     let enteredAt = 0;
-    if (mode === 'moe' && !still && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if ((mode !== 'moe' || !still) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
       root.classList.add('legend-revealing');
       legendReveal = revealReadingLines(
         el('journey-passage'),
         duration - (livReading ? 1800 : 5000),
       );
       // Manual navigation while paused gives the reader the complete passage.
-      if (paused) legendReveal.currentTime = legendReveal.revealEnd;
+      if (paused) {
+        legendReveal.currentTime = legendReveal.revealEnd;
+        if (mode !== 'moe') enteredAt = legendReveal.revealEnd;
+      }
       if (paused || document.hidden) legendReveal.pause();
     }
     if (livReading) {
@@ -1160,7 +1161,11 @@ function renderScene(preserveMap = false) {
       }
     }
     const playbackDuration =
-      s.effect === 'manuscript-preview' && legendReveal ? legendReveal.revealEnd + 1800 : duration;
+      mode !== 'moe' && legendReveal
+        ? legendReveal.revealEnd + 2000
+        : s.effect === 'manuscript-preview' && legendReveal
+          ? legendReveal.revealEnd + 1800
+          : duration;
     schedule(playbackDuration - enteredAt, true);
   } else if (s.kind === 'insight') {
     caption(s.insight[language()]);
@@ -1669,9 +1674,12 @@ el('journey-reading-time').addEventListener('input', (event) => {
   if (scene()?.kind === 'read') {
     // Preserve how far the reader has progressed; don't restart the legend or camera.
     clock.pause();
-    const remaining = (clock.remaining * readingTime) / previous;
+    let remaining = (clock.remaining * readingTime) / previous;
     const duration = (readingDuration(scene()) * readingTime) / 100;
+    let playbackDuration = duration;
     if (legendReveal) {
+      const inFinalHold = Number(legendReveal.currentTime || 0) >= legendReveal.revealEnd;
+      const holdRemaining = clock.remaining;
       const timing = legendReveal.effect.getTiming(),
         fraction = Number(legendReveal.currentTime || 0) / timing.duration;
       legendReveal.effect.updateTiming({
@@ -1679,6 +1687,13 @@ el('journey-reading-time').addEventListener('input', (event) => {
       });
       legendReveal.currentTime =
         fraction * (duration - (scene()?.effect === 'encounter' ? 1800 : 5000));
+      if (mode !== 'moe') {
+        playbackDuration = legendReveal.revealEnd + 2000;
+        // Reading speed changes the reveal, never the fixed two-second final hold.
+        remaining = inFinalHold
+          ? Math.min(2000, holdRemaining)
+          : Math.max(0, legendReveal.revealEnd - Number(legendReveal.currentTime || 0)) + 2000;
+      }
     }
     if (photoDissolve) {
       const timing = photoDissolve.effect.getTiming(),
@@ -1688,8 +1703,8 @@ el('journey-reading-time').addEventListener('input', (event) => {
     }
     clock.reset(remaining);
     if (progressAnimation) {
-      progressAnimation.effect.updateTiming({ duration });
-      progressAnimation.currentTime = Math.max(0, duration - remaining);
+      progressAnimation.effect.updateTiming({ duration: playbackDuration });
+      progressAnimation.currentTime = Math.max(0, playbackDuration - remaining);
     }
     if (!paused && !document.hidden) clock.resume();
   }
