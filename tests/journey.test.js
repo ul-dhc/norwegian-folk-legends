@@ -471,8 +471,8 @@ test('archive insights describe geographic evidence and do not repeat used obser
   );
   assert.ok(wide.some((x) => x.key === 'reach:a' && x.en.includes('not evidence of a journey')));
   const question = chooseInsight(wide, new Set(), null, true);
-  assert.match(question.en, /Did you know.*4 named places/);
-  assert.match(question.no, /Visste du.*4 navngitte steder/);
+  assert.match(question.en, /Could you imagine.*4 named places/);
+  assert.match(question.no, /Kan du se for deg.*4 navngitte steder/);
   assert.equal(question.key, 'reach:a');
   assert.equal(chooseInsight([question], new Set([question.key]), null, true), null);
   assert.ok(!chooseInsight(wide, new Set(), null).en.includes('?'));

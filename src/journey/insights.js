@@ -96,18 +96,18 @@ export function insightCandidates(records, record) {
         geo.distance >= 10
       )
         observation.question = {
-          en: `Did you know that this collection includes legends from ${places.length} named places attributed to ${name}? They include ${geo.pair[0].sted} and ${geo.pair[1].sted}, about ${Math.round(geo.distance / 10) * 10} kilometres apart in a straight line.`,
-          no: `Visste du at denne samlingen inneholder sagn fra ${places.length} navngitte steder tilskrevet ${name}? Blant dem er ${geo.pair[0].sted} og ${geo.pair[1].sted}, omtrent ${Math.round(geo.distance / 10) * 10} kilometer fra hverandre i luftlinje.`,
+          en: `Could you imagine the landscapes behind these stories? This collection includes legends from ${places.length} named places attributed to ${name}. They include ${geo.pair[0].sted} and ${geo.pair[1].sted}, about ${Math.round(geo.distance / 10) * 10} kilometres apart in a straight line.`,
+          no: `Kan du se for deg landskapene bak disse fortellingene? Denne samlingen inneholder sagn fra ${places.length} navngitte steder tilskrevet ${name}. Blant dem er ${geo.pair[0].sted} og ${geo.pair[1].sted}, omtrent ${Math.round(geo.distance / 10) * 10} kilometer fra hverandre i luftlinje.`,
         };
       if (observation.kind === 'topics')
         observation.question = {
-          en: `What kinds of legends did ${name} collect? The records here cover ${types.size} legend types, including “${ranked[0].name}” and “${ranked[1].name}”.`,
-          no: `Hva slags sagn samlet ${name}? Opptegnelsene her omfatter ${types.size} sagntyper, blant annet «${ranked[0].name}» og «${ranked[1].name}».`,
+          en: `What might we discover among the stories recorded by ${name}? The records here cover ${types.size} legend types, including “${ranked[0].name}” and “${ranked[1].name}”.`,
+          no: `Hva kan vi oppdage blant fortellingene som ${name} skrev ned? Opptegnelsene her omfatter ${types.size} sagntyper, blant annet «${ranked[0].name}» og «${ranked[1].name}».`,
         };
       if (observation.kind === 'voices')
         observation.question = {
-          en: `Who told the legends recorded by ${name}? ${named} of the ${group.length} records here name a narrator. For the others, that name is missing from the available information.`,
-          no: `Hvem fortalte sagnene som ${name} skrev ned? ${named} av de ${group.length} opptegnelsene her oppgir en forteller. For de øvrige mangler navnet i de tilgjengelige opplysningene.`,
+          en: `What might the voices behind these legends have sounded like? ${named} of the ${group.length} records attributed to ${name} name a narrator. For the others, that name is missing from the available information.`,
+          no: `Hvordan kan stemmene bak disse sagnene ha hørtes ut? ${named} av de ${group.length} opptegnelsene tilskrevet ${name} oppgir en forteller. For de øvrige mangler navnet i de tilgjengelige opplysningene.`,
         };
     }
   }
@@ -123,8 +123,8 @@ export function insightCandidates(records, record) {
       );
     if (places.length >= 3)
       result.at(-1).question = {
-        en: `How widely is this legend type represented here? “${record.ml_title}” appears in ${family.length} records associated with ${places.length} mapped places in this collection.`,
-        no: `Hvor mange steder er denne sagntypen representert her? «${record.ml_title}» finnes i ${family.length} opptegnelser knyttet til ${places.length} kartfestede steder i denne samlingen.`,
+        en: `How might similar stories sound in different places? “${record.ml_title}” appears in ${family.length} records associated with ${places.length} mapped places in this collection.`,
+        no: `Hvordan kan lignende fortellinger lyde på forskjellige steder? «${record.ml_title}» finnes i ${family.length} opptegnelser knyttet til ${places.length} kartfestede steder i denne samlingen.`,
       };
   }
   return result;

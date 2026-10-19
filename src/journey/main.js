@@ -1036,7 +1036,7 @@ function renderScene(preserveMap = false) {
       known(r.informant) ? format(t().narrator, { name: r.informant }) : '',
       known(r.samler) ? format(t().collected, { name: r.samler }) : '',
       r.år_clean,
-      english ? t().english : t().original,
+      english ? t().english : mode === 'moe' ? t().original : '',
     ]
       .filter(Boolean)
       .join(' · ');
