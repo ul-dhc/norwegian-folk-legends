@@ -18,7 +18,9 @@ export const GET: APIRoute = ({ site }) => {
     const collector = legend.collectorId ? collectorsById.get(legend.collectorId) : null;
     const narrator = legend.narratorId ? narratorsById.get(legend.narratorId) : null;
     const category = legend.mlCategoryId ? categoriesById.get(legend.mlCategoryId) : null;
-    const coordinates = place?.coordinates ?? county?.coordinates;
+    // Unknown catalogue places must not inherit a county's map position.
+    const unknownPlace = /^(ukjent|unknown)$/iu.test(place?.name?.trim() || '');
+    const coordinates = unknownPlace ? null : (place?.coordinates ?? county?.coordinates);
     return {
       placeId: legend.placeId,
       collectorId: legend.collectorId,
@@ -26,18 +28,22 @@ export const GET: APIRoute = ({ site }) => {
       categoryId: legend.mlCategoryId,
       lat: coordinates?.latitude ?? null,
       lon: coordinates?.longitude ?? null,
-      precision: place?.coordinates ? 'catalogue' : 'region',
-      locationUncertain: place?.coordinates
-        ? ['area', 'ambiguous'].includes(place.geography?.mapUncertainty?.kind || 'none')
-        : Boolean(county?.coordinates),
+      precision: coordinates ? (place?.coordinates ? 'catalogue' : 'region') : 'none',
+      locationUncertain: !coordinates
+        ? false
+        : place?.coordinates
+          ? ['area', 'ambiguous'].includes(place.geography?.mapUncertainty?.kind || 'none')
+          : Boolean(county?.coordinates),
       geographicStatus: place?.coordinates
         ? place.geography?.displayStatus || 'unresolved'
         : 'unresolved',
-      coordinateSource: place?.coordinates
-        ? place.geography?.coordinateSource || 'existing dataset'
-        : county?.coordinates
-          ? 'existing county coordinate'
-          : 'none',
+      coordinateSource: !coordinates
+        ? 'none'
+        : place?.coordinates
+          ? place.geography?.coordinateSource || 'existing dataset'
+          : county?.coordinates
+            ? 'existing county coordinate'
+            : 'none',
       storyPlaces: (storyPlaces as Record<string, unknown[]>)[legend.sourceTextId] || [],
       sourceUrl: legend.sourceUrl,
       archiveSignature: legend.archiveSignature,
@@ -53,8 +59,8 @@ export const GET: APIRoute = ({ site }) => {
       ml_code: category?.code || '',
       ml_title: category?.title || category?.code || '',
       år_clean: legend.year,
-      sted_lat: place?.coordinates?.latitude ?? county?.coordinates?.latitude ?? '',
-      sted_lon: place?.coordinates?.longitude ?? county?.coordinates?.longitude ?? '',
+      sted_lat: coordinates?.latitude ?? '',
+      sted_lon: coordinates?.longitude ?? '',
       fylke_lat: county?.coordinates?.latitude ?? '',
       fylke_lon: county?.coordinates?.longitude ?? '',
       url: `${base}legends/${legend.id}/`,

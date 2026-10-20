@@ -343,6 +343,10 @@
     "no": "Flere metadata",
     "en": "Additional metadata"
   },
+  "meta.placeUnknown": {
+    "no": "Ukjent sted",
+    "en": "Place unknown"
+  },
   "meta.place": {
     "no": "Sted",
     "en": "Place"

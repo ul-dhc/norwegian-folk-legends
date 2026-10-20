@@ -18,6 +18,31 @@ const { records } = JSON.parse(
   readFileSync(process.env.JOURNEY_DATA || buildPath('journey-data.json')),
 );
 const pilot = JSON.parse(readFileSync(new URL('../src/journey/places.json', import.meta.url)));
+test('unknown places remain readable without county fallback stops or connections', async () => {
+  const { journeyEligible } = await import('../src/journey/appearance.js');
+  const { networkEdges } = await import('../src/journey/engine.js');
+  const unknown = records.filter((r) => r.placeId === 'place-ukjent');
+  assert.equal(unknown.length, 8);
+  for (const record of unknown) {
+    assert.equal(record.lat, null);
+    assert.equal(record.lon, null);
+    assert.equal(record.sted_lat, '');
+    assert.equal(record.sted_lon, '');
+    assert.equal(record.coordinateSource, 'none');
+    assert.equal(record.precision, 'none');
+    assert.equal(record.fylke, 'Finnmark');
+    assert.equal(record.fylke_lat, 70);
+    assert.ok(record.tekst.trim());
+    assert.ok(record.url.endsWith(`/legends/${record.id}/`));
+    assert.equal(journeyEligible(record), false);
+    const page = readFileSync(buildPath(`legends/${record.id}/index.html`), 'utf8');
+    assert.ok(page.includes('meta.placeUnknown'));
+    assert.ok(page.includes('Ukjent sted'));
+  }
+  assert.equal(routeFromIds(records, unknown.map((r) => r.source_text_id)).length, 0);
+  assert.deepEqual(networkEdges(unknown), { nodes: [], edges: [] });
+  assert.ok(!networkEdges(records).nodes.some((r) => r.placeId === 'place-ukjent'));
+});
 test('demo provides varied, evidenced connections and restores identically', () => {
   const route = routeFromIds(records, DEMO);
   assert.equal(route.length, 5);

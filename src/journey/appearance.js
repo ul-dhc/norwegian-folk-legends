@@ -16,8 +16,10 @@ export const shortEnough = (record) =>
     .filter(Boolean)
     .every((text) => text.trim().split(/\s+/u).length <= 180);
 
-// Curatorial exclusion applies only to the journey, including restored routes.
+// Journeys, including restored routes, require map coordinates and curatorial eligibility.
 export const journeyEligible = (record) =>
+  Number.isFinite(record.lat) &&
+  Number.isFinite(record.lon) &&
   !/wittenberg/iu.test(
     [
       record.tekst,
