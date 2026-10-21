@@ -219,6 +219,15 @@ applyTranslations((doc.dataset.uiLang as UiLang) || 'no');
 const siteHeader = document.querySelector<HTMLElement>('.site-header')!;
 const menuToggle = document.querySelector<HTMLButtonElement>('.site-menu-toggle')!;
 const menuPanel = document.querySelector<HTMLElement>('#site-header-panel')!;
+const headerLanguage = document.querySelector<HTMLElement>('.header-language')!;
+const headerTools = document.querySelector<HTMLElement>('.header-tools')!;
+const compactHeader = matchMedia('(max-width: 850px)');
+const placeHeaderLanguage = () => {
+  if (compactHeader.matches) siteHeader.insertBefore(headerLanguage, menuToggle);
+  else headerTools.prepend(headerLanguage);
+};
+placeHeaderLanguage();
+
 const setMenuOpen = (open: boolean) => {
   menuToggle.setAttribute('aria-expanded', String(open));
 };
@@ -240,4 +249,9 @@ document.addEventListener('click', (event) => {
 });
 menuPanel.querySelectorAll('nav a').forEach((link) => {
   link.addEventListener('click', () => setMenuOpen(false));
+});
+
+compactHeader.addEventListener('change', () => {
+  setMenuOpen(false);
+  placeHeaderLanguage();
 });
