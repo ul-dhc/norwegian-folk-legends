@@ -215,11 +215,10 @@ document
   );
 applyTranslations((doc.dataset.uiLang as UiLang) || 'no');
 
-// Keep the compact menu out of the tab order while closed; desktop retains its full navigation.
+// Keep the navigation out of the tab order while the menu is closed.
 const siteHeader = document.querySelector<HTMLElement>('.site-header')!;
 const menuToggle = document.querySelector<HTMLButtonElement>('.site-menu-toggle')!;
 const menuPanel = document.querySelector<HTMLElement>('#site-header-panel')!;
-const compactHeader = matchMedia('(max-width: 850px)');
 const setMenuOpen = (open: boolean) => {
   menuToggle.setAttribute('aria-expanded', String(open));
 };
@@ -242,4 +241,3 @@ document.addEventListener('click', (event) => {
 menuPanel.querySelectorAll('nav a').forEach((link) => {
   link.addEventListener('click', () => setMenuOpen(false));
 });
-compactHeader.addEventListener('change', () => setMenuOpen(false));
