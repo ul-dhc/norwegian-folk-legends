@@ -2706,3 +2706,47 @@ body.journey-active #legend-journey {
 #legend-journey .moe-road-thread {
   stroke-opacity: clamp(0, calc(0.8 * var(--thread-brightness, 1)), 1);
 }
+
+/* Give short screens the whole stage, with touch-sized controls and a scrollable opening. */
+@media (max-width: 850px), (pointer: coarse) {
+  #legend-journey .journey-top-tools button,
+  #legend-journey .journey-controls button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  #legend-journey .journey-top-tools {
+    gap: 4px;
+  }
+  #legend-journey .journey-controls button {
+    font-size: 12px;
+    padding-inline: 10px;
+  }
+}
+@media (max-height: 600px) {
+  #legend-journey {
+    min-height: 0;
+  }
+  #legend-journey .journey-top-tools {
+    top: 8px;
+    right: 8px;
+  }
+  #legend-journey .journey-welcome,
+  #legend-journey .journey-welcome:has(.journey-themes) {
+    top: 58px;
+    bottom: 12px;
+    justify-content: flex-start;
+    overscroll-behavior: contain;
+  }
+  #legend-journey .journey-welcome h1 {
+    font-size: 28px;
+    margin-block: 0 8px;
+  }
+  #legend-journey .journey-welcome > p {
+    margin-block: 6px 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  #legend-journey .journey-mode-note {
+    margin-block: 8px;
+  }
+}

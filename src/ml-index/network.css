@@ -176,3 +176,13 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 .ml-network-workspace>.ml-dashboard-filters button[data-remove-filter]{border-radius:20px;padding:.35rem .65rem;min-height:0;font-size:.73rem}
 .ml-network-workspace>.ml-dashboard-filters .ml-reset{margin-left:0;background:transparent;border:0}
 @media(max-width:900px){.ml-network-workspace>.ml-dashboard-filters{position:static;grid-column:1/-1;max-width:100%;width:100%;justify-content:flex-end}}
+
+/* Mobile toolbar and dismiss controls share the same usable touch size. */
+@media(max-width:850px){
+ :root body .ml-network-toolbar>button,
+ :root body .ml-network-tools button,
+ :root body .ml-network-settings header button,
+ :root body .ml-mobile-filter-close{min-width:44px!important;min-height:44px!important;height:auto}
+ :root body .ml-network-toolbar .ml-select-trigger{min-height:44px}
+ :root body .ml-network-stage{height:clamp(340px,65svh,640px);min-height:0}
+}

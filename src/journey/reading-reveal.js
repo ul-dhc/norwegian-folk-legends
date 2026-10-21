@@ -1,3 +1,9 @@
+// Advance from the last fully visible line, rather than the longer estimated reading time.
+export function readingPlaybackDuration(mode, revealEnd, fallbackDuration) {
+  if (revealEnd != null) return revealEnd + (mode === 'moe' ? 3000 : 2000);
+  return mode === 'moe' ? 3000 : fallbackDuration;
+}
+
 // Measure the current typesetting so each visual line shares one gentle fade.
 // Keep natural wrapping, selectable text and the complete source in the DOM.
 export function revealReadingLines(passage, duration) {

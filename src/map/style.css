@@ -1,11 +1,11 @@
 .map-page {
-  min-height: calc(100vh - 79px);
+  min-height: calc(100svh - var(--site-header-height, 79px));
   background: var(--paper);
 }
 .map-workspace {
   position: relative;
   width: 100%;
-  height: calc(100vh - 79px);
+  height: calc(100svh - var(--site-header-height, 79px));
   min-height: 650px;
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
@@ -2777,4 +2777,90 @@ body.map-fullscreen-active {
 .layer-panel .network-choice > div button,
 .layer-panel .basemap-options button {
   font: 400 0.85rem/1.45 var(--sans);
+}
+
+/* Keep filtering discoverable and size the map against a phone's available height. */
+@media (max-width: 850px) {
+  :root body .map-workspace,
+  :root body .map-workspace.filters-collapsed {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    height: auto;
+    min-height: 0;
+  }
+  :root body .map-workspace .filter-sidebar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  :root body .map-workspace .map-stage {
+    --mobile-map-height: clamp(300px, calc(100svh - 220px), 720px);
+    grid-column: 1;
+    grid-row: 2;
+    height: var(--mobile-map-height);
+    min-height: 0;
+  }
+  :root body .map-mode {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 52px;
+  }
+  :root body .map-mode button,
+  :root body .layer-menu > summary,
+  :root body .layer-panel :is(button, select, summary) {
+    min-height: 44px;
+  }
+  :root body .maplibregl-ctrl-group button {
+    width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+  :root body .layer-panel {
+    width: min(320px, calc(100vw - 48px));
+    max-height: min(420px, calc(var(--mobile-map-height) - 132px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .map-filters:not(.filters-open) .download-hint {
+    display: none;
+  }
+  :root body .map-filters .map-alternative-link {
+    padding-block: 4px;
+    font-size: 0.75rem;
+  }
+  :root body .map-workspace:is(:fullscreen, .is-fullscreen) {
+    height: 100dvh;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  :root body .map-workspace:is(:fullscreen, .is-fullscreen) .map-stage {
+    height: 100%;
+    min-height: 0;
+  }
+}
+@media (max-width: 600px) {
+  :root body .map-mode {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: min(420px, calc(100vw - 44px));
+  }
+  :root body .map-mode button {
+    min-width: 0;
+    padding-inline: 4px;
+    font-size: 0.72rem;
+  }
+  :root body .layer-panel {
+    top: calc(100% + 4rem);
+  }
+  :root body .maplibregl-ctrl-top-right {
+    top: 7.5rem;
+  }
+}
+/* The sidebar leaves less room for the toolbar on compact desktop/tablet widths. */
+@media (min-width: 851px) and (max-width: 1150px) {
+  .map-toolbar-primary {
+    flex-direction: column-reverse;
+  }
+  .layer-panel {
+    top: calc(100% + 3.5rem);
+  }
 }

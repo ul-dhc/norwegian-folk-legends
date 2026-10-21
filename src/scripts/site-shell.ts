@@ -8,6 +8,7 @@ import {
   Eye,
   EyeOff,
   ListFilter,
+  Menu,
   Maximize2,
   Scan,
   Type,
@@ -62,6 +63,7 @@ const iconSet = {
   Eye,
   EyeOff,
   ListFilter,
+  Menu,
   Maximize2,
   Scan,
   Type,
@@ -212,3 +214,32 @@ document
     button.addEventListener('click', () => applyTranslations(button.dataset.uiLang as UiLang)),
   );
 applyTranslations((doc.dataset.uiLang as UiLang) || 'no');
+
+// Keep the compact menu out of the tab order while closed; desktop retains its full navigation.
+const siteHeader = document.querySelector<HTMLElement>('.site-header')!;
+const menuToggle = document.querySelector<HTMLButtonElement>('.site-menu-toggle')!;
+const menuPanel = document.querySelector<HTMLElement>('#site-header-panel')!;
+const compactHeader = matchMedia('(max-width: 850px)');
+const setMenuOpen = (open: boolean) => {
+  menuToggle.setAttribute('aria-expanded', String(open));
+};
+siteHeader.dataset.menuReady = 'true';
+new ResizeObserver(() => {
+  doc.style.setProperty('--site-header-height', `${siteHeader.getBoundingClientRect().height}px`);
+}).observe(siteHeader);
+menuToggle.addEventListener('click', () =>
+  setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true'),
+);
+siteHeader.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+    setMenuOpen(false);
+    menuToggle.focus();
+  }
+});
+document.addEventListener('click', (event) => {
+  if (!siteHeader.contains(event.target as Node)) setMenuOpen(false);
+});
+menuPanel.querySelectorAll('nav a').forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+compactHeader.addEventListener('change', () => setMenuOpen(false));

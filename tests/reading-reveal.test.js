@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { revealReadingLines } from '../src/journey/reading-reveal.js';
+import { revealReadingLines, readingPlaybackDuration } from '../src/journey/reading-reveal.js';
 
 // Exercise the real animation builder with measured line positions and WAAPI adapters.
 function withPassage(text, tops, run) {
@@ -96,4 +96,19 @@ test('a single line is already fully visible; long passages retain the reveal ca
     reveal.play();
     reveal.cancel();
   });
+});
+
+test('Moe legends advance three seconds after the final line, including after retiming', () => {
+  withPassage('First line last line', [0, 0, 28, 28], (passage) => {
+    const reveal = revealReadingLines(passage, 60000);
+    assert.equal(readingPlaybackDuration('moe', reveal.revealEnd, 61800), 24000);
+    reveal.effect.updateTiming({ duration: 30000 });
+    assert.equal(readingPlaybackDuration('moe', reveal.revealEnd, 31800), 13500);
+    assert.equal(readingPlaybackDuration('weave', reveal.revealEnd, 35000), 12500);
+  });
+});
+test('Moe legends without a reveal have a three-second hold from their immediate appearance', () => {
+  assert.equal(readingPlaybackDuration('moe', undefined, 60000), 3000);
+  assert.equal(readingPlaybackDuration('moe', 0, 60000), 3000);
+  assert.equal(readingPlaybackDuration('weave', undefined, 60000), 60000);
 });

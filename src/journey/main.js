@@ -1,7 +1,7 @@
 import { manuscript, liv, childhood, samlaPortrait, portrait, journeyLifePhotos } from './media.js';
 import { typingScale, characterDelay } from './typing.js';
 import { toggleJourneyFullscreen } from './fullscreen.js';
-import { revealReadingLines } from './reading-reveal.js';
+import { revealReadingLines, readingPlaybackDuration } from './reading-reveal.js';
 import { archiveMarkup, selectArchivePage, archivePages, archiveUrl } from './archive.js';
 import moeRoads from './moe-roads.json';
 
@@ -1051,7 +1051,7 @@ function renderScene(preserveMap = false) {
       // Manual navigation while paused gives the reader the complete passage.
       if (paused) {
         legendReveal.currentTime = legendReveal.revealEnd;
-        if (mode !== 'moe') enteredAt = legendReveal.revealEnd;
+        enteredAt = legendReveal.revealEnd;
       }
       if (paused || document.hidden) legendReveal.pause();
     }
@@ -1160,12 +1160,7 @@ function renderScene(preserveMap = false) {
         if (paused || document.hidden) photoDissolve.pause();
       }
     }
-    const playbackDuration =
-      mode !== 'moe' && legendReveal
-        ? legendReveal.revealEnd + 2000
-        : s.effect === 'manuscript-preview' && legendReveal
-          ? legendReveal.revealEnd + 1800
-          : duration;
+    const playbackDuration = readingPlaybackDuration(mode, legendReveal?.revealEnd, duration);
     schedule(playbackDuration - enteredAt, true);
   } else if (s.kind === 'insight') {
     caption(s.insight[language()]);
@@ -1676,7 +1671,8 @@ el('journey-reading-time').addEventListener('input', (event) => {
     clock.pause();
     let remaining = (clock.remaining * readingTime) / previous;
     const duration = (readingDuration(scene()) * readingTime) / 100;
-    let playbackDuration = duration;
+    let playbackDuration = readingPlaybackDuration(mode, legendReveal?.revealEnd, duration);
+    if (!legendReveal && mode === 'moe') remaining = Math.min(3000, clock.remaining);
     if (legendReveal) {
       const inFinalHold = Number(legendReveal.currentTime || 0) >= legendReveal.revealEnd;
       const holdRemaining = clock.remaining;
@@ -1687,13 +1683,12 @@ el('journey-reading-time').addEventListener('input', (event) => {
       });
       legendReveal.currentTime =
         fraction * (duration - (scene()?.effect === 'encounter' ? 1800 : 5000));
-      if (mode !== 'moe') {
-        playbackDuration = legendReveal.revealEnd + 2000;
-        // Reading speed changes the reveal, never the fixed two-second final hold.
-        remaining = inFinalHold
-          ? Math.min(2000, holdRemaining)
-          : Math.max(0, legendReveal.revealEnd - Number(legendReveal.currentTime || 0)) + 2000;
-      }
+      playbackDuration = readingPlaybackDuration(mode, legendReveal.revealEnd, duration);
+      const finalHold = playbackDuration - legendReveal.revealEnd;
+      // Reading speed changes the reveal, never the fixed pause after the final line.
+      remaining = inFinalHold
+        ? Math.min(finalHold, holdRemaining)
+        : Math.max(0, legendReveal.revealEnd - Number(legendReveal.currentTime || 0)) + finalHold;
     }
     if (photoDissolve) {
       const timing = photoDissolve.effect.getTiming(),

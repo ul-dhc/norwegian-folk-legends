@@ -1,4 +1,5 @@
 {
+  "nav.menu": { "no": "Meny", "en": "Menu" },
   "nav.home": {
     "no": "Hjem",
     "en": "Home"
