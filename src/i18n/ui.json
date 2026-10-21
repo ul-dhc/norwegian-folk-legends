@@ -24,8 +24,8 @@
     "en": "About"
   },
   "status.development": {
-    "no": "Under utvikling",
-    "en": "In development"
+    "no": "Under utvikling · Prototype",
+    "en": "In development · Prototype"
   },
   "home.eyebrow": {
     "no": "Norsk folketradisjon",
@@ -76,8 +76,8 @@
     "en": "Legend of the day"
   },
   "home.developmentNotice": {
-    "no": "Denne ressursen er under utvikling.",
-    "en": "This resource is in development."
+    "no": "Stedskoordinatene kan være unøyaktige eller feil, og tekstene kan inneholde OCR-feil.",
+    "en": "Place coordinates may be inaccurate or incorrect, and the texts may contain OCR errors."
   },
   "home.openBrowser": {
     "no": "Åpne sagnutforskeren",
@@ -940,8 +940,8 @@
     "en": "Browse downloads use the active selection and filters. Map network exports contain the entire filtered network even when the overview shows only the strongest connections. Exports preserve legend IDs and recorded coordinates. Colours, bubble size and thread intensity are display choices, not new source information."
   },
   "about.intro": {
-    "no": "«Norske sagn» er en digital plattform for å utforske norske sagn og eksperimentere med digital historiefortelling, interaktive reiser og nye måter å knytte sammen fortellinger, mennesker og steder på.",
-    "en": "“Norske sagn” is a digital platform for exploring Norwegian folk legends and experimenting with digital storytelling, interactive journeys and new ways of connecting stories, people and places."
+    "no": "«Norske sagn» er en eksperimentell prototype med åpen kildekode, der vi prøver ut måter å utforske sagn på gjennom kart, forbindelser mellom fortellinger og interaktive reiser. Prosjektet er fortsatt under utvikling: Stedskoordinatene kan være unøyaktige eller feil, og tekstene kan inneholde OCR-feil.",
+    "en": "“Norske sagn” is an experimental, open-source prototype for trying out ways to explore folk legends through maps, connections between stories, and interactive journeys. It is still in development: place coordinates may be inaccurate or incorrect, and the texts may contain OCR errors."
   },
   "about.sourceTitle": {
     "no": "Den opprinnelige samlingen",
@@ -988,8 +988,8 @@
     "en": "The platform also uses digitised archival materials from SAMLA, with links to their sources in the archive."
   },
   "about.development": {
-    "no": "Utviklingen startet i 2026, og plattformen er fortsatt under utvikling.",
-    "en": "Development began in 2026, and the platform is still under development."
+    "no": "Prosjektet startet i 2026 og gir rom for å prøve ut ideer og se hva som fungerer.",
+    "en": "Started in 2026, the project is a space to try ideas and see what works."
   },
   "about.contactTitle": {
     "no": "Kontakt",
@@ -998,6 +998,10 @@
   "about.samlaFuture": {
     "no": "I fremtiden kan arkivmateriale fra SAMLA bidra til å utvide og berike plattformens sagnsamling.",
     "en": "In the future, archival materials from SAMLA could expand and enrich the platform’s collection of legends."
+  },
+  "about.aiNote": {
+    "no": "Beskrivelsene på denne siden er utarbeidet med hjelp fra KI og deretter gjennomgått og kontrollert av prosjektgruppen.",
+    "en": "The descriptions on this page were drafted with AI assistance, then reviewed and checked for accuracy by the project team."
   },
   "about.openSource": {
     "no": "Plattformen har åpen kildekode og er tilgjengelig på",

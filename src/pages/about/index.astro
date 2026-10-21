@@ -84,7 +84,7 @@ const coverage = [
 ];
 const copy = (key: string) => ui[key as keyof typeof ui].no;
 ---
-<BaseLayout active="about" title="Om prosjektet" description="About Norske sagn: the original collection from the Norwegian Folklore Archives at UiO, archival materials from SAMLA, and development by the University of Latvia Digital Humanities Center.">
+<BaseLayout active="about" title="Om prosjektet" description="Norske sagn is an experimental, open-source prototype for exploring Norwegian folk legends. Still in development; coordinates may be inaccurate and texts may contain OCR errors.">
   <div class="shell about-shell about-page">
     <header class="about-heading">
       <h1 data-i18n="nav.about">Om prosjektet</h1>
@@ -130,8 +130,11 @@ const copy = (key: string) => ui[key as keyof typeof ui].no;
         </section>)}
       </section>
     </div>
+    <p class="about-ai-note" data-i18n="about.aiNote">{copy('about.aiNote')}</p>
   </div>
   <style>
+    .about-ai-note{max-width:44rem;margin:3rem 0 0;font-family:var(--serif);font-size:.9rem;font-style:italic;line-height:1.6;color:var(--pin)}
+    .about-ai-note::before{content:"";display:block;width:5rem;height:2px;margin-bottom:1.5rem;background:currentColor;opacity:.65}
     .about-page{padding-block:clamp(2.5rem,6vw,5rem) clamp(3rem,7vw,6rem)}
     .about-contents{max-width:820px;padding:1.5rem 0;border-bottom:1px solid var(--line);color:var(--muted)}
 
