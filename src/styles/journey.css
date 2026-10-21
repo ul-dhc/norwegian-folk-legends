@@ -2750,3 +2750,25 @@ body.journey-active #legend-journey {
     margin-block: 8px;
   }
 }
+
+/* A single note toggles music beside the playback controls. */
+#legend-journey #journey-sound {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  padding-inline: 10px;
+}
+#journey-sound svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+#journey-sound[aria-pressed='false'] svg {
+  opacity: .45;
+}
+@media (max-width: 400px) {
+  #legend-journey .journey-controls button:not(#journey-sound) {
+    padding-inline: 6px;
+  }
+}

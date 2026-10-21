@@ -6,7 +6,8 @@ import { archiveMarkup, selectArchivePage, archivePages, archiveUrl } from './ar
 import moeRoads from './moe-roads.json';
 
 import { moeRoute, moeScenes, moeIntro, moeSources } from './moe.js';
-import { createElement, Maximize, Minimize } from 'lucide';
+import { createElement, Maximize, Minimize, Music2 } from 'lucide';
+import { createJourneyMusic } from './music.js';
 import {
   compose,
   routeFromIds,
@@ -62,6 +63,23 @@ const esc = (value) =>
     (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c],
   );
 const audio = el('journey-audio');
+const music = createJourneyMusic(audio, syncMusicControl, () => status(t().audioFailed));
+function syncMusicControl() {
+  const button = el('journey-sound');
+  const label =
+    language() === 'en'
+      ? music.enabled
+        ? 'Turn music off'
+        : 'Turn music on'
+      : music.enabled
+        ? 'Slå av musikk'
+        : 'Slå på musikk';
+  button.setAttribute('aria-pressed', String(music.enabled));
+  button.setAttribute('aria-label', label);
+  button.dataset.tooltip = label;
+  if (!button.firstElementChild)
+    button.append(createElement(Music2, { width: 16, height: 16, 'aria-hidden': 'true' }));
+}
 let collectionFacts = {},
   allRecords = [];
 let records = [],
@@ -271,8 +289,8 @@ function controls() {
   el('journey-pause').textContent = paused ? '▶ ' + t().resume : 'Ⅱ ' + t().pause;
   el('journey-next').textContent = t().next + ' ›';
   el('journey-back').textContent = '‹ ' + t().back;
-  el('journey-sound').textContent = language() === 'en' ? 'Music' : 'Musikk';
-  el('journey-sound').setAttribute('aria-pressed', String(!audio.paused));
+  syncMusicControl();
+  if (!active) music.pause();
   el('journey-motion').textContent = t().still;
   el('journey-motion').setAttribute('aria-pressed', String(still));
   el('journey-motion').disabled = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1321,6 +1339,7 @@ function pause() {
   legendReveal?.pause();
   photoDissolve?.pause();
   encounterDrift?.pause();
+  music.pause();
   controls();
   revealControls();
 }
@@ -1333,6 +1352,7 @@ function resume() {
   legendReveal?.play();
   photoDissolve?.play();
   encounterDrift?.play();
+  if (started && !document.hidden) music.resume();
   controls();
   revealControls();
 }
@@ -1412,6 +1432,7 @@ function start(random = true) {
   started = true;
   document.body.classList.add('journey-active');
   paused = false;
+  music.start();
   sceneIndex = 0;
   buildScenes();
   syncUrl();
@@ -1590,7 +1611,7 @@ async function leaveJourney() {
   typingDuration = 0;
   map?.cancel();
   progressAnimation?.cancel();
-  audio.pause();
+  music.pause();
   started = false;
   paused = false;
   sceneIndex = -1;
@@ -1717,17 +1738,8 @@ el('journey-motion').addEventListener('click', () => {
   controls();
   revealControls();
 });
-el('journey-sound').addEventListener('click', async () => {
-  if (!audio.paused) audio.pause();
-  else {
-    try {
-      audio.volume = 0.16;
-      await audio.play();
-    } catch {
-      status(t().audioFailed);
-    }
-  }
-  controls();
+el('journey-sound').addEventListener('click', () => {
+  music.toggle();
   revealControls();
 });
 el('journey-source').addEventListener('click', pause);
@@ -1793,7 +1805,7 @@ matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (event
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     pause();
-    audio.pause();
+    music.pause();
     controls();
   }
 });
@@ -1801,7 +1813,7 @@ window.addEventListener('pagehide', () => {
   clock.pause();
   typingClock.pause();
   map?.pause();
-  audio.pause();
+  music.pause();
 });
 welcome();
 try {
